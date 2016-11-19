@@ -242,7 +242,7 @@ AC_SUBST(SOLARIS_BROKEN_SHLD)
 dnl ** Do an unregisterised build?
 dnl --------------------------------------------------------------
 case "$HostArch" in
-    i386|x86_64|powerpc|powerpc64|powerpc64le|arm)
+    i386|x86_64|powerpc|powerpc64|powerpc64le|arm|sparc|sparc64)
         UnregisterisedDefault=NO
         ;;
     *)

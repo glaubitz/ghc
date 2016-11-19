@@ -34,8 +34,14 @@ data Imm
         | ImmConstantSum  Imm Imm
         | ImmConstantDiff Imm Imm
 
+        -- 32-bit %lo/%hi
         | LO    Imm
         | HI    Imm
+
+        -- 64-bit (%lo/)%lm/%hm/%hh
+        | LM    Imm
+        | HM    Imm
+        | HH    Imm
 
 
 -- | Create a ImmLit containing this string.

@@ -29,7 +29,7 @@
 #include "PosixSource.h"
 #include "ghcconfig.h"
 
-#if defined(sparc_HOST_ARCH) || defined(USE_MINIINTERPRETER)
+#if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH) || defined(USE_MINIINTERPRETER)
 /* include Stg.h first because we want real machine regs in here: we
  * have to get the value of R1 back from Stg land to C land intact.
  */
@@ -364,7 +364,7 @@ StgRunIsImplementedInAssembler(void)
    Updated info (GHC 4.08.2): not saving %i7 any more (see below).
    -------------------------------------------------------------------------- */
 
-#ifdef sparc_HOST_ARCH
+#if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
 
 StgRegTable *
 StgRun(StgFunPtr f, StgRegTable *basereg) {

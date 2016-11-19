@@ -99,7 +99,7 @@ extern __thread gc_thread* gct;
     %g4     -- volatile over function calls, used by the linker
     %g5-%g7 -- reserved by the OS
 */
-#elif defined(sparc_HOST_ARCH)
+#elif defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
 extern __thread gc_thread* gct;
 #define SET_GCT(to) gct = (to)
 #define DECLARE_GCT __thread gc_thread* gct;

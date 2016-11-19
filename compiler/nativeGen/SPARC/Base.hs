@@ -8,11 +8,11 @@
 module SPARC.Base (
         wordLength,
         wordLengthInBits,
+        wordFormat,
         spillAreaLength,
         spillSlotSize,
         extraStackArgsHere,
         fits13Bits,
-        is32BitInteger,
         largeOffsetError
 )
 
@@ -23,14 +23,38 @@ import Panic
 
 import Data.Int
 
+is32BitPlatform :: NatM Bool
+is32BitPlatform = do
+    dflags <- getDynFlags
+    return $ target32Bit (targetPlatform dflags)
 
--- On 32 bit SPARC, pointers are 32 bits.
-wordLength :: Int
-wordLength = 4
+wordLength :: Bool -> Int
 
-wordLengthInBits :: Int
-wordLengthInBits
-        = wordLength * 8
+wordLength is32Bit
+ | is32Bit = 4
+
+wordLength is32Bit
+ | not is32Bit = 8
+
+wordLengthInBits :: Bool -> Int
+wordLengthInBits is32Bit
+        = (wordLength is32Bit) * 8
+
+wordFormat :: Bool -> Format
+
+wordFormat is32Bit
+ | is32Bit = II32
+
+wordFormat is32Bit
+ | not is32Bit = II64
+
+wordWidth :: Bool -> Width
+
+wordWidth is32Bit
+ | is32Bit = W32
+
+wordWidth is32Bit
+ | not is32Bit = W64
 
 -- Size of the available spill area
 spillAreaLength :: DynFlags -> Int
@@ -44,8 +68,13 @@ spillSlotSize = 8
 
 -- | We (allegedly) put the first six C-call arguments in registers;
 --      where do we start putting the rest of them?
-extraStackArgsHere :: Int
-extraStackArgsHere = 23
+extraStackArgsHere :: Bool -> Int
+
+extraStackArgsHere is32Bit
+ | is32Bit = 23
+
+extraStackArgsHere is32Bit
+ | not is32Bit = 22
 
 
 {-# SPECIALIZE fits13Bits :: Int -> Bool, Integer -> Bool #-}
@@ -53,23 +82,9 @@ extraStackArgsHere = 23
 fits13Bits :: Integral a => a -> Bool
 fits13Bits x = x >= -4096 && x < 4096
 
--- | Check whether an integer will fit in 32 bits.
---      A CmmInt is intended to be truncated to the appropriate
---      number of bits, so here we truncate it to Int64.  This is
---      important because e.g. -1 as a CmmInt might be either
---      -1 or 18446744073709551615.
---
-is32BitInteger :: Integer -> Bool
-is32BitInteger i
-        = i64 <= 0x7fffffff && i64 >= -0x80000000
-        where i64 = fromIntegral i :: Int64
-
-
 -- | Sadness.
 largeOffsetError :: (Show a) => a -> b
 largeOffsetError i
   = panic ("ERROR: SPARC native-code generator cannot handle large offset ("
                 ++ show i ++ ");\nprobably because of large constant data structures;" ++
                 "\nworkaround: use -fllvm on this module.\n")
-
-

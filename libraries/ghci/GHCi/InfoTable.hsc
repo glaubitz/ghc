@@ -58,6 +58,7 @@ funPtrToInt :: FunPtr a -> Int
 funPtrToInt (FunPtr a) = I## (addr2Int## a)
 
 data Arch = ArchSPARC
+          | ArchSPARC64
           | ArchPPC
           | ArchX86
           | ArchX86_64
@@ -73,6 +74,8 @@ platform :: Arch
 platform =
 #if defined(sparc_HOST_ARCH)
        ArchSPARC
+#elif defined(sparc64_HOST_ARCH)
+       ArchSPARC64
 #elif defined(powerpc_HOST_ARCH)
        ArchPPC
 #elif defined(i386_HOST_ARCH)
@@ -102,7 +105,7 @@ mkJumpToAddr a = case platform of
     ArchSPARC ->
         -- After some consideration, we'll try this, where
         -- 0x55555555 stands in for the address to jump to.
-        -- According to includes/rts/MachRegs.h, %g3 is very
+        -- According to includes/stg/MachRegs.h, %g3 is very
         -- likely indeed to be baggable.
         --
         --   0000 07155555              sethi   %hi(0x55555555), %g3
@@ -114,11 +117,43 @@ mkJumpToAddr a = case platform of
 
             hi22, lo10 :: Word32 -> Word32
             lo10 x = x .&. 0x3FF
-            hi22 x = (x `shiftR` 10) .&. 0x3FFFF
+            hi22 x = (x `shiftR` 10) .&. 0x3FFFFF
 
         in Right [ 0x07000000 .|. (hi22 w32),
                    0x8610E000 .|. (lo10 w32),
                    0x81C0C000,
+                   0x01000000 ]
+
+    ArchSPARC64 ->
+        -- After some consideration, we'll try this, where
+        -- <addr> stands in for the address to jump to.
+        -- According to includes/stg/MachRegs.h, %g3 and %g4
+        -- are very likely indeed to be baggable.
+        --
+        --   0000 07000000              sethi   %hh(<addr>), %g3
+        --   0004 8610E000              or      %g3, %hm(<addr>), %g3
+        --   0008 09000000              sethi   %lm(<addr>), %g4
+        --   000c 88112000              or      %g4, %lo(<addr>), %g4
+        --   0010 8728F020              sllx    %g3, 32, %g3
+        --   0014 8810C004              or      %g3, %g4, %g4
+        --   0018 81C10000              jmp     %g4
+        --   001c 01000000              nop
+
+        let w64 = fromIntegral (funPtrToInt a) :: Word64
+
+            hh22, hm10, lm22, lo10 :: Word64 -> Word32
+            lo10 x = x .&. 0x3FF
+            lm22 x = (x `shiftR` 10) .&. 0x3FFFFF
+            hm10 x = (x `shiftR` 32) .&. 0x3FF
+            hh22 x = (x `shiftR` 42) .&. 0x3FFFFF
+
+        in Right [ 0x07000000 .|. (hh22 w64),
+                   0x8610E000 .|. (hm10 w64),
+                   0x09000000 .|. (lm22 w64),
+                   0x88112000 .|. (lo10 w64),
+                   0x8728F020,
+                   0x8810C004,
+                   0x81C10000,
                    0x01000000 ]
 
     ArchPPC ->

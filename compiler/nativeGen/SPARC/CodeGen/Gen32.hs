@@ -1,14 +1,14 @@
 -- | Evaluation of 32 bit values.
 module SPARC.CodeGen.Gen32 (
-        getSomeReg,
-        getRegister
+        getSomeReg32,
+        getRegister32
 )
 
 where
 
 import SPARC.CodeGen.CondCode
 import SPARC.CodeGen.Amode
-import SPARC.CodeGen.Gen64
+import SPARC.CodeGen.Gen64On32
 import SPARC.CodeGen.Base
 import SPARC.Stack
 import SPARC.Instr
@@ -30,9 +30,9 @@ import Outputable
 
 -- | The dual to getAnyReg: compute an expression into a register, but
 --      we don't mind which one it is.
-getSomeReg :: CmmExpr -> NatM (Reg, InstrBlock)
-getSomeReg expr = do
-  r <- getRegister expr
+getSomeReg32 :: CmmExpr -> NatM (Reg, InstrBlock)
+getSomeReg32 expr = do
+  r <- getRegister32 expr
   case r of
     Any rep code -> do
         tmp <- getNewRegNat rep
@@ -44,33 +44,33 @@ getSomeReg expr = do
 
 -- | Make code to evaluate a 32 bit expression.
 --
-getRegister :: CmmExpr -> NatM Register
+getRegister32 :: CmmExpr -> NatM Register
 
-getRegister (CmmReg reg)
+getRegister32 (CmmReg reg)
   = do dflags <- getDynFlags
        let platform = targetPlatform dflags
        return (Fixed (cmmTypeFormat (cmmRegType dflags reg))
                      (getRegisterReg platform reg) nilOL)
 
-getRegister tree@(CmmRegOff _ _)
+getRegister32 tree@(CmmRegOff _ _)
   = do dflags <- getDynFlags
-       getRegister (mangleIndexTree dflags tree)
+       getRegister32 (mangleIndexTree dflags tree)
 
-getRegister (CmmMachOp (MO_UU_Conv W64 W32)
+getRegister32 (CmmMachOp (MO_UU_Conv W64 W32)
              [CmmMachOp (MO_U_Shr W64) [x,CmmLit (CmmInt 32 _)]]) = do
   ChildCode64 code rlo <- iselExpr64 x
   return $ Fixed II32 (getHiVRegFromLo rlo) code
 
-getRegister (CmmMachOp (MO_SS_Conv W64 W32)
+getRegister32 (CmmMachOp (MO_SS_Conv W64 W32)
              [CmmMachOp (MO_U_Shr W64) [x,CmmLit (CmmInt 32 _)]]) = do
   ChildCode64 code rlo <- iselExpr64 x
   return $ Fixed II32 (getHiVRegFromLo rlo) code
 
-getRegister (CmmMachOp (MO_UU_Conv W64 W32) [x]) = do
+getRegister32 (CmmMachOp (MO_UU_Conv W64 W32) [x]) = do
   ChildCode64 code rlo <- iselExpr64 x
   return $ Fixed II32 rlo code
 
-getRegister (CmmMachOp (MO_SS_Conv W64 W32) [x]) = do
+getRegister32 (CmmMachOp (MO_SS_Conv W64 W32) [x]) = do
   ChildCode64 code rlo <- iselExpr64 x
   return $ Fixed II32 rlo code
 
@@ -78,7 +78,7 @@ getRegister (CmmMachOp (MO_SS_Conv W64 W32) [x]) = do
 -- Load a literal float into a float register.
 --      The actual literal is stored in a new data area, and we load it
 --      at runtime.
-getRegister (CmmLit (CmmFloat f W32)) = do
+getRegister32 (CmmLit (CmmFloat f W32)) = do
 
     -- a label for the new data area
     lbl <- getNewLabelNat
@@ -95,7 +95,7 @@ getRegister (CmmLit (CmmFloat f W32)) = do
 
     return (Any FF32 code)
 
-getRegister (CmmLit (CmmFloat d W64)) = do
+getRegister32 (CmmLit (CmmFloat d W64)) = do
     lbl <- getNewLabelNat
     tmp <- getNewRegNat II32
     let code dst = toOL [
@@ -107,7 +107,7 @@ getRegister (CmmLit (CmmFloat d W64)) = do
 
 
 -- Unary machine ops
-getRegister (CmmMachOp mop [x])
+getRegister32 (CmmMachOp mop [x])
   = case mop of
         -- Floating point negation -------------------------
         MO_F_Neg W32            -> trivialUFCode FF32 (FNEG FF32) x
@@ -179,7 +179,7 @@ getRegister (CmmMachOp mop [x])
 
 
 -- Binary machine ops
-getRegister (CmmMachOp mop [x, y])
+getRegister32 (CmmMachOp mop [x, y])
   = case mop of
       MO_Eq _           -> condIntReg EQQ x y
       MO_Ne _           -> condIntReg NE x y
@@ -233,17 +233,17 @@ getRegister (CmmMachOp mop [x, y])
       MO_U_Shr rep      -> trivialCode rep SRL x y
       MO_S_Shr rep      -> trivialCode rep SRA x y
 
-      _                 -> pprPanic "getRegister(sparc) - binary CmmMachOp (1)" (pprMachOp mop)
+      _                 -> pprPanic "getRegister32(sparc) - binary CmmMachOp (1)" (pprMachOp mop)
   where
 
 
-getRegister (CmmLoad mem pk) = do
+getRegister32 (CmmLoad mem pk) = do
     Amode src code <- getAmode mem
     let
         code__2 dst     = code `snocOL` LD (cmmTypeFormat pk) src dst
     return (Any (cmmTypeFormat pk) code__2)
 
-getRegister (CmmLit (CmmInt i _))
+getRegister32 (CmmLit (CmmInt i _))
   | fits13Bits i
   = let
         src = ImmInt (fromInteger i)
@@ -251,7 +251,7 @@ getRegister (CmmLit (CmmInt i _))
     in
         return (Any II32 code)
 
-getRegister (CmmLit lit)
+getRegister32 (CmmLit lit)
   = let imm = litToImm lit
         code dst = toOL [
             SETHI (HI imm) dst,
@@ -259,8 +259,8 @@ getRegister (CmmLit lit)
     in return (Any II32 code)
 
 
-getRegister _
-        = panic "SPARC.CodeGen.Gen32.getRegister: no match"
+getRegister32 _
+        = panic "SPARC.CodeGen.Gen32.getRegister32: no match"
 
 
 -- | sign extend and widen
@@ -299,7 +299,7 @@ conversionNop
         :: Format -> CmmExpr -> NatM Register
 
 conversionNop new_rep expr
- = do   e_code <- getRegister expr
+ = do   e_code <- getRegister32 expr
         return (setFormatOfRegister e_code new_rep)
 
 
@@ -544,8 +544,8 @@ coerceInt2FP width1 width2 x = do
     (src, code) <- getSomeReg x
     let
         code__2 dst = code `appOL` toOL [
-            ST (intFormat width1) src (spRel (-2)),
-            LD (intFormat width1) (spRel (-2)) dst,
+            ST (intFormat width1) src (spRel True (-2)),
+            LD (intFormat width1) (spRel True (-2)) dst,
             FxTOy (intFormat width1) (floatFormat width2) dst dst]
     return (Any (floatFormat $ width2) code__2)
 
@@ -574,8 +574,8 @@ coerceFP2Int width1 width2 x
 
                         -- store the int into mem, then load it back to move
                         --      it into an actual int reg.
-                        , ST    fformat2 fdst (spRel (-2))
-                        , LD    iformat2 (spRel (-2)) dst]
+                        , ST    fformat2 fdst (spRel True (-2))
+                        , LD    iformat2 (spRel True (-2)) dst]
 
         return (Any iformat2 code2)
 

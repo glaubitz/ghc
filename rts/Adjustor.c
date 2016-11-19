@@ -6,9 +6,9 @@
  * ---------------------------------------------------------------------------*/
 
 /* A little bit of background...
-   
+
 An adjustor thunk is a dynamically allocated code snippet that allows
-Haskell closures to be viewed as C function pointers. 
+Haskell closures to be viewed as C function pointers.
 
 Stable pointers provide a way for the outside world to get access to,
 and evaluate, Haskell heap objects, with the RTS providing a small
@@ -17,7 +17,7 @@ our hand in C, we can jump into the Haskell world and evaluate a callback
 procedure, say. This works OK in some cases where callbacks are used, but
 does require the external code to know about stable pointers and how to deal
 with them. We'd like to hide the Haskell-nature of a callback and have it
-be invoked just like any other C function pointer. 
+be invoked just like any other C function pointer.
 
 Enter adjustor thunks. An adjustor thunk is a little piece of code
 that's generated on-the-fly (one per Haskell closure being exported)
@@ -59,7 +59,7 @@ extern void *adjustorCode;
 #if defined(USE_LIBFFI_FOR_ADJUSTORS)
 /* There are subtle differences between how libffi adjustors work on
  * different platforms, and the situation is a little complex.
- * 
+ *
  * HOW ADJUSTORS/CLOSURES WORK ON LIBFFI:
  * libffi's ffi_closure_alloc() function gives you two pointers to a closure,
  * 1. the writable pointer, and 2. the executable pointer. You write the
@@ -130,7 +130,7 @@ static ffi_type * char_to_ffi_type(char c)
 }
 
 void*
-createAdjustor (int cconv, 
+createAdjustor (int cconv,
                 StgStablePtr hptr,
                 StgFunPtr wptr,
                 char *typeString)
@@ -166,7 +166,7 @@ createAdjustor (int cconv,
 
     r = ffi_prep_cif(cif, abi, n_args, result_type, arg_types);
     if (r != FFI_OK) barf("ffi_prep_cif failed: %d", r);
-    
+
     cl = allocateExec(sizeof(ffi_closure), &code);
     if (cl == NULL) {
         barf("createAdjustor: failed to allocate memory");
@@ -190,12 +190,12 @@ createAdjustor (int cconv,
 
 #ifdef LEADING_UNDERSCORE
 #define UNDERSCORE "_"
-#else 
+#else
 #define UNDERSCORE ""
 #endif
 
 #if defined(x86_64_HOST_ARCH)
-/* 
+/*
   Now here's something obscure for you:
 
   When generating an adjustor thunk that uses the C calling
@@ -206,7 +206,7 @@ createAdjustor (int cconv,
   freeHaskellFunctionPtr(). Hence, we better not return to
   the adjustor code on our way  out, since it could by then
   point to junk.
-  
+
   The fix is readily at hand, just include the opcodes
   for the C stack fixup code that we need to perform when
   returning in some static piece of memory and arrange
@@ -252,15 +252,15 @@ stgAllocStable(size_t size_in_bytes, StgStablePtr *stable)
 {
   StgArrBytes* arr;
   uint32_t data_size_in_words, total_size_in_words;
-  
+
   /* round up to a whole number of words */
   data_size_in_words  = ROUNDUP_BYTES_TO_WDS(size_in_bytes);
   total_size_in_words = sizeofW(StgArrBytes) + data_size_in_words;
-  
+
   /* allocate and fill it in */
   arr = (StgArrBytes *)allocate(total_size_in_words);
   SET_ARR_HDR(arr, &stg_ARR_WORDS_info, CCCS, size_in_bytes);
- 
+
   /* obtain a stable ptr */
   *stable = getStablePtr((StgPtr)arr);
 
@@ -428,29 +428,29 @@ createAdjustor(int cconv, StgStablePtr hptr,
         adjustor = adjustorStub;
 
         int sz = totalArgumentSize(typeString);
-        
+
         adjustorStub->call[0] = 0xe8;
         *(long*)&adjustorStub->call[1] = ((char*)&adjustorCode) - ((char*)code + 5);
         adjustorStub->hptr = hptr;
         adjustorStub->wptr = wptr;
-        
+
             // The adjustor puts the following things on the stack:
             // 1.) %ebp link
             // 2.) padding and (a copy of) the arguments
             // 3.) a dummy argument
             // 4.) hptr
             // 5.) return address (for returning to the adjustor)
-            // All these have to add up to a multiple of 16. 
+            // All these have to add up to a multiple of 16.
 
             // first, include everything in frame_size
         adjustorStub->frame_size = sz * 4 + 16;
             // align to 16 bytes
         adjustorStub->frame_size = (adjustorStub->frame_size + 15) & ~15;
             // only count 2.) and 3.) as part of frame_size
-        adjustorStub->frame_size -= 12; 
+        adjustorStub->frame_size -= 12;
         adjustorStub->argument_size = sz;
     }
-    
+
 #elif defined(x86_64_HOST_ARCH)
 
 # if defined(mingw32_HOST_OS)
@@ -531,7 +531,7 @@ createAdjustor(int cconv, StgStablePtr hptr,
   [...]
 
     */
-    {  
+    {
         StgWord8 *adj_code;
 
         // determine whether we have 4 or more integer arguments,
@@ -623,7 +623,7 @@ createAdjustor(int cconv, StgStablePtr hptr,
    c:   48 89 fe                mov    %rdi,%rsi
    f:   48 8b 3d 0a 00 00 00    mov    10(%rip),%rdi
   16:   ff 25 0c 00 00 00       jmpq   *12(%rip)
-  ... 
+  ...
   20: .quad 0  # aligned on 8-byte boundary
   28: .quad 0  # aligned on 8-byte boundary
 
@@ -645,7 +645,7 @@ createAdjustor(int cconv, StgStablePtr hptr,
   38: .quad 0  # aligned on 8-byte boundary
     */
 
-    {  
+    {
         int i = 0;
         char *c;
         StgWord8 *adj_code;
@@ -685,7 +685,7 @@ createAdjustor(int cconv, StgStablePtr hptr,
             *(StgInt32 *)(adj_code+0x18) = 0x00123d8b;
             *(StgInt32 *)(adj_code+0x1c) = 0x25ff0000;
             *(StgInt32 *)(adj_code+0x20) = 0x00000014;
-            
+
             *(StgInt64 *)(adj_code+0x28) = (StgInt64)obscure_ccall_ret_code;
             *(StgInt64 *)(adj_code+0x30) = (StgInt64)hptr;
             *(StgInt64 *)(adj_code+0x38) = (StgInt64)wptr;
@@ -726,7 +726,7 @@ createAdjustor(int cconv, StgStablePtr hptr,
   */
     adjustor = allocateExec(4*(11+1),&code);
     {
-        unsigned long *const adj_code = (unsigned long *)adjustor;
+        StgWord32 *const adj_code = (StgWord32 *)adjustor;
 
         adj_code[ 0]  = 0x9C23A008UL;   /* sub   %sp, 8, %sp         */
         adj_code[ 1]  = 0xDA23A060UL;   /* st    %o5, [%sp + 96]     */
@@ -736,15 +736,15 @@ createAdjustor(int cconv, StgStablePtr hptr,
         adj_code[ 5]  = 0x96100009UL;   /* mov   %o1, %o3            */
         adj_code[ 6]  = 0x94100008UL;   /* mov   %o0, %o2            */
         adj_code[ 7]  = 0x13000000UL;   /* sethi %hi(wptr), %o1      */
-        adj_code[ 7] |= ((unsigned long)wptr) >> 10;
+        adj_code[ 7] |= ((StgWord32)wptr) >> 10;
         adj_code[ 8]  = 0x11000000UL;   /* sethi %hi(hptr), %o0      */
-        adj_code[ 8] |= ((unsigned long)hptr) >> 10;
+        adj_code[ 8] |= ((StgWord32)hptr) >> 10;
         adj_code[ 9]  = 0x81C26000UL;   /* jmp   %o1 + %lo(wptr)     */
-        adj_code[ 9] |= ((unsigned long)wptr) & 0x000003FFUL;
+        adj_code[ 9] |= ((StgWord32)wptr) & 0x000003FFUL;
         adj_code[10]  = 0x90122000UL;   /* or    %o0, %lo(hptr), %o0 */
-        adj_code[10] |= ((unsigned long)hptr) & 0x000003FFUL;
+        adj_code[10] |= ((StgWord32)hptr) & 0x000003FFUL;
 
-        adj_code[11]  = (unsigned long)hptr;
+        adj_code[11]  = (StgWord32)hptr;
 
         /* flush cache */
         asm("flush %0" : : "r" (adj_code     ));
@@ -758,6 +758,106 @@ createAdjustor(int cconv, StgStablePtr hptr,
         asm("nop");
         asm("nop");
         asm("nop");
+    }
+#elif defined(sparc64_HOST_ARCH)
+  /* Magic constant computed by inspecting the code length of the following
+     assembly language snippet (offset and machine code prefixed):
+
+     00:   9c 23 a0 10     sub   %sp, 16, %sp            ! make room for %o4/%o5 in caller's frame
+     04:   da 73 a8 b7     stx   %o5, [%sp + 2047 + 184] ! shift registers by 2 positions
+     08:   d8 73 a8 af     stx   %o4, [%sp + 2047 + 176]
+     0C:   9a 10 00 0b     mov   %o3, %o5
+     10:   98 10 00 0a     mov   %o2, %o4
+     14:   96 10 00 09     mov   %o1, %o3
+     18:   94 10 00 08     mov   %o0, %o2
+     1C:   13 00 00 00     sethi %hh(wptr), %o1          ! load up wptr
+     20:   92 12 60 00     or    %o1, %hm(wptr), %o1
+     24:   0b 00 00 00     sethi %lm(wptr), %g5
+     28:   93 2a 70 20     sllx  %o1, 32, %o1
+     2C:   92 12 40 05     or    %o1, %g5, %o1
+     30:   13 00 00 00     sethi %hh(hptr), %o1          ! load up hptr
+     34:   90 12 20 00     or    %o0, %hm(hptr), %o0
+     38:   0b 00 00 00     sethi %lm(hptr), %g5
+     3C:   8a 11 60 00     or    %g5, %lo(hptr), %g5
+     40:   91 2a 30 20     sllx  %o0, 32, %o0
+     44:   81 c2 60 00     jmp   %o1 + %lo(wptr)         ! jump to wptr
+     48:   90 12 00 05      or   %o0, %g5, %o0           ! delay slot
+     4C:   00 00 00 00                                   ! place for getting hptr back easily
+     30:   00 00 00 00                                   ! place for getting hptr back easily
+
+XXX: comment misleading; stack alignment is implied by 64-bit...
+     ccall'ing on SPARC is easy, because we are quite lucky to push a
+     multiple of 8 bytes (1 word hptr + 1 word dummy arg) in front of the
+     existing arguments (note that %sp must stay double-word aligned at
+     all times, see ABI spec at http://www.sparc.org/standards/psABI3rd.pdf).
+     To do this, we extend the *caller's* stack frame by 2 words and shift
+     the output registers used for argument passing (%o0 - %o5, we are a *leaf*
+     procedure because of the tail-jump) by 2 positions. This makes room in
+     %o0 and %o1 for the additional arguments, namely  hptr and a dummy (used
+     for destination addr of jump on SPARC, return address on x86, ...). This
+     shouldn't cause any problems for a C-like caller: alloca is implemented
+     similarly, and local variables should be accessed via %fp, not %sp. In a
+     nutshell: This should work! (Famous last words! :-)
+  */
+    adjustor = allocateExec(4*(19+2),&code);
+    {
+        StgWord32 *const adj_code = (StgWord32 *)adjustor;
+
+        adj_code[ 0]  = 0x9c23a010;   /* sub   %sp, 16, %sp            */
+        adj_code[ 1]  = 0xda73a8b7;   /* stx   %o5, [%sp + 2047 + 184] */
+        adj_code[ 2]  = 0xd873a8af;   /* stx   %o4, [%sp + 2047 + 176] */
+        adj_code[ 3]  = 0x9a10000b;   /* mov   %o3, %o5                */
+        adj_code[ 4]  = 0x9810000a;   /* mov   %o2, %o4                */
+        adj_code[ 5]  = 0x96100009;   /* mov   %o1, %o3                */
+        adj_code[ 6]  = 0x94100008;   /* mov   %o0, %o2                */
+        adj_code[ 7]  = 0x13000000;   /* sethi %hh(wptr), %o1          */
+        adj_code[ 7] |= (StgWord32)(((StgWord64)wptr >> 42) & 0x3fffff);
+        adj_code[ 8]  = 0x92126000;   /* or    %o1, %hm(wptr), %o1     */
+        adj_code[ 8] |= (StgWord32)(((StgWord64)wptr >> 32) & 0x3ff);
+        adj_code[ 9]  = 0x0b000000;   /* sethi %lm(wptr), %g5          */
+        adj_code[ 9] |= (StgWord32)(((StgWord64)wptr >> 10) & 0x3fffff);
+        adj_code[10]  = 0x932a7020;   /* sllx  %o1, 32, %o1            */
+        adj_code[11]  = 0x92124005;   /* or    %o1, %g5, %o1           */
+        adj_code[12]  = 0x13000000;   /* sethi %hh(hptr), %o1          */
+        adj_code[12] |= (StgWord32)(((StgWord64)hptr >> 42) & 0x3fffff);
+        adj_code[13]  = 0x90122000;   /* or    %o0, %hm(hptr), %o0     */
+        adj_code[13] |= (StgWord32)(((StgWord64)hptr >> 32) & 0x3ff);
+        adj_code[14]  = 0x0b000000;   /* sethi %lm(hptr), %g5          */
+        adj_code[14] |= (StgWord32)(((StgWord64)hptr >> 10) & 0x3fffff);
+        adj_code[15]  = 0x8a116000;   /* or    %g5, %lo(hptr), %g5     */
+        adj_code[15] |= (StgWord32)((StgWord64)hptr & 0x3ff);
+        adj_code[16]  = 0x912a3020;   /* sllx  %o0, 32, %o0            */
+        adj_code[17]  = 0x81c26000;   /* jmp   %o1 + %lo(wptr)         */
+        adj_code[17] |= (StgWord32)((StgWord64)wptr & 0x3ff);
+        adj_code[18]  = 0x90120005;   /* or    %o0, %g5, %o0           */
+        adj_code[19]  = (StgWord32)((StgWord64)hptr >> 32);
+        adj_code[20]  = (StgWord32)((StgWord64)hptr & 0xffffffff);
+
+        /* flush icache - operates on (at least) doublewords */
+        __asm__ volatile ("flush %0 +  0\n\t"
+                          "flush %0 +  8\n\t"
+                          "flush %0 + 16\n\t"
+                          "flush %0 + 24\n\t"
+                          "flush %0 + 32\n\t"
+                          "flush %0 + 40\n\t"
+                          "flush %0 + 48\n\t"
+                          "flush %0 + 56\n\t"
+                          "flush %0 + 64\n\t"
+                          "flush %0 + 72\n\t"
+                          "flush %0 + 80"
+                : : "r" (adj_code));
+        /* asm("flush %0" : : "r" (adj_code +  2)); */
+        /* asm("flush %0" : : "r" (adj_code +  4)); */
+        /* asm("flush %0" : : "r" (adj_code +  6)); */
+        /* asm("flush %0" : : "r" (adj_code +  8)); */
+        /* asm("flush %0" : : "r" (adj_code + 10)); */
+        /* asm("flush %0" : : "r" (adj_code + 12)); */
+        /* asm("flush %0" : : "r" (adj_code + 14)); */
+        /* asm("flush %0" : : "r" (adj_code + 16)); */
+        /* asm("flush %0" : : "r" (adj_code + 18)); */
+        /* asm("flush %0" : : "r" (adj_code + 20)); */
+
+        /* V9 flush has no latency on the current processor */
     }
 #elif defined(alpha_HOST_ARCH)
   /* Magic constant computed by inspecting the code length of
@@ -826,7 +926,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
            We need to calculate all the details of the stack frame layout,
            taking into account the types of all the arguments, and then
            generate code on the fly. */
-    
+
         int src_gpr = 3, dst_gpr = 5;
         int fpr = 3;
         int src_offset = 0, dst_offset = 0;
@@ -834,7 +934,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
         int src_locs[n], dst_locs[n];
         int frameSize;
         unsigned *code;
-      
+
             /* Step 1:
                Calculate where the arguments should go.
                src_locs[] will contain the locations of the arguments in the
@@ -908,7 +1008,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
                     // plus 14 more instructions.
         adjustor = allocateExec(4 * (4*n + 14),&code);
         code = (unsigned*)adjustor;
-        
+
         *code++ = 0x48000008; // b *+8
             // * Put the hptr in a place where freeHaskellFunctionPtr
             //   can get at it.
@@ -958,7 +1058,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
                                 | ((-src_locs[i]+1) << 21)
                                 | (dst_locs[i] + 4);
                     }
-                    
+
                         // stw src, dst_offset(r1)
                     *code++ = 0x90010000
                             | ((-src_locs[i]) << 21)
@@ -1027,7 +1127,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
     }
 
 #elif defined(powerpc_HOST_ARCH) || defined(powerpc64_HOST_ARCH)
-        
+
 #define OP_LO(op,lo)  ((((unsigned)(op)) << 16) | (((unsigned)(lo)) & 0xFFFF))
 #define OP_HI(op,hi)  ((((unsigned)(op)) << 16) | (((unsigned)(hi)) >> 16))
     {
@@ -1063,7 +1163,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
         adjustorStub = allocateExec(sizeof(AdjustorStub),&code);
 #endif
         adjustor = adjustorStub;
-            
+
         adjustorStub->code = (void*) &adjustorCode;
 
 #ifdef FUNDESCS
@@ -1106,7 +1206,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
 
             // Calculate the size of the stack frame, in words.
         sz = totalArgumentSize(typeString);
-        
+
             // The first eight words of the parameter area
             // are just "backing store" for the parameters passed in
             // the GPRs. extra_sz is the number of words beyond those first
@@ -1120,11 +1220,11 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
                   + 8 /* minimum parameter area */
                   + 2 /* two extra arguments */
                   + extra_sz)*sizeof(StgWord);
-       
+
             // align to 16 bytes.
             // AIX only requires 8 bytes, but who cares?
         total_sz = (total_sz+15) & ~0xF;
-       
+
             // Fill in the information that adjustorCode in AdjustorAsm.S
             // will use to create a new stack frame with the additional args.
         adjustorStub->hptr = hptr;
@@ -1141,7 +1241,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
     to save return address and previous function state - we need to come back
     here on the way out to restore the stack, so this is a real function
     rather than just a trampoline).
-    
+
     The function descriptor we create contains the gp of the target function
     so gp is already loaded correctly.
 
@@ -1226,7 +1326,7 @@ TODO: Depending on how much allocation overhead stgMallocBytes uses for
     barf("adjustor creation not supported on this platform");
 #endif
     break;
-  
+
   default:
     ASSERT(0);
     break;
@@ -1273,13 +1373,21 @@ freeHaskellFunctionPtr(void* ptr)
    return;
  }
 #elif defined(sparc_HOST_ARCH)
- if ( *(unsigned long*)ptr != 0x9C23A008UL ) {
+ if ( *(StgWord32*)ptr != 0x9C23A008UL ) {
    errorBelch("freeHaskellFunctionPtr: not for me, guv! %p\n", ptr);
    return;
  }
 
  /* Free the stable pointer first..*/
- freeStablePtr(*((StgStablePtr*)((unsigned long*)ptr + 11)));
+ freeStablePtr(*((StgStablePtr*)((StgWord32*)ptr + 11)));
+#elif defined(sparc64_HOST_ARCH)
+ if ( *(StgWord32*)ptr != 0x9c23a010 ) {
+   errorBelch("freeHaskellFunctionPtr: not for me, guv! %p\n", ptr);
+   return;
+ }
+
+ /* Free the stable pointer first..*/
+ freeStablePtr((((StgStablePtr)*((StgWord32*)ptr + 19)) << 32) | *((StgWord32*)ptr + 20));
 #elif defined(alpha_HOST_ARCH)
  if ( *(StgWord64*)ptr != 0xa77b0018a61b0010L ) {
    errorBelch("freeHaskellFunctionPtr: not for me, guv! %p\n", ptr);

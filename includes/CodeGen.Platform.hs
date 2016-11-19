@@ -1,6 +1,6 @@
 
 import CmmExpr
-#if !(MACHREGS_i386 || MACHREGS_x86_64 || MACHREGS_sparc || MACHREGS_powerpc)
+#if !(MACHREGS_i386 || MACHREGS_x86_64 || MACHREGS_sparc || MACHREGS_sparc64 || MACHREGS_powerpc)
 import Panic
 #endif
 import Reg
@@ -139,7 +139,7 @@ import Reg
 # define r31 31
 
 -- See note above. These aren't actually used for anything except satisfying the compiler for globalRegMaybe
--- so I'm unsure if they're the correct numberings, should they ever be attempted to be used in the NCG. 
+-- so I'm unsure if they're the correct numberings, should they ever be attempted to be used in the NCG.
 #if MACHREGS_aarch64 || MACHREGS_arm
 # define s0 32
 # define s1 33
@@ -276,7 +276,7 @@ import Reg
 #  define fr31 63
 # endif
 
-#elif MACHREGS_sparc
+#elif MACHREGS_sparc || MACHREGS_sparc64
 
 # define g0  0
 # define g1  1
@@ -989,9 +989,12 @@ freeReg _ = True
 -- %g0(r0) is always zero
 freeReg g0  = False
 
--- %g5(r5) - %g7(r7)
---  are reserved for the OS
+-- %g5(r5) is reserved for the OS for V8
+#if MACHREGS_sparc
 freeReg g5  = False
+#endif
+-- %g6(r6) - %g7(r7)
+--  are reserved for the OS
 freeReg g6  = False
 freeReg g7  = False
 
