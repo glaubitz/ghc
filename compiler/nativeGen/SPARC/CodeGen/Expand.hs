@@ -94,6 +94,7 @@ remapRegPair instr
 --      TODO:   It'd be better to use a scratch reg instead of the add/sub thing.
 --              We might be able to do this faster if we use the UA2007 instr set
 --              instead of restricting ourselves to SPARC V9.
+--      TODO:   Does 64-bit NCG need this?
 --
 expandMisalignedDoubles :: Instr -> OrdList Instr
 expandMisalignedDoubles instr

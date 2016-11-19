@@ -67,15 +67,15 @@ riZero _                                        = False
 
 -- | Calculate the effective address which would be used by the
 --      corresponding fpRel sequence.
-fpRelEA :: Int -> Reg -> Instr
-fpRelEA n dst
-   = ADD False False fp (RIImm (ImmInt (n * wordLength))) dst
+fpRelEA :: Bool -> Int -> Reg -> Instr
+fpRelEA is32Bit n dst
+   = ADD False False fp (RIImm (ImmInt (n * (wordLength is32Bit) + (stackBias is32Bit)))) dst
 
 
 -- | Code to shift the stack pointer by n words.
-moveSp :: Int -> Instr
-moveSp n
-   = ADD False False sp (RIImm (ImmInt (n * wordLength))) sp
+moveSp :: Bool -> Int -> Instr
+moveSp is32Bit n
+   = ADD False False sp (RIImm (ImmInt (n * (wordLength is32Bit) + (stackBias is32Bit))) sp
 
 -- | An instruction that will cause the one after it never to be exectuted
 isUnconditionalJump :: Instr -> Bool
@@ -144,6 +144,7 @@ data Instr
 
         | UMUL          Bool Reg RI Reg                 --     cc?, src1, src2, dst
         | SMUL          Bool Reg RI Reg                 --     cc?, src1, src2, dst
+        | MULX          Reg RI Reg                      --          src1, src2, dst
 
 
         -- The SPARC divide instructions perform 64bit by 32bit division
@@ -153,8 +154,13 @@ data Instr
         --   the remainder, so we have to make sure it is 0 each time.
 
         --   dst <- ((Y `shiftL` 32) `or` src1) `div` src2
+
+        --   For SPARCV9's opX multiply and divide instructions, Y is unused.
         | UDIV          Bool Reg RI Reg                 --     cc?, src1, src2, dst
         | SDIV          Bool Reg RI Reg                 --     cc?, src1, src2, dst
+
+        | UDIVX         Reg RI Reg                      --          src1, src2, dst
+        | SDIVX         Reg RI Reg                      --          src1, src2, dst
 
         | RDY           Reg                             -- move contents of Y register to reg
         | WRY           Reg  Reg                        -- Y <- src1 `xor` src2
@@ -203,7 +209,7 @@ data Instr
         --
         | JMP_TBL       AddrMode [Maybe BlockId] CLabel
 
-        | CALL          (Either Imm Reg) Int Bool       -- target, args, terminal
+        | CALL          (Either Imm Reg) [Reg] Bool     -- target, params, terminal
 
 
 -- | regUsage returns the sets of src and destination registers used
@@ -222,45 +228,48 @@ data Instr
 sparc_regUsageOfInstr :: Platform -> Instr -> RegUsage
 sparc_regUsageOfInstr platform instr
  = case instr of
-    LD    _ addr reg            -> usage (regAddr addr,         [reg])
-    ST    _ reg addr            -> usage (reg : regAddr addr,   [])
-    ADD   _ _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    SUB   _ _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    UMUL    _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    SMUL    _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    UDIV    _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    SDIV    _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    RDY       rd                -> usage ([],                   [rd])
-    WRY       r1 r2             -> usage ([r1, r2],             [])
-    AND     _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    ANDN    _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    OR      _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    ORN     _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    XOR     _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    XNOR    _ r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    SLL       r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    SRL       r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    SRA       r1 ar r2          -> usage (r1 : regRI ar,        [r2])
-    SETHI   _ reg               -> usage ([],                   [reg])
-    FABS    _ r1 r2             -> usage ([r1],                 [r2])
-    FADD    _ r1 r2 r3          -> usage ([r1, r2],             [r3])
-    FCMP    _ _  r1 r2          -> usage ([r1, r2],             [])
-    FDIV    _ r1 r2 r3          -> usage ([r1, r2],             [r3])
-    FMOV    _ r1 r2             -> usage ([r1],                 [r2])
-    FMUL    _ r1 r2 r3          -> usage ([r1, r2],             [r3])
-    FNEG    _ r1 r2             -> usage ([r1],                 [r2])
-    FSQRT   _ r1 r2             -> usage ([r1],                 [r2])
-    FSUB    _ r1 r2 r3          -> usage ([r1, r2],             [r3])
-    FxTOy   _ _  r1 r2          -> usage ([r1],                 [r2])
+    LD    _ addr reg               -> usage (regAddr addr,         [reg])
+    ST    _ reg addr               -> usage (reg : regAddr addr,   [])
+    ADD   _ _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SUB   _ _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    UMUL    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SMUL    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    MULX      r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    UDIV    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SDIV    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    UDIVX     r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SDIVX     r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    RDY       rd                   -> usage ([],                   [rd])
+    WRY       r1 r2                -> usage ([r1, r2],             [])
+    AND     _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    ANDN    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    OR      _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    ORN     _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    XOR     _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    XNOR    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SLL       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SRL       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SRA       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    SETHI   _ reg                  -> usage ([],                   [reg])
+    FABS    _ r1 r2                -> usage ([r1],                 [r2])
+    FADD    _ r1 r2 r3             -> usage ([r1, r2],             [r3])
+    FCMP    _ _  r1 r2             -> usage ([r1, r2],             [])
+    FDIV    _ r1 r2 r3             -> usage ([r1, r2],             [r3])
+    FMOV    _ r1 r2                -> usage ([r1],                 [r2])
+    FMUL    _ r1 r2 r3             -> usage ([r1, r2],             [r3])
+    FNEG    _ r1 r2                -> usage ([r1],                 [r2])
+    FSQRT   _ r1 r2                -> usage ([r1],                 [r2])
+    FSUB    _ r1 r2 r3             -> usage ([r1, r2],             [r3])
+    FxTOy   _ _  r1 r2             -> usage ([r1],                 [r2])
 
-    JMP     addr                -> usage (regAddr addr, [])
-    JMP_TBL addr _ _            -> usage (regAddr addr, [])
+    JMP     addr                   -> usage (regAddr addr, [])
+    JMP_TBL addr _ _               -> usage (regAddr addr, [])
 
-    CALL  (Left _  )  _ True    -> noUsage
-    CALL  (Left _  )  n False   -> usage (argRegs n, callClobberedRegs)
-    CALL  (Right reg) _ True    -> usage ([reg], [])
-    CALL  (Right reg) n False   -> usage (reg : (argRegs n), callClobberedRegs)
-    _                           -> noUsage
+    CALL  (Left _  )  _ True       -> noUsage
+    CALL  (Left _  )  params False -> usage (params, callClobberedRegs)
+    CALL  (Right reg) _ True       -> usage ([reg], [])
+    CALL  (Right reg) params False -> usage (reg : params, callClobberedRegs)
+    _                              -> noUsage
 
   where
     usage (src, dst)
@@ -295,8 +304,11 @@ sparc_patchRegsOfInstr instr env = case instr of
     SUB   x cc r1 ar r2         -> SUB   x cc  (env r1) (fixRI ar) (env r2)
     UMUL    cc r1 ar r2         -> UMUL    cc  (env r1) (fixRI ar) (env r2)
     SMUL    cc r1 ar r2         -> SMUL    cc  (env r1) (fixRI ar) (env r2)
+    MULX       r1 ar r2         -> MULX        (env r1) (fixRI ar) (env r2)
     UDIV    cc r1 ar r2         -> UDIV    cc  (env r1) (fixRI ar) (env r2)
     SDIV    cc r1 ar r2         -> SDIV    cc  (env r1) (fixRI ar) (env r2)
+    UDIVX      r1 ar r2         -> UDIVX       (env r1) (fixRI ar) (env r2)
+    SDIVX      r1 ar r2         -> SDIVX       (env r1) (fixRI ar) (env r2)
     RDY   rd                    -> RDY         (env rd)
     WRY   r1 r2                 -> WRY         (env r1) (env r2)
     AND   b r1 ar r2            -> AND   b     (env r1) (fixRI ar) (env r2)
@@ -325,8 +337,8 @@ sparc_patchRegsOfInstr instr env = case instr of
     JMP     addr                -> JMP     (fixAddr addr)
     JMP_TBL addr ids l          -> JMP_TBL (fixAddr addr) ids l
 
-    CALL  (Left i) n t          -> CALL (Left i) n t
-    CALL  (Right r) n t         -> CALL (Right (env r)) n t
+    CALL  (Left i) params t     -> CALL (Left i) params t
+    CALL  (Right r) params t    -> CALL (Right (env r)) params t
     _                           -> instr
 
   where
@@ -379,14 +391,18 @@ sparc_mkSpillInstr
 sparc_mkSpillInstr dflags reg _ slot
  = let  platform = targetPlatform dflags
         off      = spillSlotToOffset dflags slot
-        off_w    = 1 + (off `div` 4)
+        is32Bit  = target32Bit platform
+        off_w    = 1 + (off `div` (wordLength is32Bit))
         fmt      = case targetClassOfReg platform reg of
-                        RcInteger -> II32
+                        RcInteger
+                        | is32Bit     -> II32
+                        | not is32Bit -> II64
+
                         RcFloat   -> FF32
                         RcDouble  -> FF64
                         _         -> panic "sparc_mkSpillInstr"
 
-    in ST fmt reg (fpRel (negate off_w))
+    in ST fmt reg (fpRel is32Bit (negate off_w))
 
 
 -- | Make a spill reload instruction.
@@ -400,14 +416,18 @@ sparc_mkLoadInstr
 sparc_mkLoadInstr dflags reg _ slot
   = let platform = targetPlatform dflags
         off      = spillSlotToOffset dflags slot
-        off_w    = 1 + (off `div` 4)
+        is32Bit  = target32Bit platform
+        off_w    = 1 + (off `div` (wordLength is32Bit))
         fmt      = case targetClassOfReg platform reg of
-                        RcInteger -> II32
+                        RcInteger
+                        | is32Bit     -> II32
+                        | not is32Bit -> II64
+
                         RcFloat   -> FF32
                         RcDouble  -> FF64
                         _         -> panic "sparc_mkLoadInstr"
 
-        in LD fmt (fpRel (- off_w)) reg
+        in LD fmt (fpRel is32Bit (- off_w)) reg
 
 
 --------------------------------------------------------------------------------

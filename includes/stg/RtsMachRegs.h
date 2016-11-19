@@ -55,6 +55,10 @@
 #define MACHREGS_sparc    1
 #endif
 
+#if defined(sparc64_HOST_ARCH)
+#define MACHREGS_sparc64  1
+#endif
+
 #if defined(arm_HOST_ARCH)
 #define MACHREGS_arm      1
 #endif

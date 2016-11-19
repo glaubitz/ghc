@@ -194,6 +194,8 @@ write_barrier(void) {
 #elif defined(sparc_HOST_ARCH)
     /* Sparc in TSO mode does not require store/store barriers. */
     __asm__ __volatile__ ("" : : : "memory");
+#elif defined(sparc64_HOST_ARCH)
+    __asm__ __volatile__ ("membar #StoreStore" : : : "memory");
 #elif defined(arm_HOST_ARCH) || defined(aarch64_HOST_ARCH)
     __asm__ __volatile__ ("dmb  st" : : : "memory");
 #else
@@ -212,7 +214,7 @@ store_load_barrier(void) {
 #elif defined(powerpc_HOST_ARCH) || defined(powerpc64_HOST_ARCH) \
     || defined(powerpc64le_HOST_ARCH)
     __asm__ __volatile__ ("sync" : : : "memory");
-#elif defined(sparc_HOST_ARCH)
+#elif defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
     __asm__ __volatile__ ("membar #StoreLoad" : : : "memory");
 #elif defined(arm_HOST_ARCH)
     __asm__ __volatile__ ("dmb" : : : "memory");
@@ -237,6 +239,8 @@ load_load_barrier(void) {
 #elif defined(sparc_HOST_ARCH)
     /* Sparc in TSO mode does not require load/load barriers. */
     __asm__ __volatile__ ("" : : : "memory");
+#elif defined(sparc64_HOST_ARCH)
+    __asm__ __volatile__ ("membar #LoadLoad" : : : "memory");
 #elif defined(arm_HOST_ARCH)
     __asm__ __volatile__ ("dmb" : : : "memory");
 #elif defined(aarch64_HOST_ARCH)

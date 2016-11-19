@@ -28,8 +28,8 @@ import SPARC.Base
 import SPARC.CodeGen.Sanity
 import SPARC.CodeGen.Amode
 import SPARC.CodeGen.CondCode
-import SPARC.CodeGen.Gen64
-import SPARC.CodeGen.Gen32
+import SPARC.CodeGen.Gen
+import SPARC.CodeGen.Gen64On32
 import SPARC.CodeGen.Base
 import SPARC.Ppr        ()
 import SPARC.Instr
@@ -127,22 +127,24 @@ stmtsToInstrs stmts
 stmtToInstrs :: CmmNode e x -> NatM InstrBlock
 stmtToInstrs stmt = do
   dflags <- getDynFlags
+  let platform = targetPlatform dflags
+  let is32Bit  = is32BitPlatform platform
   case stmt of
     CmmComment s   -> return (unitOL (COMMENT s))
     CmmTick {}     -> return nilOL
     CmmUnwind {}   -> return nilOL
 
     CmmAssign reg src
-      | isFloatType ty  -> assignReg_FltCode format reg src
-      | isWord64 ty     -> assignReg_I64Code        reg src
-      | otherwise       -> assignReg_IntCode format reg src
+      | isFloatType ty        -> assignReg_FltCode format reg src
+      | isWord64 ty | is32Bit -> assignReg_I64Code        reg src
+      | otherwise             -> assignReg_IntCode format reg src
         where ty = cmmRegType dflags reg
               format = cmmTypeFormat ty
 
     CmmStore addr src
-      | isFloatType ty  -> assignMem_FltCode format addr src
-      | isWord64 ty     -> assignMem_I64Code      addr src
-      | otherwise       -> assignMem_IntCode format addr src
+      | isFloatType ty        -> assignMem_FltCode format addr src
+      | isWord64 ty | is32Bit -> assignMem_I64Code        addr src
+      | otherwise             -> assignMem_IntCode format addr src
         where ty = cmmExprType dflags src
               format = cmmTypeFormat ty
 
@@ -254,7 +256,7 @@ assignReg_FltCode pk dstCmmReg srcCmmExpr = do
 genJump :: CmmExpr{-the branch target-} -> NatM InstrBlock
 
 genJump (CmmLit (CmmLabel lbl))
-  = return (toOL [CALL (Left target) 0 True, NOP])
+  = return (toOL [CALL (Left target) [] True, NOP])
   where
     target = ImmCLbl lbl
 
@@ -353,7 +355,7 @@ generateJumpTableForInstr _ _ = Nothing
 -- -----------------------------------------------------------------------------
 -- Generating C calls
 
-{-
+{- TODO: Update for 64-bit
    Now the biggest nightmare---calls.  Most of the nastiness is buried in
    @get_arg@, which moves the arguments to the correct registers/stack
    locations.  Apart from that, the code is easy.
@@ -408,49 +410,49 @@ genCCall (PrimTarget (MO_Prefetch_Data _)) _ _
  = return $ nilOL
 
 genCCall target dest_regs args
- = do   -- work out the arguments, and assign them to integer regs
+ = do   dflags <- getDynFlags
+        let platform = targetPlatform dflags
+        let is32Bit = target32Bit platform
+        -- work out the arguments, and assign them to integer regs
         argcode_and_vregs       <- mapM arg_to_int_vregs args
         let (argcodes, vregss)  = unzip argcode_and_vregs
         let vregs               = concat vregss
 
         let n_argRegs           = length allArgRegs
-        let n_argRegs_used      = min (length vregs) n_argRegs
-
-
-        -- deal with static vs dynamic call targets
-        callinsns <- case target of
-                ForeignTarget (CmmLit (CmmLabel lbl)) _ ->
-                        return (unitOL (CALL (Left (litToImm (CmmLabel lbl))) n_argRegs_used False))
-
-                ForeignTarget expr _
-                 -> do  (dyn_c, [dyn_r]) <- arg_to_int_vregs expr
-                        return (dyn_c `snocOL` CALL (Right dyn_r) n_argRegs_used False)
-
-                PrimTarget mop
-                 -> do  res     <- outOfLineMachOp mop
-                        lblOrMopExpr <- case res of
-                                Left lbl -> do
-                                        return (unitOL (CALL (Left (litToImm (CmmLabel lbl))) n_argRegs_used False))
-
-                                Right mopExpr -> do
-                                        (dyn_c, [dyn_r]) <- arg_to_int_vregs mopExpr
-                                        return (dyn_c `snocOL` CALL (Right dyn_r) n_argRegs_used False)
-
-                        return lblOrMopExpr
 
         let argcode = concatOL argcodes
 
         let (move_sp_down, move_sp_up)
                    = let diff = length vregs - n_argRegs
-                         nn   = if odd diff then diff + 1 else diff -- keep 8-byte alignment
+                         nn   = if odd diff then diff + 1 else diff -- keep 2-word alignment
                      in  if   nn <= 0
                          then (nilOL, nilOL)
-                         else (unitOL (moveSp (-1*nn)), unitOL (moveSp (1*nn)))
+                         else (unitOL (moveSp is32Bit (-1*nn)), unitOL (moveSp is32Bit (1*nn)))
 
-        let transfer_code
-                = toOL (move_final vregs allArgRegs extraStackArgsHere)
+        let (transfer_code, out_regs)
+                = toOL (move_final is32Bit vregs allArgRegs (extraStackArgsHere is32Bit))
 
-        dflags <- getDynFlags
+        -- deal with static vs dynamic call targets
+        callinsns <- case target of
+                ForeignTarget (CmmLit (CmmLabel lbl)) _ ->
+                        return (unitOL (CALL (Left (litToImm (CmmLabel lbl))) out_regs False))
+
+                ForeignTarget expr _
+                 -> do  (dyn_c, [dyn_r]) <- arg_to_int_vregs expr
+                        return (dyn_c `snocOL` CALL (Right dyn_r) out_regs False)
+
+                PrimTarget mop
+                 -> do  res     <- outOfLineMachOp mop
+                        lblOrMopExpr <- case res of
+                                Left lbl -> do
+                                        return (unitOL (CALL (Left (litToImm (CmmLabel lbl))) out_regs False))
+
+                                Right mopExpr -> do
+                                        (dyn_c, [dyn_r]) <- arg_to_int_vregs mopExpr
+                                        return (dyn_c `snocOL` CALL (Right dyn_r) out_regs False)
+
+                        return lblOrMopExpr
+
         return
          $      argcode                 `appOL`
                 move_sp_down            `appOL`
@@ -465,10 +467,14 @@ genCCall target dest_regs args
 --      or two integer vregs.
 arg_to_int_vregs :: CmmExpr -> NatM (OrdList Instr, [Reg])
 arg_to_int_vregs arg = do dflags <- getDynFlags
-                          arg_to_int_vregs' dflags arg
+                          let platform = targetPlatform dflags
+                              is32Bit  = is32BitPlatform platform
+                          in  if   is32Bit
+                              then arg_to_int_vregs32' dflags arg
+                              else arg_to_int_vregs64' dflags arg
 
-arg_to_int_vregs' :: DynFlags -> CmmExpr -> NatM (OrdList Instr, [Reg])
-arg_to_int_vregs' dflags arg
+arg_to_int_vregs32' :: DynFlags -> CmmExpr -> NatM (OrdList Instr, [Reg])
+arg_to_int_vregs32' dflags arg
 
         -- If the expr produces a 64 bit int, then we can just use iselExpr64
         | isWord64 (cmmExprType dflags arg)
@@ -518,25 +524,71 @@ arg_to_int_vregs' dflags arg
 
                         return (code2, [v1])
 
+arg_to_int_vregs64' :: DynFlags -> CmmExpr -> NatM (OrdList Instr, [Reg])
+arg_to_int_vregs64' dflags arg
+        = do    (src, code)     <- getSomeReg arg
+                let pk          = cmmExprType dflags arg
 
--- | Move args from the integer vregs into which they have been
---      marshalled, into %o0 .. %o5, and the rest onto the stack.
+                case cmmTypeFormat pk of
+
+                 -- Move a 64 bit float return value into its destination reg.
+                 FF64 -> do
+                        v1 <- getNewRegNat FF64
+
+                        let code2 =
+                                code                            `snocOL`
+                                FMOV FF64 src v1
+
+                        return  (code2, [v1])
+
+                 -- Move a 32 bit float return value into its destination reg.
+                 -- Result takes up a full 64-bit pair, and is right-justified
+                 -- (odd register contains float, even is undefined).
+                 FF32 -> do
+                        v1    <- getNewRegNat FF64
+                        v1Odd <- fPair v1
+
+                        let code2 =
+                                code                            `snocOL`
+                                FMOV FF32 src v1Odd
+
+                        return (code2, [v1])
+
+                 -- Move an integer return value into its destination reg.
+                 _ -> do
+                        v1 <- getNewRegNat II64
+
+                        let code2 =
+                                code                            `snocOL`
+                                OR False g0 (RIReg src) v1
+
+                        return (code2, [v1])
+
+
+-- | Move args from the integer/float vregs into which they have been
+--      marshalled, into %o0 .. %o5/%f0 .. %f11, and the rest onto the stack.
 --
-move_final :: [Reg] -> [Reg] -> Int -> [Instr]
+move_final :: Bool -> [Reg] -> [(Reg, Reg)] -> Int -> ([Instr], [Reg])
 
 -- all args done
-move_final [] _ _
-        = []
+move_final _ [] _ _
+ = ([], [])
 
 -- out of aregs; move to stack
-move_final (v:vs) [] offset
-        = ST II32 v (spRel offset)
-        : move_final vs [] (offset+1)
+move_final is32Bit (v:vs) [] offset
+ = (ST (wordFormat is32Bit) v (spRel offset) : instrs, regs)
+ where (instrs, regs) = move_final is32Bit vs [] (offset+1)
 
--- move into an arg (%o[0..5]) reg
-move_final (v:vs) (a:az) offset
-        = OR False g0 (RIReg v) a
-        : move_final vs az offset
+-- move into an arg (%o[0..5], or %f[0..11] if 64-bit) reg
+move_final is32Bit (v:vs) ((ai,af):az) offset
+ = let cls = classOfReg v
+       (instr, reg) =
+           case cls of
+                RcInteger              -> (OR False g0 (RIReg v) ai, ai)
+                RcDouble | not is32Bit -> (FMOV FF64 v af, af)
+                _                      -> panic ("SPARC.CodeGen.move_final: Bad reg class" ++ show cls)
+        (instr : instrs, reg : regs)
+ where (instrs, regs) = move_final is32Bit vs az offset
 
 
 -- | Assign results returned from the call into their
@@ -550,6 +602,7 @@ assign_code platform [dest]
  = let  rep     = localRegType dest
         width   = typeWidth rep
         r_dest  = getRegisterReg platform (CmmLocal dest)
+        is32Bit = is32BitPlatform platform
 
         result
                 | isFloatType rep
@@ -560,15 +613,19 @@ assign_code platform [dest]
                 , W64   <- width
                 = unitOL $ FMOV FF64 (regSingle $ fReg 0) r_dest
 
-                | not $ isFloatType rep
+                | is32Bit && not $ isFloatType rep
                 , W32   <- width
                 = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
 
-                | not $ isFloatType rep
+                | is32Bit && not $ isFloatType rep
                 , W64           <- width
                 , r_dest_hi     <- getHiVRegFromLo r_dest
                 = toOL  [ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest_hi
                         , mkRegRegMoveInstr platform (regSingle $ oReg 1) r_dest]
+
+                | not is32Bit and not $ isFloatType rep
+                , W64   <- width
+                = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
 
                 | otherwise
                 = panic "SPARC.CodeGen.GenCCall: no match"

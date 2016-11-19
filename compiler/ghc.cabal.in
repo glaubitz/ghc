@@ -258,6 +258,7 @@ Library
         CodeGen.Platform.PPC
         CodeGen.Platform.PPC_Darwin
         CodeGen.Platform.SPARC
+        CodeGen.Platform.SPARC64
         CodeGen.Platform.X86
         CodeGen.Platform.X86_64
         CgUtils
@@ -601,8 +602,10 @@ Library
             SPARC.CodeGen.Amode
             SPARC.CodeGen.Base
             SPARC.CodeGen.CondCode
+            SPARC.CodeGen.Gen
             SPARC.CodeGen.Gen32
             SPARC.CodeGen.Gen64
+            SPARC.CodeGen.Gen64on32
             SPARC.CodeGen.Sanity
             SPARC.CodeGen.Expand
             RegAlloc.Liveness
@@ -623,7 +626,7 @@ Library
             RegAlloc.Linear.StackMap
             RegAlloc.Linear.Base
             RegAlloc.Linear.X86.FreeRegs
-            RegAlloc.Linear.X86_64.FreeRegs
+            RegAlloc.Linear.:86_64.FreeRegs
             RegAlloc.Linear.PPC.FreeRegs
             RegAlloc.Linear.SPARC.FreeRegs
             Dwarf

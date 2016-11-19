@@ -1,7 +1,8 @@
 
 import CmmExpr
 #if !(defined(MACHREGS_i386) || defined(MACHREGS_x86_64) \
-    || defined(MACHREGS_sparc) || defined(MACHREGS_powerpc))
+    || defined(MACHREGS_sparc) || defined(MACHREGS_sparc64) \
+    || defined(MACHREGS_powerpc))
 import Panic
 #endif
 import Reg
@@ -278,7 +279,7 @@ import Reg
 #  define fr31 63
 # endif
 
-#elif defined(MACHREGS_sparc)
+#elif defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
 
 # define g0  0
 # define g1  1
@@ -993,9 +994,12 @@ freeReg _ = True
 -- %g0(r0) is always zero
 freeReg g0  = False
 
--- %g5(r5) - %g7(r7)
---  are reserved for the OS
+-- %g5(r5) is reserved for the OS for V8
+#if MACHREGS_sparc
 freeReg g5  = False
+#endif
+-- %g6(r6) - %g7(r7)
+--  are reserved for the OS
 freeReg g6  = False
 freeReg g7  = False
 

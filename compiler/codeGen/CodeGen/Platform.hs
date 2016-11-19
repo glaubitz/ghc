@@ -14,6 +14,7 @@ import qualified CodeGen.Platform.ARM64      as ARM64
 import qualified CodeGen.Platform.PPC        as PPC
 import qualified CodeGen.Platform.PPC_Darwin as PPC_Darwin
 import qualified CodeGen.Platform.SPARC      as SPARC
+import qualified CodeGen.Platform.SPARC64    as SPARC64
 import qualified CodeGen.Platform.X86        as X86
 import qualified CodeGen.Platform.X86_64     as X86_64
 import qualified CodeGen.Platform.NoRegs     as NoRegs
@@ -26,11 +27,12 @@ callerSaves platform
  | platformUnregisterised platform = NoRegs.callerSaves
  | otherwise
  = case platformArch platform of
-   ArchX86    -> X86.callerSaves
-   ArchX86_64 -> X86_64.callerSaves
-   ArchSPARC  -> SPARC.callerSaves
-   ArchARM {} -> ARM.callerSaves
-   ArchARM64  -> ARM64.callerSaves
+   ArchX86     -> X86.callerSaves
+   ArchX86_64  -> X86_64.callerSaves
+   ArchSPARC   -> SPARC.callerSaves
+   ArchSPARC64 -> SPARC64.callerSaves
+   ArchARM {}  -> ARM.callerSaves
+   ArchARM64   -> ARM64.callerSaves
    arch
     | arch `elem` [ArchPPC, ArchPPC_64 ELF_V1, ArchPPC_64 ELF_V2] ->
        case platformOS platform of
@@ -49,11 +51,12 @@ activeStgRegs platform
  | platformUnregisterised platform = NoRegs.activeStgRegs
  | otherwise
  = case platformArch platform of
-   ArchX86    -> X86.activeStgRegs
-   ArchX86_64 -> X86_64.activeStgRegs
-   ArchSPARC  -> SPARC.activeStgRegs
-   ArchARM {} -> ARM.activeStgRegs
-   ArchARM64  -> ARM64.activeStgRegs
+   ArchX86     -> X86.activeStgRegs
+   ArchX86_64  -> X86_64.activeStgRegs
+   ArchSPARC   -> SPARC.activeStgRegs
+   ArchSPARC64 -> SPARC64.activeStgRegs
+   ArchARM {}  -> ARM.activeStgRegs
+   ArchARM64   -> ARM64.activeStgRegs
    arch
     | arch `elem` [ArchPPC, ArchPPC_64 ELF_V1, ArchPPC_64 ELF_V2] ->
        case platformOS platform of
@@ -67,11 +70,12 @@ haveRegBase platform
  | platformUnregisterised platform = NoRegs.haveRegBase
  | otherwise
  = case platformArch platform of
-   ArchX86    -> X86.haveRegBase
-   ArchX86_64 -> X86_64.haveRegBase
-   ArchSPARC  -> SPARC.haveRegBase
-   ArchARM {} -> ARM.haveRegBase
-   ArchARM64  -> ARM64.haveRegBase
+   ArchX86     -> X86.haveRegBase
+   ArchX86_64  -> X86_64.haveRegBase
+   ArchSPARC   -> SPARC.haveRegBase
+   ArchSPARC64 -> SPARC64.haveRegBase
+   ArchARM {}  -> ARM.haveRegBase
+   ArchARM64   -> ARM64.haveRegBase
    arch
     | arch `elem` [ArchPPC, ArchPPC_64 ELF_V1, ArchPPC_64 ELF_V2] ->
        case platformOS platform of
@@ -85,11 +89,12 @@ globalRegMaybe platform
  | platformUnregisterised platform = NoRegs.globalRegMaybe
  | otherwise
  = case platformArch platform of
-   ArchX86    -> X86.globalRegMaybe
-   ArchX86_64 -> X86_64.globalRegMaybe
-   ArchSPARC  -> SPARC.globalRegMaybe
-   ArchARM {} -> ARM.globalRegMaybe
-   ArchARM64  -> ARM64.globalRegMaybe
+   ArchX86     -> X86.globalRegMaybe
+   ArchX86_64  -> X86_64.globalRegMaybe
+   ArchSPARC   -> SPARC.globalRegMaybe
+   ArchSPARC64 -> SPARC64.globalRegMaybe
+   ArchARM {}  -> ARM.globalRegMaybe
+   ArchARM64   -> ARM64.globalRegMaybe
    arch
     | arch `elem` [ArchPPC, ArchPPC_64 ELF_V1, ArchPPC_64 ELF_V2] ->
        case platformOS platform of
@@ -103,11 +108,12 @@ freeReg platform
  | platformUnregisterised platform = NoRegs.freeReg
  | otherwise
  = case platformArch platform of
-   ArchX86    -> X86.freeReg
-   ArchX86_64 -> X86_64.freeReg
-   ArchSPARC  -> SPARC.freeReg
-   ArchARM {} -> ARM.freeReg
-   ArchARM64  -> ARM64.freeReg
+   ArchX86     -> X86.freeReg
+   ArchX86_64  -> X86_64.freeReg
+   ArchSPARC   -> SPARC.freeReg
+   ArchSPARC64 -> SPARC64.freeReg
+   ArchARM {}  -> ARM.freeReg
+   ArchARM64   -> ARM64.freeReg
    arch
     | arch `elem` [ArchPPC, ArchPPC_64 ELF_V1, ArchPPC_64 ELF_V2] ->
        case platformOS platform of

@@ -49,6 +49,10 @@
 #define MACHREGS_sparc    1
 #endif
 
+#if defined(sparc64_TARGET_ARCH)
+#define MACHREGS_sparc64  1
+#endif
+
 #if defined(arm_TARGET_ARCH)
 #define MACHREGS_arm      1
 #endif

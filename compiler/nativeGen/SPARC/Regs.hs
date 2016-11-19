@@ -10,7 +10,9 @@ module SPARC.Regs (
         virtualRegSqueeze,
         realRegSqueeze,
         classOfRealReg,
+        classOfReg,
         allRealRegs,
+        fPair,
 
         -- machine specific info
         gReg, iReg, lReg, oReg, fReg,
@@ -74,6 +76,12 @@ classOfRealReg reg
                 | otherwise     -> RcFloat
 
         RealRegPair{}           -> RcDouble
+
+classOfReg :: Reg -> RegClass
+classOfReg reg
+ = case reg of
+        RegReal rr    -> classOfRealReg rr
+        RegVirtual vr -> classOfVirtualReg rr
 
 
 -- | regSqueeze_class reg
@@ -178,18 +186,13 @@ f0  = RegReal (RealRegSingle (fReg 0))
 f1  = RegReal (RealRegSingle (fReg 1))
 
 -- | Produce the second-half-of-a-double register given the first half.
-{-
-fPair :: Reg -> Maybe Reg
+fPair :: Reg -> Reg
 fPair (RealReg n)
-        | n >= 32 && n `mod` 2 == 0  = Just (RealReg (n+1))
+ | n >= 32 && n `mod` 2 == 0 = RealReg (n+1)
 
-fPair (VirtualRegD u)
-        = Just (VirtualRegHi u)
+fPair (VirtualRegD u) = VirtualRegHi u
 
-fPair reg
-        = trace ("MachInstrs.fPair: can't get high half of supposed double reg " ++ showPpr reg)
-                Nothing
--}
+fPair reg = panic ("MachInstrs.fPair: can't get high half of supposed double reg " ++ showPpr reg)
 
 
 -- | All the regs that the register allocator can allocate to,
@@ -204,31 +207,17 @@ allocatableRegs
      in filter isFree allRealRegs
 
 
--- | The registers to place arguments for function calls,
---      for some number of arguments.
---
-argRegs :: RegNo -> [Reg]
-argRegs r
- = case r of
-        0       -> []
-        1       -> map (RegReal . RealRegSingle . oReg) [0]
-        2       -> map (RegReal . RealRegSingle . oReg) [0,1]
-        3       -> map (RegReal . RealRegSingle . oReg) [0,1,2]
-        4       -> map (RegReal . RealRegSingle . oReg) [0,1,2,3]
-        5       -> map (RegReal . RealRegSingle . oReg) [0,1,2,3,4]
-        6       -> map (RegReal . RealRegSingle . oReg) [0,1,2,3,4,5]
-        _       -> panic "MachRegs.argRegs(sparc): don't know about >6 arguments!"
-
-
--- | All all the regs that could possibly be returned by argRegs
---
-allArgRegs :: [Reg]
+-- | All the argument registers; each entry represents an argument slot.
+--      Pairs of (intReg, doubleReg); the double reg is used for 64-bit only.
+allArgRegs :: [(Reg, Reg)]
 allArgRegs
-        = map (RegReal . RealRegSingle) [oReg i | i <- [0..5]]
+        = [ (RegReal $ RealRegSingle $ oReg i,
+             RegReal $ RealRegPair (fReg (2*i)) (fReg (2*i+1))
+            | i <- [0..5] ]
 
 
 -- These are the regs that we cannot assume stay alive over a C call.
---      TODO: Why can we assume that o6 isn't clobbered? -- BL 2009/02
+-- %o6 is the C stack pointer; ABI mandates it is preserved.
 --
 callClobberedRegs :: [Reg]
 callClobberedRegs

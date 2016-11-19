@@ -78,6 +78,9 @@
 
 #if defined(sparc_HOST_ARCH)
 #  define ELF_TARGET_SPARC  /* Used inside <elf.h> */
+#elif defined(sparc64_HOST_ARCH)
+#  define ELF_64BIT
+#  define ELF_TARGET_SPARC  /* Used inside <elf.h> */
 #elif defined(i386_HOST_ARCH)
 #  define ELF_TARGET_386    /* Used inside <elf.h> */
 #elif defined(x86_64_HOST_ARCH)
@@ -376,6 +379,9 @@ ocVerifyImage_ELF ( ObjectCode* oc )
       case EM_SPARC32PLUS:
 #endif
       case EM_SPARC: IF_DEBUG(linker,debugBelch( "sparc" )); break;
+#if defined(EM_SPARCV9)
+      case EM_SPARCV9: IF_DEBUG(linker,debugBelch( "sparc64" )); break;
+#endif
 #if defined(EM_IA_64)
       case EM_IA_64: IF_DEBUG(linker,debugBelch( "ia64" )); break;
 #endif
@@ -1379,8 +1385,8 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
 #if defined(SHN_XINDEX)
    Elf_Word* shndx_table = get_shndx_table((Elf_Ehdr*)ehdrC);
 #endif
-#if defined(DEBUG) || defined(sparc_HOST_ARCH) || defined(powerpc_HOST_ARCH) \
-    || defined(x86_64_HOST_ARCH)
+#if defined(DEBUG) || defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH) \
+    || defined(powerpc_HOST_ARCH) || defined(x86_64_HOST_ARCH)
    /* This #if def only serves to avoid unused-var warnings. */
    Elf_Addr targ = (Elf_Addr) oc->sections[target_shndx].start;
 #endif
@@ -1398,21 +1404,21 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
    }
 
    for (j = 0; j < nent; j++) {
-#if defined(DEBUG) || defined(sparc_HOST_ARCH) || defined(powerpc_HOST_ARCH) \
-    || defined(x86_64_HOST_ARCH)
+#if defined(DEBUG) || defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH) \
+    || defined(powerpc_HOST_ARCH) || defined(x86_64_HOST_ARCH)
       /* This #if def only serves to avoid unused-var warnings. */
       Elf_Addr  offset = rtab[j].r_offset;
       Elf_Addr  P      = targ + offset;
       Elf_Addr  A      = rtab[j].r_addend;
 #endif
-#if defined(sparc_HOST_ARCH) || defined(powerpc_HOST_ARCH) \
-    || defined(x86_64_HOST_ARCH)
+#if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH) \
+    || defined(powerpc_HOST_ARCH) || defined(x86_64_HOST_ARCH)
       Elf_Addr  value;
 #endif
       Elf_Addr  info   = rtab[j].r_info;
       Elf_Addr  S;
       void*     S_tmp;
-#     if defined(sparc_HOST_ARCH)
+#     if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
       Elf_Word* pP = (Elf_Word*)P;
       Elf_Word  w1, w2;
 #     elif defined(powerpc_HOST_ARCH)
@@ -1454,8 +1460,8 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
          IF_DEBUG(linker,debugBelch("`%s' resolves to %p\n", symbol, (void*)S));
       }
 
-#if defined(DEBUG) || defined(sparc_HOST_ARCH) || defined(powerpc_HOST_ARCH) \
-    || defined(x86_64_HOST_ARCH)
+#if defined(DEBUG) || defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH) \
+    || defined(powerpc_HOST_ARCH) || defined(x86_64_HOST_ARCH)
       IF_DEBUG(linker,debugBelch("Reloc: P = %p   S = %p   A = %p\n",
                                         (void*)P, (void*)S, (void*)A ));
       checkProddableBlock(oc, (void*)P, sizeof(Elf_Word));
@@ -1467,7 +1473,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
 #endif
 
       switch (ELF_R_TYPE(info)) {
-#        if defined(sparc_HOST_ARCH)
+#        if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
          case R_SPARC_WDISP30:
             w1 = *pP & 0xC0000000;
             w2 = (Elf_Word)((value - P) >> 2);
@@ -1513,6 +1519,25 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             w2 = (Elf_Word)value;
             *pP = w2;
             break;
+
+#        if defined(sparc64_HOST_ARCH)
+         case R_SPARC_64:
+            *(Elf64_Xword*) P = value;
+            break;
+
+         case R_SPARC_UA64:
+            char *pPc = (char*)P;
+            pPc[0] = (char) ((value & 0xff00000000000000ULL) >> 56);
+            pPc[1] = (char) ((value & 0x00ff000000000000ULL) >> 48);
+            pPc[2] = (char) ((value & 0x0000ff0000000000ULL) >> 40);
+            pPc[3] = (char) ((value & 0x000000ff00000000ULL) >> 32);
+            pPc[4] = (char) ((value & 0x00000000ff000000ULL) >> 24);
+            pPc[5] = (char) ((value & 0x0000000000ff0000ULL) >> 16);
+            pPc[6] = (char) ((value & 0x000000000000ff00ULL) >> 8);
+            pPc[7] = (char) ((value & 0x00000000000000ffULL));
+            break;
+#        endif /* sparc64_HOST_ARCH */
+
 #        elif defined(powerpc_HOST_ARCH)
          case R_PPC_ADDR16_LO:
             *(Elf32_Half*) P = value;
