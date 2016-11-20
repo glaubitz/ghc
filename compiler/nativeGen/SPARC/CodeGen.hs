@@ -50,6 +50,7 @@ import Hoopl.Block
 import Hoopl.Graph
 import PIC
 import Reg
+import RegClass
 import CLabel
 import CPrim
 
