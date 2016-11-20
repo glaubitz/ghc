@@ -103,10 +103,10 @@ basicBlockCodeGen block = do
   let instrs = mid_instrs `appOL` tail_instrs
   let
         (top,other_blocks,statics)
-                = foldrOL mkBlocks (prolog_instrs,[],[]) instrs
+                = foldrOL mkBlocks ([],[],[]) instrs
 
         mkBlocks (NEWBLOCK id) (instrs,blocks,statics)
-          = (prolog_instrs, BasicBlock id instrs : blocks, statics)
+          = ([], BasicBlock id (prolog_instrs:instrs) : blocks, statics)
 
         mkBlocks (LDATA sec dat) (instrs,blocks,statics)
           = (instrs, blocks, CmmData sec dat:statics)
@@ -117,7 +117,7 @@ basicBlockCodeGen block = do
         -- do intra-block sanity checking
         blocksChecked
                 = map (checkBlock block)
-                $ BasicBlock id top : other_blocks
+                $ BasicBlock id (prolog_instrs:top) : other_blocks
 
   return (blocksChecked, statics)
 
