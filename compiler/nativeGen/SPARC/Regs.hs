@@ -210,7 +210,7 @@ allocatableRegs
 allArgRegs :: [(Reg, Reg)]
 allArgRegs
         = [ (RegReal $ RealRegSingle $ oReg i,
-             RegReal $ RealRegPair (fReg (2*i)) (fReg (2*i+1))
+             RegReal $ RealRegPair (fReg (2*i)) (fReg (2*i+1)))
             | i <- [0..5] ]
 
 
