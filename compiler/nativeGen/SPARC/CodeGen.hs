@@ -595,8 +595,8 @@ move_final is32Bit (v:vs) ((ai,af):az) offset
                 RcInteger              -> (OR False g0 (RIReg v) ai, ai)
                 RcDouble | not is32Bit -> (FMOV FF64 v af, af)
                 _                      -> panic ("SPARC.CodeGen.move_final: Bad reg class" ++ show cls)
-        (instr : instrs, reg : regs)
- where (instrs, regs) = move_final is32Bit vs az offset
+   in (instr : instrs, reg : regs)
+   where (instrs, regs) = move_final is32Bit vs az offset
 
 
 -- | Assign results returned from the call into their
