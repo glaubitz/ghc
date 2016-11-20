@@ -21,19 +21,19 @@ import Outputable
 stackBias :: Bool -> Int
 
 stackBias is32Bit
- | is32Bit = 0
+ | is32Bit   = 0
 
 stackBias is32Bit
- | not is32Bit = 2047
+ | otherwise = 2047
 
 -- | Get the size of the register save area
 saveAreaBytes :: Bool -> Int
 
 saveAreaBytes is32Bit
- | is32Bit = 64
+ | is32Bit   = 64
 
 saveAreaBytes is32Bit
- | not is32Bit = 128
+ | otherwise = 128
 
 -- | Get an AddrMode relative to the address in sp.
 --      This gives us a stack relative addressing mode for volatile

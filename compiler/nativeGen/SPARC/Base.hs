@@ -37,10 +37,10 @@ is32BitPlatform = do
 wordLength :: Bool -> Int
 
 wordLength is32Bit
- | is32Bit = 4
+ | is32Bit   = 4
 
 wordLength is32Bit
- | not is32Bit = 8
+ | otherwise = 8
 
 wordLengthInBits :: Bool -> Int
 wordLengthInBits is32Bit
@@ -49,18 +49,18 @@ wordLengthInBits is32Bit
 wordFormat :: Bool -> Format
 
 wordFormat is32Bit
- | is32Bit = II32
+ | is32Bit   = II32
 
 wordFormat is32Bit
- | not is32Bit = II64
+ | otherwise = II64
 
 wordWidth :: Bool -> Width
 
 wordWidth is32Bit
- | is32Bit = W32
+ | is32Bit   = W32
 
 wordWidth is32Bit
- | not is32Bit = W64
+ | otherwise = W64
 
 -- Size of the available spill area
 spillAreaLength :: DynFlags -> Int
@@ -77,10 +77,10 @@ spillSlotSize = 8
 extraStackArgsHere :: Bool -> Int
 
 extraStackArgsHere is32Bit
- | is32Bit = 23
+ | is32Bit   = 23
 
 extraStackArgsHere is32Bit
- | not is32Bit = 22
+ | otherwise = 22
 
 
 {-# SPECIALIZE fits13Bits :: Int -> Bool, Integer -> Bool #-}
