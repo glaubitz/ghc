@@ -1274,6 +1274,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
       void*     S_tmp;
 #     if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
       Elf_Word* pP = (Elf_Word*)P;
+      char *pPc;
       Elf_Word  w1, w2;
 #     elif defined(powerpc_HOST_ARCH)
       Elf_Sword delta;
@@ -1335,7 +1336,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
       checkProddableBlock(oc, (void*)P, sizeof(Elf_Word));
 #endif
 
-#if defined(sparc_HOST_ARCH) || defined(powerpc_HOST_ARCH) || defined(x86_64_HOST_ARCH)
+#if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH) || defined(powerpc_HOST_ARCH) || defined(x86_64_HOST_ARCH)
       value = S + A;
 #endif
 
@@ -1375,7 +1376,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
 
             // SPARC doesn't do misaligned writes of 32 bit words,
             //       so we have to do this one byte-at-a-time.
-            char *pPc   = (char*)pP;
+            pPc   = (char*)pP;
             pPc[0]      = (char) ((Elf_Word)(w2 & 0xff000000) >> 24);
             pPc[1]      = (char) ((Elf_Word)(w2 & 0x00ff0000) >> 16);
             pPc[2]      = (char) ((Elf_Word)(w2 & 0x0000ff00) >> 8);
@@ -1393,7 +1394,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             break;
 
          case R_SPARC_UA64:
-            char *pPc = (char*)P;
+            pPc = (char*)P;
             pPc[0] = (char) ((value & 0xff00000000000000ULL) >> 56);
             pPc[1] = (char) ((value & 0x00ff000000000000ULL) >> 48);
             pPc[2] = (char) ((value & 0x0000ff0000000000ULL) >> 40);
