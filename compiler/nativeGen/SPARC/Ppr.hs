@@ -613,7 +613,7 @@ pprInstr _ (MEMBAR tags)
   = hcat [ text "\tmembar\t", pprMembarTags tags ]
 
 pprInstr _ (REGISTER reg usage)
-  = hcat [ text "\tmembar\t", pprReg reg, comma, pprSparcRegUsage usage ]
+  = hcat [ text "\t.register\t", pprReg reg, comma, pprSparcRegUsage usage ]
 
 
 -- | Pretty print a tag for a membar instrution
