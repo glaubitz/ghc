@@ -16,7 +16,7 @@ module SPARC.Regs (
 
         -- machine specific info
         gReg, iReg, lReg, oReg, fReg,
-        fp, sp, g0, g1, g2, o0, o1, f0, f1, f6, f8, f22, f26, f27,
+        fp, sp, g0, g1, g2, g3, o0, o1, f0, f1, f6, f8, f22, f26, f27,
 
         -- allocatable
         allocatableRegs,
