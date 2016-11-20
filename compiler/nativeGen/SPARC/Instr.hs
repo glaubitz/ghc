@@ -406,8 +406,8 @@ sparc_mkSpillInstr dflags reg _ slot
         off_w    = 1 + (off `div` (wordLength is32Bit))
         fmt      = case targetClassOfReg platform reg of
                         RcInteger
-                        | is32Bit   -> II32
-                        | otherwise -> II64
+                         | is32Bit   -> II32
+                         | otherwise -> II64
 
                         RcFloat   -> FF32
                         RcDouble  -> FF64
@@ -431,8 +431,8 @@ sparc_mkLoadInstr dflags reg _ slot
         off_w    = 1 + (off `div` (wordLength is32Bit))
         fmt      = case targetClassOfReg platform reg of
                         RcInteger
-                        | is32Bit   -> II32
-                        | otherwise -> II64
+                         | is32Bit   -> II32
+                         | otherwise -> II64
 
                         RcFloat   -> FF32
                         RcDouble  -> FF64
