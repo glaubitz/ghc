@@ -9,7 +9,6 @@ where
 import GhcPrelude
 
 import SPARC.CodeGen.Gen32
-import SPARC.CodeGen.Gen64On32
 import SPARC.CodeGen.Gen64
 import SPARC.CodeGen.Base
 import SPARC.Base
