@@ -20,6 +20,11 @@ where
 
 import GhcPrelude
 
+import NCGMonad
+import Format
+
+import Cmm
+
 import DynFlags
 import Panic
 
