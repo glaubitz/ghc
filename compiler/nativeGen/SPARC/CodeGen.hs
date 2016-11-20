@@ -627,7 +627,7 @@ assign_code dflags [dest]
 
         result
                 | width > W64
-                = panic ("SPARC.CodeGen.GenCCall: > 64-bit width not supported: " ++ (show w))
+                = panic ("SPARC.CodeGen.GenCCall: > 64-bit width not supported: " ++ (show width))
 
                 | isFloat && width == W32
                 = unitOL $ FMOV FF32 (regSingle $ fReg 0) r_dest
