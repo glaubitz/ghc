@@ -477,7 +477,7 @@ genCCall target dest_regs args
                 callinsns               `appOL`
                 unitOL NOP              `appOL`
                 move_sp_up              `appOL`
-                assign_code (targetPlatform dflags) dest_regs
+                assign_code dflags dest_regs
 
 
 -- | Generate code to calculate an argument, and move it into one
@@ -611,38 +611,35 @@ move_final is32Bit (v:vs) ((ai,af):az) offset
 -- | Assign results returned from the call into their
 --      destination regs.
 --
-assign_code :: Platform -> [LocalReg] -> OrdList Instr
+assign_code :: DynFlags -> [LocalReg] -> OrdList Instr
 
 assign_code _ [] = nilOL
 
-assign_code platform [dest]
- = let  rep     = localRegType dest
-        width   = typeWidth rep
-        r_dest  = getRegisterReg platform (CmmLocal dest)
-        is32Bit = target32Bit platform
+assign_code dflags [dest]
+ = let  rep      = localRegType dest
+        width    <- typeWidth rep
+        r_dest   = getRegisterReg platform (CmmLocal dest)
+        platform = targetPlatform dflags
+        w_word   = wordWidth dflags
+        isFloat  = isFloatType rep
 
         result
-                | isFloatType rep
-                , W32   <- width
+                | width > W64
+                = panic ("SPARC.CodeGen.GenCCall: > 64-bit width not supported: " ++ (show w))
+
+                | isFloat && width == W32
                 = unitOL $ FMOV FF32 (regSingle $ fReg 0) r_dest
 
-                | isFloatType rep
-                , W64   <- width
+                | isFloat && width == W64
                 = unitOL $ FMOV FF64 (regSingle $ fReg 0) r_dest
 
-                | is32Bit && not (isFloatType rep)
-                , W32   <- width
+                | not isFloat && width <= w_word
                 = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
 
-                | is32Bit && not (isFloatType rep)
-                , W64           <- width
+                | is32Bit && not isFloat && width == W64
                 , r_dest_hi     <- getHiVRegFromLo r_dest
                 = toOL  [ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest_hi
-                        , mkRegRegMoveInstr platform (regSingle $ oReg 1) r_dest]
-
-                | not is32Bit && not (isFloatType rep)
-                , W64   <- width
-                = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
+                        , mkRegRegMoveInstr platform (regSingle $ oReg 1) r_dest ]
 
                 | otherwise
                 , w <- width
