@@ -572,7 +572,7 @@ Library
             SPARC.CodeGen.Gen
             SPARC.CodeGen.Gen32
             SPARC.CodeGen.Gen64
-            SPARC.CodeGen.Gen64on32
+            SPARC.CodeGen.Gen64On32
             SPARC.CodeGen.Sanity
             SPARC.CodeGen.Expand
             RegAlloc.Liveness
