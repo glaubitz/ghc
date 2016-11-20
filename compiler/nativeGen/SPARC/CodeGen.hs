@@ -617,7 +617,7 @@ assign_code _ [] = nilOL
 
 assign_code dflags [dest]
  = let  rep      = localRegType dest
-        width    <- typeWidth rep
+        width    = typeWidth rep
         r_dest   = getRegisterReg platform (CmmLocal dest)
         platform = targetPlatform dflags
         w_word   = wordWidth dflags
