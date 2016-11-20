@@ -10,7 +10,6 @@ module SPARC.Base (
         wordLength,
         wordLengthInBits,
         wordFormat,
-        wordWidth,
         spillAreaLength,
         spillSlotSize,
         extraStackArgsHere,
@@ -55,14 +54,6 @@ wordFormat is32Bit
 
 wordFormat _
  | otherwise = II64
-
-wordWidth :: Bool -> Width
-
-wordWidth is32Bit
- | is32Bit   = W32
-
-wordWidth _
- | otherwise = W64
 
 -- Size of the available spill area
 spillAreaLength :: DynFlags -> Int
