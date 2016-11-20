@@ -323,7 +323,7 @@ getRegister64 (CmmLit lit) = do
             OR False dst (RIImm (LO imm)) dst,
             SLL tmp (RIImm (ImmInt 32)) tmp,
             OR False dst tmp dst]
-    in return (Any II64 code)
+    return (Any II64 code)
 
 
 getRegister64 _
