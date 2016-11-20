@@ -17,8 +17,6 @@ import Reg
 
 import Cmm
 
-import DynFlags
-
 -- | The dual to getAnyReg: compute an expression into a register, but
 --      we don't mind which one it is.
 getSomeReg :: CmmExpr -> NatM (Reg, InstrBlock)
