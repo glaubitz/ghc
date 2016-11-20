@@ -81,7 +81,7 @@ classOfReg :: Reg -> RegClass
 classOfReg reg
  = case reg of
         RegReal rr    -> classOfRealReg rr
-        RegVirtual vr -> classOfVirtualReg rr
+        RegVirtual vr -> classOfVirtualReg vr
 
 
 -- | regSqueeze_class reg
@@ -195,7 +195,7 @@ fPair (RegReal (RealRegPair m n))
 
 fPair (RegVirtual (VirtualRegD u)) = RegVirtual (VirtualRegHi u)
 
-fPair reg = panic ("MachInstrs.fPair: can't get high half of supposed double reg " ++ showPpr reg)
+fPair reg = panic ("MachInstrs.fPair: can't get high half of supposed double reg " ++ show reg)
 
 
 -- | All the regs that the register allocator can allocate to,
