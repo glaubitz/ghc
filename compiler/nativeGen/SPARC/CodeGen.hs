@@ -645,7 +645,8 @@ assign_code platform [dest]
                 = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
 
                 | otherwise
-                = panic "SPARC.CodeGen.GenCCall: no match"
+                , w <- width
+                = panic ("SPARC.CodeGen.GenCCall: no match for result; width " ++ (show w))
 
    in   result
 
