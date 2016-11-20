@@ -413,7 +413,7 @@ genCCall (PrimTarget MO_WriteBarrier) _ _
 
         if   is32Bit
         then nilOL
-        else MEMBAR [MTStoreStore]
+        else unitOL (MEMBAR [MTStoreStore])
 
 genCCall (PrimTarget (MO_Prefetch_Data _)) _ _
  = return $ nilOL
@@ -438,8 +438,10 @@ genCCall target dest_regs args
                          then (nilOL, nilOL)
                          else (unitOL (moveSp is32Bit (-1*nn)), unitOL (moveSp is32Bit (1*nn)))
 
-        let (transfer_code, out_regs)
-                = toOL (move_final is32Bit vregs allArgRegs (extraStackArgsHere is32Bit))
+        let (transfer_code_unord, out_regs)
+                = move_final is32Bit vregs allArgRegs (extraStackArgsHere is32Bit)
+
+        let transfer_code = toOL transfer_code_unord
 
         -- deal with static vs dynamic call targets
         callinsns <- case target of
@@ -505,9 +507,9 @@ arg_to_int_vregs32' dflags arg
                         let code2 =
                                 code                            `snocOL`
                                 FMOV FF64 src f0                `snocOL`
-                                ST   FF32  f0 (spRel 16)        `snocOL`
+                                ST   FF32  f0 (spRel True 16)   `snocOL`
                                 LD   II32  (spRel 16) v1        `snocOL`
-                                ST   FF32  f1 (spRel 16)        `snocOL`
+                                ST   FF32  f1 (spRel True 16)   `snocOL`
                                 LD   II32  (spRel 16) v2
 
                         return  (code2, [v1,v2])
@@ -518,8 +520,8 @@ arg_to_int_vregs32' dflags arg
 
                         let code2 =
                                 code                            `snocOL`
-                                ST   FF32  src (spRel 16)       `snocOL`
-                                LD   II32  (spRel 16) v1
+                                ST   FF32  src (spRel True 16)  `snocOL`
+                                LD   II32  (spRel True 16) v1
 
                         return (code2, [v1])
 
@@ -554,8 +556,8 @@ arg_to_int_vregs64' dflags arg
                  -- Result takes up a full 64-bit pair, and is right-justified
                  -- (odd register contains float, even is undefined).
                  FF32 -> do
-                        v1    <- getNewRegNat FF64
-                        v1Odd <- fPair v1
+                        v1        <- getNewRegNat FF64
+                        let v1Odd = fPair v1
 
                         let code2 =
                                 code                            `snocOL`
@@ -585,7 +587,7 @@ move_final _ [] _ _
 
 -- out of aregs; move to stack
 move_final is32Bit (v:vs) [] offset
- = (ST (wordFormat is32Bit) v (spRel offset) : instrs, regs)
+ = (ST (wordFormat is32Bit) v (spRel is32Bit offset) : instrs, regs)
  where (instrs, regs) = move_final is32Bit vs [] (offset+1)
 
 -- move into an arg (%o[0..5], or %f[0..11] if 64-bit) reg
@@ -622,17 +624,17 @@ assign_code platform [dest]
                 , W64   <- width
                 = unitOL $ FMOV FF64 (regSingle $ fReg 0) r_dest
 
-                | is32Bit && not $ isFloatType rep
+                | is32Bit && not (isFloatType rep)
                 , W32   <- width
                 = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
 
-                | is32Bit && not $ isFloatType rep
+                | is32Bit && not (isFloatType rep)
                 , W64           <- width
                 , r_dest_hi     <- getHiVRegFromLo r_dest
                 = toOL  [ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest_hi
                         , mkRegRegMoveInstr platform (regSingle $ oReg 1) r_dest]
 
-                | not is32Bit and not $ isFloatType rep
+                | not is32Bit and not (isFloatType rep)
                 , W64   <- width
                 = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
 
