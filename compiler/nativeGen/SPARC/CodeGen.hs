@@ -47,6 +47,7 @@ import CmmSwitch
 import Hoopl
 import PIC
 import Reg
+import RegClass
 import CLabel
 import CPrim
 
