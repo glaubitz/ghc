@@ -415,7 +415,7 @@ genCCall (PrimTarget MO_WriteBarrier) _ _
 
         if   is32Bit
         then nilOL
-        else unitOL (MEMBAR [MTStoreStore])
+        else (unitOL (MEMBAR [MTStoreStore]))
 
 genCCall (PrimTarget (MO_Prefetch_Data _)) _ _
  = return $ nilOL
@@ -510,8 +510,8 @@ arg_to_int_vregs32' dflags arg
                                 code                            `snocOL`
                                 FMOV FF64 src f0                `snocOL`
                                 ST   FF32  f0 (spRel True 16)   `snocOL`
-                                LD   II32  (spRel 16) v1        `snocOL`
-                                ST   FF32  f1 (spRel True 16)   `snocOL`
+                                LD   II32  (spRel True 16) v1        `snocOL`
+                                ST   FF32  f1 (spRel True True 16)   `snocOL`
                                 LD   II32  (spRel 16) v2
 
                         return  (code2, [v1,v2])
@@ -636,7 +636,7 @@ assign_code platform [dest]
                 = toOL  [ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest_hi
                         , mkRegRegMoveInstr platform (regSingle $ oReg 1) r_dest]
 
-                | not is32Bit and not (isFloatType rep)
+                | not is32Bit && not (isFloatType rep)
                 , W64   <- width
                 = unitOL $ mkRegRegMoveInstr platform (regSingle $ oReg 0) r_dest
 
