@@ -92,15 +92,21 @@ basicBlockCodeGen block = do
   let (_, nodes, tail)  = blockSplit block
       id = entryLabel block
       stmts = blockToList nodes
+  is32Bit <- is32BitPlatform
+  -- For SPARC V9, .register pseudo-ops must be given before %g2/%g3 are used.
+  prolog_instrs = if   is32Bit
+                  then []
+                  else [ REGISTER g2 SRUScratch
+                       , REGISTER g3 SRUScratch ]
   mid_instrs <- stmtsToInstrs stmts
   tail_instrs <- stmtToInstrs tail
   let instrs = mid_instrs `appOL` tail_instrs
   let
         (top,other_blocks,statics)
-                = foldrOL mkBlocks ([],[],[]) instrs
+                = foldrOL mkBlocks (prolog_instrs,[],[]) instrs
 
         mkBlocks (NEWBLOCK id) (instrs,blocks,statics)
-          = ([], BasicBlock id instrs : blocks, statics)
+          = (prolog_instrs, BasicBlock id instrs : blocks, statics)
 
         mkBlocks (LDATA sec dat) (instrs,blocks,statics)
           = (instrs, blocks, CmmData sec dat:statics)

@@ -605,6 +605,9 @@ pprInstr _ (CALL (Right reg) params _)
 pprInstr _ (MEMBAR tags)
   = hcat [ text "\tmembar\t", pprMembarTags tags ]
 
+pprInstr _ (REGISTER reg usage)
+  = hcat [ text "\tmembar\t", pprReg reg, comma, pprSparcRegUsage usage ]
+
 
 -- | Pretty print a tag for a membar instrution
 pprMembarTag :: MembarTag -> SDoc
@@ -619,6 +622,12 @@ pprMembarTag MTSync       = text "#Sync"
 -- | Pretty print a list of tags for a membar instruction
 pprMembarTags :: [MembarTag] -> SDoc
 pprMembarTags tags = hcat $ intersperse (text "|") $ map pprMembarTag tags
+
+
+-- | Pretty print a .register usage
+pprSparcRegUsage :: SparcRegUsage -> SDoc
+pprSparcRegUsage SRUScratch = text "#scratch"
+pprSparcRegUsage (SRUSym sym) = ppr sym
 
 
 -- | Pretty print a RI

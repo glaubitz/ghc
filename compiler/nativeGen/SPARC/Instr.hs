@@ -20,6 +20,7 @@ module SPARC.Instr (
         isUnconditionalJump,
 
         MembarTag(..),
+        SparcRegUsage(..),
         Instr(..),
         maxSpillSlots
 )
@@ -114,6 +115,11 @@ data MembarTag
         | MTLookaside
         | MTMemIssue
         | MTSync
+
+
+data SparcRegUsage
+        = SRUScratch
+        | SRUSym CLabel
 
 
 -- | SPARC instruction set.
@@ -222,6 +228,7 @@ data Instr
 
         -- Memory barrier.
         | MEMBAR        [MembarTag]                     -- tags
+        | REGISTER      Reg SparcRegUsage
 
 
 -- | regUsage returns the sets of src and destination registers used
