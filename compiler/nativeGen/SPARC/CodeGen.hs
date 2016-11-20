@@ -624,6 +624,7 @@ assign_code dflags [dest]
         platform = targetPlatform dflags
         w_word   = wordWidth dflags
         isFloat  = isFloatType rep
+        is32Bit  = target32Bit platform
 
         result
                 | width > W64
