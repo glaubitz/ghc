@@ -9,7 +9,7 @@ where
 
 import GhcPrelude
 
-import {-# SOURCE #-} SPARC.CodeGen.Gen32
+import {-# SOURCE #-} SPARC.CodeGen.Gen
 import SPARC.CodeGen.Base
 import SPARC.CodeGen.Amode
 import SPARC.Regs
@@ -38,7 +38,7 @@ assignMem_I64Code addrTree valueTree
  = do
      ChildCode64 vcode rlo      <- iselExpr64 valueTree
 
-     (src, acode) <- getSomeReg32 addrTree
+     (src, acode) <- getSomeReg addrTree
      let
          rhi = getHiVRegFromLo rlo
 
@@ -182,7 +182,7 @@ iselExpr64 (CmmMachOp (MO_UU_Conv _ W64) [expr])
         let r_dst_hi    = getHiVRegFromLo r_dst_lo
 
         -- compute expr and load it into r_dst_lo
-        (a_reg, a_code) <- getSomeReg32 expr
+        (a_reg, a_code) <- getSomeReg expr
 
         dflags <- getDynFlags
         let platform = targetPlatform dflags

@@ -6,7 +6,7 @@ where
 
 import GhcPrelude
 
-import {-# SOURCE #-} SPARC.CodeGen.Gen32
+import {-# SOURCE #-} SPARC.CodeGen.Gen
 import SPARC.CodeGen.Base
 import SPARC.AddrMode
 import SPARC.Imm
