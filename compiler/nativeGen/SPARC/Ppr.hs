@@ -483,45 +483,45 @@ pprInstr is32Bit (SRL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sL
 pprInstr is32Bit (SRA reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sra" else sLit "srax") False reg1 ri reg2
 
 pprInstr _ (RDY rd)
- | is32Bit     = text "\trd\t%y," <> pprReg rd
- | not is32Bit = panic "SPARC.Ppr: not emitting deprecated RDY instruction for SPARCV9"
+ | is32Bit   = text "\trd\t%y," <> pprReg rd
+ | otherwise = panic "SPARC.Ppr: not emitting deprecated RDY instruction for SPARCV9"
 
 pprInstr _ (WRY reg1 reg2)
- | is32Bit     = text "\twr\t"
+ | is32Bit   = text "\twr\t"
                        <> pprReg reg1
                        <> char ','
                        <> pprReg reg2
                        <> char ','
                        <> text "%y"
- | not is32Bit = panic "SPARC.Ppr: not emitting deprecated WRY instruction for SPARCV9"
+ | otherwise = panic "SPARC.Ppr: not emitting deprecated WRY instruction for SPARCV9"
 
 pprInstr is32Bit (SMUL b reg1 ri reg2)
- | is32Bit     = pprRegRIReg is32Bit (sLit "smul") b reg1 ri reg2
- | not is32Bit = panic "SPARC.Ppr: not emitting deprecated SMUL instruction for SPARCV9"
+ | is32Bit   = pprRegRIReg is32Bit (sLit "smul") b reg1 ri reg2
+ | otherwise = panic "SPARC.Ppr: not emitting deprecated SMUL instruction for SPARCV9"
 
 pprInstr is32Bit (UMUL b reg1 ri reg2)
- | is32Bit     = pprRegRIReg is32Bit (sLit "umul") b reg1 ri reg2
- | not is32Bit = panic "SPARC.Ppr: not emitting deprecated UMUL instruction for SPARCV9"
+ | is32Bit   = pprRegRIReg is32Bit (sLit "umul") b reg1 ri reg2
+ | otherwise = panic "SPARC.Ppr: not emitting deprecated UMUL instruction for SPARCV9"
 
 pprInstr is32Bit (MULX reg1 ri reg2)
- | is32Bit     = panic "SPARC.Ppr: not emitting non-existent MULX instruction for pre-SPARCV9"
- | not is32Bit = pprRegRIReg is32Bit (sLit "mulx") False reg1 ri reg2
+ | is32Bit   = panic "SPARC.Ppr: not emitting non-existent MULX instruction for pre-SPARCV9"
+ | otherwise = pprRegRIReg is32Bit (sLit "mulx") False reg1 ri reg2
 
 pprInstr is32Bit (SDIV b reg1 ri reg2)
- | is32Bit     = pprRegRIReg is32Bit (sLit "sdiv") b reg1 ri reg2
- | not is32Bit = panic "SPARC.Ppr: not emitting deprecated SDIV instruction for SPARCV9"
+ | is32Bit   = pprRegRIReg is32Bit (sLit "sdiv") b reg1 ri reg2
+ | otherwise = panic "SPARC.Ppr: not emitting deprecated SDIV instruction for SPARCV9"
 
 pprInstr is32Bit (UDIV b reg1 ri reg2)
- | is32Bit     = pprRegRIReg is32Bit (sLit "udiv") b reg1 ri reg2
- | not is32Bit = panic "SPARC.Ppr: not emitting deprecated UDIV instruction for SPARCV9"
+ | is32Bit   = pprRegRIReg is32Bit (sLit "udiv") b reg1 ri reg2
+ | otherwise = panic "SPARC.Ppr: not emitting deprecated UDIV instruction for SPARCV9"
 
 pprInstr is32Bit (SDIVX reg1 ri reg2)
- | is32Bit     = panic "SPARC.Ppr: not emitting non-existent SDIVX instruction for pre-SPARCV9"
- | not is32Bit = pprRegRIReg is32Bit (sLit "sdivx") False reg1 ri reg2
+ | is32Bit   = panic "SPARC.Ppr: not emitting non-existent SDIVX instruction for pre-SPARCV9"
+ | otherwise = pprRegRIReg is32Bit (sLit "sdivx") False reg1 ri reg2
 
 pprInstr is32Bit (UDIVX reg1 ri reg2) =
- | is32Bit     = panic "SPARC.Ppr: not emitting non-existent UDIVX instruction for pre-SPARCV9"
- | not is32Bit = pprRegRIReg is32Bit (sLit "udivx") False reg1 ri reg2
+ | is32Bit   = panic "SPARC.Ppr: not emitting non-existent UDIVX instruction for pre-SPARCV9"
+ | otherwise = pprRegRIReg is32Bit (sLit "udivx") False reg1 ri reg2
 
 pprInstr is32Bit (SETHI imm reg)
   = hcat [
