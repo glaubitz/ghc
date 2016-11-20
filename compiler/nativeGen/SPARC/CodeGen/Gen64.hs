@@ -74,7 +74,7 @@ getRegister64 (CmmLit (CmmFloat f W32)) = do
 
             -- load the literal
             SETHI (HI (ImmCLbl lbl)) tmp1,
-            OR False tmp1 (RIImm (HM (ImmCLbl lbl)) tmp1,
+            OR False tmp1 (RIImm (HM (ImmCLbl lbl))) tmp1,
             SLL tmp1 (RIImm (ImmInt 32)) tmp1,
             SETHI (LM (ImmCLbl lbl)) tmp2,
             OR False tmp1 (RIImm tmp2) tmp1,
