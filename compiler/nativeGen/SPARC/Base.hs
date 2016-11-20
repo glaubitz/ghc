@@ -18,6 +18,11 @@ module SPARC.Base (
 
 where
 
+import NCGMonad
+import Format
+
+import Cmm
+
 import DynFlags
 import Panic
 
