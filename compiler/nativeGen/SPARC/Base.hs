@@ -6,6 +6,7 @@
 --      from the autoconf generated modules like main/Constants
 
 module SPARC.Base (
+        is32BitPlatform,
         wordLength,
         wordLengthInBits,
         wordFormat,
@@ -41,7 +42,7 @@ wordLength :: Bool -> Int
 wordLength is32Bit
  | is32Bit   = 4
 
-wordLength is32Bit
+wordLength _
  | otherwise = 8
 
 wordLengthInBits :: Bool -> Int
@@ -53,7 +54,7 @@ wordFormat :: Bool -> Format
 wordFormat is32Bit
  | is32Bit   = II32
 
-wordFormat is32Bit
+wordFormat _
  | otherwise = II64
 
 wordWidth :: Bool -> Width
@@ -61,7 +62,7 @@ wordWidth :: Bool -> Width
 wordWidth is32Bit
  | is32Bit   = W32
 
-wordWidth is32Bit
+wordWidth _
  | otherwise = W64
 
 -- Size of the available spill area
@@ -81,7 +82,7 @@ extraStackArgsHere :: Bool -> Int
 extraStackArgsHere is32Bit
  | is32Bit   = 23
 
-extraStackArgsHere is32Bit
+extraStackArgsHere _
  | otherwise = 22
 
 

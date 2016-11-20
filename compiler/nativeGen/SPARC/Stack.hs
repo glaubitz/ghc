@@ -25,7 +25,7 @@ stackBias :: Bool -> Int
 stackBias is32Bit
  | is32Bit   = 0
 
-stackBias is32Bit
+stackBias _
  | otherwise = 2047
 
 -- | Get the size of the register save area
@@ -34,7 +34,7 @@ saveAreaBytes :: Bool -> Int
 saveAreaBytes is32Bit
  | is32Bit   = 64
 
-saveAreaBytes is32Bit
+saveAreaBytes _
  | otherwise = 128
 
 -- | Get an AddrMode relative to the address in sp.
