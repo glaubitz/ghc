@@ -519,7 +519,7 @@ pprInstr is32Bit (SDIVX reg1 ri reg2)
  | is32Bit   = panic "SPARC.Ppr: not emitting non-existent SDIVX instruction for pre-SPARCV9"
  | otherwise = pprRegRIReg is32Bit (sLit "sdivx") False reg1 ri reg2
 
-pprInstr is32Bit (UDIVX reg1 ri reg2) =
+pprInstr is32Bit (UDIVX reg1 ri reg2)
  | is32Bit   = panic "SPARC.Ppr: not emitting non-existent UDIVX instruction for pre-SPARCV9"
  | otherwise = pprRegRIReg is32Bit (sLit "udivx") False reg1 ri reg2
 
