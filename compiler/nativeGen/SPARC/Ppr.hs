@@ -524,7 +524,7 @@ pprInstr is32Bit (UDIVX reg1 ri reg2)
  | is32Bit   = panic "SPARC.Ppr: not emitting non-existent UDIVX instruction for pre-SPARCV9"
  | otherwise = pprRegRIReg is32Bit (sLit "udivx") False reg1 ri reg2
 
-pprInstr is32Bit (SETHI imm reg)
+pprInstr _ (SETHI imm reg)
   = hcat [
         text "\tsethi\t",
         pprImm imm,
