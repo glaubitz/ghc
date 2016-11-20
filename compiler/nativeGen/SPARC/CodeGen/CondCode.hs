@@ -6,7 +6,7 @@ module SPARC.CodeGen.CondCode (
 
 where
 
-import {-# SOURCE #-} SPARC.CodeGen.Gen32
+import {-# SOURCE #-} SPARC.CodeGen.Gen
 import SPARC.CodeGen.Base
 import SPARC.Instr
 import SPARC.Regs
