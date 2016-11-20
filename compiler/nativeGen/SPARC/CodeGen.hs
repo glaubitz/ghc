@@ -414,8 +414,8 @@ genCCall (PrimTarget MO_WriteBarrier) _ _
         let is32Bit = target32Bit platform
 
         if   is32Bit
-        then nilOL
-        else (unitOL (MEMBAR [MTStoreStore]))
+        then return $ nilOL
+        else return $ unitOL $ MEMBAR [MTStoreStore]
 
 genCCall (PrimTarget (MO_Prefetch_Data _)) _ _
  = return $ nilOL
@@ -511,8 +511,8 @@ arg_to_int_vregs32' dflags arg
                                 FMOV FF64 src f0                `snocOL`
                                 ST   FF32  f0 (spRel True 16)   `snocOL`
                                 LD   II32  (spRel True 16) v1        `snocOL`
-                                ST   FF32  f1 (spRel True True 16)   `snocOL`
-                                LD   II32  (spRel 16) v2
+                                ST   FF32  f1 (spRel True 16)   `snocOL`
+                                LD   II32  (spRel True 16) v2
 
                         return  (code2, [v1,v2])
 
