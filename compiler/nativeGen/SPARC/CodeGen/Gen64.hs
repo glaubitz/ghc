@@ -75,7 +75,7 @@ getRegister64 (CmmLit (CmmFloat f W32)) = do
             OR False tmp1 (RIImm (HM (ImmCLbl lbl))) tmp1,
             SLL tmp1 (RIImm (ImmInt 32)) tmp1,
             SETHI (LM (ImmCLbl lbl)) tmp2,
-            OR False tmp1 (RIImm tmp2) tmp1,
+            OR False tmp1 (RIReg tmp2) tmp1,
             LD II32 (AddrRegImm tmp1 (LO (ImmCLbl lbl))) dst]
 
     return (Any FF32 code)
@@ -91,7 +91,7 @@ getRegister64 (CmmLit (CmmFloat d W64)) = do
             OR False tmp1 (RIImm (HM (ImmCLbl lbl))) tmp1,
             SLL tmp1 (RIImm (ImmInt 32)) tmp1,
             SETHI (LM (ImmCLbl lbl)) tmp2,
-            OR False tmp1 (RIImm tmp2) tmp1,
+            OR False tmp1 (RIReg tmp2) tmp1,
             LD II64 (AddrRegImm tmp1 (LO (ImmCLbl lbl))) dst]
     return (Any FF64 code)
 
@@ -320,7 +320,7 @@ getRegister64 (CmmLit lit) = do
             OR False tmp (RIImm (HM imm)) tmp,
             OR False dst (RIImm (LO imm)) dst,
             SLL tmp (RIImm (ImmInt 32)) tmp,
-            OR False dst tmp dst]
+            OR False dst (RIReg tmp) dst]
     return (Any II64 code)
 
 
@@ -382,9 +382,9 @@ idiv signed x y
         (b_reg, b_code)         <- getSomeReg64 y
 
         let code dst
-                =       a_code
-                `appOL` b_code
-                `appOL` unitOL $ (if signed then SDIVX else UDIVX) a_reg (RIReg b_reg) dst
+                =        a_code
+                `appOL`  b_code
+                `snocOL` (if signed then SDIVX else UDIVX) a_reg (RIReg b_reg) dst
 
         return (Any II64 code)
 
