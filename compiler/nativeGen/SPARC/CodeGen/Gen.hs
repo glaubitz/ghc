@@ -1,5 +1,5 @@
 -- | Evaluation of word-sized values.
-module SPARC.CodeGen.Gen32 (
+module SPARC.CodeGen.Gen (
         getSomeReg,
         getRegister
 )
