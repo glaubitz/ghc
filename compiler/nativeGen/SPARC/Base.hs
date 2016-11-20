@@ -10,6 +10,7 @@ module SPARC.Base (
         wordLength,
         wordLengthInBits,
         wordFormat,
+        wordWidth,
         spillAreaLength,
         spillSlotSize,
         extraStackArgsHere,
@@ -28,7 +29,7 @@ import Cmm
 import DynFlags
 import Panic
 
-import Data.Int
+import Data.Int()
 
 is32BitPlatform :: NatM Bool
 is32BitPlatform = do
