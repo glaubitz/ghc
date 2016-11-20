@@ -23,8 +23,6 @@ import NCGMonad
 import Format
 import Platform
 
-import Cmm
-
 import DynFlags
 import Panic
 
