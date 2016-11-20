@@ -13,6 +13,7 @@ import SPARC.AddrMode
 import SPARC.Regs
 import SPARC.Base
 import SPARC.Imm
+import Platform
 
 import DynFlags
 import Outputable
