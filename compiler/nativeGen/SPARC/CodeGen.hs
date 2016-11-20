@@ -399,10 +399,20 @@ genCCall
 -- are guaranteed to take place before writes afterwards (unlike on PowerPC).
 -- Ref: Section 8.4 of the SPARC V9 Architecture manual.
 --
--- In the SPARC case we don't need a barrier.
+-- In the SPARC V8 case we don't need a barrier.
+--
+-- However, on SPARC V9, the most relaxed model is RMO (Relaxed Memory
+-- Ordering?), which does not guarantee Store-Store ordering. In this case, we
+-- must emit a membar #StoreStore.
 --
 genCCall (PrimTarget MO_WriteBarrier) _ _
- = return $ nilOL
+ = do   dflags <- getDynFlags
+        let platform = targetPlatform dflags
+        let is32Bit = target32Bit platform
+
+        if   is32Bit
+        then nilOL
+        else MEMBAR [MTStoreStore]
 
 genCCall (PrimTarget (MO_Prefetch_Data _)) _ _
  = return $ nilOL

@@ -601,6 +601,24 @@ pprInstr _ (CALL (Left imm) params _)
 pprInstr _ (CALL (Right reg) params _)
   = hcat [ text "\tcall\t", pprReg reg, comma, int (length params) ]
 
+pprInstr _ (MEMBAR tags)
+  = hcat [ text "\tmembar\t", pprMembarTags tags ]
+
+
+-- | Pretty print a tag for a membar instrution
+pprMembarTag :: MembarTag -> SDoc
+pprMembarTag MTLoadLoad   = text "#LoadLoad"
+pprMembarTag MTStoreLoad  = text "#StoreLoad"
+pprMembarTag MTLoadStore  = text "#LoadStore"
+pprMembarTag MTStoreStore = text "#StoreStore"
+pprMembarTag MTLookaside  = text "#Lookaside"
+pprMembarTag MTMemIssue   = text "#MemIssue"
+pprMembarTag MTSync       = text "#Sync"
+
+-- | Pretty print a list of tags for a membar instruction
+pprMembarTags :: [MembarTag] -> SDoc
+pprMembarTags tags = intersperse (text "|") $ map pprMembarTag tags
+
 
 -- | Pretty print a RI
 pprRI :: RI -> SDoc

@@ -105,6 +105,16 @@ instance Instruction Instr where
         mkStackDeallocInstr     = panic "no sparc_mkStackDeallocInstr"
 
 
+data MembarTag
+        = MTLoadLoad
+        | MTStoreLoad
+        | MTLoadStore
+        | MTStoreStore
+        | MTLookaside
+        | MTMemIssue
+        | MTSync
+
+
 -- | SPARC instruction set.
 --      Not complete. This is only the ones we need.
 --
@@ -208,6 +218,9 @@ data Instr
         | JMP_TBL       AddrMode [Maybe BlockId] CLabel
 
         | CALL          (Either Imm Reg) [Reg] Bool     -- target, params, terminal
+
+        -- Memory barrier.
+        | MEMBAR        [MembarTag]                     -- tags
 
 
 -- | regUsage returns the sets of src and destination registers used
