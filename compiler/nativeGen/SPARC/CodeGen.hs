@@ -479,9 +479,9 @@ arg_to_int_vregs :: CmmExpr -> NatM (OrdList Instr, [Reg])
 arg_to_int_vregs arg = do dflags <- getDynFlags
                           let platform = targetPlatform dflags
                               is32Bit  = target32Bit platform
-                          in  if   is32Bit
-                              then arg_to_int_vregs32' dflags arg
-                              else arg_to_int_vregs64' dflags arg
+                          if   is32Bit
+                          then arg_to_int_vregs32' dflags arg
+                          else arg_to_int_vregs64' dflags arg
 
 arg_to_int_vregs32' :: DynFlags -> CmmExpr -> NatM (OrdList Instr, [Reg])
 arg_to_int_vregs32' dflags arg
