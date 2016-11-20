@@ -618,11 +618,11 @@ assign_code _ [] = nilOL
 assign_code dflags [dest]
  = let  rep      = localRegType dest
         width    = typeWidth rep
-        r_dest   = getRegisterReg platform (CmmLocal dest)
         platform = targetPlatform dflags
+        r_dest   = getRegisterReg platform (CmmLocal dest)
+        is32Bit  = target32Bit platform
         w_word   = wordWidth dflags
         isFloat  = isFloatType rep
-        is32Bit  = target32Bit platform
 
         result
                 | width > W64
