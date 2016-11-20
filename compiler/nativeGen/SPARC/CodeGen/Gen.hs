@@ -33,7 +33,7 @@ getSomeReg expr
 --
 getRegister :: CmmExpr -> NatM Register
 
-getRegister expr = do
+getRegister expr
   = do is32Bit <- is32BitPlatform
        if   is32Bit
        then getRegister32 expr
