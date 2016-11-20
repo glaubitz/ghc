@@ -126,7 +126,7 @@ stmtToInstrs :: CmmNode e x -> NatM InstrBlock
 stmtToInstrs stmt = do
   dflags <- getDynFlags
   let platform = targetPlatform dflags
-  let is32Bit  = is32BitPlatform platform
+  let is32Bit  = target32Bit platform
   case stmt of
     CmmComment s   -> return (unitOL (COMMENT s))
     CmmTick {}     -> return nilOL
@@ -476,7 +476,7 @@ genCCall target dest_regs args
 arg_to_int_vregs :: CmmExpr -> NatM (OrdList Instr, [Reg])
 arg_to_int_vregs arg = do dflags <- getDynFlags
                           let platform = targetPlatform dflags
-                              is32Bit  = is32BitPlatform platform
+                              is32Bit  = target32Bit platform
                           in  if   is32Bit
                               then arg_to_int_vregs32' dflags arg
                               else arg_to_int_vregs64' dflags arg
@@ -610,7 +610,7 @@ assign_code platform [dest]
  = let  rep     = localRegType dest
         width   = typeWidth rep
         r_dest  = getRegisterReg platform (CmmLocal dest)
-        is32Bit = is32BitPlatform platform
+        is32Bit = target32Bit platform
 
         result
                 | isFloatType rep

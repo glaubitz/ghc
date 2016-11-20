@@ -22,21 +22,17 @@ import DynFlags
 --      we don't mind which one it is.
 getSomeReg :: CmmExpr -> NatM (Reg, InstrBlock)
 getSomeReg expr
-  = do dflags <- getDynFlags
-       let platform = targetPlatform dflags
-           is32Bit  = is32BitPlatform platform
-       in  if   is32Bit
-           then getSomeReg32 expr
-           else getSomeReg64 expr
+  = do is32Bit <- is32BitPlatform
+       if   is32Bit
+       then getSomeReg32 expr
+       else getSomeReg64 expr
 
 -- | Make code to evaluate a word-sized expression.
 --
 getRegister :: CmmExpr -> NatM Register
 
 getRegister expr = do
-  = do dflags <- getDynFlags
-       let platform = targetPlatform dflags
-           is32Bit  = is32BitPlatform platform
-       in  if   is32Bit
-           then getRegister32 expr
-           else getRegister64 expr
+  = do is32Bit <- is32BitPlatform
+       if   is32Bit
+       then getRegister32 expr
+       else getRegister64 expr

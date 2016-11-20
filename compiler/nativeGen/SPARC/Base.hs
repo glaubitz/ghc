@@ -20,6 +20,7 @@ where
 
 import NCGMonad
 import Format
+import Platform
 
 import Cmm
 
