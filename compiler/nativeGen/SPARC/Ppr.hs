@@ -50,12 +50,13 @@ import Outputable
 import Platform
 import FastString
 import Data.Word
+import Data.List
 
 sparcTargetIs32Bit :: Bool
 #if defined(sparc_TARGET_ARCH)
-sparcTargetIs32Bit = true
+sparcTargetIs32Bit = True
 #elif defined(sparc64_TARGET_ARCH)
-sparcTargetIs32Bit = false
+sparcTargetIs32Bit = False
 #endif
 
 -- -----------------------------------------------------------------------------
@@ -531,7 +532,7 @@ pprInstr is32Bit (SETHI imm reg)
         pprReg reg
     ]
 
-pprInstr NOP
+pprInstr _ NOP
         = text "\tnop"
 
 pprInstr _ (FABS format reg1 reg2)
