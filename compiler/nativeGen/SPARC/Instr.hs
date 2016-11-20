@@ -19,7 +19,7 @@ module SPARC.Instr (
 
         isUnconditionalJump,
 
-        MembarTag,
+        MembarTag(..),
         Instr(..),
         maxSpillSlots
 )
