@@ -147,7 +147,7 @@ getRegister32 (CmmMachOp mop [x])
         --      Do some shifts to chop out the high bits instead.
         MO_UU_Conv W32 W16
          -> do  tmpReg          <- getNewRegNat II32
-                (xReg, xCode)   <- getSomeReg x
+                (xReg, xCode)   <- getSomeReg32 x
                 let code dst
                         =       xCode
                         `appOL` toOL
@@ -272,7 +272,7 @@ integerExtend
 
 integerExtend from to expr
  = do   -- load the expr into some register
-        (reg, e_code)   <- getSomeReg expr
+        (reg, e_code)   <- getSomeReg32 expr
         tmp             <- getNewRegNat II32
         let bitCount
                 = case (from, to) of
@@ -311,8 +311,8 @@ idiv :: Bool -> Bool -> CmmExpr -> CmmExpr -> NatM Register
 --              we can just clear the Y register.
 idiv False cc x y
  = do
-        (a_reg, a_code)         <- getSomeReg x
-        (b_reg, b_code)         <- getSomeReg y
+        (a_reg, a_code)         <- getSomeReg32 x
+        (b_reg, b_code)         <- getSomeReg32 y
 
         let code dst
                 =       a_code
@@ -328,8 +328,8 @@ idiv False cc x y
 --              we have to sign extend the numerator into the Y register.
 idiv True cc x y
  = do
-        (a_reg, a_code)         <- getSomeReg x
-        (b_reg, b_code)         <- getSomeReg y
+        (a_reg, a_code)         <- getSomeReg32 x
+        (b_reg, b_code)         <- getSomeReg32 y
 
         tmp                     <- getNewRegNat II32
 
@@ -365,8 +365,8 @@ irem :: Bool -> CmmExpr -> CmmExpr -> NatM Register
 --              so we still have to clear the Y register.
 irem False x y
  = do
-        (a_reg, a_code) <- getSomeReg x
-        (b_reg, b_code) <- getSomeReg y
+        (a_reg, a_code) <- getSomeReg32 x
+        (b_reg, b_code) <- getSomeReg32 y
 
         tmp_reg         <- getNewRegNat II32
 
@@ -393,8 +393,8 @@ irem False x y
 --              can work it out themselves (then tell me). -- BL 2009/01/20
 irem True x y
  = do
-        (a_reg, a_code) <- getSomeReg x
-        (b_reg, b_code) <- getSomeReg y
+        (a_reg, a_code) <- getSomeReg32 x
+        (b_reg, b_code) <- getSomeReg32 y
 
         tmp1_reg        <- getNewRegNat II32
         tmp2_reg        <- getNewRegNat II32
@@ -417,8 +417,8 @@ irem True x y
 imulMayOflo :: Width -> CmmExpr -> CmmExpr -> NatM Register
 imulMayOflo rep a b
  = do
-        (a_reg, a_code) <- getSomeReg a
-        (b_reg, b_code) <- getSomeReg b
+        (a_reg, a_code) <- getSomeReg32 a
+        (b_reg, b_code) <- getSomeReg32 b
         res_lo <- getNewRegNat II32
         res_hi <- getNewRegNat II32
 
@@ -459,7 +459,7 @@ trivialCode
 trivialCode _ instr x (CmmLit (CmmInt y _))
   | fits13Bits y
   = do
-      (src1, code) <- getSomeReg x
+      (src1, code) <- getSomeReg32 x
       let
         src2 = ImmInt (fromInteger y)
         code__2 dst = code `snocOL` instr src1 (RIImm src2) dst
@@ -467,8 +467,8 @@ trivialCode _ instr x (CmmLit (CmmInt y _))
 
 
 trivialCode _ instr x y = do
-    (src1, code1) <- getSomeReg x
-    (src2, code2) <- getSomeReg y
+    (src1, code1) <- getSomeReg32 x
+    (src2, code2) <- getSomeReg32 y
     let
         code__2 dst = code1 `appOL` code2 `snocOL`
                       instr src1 (RIReg src2) dst
@@ -484,8 +484,8 @@ trivialFCode
 
 trivialFCode pk instr x y = do
     dflags <- getDynFlags
-    (src1, code1) <- getSomeReg x
-    (src2, code2) <- getSomeReg y
+    (src1, code1) <- getSomeReg32 x
+    (src2, code2) <- getSomeReg32 y
     tmp <- getNewRegNat FF64
     let
         promote x = FxTOy FF32 FF64 x tmp
@@ -515,7 +515,7 @@ trivialUCode
         -> NatM Register
 
 trivialUCode format instr x = do
-    (src, code) <- getSomeReg x
+    (src, code) <- getSomeReg32 x
     let
         code__2 dst = code `snocOL` instr (RIReg src) dst
     return (Any format code__2)
@@ -528,7 +528,7 @@ trivialUFCode
         -> NatM Register
 
 trivialUFCode pk instr x = do
-    (src, code) <- getSomeReg x
+    (src, code) <- getSomeReg32 x
     let
         code__2 dst = code `snocOL` instr src dst
     return (Any pk code__2)
@@ -541,7 +541,7 @@ trivialUFCode pk instr x = do
 -- | Coerce a integer value to floating point
 coerceInt2FP :: Width -> Width -> CmmExpr -> NatM Register
 coerceInt2FP width1 width2 x = do
-    (src, code) <- getSomeReg x
+    (src, code) <- getSomeReg32 x
     let
         code__2 dst = code `appOL` toOL [
             ST (intFormat width1) src (spRel True (-2)),
@@ -563,7 +563,7 @@ coerceFP2Int width1 width2 x
 
             iformat2      = intFormat   width2
 
-        (fsrc, code)    <- getSomeReg x
+        (fsrc, code)    <- getSomeReg32 x
         fdst            <- getNewRegNat fformat2
 
         let code2 dst
@@ -583,14 +583,14 @@ coerceFP2Int width1 width2 x
 -- | Coerce a double precision floating point value to single precision.
 coerceDbl2Flt :: CmmExpr -> NatM Register
 coerceDbl2Flt x = do
-    (src, code) <- getSomeReg x
+    (src, code) <- getSomeReg32 x
     return (Any FF32 (\dst -> code `snocOL` FxTOy FF64 FF32 src dst))
 
 
 -- | Coerce a single precision floating point value to double precision
 coerceFlt2Dbl :: CmmExpr -> NatM Register
 coerceFlt2Dbl x = do
-    (src, code) <- getSomeReg x
+    (src, code) <- getSomeReg32 x
     return (Any FF64 (\dst -> code `snocOL` FxTOy FF32 FF64 src dst))
 
 
@@ -604,7 +604,7 @@ coerceFlt2Dbl x = do
 --
 condIntReg :: Cond -> CmmExpr -> CmmExpr -> NatM Register
 condIntReg EQQ x (CmmLit (CmmInt 0 _)) = do
-    (src, code) <- getSomeReg x
+    (src, code) <- getSomeReg32 x
     let
         code__2 dst = code `appOL` toOL [
             SUB False True g0 (RIReg src) g0,
@@ -612,8 +612,8 @@ condIntReg EQQ x (CmmLit (CmmInt 0 _)) = do
     return (Any II32 code__2)
 
 condIntReg EQQ x y = do
-    (src1, code1) <- getSomeReg x
-    (src2, code2) <- getSomeReg y
+    (src1, code1) <- getSomeReg32 x
+    (src2, code2) <- getSomeReg32 y
     let
         code__2 dst = code1 `appOL` code2 `appOL` toOL [
             XOR False src1 (RIReg src2) dst,
@@ -622,7 +622,7 @@ condIntReg EQQ x y = do
     return (Any II32 code__2)
 
 condIntReg NE x (CmmLit (CmmInt 0 _)) = do
-    (src, code) <- getSomeReg x
+    (src, code) <- getSomeReg32 x
     let
         code__2 dst = code `appOL` toOL [
             SUB False True g0 (RIReg src) g0,
@@ -630,8 +630,8 @@ condIntReg NE x (CmmLit (CmmInt 0 _)) = do
     return (Any II32 code__2)
 
 condIntReg NE x y = do
-    (src1, code1) <- getSomeReg x
-    (src2, code2) <- getSomeReg y
+    (src1, code1) <- getSomeReg32 x
+    (src2, code2) <- getSomeReg32 y
     let
         code__2 dst = code1 `appOL` code2 `appOL` toOL [
             XOR False src1 (RIReg src2) dst,
