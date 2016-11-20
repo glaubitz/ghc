@@ -22,7 +22,6 @@ module SPARC.Regs (
         allocatableRegs,
 
         -- args
-        argRegs,
         allArgRegs,
         callClobberedRegs,
 
