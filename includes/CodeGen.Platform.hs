@@ -635,7 +635,8 @@ haveRegBase = False
 -- reg is the machine register it is stored in.
 globalRegMaybe :: GlobalReg -> Maybe RealReg
 #if defined(MACHREGS_i386) || defined(MACHREGS_x86_64) \
-    || defined(MACHREGS_sparc) || defined(MACHREGS_powerpc) \
+    || defined(MACHREGS_sparc) || defined(MACHREGS_sparc64) \
+    || defined(MACHREGS_powerpc) \
     || defined(MACHREGS_arm) || defined(MACHREGS_aarch64)
 # if defined(REG_Base)
 globalRegMaybe BaseReg                  = Just (RealRegSingle REG_Base)
@@ -690,7 +691,7 @@ globalRegMaybe (FloatReg 6)             = Just (RealRegSingle REG_F6)
 # endif
 # if defined(REG_D1)
 globalRegMaybe (DoubleReg 1)            =
-#  if defined(MACHREGS_sparc)
+#  if defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
                                           Just (RealRegPair REG_D1 (REG_D1 + 1))
 #  else
                                           Just (RealRegSingle REG_D1)
@@ -698,7 +699,7 @@ globalRegMaybe (DoubleReg 1)            =
 # endif
 # if defined(REG_D2)
 globalRegMaybe (DoubleReg 2)            =
-#  if defined(MACHREGS_sparc)
+#  if defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
                                           Just (RealRegPair REG_D2 (REG_D2 + 1))
 #  else
                                           Just (RealRegSingle REG_D2)
@@ -706,7 +707,7 @@ globalRegMaybe (DoubleReg 2)            =
 # endif
 # if defined(REG_D3)
 globalRegMaybe (DoubleReg 3)            =
-#  if defined(MACHREGS_sparc)
+#  if defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
                                           Just (RealRegPair REG_D3 (REG_D3 + 1))
 #  else
                                           Just (RealRegSingle REG_D3)
@@ -714,7 +715,7 @@ globalRegMaybe (DoubleReg 3)            =
 # endif
 # if defined(REG_D4)
 globalRegMaybe (DoubleReg 4)            =
-#  if defined(MACHREGS_sparc)
+#  if defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
                                           Just (RealRegPair REG_D4 (REG_D4 + 1))
 #  else
                                           Just (RealRegSingle REG_D4)
@@ -722,7 +723,7 @@ globalRegMaybe (DoubleReg 4)            =
 # endif
 # if defined(REG_D5)
 globalRegMaybe (DoubleReg 5)            =
-#  if defined(MACHREGS_sparc)
+#  if defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
                                           Just (RealRegPair REG_D5 (REG_D5 + 1))
 #  else
                                           Just (RealRegSingle REG_D5)
@@ -730,7 +731,7 @@ globalRegMaybe (DoubleReg 5)            =
 # endif
 # if defined(REG_D6)
 globalRegMaybe (DoubleReg 6)            =
-#  if defined(MACHREGS_sparc)
+#  if defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
                                           Just (RealRegPair REG_D6 (REG_D6 + 1))
 #  else
                                           Just (RealRegSingle REG_D6)
@@ -988,7 +989,7 @@ freeReg REG_HpLim = False
 # endif
 freeReg _ = True
 
-#elif defined(MACHREGS_sparc)
+#elif defined(MACHREGS_sparc) || defined(MACHREGS_sparc64)
 
 -- SPARC regs used by the OS / ABI
 -- %g0(r0) is always zero
