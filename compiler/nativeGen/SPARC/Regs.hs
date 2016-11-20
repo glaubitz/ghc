@@ -185,12 +185,15 @@ o1  = RegReal (RealRegSingle (oReg 1))
 f0  = RegReal (RealRegSingle (fReg 0))
 f1  = RegReal (RealRegSingle (fReg 1))
 
--- | Produce the second-half-of-a-double register given the first half.
+-- | Produce the second-half-of-a-double register given the first half or pair.
 fPair :: Reg -> Reg
-fPair (RealReg n)
- | n >= 32 && n `mod` 2 == 0 = RealReg (n+1)
+fPair (RegReal (RealRegSingle n))
+ | n >= 32 && n `mod` 2 == 0 = RegReal (RealRegSingle (n+1))
 
-fPair (VirtualRegD u) = VirtualRegHi u
+fPair (RegReal (RealRegPair m n))
+ | m >= 32 && m `mod` 2 == 0 && m + 1 == n = RegReal (RealRegSingle (n+1))
+
+fPair (RegVirtual (VirtualRegD u)) = RegVirtual (VirtualRegHi u)
 
 fPair reg = panic ("MachInstrs.fPair: can't get high half of supposed double reg " ++ showPpr reg)
 
