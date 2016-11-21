@@ -107,7 +107,6 @@ pprBasicBlock info_env (BasicBlock blockid instrs)
        Just (Statics info_lbl info) ->
            pprAlignForSection Text $$
            vcat (map pprData info) $$
-           pprSectionAlign (Section Text info_lbl) $$
            pprLabel info_lbl
 
 
