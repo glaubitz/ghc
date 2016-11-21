@@ -89,10 +89,10 @@ getAmodeLit64 lit
         tmp2    <- getNewRegNat II64
 
         let code = toOL [
-            SETHI (HI imm) tmp1,
-            OR False tmp1 (RIImm (HM imm)) tmp1,
-            SLL tmp1 (RIImm (ImmInt 32)) tmp1,
-            SETHI (LM imm) tmp2,
-            OR False tmp1 (RIReg tmp2) tmp1]
+                SETHI (HI imm) tmp1,
+                OR False tmp1 (RIImm (HM imm)) tmp1,
+                SLL tmp1 (RIImm (ImmInt 32)) tmp1,
+                SETHI (LM imm) tmp2,
+                OR False tmp1 (RIReg tmp2) tmp1]
 
         return (Amode (AddrRegImm tmp1 (LO imm)) code)
