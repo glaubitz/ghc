@@ -13,14 +13,15 @@ import SPARC.Imm
 import SPARC.Instr
 import SPARC.Regs
 import SPARC.Base
+import PIC
 import NCGMonad
 import Format
+import Platform
 
 import Cmm
 
 import DynFlags
 import OrdList
-import Platform
 
 
 -- | Generate code to reference a memory address.
