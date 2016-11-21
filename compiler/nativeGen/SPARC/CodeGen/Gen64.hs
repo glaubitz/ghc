@@ -276,7 +276,7 @@ getRegister64 (CmmMachOp mop [x, y])
       MO_Or  rep        -> trivialCode rep (OR  False) x y
       MO_Xor rep        -> trivialCode rep (XOR False) x y
 
-      MO_Mul rep        -> trivialCode rep (MULX False) x y
+      MO_Mul rep        -> trivialCode rep MULX x y
 
       MO_Shl rep        -> trivialCode rep SLL  x y
       MO_U_Shr rep      -> trivialCode rep SRL x y
