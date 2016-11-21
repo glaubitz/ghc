@@ -98,10 +98,11 @@ dspSection = Section Text $
 pprBasicBlock :: BlockEnv CmmStatics -> NatBasicBlock Instr -> SDoc
 pprBasicBlock info_env (BasicBlock blockid instrs)
   = maybe_infotable $$
-    pprSectionAlign (Section Text info_lbl) $$
-    pprLabel (mkAsmTempLabel (getUnique blockid)) $$
+    pprSectionAlign (Section Text block_lbl) $$
+    pprLabel block_lbl $$
     vcat (map (pprInstr sparcTargetIs32Bit) instrs)
   where
+    block_lbl = mkAsmTempLabel (getUnique blockid)
     maybe_infotable = case mapLookup blockid info_env of
        Nothing   -> empty
        Just (Statics info_lbl info) ->
