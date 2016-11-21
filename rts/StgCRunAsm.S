@@ -217,7 +217,7 @@ StgReturn:
    -------------------------------------------------------------------------- */
 
 #elif defined(sparc64_HOST_ARCH)
-#define STACK_FRAME_SIZE (RESERVED_C_STACK_SIZE+176)
+#define STACK_FRAME_SIZE (RESERVED_C_STACK_BYTES+176)
 # if defined(linux_HOST_OS) || defined(solaris_HOST_OS)
 	.file	"StgCRun.c"
 	.section	".text"
