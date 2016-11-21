@@ -75,9 +75,9 @@ pprNatCmmDecl proc@(CmmProc top_info lbl _ (ListGraph blocks)) =
 
     Just (Statics info_lbl _) ->
       sdocWithPlatform $ \platform ->
-      pprSectionAlign (Section Text info_lbl) $$
       (if platformHasSubsectionsViaSymbols platform
-          then ppr (mkDeadStripPreventer info_lbl) <> char ':'
+          then pprSectionAlign dspSection $$
+               ppr (mkDeadStripPreventer info_lbl) <> char ':'
           else empty) $$
       vcat (map (pprBasicBlock top_info) blocks) $$
       -- above: Even the first block gets a label, because with branch-chain
@@ -105,7 +105,7 @@ pprBasicBlock info_env (BasicBlock blockid instrs)
     maybe_infotable = case mapLookup blockid info_env of
        Nothing   -> empty
        Just (Statics info_lbl info) ->
-           pprAlignForSection Text $$
+           pprSectionAlign (Section Text info_lbl) $$
            vcat (map pprData info) $$
            pprLabel info_lbl
 
