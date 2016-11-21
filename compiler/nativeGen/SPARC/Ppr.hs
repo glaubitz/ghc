@@ -83,7 +83,6 @@ pprNatCmmDecl proc@(CmmProc top_info lbl _ (ListGraph blocks)) =
           then pprSectionAlign dspSection $$
                ppr (mkDeadStripPreventer info_lbl) <> char ':'
           else empty) $$
-      pprSectionAlign (Section Text info_lbl) $$
       vcat (map (pprBasicBlock top_info) blocks) $$
       -- above: Even the first block gets a label, because with branch-chain
       -- elimination, it might be the target of a goto.
@@ -103,6 +102,7 @@ dspSection = Section Text $
 pprBasicBlock :: LabelMap CmmStatics -> NatBasicBlock Instr -> SDoc
 pprBasicBlock info_env (BasicBlock blockid instrs)
   = maybe_infotable $$
+    pprSectionAlign (Section Text info_lbl) $$
     pprLabel (blockLbl blockid) $$
     vcat (map (pprInstr sparcTargetIs32Bit) instrs)
   where
