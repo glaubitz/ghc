@@ -18,6 +18,7 @@ import Format
 
 import Cmm
 
+import DynFlags
 import OrdList
 
 
