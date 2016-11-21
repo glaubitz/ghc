@@ -19,6 +19,7 @@ import SPARC.AddrMode
 import SPARC.Imm
 import SPARC.Regs
 import SPARC.Base
+import PIC
 import NCGMonad
 import Format
 import Reg
@@ -92,16 +93,6 @@ getRegister32 (CmmLit (CmmFloat f frep)) = do
                   (Statics lbl [CmmStaticLit (CmmFloat f frep)])
             `consOL` (addr_code `snocOL` LD iformat addr dst)
     return (Any fformat code)
-
-getRegister32 (CmmLit (CmmFloat d W64)) = do
-    lbl <- getNewLabelNat
-    tmp <- getNewRegNat II32
-    let code dst = toOL [
-            LDATA (Section ReadOnlyData lbl) $ Statics lbl
-                         [CmmStaticLit (CmmFloat d W64)],
-            SETHI (HI (ImmCLbl lbl)) tmp,
-            LD II64 (AddrRegImm tmp (LO (ImmCLbl lbl))) dst]
-    return (Any FF64 code)
 
 
 -- Unary machine ops
