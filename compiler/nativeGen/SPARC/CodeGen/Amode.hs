@@ -56,7 +56,7 @@ getAmode (CmmMachOp (MO_Add _) [x, y])
 getAmode (CmmLit lit)
   = do dflags <- getDynFlags
        let platform = targetPlatform dflags
-       let s32Bit = target32Bit platform
+           is32Bit = target32Bit platform
 
        if   is32Bit
        then getAmodeLit32 lit
@@ -79,9 +79,10 @@ getAmodeLit32 lit
 
         return (Amode (AddrRegImm tmp (LO imm)) code)
 
+getAmodeLit64 :: CmmLit -> NatM Amode
 getAmodeLit64 lit
   = do
-        let imm      = litToImm lit
+        let imm = litToImm lit
         tmp1    <- getNewRegNat II64
         tmp2    <- getNewRegNat II64
 
