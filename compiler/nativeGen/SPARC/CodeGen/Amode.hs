@@ -20,6 +20,7 @@ import Cmm
 
 import DynFlags
 import OrdList
+import Platform
 
 
 -- | Generate code to reference a memory address.
