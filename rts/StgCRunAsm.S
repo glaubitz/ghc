@@ -180,4 +180,66 @@ StgReturn:
 	blr
 
 # endif // aix_HOST_OS
+
+/* -----------------------------------------------------------------------------
+   Sparc architecture
+
+   --
+   OLD COMMENT from GHC-3.02:
+
+   We want tailjumps to be calls, because `call xxx' is the only Sparc
+   branch that allows an arbitrary label as a target.  (Gcc's ``goto
+   *target'' construct ends up loading the label into a register and
+   then jumping, at the cost of two extra instructions for the 32-bit
+   load.)
+
+   When entering the threaded world, we stash our return address in a
+   known location so that \tr{%i7} is available as an extra
+   callee-saves register.  Of course, we have to restore this when
+   coming out of the threaded world.
+
+   I hate this god-forsaken architecture.  Since the top of the
+   reserved stack space is used for globals and the bottom is reserved
+   for outgoing arguments, we have to stick our return address
+   somewhere in the middle.  Currently, I'm allowing 100 extra
+   outgoing arguments beyond the first 6.  --JSM
+
+   Updated info (GHC 4.06): we don't appear to use %i7 any more, so
+   I'm not sure whether we still need to save it.  Incedentally, what
+   does the last paragraph above mean when it says "the top of the
+   stack is used for globals"?  What globals?  --SDM
+
+   Updated info (GHC 4.08.2): not saving %i7 any more (see below).
+
+   Updated info (GHC 8.0.1): Rewritten in assembly since %l7 stores the GOT
+   address, but it gets clobbered and GCC doesn't like that, so let's not
+   fight it.
+   -------------------------------------------------------------------------- */
+
+#elif defined(sparc64_HOST_ARCH)
+#define STACK_FRAME_SIZE (RESERVED_C_STACK_SIZE+176)
+# if defined(linux_HOST_OS) || defined(solaris_HOST_OS)
+	.file	"StgCRun.c"
+	.section	".text"
+	.align 4
+	.global StgRun
+	.hidden StgRun
+	.type StgRun,@function
+StgRun:
+	sethi %hix(-STACK_FRAME_SIZE), %o2
+	xor %o2, %lox(-STACK_FRAME_SIZE), %o2
+	save %sp, %o2, %sp
+	// Call f
+	jmpl %i0, %o7
+	 nop
+
+	.global StgReturn
+StgReturn:
+	ldx [%i1], %i0 // load R1 into %i0 for return value
+	ret
+	 restore
+
+# else // linux_HOST_OS || solaris_HOST_OS
+# error Only Linux and Solaris are supported for sparc64 right now.
+# endif
 #endif
