@@ -75,6 +75,7 @@ pprNatCmmDecl proc@(CmmProc top_info lbl _ (ListGraph blocks)) =
 
     Just (Statics info_lbl _) ->
       sdocWithPlatform $ \platform ->
+      pprSectionAlign (Section Text info_lbl) $$
       (if platformHasSubsectionsViaSymbols platform
           then pprSectionAlign dspSection $$
                ppr (mkDeadStripPreventer info_lbl) <> char ':'
