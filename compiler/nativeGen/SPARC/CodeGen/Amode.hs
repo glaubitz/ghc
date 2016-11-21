@@ -9,9 +9,8 @@ import SPARC.CodeGen.Base
 import SPARC.AddrMode
 import SPARC.Imm
 import SPARC.Instr
-import SPARC.Regs
+import SPARC.Regs()
 import SPARC.Base
-import PIC
 import NCGMonad
 import Format
 import Platform
