@@ -60,42 +60,18 @@ getRegister64 tree@(CmmRegOff _ _)
 -- Load a literal float into a float register.
 --      The actual literal is stored in a new data area, and we load it
 --      at runtime.
-getRegister64 (CmmLit (CmmFloat f W32)) = do
-
-    -- a label for the new data area
+getRegister64 (CmmLit (CmmFloat f frep)) = do
     lbl  <- getNewLabelNat
-    tmp1 <- getNewRegNat II64
-    tmp2 <- getNewRegNat II64
-
-    let code dst = toOL [
-            -- the data area
-            LDATA (Section ReadOnlyData lbl) $ Statics lbl
-                         [CmmStaticLit (CmmFloat f W32)],
-
-            -- load the literal
-            SETHI (HI (ImmCLbl lbl)) tmp1,
-            OR False tmp1 (RIImm (HM (ImmCLbl lbl))) tmp1,
-            SLL tmp1 (RIImm (ImmInt 32)) tmp1,
-            SETHI (LM (ImmCLbl lbl)) tmp2,
-            OR False tmp1 (RIReg tmp2) tmp1,
-            LD II32 (AddrRegImm tmp1 (LO (ImmCLbl lbl))) dst]
-
-    return (Any FF32 code)
-
-getRegister64 (CmmLit (CmmFloat d W64)) = do
-    lbl  <- getNewLabelNat
-    tmp1 <- getNewRegNat II64
-    tmp2 <- getNewRegNat II64
-    let code dst = toOL [
-            LDATA (Section ReadOnlyData lbl) $ Statics lbl
-                         [CmmStaticLit (CmmFloat d W64)],
-            SETHI (HI (ImmCLbl lbl)) tmp1,
-            OR False tmp1 (RIImm (HM (ImmCLbl lbl))) tmp1,
-            SLL tmp1 (RIImm (ImmInt 32)) tmp1,
-            SETHI (LM (ImmCLbl lbl)) tmp2,
-            OR False tmp1 (RIReg tmp2) tmp1,
-            LD II64 (AddrRegImm tmp1 (LO (ImmCLbl lbl))) dst]
-    return (Any FF64 code)
+    dflags <- getDynFlags
+    dynRef <- cmmMakeDynamicReference dflags DataReference lbl
+    Amode addr addr_code <- getAmode dynRef
+    let fformat = floatFormat frep
+        iformat = intFormat frep
+        code dst =
+            LDATA (Section ReadOnlyData lbl)
+                  (Statics lbl [CmmStaticLit (CmmFloat f frep)])
+            `consOL` (addr_code `snocOL` LD iformat addr dst)
+    return (Any fformat code)
 
 
 -- Unary machine ops

@@ -80,22 +80,18 @@ getRegister32 (CmmMachOp (MO_SS_Conv W64 W32) [x]) = do
 -- Load a literal float into a float register.
 --      The actual literal is stored in a new data area, and we load it
 --      at runtime.
-getRegister32 (CmmLit (CmmFloat f W32)) = do
-
-    -- a label for the new data area
-    lbl <- getNewLabelNat
-    tmp <- getNewRegNat II32
-
-    let code dst = toOL [
-            -- the data area
-            LDATA (Section ReadOnlyData lbl) $ Statics lbl
-                         [CmmStaticLit (CmmFloat f W32)],
-
-            -- load the literal
-            SETHI (HI (ImmCLbl lbl)) tmp,
-            LD II32 (AddrRegImm tmp (LO (ImmCLbl lbl))) dst]
-
-    return (Any FF32 code)
+getRegister32 (CmmLit (CmmFloat f frep)) = do
+    lbl  <- getNewLabelNat
+    dflags <- getDynFlags
+    dynRef <- cmmMakeDynamicReference dflags DataReference lbl
+    Amode addr addr_code <- getAmode dynRef
+    let fformat = floatFormat frep
+        iformat = intFormat frep
+        code dst =
+            LDATA (Section ReadOnlyData lbl)
+                  (Statics lbl [CmmStaticLit (CmmFloat f frep)])
+            `consOL` (addr_code `snocOL` LD iformat addr dst)
+    return (Any fformat code)
 
 getRegister32 (CmmLit (CmmFloat d W64)) = do
     lbl <- getNewLabelNat

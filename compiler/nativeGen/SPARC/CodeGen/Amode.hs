@@ -56,15 +56,13 @@ getAmode (CmmMachOp (MO_Add _) [x, y])
     return (Amode (AddrRegReg regX regY) code)
 
 getAmode (CmmLit lit)
-  = do
-        let imm__2      = litToImm lit
-        tmp1    <- getNewRegNat II32
-        tmp2    <- getNewRegNat II32
+  = do dflags <- getDynFlags
+       let platform = targetPlatform dflags
+       let s32Bit = target32Bit platform
 
-        let code = toOL [ SETHI (HI imm__2) tmp1
-                        , OR    False tmp1 (RIImm (LO imm__2)) tmp2]
-
-        return (Amode (AddrRegReg tmp2 g0) code)
+       if   is32Bit
+       then getAmodeLit32 lit
+       else getAmodeLit64 lit
 
 getAmode other
   = do
@@ -72,3 +70,28 @@ getAmode other
        let
             off  = ImmInt 0
        return (Amode (AddrRegImm reg off) code)
+
+getAmodeLit32 :: CmmLit -> NatM Amode
+getAmodeLit32 lit
+  = do
+        let imm = litToImm lit
+        tmp     <- getNewRegNat II32
+
+        let code = unitOL $ SETHI (HI imm) tmp
+
+        return (Amode (AddrRegImm tmp (LO imm)) code)
+
+getAmodeLit64 lit
+  = do
+        let imm      = litToImm lit
+        tmp1    <- getNewRegNat II64
+        tmp2    <- getNewRegNat II64
+
+        let code = toOL [
+            SETHI (HI imm) tmp1,
+            OR False tmp1 (RIImm (HM imm)) tmp1,
+            SLL tmp1 (RIImm (ImmInt 32)) tmp1,
+            SETHI (LM imm) tmp2,
+            OR False tmp1 (RIReg tmp2) tmp1]
+
+        return (Amode (AddrRegImm tmp1 (LO imm)) code)
