@@ -234,8 +234,8 @@ getRegister64 (CmmMachOp mop [x, y])
 
       MO_S_MulMayOflo W64 -> imulMayOflo x y
 
-      MO_S_Quot W64     -> trivialCode W64 SMULX x y
-      MO_U_Quot W64     -> trivialCode W64 UMULX x y
+      MO_S_Quot W64     -> trivialCode W64 SDIVX x y
+      MO_U_Quot W64     -> trivialCode W64 UDIVX x y
 
       MO_S_Rem  W64     -> irem True  x y
       MO_U_Rem  W64     -> irem False x y
