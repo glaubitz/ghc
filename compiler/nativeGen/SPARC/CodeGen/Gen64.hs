@@ -232,6 +232,8 @@ getRegister64 (CmmMachOp mop [x, y])
       MO_Add W64        -> trivialCode W64 (ADD False False) x y
       MO_Sub W64        -> trivialCode W64 (SUB False False) x y
 
+      MO_S_MulMayOflo W64 -> imulMayOflo x y
+
       MO_S_Quot W64     -> trivialCode W64 SMULX x y
       MO_U_Quot W64     -> trivialCode W64 UMULX x y
 
@@ -348,6 +350,37 @@ conversionNop
 conversionNop new_rep expr
  = do   e_code <- getRegister64 expr
         return (setFormatOfRegister e_code new_rep)
+
+-- On a 64-bit platform it is not always possible to
+-- acquire the top 64 bits of the result.  Therefore, a recommended
+-- implementation is to take the absolute value of both operands, and
+-- return 0 iff bits[63:31] of them are zero, since that means that their
+-- magnitudes fit within 31 bits, so the magnitude of the product must fit
+-- into 62 bits.
+imulMayOflo :: CmmExpr -> CmmExpr -> NatM Register
+imulMayOflo a b
+ = do
+        (a_reg, a_code) <- getSomeReg64 x
+        (b_reg, b_code) <- getSomeReg64 y
+
+        tmp             <- getNewRegNat II64
+        abs             <- getNewRegNat II64
+
+        let code dst
+                =       a_code
+                `appOL` b_code
+                `appOL` toOL
+                        [ SRA a_reg (RIImm (ImmInt 63)) tmp
+                        , XOR a_reg (RIReg tmp)         abs
+                        , SUB abs   (RIReg tmp)         abs
+                        , SRL abs   (RIImm (ImmInt 31)) dst
+                        , SRA b_reg (RIImm (ImmInt 63)) tmp
+                        , XOR b_reg (RIReg tmp)         abs
+                        , SUB abs   (RIReg tmp)         abs
+                        , SRL abs   (RIImm (ImmInt 31)) tmp
+                        , OR  dst   (RIReg tmp)         dst ]
+
+        return  (Any II64 code)
 
 
 -- | Do an integer remainder; no hardware instruction.
