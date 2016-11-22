@@ -2,7 +2,9 @@ module SPARC.Stack (
         stackBias,
         saveAreaBytes,
         spRel,
+        spRel2,
         fpRel,
+        fpRel2,
         spillSlotToOffset,
         maxSpillSlots
 )
@@ -44,16 +46,25 @@ saveAreaBytes _
 spRel :: Bool
       -> Int            -- ^ stack offset in words, positive or negative
       -> AddrMode
+spRel is32Bit n = spRel2 is32Bit n 0
 
-spRel is32Bit n = AddrRegImm sp (ImmInt ((stackBias is32Bit) + n * (wordLength is32Bit)))
+spRel2 :: Bool
+       -> Int            -- ^ stack offset in words, positive or negative
+       -> Int            -- ^ additional offset in bytes, positive or negative
+       -> AddrMode
+spRel2 is32Bit n off
+        = AddrRegImm sp (ImmInt ((stackBias is32Bit) + n * (wordLength is32Bit) + off))
 
 
 -- | Get an address relative to the frame pointer.
 --      This doesn't work work for offsets greater than 13 bits; we just hope for the best
 --
 fpRel :: Bool -> Int -> AddrMode
-fpRel is32Bit n
-        = AddrRegImm fp (ImmInt ((stackBias is32Bit) + n * (wordLength is32Bit)))
+fpRel is32Bit n = fpRel2 is32Bit n 0
+
+fpRel2 :: Bool -> Int -> AddrMode
+fpRel2 is32Bit n off
+        = AddrRegImm fp (ImmInt ((stackBias is32Bit) + n * (wordLength is32Bit) + off))
 
 -- | Convert a spill slot number to a *byte* offset, with no sign.
 --
