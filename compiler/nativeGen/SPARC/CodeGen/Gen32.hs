@@ -530,7 +530,7 @@ coerceInt2FP width1 width2 x = do
     let
         code__2 dst = code `appOL` toOL [
             ST (intFormat width1) src (spRel True (-2)),
-            LD (intFormat width1) (spRel True (-2)) dst,
+            LD (floatFormat width1) (spRel True (-2)) dst,
             FxTOy (intFormat width1) (floatFormat width2) dst dst]
     return (Any (floatFormat $ width2) code__2)
 
