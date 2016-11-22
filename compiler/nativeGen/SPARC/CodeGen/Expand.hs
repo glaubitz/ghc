@@ -110,6 +110,10 @@ expandMisalignedDoubles instr
                         , LD  FF32  (AddrRegImm r1 (ImmInt 4))  (fRegHi fReg)
                         , SUB False False r1 (RIReg r2) r1 ]
 
+        -- Should be aligned (I hope... :/)
+        | LD FF64 (AddrRegImm _ (LO _)) _       <- instr
+        = unitOL instr
+
         -- Translate to
         --    ld  [addr],%fn
         --    ld  [addr+4],%f(n+1)
@@ -128,6 +132,10 @@ expandMisalignedDoubles instr
                         , ST  FF32  fReg           (AddrRegReg r1 g0)
                         , ST  FF32  (fRegHi fReg)  (AddrRegImm r1 (ImmInt 4))
                         , SUB False False r1 (RIReg r2) r1 ]
+
+        -- Should be aligned (I hope... :/)
+        | ST FF64 _ (AddrRegImm _ (LO _))       <- instr
+        = unitOL instr
 
         -- Translate to
         --    ld  [addr],%fn
