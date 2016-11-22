@@ -440,6 +440,9 @@ genCCall (PrimTarget MO_WriteBarrier) _ _
 genCCall (PrimTarget (MO_Prefetch_Data _)) _ _
  = return $ nilOL
 
+genCCall (PrimTarget MO_Touch) _ _
+ = return $ nilOL
+
 genCCall target dest_regs args
  = do   dflags <- getDynFlags
         let platform = targetPlatform dflags
