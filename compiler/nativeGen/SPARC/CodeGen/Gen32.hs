@@ -526,12 +526,16 @@ trivialUFCode pk instr x = do
 -- | Coerce a integer value to floating point
 coerceInt2FP :: Width -> Width -> CmmExpr -> NatM Register
 coerceInt2FP width1 width2 x = do
-    (src, code) <- getSomeReg32 x
+    let iformat1 = intFormat width1
+        fformat1 = floatFormat width1
+        fformat2 = floatFormat width2
+    (src, code)  <- getSomeReg32 x
+    tmp          <- getNewRegNat fformat1
     let
         code__2 dst = code `appOL` toOL [
-            ST (intFormat width1) src (spRel True (-2)),
-            LD (floatFormat width1) (spRel True (-2)) dst,
-            FxTOy (intFormat width1) (floatFormat width2) dst dst]
+            ST iformat1 src (spRel True (-2)),
+            LD fformat1 (spRel True (-2)) tmp,
+            FxTOy iformat1 fformat2 tmp dst]
     return (Any (floatFormat $ width2) code__2)
 
 
