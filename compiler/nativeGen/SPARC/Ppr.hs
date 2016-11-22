@@ -389,7 +389,7 @@ pprDataItem lit
 pprInstr :: Instr -> SDoc
 pprInstr
         = sdocWithPlatform $ \platform ->
-          pprInstr' $ target32Bit platform
+          pprInstr' (target32Bit platform)
 
 
 pprInstr' :: Bool -> Instr -> SDoc
