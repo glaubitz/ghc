@@ -587,7 +587,7 @@ arg_to_int_vregs64' dflags arg
 
                         let code2 =
                                 code                            `snocOL`
-                                COMMENT (mkFastString ("atoiv64 FMOV FF32 " ++ (show src) ++ " " ++ (show v1Odd))) `snocOL`
+                                COMMENT (mkFastString ("atoiv64 FMOV FF32 src=(" ++ (show src) ++ ") v1Odd=(" ++ (show v1Odd) ++ ") v1==(" ++ (show v1) ++ ")")) `snocOL`
                                 FMOV FF32 src v1Odd
 
                         return (code2, [v1])
