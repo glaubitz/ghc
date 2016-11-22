@@ -335,8 +335,21 @@ genSwitch dflags expr targets
 
                 label           <- getNewLabelNat
 
-                Any _ base_code <- getRegister label
-                let offset_code = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
+                let base_code
+                  | is32Bit   = toOL [
+                        SETHI (HI (ImmCLbl label)) base_reg,
+                        OR    False base_reg (RIImm (LO (ImmCLbl label))) base_reg]
+
+                  | otherwise = toOL [
+                        -- Use offset_reg as a temporary; base is calculated first
+                        SETHI (HH (ImmCLbl label)) offset_reg,
+                        SETHI (LM (ImmCLbl label)) base_reg,
+                        OR False offset_reg (RIImm (HM (ImmCLbl label))) offset_reg,
+                        OR False base_reg (RIImm (LO (ImmCLbl label))) base_reg,
+                        SLL offset_reg (RIImm (ImmInt 32)) offset_reg,
+                        OR False base_reg (RIReg offset_reg) base_reg]
+
+                    offset_code = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
 
                 return    $ e_code
                     `appOL` (base_code base_reg)
