@@ -84,13 +84,13 @@ getRegister32 (CmmLit (CmmFloat f frep)) = do
     dflags <- getDynFlags
     dynRef <- cmmMakeDynamicReference dflags DataReference lbl
     Amode addr addr_code <- getAmode dynRef
-    let fformat = floatFormat frep
-        iformat = intFormat frep
+    let format = floatFormat frep
+        format = intFormat frep
         code dst =
             LDATA (Section ReadOnlyData lbl)
                   (Statics lbl [CmmStaticLit (CmmFloat f frep)])
-            `consOL` (addr_code `snocOL` LD iformat addr dst)
-    return (Any fformat code)
+            `consOL` (addr_code `snocOL` LD format addr dst)
+    return (Any format code)
 
 
 -- Unary machine ops
