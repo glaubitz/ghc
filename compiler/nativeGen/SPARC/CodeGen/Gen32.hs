@@ -536,7 +536,7 @@ coerceInt2FP width1 width2 x = do
             ST iformat1 src (spRel True (-2)),
             LD fformat1 (spRel True (-2)) tmp,
             FxTOy iformat1 fformat2 tmp dst]
-    return (Any (floatFormat $ width2) code__2)
+    return (Any fformat2 code__2)
 
 
 
