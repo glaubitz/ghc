@@ -85,7 +85,6 @@ getRegister32 (CmmLit (CmmFloat f frep)) = do
     dynRef <- cmmMakeDynamicReference dflags DataReference lbl
     Amode addr addr_code <- getAmode dynRef
     let format = floatFormat frep
-        format = intFormat frep
         code dst =
             LDATA (Section ReadOnlyData lbl)
                   (Statics lbl [CmmStaticLit (CmmFloat f frep)])
