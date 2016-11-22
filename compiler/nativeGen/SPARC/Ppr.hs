@@ -394,9 +394,9 @@ pprDataItem lit
 
 -- | Pretty print an instruction.
 pprInstr :: Instr -> SDoc
-pprInstr
+pprInstr instr
         = sdocWithPlatform $ \platform ->
-          pprInstr' (target32Bit platform)
+          pprInstr' (target32Bit platform) instr
 
 
 pprInstr' :: Bool -> Instr -> SDoc
