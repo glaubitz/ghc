@@ -109,6 +109,11 @@ expandMisalignedDoubles instr
                         , SUB False False r1 (RIReg r2) r1 ]
 
         -- Should be aligned (I hope... :/)
+        -- Could translate to:
+        --    add r1, imm, r1
+        --    ld [r1], %fn
+        --    ld [r+4], %f(n+1)
+        --    sub r1, imm, r1
         | LD FF64 (AddrRegImm _ (LO _)) _       <- instr
         = unitOL instr
 
