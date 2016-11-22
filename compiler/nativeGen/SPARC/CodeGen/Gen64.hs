@@ -370,15 +370,15 @@ imulMayOflo a b
                 =       a_code
                 `appOL` b_code
                 `appOL` toOL
-                        [ SRA a_reg (RIImm (ImmInt 63)) tmp
-                        , XOR a_reg (RIReg tmp)         abs
-                        , SUB abs   (RIReg tmp)         abs
-                        , SRL abs   (RIImm (ImmInt 31)) dst
-                        , SRA b_reg (RIImm (ImmInt 63)) tmp
-                        , XOR b_reg (RIReg tmp)         abs
-                        , SUB abs   (RIReg tmp)         abs
-                        , SRL abs   (RIImm (ImmInt 31)) tmp
-                        , OR  dst   (RIReg tmp)         dst ]
+                        [ SRA       a_reg (RIImm (ImmInt 63)) tmp
+                        , XOR False a_reg (RIReg tmp)         abs
+                        , SUB       abs   (RIReg tmp)         abs
+                        , SRL       abs   (RIImm (ImmInt 31)) dst
+                        , SRA       b_reg (RIImm (ImmInt 63)) tmp
+                        , XOR False b_reg (RIReg tmp)         abs
+                        , SUB       abs   (RIReg tmp)         abs
+                        , SRL       abs   (RIImm (ImmInt 31)) tmp
+                        , OR  False dst   (RIReg tmp)         dst ]
 
         return  (Any II64 code)
 
