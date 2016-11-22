@@ -202,10 +202,10 @@ mkJumpToAddr a = case platform of
         let w64 = fromIntegral (funPtrToInt a) :: Word64
 
             hh22, hm10, lm22, lo10 :: Word64 -> Word32
-            lo10 x = x .&. 0x3FF
-            lm22 x = (x `shiftR` 10) .&. 0x3FFFFF
-            hm10 x = (x `shiftR` 32) .&. 0x3FF
-            hh22 x = (x `shiftR` 42) .&. 0x3FFFFF
+            lo10 x = fromIntegral $ x .&. 0x3FF
+            lm22 x = fromIntegral $ (x `shiftR` 10) .&. 0x3FFFFF
+            hm10 x = fromIntegral $ (x `shiftR` 32) .&. 0x3FF
+            hh22 x = fromIntegral $ (x `shiftR` 42) .&. 0x3FFFFF
 
         in Right [ 0x07000000 .|. (hh22 w64),
                    0x8610E000 .|. (hm10 w64),
