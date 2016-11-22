@@ -60,7 +60,7 @@ spRel2 is32Bit n off
 fpRel :: Bool -> Int -> AddrMode
 fpRel is32Bit n = fpRel2 is32Bit n 0
 
-fpRel2 :: Bool -> Int -> AddrMode
+fpRel2 :: Bool -> Int -> Int -> AddrMode
 fpRel2 is32Bit n off
         = AddrRegImm fp (ImmInt ((stackBias is32Bit) + n * (wordLength is32Bit) + off))
 
