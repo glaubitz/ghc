@@ -349,6 +349,27 @@ conversionNop new_rep expr
  = do   e_code <- getRegister64 expr
         return (setFormatOfRegister e_code new_rep)
 
+
+-- | Do an integer remainder; no hardware instruction.
+irem :: Bool -> CmmExpr -> CmmExpr -> NatM Register
+irem signed x y
+ = do
+        (a_reg, a_code) <- getSomeReg64 x
+        (b_reg, b_code) <- getSomeReg64 y
+
+        tmp_reg         <- getNewRegNat II64
+
+        let code dst
+                =       a_code
+                `appOL` b_code
+                `appOL` toOL
+                        [ (if signed then SDIVX else UDIVX) a_reg (RIReg b_reg) tmp_reg
+                        , MULX tmp_reg (RIReg b_reg) tmp_reg
+                        , SUB   False False   a_reg (RIReg tmp_reg) dst]
+
+        return  (Any II64 code)
+
+
 -- On a 64-bit platform it is not always possible to
 -- acquire the top 64 bits of the result.  Therefore, a recommended
 -- implementation is to take the absolute value of both operands, and
@@ -356,7 +377,7 @@ conversionNop new_rep expr
 -- magnitudes fit within 31 bits, so the magnitude of the product must fit
 -- into 62 bits.
 imulMayOflo :: CmmExpr -> CmmExpr -> NatM Register
-imulMayOflo a b
+imulMayOflo x y
  = do
         (a_reg, a_code) <- getSomeReg64 x
         (b_reg, b_code) <- getSomeReg64 y
@@ -377,26 +398,6 @@ imulMayOflo a b
                         , SUB False False abs   (RIReg tmp)         abs
                         , SRL             abs   (RIImm (ImmInt 31)) tmp
                         , OR        False dst   (RIReg tmp)         dst ]
-
-        return  (Any II64 code)
-
-
--- | Do an integer remainder; no hardware instruction.
-irem :: Bool -> CmmExpr -> CmmExpr -> NatM Register
-irem signed x y
- = do
-        (a_reg, a_code) <- getSomeReg64 x
-        (b_reg, b_code) <- getSomeReg64 y
-
-        tmp_reg         <- getNewRegNat II64
-
-        let code dst
-                =       a_code
-                `appOL` b_code
-                `appOL` toOL
-                        [ (if signed then SDIVX else UDIVX) a_reg (RIReg b_reg) tmp_reg
-                        , MULX tmp_reg (RIReg b_reg) tmp_reg
-                        , SUB   False False   a_reg (RIReg tmp_reg) dst]
 
         return  (Any II64 code)
 
