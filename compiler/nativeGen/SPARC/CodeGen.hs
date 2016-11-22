@@ -409,7 +409,7 @@ genCCall
 -- In the SPARC V8 case we don't need a barrier.
 --
 -- However, on SPARC V9, the most relaxed model is RMO (Relaxed Memory
--- Ordering?), which does not guarantee Store-Store ordering. In this case, we
+-- Ordering), which does not guarantee Store-Store ordering. In this case, we
 -- must emit a membar #StoreStore.
 --
 genCCall (PrimTarget MO_WriteBarrier) _ _
