@@ -14,7 +14,6 @@ import SPARC.CodeGen.Base
 import SPARC.Stack
 import SPARC.Instr
 import SPARC.Cond
-import SPARC.AddrMode
 import SPARC.Imm
 import SPARC.Regs
 import SPARC.Base
