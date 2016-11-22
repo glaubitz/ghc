@@ -47,6 +47,9 @@ data Imm
 instance Show SDoc where
     show s = "SDoc"
 
+instance Show CLabel where
+    show s = "<label>"
+
 
 -- | Create a ImmLit containing this string.
 strImmLit :: String -> Imm
