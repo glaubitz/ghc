@@ -326,24 +326,22 @@ genSwitch dflags expr targets
 
         | otherwise
         = do    (e_reg, e_code) <- getSomeReg (cmmOffset dflags expr offset)
-
-                base_reg        <- getNewRegNat II32
-                offset_reg      <- getNewRegNat II32
-                dst             <- getNewRegNat II32
+                let is32Bit     = target32Bit $ targetPlatform dflags
+                    reg_format  = wordFormat is32Bit
+                    shift       = if is32Bit then 2 else 3
+                base_reg        <- getNewRegNat reg_format
+                offset_reg      <- getNewRegNat reg_format
+                dst             <- getNewRegNat reg_format
 
                 label           <- getNewLabelNat
 
+                base_code       <- getRegister label base_reg
+                offset_code     = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
+
                 return $ e_code `appOL`
                  toOL
-                        [ -- load base of jump table
-                          SETHI (HI (ImmCLbl label)) base_reg
-                        , OR    False base_reg (RIImm $ LO $ ImmCLbl label) base_reg
-
-                        -- the addrs in the table are 32 bits wide..
-                        , SLL   e_reg (RIImm $ ImmInt 2) offset_reg
-
-                        -- load and jump to the destination
-                        , LD      II32 (AddrRegReg base_reg offset_reg) dst
+                        [ -- load and jump to the destination
+                        , LD      reg_format (AddrRegReg base_reg offset_reg) dst
                         , JMP_TBL (AddrRegImm dst (ImmInt 0)) ids label
                         , NOP ]
   where (offset, ids) = switchTargetsToTable targets
