@@ -395,8 +395,9 @@ pprInstr instr
 pprInstr' :: Bool -> Instr -> SDoc
 
 -- nuke comments.
-pprInstr' _ (COMMENT _)
-        = empty
+pprInstr' _ (COMMENT c)
+          = text "# " <> ftext c
+--        = empty
 
 pprInstr' is32Bit (DELTA d)
         = pprInstr' is32Bit (COMMENT (mkFastString ("\tdelta = " ++ show d)))
