@@ -352,7 +352,7 @@ genSwitch dflags expr targets
                     offset_code = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
 
                 return    $ e_code
-                    `appOL` (base_code base_reg)
+                    `appOL` base_code
                     `appOL` offset_code
                     `appOL` toOL
                             [ -- load and jump to the destination
