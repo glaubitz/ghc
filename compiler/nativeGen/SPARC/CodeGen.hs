@@ -573,6 +573,7 @@ arg_to_int_vregs64' dflags arg
 
                         let code2 =
                                 code                            `snocOL`
+                                COMMENT (mkFastString ("atoiv64 FMOV FF64 " ++ (show src) ++ " " ++ (show v1))) `snocOL`
                                 FMOV FF64 src v1
 
                         return  (code2, [v1])
@@ -586,6 +587,7 @@ arg_to_int_vregs64' dflags arg
 
                         let code2 =
                                 code                            `snocOL`
+                                COMMENT (mkFastString ("atoiv64 FMOV FF32 " ++ (show src) ++ " " ++ (show v1Odd))) `snocOL`
                                 FMOV FF32 src v1Odd
 
                         return (code2, [v1])
@@ -620,10 +622,12 @@ move_final is32Bit (v:vs) ((ai,af):az) offset
  = let cls = classOfReg v
        (instr, reg) =
            case cls of
-                RcInteger              -> (OR False g0 (RIReg v) ai, ai)
-                RcDouble | not is32Bit -> (FMOV FF64 v af, af)
+                RcInteger              -> [(OR False g0 (RIReg v) ai, ai)]
+                RcDouble | not is32Bit ->
+                                [ COMMENT (mkFastString ("move_final FMOV FF64 " ++ (show v) ++ " " ++ (show af))),
+                                  (FMOV FF64 v af, af) ]
                 _                      -> panic ("SPARC.CodeGen.move_final: Bad value register" ++ show v)
-   in (instr : instrs, reg : regs)
+   in (instr ++ instrs, reg : regs)
    where (instrs, regs) = move_final is32Bit vs az offset
 
 
