@@ -581,14 +581,17 @@ arg_to_int_vregs64' dflags arg
                  -- Move a 32 bit float return value into its destination reg.
                  -- Result takes up a full 64-bit pair, and is right-justified
                  -- (odd register contains float, even is undefined).
+                 -- TODO: This is now delayed until move_final; something
+                 -- seemed to be removing this instruction, perhaps because
+                 -- sparc_regUsageOfInstr only reported v1Odd, so it was seen
+                 -- as unnecessary?
                  FF32 -> do
-                        v1        <- getNewRegNat FF64
-                        let v1Odd = fPair v1
+                        v1        <- getNewRegNat FF32
 
                         let code2 =
                                 code                            `snocOL`
-                                COMMENT (mkFastString ("atoiv64 FMOV FF32 src=(" ++ (show src) ++ ") v1Odd=(" ++ (show v1Odd) ++ ") v1==(" ++ (show v1) ++ ")")) `snocOL`
-                                FMOV FF32 src v1Odd
+                                COMMENT (mkFastString ("atoiv64 FMOV FF32 src=(" ++ (show src) ++ ") v1==(" ++ (show v1) ++ ")")) `snocOL`
+                                FMOV FF32 src v1
 
                         return (code2, [v1])
 
@@ -623,6 +626,9 @@ move_final is32Bit (v:vs) ((ai,af):az) offset
        (instr, reg) =
            case cls of
                 RcInteger              -> ([OR False g0 (RIReg v) ai], ai)
+                RcFloat  | not is32Bit ->
+                                ([ COMMENT (mkFastString ("move_final FMOV FF32 " ++ (show v) ++ " hi of " ++ (show af))),
+                                  FMOV FF32 v (fPair af)], af)
                 RcDouble | not is32Bit ->
                                 ([ COMMENT (mkFastString ("move_final FMOV FF64 " ++ (show v) ++ " " ++ (show af))),
                                   FMOV FF64 v af], af)
