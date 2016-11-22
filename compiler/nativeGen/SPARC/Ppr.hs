@@ -218,17 +218,17 @@ pprFormat :: Format -> SDoc
 pprFormat x
  = sdocWithPlatform $ \platform ->
    let is32Bit = target32Bit platform
-   ptext
-    (case (is32Bit, x) of
-        (_, II8)       -> sLit "ub"
-        (_, II16)      -> sLit "uh"
-        (True , II32)  -> sLit ""
-        (False, II32)  -> sLit "uw"
-        (True , II64)  -> sLit "d"
-        (False, II64)  -> sLit "x"
-        (_, FF32)      -> sLit ""
-        (_, FF64)      -> sLit "d"
-        _              -> panic "SPARC.Ppr.pprFormat: no match")
+   in  ptext
+        (case (is32Bit, x) of
+            (_, II8)       -> sLit "ub"
+            (_, II16)      -> sLit "uh"
+            (True , II32)  -> sLit ""
+            (False, II32)  -> sLit "uw"
+            (True , II64)  -> sLit "d"
+            (False, II64)  -> sLit "x"
+            (_, FF32)      -> sLit ""
+            (_, FF64)      -> sLit "d"
+            _              -> panic "SPARC.Ppr.pprFormat: no match")
 
 
 -- | Pretty print a format for a store instruction suffix.
@@ -237,17 +237,17 @@ pprStFormat :: Format -> SDoc
 pprStFormat x
  = sdocWithPlatform $ \platform ->
    let is32Bit = target32Bit platform
-   ptext
-    (case (is32Bit, x) of
-        (_, II8)       -> sLit "b"
-        (_, II16)      -> sLit "h"
-        (True , II32)  -> sLit ""
-        (False, II32)  -> sLit "w"
-        (True , II64)  -> sLit "d"
-        (False, II64)  -> sLit "x"
-        (_, FF32)      -> sLit ""
-        (_, FF64)      -> sLit "d"
-        _              -> panic "SPARC.Ppr.pprStFormat: no match")
+   in  ptext
+        (case (is32Bit, x) of
+            (_, II8)       -> sLit "b"
+            (_, II16)      -> sLit "h"
+            (True , II32)  -> sLit ""
+            (False, II32)  -> sLit "w"
+            (True , II64)  -> sLit "d"
+            (False, II64)  -> sLit "x"
+            (_, FF32)      -> sLit ""
+            (_, FF64)      -> sLit "d"
+            _              -> panic "SPARC.Ppr.pprStFormat: no match")
 
 
 -- | Pretty print a condition code.
