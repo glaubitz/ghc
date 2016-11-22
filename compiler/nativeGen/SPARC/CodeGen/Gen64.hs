@@ -232,8 +232,8 @@ getRegister64 (CmmMachOp mop [x, y])
       MO_Add W64        -> trivialCode W64 (ADD False False) x y
       MO_Sub W64        -> trivialCode W64 (SUB False False) x y
 
-      MO_S_Quot W64     -> idiv True  x y
-      MO_U_Quot W64     -> idiv False x y
+      MO_S_Quot W64     -> trivialCode W64 SMULX x y
+      MO_U_Quot W64     -> trivialCode W64 UMULX x y
 
       MO_S_Rem  W64     -> irem True  x y
       MO_U_Rem  W64     -> irem False x y
@@ -348,24 +348,6 @@ conversionNop
 conversionNop new_rep expr
  = do   e_code <- getRegister64 expr
         return (setFormatOfRegister e_code new_rep)
-
-
-
--- | Generate an integer division instruction.
-idiv :: Bool -> CmmExpr -> CmmExpr -> NatM Register
-
--- Unsigned/signed 64-bit division; no Y register here
-idiv signed x y
- = do
-        (a_reg, a_code)         <- getSomeReg64 x
-        (b_reg, b_code)         <- getSomeReg64 y
-
-        let code dst
-                =        a_code
-                `appOL`  b_code
-                `snocOL` (if signed then SDIVX else UDIVX) a_reg (RIReg b_reg) dst
-
-        return (Any II64 code)
 
 
 -- | Do an integer remainder; no hardware instruction.
