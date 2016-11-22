@@ -410,9 +410,9 @@ pprInstr' _ (LDATA _ _)
         = panic "SPARC.Ppr.pprInstr': LDATA"
 
 -- 64 bit FP loads are expanded into individual instructions in CodeGen.Expand
-pprInstr' _ (LD FF64 _ reg)
-        | RegReal (RealRegSingle{})     <- reg
-        = panic "SPARC.Ppr: not emitting potentially misaligned LD FF64 instr"
+--pprInstr' _ (LD FF64 _ reg)
+--        | RegReal (RealRegSingle{})     <- reg
+--        = panic "SPARC.Ppr: not emitting potentially misaligned LD FF64 instr"
 
 pprInstr' _ (LD format addr reg)
         = hcat [
@@ -426,9 +426,9 @@ pprInstr' _ (LD format addr reg)
             ]
 
 -- 64 bit FP storees are expanded into individual instructions in CodeGen.Expand
-pprInstr' _ (ST FF64 reg _)
-        | RegReal (RealRegSingle{}) <- reg
-        = panic "SPARC.Ppr: not emitting potentially misaligned ST FF64 instr"
+--pprInstr' _ (ST FF64 reg _)
+--        | RegReal (RealRegSingle{}) <- reg
+--        = panic "SPARC.Ppr: not emitting potentially misaligned ST FF64 instr"
 
 -- no distinction is made between signed and unsigned bytes on stores for the
 -- Sparc opcodes (at least I cannot see any, and gas is nagging me --SOF),
