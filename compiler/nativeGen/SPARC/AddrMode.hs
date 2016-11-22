@@ -12,6 +12,8 @@ import SPARC.Imm
 import SPARC.Base
 import Reg
 
+import Panic
+
 -- addressing modes ------------------------------------------------------------
 
 -- | Represents a memory address in an instruction.
