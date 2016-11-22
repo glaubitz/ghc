@@ -48,13 +48,6 @@ import FastString
 import Data.Word
 import Data.List
 
-sparcTargetIs32Bit :: Bool
-#if defined(sparc_TARGET_ARCH)
-sparcTargetIs32Bit = True
-#elif defined(sparc64_TARGET_ARCH)
-sparcTargetIs32Bit = False
-#endif
-
 -- -----------------------------------------------------------------------------
 -- Printing this stuff out
 
@@ -99,7 +92,7 @@ pprBasicBlock :: BlockEnv CmmStatics -> NatBasicBlock Instr -> SDoc
 pprBasicBlock info_env (BasicBlock blockid instrs)
   = maybe_infotable $$
     pprLabel asmLbl $$
-    vcat (map (pprInstr sparcTargetIs32Bit) instrs)
+    vcat (map pprInstr instrs)
   where
     asmLbl = mkAsmTempLabel (getUnique blockid)
     maybe_infotable = case mapLookup blockid info_env of
@@ -145,10 +138,10 @@ pprASCII str
 
 
 -- -----------------------------------------------------------------------------
--- pprInstr: print an 'Instr'
+-- pprInstr': print an 'Instr'
 
 instance Outputable Instr where
-    ppr instr = pprInstr sparcTargetIs32Bit instr
+    ppr instr = pprInstr instr
 
 
 -- | Pretty print a register.
@@ -220,32 +213,41 @@ pprReg_ofRegNo i
 
 
 -- | Pretty print a format for an instruction suffix.
+--      eg LD is 32bit on sparc, but LDD/LDX is 64 bit.
 pprFormat :: Format -> SDoc
 pprFormat x
- = ptext
-    (case x of
-        II8     -> sLit "ub"
-        II16    -> sLit "uh"
-        II32    -> sLit ""
-        II64    -> sLit "x" -- This was "d", but "x" below o.O
-        FF32    -> sLit ""
-        FF64    -> sLit "d"
-        _       -> panic "SPARC.Ppr.pprFormat: no match")
+ = sdocWithPlatform $ \platform ->
+   let is32Bit = target32Bit platform
+   ptext
+    (case (is32Bit, x) of
+        (_, II8)       -> sLit "ub"
+        (_, II16)      -> sLit "uh"
+        (True , II32)  -> sLit ""
+        (False, II32)  -> sLit "uw"
+        (True , II64)  -> sLit "d"
+        (False, II64)  -> sLit "x"
+        (_, FF32)      -> sLit ""
+        (_, FF64)      -> sLit "d"
+        _              -> panic "SPARC.Ppr.pprFormat: no match")
 
 
--- | Pretty print a format for an instruction suffix.
+-- | Pretty print a format for a store instruction suffix.
 --      eg LD is 32bit on sparc, but LDD is 64 bit.
 pprStFormat :: Format -> SDoc
 pprStFormat x
- = ptext
-    (case x of
-        II8   -> sLit "b"
-        II16  -> sLit "h"
-        II32  -> sLit ""
-        II64  -> sLit "x" -- This was already "x" o.O
-        FF32  -> sLit ""
-        FF64  -> sLit "d"
-        _       -> panic "SPARC.Ppr.pprFormat: no match")
+ = sdocWithPlatform $ \platform ->
+   let is32Bit = target32Bit platform
+   ptext
+    (case (is32Bit, x) of
+        (_, II8)       -> sLit "b"
+        (_, II16)      -> sLit "h"
+        (True , II32)  -> sLit ""
+        (False, II32)  -> sLit "w"
+        (True , II64)  -> sLit "d"
+        (False, II64)  -> sLit "x"
+        (_, FF32)      -> sLit ""
+        (_, FF64)      -> sLit "d"
+        _              -> panic "SPARC.Ppr.pprStFormat: no match")
 
 
 -- | Pretty print a condition code.
@@ -384,28 +386,34 @@ pprDataItem lit
 
 
 -- | Pretty print an instruction.
-pprInstr :: Bool -> Instr -> SDoc
+pprInstr :: Instr -> SDoc
+pprInstr
+        = sdocWithPlatform $ \platform ->
+          pprInstr' $ target32Bit platform
+
+
+pprInstr' :: Bool -> Instr -> SDoc
 
 -- nuke comments.
-pprInstr _ (COMMENT _)
+pprInstr' _ (COMMENT _)
         = empty
 
-pprInstr is32Bit (DELTA d)
-        = pprInstr is32Bit (COMMENT (mkFastString ("\tdelta = " ++ show d)))
+pprInstr' is32Bit (DELTA d)
+        = pprInstr' is32Bit (COMMENT (mkFastString ("\tdelta = " ++ show d)))
 
 -- Newblocks and LData should have been slurped out before producing the .s file.
-pprInstr _ (NEWBLOCK _)
-        = panic "SPARC.Ppr.pprInstr: NEWBLOCK"
+pprInstr' _ (NEWBLOCK _)
+        = panic "SPARC.Ppr.pprInstr': NEWBLOCK"
 
-pprInstr _ (LDATA _ _)
-        = panic "SPARC.Ppr.pprInstr: LDATA"
+pprInstr' _ (LDATA _ _)
+        = panic "SPARC.Ppr.pprInstr': LDATA"
 
 -- 64 bit FP loads are expanded into individual instructions in CodeGen.Expand
-pprInstr _ (LD FF64 _ reg)
+pprInstr' _ (LD FF64 _ reg)
         | RegReal (RealRegSingle{})     <- reg
         = panic "SPARC.Ppr: not emitting potentially misaligned LD FF64 instr"
 
-pprInstr _ (LD format addr reg)
+pprInstr' _ (LD format addr reg)
         = hcat [
                text "\tld",
                pprFormat format,
@@ -417,14 +425,14 @@ pprInstr _ (LD format addr reg)
             ]
 
 -- 64 bit FP storees are expanded into individual instructions in CodeGen.Expand
-pprInstr _ (ST FF64 reg _)
+pprInstr' _ (ST FF64 reg _)
         | RegReal (RealRegSingle{}) <- reg
         = panic "SPARC.Ppr: not emitting potentially misaligned ST FF64 instr"
 
 -- no distinction is made between signed and unsigned bytes on stores for the
 -- Sparc opcodes (at least I cannot see any, and gas is nagging me --SOF),
 -- so we call a special-purpose pprFormat for ST..
-pprInstr _ (ST format reg addr)
+pprInstr' _ (ST format reg addr)
         = hcat [
                text "\tst",
                pprStFormat format,
@@ -436,7 +444,7 @@ pprInstr _ (ST format reg addr)
             ]
 
 
-pprInstr is32Bit (ADD x cc reg1 ri reg2)
+pprInstr' is32Bit (ADD x cc reg1 ri reg2)
         | not x && not cc && riZero ri
         = hcat [ text "\tmov\t", pprReg reg1, comma, pprReg reg2 ]
 
@@ -444,7 +452,7 @@ pprInstr is32Bit (ADD x cc reg1 ri reg2)
         = pprRegRIReg is32Bit (if x then (if is32Bit then sLit "addx" else sLit "addc") else sLit "add") cc reg1 ri reg2
 
 
-pprInstr is32Bit (SUB x cc reg1 ri reg2)
+pprInstr' is32Bit (SUB x cc reg1 ri reg2)
         | not x && cc && reg2 == g0
         = hcat [ text "\tcmp\t", pprReg reg1, comma, pprRI ri ]
 
@@ -454,11 +462,11 @@ pprInstr is32Bit (SUB x cc reg1 ri reg2)
         | otherwise
         = pprRegRIReg is32Bit (if x then (if is32Bit then sLit "subx" else sLit "addc") else sLit "sub") cc reg1 ri reg2
 
-pprInstr is32Bit (AND  b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "and")  b reg1 ri reg2
+pprInstr' is32Bit (AND  b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "and")  b reg1 ri reg2
 
-pprInstr is32Bit (ANDN b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "andn") b reg1 ri reg2
+pprInstr' is32Bit (ANDN b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "andn") b reg1 ri reg2
 
-pprInstr is32Bit (OR b reg1 ri reg2)
+pprInstr' is32Bit (OR b reg1 ri reg2)
         | not b && reg1 == g0
         = let doit = hcat [ text "\tmov\t", pprRI ri, comma, pprReg reg2 ]
           in  case ri of
@@ -468,20 +476,20 @@ pprInstr is32Bit (OR b reg1 ri reg2)
         | otherwise
         = pprRegRIReg is32Bit (sLit "or") b reg1 ri reg2
 
-pprInstr is32Bit (ORN b reg1 ri reg2)  = pprRegRIReg is32Bit (sLit "orn") b reg1 ri reg2
+pprInstr' is32Bit (ORN b reg1 ri reg2)  = pprRegRIReg is32Bit (sLit "orn") b reg1 ri reg2
 
-pprInstr is32Bit (XOR  b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "xor")  b reg1 ri reg2
-pprInstr is32Bit (XNOR b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "xnor") b reg1 ri reg2
+pprInstr' is32Bit (XOR  b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "xor")  b reg1 ri reg2
+pprInstr' is32Bit (XNOR b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "xnor") b reg1 ri reg2
 
-pprInstr is32Bit (SLL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sll" else sLit "sllx") False reg1 ri reg2
-pprInstr is32Bit (SRL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "srl" else sLit "srlx") False reg1 ri reg2
-pprInstr is32Bit (SRA reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sra" else sLit "srax") False reg1 ri reg2
+pprInstr' is32Bit (SLL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sll" else sLit "sllx") False reg1 ri reg2
+pprInstr' is32Bit (SRL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "srl" else sLit "srlx") False reg1 ri reg2
+pprInstr' is32Bit (SRA reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sra" else sLit "srax") False reg1 ri reg2
 
-pprInstr is32Bit (RDY rd)
+pprInstr' is32Bit (RDY rd)
  | is32Bit   = text "\trd\t%y," <> pprReg rd
  | otherwise = panic "SPARC.Ppr: not emitting deprecated RDY instruction for SPARCV9"
 
-pprInstr is32Bit (WRY reg1 reg2)
+pprInstr' is32Bit (WRY reg1 reg2)
  | is32Bit   = text "\twr\t"
                        <> pprReg reg1
                        <> char ','
@@ -490,35 +498,35 @@ pprInstr is32Bit (WRY reg1 reg2)
                        <> text "%y"
  | otherwise = panic "SPARC.Ppr: not emitting deprecated WRY instruction for SPARCV9"
 
-pprInstr is32Bit (SMUL b reg1 ri reg2)
+pprInstr' is32Bit (SMUL b reg1 ri reg2)
  | is32Bit   = pprRegRIReg is32Bit (sLit "smul") b reg1 ri reg2
  | otherwise = panic "SPARC.Ppr: not emitting deprecated SMUL instruction for SPARCV9"
 
-pprInstr is32Bit (UMUL b reg1 ri reg2)
+pprInstr' is32Bit (UMUL b reg1 ri reg2)
  | is32Bit   = pprRegRIReg is32Bit (sLit "umul") b reg1 ri reg2
  | otherwise = panic "SPARC.Ppr: not emitting deprecated UMUL instruction for SPARCV9"
 
-pprInstr is32Bit (MULX reg1 ri reg2)
+pprInstr' is32Bit (MULX reg1 ri reg2)
  | is32Bit   = panic "SPARC.Ppr: not emitting non-existent MULX instruction for pre-SPARCV9"
  | otherwise = pprRegRIReg is32Bit (sLit "mulx") False reg1 ri reg2
 
-pprInstr is32Bit (SDIV b reg1 ri reg2)
+pprInstr' is32Bit (SDIV b reg1 ri reg2)
  | is32Bit   = pprRegRIReg is32Bit (sLit "sdiv") b reg1 ri reg2
  | otherwise = panic "SPARC.Ppr: not emitting deprecated SDIV instruction for SPARCV9"
 
-pprInstr is32Bit (UDIV b reg1 ri reg2)
+pprInstr' is32Bit (UDIV b reg1 ri reg2)
  | is32Bit   = pprRegRIReg is32Bit (sLit "udiv") b reg1 ri reg2
  | otherwise = panic "SPARC.Ppr: not emitting deprecated UDIV instruction for SPARCV9"
 
-pprInstr is32Bit (SDIVX reg1 ri reg2)
+pprInstr' is32Bit (SDIVX reg1 ri reg2)
  | is32Bit   = panic "SPARC.Ppr: not emitting non-existent SDIVX instruction for pre-SPARCV9"
  | otherwise = pprRegRIReg is32Bit (sLit "sdivx") False reg1 ri reg2
 
-pprInstr is32Bit (UDIVX reg1 ri reg2)
+pprInstr' is32Bit (UDIVX reg1 ri reg2)
  | is32Bit   = panic "SPARC.Ppr: not emitting non-existent UDIVX instruction for pre-SPARCV9"
  | otherwise = pprRegRIReg is32Bit (sLit "udivx") False reg1 ri reg2
 
-pprInstr _ (SETHI imm reg)
+pprInstr' _ (SETHI imm reg)
   = hcat [
         text "\tsethi\t",
         pprImm imm,
@@ -526,38 +534,38 @@ pprInstr _ (SETHI imm reg)
         pprReg reg
     ]
 
-pprInstr _ NOP
+pprInstr' _ NOP
         = text "\tnop"
 
-pprInstr _ (FABS format reg1 reg2)
+pprInstr' _ (FABS format reg1 reg2)
         = pprFormatRegReg (sLit "fabs") format reg1 reg2
 
-pprInstr _ (FADD format reg1 reg2 reg3)
+pprInstr' _ (FADD format reg1 reg2 reg3)
         = pprFormatRegRegReg (sLit "fadd") format reg1 reg2 reg3
 
-pprInstr _ (FCMP e format reg1 reg2)
+pprInstr' _ (FCMP e format reg1 reg2)
         = pprFormatRegReg (if e then sLit "fcmpe" else sLit "fcmp")
                           format reg1 reg2
 
-pprInstr _ (FDIV format reg1 reg2 reg3)
+pprInstr' _ (FDIV format reg1 reg2 reg3)
         = pprFormatRegRegReg (sLit "fdiv") format reg1 reg2 reg3
 
-pprInstr _ (FMOV format reg1 reg2)
+pprInstr' _ (FMOV format reg1 reg2)
         = pprFormatRegReg (sLit "fmov") format reg1 reg2
 
-pprInstr _ (FMUL format reg1 reg2 reg3)
+pprInstr' _ (FMUL format reg1 reg2 reg3)
         = pprFormatRegRegReg (sLit "fmul") format reg1 reg2 reg3
 
-pprInstr _ (FNEG format reg1 reg2)
+pprInstr' _ (FNEG format reg1 reg2)
         = pprFormatRegReg (sLit "fneg") format reg1 reg2
 
-pprInstr _ (FSQRT format reg1 reg2)
+pprInstr' _ (FSQRT format reg1 reg2)
         = pprFormatRegReg (sLit "fsqrt") format reg1 reg2
 
-pprInstr _ (FSUB format reg1 reg2 reg3)
+pprInstr' _ (FSUB format reg1 reg2 reg3)
         = pprFormatRegRegReg (sLit "fsub") format reg1 reg2 reg3
 
-pprInstr _ (FxTOy format1 format2 reg1 reg2)
+pprInstr' _ (FxTOy format1 format2 reg1 reg2)
   = hcat [
         text "\tf",
         ptext
@@ -566,19 +574,19 @@ pprInstr _ (FxTOy format1 format2 reg1 reg2)
             II64  -> sLit "xto"
             FF32  -> sLit "sto"
             FF64  -> sLit "dto"
-            _     -> panic "SPARC.Ppr.pprInstr.FxTOy: no match"),
+            _     -> panic "SPARC.Ppr.pprInstr'.FxTOy: no match"),
         ptext
         (case format2 of
             II32  -> sLit "i\t"
             II64  -> sLit "x\t"
             FF32  -> sLit "s\t"
             FF64  -> sLit "d\t"
-            _     -> panic "SPARC.Ppr.pprInstr.FxTOy: no match"),
+            _     -> panic "SPARC.Ppr.pprInstr'.FxTOy: no match"),
         pprReg reg1, comma, pprReg reg2
     ]
 
 
-pprInstr _ (BI cond b blockid)
+pprInstr' _ (BI cond b blockid)
   = hcat [
         text "\tb", pprCond cond,
         if b then pp_comma_a else empty,
@@ -586,7 +594,7 @@ pprInstr _ (BI cond b blockid)
         ppr (mkAsmTempLabel (getUnique blockid))
     ]
 
-pprInstr _ (BF cond b blockid)
+pprInstr' _ (BF cond b blockid)
   = hcat [
         text "\tfb", pprCond cond,
         if b then pp_comma_a else empty,
@@ -594,19 +602,19 @@ pprInstr _ (BF cond b blockid)
         ppr (mkAsmTempLabel (getUnique blockid))
     ]
 
-pprInstr _ (JMP addr) = text "\tjmp\t" <> pprAddr addr
-pprInstr is32Bit (JMP_TBL op _ _)  = pprInstr is32Bit (JMP op)
+pprInstr' _ (JMP addr) = text "\tjmp\t" <> pprAddr addr
+pprInstr' is32Bit (JMP_TBL op _ _)  = pprInstr' is32Bit (JMP op)
 
-pprInstr _ (CALL (Left imm) params _)
+pprInstr' _ (CALL (Left imm) params _)
   = hcat [ text "\tcall\t", pprImm imm, comma, int (length params) ]
 
-pprInstr _ (CALL (Right reg) params _)
+pprInstr' _ (CALL (Right reg) params _)
   = hcat [ text "\tcall\t", pprReg reg, comma, int (length params) ]
 
-pprInstr _ (MEMBAR tags)
+pprInstr' _ (MEMBAR tags)
   = hcat [ text "\tmembar\t", pprMembarTags tags ]
 
-pprInstr _ (REGISTER reg usage)
+pprInstr' _ (REGISTER reg usage)
   = hcat [ text "\t.register\t", pprReg reg, comma, pprSparcRegUsage usage ]
 
 
