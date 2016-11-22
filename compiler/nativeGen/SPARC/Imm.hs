@@ -44,6 +44,7 @@ data Imm
         | LM    Imm
         | HM    Imm
         | HH    Imm
+        deriving Show
 
 
 -- | Create a ImmLit containing this string.
