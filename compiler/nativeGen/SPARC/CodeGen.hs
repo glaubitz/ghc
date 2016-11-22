@@ -615,8 +615,15 @@ move_final _ [] _ _
 
 -- out of aregs; move to stack
 move_final is32Bit (v:vs) [] offset
- = (ST (wordFormat is32Bit) v (spRel is32Bit offset) : instrs, regs)
- where (instrs, regs) = move_final is32Bit vs [] (offset+1)
+ = let cls = classOfReg v
+       instr =
+           case cls of
+                RcInteger              -> ST (wordFormat is32Bit) v (spRel is32Bit offset)
+                RcFloat  | not is32Bit -> ST FF32 v (spRel2 is32Bit offset 4) -- right-align in slot
+                RcDouble | not is32Bit -> ST FF64 v (spRel is32Bit offset)
+                _                      -> panic ("SPARC.CodeGen.move_final: Bad value register " ++ show v)
+   in (instr : instrs, regs)
+   where (instrs, regs) = move_final is32Bit vs [] (offset+1)
 
 -- move into an arg (%o[0..5], or %f[0..11] if 64-bit) reg
 move_final is32Bit (v:vs) ((ai,af):az) offset
@@ -630,7 +637,7 @@ move_final is32Bit (v:vs) ((ai,af):az) offset
                 RcDouble | not is32Bit ->
                                 ([ COMMENT (mkFastString ("move_final FMOV FF64 " ++ (show v) ++ " " ++ (show af))),
                                   FMOV FF64 v af], af)
-                _                      -> panic ("SPARC.CodeGen.move_final: Bad value register" ++ show v)
+                _                      -> panic ("SPARC.CodeGen.move_final: Bad value register " ++ show v )
    in (instr ++ instrs, reg : regs)
    where (instrs, regs) = move_final is32Bit vs az offset
 
