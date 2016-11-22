@@ -345,7 +345,7 @@ genSwitch dflags expr targets
                     `appOL` offset_code
                     `appOL` toOL
                             [ -- load and jump to the destination
-                            , LD      reg_format (AddrRegReg base_reg offset_reg) dst
+                              LD      reg_format (AddrRegReg base_reg offset_reg) dst
                             , JMP_TBL (AddrRegImm dst (ImmInt 0)) ids label
                             , NOP ]
 
