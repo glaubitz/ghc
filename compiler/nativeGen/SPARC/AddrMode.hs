@@ -18,6 +18,7 @@ import Reg
 data AddrMode
         = AddrRegReg    Reg Reg         -- addr = r1 + r2
         | AddrRegImm    Reg Imm         -- addr = r1 + imm
+        deriving Show
 
 
 -- | Add an integer offset to the address in an AddrMode.
@@ -39,4 +40,4 @@ addrOffset addr off
        | fits13Bits off -> Just (AddrRegImm r (ImmInt off))
        | otherwise     -> Nothing
 
-      _ -> Nothing
+      _ -> panic ("addrOffset not implemented for " ++ (show addr))
