@@ -336,14 +336,17 @@ genSwitch dflags expr targets
                 label           <- getNewLabelNat
 
                 base_code       <- getRegister label base_reg
-                offset_code     = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
+                let offset_code = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
 
-                return $ e_code `appOL`
-                 toOL
-                        [ -- load and jump to the destination
-                        , LD      reg_format (AddrRegReg base_reg offset_reg) dst
-                        , JMP_TBL (AddrRegImm dst (ImmInt 0)) ids label
-                        , NOP ]
+                return    $ e_code
+                    `appOL` base_code
+                    `appOL` offset_code
+                    `appOL` toOL
+                            [ -- load and jump to the destination
+                            , LD      reg_format (AddrRegReg base_reg offset_reg) dst
+                            , JMP_TBL (AddrRegImm dst (ImmInt 0)) ids label
+                            , NOP ]
+
   where (offset, ids) = switchTargetsToTable targets
 
 generateJumpTableForInstr :: DynFlags -> Instr
