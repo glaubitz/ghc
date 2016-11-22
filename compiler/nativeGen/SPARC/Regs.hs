@@ -189,7 +189,7 @@ fPair (RegReal (RealRegSingle n))
  | n >= 32 && n `mod` 2 == 0 = RegReal (RealRegSingle (n+1))
 
 fPair (RegReal (RealRegPair m n))
- | m >= 32 && m `mod` 2 == 0 && m + 1 == n = RegReal (RealRegSingle (n+1))
+ | m >= 32 && m `mod` 2 == 0 && m + 1 == n = RegReal (RealRegSingle n)
 
 fPair (RegVirtual (VirtualRegD u)) = RegVirtual (VirtualRegHi u)
 
