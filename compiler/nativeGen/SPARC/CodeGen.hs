@@ -337,11 +337,11 @@ genSwitch dflags expr targets
 
                 label           <- getNewLabelNat
 
-                base_code       <- getRegister label base_reg
+                Any _ base_code <- getRegister label
                 let offset_code = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
 
                 return    $ e_code
-                    `appOL` base_code
+                    `appOL` (base_code base_reg)
                     `appOL` offset_code
                     `appOL` toOL
                             [ -- load and jump to the destination
