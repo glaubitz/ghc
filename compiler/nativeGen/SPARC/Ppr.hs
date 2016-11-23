@@ -98,8 +98,9 @@ pprBasicBlock info_env (BasicBlock blockid instrs)
     maybe_infotable = case mapLookup blockid info_env of
        Nothing   -> empty
        Just (Statics info_lbl info) ->
-           pprSectionAlign (Section Text info_lbl) $$
+           pprSectionCustomAlign (Section Text info_lbl) ReadOnlyData $$
            vcat (map pprData info) $$
+           pprAlignForSection Text
            pprLabel info_lbl
 
 
@@ -340,10 +341,17 @@ pprImm imm
 
 -- | Pretty print a section \/ segment header.
 --      On SPARC all the data sections must be at least 8 byte aligned
---      incase we store doubles in them.
+--      in case we store 64-bit integers or doubles in them.
 --
 pprSectionAlign :: Section -> SDoc
-pprSectionAlign sec@(Section seg _) =
+pprSectionAlign sec@(Section seg _) = pprSectionCustomAlign sec seg
+
+-- | Pretty print a section \/ segment header with a custom alignment.
+--      On SPARC instructions only need to be 4-byte aligned, but data embedded
+--      in text sections must be 8-byte aligned (see the above comment).
+--
+pprSectionCustomAlign :: Section -> SectionType -> SDoc
+pprSectionCustomAlign sec seg =
   sdocWithPlatform $ \platform ->
     pprSectionHeader platform sec $$
     pprAlignForSection seg
