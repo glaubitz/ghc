@@ -235,9 +235,10 @@ StgRun:
 
 	.global StgReturn
 StgReturn:
-	ldx [%i1], %i0 // load R1 into %i0 for return value
+	//ldx [%i1], %i0 // load R1 into %i0 for return value
+	//or %g0, %l1, %i0 // load R1 into %i0 for return value
 	ret
-	 restore
+	 restore %g0, %l1, %o0 // load R1 into caller's %o0 for return value
 
 # else // linux_HOST_OS || solaris_HOST_OS
 # error Only Linux and Solaris are supported for sparc64 right now.
