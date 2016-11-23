@@ -216,8 +216,7 @@ StgReturn:
    fight it.
    -------------------------------------------------------------------------- */
 
-#elif defined(sparc64_HOST_ARCH)
-#define STACK_FRAME_SIZE (RESERVED_C_STACK_BYTES+176)
+#elif defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
 # if defined(linux_HOST_OS) || defined(solaris_HOST_OS)
 	.file	"StgCRun.c"
 	.section	".text"
@@ -226,8 +225,15 @@ StgReturn:
 	.hidden StgRun
 	.type StgRun,@function
 StgRun:
+#  if defined(sparc64_HOST_ARCH)
+#   define STACK_FRAME_SIZE (RESERVED_C_STACK_BYTES+176)
 	sethi %hix(-STACK_FRAME_SIZE), %o2
 	xor %o2, %lox(-STACK_FRAME_SIZE), %o2
+#  else
+#   define STACK_FRAME_SIZE (RESERVED_C_STACK_BYTES+96)
+	sethi %hi(-STACK_FRAME_SIZE), %o2
+	or %o2, %lo(-STACK_FRAME_SIZE), %o2
+#  endif // sparc64_HOST_ARCH
 	save %sp, %o2, %sp
 	// Call f
 	jmpl %i0, %o7

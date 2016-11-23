@@ -53,7 +53,7 @@ ifneq "$(PORTING_HOST)" "YES"
 ifneq "$(findstring $(TargetArch_CPP), i386 powerpc powerpc64)" ""
 rts_S_SRCS += rts/AdjustorAsm.S
 endif
-# this matches substrings of powerpc64le and sparc64, including "powerpc" and "powerpc64"
+# this matches substrings of powerpc64le and sparc64, including "powerpc", "powerpc64" and "sparc"
 ifneq "$(findstring $(TargetArch_CPP), powerpc64le sparc64)" ""
 rts_S_SRCS += rts/StgCRunAsm.S
 endif
