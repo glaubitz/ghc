@@ -7,9 +7,13 @@
 module Constants (module Constants) where
 
 import Config
+import Debug.Trace
 
 hiVersion :: Integer
-hiVersion = read (cProjectVersionInt ++ cProjectPatchLevel) :: Integer
+hiVersion =
+    trace ("cProjectVersionInt: " ++ cProjectVersionInt) $
+    trace ("cProjectPatchLevel: " ++ cProjectPatchLevel) $
+    read (cProjectVersionInt ++ cProjectPatchLevel) :: Integer
 
 -- All pretty arbitrary:
 
