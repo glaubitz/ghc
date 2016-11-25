@@ -120,7 +120,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 48) dst]
 
-                return  $ Any II32 code
+                return  $ Any II64 code
         MO_UU_Conv W64 W16
          -> do  tmpReg          <- getNewRegNat II64
                 (xReg, xCode)   <- getSomeReg64 x
@@ -130,7 +130,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 48) dst]
 
-                return  $ Any II32 code
+                return  $ Any II64 code
         MO_UU_Conv W64 W32
          -> do  tmpReg          <- getNewRegNat II64
                 (xReg, xCode)   <- getSomeReg64 x
@@ -140,7 +140,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 32) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 32) dst]
 
-                return  $ Any II32 code
+                return  $ Any II64 code
 
         -- To widen an unsigned word we don't have to do anything.
         --      Just leave it in the same register and mark the result as the new size.
@@ -168,7 +168,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 48) dst]
 
-                return  $ Any II32 code
+                return  $ Any II64 code
         MO_SS_Conv W64 W16
          -> do  tmpReg          <- getNewRegNat II64
                 (xReg, xCode)   <- getSomeReg64 x
@@ -178,7 +178,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 48) dst]
 
-                return  $ Any II32 code
+                return  $ Any II64 code
         MO_SS_Conv W64 W32
          -> do  tmpReg          <- getNewRegNat II64
                 (xReg, xCode)   <- getSomeReg64 x
@@ -188,7 +188,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 32) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 32) dst]
 
-                return  $ Any II32 code
+                return  $ Any II64 code
 
         -- Sign extend signed words when widening them.
         MO_SS_Conv W8  W16      -> integerExtend W8  W16 x
@@ -317,7 +317,7 @@ integerExtend
 integerExtend from to expr
  = do   -- load the expr into some register
         (reg, e_code)   <- getSomeReg64 expr
-        tmp             <- getNewRegNat II32
+        tmp             <- getNewRegNat II64
         let bitCount
                 = case (from, to) of
                         (W8,  W16)      -> 56
