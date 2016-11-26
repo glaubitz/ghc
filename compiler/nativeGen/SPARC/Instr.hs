@@ -193,6 +193,16 @@ data Instr
         | SRL           Reg RI Reg                      -- src1, src2, dst
         | SRA           Reg RI Reg                      -- src1, src2, dst
 
+        -- Conditional moves
+        -- NOTE: While this uses the same Cond type, only the following are allowed:
+        --         EQQ - MOVRZ
+        --         LE  - MOVRLEZ
+        --         LTT - MOVRLZ
+        --         NE  - MOVRNZ
+        --         GTT - MOVRGZ
+        --         GE  - MOVRGEZ
+        | MOVR          Cond Reg RI Reg                 -- rcond, src1, src2, dst
+
         -- Load immediates.
         | SETHI         Imm Reg                         -- src, dst
 
@@ -271,6 +281,7 @@ sparc_regUsageOfInstr platform instr
     SLL       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
     SRL       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
     SRA       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    MOVR    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
     SETHI   _ reg                  -> usage ([],                   [reg])
     FABS    _ r1 r2                -> usage ([r1],                 [r2])
     FADD    _ r1 r2 r3             -> usage ([r1, r2],             [r3])
@@ -341,6 +352,7 @@ sparc_patchRegsOfInstr instr env = case instr of
     SLL   r1 ar r2              -> SLL         (env r1) (fixRI ar) (env r2)
     SRL   r1 ar r2              -> SRL         (env r1) (fixRI ar) (env r2)
     SRA   r1 ar r2              -> SRA         (env r1) (fixRI ar) (env r2)
+    MOVR  rc r1 ar r2           -> MOVR    rc  (env r1) (fixRI ar) (env r2)
 
     SETHI imm reg               -> SETHI imm (env reg)
 

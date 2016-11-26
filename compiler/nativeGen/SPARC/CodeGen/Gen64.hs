@@ -610,36 +610,38 @@ condIntReg EQQ x (CmmLit (CmmInt 0 _)) = do
     (src, code) <- getSomeReg64 x
     let
         code__2 dst = code `appOL` toOL [
-            SUB False True g0 (RIReg src) g0,
-            SUB True False g0 (RIImm (ImmInt (-1))) dst]
+            OR False g0 (RIReg g0) dst,
+            MOVR EQQ src 1 dst]
     return (Any II64 code__2)
 
 condIntReg EQQ x y = do
     (src1, code1) <- getSomeReg64 x
     (src2, code2) <- getSomeReg64 y
+    tmp           <- getNewRegNat II64
     let
         code__2 dst = code1 `appOL` code2 `appOL` toOL [
-            XOR False src1 (RIReg src2) dst,
-            SUB False True g0 (RIReg dst) g0,
-            SUB True False g0 (RIImm (ImmInt (-1))) dst]
+            XOR False src1 (RIReg src2) tmp,
+            OR False g0 (RIReg g0) dst,
+            MOVR EQQ tmp 1 dst]
     return (Any II64 code__2)
 
 condIntReg NE x (CmmLit (CmmInt 0 _)) = do
     (src, code) <- getSomeReg64 x
     let
         code__2 dst = code `appOL` toOL [
-            SUB False True g0 (RIReg src) g0,
-            ADD True False g0 (RIImm (ImmInt 0)) dst]
+            OR False g0 (RIReg g0) dst,
+            MOVR NE src 1 dst]
     return (Any II64 code__2)
 
 condIntReg NE x y = do
     (src1, code1) <- getSomeReg64 x
     (src2, code2) <- getSomeReg64 y
+    tmp           <- getNewRegNat II64
     let
         code__2 dst = code1 `appOL` code2 `appOL` toOL [
-            XOR False src1 (RIReg src2) dst,
-            SUB False True g0 (RIReg dst) g0,
-            ADD True False g0 (RIImm (ImmInt 0)) dst]
+            XOR False src1 (RIReg src2) tmp,
+            OR False g0 (RIReg g0) dst,
+            MOVR NE tmp 1 dst]
     return (Any II64 code__2)
 
 condIntReg cond x y = do

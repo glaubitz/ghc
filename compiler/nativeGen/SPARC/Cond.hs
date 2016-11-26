@@ -27,7 +27,7 @@ data Cond
         | POS
         | VC
         | VS
-        deriving Eq
+        deriving (Eq, Show)
 
 
 condUnsigned :: Cond -> Bool
