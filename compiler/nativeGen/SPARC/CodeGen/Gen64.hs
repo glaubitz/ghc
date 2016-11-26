@@ -28,6 +28,7 @@ import Control.Monad (liftM)
 import DynFlags
 import OrdList
 import Outputable
+import Platform
 
 -- | The dual to getAnyReg: compute an expression into a register, but
 --      we don't mind which one it is.
