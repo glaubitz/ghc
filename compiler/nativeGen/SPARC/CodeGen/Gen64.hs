@@ -609,7 +609,7 @@ condIntReg EQQ x (CmmLit (CmmInt 0 _)) = do
     let
         code__2 dst = code `appOL` toOL [
             OR False g0 (RIReg g0) dst,
-            MOVR EQQ src 1 dst]
+            MOVR EQQ src (RIImm (ImmInt 1)) dst]
     return (Any II64 code__2)
 
 condIntReg EQQ x y = do
@@ -620,7 +620,7 @@ condIntReg EQQ x y = do
         code__2 dst = code1 `appOL` code2 `appOL` toOL [
             XOR False src1 (RIReg src2) tmp,
             OR False g0 (RIReg g0) dst,
-            MOVR EQQ tmp 1 dst]
+            MOVR EQQ tmp (RIImm (ImmInt 1)) dst]
     return (Any II64 code__2)
 
 condIntReg NE x (CmmLit (CmmInt 0 _)) = do
@@ -628,7 +628,7 @@ condIntReg NE x (CmmLit (CmmInt 0 _)) = do
     let
         code__2 dst = code `appOL` toOL [
             OR False g0 (RIReg g0) dst,
-            MOVR NE src 1 dst]
+            MOVR NE src (RIImm (ImmInt 1)) dst]
     return (Any II64 code__2)
 
 condIntReg NE x y = do
@@ -639,7 +639,7 @@ condIntReg NE x y = do
         code__2 dst = code1 `appOL` code2 `appOL` toOL [
             XOR False src1 (RIReg src2) tmp,
             OR False g0 (RIReg g0) dst,
-            MOVR NE tmp 1 dst]
+            MOVR NE tmp (RIImm (ImmInt 1)) dst]
     return (Any II64 code__2)
 
 condIntReg cond x y = do
