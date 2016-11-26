@@ -500,7 +500,7 @@ pprInstr' is32Bit (MOVR rcond reg1 ri reg2)
                     EQQ -> "movrz"
                     LE  -> "movrlez"
                     LTT -> "movrlz"
-                    NE  -> "novrnz"
+                    NE  -> "movrnz"
                     GTT -> "movrgz"
                     GE  -> "movrgez"
                     _   -> panic ("SPARC.Ppr invalid condition for MOVR: " ++ (show rcond))
