@@ -120,7 +120,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 48) dst]
 
-                return  $ Any II64 code
+                return  $ Any II16 code
         MO_UU_Conv W64 W16
          -> do  tmpReg          <- getNewRegNat II64
                 (xReg, xCode)   <- getSomeReg64 x
@@ -130,7 +130,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 48) dst]
 
-                return  $ Any II64 code
+                return  $ Any II16 code
         MO_UU_Conv W64 W32
          -> do  tmpReg          <- getNewRegNat II64
                 (xReg, xCode)   <- getSomeReg64 x
@@ -140,7 +140,7 @@ getRegister64 (CmmMachOp mop [x])
                                 [ SLL xReg   (RIImm $ ImmInt 32) tmpReg
                                 , SRL tmpReg (RIImm $ ImmInt 32) dst]
 
-                return  $ Any II64 code
+                return  $ Any II32 code
 
         -- To widen an unsigned word we don't have to do anything.
         --      Just leave it in the same register and mark the result as the new size.
@@ -154,41 +154,17 @@ getRegister64 (CmmMachOp mop [x])
 
         -- Signed integer word size conversions ------------
 
-        -- Mask out high bits when narrowing them
-        MO_SS_Conv W16 W8       -> trivialCode W8  (AND False) x (CmmLit (CmmInt 255 W8))
-        MO_SS_Conv W32 W8       -> trivialCode W8  (AND False) x (CmmLit (CmmInt 255 W8))
-        MO_SS_Conv W64 W8       -> trivialCode W8  (AND False) x (CmmLit (CmmInt 255 W8))
-        -- same optimisation as unsigned case
-        MO_SS_Conv W32 W16
-         -> do  tmpReg          <- getNewRegNat II64
-                (xReg, xCode)   <- getSomeReg64 x
-                let code dst
-                        =       xCode
-                        `appOL` toOL
-                                [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
-                                , SRL tmpReg (RIImm $ ImmInt 48) dst]
+        -- If it's the same size, then nothing needs to be done.
+        MO_SS_Conv from to
+         | from == to           -> conversionNop (intFormat to)  x
 
-                return  $ Any II64 code
-        MO_SS_Conv W64 W16
-         -> do  tmpReg          <- getNewRegNat II64
-                (xReg, xCode)   <- getSomeReg64 x
-                let code dst
-                        =       xCode
-                        `appOL` toOL
-                                [ SLL xReg   (RIImm $ ImmInt 48) tmpReg
-                                , SRL tmpReg (RIImm $ ImmInt 48) dst]
-
-                return  $ Any II64 code
-        MO_SS_Conv W64 W32
-         -> do  tmpReg          <- getNewRegNat II64
-                (xReg, xCode)   <- getSomeReg64 x
-                let code dst
-                        =       xCode
-                        `appOL` toOL
-                                [ SLL xReg   (RIImm $ ImmInt 32) tmpReg
-                                , SRL tmpReg (RIImm $ ImmInt 32) dst]
-
-                return  $ Any II64 code
+        -- Keep sign extension when narrowing.
+        MO_SS_Conv W16 W8       -> integerNarrow W16 W8  x
+        MO_SS_Conv W32 W8       -> integerNarrow W32 W8  x
+        MO_SS_Conv W64 W8       -> integerNarrow W64 W8  x
+        MO_SS_Conv W32 W16      -> integerNarrow W32 W16 x
+        MO_SS_Conv W64 W16      -> integerNarrow W64 W16 x
+        MO_SS_Conv W64 W32      -> integerNarrow W64 W32 x
 
         -- Sign extend signed words when widening them.
         MO_SS_Conv W8  W16      -> integerExtend W8  W16 x
@@ -202,30 +178,31 @@ getRegister64 (CmmMachOp mop [x])
 
 
 -- Binary machine ops
-getRegister64 (CmmMachOp mop [x, y])
-  = case mop of
-      MO_Eq _           -> condIntReg EQQ x y
-      MO_Ne _           -> condIntReg NE x y
+getRegister64 (CmmMachOp mop [x, y]) = do
+  dflags <- getDynFlags
+  case mop of
+      MO_Eq rep         -> condIntReg EQQ (extendUExpr dflags rep x)
+                                          (extendUExpr dflags rep y)
+      MO_Ne rep         -> condIntReg NE  (extendUExpr dflags rep x)
+                                          (extendUExpr dflags rep y)
 
-      MO_S_Gt _         -> condIntReg GTT x y
-      MO_S_Ge _         -> condIntReg GE x y
-      MO_S_Lt _         -> condIntReg LTT x y
-      MO_S_Le _         -> condIntReg LE x y
+      MO_S_Gt rep       -> condIntReg GTT (extendSExpr dflags rep x)
+                                          (extendSExpr dflags rep y)
+      MO_S_Ge rep       -> condIntReg GE  (extendSExpr dflags rep x)
+                                          (extendSExpr dflags rep y)
+      MO_S_Lt rep       -> condIntReg LTT (extendSExpr dflags rep x)
+                                          (extendSExpr dflags rep y)
+      MO_S_Le rep       -> condIntReg LE  (extendSExpr dflags rep x)
+                                          (extendSExpr dflags rep y)
 
-      MO_U_Gt W64       -> condIntReg GU  x y
-      MO_U_Ge W64       -> condIntReg GEU x y
-      MO_U_Lt W64       -> condIntReg LU  x y
-      MO_U_Le W64       -> condIntReg LEU x y
-
-      MO_U_Gt W32       -> condIntReg GU  x y
-      MO_U_Ge W32       -> condIntReg GEU x y
-      MO_U_Lt W32       -> condIntReg LU  x y
-      MO_U_Le W32       -> condIntReg LEU x y
-
-      MO_U_Gt W16       -> condIntReg GU  x y
-      MO_U_Ge W16       -> condIntReg GEU x y
-      MO_U_Lt W16       -> condIntReg LU  x y
-      MO_U_Le W16       -> condIntReg LEU x y
+      MO_U_Gt rep       -> condIntReg GU  (extendUExpr dflags rep x)
+                                          (extendUExpr dflags rep y)
+      MO_U_Ge rep       -> condIntReg GEU (extendUExpr dflags rep x)
+                                          (extendUExpr dflags rep y)
+      MO_U_Lt rep       -> condIntReg LU  (extendUExpr dflags rep x)
+                                          (extendUExpr dflags rep y)
+      MO_U_Le rep       -> condIntReg LEU (extendUExpr dflags rep x)
+                                          (extendUExpr dflags rep y)
 
       MO_Add W64        -> trivialCode W64 (ADD False False) x y
       MO_Sub W64        -> trivialCode W64 (SUB False False) x y
@@ -306,6 +283,62 @@ getRegister64 (CmmLit lit) = do
 getRegister64 _
         = panic "SPARC.CodeGen.Gen64.getRegister64: no match"
 
+    -- extend?Rep: wrap integer expression of type rep
+    -- in a conversion to II32 or II64 resp.
+extendSExpr :: DynFlags -> Width -> CmmExpr -> CmmExpr
+extendSExpr dflags W32 x
+ | target32Bit (targetPlatform dflags) = x
+
+extendSExpr dflags W64 x
+ | not (target32Bit (targetPlatform dflags)) = x
+
+extendSExpr dflags rep x =
+    let size = if target32Bit $ targetPlatform dflags
+               then W32
+               else W64
+    in CmmMachOp (MO_SS_Conv rep size) [x]
+
+extendUExpr :: DynFlags -> Width -> CmmExpr -> CmmExpr
+extendUExpr dflags W32 x
+ | target32Bit (targetPlatform dflags) = x
+extendUExpr dflags W64 x
+ | not (target32Bit (targetPlatform dflags)) = x
+extendUExpr dflags rep x =
+    let size = if target32Bit $ targetPlatform dflags
+               then W32
+               else W64
+    in CmmMachOp (MO_UU_Conv rep size) [x]
+
+-- | narrow, but keeping sign extension
+integerNarrow
+        :: Width                -- ^ width of source expression
+        -> Width                -- ^ width of result
+        -> CmmExpr              -- ^ source expression
+        -> NatM Register
+
+integerNarrow from to expr
+ = do   -- load the expr into some register
+        (reg, e_code)   <- getSomeReg64 expr
+        tmp             <- getNewRegNat II64
+        let bitCount
+                = case (from, to) of
+                        (W16, W8 )      -> 56
+                        (W32, W8 )      -> 56
+                        (W64, W8 )      -> 56
+                        (W32, W16)      -> 48
+                        (W64, W16)      -> 48
+                        (W64, W32)      -> 32
+                        _               -> panic "SPARC.CodeGen.Gen64: no match"
+        let code dst
+                = e_code
+
+                -- local shift word left to truncate and load the sign bit
+                `snocOL`  SLL reg (RIImm (ImmInt bitCount)) tmp
+
+                -- arithmetic shift right to sign extend
+                `snocOL`  SRA tmp (RIImm (ImmInt bitCount)) dst
+
+        return (Any (intFormat to) code)
 
 -- | sign extend and widen
 integerExtend
@@ -421,23 +454,23 @@ trivialCode
         -> CmmExpr
         -> NatM Register
 
-trivialCode _ instr x (CmmLit (CmmInt y _))
+trivialCode rep instr x (CmmLit (CmmInt y _))
   | fits13Bits y
   = do
       (src1, code) <- getSomeReg64 x
       let
         src2 = ImmInt (fromInteger y)
         code__2 dst = code `snocOL` instr src1 (RIImm src2) dst
-      return (Any II64 code__2)
+      return (Any (intFormat rep) code__2)
 
 
-trivialCode _ instr x y = do
+trivialCode rep instr x y = do
     (src1, code1) <- getSomeReg64 x
     (src2, code2) <- getSomeReg64 y
     let
         code__2 dst = code1 `appOL` code2 `snocOL`
                       instr src1 (RIReg src2) dst
-    return (Any II64 code__2)
+    return (Any (intFormat rep) code__2)
 
 
 trivialFCode
