@@ -495,15 +495,15 @@ pprInstr' is32Bit (SRL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then s
 pprInstr' is32Bit (SRA reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sra" else sLit "srax") False reg1 ri reg2
 pprInstr' is32Bit (MOVR rcond reg1 ri reg2)
  | is32Bit   = panic "SPARC.Ppr: not emitting non-exitent MOVR instruction for pre-SPARCV9"
- | otherwise = pprRegRIReg is32Bit (sLit inst) False reg1 ri reg2
- where istr = case rcond of
-                   EQQ -> "movrz"
-                   LE  -> "movrlez"
-                   LTT -> "movrlz"
-                   NE  -> "novrnz"
-                   GTT -> "movrgz"
-                   GE  -> "movrgez"
-                   _   -> panic ("SPARC.Ppr invalid condition for MOVR: " ++ (show rcond))
+ | otherwise = pprRegRIReg is32Bit (sLit instr) False reg1 ri reg2
+ where instr = case rcond of
+                    EQQ -> "movrz"
+                    LE  -> "movrlez"
+                    LTT -> "movrlz"
+                    NE  -> "novrnz"
+                    GTT -> "movrgz"
+                    GE  -> "movrgez"
+                    _   -> panic ("SPARC.Ppr invalid condition for MOVR: " ++ (show rcond))
 
 pprInstr' is32Bit (RDY rd)
  | is32Bit   = text "\trd\t%y," <> pprReg rd
