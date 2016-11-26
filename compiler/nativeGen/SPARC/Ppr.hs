@@ -469,7 +469,7 @@ pprInstr' is32Bit (SUB x cc reg1 ri reg2)
         = hcat [ text "\tmov\t", pprReg reg1, comma, pprReg reg2 ]
 
         | otherwise
-        = pprRegRIReg is32Bit (if x then (if is32Bit then sLit "subx" else sLit "addc") else sLit "sub") cc reg1 ri reg2
+        = pprRegRIReg is32Bit (if x then (if is32Bit then sLit "subx" else sLit "subc") else sLit "sub") cc reg1 ri reg2
 
 pprInstr' is32Bit (AND  b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "and")  b reg1 ri reg2
 
@@ -493,6 +493,17 @@ pprInstr' is32Bit (XNOR b reg1 ri reg2) = pprRegRIReg is32Bit (sLit "xnor") b re
 pprInstr' is32Bit (SLL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sll" else sLit "sllx") False reg1 ri reg2
 pprInstr' is32Bit (SRL reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "srl" else sLit "srlx") False reg1 ri reg2
 pprInstr' is32Bit (SRA reg1 ri reg2)    = pprRegRIReg is32Bit (if is32Bit then sLit "sra" else sLit "srax") False reg1 ri reg2
+pprInstr' is32Bit (MOVR rcond reg1 ri reg2)
+ | is32Bit   = panic "SPARC.Ppr: not emitting non-exitent MOVR instruction for pre-SPARCV9"
+ | otherwise = pprRegRIReg is32Bit (sLit inst) False reg1 ri reg2
+ where istr = case rcond of
+                   EQQ -> "movrz"
+                   LE  -> "movrlez"
+                   LTT -> "movrlz"
+                   NE  -> "novrnz"
+                   GTT -> "movrgz"
+                   GE  -> "movrgez"
+                   _   -> panic ("SPARC.Ppr invalid condition for MOVR: " ++ (show rcond))
 
 pprInstr' is32Bit (RDY rd)
  | is32Bit   = text "\trd\t%y," <> pprReg rd
