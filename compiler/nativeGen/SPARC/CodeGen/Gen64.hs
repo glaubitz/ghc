@@ -282,32 +282,6 @@ getRegister64 (CmmLit lit) = do
 getRegister64 _
         = panic "SPARC.CodeGen.Gen64.getRegister64: no match"
 
-    -- extend?Rep: wrap integer expression of type rep
-    -- in a conversion to II32 or II64 resp.
-extendSExpr :: DynFlags -> Width -> CmmExpr -> CmmExpr
-extendSExpr dflags W32 x
- | target32Bit (targetPlatform dflags) = x
-
-extendSExpr dflags W64 x
- | not (target32Bit (targetPlatform dflags)) = x
-
-extendSExpr dflags rep x =
-    let size = if target32Bit $ targetPlatform dflags
-               then W32
-               else W64
-    in CmmMachOp (MO_SS_Conv rep size) [x]
-
-extendUExpr :: DynFlags -> Width -> CmmExpr -> CmmExpr
-extendUExpr dflags W32 x
- | target32Bit (targetPlatform dflags) = x
-extendUExpr dflags W64 x
- | not (target32Bit (targetPlatform dflags)) = x
-extendUExpr dflags rep x =
-    let size = if target32Bit $ targetPlatform dflags
-               then W32
-               else W64
-    in CmmMachOp (MO_UU_Conv rep size) [x]
-
 -- | narrow, but keeping sign extension
 integerNarrow
         :: Width                -- ^ width of source expression
