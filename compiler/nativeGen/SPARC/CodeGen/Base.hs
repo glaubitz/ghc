@@ -8,7 +8,9 @@ module SPARC.CodeGen.Base (
         setFormatOfRegister,
 
         getRegisterReg,
-        mangleIndexTree
+        mangleIndexTree,
+        extendSExpr,
+        extendUExpr
 )
 
 where
