@@ -611,6 +611,7 @@ pprInstr' _ (BI cond b blockid)
         text "\tb", pprCond cond,
         if b then pp_comma_a else empty,
         char '\t',
+        if is32Bit then empty else (text "%xcc" <> comma),
         ppr (mkAsmTempLabel (getUnique blockid))
     ]
 
@@ -619,6 +620,7 @@ pprInstr' _ (BF cond b blockid)
         text "\tfb", pprCond cond,
         if b then pp_comma_a else empty,
         char '\t',
+        if is32Bit then empty else (text "%fcc0" <> comma),
         ppr (mkAsmTempLabel (getUnique blockid))
     ]
 
