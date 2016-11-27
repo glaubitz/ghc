@@ -22,11 +22,11 @@ import Cmm
 
 import OrdList
 import Outputable
-
+import Platform
 
 getCondCode :: CmmExpr -> NatM CondCode
-getCondCode (CmmMachOp mop [x, y])
-  =
+getCondCode (CmmMachOp mop [x, y]) = do
+    dflags <- getDynFlags
     case mop of
       MO_F_Eq W32 -> condFltCode EQQ x y
       MO_F_Ne W32 -> condFltCode NE  x y
@@ -42,18 +42,28 @@ getCondCode (CmmMachOp mop [x, y])
       MO_F_Lt W64 -> condFltCode LTT x y
       MO_F_Le W64 -> condFltCode LE  x y
 
-      MO_Eq   _   -> condIntCode EQQ  x y
-      MO_Ne   _   -> condIntCode NE   x y
+      MO_Eq rep   -> condIntCode EQQ (extendUExpr dflags rep x)
+                                     (extendUExpr dflags rep y)
+      MO_Ne rep   -> condIntCode NE  (extendUExpr dflags rep x)
+                                     (extendUExpr dflags rep y)
 
-      MO_S_Gt _   -> condIntCode GTT  x y
-      MO_S_Ge _   -> condIntCode GE   x y
-      MO_S_Lt _   -> condIntCode LTT  x y
-      MO_S_Le _   -> condIntCode LE   x y
+      MO_S_Gt rep -> condIntCode GTT (extendSExpr dflags rep x)
+                                     (extendSExpr dflags rep y)
+      MO_S_Ge rep -> condIntCode GE  (extendSExpr dflags rep x)
+                                     (extendSExpr dflags rep y)
+      MO_S_Lt rep -> condIntCode LTT (extendSExpr dflags rep x)
+                                     (extendSExpr dflags rep y)
+      MO_S_Le rep -> condIntCode LE  (extendSExpr dflags rep x)
+                                     (extendSExpr dflags rep y)
 
-      MO_U_Gt _   -> condIntCode GU   x y
-      MO_U_Ge _   -> condIntCode GEU  x y
-      MO_U_Lt _   -> condIntCode LU   x y
-      MO_U_Le _   -> condIntCode LEU  x y
+      MO_U_Gt rep -> condIntCode GU  (extendUExpr dflags rep x)
+                                     (extendUExpr dflags rep y)
+      MO_U_Ge rep -> condIntCode GEU (extendUExpr dflags rep x)
+                                     (extendUExpr dflags rep y)
+      MO_U_Lt rep -> condIntCode LU  (extendUExpr dflags rep x)
+                                     (extendUExpr dflags rep y)
+      MO_U_Le rep -> condIntCode LEU (extendUExpr dflags rep x)
+                                     (extendUExpr dflags rep y)
 
       _           -> pprPanic "SPARC.CodeGen.CondCode.getCondCode" (ppr (CmmMachOp mop [x,y]))
 
