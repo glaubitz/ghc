@@ -2,7 +2,8 @@ module SPARC.Cond (
         Cond(..),
         condUnsigned,
         condToSigned,
-        condToUnsigned
+        condToUnsigned,
+        condUnconditional
 )
 
 where
@@ -50,3 +51,9 @@ condToUnsigned LTT = LU
 condToUnsigned GE  = GEU
 condToUnsigned LE  = LEU
 condToUnsigned x   = x
+
+
+condUnconditional :: Cond -> Bool
+condUnconditional ALWAYS = True
+condUnconditional NEVER  = True
+condUnconditional _      = False

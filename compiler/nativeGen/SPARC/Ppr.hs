@@ -606,21 +606,58 @@ pprInstr' _ (FxTOy format1 format2 reg1 reg2)
     ]
 
 
+-- For V9, we have to use BPcc so we can use the 64-bit integer condition
+-- codes. Unfortunately, this only has a 19-bit signed immediate (Bcc has a
+-- 22-bit immediate), which is not enough. So, as a hack/trick, each
+-- conditional branch is encoded as two branches; a conditional branch with the
+-- annul bit set, and an unconditional branch. For example, to encode what
+-- would normally be "ble %xcc, bar":
+--
+--     ble,a %xcc, .+8 # If true, branches to nop and executes delay slot
+--                     # Otherwise, does not execute delay slot and continues to nop
+--      b bar          # Perform the actual branch (if not annulled)
+--      nop            # Acts like the delay slot for the second branch, but
+--                     # only because the first branch branches here.
+--
+-- This nop is not emmitted; it behaves like a normal branch delay slot (albeit
+-- with weird PC/nPC values), so whatever is the next instruction should go
+-- there (though it will most likely be a nop).
+--
+-- This trick doesn't work for unconditional branches, since the annul bit
+-- controls whether the delay slot is executed or not, regardless of whether
+-- it's a branch always or a branch never (in fact, the behaviour of branch
+-- never is consistent with conditional branches). However, these can simply be
+-- encoded as the equivalent Bcc unconditional branch, which is an obvious
+-- optimisation anyway.
+--
+-- This also does not work if the annul bit is set for the original BI, but
+-- nobody should be doing that.
+--
 pprInstr' is32Bit (BI cond b blockid)
-  = hcat [
-        text "\tb", pprCond cond,
-        if b then pp_comma_a else empty,
-        char '\t',
-        if is32Bit then empty else (text "%xcc" <> comma),
-        ppr (mkAsmTempLabel (getUnique blockid))
-    ]
+ | is32Bit || condUnconditional cond
+     = hcat [
+           text "\tb", pprCond cond,
+           if b then pp_comma_a else empty,
+           char '\t',
+           ppr (mkAsmTempLabel (getUnique blockid))
+       ]
+ | b = panic "SPARC.Ppr.pprInstr'.BI: conditional branch with annul bit not yet implemented for V9"
+ | otherwise
+     = vcat $ map hcat [
+                      [ text "\tb", pprCond cond, char '\t' text "%xcc", comma, text ".+8" ],
+                      [ text "\t b", char '\t', ppr (mkAsmTempLabel (getUnique blockid))   ]
+                  ]
 
-pprInstr' is32Bit (BF cond b blockid)
+
+-- Technically, FBfcc is deprecated, and we should be using FBPfcc on V9 like
+-- with integer condition branches. However, that will similarly reduce the
+-- immediate from 22-bit to 19-bit, and I don't want more delay-slot trickery
+-- than is needed.
+pprInstr' _ (BF cond b blockid)
   = hcat [
         text "\tfb", pprCond cond,
         if b then pp_comma_a else empty,
         char '\t',
-        if is32Bit then empty else (text "%fcc0" <> comma),
         ppr (mkAsmTempLabel (getUnique blockid))
     ]
 
