@@ -613,7 +613,7 @@ pprInstr' _ (FxTOy format1 format2 reg1 reg2)
     ]
 
 
-pprInstr' _ (BI cond b blockid)
+pprInstr' is32Bit (BI cond b blockid)
   = hcat [
         text "\tb", pprCond cond,
         if b then pp_comma_a else empty,
@@ -622,7 +622,7 @@ pprInstr' _ (BI cond b blockid)
         ppr (blockLbl blockid)
     ]
 
-pprInstr' _ (BF cond b blockid)
+pprInstr' is32Bit (BF cond b blockid)
   = hcat [
         text "\tfb", pprCond cond,
         if b then pp_comma_a else empty,
