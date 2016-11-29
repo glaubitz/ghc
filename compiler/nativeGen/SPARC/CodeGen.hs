@@ -38,7 +38,7 @@ import SPARC.Stack
 import Instruction
 import Format
 import NCGMonad
-import Debug            ( DebugBlock(...) )
+import Debug            ( DebugBlock(..) )
 
 -- Our intermediate code:
 import BlockId
