@@ -1,6 +1,6 @@
 SRC_HC_OPTS        = -O -H64m
 GhcStage1HcOpts    = -O
-GhcStage2HcOpts    = -O0 -DDEBUG
+GhcStage2HcOpts    = -O0 -DDEBUG -g
 GhcLibHcOpts       = -O -dcore-lint
 BUILD_PROF_LIBS    = NO
 SplitObjs          = NO
