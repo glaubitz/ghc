@@ -44,6 +44,7 @@ import BlockId
 import CLabel
 import Hoopl.Label
 import Hoopl.Collections
+import DynFlags
 
 import Unique           ( pprUniqueAlways )
 import Outputable
