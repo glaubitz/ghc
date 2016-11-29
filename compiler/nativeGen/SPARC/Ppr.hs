@@ -40,6 +40,7 @@ import Cmm hiding (topInfoTable)
 import PprCmm()
 import CLabel
 import BlockId
+import DynFlags
 
 import Unique           ( Uniquable(..), pprUnique )
 import Outputable
