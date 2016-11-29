@@ -216,11 +216,11 @@ dwarfRegNo p r = case platformArch p of
     | r == X86.Regs.xmm14 -> 31
     | r == X86.Regs.xmm15 -> 32
   ArchSPARC
-    | RegReal (RealRegSingle r1)  <- r             -> r1
-    | RegReal (RealRegPair r1 r2) <- r, r1+1 == r2 -> 72 + r1 `shiftR` 1
+    | RegReal (RealRegSingle r1)  <- r             -> fromIntegral $ r1
+    | RegReal (RealRegPair r1 r2) <- r, r1+1 == r2 -> fromIntegral $ 72 + r1 `div` 2
   ArchSPARC64
-    | RegReal (RealRegSingle r1)  <- r             -> r1
-    | RegReal (RealRegPair r1 r2) <- r, r1+1 == r2 -> 72 + r1 `shiftR` 1
+    | RegReal (RealRegSingle r1)  <- r             -> fromIntegral $ r1
+    | RegReal (RealRegPair r1 r2) <- r, r1+1 == r2 -> fromIntegral $ 72 + r1 `div` 2
   _other -> error "dwarfRegNo: Unsupported platform or unknown register!"
 
 -- | Virtual register number to use for return address.
