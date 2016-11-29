@@ -299,9 +299,11 @@ pprDwarfFrame DwarfFrame{dwCieLabel=cieLabel,dwCieInit=cieInit,dwCieProcs=procs}
         -- Preserve C stack pointer: This necessary to override that default
         -- unwinding behavior of setting $sp = CFA.
         preserveSp = case platformArch plat of
-          ArchX86    -> pprByte dW_CFA_same_value $$ pprLEBWord 4
-          ArchX86_64 -> pprByte dW_CFA_same_value $$ pprLEBWord 7
-          _          -> empty
+          ArchX86     -> pprByte dW_CFA_same_value $$ pprLEBWord 4
+          ArchX86_64  -> pprByte dW_CFA_same_value $$ pprLEBWord 7
+          ArchSPARC   -> pprByte dW_CFA_same_value $$ pprLEBWord 14
+          ArchSPARC64 -> pprByte dW_CFA_same_value $$ pprLEBWord 14
+          _           -> empty
     in vcat [ ppr cieLabel <> colon
             , pprData4' length -- Length of CIE
             , ppr cieStartLabel <> colon

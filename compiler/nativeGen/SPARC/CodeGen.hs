@@ -40,6 +40,7 @@ import SPARC.Stack
 import Instruction
 import Format
 import NCGMonad
+import Debug            ( DebugBlock(...) )
 
 -- Our intermediate code:
 import BlockId
@@ -53,6 +54,8 @@ import Reg
 import RegClass
 import CLabel
 import CPrim
+import CoreSyn          ( Tickish(..) )
+import SrcLoc           ( srcSpanFile, srcSpanStartLine, srcSpanStartCol )
 
 -- The rest:
 import BasicTypes
@@ -95,6 +98,14 @@ basicBlockCodeGen block = do
       id = entryLabel block
       stmts = blockToList nodes
   is32Bit <- is32BitPlatform
+  -- Generate location directive
+  dbg <- getDebugBlock (entryLabel block)
+  loc_instrs <- case dblSourceTick =<< dbg of
+    Just (SourceNote span name)
+      -> do fileId <- getFileId (srcSpanFile span)
+            let line = srcSpanStartLine span; col = srcSpanStartCol span
+            return $ unitOL $ LOCATION fileId line col name
+    _ -> return nilOL
   -- For SPARC V9, .register pseudo-ops must be given before %g2/%g3 are used.
   let prolog_instrs = if   is32Bit
                       then []
@@ -102,7 +113,7 @@ basicBlockCodeGen block = do
                            , REGISTER g3 SRUScratch ]
   mid_instrs <- stmtsToInstrs stmts
   tail_instrs <- stmtToInstrs tail
-  let instrs = mid_instrs `appOL` tail_instrs
+  let instrs = loc_instrs `appOL` mid_instrs `appOL` tail_instrs
   let
         (top,other_blocks,statics)
                 = foldrOL mkBlocks ([],[],[]) instrs
