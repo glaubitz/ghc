@@ -8,7 +8,6 @@ import Platform
 import Outputable
 
 import Reg
-import qualified SPARC.Regs
 import qualified X86.Regs
 
 import Data.Word
