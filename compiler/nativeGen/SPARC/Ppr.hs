@@ -93,7 +93,7 @@ pprNatCmmDecl proc@(CmmProc top_info lbl _ (ListGraph blocks)) =
             <+> ppr (mkDeadStripPreventer info_lbl)
        else empty) $$
       (if debugLevel dflags > 0
-       then ppr (mkAsmTempEndLabel lbl) <> char ':'
+       then ppr (mkAsmTempEndLabel info_lbl) <> char ':'
        else empty)
 
 dspSection :: Section

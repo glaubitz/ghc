@@ -1,0 +1,33292 @@
+.section .data
+.align 8
+.global __stginit_ghc_PlatformConstants
+.type __stginit_ghc_PlatformConstants, @object
+__stginit_ghc_PlatformConstants:
+.section .data
+.align 8
+s7iz_closure:
+	.quad	s7iz_info
+	.quad	0
+	.quad	0
+	.quad	0
+	.file 1 "includes/dist-derivedconstants/header/GHCConstantsHaskellType.hs"
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a0_info)+0
+	.quad	566935683072
+	.quad	64424509441
+.align 4
+s7a0_info:
+.Lccur:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-32,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccus
+	nop
+	b	.Lccut
+	nop
+.Lccur_end:
+.Lccut:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1064,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccuv
+	nop
+	b	.Lccuu
+	nop
+.Lccut_end:
+.Lccuv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1064,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccus
+	nop
+.Lccuv_end:
+.Lccus:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccus_end:
+.Lccuu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	stx	%l7,[%i6+991]
+	ldx	[%g1+1040],%l7
+	stx	%i4,[%i6+983]
+	ldx	[%g1+1048],%i4
+	stx	%g2,[%i6+975]
+	ldx	[%g1+1056],%g2
+	ldx	[%g1+1064],%g1
+	stx	%g3,[%i6+967]
+	sethi	%hh(ghc_PlatformConstants_PlatformConstants_con_info),%g3
+	stx	%g3,[%i6+959]
+	sethi	%lm(ghc_PlatformConstants_PlatformConstants_con_info),%g3
+	stx	%g3,[%i6+951]
+	ldx	[%i6+959],%g3
+	or	%g3,%hm(ghc_PlatformConstants_PlatformConstants_con_info),%g3
+	stx	%g3,[%i6+959]
+	ldx	[%i6+951],%g3
+	or	%g3,%lo(ghc_PlatformConstants_PlatformConstants_con_info),%g3
+	stx	%g3,[%i6+951]
+	ldx	[%i6+959],%g3
+	sllx	%g3,32,%g3
+	stx	%g4,[%i6+943]
+	ldx	[%i6+951],%g4
+	or	%g4,%g3,%g4
+	stx	%g4,[%i3-1056]
+	ldx	[%i6+1911],%g3
+	stx	%g3,[%i3-1048]
+	ldx	[%i6+1903],%g3
+	stx	%g3,[%i3-1040]
+	ldx	[%i6+1895],%g3
+	stx	%g3,[%i3-1032]
+	ldx	[%i6+1887],%g3
+	stx	%g3,[%i3-1024]
+	ldx	[%i6+1879],%g3
+	stx	%g3,[%i3-1016]
+	ldx	[%i6+1871],%g3
+	stx	%g3,[%i3-1008]
+	ldx	[%i6+1863],%g3
+	stx	%g3,[%i3-1000]
+	ldx	[%i6+1855],%g3
+	stx	%g3,[%i3-992]
+	ldx	[%i6+1847],%g3
+	stx	%g3,[%i3-984]
+	ldx	[%i6+1839],%g3
+	stx	%g3,[%i3-976]
+	ldx	[%i6+1831],%g3
+	stx	%g3,[%i3-968]
+	ldx	[%i6+1823],%g3
+	stx	%g3,[%i3-960]
+	ldx	[%i6+1815],%g3
+	stx	%g3,[%i3-952]
+	ldx	[%i6+1807],%g3
+	stx	%g3,[%i3-944]
+	ldx	[%i6+1799],%g3
+	stx	%g3,[%i3-936]
+	ldx	[%i6+1791],%g3
+	stx	%g3,[%i3-928]
+	ldx	[%i6+1783],%g3
+	stx	%g3,[%i3-920]
+	ldx	[%i6+1775],%g3
+	stx	%g3,[%i3-912]
+	ldx	[%i6+1767],%g3
+	stx	%g3,[%i3-904]
+	ldx	[%i6+1759],%g3
+	stx	%g3,[%i3-896]
+	ldx	[%i6+1751],%g3
+	stx	%g3,[%i3-888]
+	ldx	[%i6+1743],%g3
+	stx	%g3,[%i3-880]
+	ldx	[%i6+1735],%g3
+	stx	%g3,[%i3-872]
+	ldx	[%i6+1727],%g3
+	stx	%g3,[%i3-864]
+	ldx	[%i6+1719],%g3
+	stx	%g3,[%i3-856]
+	ldx	[%i6+1711],%g3
+	stx	%g3,[%i3-848]
+	ldx	[%i6+1703],%g3
+	stx	%g3,[%i3-840]
+	ldx	[%i6+1695],%g3
+	stx	%g3,[%i3-832]
+	ldx	[%i6+1687],%g3
+	stx	%g3,[%i3-824]
+	ldx	[%i6+1679],%g3
+	stx	%g3,[%i3-816]
+	ldx	[%i6+1671],%g3
+	stx	%g3,[%i3-808]
+	ldx	[%i6+1663],%g3
+	stx	%g3,[%i3-800]
+	ldx	[%i6+1655],%g3
+	stx	%g3,[%i3-792]
+	ldx	[%i6+1647],%g3
+	stx	%g3,[%i3-784]
+	ldx	[%i6+1639],%g3
+	stx	%g3,[%i3-776]
+	ldx	[%i6+1631],%g3
+	stx	%g3,[%i3-768]
+	ldx	[%i6+1623],%g3
+	stx	%g3,[%i3-760]
+	ldx	[%i6+1615],%g3
+	stx	%g3,[%i3-752]
+	ldx	[%i6+1607],%g3
+	stx	%g3,[%i3-744]
+	ldx	[%i6+1599],%g3
+	stx	%g3,[%i3-736]
+	ldx	[%i6+1591],%g3
+	stx	%g3,[%i3-728]
+	ldx	[%i6+1583],%g3
+	stx	%g3,[%i3-720]
+	ldx	[%i6+1575],%g3
+	stx	%g3,[%i3-712]
+	ldx	[%i6+1567],%g3
+	stx	%g3,[%i3-704]
+	ldx	[%i6+1559],%g3
+	stx	%g3,[%i3-696]
+	ldx	[%i6+1551],%g3
+	stx	%g3,[%i3-688]
+	ldx	[%i6+1543],%g3
+	stx	%g3,[%i3-680]
+	ldx	[%i6+1535],%g3
+	stx	%g3,[%i3-672]
+	ldx	[%i6+1527],%g3
+	stx	%g3,[%i3-664]
+	ldx	[%i6+1519],%g3
+	stx	%g3,[%i3-656]
+	ldx	[%i6+1511],%g3
+	stx	%g3,[%i3-648]
+	ldx	[%i6+1503],%g3
+	stx	%g3,[%i3-640]
+	ldx	[%i6+1495],%g3
+	stx	%g3,[%i3-632]
+	ldx	[%i6+1487],%g3
+	stx	%g3,[%i3-624]
+	ldx	[%i6+1479],%g3
+	stx	%g3,[%i3-616]
+	ldx	[%i6+1471],%g3
+	stx	%g3,[%i3-608]
+	ldx	[%i6+1463],%g3
+	stx	%g3,[%i3-600]
+	ldx	[%i6+1455],%g3
+	stx	%g3,[%i3-592]
+	ldx	[%i6+1447],%g3
+	stx	%g3,[%i3-584]
+	ldx	[%i6+1439],%g3
+	stx	%g3,[%i3-576]
+	ldx	[%i6+1431],%g3
+	stx	%g3,[%i3-568]
+	ldx	[%i6+1423],%g3
+	stx	%g3,[%i3-560]
+	ldx	[%i6+1415],%g3
+	stx	%g3,[%i3-552]
+	ldx	[%i6+1407],%g3
+	stx	%g3,[%i3-544]
+	ldx	[%i6+1399],%g3
+	stx	%g3,[%i3-536]
+	ldx	[%i6+1391],%g3
+	stx	%g3,[%i3-528]
+	ldx	[%i6+1383],%g3
+	stx	%g3,[%i3-520]
+	ldx	[%i6+1375],%g3
+	stx	%g3,[%i3-512]
+	ldx	[%i6+1367],%g3
+	stx	%g3,[%i3-504]
+	ldx	[%i6+1359],%g3
+	stx	%g3,[%i3-496]
+	ldx	[%i6+1351],%g3
+	stx	%g3,[%i3-488]
+	ldx	[%i6+1343],%g3
+	stx	%g3,[%i3-480]
+	ldx	[%i6+1335],%g3
+	stx	%g3,[%i3-472]
+	ldx	[%i6+1327],%g3
+	stx	%g3,[%i3-464]
+	ldx	[%i6+1319],%g3
+	stx	%g3,[%i3-456]
+	ldx	[%i6+1311],%g3
+	stx	%g3,[%i3-448]
+	ldx	[%i6+1303],%g3
+	stx	%g3,[%i3-440]
+	ldx	[%i6+1295],%g3
+	stx	%g3,[%i3-432]
+	ldx	[%i6+1287],%g3
+	stx	%g3,[%i3-424]
+	ldx	[%i6+1279],%g3
+	stx	%g3,[%i3-416]
+	ldx	[%i6+1271],%g3
+	stx	%g3,[%i3-408]
+	ldx	[%i6+1263],%g3
+	stx	%g3,[%i3-400]
+	ldx	[%i6+1255],%g3
+	stx	%g3,[%i3-392]
+	ldx	[%i6+1247],%g3
+	stx	%g3,[%i3-384]
+	ldx	[%i6+1239],%g3
+	stx	%g3,[%i3-376]
+	ldx	[%i6+1231],%g3
+	stx	%g3,[%i3-368]
+	ldx	[%i6+1223],%g3
+	stx	%g3,[%i3-360]
+	ldx	[%i6+1215],%g3
+	stx	%g3,[%i3-352]
+	ldx	[%i6+1207],%g3
+	stx	%g3,[%i3-344]
+	ldx	[%i6+1199],%g3
+	stx	%g3,[%i3-336]
+	ldx	[%i6+1191],%g3
+	stx	%g3,[%i3-328]
+	ldx	[%i6+1183],%g3
+	stx	%g3,[%i3-320]
+	ldx	[%i6+1175],%g3
+	stx	%g3,[%i3-312]
+	ldx	[%i6+1167],%g3
+	stx	%g3,[%i3-304]
+	ldx	[%i6+1159],%g3
+	stx	%g3,[%i3-296]
+	ldx	[%i6+1151],%g3
+	stx	%g3,[%i3-288]
+	ldx	[%i6+1143],%g3
+	stx	%g3,[%i3-280]
+	ldx	[%i6+1135],%g3
+	stx	%g3,[%i3-272]
+	ldx	[%i6+1127],%g3
+	stx	%g3,[%i3-264]
+	ldx	[%i6+1119],%g3
+	stx	%g3,[%i3-256]
+	ldx	[%i6+1111],%g3
+	stx	%g3,[%i3-248]
+	ldx	[%i6+1103],%g3
+	stx	%g3,[%i3-240]
+	ldx	[%i6+1095],%g3
+	stx	%g3,[%i3-232]
+	ldx	[%i6+1087],%g3
+	stx	%g3,[%i3-224]
+	ldx	[%i6+1079],%g3
+	stx	%g3,[%i3-216]
+	ldx	[%i6+1071],%g3
+	stx	%g3,[%i3-208]
+	ldx	[%i6+1063],%g3
+	stx	%g3,[%i3-200]
+	ldx	[%i6+1055],%g3
+	stx	%g3,[%i3-192]
+	ldx	[%i6+1047],%g3
+	stx	%g3,[%i3-184]
+	ldx	[%i6+1039],%g3
+	stx	%g3,[%i3-176]
+	ldx	[%i6+1031],%g3
+	stx	%g3,[%i3-168]
+	ldx	[%i6+1023],%g3
+	stx	%g3,[%i3-160]
+	ldx	[%i6+1015],%g3
+	stx	%g3,[%i3-152]
+	ldx	[%i6+1007],%g3
+	stx	%g3,[%i3-144]
+	ldx	[%i6+999],%g3
+	stx	%g3,[%i3-136]
+	ldx	[%i6+991],%g3
+	stx	%g3,[%i3-128]
+	ldx	[%i6+983],%g3
+	stx	%g3,[%i3-120]
+	ldx	[%i6+975],%g3
+	stx	%g3,[%i3-112]
+	ldx	[%i6+967],%g3
+	stx	%g3,[%i3-104]
+	ldx	[%i6+943],%g3
+	stx	%g3,[%i3-96]
+	stx	%o0,[%i3-88]
+	stx	%o1,[%i3-80]
+	stx	%o2,[%i3-72]
+	stx	%o3,[%i3-64]
+	stx	%o4,[%i3-56]
+	stx	%o5,[%i3-48]
+	stx	%l0,[%i3-40]
+	stx	%l6,[%i3-32]
+	stx	%l7,[%i3-24]
+	stx	%i4,[%i3-16]
+	stx	%g2,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-1055,%g1
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g2
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g2,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g2
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g2,32,%g2
+	or	%l2,%g2,%l2
+	sethi	%hh(stg_ap_p_info),%g2
+	sethi	%lm(stg_ap_p_info),%g3
+	or	%g2,%hm(stg_ap_p_info),%g2
+	or	%g3,%lo(stg_ap_p_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-32,%i0
+	call	base_GHCziBase_return_info,0
+	nop
+.Lccuu_end:
+.Ls7a0_entry_end:
+.section .rodata
+.align 8
+ccuE_str:
+	.byte	125
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79W_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79W_info:
+.LccuF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccuG
+	nop
+	b	.LccuH
+	nop
+.LccuF_end:
+.LccuG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccuG_end:
+.LccuH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccuE_str),%g1
+	sethi	%lm(ccuE_str),%l2
+	or	%g1,%hm(ccuE_str),%g1
+	or	%l2,%lo(ccuE_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccuH_end:
+.Ls79W_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79Y_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79Y_info:
+.LccuJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccuK
+	nop
+	b	.LccuL
+	nop
+.LccuJ_end:
+.LccuL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccuN
+	nop
+	b	.LccuM
+	nop
+.LccuL_end:
+.LccuN:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccuK
+	nop
+.LccuN_end:
+.LccuK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccuK_end:
+.LccuM:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79W_info),%g1
+	sethi	%lm(s79W_info),%g2
+	or	%g1,%hm(s79W_info),%g1
+	or	%g2,%lo(s79W_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccuM_end:
+.Ls79Y_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a1_info)+0
+	.quad	21474836481
+	.quad	562640715776
+	.quad	34359738375
+.align 4
+s7a1_info:
+.LccuO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccuP
+	nop
+	b	.LccuQ
+	nop
+.LccuO_end:
+.LccuQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1088,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccuS
+	nop
+	b	.LccuR
+	nop
+.LccuQ_end:
+.LccuS:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1088,%g3
+	stx	%g3,[%i1+904]
+	b	.LccuP
+	nop
+.LccuS_end:
+.LccuP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccuP_end:
+.LccuR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	stx	%o1,[%i6+1023]
+	ldx	[%g2+991],%o1
+	stx	%o2,[%i6+1015]
+	ldx	[%g2+999],%o2
+	stx	%o3,[%i6+1007]
+	ldx	[%g2+1007],%o3
+	stx	%o4,[%i6+999]
+	ldx	[%g2+1015],%o4
+	stx	%o5,[%i6+991]
+	ldx	[%g2+1023],%o5
+	stx	%l0,[%i6+983]
+	ldx	[%g2+1031],%l0
+	stx	%l6,[%i6+975]
+	ldx	[%g2+1039],%l6
+	ldx	[%g2+1047],%g2
+	stx	%l7,[%i6+967]
+	sethi	%hh(s7a0_info),%l7
+	stx	%l7,[%i6+959]
+	sethi	%lm(s7a0_info),%l7
+	stx	%l7,[%i6+951]
+	ldx	[%i6+959],%l7
+	or	%l7,%hm(s7a0_info),%l7
+	stx	%l7,[%i6+959]
+	ldx	[%i6+951],%l7
+	or	%l7,%lo(s7a0_info),%l7
+	stx	%l7,[%i6+951]
+	ldx	[%i6+959],%l7
+	sllx	%l7,32,%l7
+	stx	%i4,[%i6+943]
+	ldx	[%i6+951],%i4
+	or	%i4,%l7,%i4
+	stx	%i4,[%i3-1080]
+	ldx	[%i6+1911],%l7
+	stx	%l7,[%i3-1064]
+	ldx	[%i6+1903],%l7
+	stx	%l7,[%i3-1056]
+	ldx	[%i6+1895],%l7
+	stx	%l7,[%i3-1048]
+	ldx	[%i6+1887],%l7
+	stx	%l7,[%i3-1040]
+	ldx	[%i6+1879],%l7
+	stx	%l7,[%i3-1032]
+	ldx	[%i6+1871],%l7
+	stx	%l7,[%i3-1024]
+	ldx	[%i6+1863],%l7
+	stx	%l7,[%i3-1016]
+	ldx	[%i6+1855],%l7
+	stx	%l7,[%i3-1008]
+	ldx	[%i6+1847],%l7
+	stx	%l7,[%i3-1000]
+	ldx	[%i6+1839],%l7
+	stx	%l7,[%i3-992]
+	ldx	[%i6+1831],%l7
+	stx	%l7,[%i3-984]
+	ldx	[%i6+1823],%l7
+	stx	%l7,[%i3-976]
+	ldx	[%i6+1815],%l7
+	stx	%l7,[%i3-968]
+	ldx	[%i6+1807],%l7
+	stx	%l7,[%i3-960]
+	ldx	[%i6+1799],%l7
+	stx	%l7,[%i3-952]
+	ldx	[%i6+1791],%l7
+	stx	%l7,[%i3-944]
+	ldx	[%i6+1783],%l7
+	stx	%l7,[%i3-936]
+	ldx	[%i6+1775],%l7
+	stx	%l7,[%i3-928]
+	ldx	[%i6+1767],%l7
+	stx	%l7,[%i3-920]
+	ldx	[%i6+1759],%l7
+	stx	%l7,[%i3-912]
+	ldx	[%i6+1751],%l7
+	stx	%l7,[%i3-904]
+	ldx	[%i6+1743],%l7
+	stx	%l7,[%i3-896]
+	ldx	[%i6+1735],%l7
+	stx	%l7,[%i3-888]
+	ldx	[%i6+1727],%l7
+	stx	%l7,[%i3-880]
+	ldx	[%i6+1719],%l7
+	stx	%l7,[%i3-872]
+	ldx	[%i6+1711],%l7
+	stx	%l7,[%i3-864]
+	ldx	[%i6+1703],%l7
+	stx	%l7,[%i3-856]
+	ldx	[%i6+1695],%l7
+	stx	%l7,[%i3-848]
+	ldx	[%i6+1687],%l7
+	stx	%l7,[%i3-840]
+	ldx	[%i6+1679],%l7
+	stx	%l7,[%i3-832]
+	ldx	[%i6+1671],%l7
+	stx	%l7,[%i3-824]
+	ldx	[%i6+1663],%l7
+	stx	%l7,[%i3-816]
+	ldx	[%i6+1655],%l7
+	stx	%l7,[%i3-808]
+	ldx	[%i6+1647],%l7
+	stx	%l7,[%i3-800]
+	ldx	[%i6+1639],%l7
+	stx	%l7,[%i3-792]
+	ldx	[%i6+1631],%l7
+	stx	%l7,[%i3-784]
+	ldx	[%i6+1623],%l7
+	stx	%l7,[%i3-776]
+	ldx	[%i6+1615],%l7
+	stx	%l7,[%i3-768]
+	ldx	[%i6+1607],%l7
+	stx	%l7,[%i3-760]
+	ldx	[%i6+1599],%l7
+	stx	%l7,[%i3-752]
+	ldx	[%i6+1591],%l7
+	stx	%l7,[%i3-744]
+	ldx	[%i6+1583],%l7
+	stx	%l7,[%i3-736]
+	ldx	[%i6+1575],%l7
+	stx	%l7,[%i3-728]
+	ldx	[%i6+1567],%l7
+	stx	%l7,[%i3-720]
+	ldx	[%i6+1559],%l7
+	stx	%l7,[%i3-712]
+	ldx	[%i6+1551],%l7
+	stx	%l7,[%i3-704]
+	ldx	[%i6+1543],%l7
+	stx	%l7,[%i3-696]
+	ldx	[%i6+1535],%l7
+	stx	%l7,[%i3-688]
+	ldx	[%i6+1527],%l7
+	stx	%l7,[%i3-680]
+	ldx	[%i6+1519],%l7
+	stx	%l7,[%i3-672]
+	ldx	[%i6+1511],%l7
+	stx	%l7,[%i3-664]
+	ldx	[%i6+1503],%l7
+	stx	%l7,[%i3-656]
+	ldx	[%i6+1495],%l7
+	stx	%l7,[%i3-648]
+	ldx	[%i6+1487],%l7
+	stx	%l7,[%i3-640]
+	ldx	[%i6+1479],%l7
+	stx	%l7,[%i3-632]
+	ldx	[%i6+1471],%l7
+	stx	%l7,[%i3-624]
+	ldx	[%i6+1463],%l7
+	stx	%l7,[%i3-616]
+	ldx	[%i6+1455],%l7
+	stx	%l7,[%i3-608]
+	ldx	[%i6+1447],%l7
+	stx	%l7,[%i3-600]
+	ldx	[%i6+1439],%l7
+	stx	%l7,[%i3-592]
+	ldx	[%i6+1431],%l7
+	stx	%l7,[%i3-584]
+	ldx	[%i6+1423],%l7
+	stx	%l7,[%i3-576]
+	ldx	[%i6+1415],%l7
+	stx	%l7,[%i3-568]
+	ldx	[%i6+1407],%l7
+	stx	%l7,[%i3-560]
+	ldx	[%i6+1399],%l7
+	stx	%l7,[%i3-552]
+	ldx	[%i6+1391],%l7
+	stx	%l7,[%i3-544]
+	ldx	[%i6+1383],%l7
+	stx	%l7,[%i3-536]
+	ldx	[%i6+1375],%l7
+	stx	%l7,[%i3-528]
+	ldx	[%i6+1367],%l7
+	stx	%l7,[%i3-520]
+	ldx	[%i6+1359],%l7
+	stx	%l7,[%i3-512]
+	ldx	[%i6+1351],%l7
+	stx	%l7,[%i3-504]
+	ldx	[%i6+1343],%l7
+	stx	%l7,[%i3-496]
+	ldx	[%i6+1335],%l7
+	stx	%l7,[%i3-488]
+	ldx	[%i6+1327],%l7
+	stx	%l7,[%i3-480]
+	ldx	[%i6+1319],%l7
+	stx	%l7,[%i3-472]
+	ldx	[%i6+1311],%l7
+	stx	%l7,[%i3-464]
+	ldx	[%i6+1303],%l7
+	stx	%l7,[%i3-456]
+	ldx	[%i6+1295],%l7
+	stx	%l7,[%i3-448]
+	ldx	[%i6+1287],%l7
+	stx	%l7,[%i3-440]
+	ldx	[%i6+1279],%l7
+	stx	%l7,[%i3-432]
+	ldx	[%i6+1271],%l7
+	stx	%l7,[%i3-424]
+	ldx	[%i6+1263],%l7
+	stx	%l7,[%i3-416]
+	ldx	[%i6+1255],%l7
+	stx	%l7,[%i3-408]
+	ldx	[%i6+1247],%l7
+	stx	%l7,[%i3-400]
+	ldx	[%i6+1239],%l7
+	stx	%l7,[%i3-392]
+	ldx	[%i6+1231],%l7
+	stx	%l7,[%i3-384]
+	ldx	[%i6+1223],%l7
+	stx	%l7,[%i3-376]
+	ldx	[%i6+1215],%l7
+	stx	%l7,[%i3-368]
+	ldx	[%i6+1207],%l7
+	stx	%l7,[%i3-360]
+	ldx	[%i6+1199],%l7
+	stx	%l7,[%i3-352]
+	ldx	[%i6+1191],%l7
+	stx	%l7,[%i3-344]
+	ldx	[%i6+1183],%l7
+	stx	%l7,[%i3-336]
+	ldx	[%i6+1175],%l7
+	stx	%l7,[%i3-328]
+	ldx	[%i6+1167],%l7
+	stx	%l7,[%i3-320]
+	ldx	[%i6+1159],%l7
+	stx	%l7,[%i3-312]
+	ldx	[%i6+1151],%l7
+	stx	%l7,[%i3-304]
+	ldx	[%i6+1143],%l7
+	stx	%l7,[%i3-296]
+	ldx	[%i6+1135],%l7
+	stx	%l7,[%i3-288]
+	ldx	[%i6+1127],%l7
+	stx	%l7,[%i3-280]
+	ldx	[%i6+1119],%l7
+	stx	%l7,[%i3-272]
+	ldx	[%i6+1111],%l7
+	stx	%l7,[%i3-264]
+	ldx	[%i6+1103],%l7
+	stx	%l7,[%i3-256]
+	ldx	[%i6+1095],%l7
+	stx	%l7,[%i3-248]
+	ldx	[%i6+1087],%l7
+	stx	%l7,[%i3-240]
+	ldx	[%i6+1079],%l7
+	stx	%l7,[%i3-232]
+	ldx	[%i6+1071],%l7
+	stx	%l7,[%i3-224]
+	ldx	[%i6+1063],%l7
+	stx	%l7,[%i3-216]
+	ldx	[%i6+1055],%l7
+	stx	%l7,[%i3-208]
+	ldx	[%i6+1047],%l7
+	stx	%l7,[%i3-200]
+	ldx	[%i6+1039],%l7
+	stx	%l7,[%i3-192]
+	ldx	[%i6+1031],%l7
+	stx	%l7,[%i3-184]
+	ldx	[%i6+1023],%l7
+	stx	%l7,[%i3-176]
+	ldx	[%i6+1015],%l7
+	stx	%l7,[%i3-168]
+	ldx	[%i6+1007],%l7
+	stx	%l7,[%i3-160]
+	ldx	[%i6+999],%l7
+	stx	%l7,[%i3-152]
+	ldx	[%i6+991],%l7
+	stx	%l7,[%i3-144]
+	ldx	[%i6+983],%l7
+	stx	%l7,[%i3-136]
+	ldx	[%i6+975],%l7
+	stx	%l7,[%i3-128]
+	ldx	[%i6+967],%l7
+	stx	%l7,[%i3-120]
+	ldx	[%i6+943],%l7
+	stx	%l7,[%i3-112]
+	stx	%g3,[%i3-104]
+	stx	%g4,[%i3-96]
+	stx	%o0,[%i3-88]
+	stx	%o1,[%i3-80]
+	stx	%o2,[%i3-72]
+	stx	%o3,[%i3-64]
+	stx	%o4,[%i3-56]
+	stx	%o5,[%i3-48]
+	stx	%l0,[%i3-40]
+	stx	%l6,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1080,%g1
+	sethi	%hh(s79Y_info),%g2
+	sethi	%lm(s79Y_info),%g3
+	or	%g2,%hm(s79Y_info),%g2
+	or	%g3,%lo(s79Y_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccuR_end:
+.Ls7a1_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79T_info)+24
+	.quad	0
+	.quad	64424509441
+.align 4
+s79T_info:
+.Lccv1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccv2
+	nop
+	b	.Lccv3
+	nop
+.Lccv1_end:
+.Lccv2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccv2_end:
+.Lccv3:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInteger_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInteger_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInteger_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInteger_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.Lccv3_end:
+.Ls79T_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79U_info)+24
+	.quad	0
+	.quad	64424509443
+.align 4
+s79U_info:
+.Lccv4:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccv5
+	nop
+	b	.Lccv6
+	nop
+.Lccv4_end:
+.Lccv6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccv8
+	nop
+	b	.Lccv7
+	nop
+.Lccv6_end:
+.Lccv8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccv5
+	nop
+.Lccv8_end:
+.Lccv5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccv5_end:
+.Lccv7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79T_info),%g1
+	sethi	%lm(s79T_info),%g2
+	or	%g1,%hm(s79T_info),%g1
+	or	%g2,%lo(s79T_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccv7_end:
+.Ls79U_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a2_info)+0
+	.quad	562640715776
+	.quad	64424509471
+.align 4
+s7a2_info:
+.Lccv9:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccva
+	nop
+	b	.Lccvb
+	nop
+.Lccv9_end:
+.Lccvb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1072,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccvd
+	nop
+	b	.Lccvc
+	nop
+.Lccvb_end:
+.Lccvd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1072,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccva
+	nop
+.Lccvd_end:
+.Lccva:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccva_end:
+.Lccvc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	stx	%l7,[%i6+991]
+	ldx	[%g1+1040],%l7
+	stx	%i4,[%i6+983]
+	ldx	[%g1+1048],%i4
+	ldx	[%g1+1056],%g1
+	stx	%g2,[%i6+975]
+	sethi	%hh(s7a1_info),%g2
+	stx	%g2,[%i6+967]
+	sethi	%lm(s7a1_info),%g2
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	or	%g2,%hm(s7a1_info),%g2
+	stx	%g2,[%i6+967]
+	ldx	[%i6+959],%g2
+	or	%g2,%lo(s7a1_info),%g2
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	sllx	%g2,32,%g2
+	stx	%g3,[%i6+951]
+	ldx	[%i6+959],%g3
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-1064]
+	ldx	[%i6+1911],%g2
+	stx	%g2,[%i3-1056]
+	ldx	[%i6+1903],%g2
+	stx	%g2,[%i3-1048]
+	ldx	[%i6+1895],%g2
+	stx	%g2,[%i3-1040]
+	ldx	[%i6+1887],%g2
+	stx	%g2,[%i3-1032]
+	ldx	[%i6+1879],%g2
+	stx	%g2,[%i3-1024]
+	ldx	[%i6+1871],%g2
+	stx	%g2,[%i3-1016]
+	ldx	[%i6+1863],%g2
+	stx	%g2,[%i3-1008]
+	ldx	[%i6+1855],%g2
+	stx	%g2,[%i3-1000]
+	ldx	[%i6+1847],%g2
+	stx	%g2,[%i3-992]
+	ldx	[%i6+1839],%g2
+	stx	%g2,[%i3-984]
+	ldx	[%i6+1831],%g2
+	stx	%g2,[%i3-976]
+	ldx	[%i6+1823],%g2
+	stx	%g2,[%i3-968]
+	ldx	[%i6+1815],%g2
+	stx	%g2,[%i3-960]
+	ldx	[%i6+1807],%g2
+	stx	%g2,[%i3-952]
+	ldx	[%i6+1799],%g2
+	stx	%g2,[%i3-944]
+	ldx	[%i6+1791],%g2
+	stx	%g2,[%i3-936]
+	ldx	[%i6+1783],%g2
+	stx	%g2,[%i3-928]
+	ldx	[%i6+1775],%g2
+	stx	%g2,[%i3-920]
+	ldx	[%i6+1767],%g2
+	stx	%g2,[%i3-912]
+	ldx	[%i6+1759],%g2
+	stx	%g2,[%i3-904]
+	ldx	[%i6+1751],%g2
+	stx	%g2,[%i3-896]
+	ldx	[%i6+1743],%g2
+	stx	%g2,[%i3-888]
+	ldx	[%i6+1735],%g2
+	stx	%g2,[%i3-880]
+	ldx	[%i6+1727],%g2
+	stx	%g2,[%i3-872]
+	ldx	[%i6+1719],%g2
+	stx	%g2,[%i3-864]
+	ldx	[%i6+1711],%g2
+	stx	%g2,[%i3-856]
+	ldx	[%i6+1703],%g2
+	stx	%g2,[%i3-848]
+	ldx	[%i6+1695],%g2
+	stx	%g2,[%i3-840]
+	ldx	[%i6+1687],%g2
+	stx	%g2,[%i3-832]
+	ldx	[%i6+1679],%g2
+	stx	%g2,[%i3-824]
+	ldx	[%i6+1671],%g2
+	stx	%g2,[%i3-816]
+	ldx	[%i6+1663],%g2
+	stx	%g2,[%i3-808]
+	ldx	[%i6+1655],%g2
+	stx	%g2,[%i3-800]
+	ldx	[%i6+1647],%g2
+	stx	%g2,[%i3-792]
+	ldx	[%i6+1639],%g2
+	stx	%g2,[%i3-784]
+	ldx	[%i6+1631],%g2
+	stx	%g2,[%i3-776]
+	ldx	[%i6+1623],%g2
+	stx	%g2,[%i3-768]
+	ldx	[%i6+1615],%g2
+	stx	%g2,[%i3-760]
+	ldx	[%i6+1607],%g2
+	stx	%g2,[%i3-752]
+	ldx	[%i6+1599],%g2
+	stx	%g2,[%i3-744]
+	ldx	[%i6+1591],%g2
+	stx	%g2,[%i3-736]
+	ldx	[%i6+1583],%g2
+	stx	%g2,[%i3-728]
+	ldx	[%i6+1575],%g2
+	stx	%g2,[%i3-720]
+	ldx	[%i6+1567],%g2
+	stx	%g2,[%i3-712]
+	ldx	[%i6+1559],%g2
+	stx	%g2,[%i3-704]
+	ldx	[%i6+1551],%g2
+	stx	%g2,[%i3-696]
+	ldx	[%i6+1543],%g2
+	stx	%g2,[%i3-688]
+	ldx	[%i6+1535],%g2
+	stx	%g2,[%i3-680]
+	ldx	[%i6+1527],%g2
+	stx	%g2,[%i3-672]
+	ldx	[%i6+1519],%g2
+	stx	%g2,[%i3-664]
+	ldx	[%i6+1511],%g2
+	stx	%g2,[%i3-656]
+	ldx	[%i6+1503],%g2
+	stx	%g2,[%i3-648]
+	ldx	[%i6+1495],%g2
+	stx	%g2,[%i3-640]
+	ldx	[%i6+1487],%g2
+	stx	%g2,[%i3-632]
+	ldx	[%i6+1479],%g2
+	stx	%g2,[%i3-624]
+	ldx	[%i6+1471],%g2
+	stx	%g2,[%i3-616]
+	ldx	[%i6+1463],%g2
+	stx	%g2,[%i3-608]
+	ldx	[%i6+1455],%g2
+	stx	%g2,[%i3-600]
+	ldx	[%i6+1447],%g2
+	stx	%g2,[%i3-592]
+	ldx	[%i6+1439],%g2
+	stx	%g2,[%i3-584]
+	ldx	[%i6+1431],%g2
+	stx	%g2,[%i3-576]
+	ldx	[%i6+1423],%g2
+	stx	%g2,[%i3-568]
+	ldx	[%i6+1415],%g2
+	stx	%g2,[%i3-560]
+	ldx	[%i6+1407],%g2
+	stx	%g2,[%i3-552]
+	ldx	[%i6+1399],%g2
+	stx	%g2,[%i3-544]
+	ldx	[%i6+1391],%g2
+	stx	%g2,[%i3-536]
+	ldx	[%i6+1383],%g2
+	stx	%g2,[%i3-528]
+	ldx	[%i6+1375],%g2
+	stx	%g2,[%i3-520]
+	ldx	[%i6+1367],%g2
+	stx	%g2,[%i3-512]
+	ldx	[%i6+1359],%g2
+	stx	%g2,[%i3-504]
+	ldx	[%i6+1351],%g2
+	stx	%g2,[%i3-496]
+	ldx	[%i6+1343],%g2
+	stx	%g2,[%i3-488]
+	ldx	[%i6+1335],%g2
+	stx	%g2,[%i3-480]
+	ldx	[%i6+1327],%g2
+	stx	%g2,[%i3-472]
+	ldx	[%i6+1319],%g2
+	stx	%g2,[%i3-464]
+	ldx	[%i6+1311],%g2
+	stx	%g2,[%i3-456]
+	ldx	[%i6+1303],%g2
+	stx	%g2,[%i3-448]
+	ldx	[%i6+1295],%g2
+	stx	%g2,[%i3-440]
+	ldx	[%i6+1287],%g2
+	stx	%g2,[%i3-432]
+	ldx	[%i6+1279],%g2
+	stx	%g2,[%i3-424]
+	ldx	[%i6+1271],%g2
+	stx	%g2,[%i3-416]
+	ldx	[%i6+1263],%g2
+	stx	%g2,[%i3-408]
+	ldx	[%i6+1255],%g2
+	stx	%g2,[%i3-400]
+	ldx	[%i6+1247],%g2
+	stx	%g2,[%i3-392]
+	ldx	[%i6+1239],%g2
+	stx	%g2,[%i3-384]
+	ldx	[%i6+1231],%g2
+	stx	%g2,[%i3-376]
+	ldx	[%i6+1223],%g2
+	stx	%g2,[%i3-368]
+	ldx	[%i6+1215],%g2
+	stx	%g2,[%i3-360]
+	ldx	[%i6+1207],%g2
+	stx	%g2,[%i3-352]
+	ldx	[%i6+1199],%g2
+	stx	%g2,[%i3-344]
+	ldx	[%i6+1191],%g2
+	stx	%g2,[%i3-336]
+	ldx	[%i6+1183],%g2
+	stx	%g2,[%i3-328]
+	ldx	[%i6+1175],%g2
+	stx	%g2,[%i3-320]
+	ldx	[%i6+1167],%g2
+	stx	%g2,[%i3-312]
+	ldx	[%i6+1159],%g2
+	stx	%g2,[%i3-304]
+	ldx	[%i6+1151],%g2
+	stx	%g2,[%i3-296]
+	ldx	[%i6+1143],%g2
+	stx	%g2,[%i3-288]
+	ldx	[%i6+1135],%g2
+	stx	%g2,[%i3-280]
+	ldx	[%i6+1127],%g2
+	stx	%g2,[%i3-272]
+	ldx	[%i6+1119],%g2
+	stx	%g2,[%i3-264]
+	ldx	[%i6+1111],%g2
+	stx	%g2,[%i3-256]
+	ldx	[%i6+1103],%g2
+	stx	%g2,[%i3-248]
+	ldx	[%i6+1095],%g2
+	stx	%g2,[%i3-240]
+	ldx	[%i6+1087],%g2
+	stx	%g2,[%i3-232]
+	ldx	[%i6+1079],%g2
+	stx	%g2,[%i3-224]
+	ldx	[%i6+1071],%g2
+	stx	%g2,[%i3-216]
+	ldx	[%i6+1063],%g2
+	stx	%g2,[%i3-208]
+	ldx	[%i6+1055],%g2
+	stx	%g2,[%i3-200]
+	ldx	[%i6+1047],%g2
+	stx	%g2,[%i3-192]
+	ldx	[%i6+1039],%g2
+	stx	%g2,[%i3-184]
+	ldx	[%i6+1031],%g2
+	stx	%g2,[%i3-176]
+	ldx	[%i6+1023],%g2
+	stx	%g2,[%i3-168]
+	ldx	[%i6+1015],%g2
+	stx	%g2,[%i3-160]
+	ldx	[%i6+1007],%g2
+	stx	%g2,[%i3-152]
+	ldx	[%i6+999],%g2
+	stx	%g2,[%i3-144]
+	ldx	[%i6+991],%g2
+	stx	%g2,[%i3-136]
+	ldx	[%i6+983],%g2
+	stx	%g2,[%i3-128]
+	ldx	[%i6+975],%g2
+	stx	%g2,[%i3-120]
+	ldx	[%i6+951],%g2
+	stx	%g2,[%i3-112]
+	stx	%g4,[%i3-104]
+	stx	%o0,[%i3-96]
+	stx	%o1,[%i3-88]
+	stx	%o2,[%i3-80]
+	stx	%o3,[%i3-72]
+	stx	%o4,[%i3-64]
+	stx	%o5,[%i3-56]
+	stx	%l0,[%i3-48]
+	stx	%l6,[%i3-40]
+	stx	%l7,[%i3-32]
+	stx	%i4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1063,%g1
+	sethi	%hh(s79U_info),%g2
+	sethi	%lm(s79U_info),%g3
+	or	%g2,%hm(s79U_info),%g2
+	or	%g3,%lo(s79U_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.Lccvc_end:
+.Ls7a2_entry_end:
+.section .rodata
+.align 8
+ccvm_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79Q_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79Q_info:
+.Lccvn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccvo
+	nop
+	b	.Lccvp
+	nop
+.Lccvn_end:
+.Lccvo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccvo_end:
+.Lccvp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccvm_str),%g1
+	sethi	%lm(ccvm_str),%l2
+	or	%g1,%hm(ccvm_str),%g1
+	or	%l2,%lo(ccvm_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.Lccvp_end:
+.Ls79Q_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79S_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79S_info:
+.Lccvr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccvs
+	nop
+	b	.Lccvt
+	nop
+.Lccvr_end:
+.Lccvt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccvv
+	nop
+	b	.Lccvu
+	nop
+.Lccvt_end:
+.Lccvv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccvs
+	nop
+.Lccvv_end:
+.Lccvs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccvs_end:
+.Lccvu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79Q_info),%g1
+	sethi	%lm(s79Q_info),%g2
+	or	%g1,%hm(s79Q_info),%g1
+	or	%g2,%lo(s79Q_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccvu_end:
+.Ls79S_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a3_info)+0
+	.quad	562640715776
+	.quad	64424509471
+.align 4
+s7a3_info:
+.Lccvw:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccvx
+	nop
+	b	.Lccvy
+	nop
+.Lccvw_end:
+.Lccvy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1080,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccvA
+	nop
+	b	.Lccvz
+	nop
+.Lccvy_end:
+.LccvA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1080,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccvx
+	nop
+.LccvA_end:
+.Lccvx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccvx_end:
+.Lccvz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	stx	%l7,[%i6+991]
+	ldx	[%g1+1040],%l7
+	stx	%i4,[%i6+983]
+	ldx	[%g1+1048],%i4
+	ldx	[%g1+1056],%g1
+	stx	%g2,[%i6+975]
+	sethi	%hh(s7a2_info),%g2
+	stx	%g2,[%i6+967]
+	sethi	%lm(s7a2_info),%g2
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	or	%g2,%hm(s7a2_info),%g2
+	stx	%g2,[%i6+967]
+	ldx	[%i6+959],%g2
+	or	%g2,%lo(s7a2_info),%g2
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	sllx	%g2,32,%g2
+	stx	%g3,[%i6+951]
+	ldx	[%i6+959],%g3
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-1072]
+	ldx	[%i6+1911],%g2
+	stx	%g2,[%i3-1056]
+	ldx	[%i6+1903],%g2
+	stx	%g2,[%i3-1048]
+	ldx	[%i6+1895],%g2
+	stx	%g2,[%i3-1040]
+	ldx	[%i6+1887],%g2
+	stx	%g2,[%i3-1032]
+	ldx	[%i6+1879],%g2
+	stx	%g2,[%i3-1024]
+	ldx	[%i6+1871],%g2
+	stx	%g2,[%i3-1016]
+	ldx	[%i6+1863],%g2
+	stx	%g2,[%i3-1008]
+	ldx	[%i6+1855],%g2
+	stx	%g2,[%i3-1000]
+	ldx	[%i6+1847],%g2
+	stx	%g2,[%i3-992]
+	ldx	[%i6+1839],%g2
+	stx	%g2,[%i3-984]
+	ldx	[%i6+1831],%g2
+	stx	%g2,[%i3-976]
+	ldx	[%i6+1823],%g2
+	stx	%g2,[%i3-968]
+	ldx	[%i6+1815],%g2
+	stx	%g2,[%i3-960]
+	ldx	[%i6+1807],%g2
+	stx	%g2,[%i3-952]
+	ldx	[%i6+1799],%g2
+	stx	%g2,[%i3-944]
+	ldx	[%i6+1791],%g2
+	stx	%g2,[%i3-936]
+	ldx	[%i6+1783],%g2
+	stx	%g2,[%i3-928]
+	ldx	[%i6+1775],%g2
+	stx	%g2,[%i3-920]
+	ldx	[%i6+1767],%g2
+	stx	%g2,[%i3-912]
+	ldx	[%i6+1759],%g2
+	stx	%g2,[%i3-904]
+	ldx	[%i6+1751],%g2
+	stx	%g2,[%i3-896]
+	ldx	[%i6+1743],%g2
+	stx	%g2,[%i3-888]
+	ldx	[%i6+1735],%g2
+	stx	%g2,[%i3-880]
+	ldx	[%i6+1727],%g2
+	stx	%g2,[%i3-872]
+	ldx	[%i6+1719],%g2
+	stx	%g2,[%i3-864]
+	ldx	[%i6+1711],%g2
+	stx	%g2,[%i3-856]
+	ldx	[%i6+1703],%g2
+	stx	%g2,[%i3-848]
+	ldx	[%i6+1695],%g2
+	stx	%g2,[%i3-840]
+	ldx	[%i6+1687],%g2
+	stx	%g2,[%i3-832]
+	ldx	[%i6+1679],%g2
+	stx	%g2,[%i3-824]
+	ldx	[%i6+1671],%g2
+	stx	%g2,[%i3-816]
+	ldx	[%i6+1663],%g2
+	stx	%g2,[%i3-808]
+	ldx	[%i6+1655],%g2
+	stx	%g2,[%i3-800]
+	ldx	[%i6+1647],%g2
+	stx	%g2,[%i3-792]
+	ldx	[%i6+1639],%g2
+	stx	%g2,[%i3-784]
+	ldx	[%i6+1631],%g2
+	stx	%g2,[%i3-776]
+	ldx	[%i6+1623],%g2
+	stx	%g2,[%i3-768]
+	ldx	[%i6+1615],%g2
+	stx	%g2,[%i3-760]
+	ldx	[%i6+1607],%g2
+	stx	%g2,[%i3-752]
+	ldx	[%i6+1599],%g2
+	stx	%g2,[%i3-744]
+	ldx	[%i6+1591],%g2
+	stx	%g2,[%i3-736]
+	ldx	[%i6+1583],%g2
+	stx	%g2,[%i3-728]
+	ldx	[%i6+1575],%g2
+	stx	%g2,[%i3-720]
+	ldx	[%i6+1567],%g2
+	stx	%g2,[%i3-712]
+	ldx	[%i6+1559],%g2
+	stx	%g2,[%i3-704]
+	ldx	[%i6+1551],%g2
+	stx	%g2,[%i3-696]
+	ldx	[%i6+1543],%g2
+	stx	%g2,[%i3-688]
+	ldx	[%i6+1535],%g2
+	stx	%g2,[%i3-680]
+	ldx	[%i6+1527],%g2
+	stx	%g2,[%i3-672]
+	ldx	[%i6+1519],%g2
+	stx	%g2,[%i3-664]
+	ldx	[%i6+1511],%g2
+	stx	%g2,[%i3-656]
+	ldx	[%i6+1503],%g2
+	stx	%g2,[%i3-648]
+	ldx	[%i6+1495],%g2
+	stx	%g2,[%i3-640]
+	ldx	[%i6+1487],%g2
+	stx	%g2,[%i3-632]
+	ldx	[%i6+1479],%g2
+	stx	%g2,[%i3-624]
+	ldx	[%i6+1471],%g2
+	stx	%g2,[%i3-616]
+	ldx	[%i6+1463],%g2
+	stx	%g2,[%i3-608]
+	ldx	[%i6+1455],%g2
+	stx	%g2,[%i3-600]
+	ldx	[%i6+1447],%g2
+	stx	%g2,[%i3-592]
+	ldx	[%i6+1439],%g2
+	stx	%g2,[%i3-584]
+	ldx	[%i6+1431],%g2
+	stx	%g2,[%i3-576]
+	ldx	[%i6+1423],%g2
+	stx	%g2,[%i3-568]
+	ldx	[%i6+1415],%g2
+	stx	%g2,[%i3-560]
+	ldx	[%i6+1407],%g2
+	stx	%g2,[%i3-552]
+	ldx	[%i6+1399],%g2
+	stx	%g2,[%i3-544]
+	ldx	[%i6+1391],%g2
+	stx	%g2,[%i3-536]
+	ldx	[%i6+1383],%g2
+	stx	%g2,[%i3-528]
+	ldx	[%i6+1375],%g2
+	stx	%g2,[%i3-520]
+	ldx	[%i6+1367],%g2
+	stx	%g2,[%i3-512]
+	ldx	[%i6+1359],%g2
+	stx	%g2,[%i3-504]
+	ldx	[%i6+1351],%g2
+	stx	%g2,[%i3-496]
+	ldx	[%i6+1343],%g2
+	stx	%g2,[%i3-488]
+	ldx	[%i6+1335],%g2
+	stx	%g2,[%i3-480]
+	ldx	[%i6+1327],%g2
+	stx	%g2,[%i3-472]
+	ldx	[%i6+1319],%g2
+	stx	%g2,[%i3-464]
+	ldx	[%i6+1311],%g2
+	stx	%g2,[%i3-456]
+	ldx	[%i6+1303],%g2
+	stx	%g2,[%i3-448]
+	ldx	[%i6+1295],%g2
+	stx	%g2,[%i3-440]
+	ldx	[%i6+1287],%g2
+	stx	%g2,[%i3-432]
+	ldx	[%i6+1279],%g2
+	stx	%g2,[%i3-424]
+	ldx	[%i6+1271],%g2
+	stx	%g2,[%i3-416]
+	ldx	[%i6+1263],%g2
+	stx	%g2,[%i3-408]
+	ldx	[%i6+1255],%g2
+	stx	%g2,[%i3-400]
+	ldx	[%i6+1247],%g2
+	stx	%g2,[%i3-392]
+	ldx	[%i6+1239],%g2
+	stx	%g2,[%i3-384]
+	ldx	[%i6+1231],%g2
+	stx	%g2,[%i3-376]
+	ldx	[%i6+1223],%g2
+	stx	%g2,[%i3-368]
+	ldx	[%i6+1215],%g2
+	stx	%g2,[%i3-360]
+	ldx	[%i6+1207],%g2
+	stx	%g2,[%i3-352]
+	ldx	[%i6+1199],%g2
+	stx	%g2,[%i3-344]
+	ldx	[%i6+1191],%g2
+	stx	%g2,[%i3-336]
+	ldx	[%i6+1183],%g2
+	stx	%g2,[%i3-328]
+	ldx	[%i6+1175],%g2
+	stx	%g2,[%i3-320]
+	ldx	[%i6+1167],%g2
+	stx	%g2,[%i3-312]
+	ldx	[%i6+1159],%g2
+	stx	%g2,[%i3-304]
+	ldx	[%i6+1151],%g2
+	stx	%g2,[%i3-296]
+	ldx	[%i6+1143],%g2
+	stx	%g2,[%i3-288]
+	ldx	[%i6+1135],%g2
+	stx	%g2,[%i3-280]
+	ldx	[%i6+1127],%g2
+	stx	%g2,[%i3-272]
+	ldx	[%i6+1119],%g2
+	stx	%g2,[%i3-264]
+	ldx	[%i6+1111],%g2
+	stx	%g2,[%i3-256]
+	ldx	[%i6+1103],%g2
+	stx	%g2,[%i3-248]
+	ldx	[%i6+1095],%g2
+	stx	%g2,[%i3-240]
+	ldx	[%i6+1087],%g2
+	stx	%g2,[%i3-232]
+	ldx	[%i6+1079],%g2
+	stx	%g2,[%i3-224]
+	ldx	[%i6+1071],%g2
+	stx	%g2,[%i3-216]
+	ldx	[%i6+1063],%g2
+	stx	%g2,[%i3-208]
+	ldx	[%i6+1055],%g2
+	stx	%g2,[%i3-200]
+	ldx	[%i6+1047],%g2
+	stx	%g2,[%i3-192]
+	ldx	[%i6+1039],%g2
+	stx	%g2,[%i3-184]
+	ldx	[%i6+1031],%g2
+	stx	%g2,[%i3-176]
+	ldx	[%i6+1023],%g2
+	stx	%g2,[%i3-168]
+	ldx	[%i6+1015],%g2
+	stx	%g2,[%i3-160]
+	ldx	[%i6+1007],%g2
+	stx	%g2,[%i3-152]
+	ldx	[%i6+999],%g2
+	stx	%g2,[%i3-144]
+	ldx	[%i6+991],%g2
+	stx	%g2,[%i3-136]
+	ldx	[%i6+983],%g2
+	stx	%g2,[%i3-128]
+	ldx	[%i6+975],%g2
+	stx	%g2,[%i3-120]
+	ldx	[%i6+951],%g2
+	stx	%g2,[%i3-112]
+	stx	%g4,[%i3-104]
+	stx	%o0,[%i3-96]
+	stx	%o1,[%i3-88]
+	stx	%o2,[%i3-80]
+	stx	%o3,[%i3-72]
+	stx	%o4,[%i3-64]
+	stx	%o5,[%i3-56]
+	stx	%l0,[%i3-48]
+	stx	%l6,[%i3-40]
+	stx	%l7,[%i3-32]
+	stx	%i4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1072,%g1
+	sethi	%hh(s79S_info),%g2
+	sethi	%lm(s79S_info),%g3
+	or	%g2,%hm(s79S_info),%g2
+	or	%g3,%lo(s79S_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.Lccvz_end:
+.Ls7a3_entry_end:
+.section .rodata
+.align 8
+ccvJ_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	73
+	.byte	76
+	.byte	68
+	.byte	86
+	.byte	95
+	.byte	83
+	.byte	84
+	.byte	65
+	.byte	84
+	.byte	69
+	.byte	95
+	.byte	85
+	.byte	83
+	.byte	69
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79N_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79N_info:
+.LccvK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccvL
+	nop
+	b	.LccvM
+	nop
+.LccvK_end:
+.LccvL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccvL_end:
+.LccvM:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccvJ_str),%g1
+	sethi	%lm(ccvJ_str),%l2
+	or	%g1,%hm(ccvJ_str),%g1
+	or	%l2,%lo(ccvJ_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccvM_end:
+.Ls79N_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79P_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79P_info:
+.LccvO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccvP
+	nop
+	b	.LccvQ
+	nop
+.LccvO_end:
+.LccvQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccvS
+	nop
+	b	.LccvR
+	nop
+.LccvQ_end:
+.LccvS:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccvP
+	nop
+.LccvS_end:
+.LccvP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccvP_end:
+.LccvR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79N_info),%g1
+	sethi	%lm(s79N_info),%g2
+	or	%g1,%hm(s79N_info),%g1
+	or	%g2,%lo(s79N_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccvR_end:
+.Ls79P_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a4_info)+0
+	.quad	562640715776
+	.quad	64424509471
+.align 4
+s7a4_info:
+.LccvT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccvU
+	nop
+	b	.LccvV
+	nop
+.LccvT_end:
+.LccvV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1080,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccvX
+	nop
+	b	.LccvW
+	nop
+.LccvV_end:
+.LccvX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1080,%g2
+	stx	%g2,[%i1+904]
+	b	.LccvU
+	nop
+.LccvX_end:
+.LccvU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccvU_end:
+.LccvW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	stx	%l7,[%i6+991]
+	ldx	[%g1+1040],%l7
+	stx	%i4,[%i6+983]
+	ldx	[%g1+1048],%i4
+	ldx	[%g1+1056],%g1
+	stx	%g2,[%i6+975]
+	sethi	%hh(s7a3_info),%g2
+	stx	%g2,[%i6+967]
+	sethi	%lm(s7a3_info),%g2
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	or	%g2,%hm(s7a3_info),%g2
+	stx	%g2,[%i6+967]
+	ldx	[%i6+959],%g2
+	or	%g2,%lo(s7a3_info),%g2
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	sllx	%g2,32,%g2
+	stx	%g3,[%i6+951]
+	ldx	[%i6+959],%g3
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-1072]
+	ldx	[%i6+1911],%g2
+	stx	%g2,[%i3-1056]
+	ldx	[%i6+1903],%g2
+	stx	%g2,[%i3-1048]
+	ldx	[%i6+1895],%g2
+	stx	%g2,[%i3-1040]
+	ldx	[%i6+1887],%g2
+	stx	%g2,[%i3-1032]
+	ldx	[%i6+1879],%g2
+	stx	%g2,[%i3-1024]
+	ldx	[%i6+1871],%g2
+	stx	%g2,[%i3-1016]
+	ldx	[%i6+1863],%g2
+	stx	%g2,[%i3-1008]
+	ldx	[%i6+1855],%g2
+	stx	%g2,[%i3-1000]
+	ldx	[%i6+1847],%g2
+	stx	%g2,[%i3-992]
+	ldx	[%i6+1839],%g2
+	stx	%g2,[%i3-984]
+	ldx	[%i6+1831],%g2
+	stx	%g2,[%i3-976]
+	ldx	[%i6+1823],%g2
+	stx	%g2,[%i3-968]
+	ldx	[%i6+1815],%g2
+	stx	%g2,[%i3-960]
+	ldx	[%i6+1807],%g2
+	stx	%g2,[%i3-952]
+	ldx	[%i6+1799],%g2
+	stx	%g2,[%i3-944]
+	ldx	[%i6+1791],%g2
+	stx	%g2,[%i3-936]
+	ldx	[%i6+1783],%g2
+	stx	%g2,[%i3-928]
+	ldx	[%i6+1775],%g2
+	stx	%g2,[%i3-920]
+	ldx	[%i6+1767],%g2
+	stx	%g2,[%i3-912]
+	ldx	[%i6+1759],%g2
+	stx	%g2,[%i3-904]
+	ldx	[%i6+1751],%g2
+	stx	%g2,[%i3-896]
+	ldx	[%i6+1743],%g2
+	stx	%g2,[%i3-888]
+	ldx	[%i6+1735],%g2
+	stx	%g2,[%i3-880]
+	ldx	[%i6+1727],%g2
+	stx	%g2,[%i3-872]
+	ldx	[%i6+1719],%g2
+	stx	%g2,[%i3-864]
+	ldx	[%i6+1711],%g2
+	stx	%g2,[%i3-856]
+	ldx	[%i6+1703],%g2
+	stx	%g2,[%i3-848]
+	ldx	[%i6+1695],%g2
+	stx	%g2,[%i3-840]
+	ldx	[%i6+1687],%g2
+	stx	%g2,[%i3-832]
+	ldx	[%i6+1679],%g2
+	stx	%g2,[%i3-824]
+	ldx	[%i6+1671],%g2
+	stx	%g2,[%i3-816]
+	ldx	[%i6+1663],%g2
+	stx	%g2,[%i3-808]
+	ldx	[%i6+1655],%g2
+	stx	%g2,[%i3-800]
+	ldx	[%i6+1647],%g2
+	stx	%g2,[%i3-792]
+	ldx	[%i6+1639],%g2
+	stx	%g2,[%i3-784]
+	ldx	[%i6+1631],%g2
+	stx	%g2,[%i3-776]
+	ldx	[%i6+1623],%g2
+	stx	%g2,[%i3-768]
+	ldx	[%i6+1615],%g2
+	stx	%g2,[%i3-760]
+	ldx	[%i6+1607],%g2
+	stx	%g2,[%i3-752]
+	ldx	[%i6+1599],%g2
+	stx	%g2,[%i3-744]
+	ldx	[%i6+1591],%g2
+	stx	%g2,[%i3-736]
+	ldx	[%i6+1583],%g2
+	stx	%g2,[%i3-728]
+	ldx	[%i6+1575],%g2
+	stx	%g2,[%i3-720]
+	ldx	[%i6+1567],%g2
+	stx	%g2,[%i3-712]
+	ldx	[%i6+1559],%g2
+	stx	%g2,[%i3-704]
+	ldx	[%i6+1551],%g2
+	stx	%g2,[%i3-696]
+	ldx	[%i6+1543],%g2
+	stx	%g2,[%i3-688]
+	ldx	[%i6+1535],%g2
+	stx	%g2,[%i3-680]
+	ldx	[%i6+1527],%g2
+	stx	%g2,[%i3-672]
+	ldx	[%i6+1519],%g2
+	stx	%g2,[%i3-664]
+	ldx	[%i6+1511],%g2
+	stx	%g2,[%i3-656]
+	ldx	[%i6+1503],%g2
+	stx	%g2,[%i3-648]
+	ldx	[%i6+1495],%g2
+	stx	%g2,[%i3-640]
+	ldx	[%i6+1487],%g2
+	stx	%g2,[%i3-632]
+	ldx	[%i6+1479],%g2
+	stx	%g2,[%i3-624]
+	ldx	[%i6+1471],%g2
+	stx	%g2,[%i3-616]
+	ldx	[%i6+1463],%g2
+	stx	%g2,[%i3-608]
+	ldx	[%i6+1455],%g2
+	stx	%g2,[%i3-600]
+	ldx	[%i6+1447],%g2
+	stx	%g2,[%i3-592]
+	ldx	[%i6+1439],%g2
+	stx	%g2,[%i3-584]
+	ldx	[%i6+1431],%g2
+	stx	%g2,[%i3-576]
+	ldx	[%i6+1423],%g2
+	stx	%g2,[%i3-568]
+	ldx	[%i6+1415],%g2
+	stx	%g2,[%i3-560]
+	ldx	[%i6+1407],%g2
+	stx	%g2,[%i3-552]
+	ldx	[%i6+1399],%g2
+	stx	%g2,[%i3-544]
+	ldx	[%i6+1391],%g2
+	stx	%g2,[%i3-536]
+	ldx	[%i6+1383],%g2
+	stx	%g2,[%i3-528]
+	ldx	[%i6+1375],%g2
+	stx	%g2,[%i3-520]
+	ldx	[%i6+1367],%g2
+	stx	%g2,[%i3-512]
+	ldx	[%i6+1359],%g2
+	stx	%g2,[%i3-504]
+	ldx	[%i6+1351],%g2
+	stx	%g2,[%i3-496]
+	ldx	[%i6+1343],%g2
+	stx	%g2,[%i3-488]
+	ldx	[%i6+1335],%g2
+	stx	%g2,[%i3-480]
+	ldx	[%i6+1327],%g2
+	stx	%g2,[%i3-472]
+	ldx	[%i6+1319],%g2
+	stx	%g2,[%i3-464]
+	ldx	[%i6+1311],%g2
+	stx	%g2,[%i3-456]
+	ldx	[%i6+1303],%g2
+	stx	%g2,[%i3-448]
+	ldx	[%i6+1295],%g2
+	stx	%g2,[%i3-440]
+	ldx	[%i6+1287],%g2
+	stx	%g2,[%i3-432]
+	ldx	[%i6+1279],%g2
+	stx	%g2,[%i3-424]
+	ldx	[%i6+1271],%g2
+	stx	%g2,[%i3-416]
+	ldx	[%i6+1263],%g2
+	stx	%g2,[%i3-408]
+	ldx	[%i6+1255],%g2
+	stx	%g2,[%i3-400]
+	ldx	[%i6+1247],%g2
+	stx	%g2,[%i3-392]
+	ldx	[%i6+1239],%g2
+	stx	%g2,[%i3-384]
+	ldx	[%i6+1231],%g2
+	stx	%g2,[%i3-376]
+	ldx	[%i6+1223],%g2
+	stx	%g2,[%i3-368]
+	ldx	[%i6+1215],%g2
+	stx	%g2,[%i3-360]
+	ldx	[%i6+1207],%g2
+	stx	%g2,[%i3-352]
+	ldx	[%i6+1199],%g2
+	stx	%g2,[%i3-344]
+	ldx	[%i6+1191],%g2
+	stx	%g2,[%i3-336]
+	ldx	[%i6+1183],%g2
+	stx	%g2,[%i3-328]
+	ldx	[%i6+1175],%g2
+	stx	%g2,[%i3-320]
+	ldx	[%i6+1167],%g2
+	stx	%g2,[%i3-312]
+	ldx	[%i6+1159],%g2
+	stx	%g2,[%i3-304]
+	ldx	[%i6+1151],%g2
+	stx	%g2,[%i3-296]
+	ldx	[%i6+1143],%g2
+	stx	%g2,[%i3-288]
+	ldx	[%i6+1135],%g2
+	stx	%g2,[%i3-280]
+	ldx	[%i6+1127],%g2
+	stx	%g2,[%i3-272]
+	ldx	[%i6+1119],%g2
+	stx	%g2,[%i3-264]
+	ldx	[%i6+1111],%g2
+	stx	%g2,[%i3-256]
+	ldx	[%i6+1103],%g2
+	stx	%g2,[%i3-248]
+	ldx	[%i6+1095],%g2
+	stx	%g2,[%i3-240]
+	ldx	[%i6+1087],%g2
+	stx	%g2,[%i3-232]
+	ldx	[%i6+1079],%g2
+	stx	%g2,[%i3-224]
+	ldx	[%i6+1071],%g2
+	stx	%g2,[%i3-216]
+	ldx	[%i6+1063],%g2
+	stx	%g2,[%i3-208]
+	ldx	[%i6+1055],%g2
+	stx	%g2,[%i3-200]
+	ldx	[%i6+1047],%g2
+	stx	%g2,[%i3-192]
+	ldx	[%i6+1039],%g2
+	stx	%g2,[%i3-184]
+	ldx	[%i6+1031],%g2
+	stx	%g2,[%i3-176]
+	ldx	[%i6+1023],%g2
+	stx	%g2,[%i3-168]
+	ldx	[%i6+1015],%g2
+	stx	%g2,[%i3-160]
+	ldx	[%i6+1007],%g2
+	stx	%g2,[%i3-152]
+	ldx	[%i6+999],%g2
+	stx	%g2,[%i3-144]
+	ldx	[%i6+991],%g2
+	stx	%g2,[%i3-136]
+	ldx	[%i6+983],%g2
+	stx	%g2,[%i3-128]
+	ldx	[%i6+975],%g2
+	stx	%g2,[%i3-120]
+	ldx	[%i6+951],%g2
+	stx	%g2,[%i3-112]
+	stx	%g4,[%i3-104]
+	stx	%o0,[%i3-96]
+	stx	%o1,[%i3-88]
+	stx	%o2,[%i3-80]
+	stx	%o3,[%i3-72]
+	stx	%o4,[%i3-64]
+	stx	%o5,[%i3-56]
+	stx	%l0,[%i3-48]
+	stx	%l6,[%i3-40]
+	stx	%l7,[%i3-32]
+	stx	%i4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1072,%g1
+	sethi	%hh(s79P_info),%g2
+	sethi	%lm(s79P_info),%g3
+	or	%g2,%hm(s79P_info),%g2
+	or	%g3,%lo(s79P_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccvW_end:
+.Ls7a4_entry_end:
+.section .rodata
+.align 8
+ccw6_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79K_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79K_info:
+.Lccw7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccw8
+	nop
+	b	.Lccw9
+	nop
+.Lccw7_end:
+.Lccw8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccw8_end:
+.Lccw9:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccw6_str),%g1
+	sethi	%lm(ccw6_str),%l2
+	or	%g1,%hm(ccw6_str),%g1
+	or	%l2,%lo(ccw6_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.Lccw9_end:
+.Ls79K_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79M_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79M_info:
+.Lccwb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccwc
+	nop
+	b	.Lccwd
+	nop
+.Lccwb_end:
+.Lccwd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccwf
+	nop
+	b	.Lccwe
+	nop
+.Lccwd_end:
+.Lccwf:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccwc
+	nop
+.Lccwf_end:
+.Lccwc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccwc_end:
+.Lccwe:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79K_info),%g1
+	sethi	%lm(s79K_info),%g2
+	or	%g1,%hm(s79K_info),%g1
+	or	%g2,%lo(s79K_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccwe_end:
+.Ls79M_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a5_info)+0
+	.quad	21474836481
+	.quad	558345748480
+	.quad	34359738399
+.align 4
+s7a5_info:
+.Lccwg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.Lccwh
+	nop
+	b	.Lccwi
+	nop
+.Lccwg_end:
+.Lccwi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1080,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.Lccwk
+	nop
+	b	.Lccwj
+	nop
+.Lccwi_end:
+.Lccwk:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1080,%g3
+	stx	%g3,[%i1+904]
+	b	.Lccwh
+	nop
+.Lccwk_end:
+.Lccwh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.Lccwh_end:
+.Lccwj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	stx	%o1,[%i6+1023]
+	ldx	[%g2+991],%o1
+	stx	%o2,[%i6+1015]
+	ldx	[%g2+999],%o2
+	stx	%o3,[%i6+1007]
+	ldx	[%g2+1007],%o3
+	stx	%o4,[%i6+999]
+	ldx	[%g2+1015],%o4
+	stx	%o5,[%i6+991]
+	ldx	[%g2+1023],%o5
+	stx	%l0,[%i6+983]
+	ldx	[%g2+1031],%l0
+	ldx	[%g2+1039],%g2
+	stx	%l6,[%i6+975]
+	sethi	%hh(s7a4_info),%l6
+	stx	%l6,[%i6+967]
+	sethi	%lm(s7a4_info),%l6
+	stx	%l6,[%i6+959]
+	ldx	[%i6+967],%l6
+	or	%l6,%hm(s7a4_info),%l6
+	stx	%l6,[%i6+967]
+	ldx	[%i6+959],%l6
+	or	%l6,%lo(s7a4_info),%l6
+	stx	%l6,[%i6+959]
+	ldx	[%i6+967],%l6
+	sllx	%l6,32,%l6
+	stx	%l7,[%i6+951]
+	ldx	[%i6+959],%l7
+	or	%l7,%l6,%l7
+	stx	%l7,[%i3-1072]
+	ldx	[%i6+1911],%l6
+	stx	%l6,[%i3-1056]
+	ldx	[%i6+1903],%l6
+	stx	%l6,[%i3-1048]
+	ldx	[%i6+1895],%l6
+	stx	%l6,[%i3-1040]
+	ldx	[%i6+1887],%l6
+	stx	%l6,[%i3-1032]
+	ldx	[%i6+1879],%l6
+	stx	%l6,[%i3-1024]
+	ldx	[%i6+1871],%l6
+	stx	%l6,[%i3-1016]
+	ldx	[%i6+1863],%l6
+	stx	%l6,[%i3-1008]
+	ldx	[%i6+1855],%l6
+	stx	%l6,[%i3-1000]
+	ldx	[%i6+1847],%l6
+	stx	%l6,[%i3-992]
+	ldx	[%i6+1839],%l6
+	stx	%l6,[%i3-984]
+	ldx	[%i6+1831],%l6
+	stx	%l6,[%i3-976]
+	ldx	[%i6+1823],%l6
+	stx	%l6,[%i3-968]
+	ldx	[%i6+1815],%l6
+	stx	%l6,[%i3-960]
+	ldx	[%i6+1807],%l6
+	stx	%l6,[%i3-952]
+	ldx	[%i6+1799],%l6
+	stx	%l6,[%i3-944]
+	ldx	[%i6+1791],%l6
+	stx	%l6,[%i3-936]
+	ldx	[%i6+1783],%l6
+	stx	%l6,[%i3-928]
+	ldx	[%i6+1775],%l6
+	stx	%l6,[%i3-920]
+	ldx	[%i6+1767],%l6
+	stx	%l6,[%i3-912]
+	ldx	[%i6+1759],%l6
+	stx	%l6,[%i3-904]
+	ldx	[%i6+1751],%l6
+	stx	%l6,[%i3-896]
+	ldx	[%i6+1743],%l6
+	stx	%l6,[%i3-888]
+	ldx	[%i6+1735],%l6
+	stx	%l6,[%i3-880]
+	ldx	[%i6+1727],%l6
+	stx	%l6,[%i3-872]
+	ldx	[%i6+1719],%l6
+	stx	%l6,[%i3-864]
+	ldx	[%i6+1711],%l6
+	stx	%l6,[%i3-856]
+	ldx	[%i6+1703],%l6
+	stx	%l6,[%i3-848]
+	ldx	[%i6+1695],%l6
+	stx	%l6,[%i3-840]
+	ldx	[%i6+1687],%l6
+	stx	%l6,[%i3-832]
+	ldx	[%i6+1679],%l6
+	stx	%l6,[%i3-824]
+	ldx	[%i6+1671],%l6
+	stx	%l6,[%i3-816]
+	ldx	[%i6+1663],%l6
+	stx	%l6,[%i3-808]
+	ldx	[%i6+1655],%l6
+	stx	%l6,[%i3-800]
+	ldx	[%i6+1647],%l6
+	stx	%l6,[%i3-792]
+	ldx	[%i6+1639],%l6
+	stx	%l6,[%i3-784]
+	ldx	[%i6+1631],%l6
+	stx	%l6,[%i3-776]
+	ldx	[%i6+1623],%l6
+	stx	%l6,[%i3-768]
+	ldx	[%i6+1615],%l6
+	stx	%l6,[%i3-760]
+	ldx	[%i6+1607],%l6
+	stx	%l6,[%i3-752]
+	ldx	[%i6+1599],%l6
+	stx	%l6,[%i3-744]
+	ldx	[%i6+1591],%l6
+	stx	%l6,[%i3-736]
+	ldx	[%i6+1583],%l6
+	stx	%l6,[%i3-728]
+	ldx	[%i6+1575],%l6
+	stx	%l6,[%i3-720]
+	ldx	[%i6+1567],%l6
+	stx	%l6,[%i3-712]
+	ldx	[%i6+1559],%l6
+	stx	%l6,[%i3-704]
+	ldx	[%i6+1551],%l6
+	stx	%l6,[%i3-696]
+	ldx	[%i6+1543],%l6
+	stx	%l6,[%i3-688]
+	ldx	[%i6+1535],%l6
+	stx	%l6,[%i3-680]
+	ldx	[%i6+1527],%l6
+	stx	%l6,[%i3-672]
+	ldx	[%i6+1519],%l6
+	stx	%l6,[%i3-664]
+	ldx	[%i6+1511],%l6
+	stx	%l6,[%i3-656]
+	ldx	[%i6+1503],%l6
+	stx	%l6,[%i3-648]
+	ldx	[%i6+1495],%l6
+	stx	%l6,[%i3-640]
+	ldx	[%i6+1487],%l6
+	stx	%l6,[%i3-632]
+	ldx	[%i6+1479],%l6
+	stx	%l6,[%i3-624]
+	ldx	[%i6+1471],%l6
+	stx	%l6,[%i3-616]
+	ldx	[%i6+1463],%l6
+	stx	%l6,[%i3-608]
+	ldx	[%i6+1455],%l6
+	stx	%l6,[%i3-600]
+	ldx	[%i6+1447],%l6
+	stx	%l6,[%i3-592]
+	ldx	[%i6+1439],%l6
+	stx	%l6,[%i3-584]
+	ldx	[%i6+1431],%l6
+	stx	%l6,[%i3-576]
+	ldx	[%i6+1423],%l6
+	stx	%l6,[%i3-568]
+	ldx	[%i6+1415],%l6
+	stx	%l6,[%i3-560]
+	ldx	[%i6+1407],%l6
+	stx	%l6,[%i3-552]
+	ldx	[%i6+1399],%l6
+	stx	%l6,[%i3-544]
+	ldx	[%i6+1391],%l6
+	stx	%l6,[%i3-536]
+	ldx	[%i6+1383],%l6
+	stx	%l6,[%i3-528]
+	ldx	[%i6+1375],%l6
+	stx	%l6,[%i3-520]
+	ldx	[%i6+1367],%l6
+	stx	%l6,[%i3-512]
+	ldx	[%i6+1359],%l6
+	stx	%l6,[%i3-504]
+	ldx	[%i6+1351],%l6
+	stx	%l6,[%i3-496]
+	ldx	[%i6+1343],%l6
+	stx	%l6,[%i3-488]
+	ldx	[%i6+1335],%l6
+	stx	%l6,[%i3-480]
+	ldx	[%i6+1327],%l6
+	stx	%l6,[%i3-472]
+	ldx	[%i6+1319],%l6
+	stx	%l6,[%i3-464]
+	ldx	[%i6+1311],%l6
+	stx	%l6,[%i3-456]
+	ldx	[%i6+1303],%l6
+	stx	%l6,[%i3-448]
+	ldx	[%i6+1295],%l6
+	stx	%l6,[%i3-440]
+	ldx	[%i6+1287],%l6
+	stx	%l6,[%i3-432]
+	ldx	[%i6+1279],%l6
+	stx	%l6,[%i3-424]
+	ldx	[%i6+1271],%l6
+	stx	%l6,[%i3-416]
+	ldx	[%i6+1263],%l6
+	stx	%l6,[%i3-408]
+	ldx	[%i6+1255],%l6
+	stx	%l6,[%i3-400]
+	ldx	[%i6+1247],%l6
+	stx	%l6,[%i3-392]
+	ldx	[%i6+1239],%l6
+	stx	%l6,[%i3-384]
+	ldx	[%i6+1231],%l6
+	stx	%l6,[%i3-376]
+	ldx	[%i6+1223],%l6
+	stx	%l6,[%i3-368]
+	ldx	[%i6+1215],%l6
+	stx	%l6,[%i3-360]
+	ldx	[%i6+1207],%l6
+	stx	%l6,[%i3-352]
+	ldx	[%i6+1199],%l6
+	stx	%l6,[%i3-344]
+	ldx	[%i6+1191],%l6
+	stx	%l6,[%i3-336]
+	ldx	[%i6+1183],%l6
+	stx	%l6,[%i3-328]
+	ldx	[%i6+1175],%l6
+	stx	%l6,[%i3-320]
+	ldx	[%i6+1167],%l6
+	stx	%l6,[%i3-312]
+	ldx	[%i6+1159],%l6
+	stx	%l6,[%i3-304]
+	ldx	[%i6+1151],%l6
+	stx	%l6,[%i3-296]
+	ldx	[%i6+1143],%l6
+	stx	%l6,[%i3-288]
+	ldx	[%i6+1135],%l6
+	stx	%l6,[%i3-280]
+	ldx	[%i6+1127],%l6
+	stx	%l6,[%i3-272]
+	ldx	[%i6+1119],%l6
+	stx	%l6,[%i3-264]
+	ldx	[%i6+1111],%l6
+	stx	%l6,[%i3-256]
+	ldx	[%i6+1103],%l6
+	stx	%l6,[%i3-248]
+	ldx	[%i6+1095],%l6
+	stx	%l6,[%i3-240]
+	ldx	[%i6+1087],%l6
+	stx	%l6,[%i3-232]
+	ldx	[%i6+1079],%l6
+	stx	%l6,[%i3-224]
+	ldx	[%i6+1071],%l6
+	stx	%l6,[%i3-216]
+	ldx	[%i6+1063],%l6
+	stx	%l6,[%i3-208]
+	ldx	[%i6+1055],%l6
+	stx	%l6,[%i3-200]
+	ldx	[%i6+1047],%l6
+	stx	%l6,[%i3-192]
+	ldx	[%i6+1039],%l6
+	stx	%l6,[%i3-184]
+	ldx	[%i6+1031],%l6
+	stx	%l6,[%i3-176]
+	ldx	[%i6+1023],%l6
+	stx	%l6,[%i3-168]
+	ldx	[%i6+1015],%l6
+	stx	%l6,[%i3-160]
+	ldx	[%i6+1007],%l6
+	stx	%l6,[%i3-152]
+	ldx	[%i6+999],%l6
+	stx	%l6,[%i3-144]
+	ldx	[%i6+991],%l6
+	stx	%l6,[%i3-136]
+	ldx	[%i6+983],%l6
+	stx	%l6,[%i3-128]
+	ldx	[%i6+975],%l6
+	stx	%l6,[%i3-120]
+	ldx	[%i6+951],%l6
+	stx	%l6,[%i3-112]
+	stx	%i4,[%i3-104]
+	stx	%g3,[%i3-96]
+	stx	%g4,[%i3-88]
+	stx	%o0,[%i3-80]
+	stx	%o1,[%i3-72]
+	stx	%o2,[%i3-64]
+	stx	%o3,[%i3-56]
+	stx	%o4,[%i3-48]
+	stx	%o5,[%i3-40]
+	stx	%l0,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1072,%g1
+	sethi	%hh(s79M_info),%g2
+	sethi	%lm(s79M_info),%g3
+	or	%g2,%hm(s79M_info),%g2
+	or	%g3,%lo(s79M_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.Lccwj_end:
+.Ls7a5_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79H_info)+24
+	.quad	0
+	.quad	64424509441
+.align 4
+s79H_info:
+.Lccwt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccwu
+	nop
+	b	.Lccwv
+	nop
+.Lccwt_end:
+.Lccwu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccwu_end:
+.Lccwv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInteger_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInteger_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInteger_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInteger_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.Lccwv_end:
+.Ls79H_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79I_info)+24
+	.quad	0
+	.quad	64424509443
+.align 4
+s79I_info:
+.Lccww:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccwx
+	nop
+	b	.Lccwy
+	nop
+.Lccww_end:
+.Lccwy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccwA
+	nop
+	b	.Lccwz
+	nop
+.Lccwy_end:
+.LccwA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccwx
+	nop
+.LccwA_end:
+.Lccwx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccwx_end:
+.Lccwz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79H_info),%g1
+	sethi	%lm(s79H_info),%g2
+	or	%g1,%hm(s79H_info),%g1
+	or	%g2,%lo(s79H_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccwz_end:
+.Ls79I_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a6_info)+0
+	.quad	558345748480
+	.quad	64424509471
+.align 4
+s7a6_info:
+.LccwB:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccwC
+	nop
+	b	.LccwD
+	nop
+.LccwB_end:
+.LccwD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1064,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccwF
+	nop
+	b	.LccwE
+	nop
+.LccwD_end:
+.LccwF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1064,%g2
+	stx	%g2,[%i1+904]
+	b	.LccwC
+	nop
+.LccwF_end:
+.LccwC:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccwC_end:
+.LccwE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	stx	%l7,[%i6+991]
+	ldx	[%g1+1040],%l7
+	ldx	[%g1+1048],%g1
+	stx	%i4,[%i6+983]
+	sethi	%hh(s7a5_info),%i4
+	stx	%i4,[%i6+975]
+	sethi	%lm(s7a5_info),%i4
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	or	%i4,%hm(s7a5_info),%i4
+	stx	%i4,[%i6+975]
+	ldx	[%i6+967],%i4
+	or	%i4,%lo(s7a5_info),%i4
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	sllx	%i4,32,%i4
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	or	%g2,%i4,%g2
+	stx	%g2,[%i3-1056]
+	ldx	[%i6+1911],%g2
+	stx	%g2,[%i3-1048]
+	ldx	[%i6+1903],%g2
+	stx	%g2,[%i3-1040]
+	ldx	[%i6+1895],%g2
+	stx	%g2,[%i3-1032]
+	ldx	[%i6+1887],%g2
+	stx	%g2,[%i3-1024]
+	ldx	[%i6+1879],%g2
+	stx	%g2,[%i3-1016]
+	ldx	[%i6+1871],%g2
+	stx	%g2,[%i3-1008]
+	ldx	[%i6+1863],%g2
+	stx	%g2,[%i3-1000]
+	ldx	[%i6+1855],%g2
+	stx	%g2,[%i3-992]
+	ldx	[%i6+1847],%g2
+	stx	%g2,[%i3-984]
+	ldx	[%i6+1839],%g2
+	stx	%g2,[%i3-976]
+	ldx	[%i6+1831],%g2
+	stx	%g2,[%i3-968]
+	ldx	[%i6+1823],%g2
+	stx	%g2,[%i3-960]
+	ldx	[%i6+1815],%g2
+	stx	%g2,[%i3-952]
+	ldx	[%i6+1807],%g2
+	stx	%g2,[%i3-944]
+	ldx	[%i6+1799],%g2
+	stx	%g2,[%i3-936]
+	ldx	[%i6+1791],%g2
+	stx	%g2,[%i3-928]
+	ldx	[%i6+1783],%g2
+	stx	%g2,[%i3-920]
+	ldx	[%i6+1775],%g2
+	stx	%g2,[%i3-912]
+	ldx	[%i6+1767],%g2
+	stx	%g2,[%i3-904]
+	ldx	[%i6+1759],%g2
+	stx	%g2,[%i3-896]
+	ldx	[%i6+1751],%g2
+	stx	%g2,[%i3-888]
+	ldx	[%i6+1743],%g2
+	stx	%g2,[%i3-880]
+	ldx	[%i6+1735],%g2
+	stx	%g2,[%i3-872]
+	ldx	[%i6+1727],%g2
+	stx	%g2,[%i3-864]
+	ldx	[%i6+1719],%g2
+	stx	%g2,[%i3-856]
+	ldx	[%i6+1711],%g2
+	stx	%g2,[%i3-848]
+	ldx	[%i6+1703],%g2
+	stx	%g2,[%i3-840]
+	ldx	[%i6+1695],%g2
+	stx	%g2,[%i3-832]
+	ldx	[%i6+1687],%g2
+	stx	%g2,[%i3-824]
+	ldx	[%i6+1679],%g2
+	stx	%g2,[%i3-816]
+	ldx	[%i6+1671],%g2
+	stx	%g2,[%i3-808]
+	ldx	[%i6+1663],%g2
+	stx	%g2,[%i3-800]
+	ldx	[%i6+1655],%g2
+	stx	%g2,[%i3-792]
+	ldx	[%i6+1647],%g2
+	stx	%g2,[%i3-784]
+	ldx	[%i6+1639],%g2
+	stx	%g2,[%i3-776]
+	ldx	[%i6+1631],%g2
+	stx	%g2,[%i3-768]
+	ldx	[%i6+1623],%g2
+	stx	%g2,[%i3-760]
+	ldx	[%i6+1615],%g2
+	stx	%g2,[%i3-752]
+	ldx	[%i6+1607],%g2
+	stx	%g2,[%i3-744]
+	ldx	[%i6+1599],%g2
+	stx	%g2,[%i3-736]
+	ldx	[%i6+1591],%g2
+	stx	%g2,[%i3-728]
+	ldx	[%i6+1583],%g2
+	stx	%g2,[%i3-720]
+	ldx	[%i6+1575],%g2
+	stx	%g2,[%i3-712]
+	ldx	[%i6+1567],%g2
+	stx	%g2,[%i3-704]
+	ldx	[%i6+1559],%g2
+	stx	%g2,[%i3-696]
+	ldx	[%i6+1551],%g2
+	stx	%g2,[%i3-688]
+	ldx	[%i6+1543],%g2
+	stx	%g2,[%i3-680]
+	ldx	[%i6+1535],%g2
+	stx	%g2,[%i3-672]
+	ldx	[%i6+1527],%g2
+	stx	%g2,[%i3-664]
+	ldx	[%i6+1519],%g2
+	stx	%g2,[%i3-656]
+	ldx	[%i6+1511],%g2
+	stx	%g2,[%i3-648]
+	ldx	[%i6+1503],%g2
+	stx	%g2,[%i3-640]
+	ldx	[%i6+1495],%g2
+	stx	%g2,[%i3-632]
+	ldx	[%i6+1487],%g2
+	stx	%g2,[%i3-624]
+	ldx	[%i6+1479],%g2
+	stx	%g2,[%i3-616]
+	ldx	[%i6+1471],%g2
+	stx	%g2,[%i3-608]
+	ldx	[%i6+1463],%g2
+	stx	%g2,[%i3-600]
+	ldx	[%i6+1455],%g2
+	stx	%g2,[%i3-592]
+	ldx	[%i6+1447],%g2
+	stx	%g2,[%i3-584]
+	ldx	[%i6+1439],%g2
+	stx	%g2,[%i3-576]
+	ldx	[%i6+1431],%g2
+	stx	%g2,[%i3-568]
+	ldx	[%i6+1423],%g2
+	stx	%g2,[%i3-560]
+	ldx	[%i6+1415],%g2
+	stx	%g2,[%i3-552]
+	ldx	[%i6+1407],%g2
+	stx	%g2,[%i3-544]
+	ldx	[%i6+1399],%g2
+	stx	%g2,[%i3-536]
+	ldx	[%i6+1391],%g2
+	stx	%g2,[%i3-528]
+	ldx	[%i6+1383],%g2
+	stx	%g2,[%i3-520]
+	ldx	[%i6+1375],%g2
+	stx	%g2,[%i3-512]
+	ldx	[%i6+1367],%g2
+	stx	%g2,[%i3-504]
+	ldx	[%i6+1359],%g2
+	stx	%g2,[%i3-496]
+	ldx	[%i6+1351],%g2
+	stx	%g2,[%i3-488]
+	ldx	[%i6+1343],%g2
+	stx	%g2,[%i3-480]
+	ldx	[%i6+1335],%g2
+	stx	%g2,[%i3-472]
+	ldx	[%i6+1327],%g2
+	stx	%g2,[%i3-464]
+	ldx	[%i6+1319],%g2
+	stx	%g2,[%i3-456]
+	ldx	[%i6+1311],%g2
+	stx	%g2,[%i3-448]
+	ldx	[%i6+1303],%g2
+	stx	%g2,[%i3-440]
+	ldx	[%i6+1295],%g2
+	stx	%g2,[%i3-432]
+	ldx	[%i6+1287],%g2
+	stx	%g2,[%i3-424]
+	ldx	[%i6+1279],%g2
+	stx	%g2,[%i3-416]
+	ldx	[%i6+1271],%g2
+	stx	%g2,[%i3-408]
+	ldx	[%i6+1263],%g2
+	stx	%g2,[%i3-400]
+	ldx	[%i6+1255],%g2
+	stx	%g2,[%i3-392]
+	ldx	[%i6+1247],%g2
+	stx	%g2,[%i3-384]
+	ldx	[%i6+1239],%g2
+	stx	%g2,[%i3-376]
+	ldx	[%i6+1231],%g2
+	stx	%g2,[%i3-368]
+	ldx	[%i6+1223],%g2
+	stx	%g2,[%i3-360]
+	ldx	[%i6+1215],%g2
+	stx	%g2,[%i3-352]
+	ldx	[%i6+1207],%g2
+	stx	%g2,[%i3-344]
+	ldx	[%i6+1199],%g2
+	stx	%g2,[%i3-336]
+	ldx	[%i6+1191],%g2
+	stx	%g2,[%i3-328]
+	ldx	[%i6+1183],%g2
+	stx	%g2,[%i3-320]
+	ldx	[%i6+1175],%g2
+	stx	%g2,[%i3-312]
+	ldx	[%i6+1167],%g2
+	stx	%g2,[%i3-304]
+	ldx	[%i6+1159],%g2
+	stx	%g2,[%i3-296]
+	ldx	[%i6+1151],%g2
+	stx	%g2,[%i3-288]
+	ldx	[%i6+1143],%g2
+	stx	%g2,[%i3-280]
+	ldx	[%i6+1135],%g2
+	stx	%g2,[%i3-272]
+	ldx	[%i6+1127],%g2
+	stx	%g2,[%i3-264]
+	ldx	[%i6+1119],%g2
+	stx	%g2,[%i3-256]
+	ldx	[%i6+1111],%g2
+	stx	%g2,[%i3-248]
+	ldx	[%i6+1103],%g2
+	stx	%g2,[%i3-240]
+	ldx	[%i6+1095],%g2
+	stx	%g2,[%i3-232]
+	ldx	[%i6+1087],%g2
+	stx	%g2,[%i3-224]
+	ldx	[%i6+1079],%g2
+	stx	%g2,[%i3-216]
+	ldx	[%i6+1071],%g2
+	stx	%g2,[%i3-208]
+	ldx	[%i6+1063],%g2
+	stx	%g2,[%i3-200]
+	ldx	[%i6+1055],%g2
+	stx	%g2,[%i3-192]
+	ldx	[%i6+1047],%g2
+	stx	%g2,[%i3-184]
+	ldx	[%i6+1039],%g2
+	stx	%g2,[%i3-176]
+	ldx	[%i6+1031],%g2
+	stx	%g2,[%i3-168]
+	ldx	[%i6+1023],%g2
+	stx	%g2,[%i3-160]
+	ldx	[%i6+1015],%g2
+	stx	%g2,[%i3-152]
+	ldx	[%i6+1007],%g2
+	stx	%g2,[%i3-144]
+	ldx	[%i6+999],%g2
+	stx	%g2,[%i3-136]
+	ldx	[%i6+991],%g2
+	stx	%g2,[%i3-128]
+	ldx	[%i6+983],%g2
+	stx	%g2,[%i3-120]
+	ldx	[%i6+959],%g2
+	stx	%g2,[%i3-112]
+	stx	%g3,[%i3-104]
+	stx	%g4,[%i3-96]
+	stx	%o0,[%i3-88]
+	stx	%o1,[%i3-80]
+	stx	%o2,[%i3-72]
+	stx	%o3,[%i3-64]
+	stx	%o4,[%i3-56]
+	stx	%o5,[%i3-48]
+	stx	%l0,[%i3-40]
+	stx	%l6,[%i3-32]
+	stx	%l7,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1055,%g1
+	sethi	%hh(s79I_info),%g2
+	sethi	%lm(s79I_info),%g3
+	or	%g2,%hm(s79I_info),%g2
+	or	%g3,%lo(s79I_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccwE_end:
+.Ls7a6_entry_end:
+.section .rodata
+.align 8
+ccwO_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79E_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79E_info:
+.LccwP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccwQ
+	nop
+	b	.LccwR
+	nop
+.LccwP_end:
+.LccwQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccwQ_end:
+.LccwR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccwO_str),%g1
+	sethi	%lm(ccwO_str),%l2
+	or	%g1,%hm(ccwO_str),%g1
+	or	%l2,%lo(ccwO_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccwR_end:
+.Ls79E_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79G_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79G_info:
+.LccwT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccwU
+	nop
+	b	.LccwV
+	nop
+.LccwT_end:
+.LccwV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccwX
+	nop
+	b	.LccwW
+	nop
+.LccwV_end:
+.LccwX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccwU
+	nop
+.LccwX_end:
+.LccwU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccwU_end:
+.LccwW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79E_info),%g1
+	sethi	%lm(s79E_info),%g2
+	or	%g1,%hm(s79E_info),%g1
+	or	%g2,%lo(s79E_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccwW_end:
+.Ls79G_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a7_info)+0
+	.quad	558345748480
+	.quad	64424509471
+.align 4
+s7a7_info:
+.LccwY:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccwZ
+	nop
+	b	.Lccx0
+	nop
+.LccwY_end:
+.Lccx0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1072,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccx2
+	nop
+	b	.Lccx1
+	nop
+.Lccx0_end:
+.Lccx2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1072,%g2
+	stx	%g2,[%i1+904]
+	b	.LccwZ
+	nop
+.Lccx2_end:
+.LccwZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccwZ_end:
+.Lccx1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	stx	%l7,[%i6+991]
+	ldx	[%g1+1040],%l7
+	ldx	[%g1+1048],%g1
+	stx	%i4,[%i6+983]
+	sethi	%hh(s7a6_info),%i4
+	stx	%i4,[%i6+975]
+	sethi	%lm(s7a6_info),%i4
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	or	%i4,%hm(s7a6_info),%i4
+	stx	%i4,[%i6+975]
+	ldx	[%i6+967],%i4
+	or	%i4,%lo(s7a6_info),%i4
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	sllx	%i4,32,%i4
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	or	%g2,%i4,%g2
+	stx	%g2,[%i3-1064]
+	ldx	[%i6+1911],%g2
+	stx	%g2,[%i3-1048]
+	ldx	[%i6+1903],%g2
+	stx	%g2,[%i3-1040]
+	ldx	[%i6+1895],%g2
+	stx	%g2,[%i3-1032]
+	ldx	[%i6+1887],%g2
+	stx	%g2,[%i3-1024]
+	ldx	[%i6+1879],%g2
+	stx	%g2,[%i3-1016]
+	ldx	[%i6+1871],%g2
+	stx	%g2,[%i3-1008]
+	ldx	[%i6+1863],%g2
+	stx	%g2,[%i3-1000]
+	ldx	[%i6+1855],%g2
+	stx	%g2,[%i3-992]
+	ldx	[%i6+1847],%g2
+	stx	%g2,[%i3-984]
+	ldx	[%i6+1839],%g2
+	stx	%g2,[%i3-976]
+	ldx	[%i6+1831],%g2
+	stx	%g2,[%i3-968]
+	ldx	[%i6+1823],%g2
+	stx	%g2,[%i3-960]
+	ldx	[%i6+1815],%g2
+	stx	%g2,[%i3-952]
+	ldx	[%i6+1807],%g2
+	stx	%g2,[%i3-944]
+	ldx	[%i6+1799],%g2
+	stx	%g2,[%i3-936]
+	ldx	[%i6+1791],%g2
+	stx	%g2,[%i3-928]
+	ldx	[%i6+1783],%g2
+	stx	%g2,[%i3-920]
+	ldx	[%i6+1775],%g2
+	stx	%g2,[%i3-912]
+	ldx	[%i6+1767],%g2
+	stx	%g2,[%i3-904]
+	ldx	[%i6+1759],%g2
+	stx	%g2,[%i3-896]
+	ldx	[%i6+1751],%g2
+	stx	%g2,[%i3-888]
+	ldx	[%i6+1743],%g2
+	stx	%g2,[%i3-880]
+	ldx	[%i6+1735],%g2
+	stx	%g2,[%i3-872]
+	ldx	[%i6+1727],%g2
+	stx	%g2,[%i3-864]
+	ldx	[%i6+1719],%g2
+	stx	%g2,[%i3-856]
+	ldx	[%i6+1711],%g2
+	stx	%g2,[%i3-848]
+	ldx	[%i6+1703],%g2
+	stx	%g2,[%i3-840]
+	ldx	[%i6+1695],%g2
+	stx	%g2,[%i3-832]
+	ldx	[%i6+1687],%g2
+	stx	%g2,[%i3-824]
+	ldx	[%i6+1679],%g2
+	stx	%g2,[%i3-816]
+	ldx	[%i6+1671],%g2
+	stx	%g2,[%i3-808]
+	ldx	[%i6+1663],%g2
+	stx	%g2,[%i3-800]
+	ldx	[%i6+1655],%g2
+	stx	%g2,[%i3-792]
+	ldx	[%i6+1647],%g2
+	stx	%g2,[%i3-784]
+	ldx	[%i6+1639],%g2
+	stx	%g2,[%i3-776]
+	ldx	[%i6+1631],%g2
+	stx	%g2,[%i3-768]
+	ldx	[%i6+1623],%g2
+	stx	%g2,[%i3-760]
+	ldx	[%i6+1615],%g2
+	stx	%g2,[%i3-752]
+	ldx	[%i6+1607],%g2
+	stx	%g2,[%i3-744]
+	ldx	[%i6+1599],%g2
+	stx	%g2,[%i3-736]
+	ldx	[%i6+1591],%g2
+	stx	%g2,[%i3-728]
+	ldx	[%i6+1583],%g2
+	stx	%g2,[%i3-720]
+	ldx	[%i6+1575],%g2
+	stx	%g2,[%i3-712]
+	ldx	[%i6+1567],%g2
+	stx	%g2,[%i3-704]
+	ldx	[%i6+1559],%g2
+	stx	%g2,[%i3-696]
+	ldx	[%i6+1551],%g2
+	stx	%g2,[%i3-688]
+	ldx	[%i6+1543],%g2
+	stx	%g2,[%i3-680]
+	ldx	[%i6+1535],%g2
+	stx	%g2,[%i3-672]
+	ldx	[%i6+1527],%g2
+	stx	%g2,[%i3-664]
+	ldx	[%i6+1519],%g2
+	stx	%g2,[%i3-656]
+	ldx	[%i6+1511],%g2
+	stx	%g2,[%i3-648]
+	ldx	[%i6+1503],%g2
+	stx	%g2,[%i3-640]
+	ldx	[%i6+1495],%g2
+	stx	%g2,[%i3-632]
+	ldx	[%i6+1487],%g2
+	stx	%g2,[%i3-624]
+	ldx	[%i6+1479],%g2
+	stx	%g2,[%i3-616]
+	ldx	[%i6+1471],%g2
+	stx	%g2,[%i3-608]
+	ldx	[%i6+1463],%g2
+	stx	%g2,[%i3-600]
+	ldx	[%i6+1455],%g2
+	stx	%g2,[%i3-592]
+	ldx	[%i6+1447],%g2
+	stx	%g2,[%i3-584]
+	ldx	[%i6+1439],%g2
+	stx	%g2,[%i3-576]
+	ldx	[%i6+1431],%g2
+	stx	%g2,[%i3-568]
+	ldx	[%i6+1423],%g2
+	stx	%g2,[%i3-560]
+	ldx	[%i6+1415],%g2
+	stx	%g2,[%i3-552]
+	ldx	[%i6+1407],%g2
+	stx	%g2,[%i3-544]
+	ldx	[%i6+1399],%g2
+	stx	%g2,[%i3-536]
+	ldx	[%i6+1391],%g2
+	stx	%g2,[%i3-528]
+	ldx	[%i6+1383],%g2
+	stx	%g2,[%i3-520]
+	ldx	[%i6+1375],%g2
+	stx	%g2,[%i3-512]
+	ldx	[%i6+1367],%g2
+	stx	%g2,[%i3-504]
+	ldx	[%i6+1359],%g2
+	stx	%g2,[%i3-496]
+	ldx	[%i6+1351],%g2
+	stx	%g2,[%i3-488]
+	ldx	[%i6+1343],%g2
+	stx	%g2,[%i3-480]
+	ldx	[%i6+1335],%g2
+	stx	%g2,[%i3-472]
+	ldx	[%i6+1327],%g2
+	stx	%g2,[%i3-464]
+	ldx	[%i6+1319],%g2
+	stx	%g2,[%i3-456]
+	ldx	[%i6+1311],%g2
+	stx	%g2,[%i3-448]
+	ldx	[%i6+1303],%g2
+	stx	%g2,[%i3-440]
+	ldx	[%i6+1295],%g2
+	stx	%g2,[%i3-432]
+	ldx	[%i6+1287],%g2
+	stx	%g2,[%i3-424]
+	ldx	[%i6+1279],%g2
+	stx	%g2,[%i3-416]
+	ldx	[%i6+1271],%g2
+	stx	%g2,[%i3-408]
+	ldx	[%i6+1263],%g2
+	stx	%g2,[%i3-400]
+	ldx	[%i6+1255],%g2
+	stx	%g2,[%i3-392]
+	ldx	[%i6+1247],%g2
+	stx	%g2,[%i3-384]
+	ldx	[%i6+1239],%g2
+	stx	%g2,[%i3-376]
+	ldx	[%i6+1231],%g2
+	stx	%g2,[%i3-368]
+	ldx	[%i6+1223],%g2
+	stx	%g2,[%i3-360]
+	ldx	[%i6+1215],%g2
+	stx	%g2,[%i3-352]
+	ldx	[%i6+1207],%g2
+	stx	%g2,[%i3-344]
+	ldx	[%i6+1199],%g2
+	stx	%g2,[%i3-336]
+	ldx	[%i6+1191],%g2
+	stx	%g2,[%i3-328]
+	ldx	[%i6+1183],%g2
+	stx	%g2,[%i3-320]
+	ldx	[%i6+1175],%g2
+	stx	%g2,[%i3-312]
+	ldx	[%i6+1167],%g2
+	stx	%g2,[%i3-304]
+	ldx	[%i6+1159],%g2
+	stx	%g2,[%i3-296]
+	ldx	[%i6+1151],%g2
+	stx	%g2,[%i3-288]
+	ldx	[%i6+1143],%g2
+	stx	%g2,[%i3-280]
+	ldx	[%i6+1135],%g2
+	stx	%g2,[%i3-272]
+	ldx	[%i6+1127],%g2
+	stx	%g2,[%i3-264]
+	ldx	[%i6+1119],%g2
+	stx	%g2,[%i3-256]
+	ldx	[%i6+1111],%g2
+	stx	%g2,[%i3-248]
+	ldx	[%i6+1103],%g2
+	stx	%g2,[%i3-240]
+	ldx	[%i6+1095],%g2
+	stx	%g2,[%i3-232]
+	ldx	[%i6+1087],%g2
+	stx	%g2,[%i3-224]
+	ldx	[%i6+1079],%g2
+	stx	%g2,[%i3-216]
+	ldx	[%i6+1071],%g2
+	stx	%g2,[%i3-208]
+	ldx	[%i6+1063],%g2
+	stx	%g2,[%i3-200]
+	ldx	[%i6+1055],%g2
+	stx	%g2,[%i3-192]
+	ldx	[%i6+1047],%g2
+	stx	%g2,[%i3-184]
+	ldx	[%i6+1039],%g2
+	stx	%g2,[%i3-176]
+	ldx	[%i6+1031],%g2
+	stx	%g2,[%i3-168]
+	ldx	[%i6+1023],%g2
+	stx	%g2,[%i3-160]
+	ldx	[%i6+1015],%g2
+	stx	%g2,[%i3-152]
+	ldx	[%i6+1007],%g2
+	stx	%g2,[%i3-144]
+	ldx	[%i6+999],%g2
+	stx	%g2,[%i3-136]
+	ldx	[%i6+991],%g2
+	stx	%g2,[%i3-128]
+	ldx	[%i6+983],%g2
+	stx	%g2,[%i3-120]
+	ldx	[%i6+959],%g2
+	stx	%g2,[%i3-112]
+	stx	%g3,[%i3-104]
+	stx	%g4,[%i3-96]
+	stx	%o0,[%i3-88]
+	stx	%o1,[%i3-80]
+	stx	%o2,[%i3-72]
+	stx	%o3,[%i3-64]
+	stx	%o4,[%i3-56]
+	stx	%o5,[%i3-48]
+	stx	%l0,[%i3-40]
+	stx	%l6,[%i3-32]
+	stx	%l7,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1064,%g1
+	sethi	%hh(s79G_info),%g2
+	sethi	%lm(s79G_info),%g3
+	or	%g2,%hm(s79G_info),%g2
+	or	%g3,%lo(s79G_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.Lccx1_end:
+.Ls7a7_entry_end:
+.section .rodata
+.align 8
+ccxb_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	73
+	.byte	76
+	.byte	68
+	.byte	86
+	.byte	95
+	.byte	83
+	.byte	84
+	.byte	65
+	.byte	84
+	.byte	69
+	.byte	95
+	.byte	67
+	.byte	82
+	.byte	69
+	.byte	65
+	.byte	84
+	.byte	69
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79B_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79B_info:
+.Lccxc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccxd
+	nop
+	b	.Lccxe
+	nop
+.Lccxc_end:
+.Lccxd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccxd_end:
+.Lccxe:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccxb_str),%g1
+	sethi	%lm(ccxb_str),%l2
+	or	%g1,%hm(ccxb_str),%g1
+	or	%l2,%lo(ccxb_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.Lccxe_end:
+.Ls79B_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79D_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79D_info:
+.Lccxg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccxh
+	nop
+	b	.Lccxi
+	nop
+.Lccxg_end:
+.Lccxi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccxk
+	nop
+	b	.Lccxj
+	nop
+.Lccxi_end:
+.Lccxk:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccxh
+	nop
+.Lccxk_end:
+.Lccxh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccxh_end:
+.Lccxj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79B_info),%g1
+	sethi	%lm(s79B_info),%g2
+	or	%g1,%hm(s79B_info),%g1
+	or	%g2,%lo(s79B_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccxj_end:
+.Ls79D_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a8_info)+0
+	.quad	558345748480
+	.quad	64424509471
+.align 4
+s7a8_info:
+.Lccxl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccxm
+	nop
+	b	.Lccxn
+	nop
+.Lccxl_end:
+.Lccxn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1072,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccxp
+	nop
+	b	.Lccxo
+	nop
+.Lccxn_end:
+.Lccxp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1072,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccxm
+	nop
+.Lccxp_end:
+.Lccxm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccxm_end:
+.Lccxo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	stx	%l7,[%i6+991]
+	ldx	[%g1+1040],%l7
+	ldx	[%g1+1048],%g1
+	stx	%i4,[%i6+983]
+	sethi	%hh(s7a7_info),%i4
+	stx	%i4,[%i6+975]
+	sethi	%lm(s7a7_info),%i4
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	or	%i4,%hm(s7a7_info),%i4
+	stx	%i4,[%i6+975]
+	ldx	[%i6+967],%i4
+	or	%i4,%lo(s7a7_info),%i4
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	sllx	%i4,32,%i4
+	stx	%g2,[%i6+959]
+	ldx	[%i6+967],%g2
+	or	%g2,%i4,%g2
+	stx	%g2,[%i3-1064]
+	ldx	[%i6+1911],%g2
+	stx	%g2,[%i3-1048]
+	ldx	[%i6+1903],%g2
+	stx	%g2,[%i3-1040]
+	ldx	[%i6+1895],%g2
+	stx	%g2,[%i3-1032]
+	ldx	[%i6+1887],%g2
+	stx	%g2,[%i3-1024]
+	ldx	[%i6+1879],%g2
+	stx	%g2,[%i3-1016]
+	ldx	[%i6+1871],%g2
+	stx	%g2,[%i3-1008]
+	ldx	[%i6+1863],%g2
+	stx	%g2,[%i3-1000]
+	ldx	[%i6+1855],%g2
+	stx	%g2,[%i3-992]
+	ldx	[%i6+1847],%g2
+	stx	%g2,[%i3-984]
+	ldx	[%i6+1839],%g2
+	stx	%g2,[%i3-976]
+	ldx	[%i6+1831],%g2
+	stx	%g2,[%i3-968]
+	ldx	[%i6+1823],%g2
+	stx	%g2,[%i3-960]
+	ldx	[%i6+1815],%g2
+	stx	%g2,[%i3-952]
+	ldx	[%i6+1807],%g2
+	stx	%g2,[%i3-944]
+	ldx	[%i6+1799],%g2
+	stx	%g2,[%i3-936]
+	ldx	[%i6+1791],%g2
+	stx	%g2,[%i3-928]
+	ldx	[%i6+1783],%g2
+	stx	%g2,[%i3-920]
+	ldx	[%i6+1775],%g2
+	stx	%g2,[%i3-912]
+	ldx	[%i6+1767],%g2
+	stx	%g2,[%i3-904]
+	ldx	[%i6+1759],%g2
+	stx	%g2,[%i3-896]
+	ldx	[%i6+1751],%g2
+	stx	%g2,[%i3-888]
+	ldx	[%i6+1743],%g2
+	stx	%g2,[%i3-880]
+	ldx	[%i6+1735],%g2
+	stx	%g2,[%i3-872]
+	ldx	[%i6+1727],%g2
+	stx	%g2,[%i3-864]
+	ldx	[%i6+1719],%g2
+	stx	%g2,[%i3-856]
+	ldx	[%i6+1711],%g2
+	stx	%g2,[%i3-848]
+	ldx	[%i6+1703],%g2
+	stx	%g2,[%i3-840]
+	ldx	[%i6+1695],%g2
+	stx	%g2,[%i3-832]
+	ldx	[%i6+1687],%g2
+	stx	%g2,[%i3-824]
+	ldx	[%i6+1679],%g2
+	stx	%g2,[%i3-816]
+	ldx	[%i6+1671],%g2
+	stx	%g2,[%i3-808]
+	ldx	[%i6+1663],%g2
+	stx	%g2,[%i3-800]
+	ldx	[%i6+1655],%g2
+	stx	%g2,[%i3-792]
+	ldx	[%i6+1647],%g2
+	stx	%g2,[%i3-784]
+	ldx	[%i6+1639],%g2
+	stx	%g2,[%i3-776]
+	ldx	[%i6+1631],%g2
+	stx	%g2,[%i3-768]
+	ldx	[%i6+1623],%g2
+	stx	%g2,[%i3-760]
+	ldx	[%i6+1615],%g2
+	stx	%g2,[%i3-752]
+	ldx	[%i6+1607],%g2
+	stx	%g2,[%i3-744]
+	ldx	[%i6+1599],%g2
+	stx	%g2,[%i3-736]
+	ldx	[%i6+1591],%g2
+	stx	%g2,[%i3-728]
+	ldx	[%i6+1583],%g2
+	stx	%g2,[%i3-720]
+	ldx	[%i6+1575],%g2
+	stx	%g2,[%i3-712]
+	ldx	[%i6+1567],%g2
+	stx	%g2,[%i3-704]
+	ldx	[%i6+1559],%g2
+	stx	%g2,[%i3-696]
+	ldx	[%i6+1551],%g2
+	stx	%g2,[%i3-688]
+	ldx	[%i6+1543],%g2
+	stx	%g2,[%i3-680]
+	ldx	[%i6+1535],%g2
+	stx	%g2,[%i3-672]
+	ldx	[%i6+1527],%g2
+	stx	%g2,[%i3-664]
+	ldx	[%i6+1519],%g2
+	stx	%g2,[%i3-656]
+	ldx	[%i6+1511],%g2
+	stx	%g2,[%i3-648]
+	ldx	[%i6+1503],%g2
+	stx	%g2,[%i3-640]
+	ldx	[%i6+1495],%g2
+	stx	%g2,[%i3-632]
+	ldx	[%i6+1487],%g2
+	stx	%g2,[%i3-624]
+	ldx	[%i6+1479],%g2
+	stx	%g2,[%i3-616]
+	ldx	[%i6+1471],%g2
+	stx	%g2,[%i3-608]
+	ldx	[%i6+1463],%g2
+	stx	%g2,[%i3-600]
+	ldx	[%i6+1455],%g2
+	stx	%g2,[%i3-592]
+	ldx	[%i6+1447],%g2
+	stx	%g2,[%i3-584]
+	ldx	[%i6+1439],%g2
+	stx	%g2,[%i3-576]
+	ldx	[%i6+1431],%g2
+	stx	%g2,[%i3-568]
+	ldx	[%i6+1423],%g2
+	stx	%g2,[%i3-560]
+	ldx	[%i6+1415],%g2
+	stx	%g2,[%i3-552]
+	ldx	[%i6+1407],%g2
+	stx	%g2,[%i3-544]
+	ldx	[%i6+1399],%g2
+	stx	%g2,[%i3-536]
+	ldx	[%i6+1391],%g2
+	stx	%g2,[%i3-528]
+	ldx	[%i6+1383],%g2
+	stx	%g2,[%i3-520]
+	ldx	[%i6+1375],%g2
+	stx	%g2,[%i3-512]
+	ldx	[%i6+1367],%g2
+	stx	%g2,[%i3-504]
+	ldx	[%i6+1359],%g2
+	stx	%g2,[%i3-496]
+	ldx	[%i6+1351],%g2
+	stx	%g2,[%i3-488]
+	ldx	[%i6+1343],%g2
+	stx	%g2,[%i3-480]
+	ldx	[%i6+1335],%g2
+	stx	%g2,[%i3-472]
+	ldx	[%i6+1327],%g2
+	stx	%g2,[%i3-464]
+	ldx	[%i6+1319],%g2
+	stx	%g2,[%i3-456]
+	ldx	[%i6+1311],%g2
+	stx	%g2,[%i3-448]
+	ldx	[%i6+1303],%g2
+	stx	%g2,[%i3-440]
+	ldx	[%i6+1295],%g2
+	stx	%g2,[%i3-432]
+	ldx	[%i6+1287],%g2
+	stx	%g2,[%i3-424]
+	ldx	[%i6+1279],%g2
+	stx	%g2,[%i3-416]
+	ldx	[%i6+1271],%g2
+	stx	%g2,[%i3-408]
+	ldx	[%i6+1263],%g2
+	stx	%g2,[%i3-400]
+	ldx	[%i6+1255],%g2
+	stx	%g2,[%i3-392]
+	ldx	[%i6+1247],%g2
+	stx	%g2,[%i3-384]
+	ldx	[%i6+1239],%g2
+	stx	%g2,[%i3-376]
+	ldx	[%i6+1231],%g2
+	stx	%g2,[%i3-368]
+	ldx	[%i6+1223],%g2
+	stx	%g2,[%i3-360]
+	ldx	[%i6+1215],%g2
+	stx	%g2,[%i3-352]
+	ldx	[%i6+1207],%g2
+	stx	%g2,[%i3-344]
+	ldx	[%i6+1199],%g2
+	stx	%g2,[%i3-336]
+	ldx	[%i6+1191],%g2
+	stx	%g2,[%i3-328]
+	ldx	[%i6+1183],%g2
+	stx	%g2,[%i3-320]
+	ldx	[%i6+1175],%g2
+	stx	%g2,[%i3-312]
+	ldx	[%i6+1167],%g2
+	stx	%g2,[%i3-304]
+	ldx	[%i6+1159],%g2
+	stx	%g2,[%i3-296]
+	ldx	[%i6+1151],%g2
+	stx	%g2,[%i3-288]
+	ldx	[%i6+1143],%g2
+	stx	%g2,[%i3-280]
+	ldx	[%i6+1135],%g2
+	stx	%g2,[%i3-272]
+	ldx	[%i6+1127],%g2
+	stx	%g2,[%i3-264]
+	ldx	[%i6+1119],%g2
+	stx	%g2,[%i3-256]
+	ldx	[%i6+1111],%g2
+	stx	%g2,[%i3-248]
+	ldx	[%i6+1103],%g2
+	stx	%g2,[%i3-240]
+	ldx	[%i6+1095],%g2
+	stx	%g2,[%i3-232]
+	ldx	[%i6+1087],%g2
+	stx	%g2,[%i3-224]
+	ldx	[%i6+1079],%g2
+	stx	%g2,[%i3-216]
+	ldx	[%i6+1071],%g2
+	stx	%g2,[%i3-208]
+	ldx	[%i6+1063],%g2
+	stx	%g2,[%i3-200]
+	ldx	[%i6+1055],%g2
+	stx	%g2,[%i3-192]
+	ldx	[%i6+1047],%g2
+	stx	%g2,[%i3-184]
+	ldx	[%i6+1039],%g2
+	stx	%g2,[%i3-176]
+	ldx	[%i6+1031],%g2
+	stx	%g2,[%i3-168]
+	ldx	[%i6+1023],%g2
+	stx	%g2,[%i3-160]
+	ldx	[%i6+1015],%g2
+	stx	%g2,[%i3-152]
+	ldx	[%i6+1007],%g2
+	stx	%g2,[%i3-144]
+	ldx	[%i6+999],%g2
+	stx	%g2,[%i3-136]
+	ldx	[%i6+991],%g2
+	stx	%g2,[%i3-128]
+	ldx	[%i6+983],%g2
+	stx	%g2,[%i3-120]
+	ldx	[%i6+959],%g2
+	stx	%g2,[%i3-112]
+	stx	%g3,[%i3-104]
+	stx	%g4,[%i3-96]
+	stx	%o0,[%i3-88]
+	stx	%o1,[%i3-80]
+	stx	%o2,[%i3-72]
+	stx	%o3,[%i3-64]
+	stx	%o4,[%i3-56]
+	stx	%o5,[%i3-48]
+	stx	%l0,[%i3-40]
+	stx	%l6,[%i3-32]
+	stx	%l7,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1064,%g1
+	sethi	%hh(s79D_info),%g2
+	sethi	%lm(s79D_info),%g3
+	or	%g2,%hm(s79D_info),%g2
+	or	%g3,%lo(s79D_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.Lccxo_end:
+.Ls7a8_entry_end:
+.section .rodata
+.align 8
+ccxy_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79y_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79y_info:
+.Lccxz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccxA
+	nop
+	b	.LccxB
+	nop
+.Lccxz_end:
+.LccxA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccxA_end:
+.LccxB:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccxy_str),%g1
+	sethi	%lm(ccxy_str),%l2
+	or	%g1,%hm(ccxy_str),%g1
+	or	%l2,%lo(ccxy_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccxB_end:
+.Ls79y_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79A_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79A_info:
+.LccxD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccxE
+	nop
+	b	.LccxF
+	nop
+.LccxD_end:
+.LccxF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccxH
+	nop
+	b	.LccxG
+	nop
+.LccxF_end:
+.LccxH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccxE
+	nop
+.LccxH_end:
+.LccxE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccxE_end:
+.LccxG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79y_info),%g1
+	sethi	%lm(s79y_info),%g2
+	or	%g1,%hm(s79y_info),%g1
+	or	%g2,%lo(s79y_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccxG_end:
+.Ls79A_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7a9_info)+0
+	.quad	21474836481
+	.quad	554050781184
+	.quad	34359738399
+.align 4
+s7a9_info:
+.LccxI:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccxJ
+	nop
+	b	.LccxK
+	nop
+.LccxI_end:
+.LccxK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1072,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccxM
+	nop
+	b	.LccxL
+	nop
+.LccxK_end:
+.LccxM:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1072,%g3
+	stx	%g3,[%i1+904]
+	b	.LccxJ
+	nop
+.LccxM_end:
+.LccxJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccxJ_end:
+.LccxL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	stx	%o1,[%i6+1023]
+	ldx	[%g2+991],%o1
+	stx	%o2,[%i6+1015]
+	ldx	[%g2+999],%o2
+	stx	%o3,[%i6+1007]
+	ldx	[%g2+1007],%o3
+	stx	%o4,[%i6+999]
+	ldx	[%g2+1015],%o4
+	stx	%o5,[%i6+991]
+	ldx	[%g2+1023],%o5
+	ldx	[%g2+1031],%g2
+	stx	%l0,[%i6+983]
+	sethi	%hh(s7a8_info),%l0
+	stx	%l0,[%i6+975]
+	sethi	%lm(s7a8_info),%l0
+	stx	%l0,[%i6+967]
+	ldx	[%i6+975],%l0
+	or	%l0,%hm(s7a8_info),%l0
+	stx	%l0,[%i6+975]
+	ldx	[%i6+967],%l0
+	or	%l0,%lo(s7a8_info),%l0
+	stx	%l0,[%i6+967]
+	ldx	[%i6+975],%l0
+	sllx	%l0,32,%l0
+	stx	%l6,[%i6+959]
+	ldx	[%i6+967],%l6
+	or	%l6,%l0,%l6
+	stx	%l6,[%i3-1064]
+	ldx	[%i6+1911],%l0
+	stx	%l0,[%i3-1048]
+	ldx	[%i6+1903],%l0
+	stx	%l0,[%i3-1040]
+	ldx	[%i6+1895],%l0
+	stx	%l0,[%i3-1032]
+	ldx	[%i6+1887],%l0
+	stx	%l0,[%i3-1024]
+	ldx	[%i6+1879],%l0
+	stx	%l0,[%i3-1016]
+	ldx	[%i6+1871],%l0
+	stx	%l0,[%i3-1008]
+	ldx	[%i6+1863],%l0
+	stx	%l0,[%i3-1000]
+	ldx	[%i6+1855],%l0
+	stx	%l0,[%i3-992]
+	ldx	[%i6+1847],%l0
+	stx	%l0,[%i3-984]
+	ldx	[%i6+1839],%l0
+	stx	%l0,[%i3-976]
+	ldx	[%i6+1831],%l0
+	stx	%l0,[%i3-968]
+	ldx	[%i6+1823],%l0
+	stx	%l0,[%i3-960]
+	ldx	[%i6+1815],%l0
+	stx	%l0,[%i3-952]
+	ldx	[%i6+1807],%l0
+	stx	%l0,[%i3-944]
+	ldx	[%i6+1799],%l0
+	stx	%l0,[%i3-936]
+	ldx	[%i6+1791],%l0
+	stx	%l0,[%i3-928]
+	ldx	[%i6+1783],%l0
+	stx	%l0,[%i3-920]
+	ldx	[%i6+1775],%l0
+	stx	%l0,[%i3-912]
+	ldx	[%i6+1767],%l0
+	stx	%l0,[%i3-904]
+	ldx	[%i6+1759],%l0
+	stx	%l0,[%i3-896]
+	ldx	[%i6+1751],%l0
+	stx	%l0,[%i3-888]
+	ldx	[%i6+1743],%l0
+	stx	%l0,[%i3-880]
+	ldx	[%i6+1735],%l0
+	stx	%l0,[%i3-872]
+	ldx	[%i6+1727],%l0
+	stx	%l0,[%i3-864]
+	ldx	[%i6+1719],%l0
+	stx	%l0,[%i3-856]
+	ldx	[%i6+1711],%l0
+	stx	%l0,[%i3-848]
+	ldx	[%i6+1703],%l0
+	stx	%l0,[%i3-840]
+	ldx	[%i6+1695],%l0
+	stx	%l0,[%i3-832]
+	ldx	[%i6+1687],%l0
+	stx	%l0,[%i3-824]
+	ldx	[%i6+1679],%l0
+	stx	%l0,[%i3-816]
+	ldx	[%i6+1671],%l0
+	stx	%l0,[%i3-808]
+	ldx	[%i6+1663],%l0
+	stx	%l0,[%i3-800]
+	ldx	[%i6+1655],%l0
+	stx	%l0,[%i3-792]
+	ldx	[%i6+1647],%l0
+	stx	%l0,[%i3-784]
+	ldx	[%i6+1639],%l0
+	stx	%l0,[%i3-776]
+	ldx	[%i6+1631],%l0
+	stx	%l0,[%i3-768]
+	ldx	[%i6+1623],%l0
+	stx	%l0,[%i3-760]
+	ldx	[%i6+1615],%l0
+	stx	%l0,[%i3-752]
+	ldx	[%i6+1607],%l0
+	stx	%l0,[%i3-744]
+	ldx	[%i6+1599],%l0
+	stx	%l0,[%i3-736]
+	ldx	[%i6+1591],%l0
+	stx	%l0,[%i3-728]
+	ldx	[%i6+1583],%l0
+	stx	%l0,[%i3-720]
+	ldx	[%i6+1575],%l0
+	stx	%l0,[%i3-712]
+	ldx	[%i6+1567],%l0
+	stx	%l0,[%i3-704]
+	ldx	[%i6+1559],%l0
+	stx	%l0,[%i3-696]
+	ldx	[%i6+1551],%l0
+	stx	%l0,[%i3-688]
+	ldx	[%i6+1543],%l0
+	stx	%l0,[%i3-680]
+	ldx	[%i6+1535],%l0
+	stx	%l0,[%i3-672]
+	ldx	[%i6+1527],%l0
+	stx	%l0,[%i3-664]
+	ldx	[%i6+1519],%l0
+	stx	%l0,[%i3-656]
+	ldx	[%i6+1511],%l0
+	stx	%l0,[%i3-648]
+	ldx	[%i6+1503],%l0
+	stx	%l0,[%i3-640]
+	ldx	[%i6+1495],%l0
+	stx	%l0,[%i3-632]
+	ldx	[%i6+1487],%l0
+	stx	%l0,[%i3-624]
+	ldx	[%i6+1479],%l0
+	stx	%l0,[%i3-616]
+	ldx	[%i6+1471],%l0
+	stx	%l0,[%i3-608]
+	ldx	[%i6+1463],%l0
+	stx	%l0,[%i3-600]
+	ldx	[%i6+1455],%l0
+	stx	%l0,[%i3-592]
+	ldx	[%i6+1447],%l0
+	stx	%l0,[%i3-584]
+	ldx	[%i6+1439],%l0
+	stx	%l0,[%i3-576]
+	ldx	[%i6+1431],%l0
+	stx	%l0,[%i3-568]
+	ldx	[%i6+1423],%l0
+	stx	%l0,[%i3-560]
+	ldx	[%i6+1415],%l0
+	stx	%l0,[%i3-552]
+	ldx	[%i6+1407],%l0
+	stx	%l0,[%i3-544]
+	ldx	[%i6+1399],%l0
+	stx	%l0,[%i3-536]
+	ldx	[%i6+1391],%l0
+	stx	%l0,[%i3-528]
+	ldx	[%i6+1383],%l0
+	stx	%l0,[%i3-520]
+	ldx	[%i6+1375],%l0
+	stx	%l0,[%i3-512]
+	ldx	[%i6+1367],%l0
+	stx	%l0,[%i3-504]
+	ldx	[%i6+1359],%l0
+	stx	%l0,[%i3-496]
+	ldx	[%i6+1351],%l0
+	stx	%l0,[%i3-488]
+	ldx	[%i6+1343],%l0
+	stx	%l0,[%i3-480]
+	ldx	[%i6+1335],%l0
+	stx	%l0,[%i3-472]
+	ldx	[%i6+1327],%l0
+	stx	%l0,[%i3-464]
+	ldx	[%i6+1319],%l0
+	stx	%l0,[%i3-456]
+	ldx	[%i6+1311],%l0
+	stx	%l0,[%i3-448]
+	ldx	[%i6+1303],%l0
+	stx	%l0,[%i3-440]
+	ldx	[%i6+1295],%l0
+	stx	%l0,[%i3-432]
+	ldx	[%i6+1287],%l0
+	stx	%l0,[%i3-424]
+	ldx	[%i6+1279],%l0
+	stx	%l0,[%i3-416]
+	ldx	[%i6+1271],%l0
+	stx	%l0,[%i3-408]
+	ldx	[%i6+1263],%l0
+	stx	%l0,[%i3-400]
+	ldx	[%i6+1255],%l0
+	stx	%l0,[%i3-392]
+	ldx	[%i6+1247],%l0
+	stx	%l0,[%i3-384]
+	ldx	[%i6+1239],%l0
+	stx	%l0,[%i3-376]
+	ldx	[%i6+1231],%l0
+	stx	%l0,[%i3-368]
+	ldx	[%i6+1223],%l0
+	stx	%l0,[%i3-360]
+	ldx	[%i6+1215],%l0
+	stx	%l0,[%i3-352]
+	ldx	[%i6+1207],%l0
+	stx	%l0,[%i3-344]
+	ldx	[%i6+1199],%l0
+	stx	%l0,[%i3-336]
+	ldx	[%i6+1191],%l0
+	stx	%l0,[%i3-328]
+	ldx	[%i6+1183],%l0
+	stx	%l0,[%i3-320]
+	ldx	[%i6+1175],%l0
+	stx	%l0,[%i3-312]
+	ldx	[%i6+1167],%l0
+	stx	%l0,[%i3-304]
+	ldx	[%i6+1159],%l0
+	stx	%l0,[%i3-296]
+	ldx	[%i6+1151],%l0
+	stx	%l0,[%i3-288]
+	ldx	[%i6+1143],%l0
+	stx	%l0,[%i3-280]
+	ldx	[%i6+1135],%l0
+	stx	%l0,[%i3-272]
+	ldx	[%i6+1127],%l0
+	stx	%l0,[%i3-264]
+	ldx	[%i6+1119],%l0
+	stx	%l0,[%i3-256]
+	ldx	[%i6+1111],%l0
+	stx	%l0,[%i3-248]
+	ldx	[%i6+1103],%l0
+	stx	%l0,[%i3-240]
+	ldx	[%i6+1095],%l0
+	stx	%l0,[%i3-232]
+	ldx	[%i6+1087],%l0
+	stx	%l0,[%i3-224]
+	ldx	[%i6+1079],%l0
+	stx	%l0,[%i3-216]
+	ldx	[%i6+1071],%l0
+	stx	%l0,[%i3-208]
+	ldx	[%i6+1063],%l0
+	stx	%l0,[%i3-200]
+	ldx	[%i6+1055],%l0
+	stx	%l0,[%i3-192]
+	ldx	[%i6+1047],%l0
+	stx	%l0,[%i3-184]
+	ldx	[%i6+1039],%l0
+	stx	%l0,[%i3-176]
+	ldx	[%i6+1031],%l0
+	stx	%l0,[%i3-168]
+	ldx	[%i6+1023],%l0
+	stx	%l0,[%i3-160]
+	ldx	[%i6+1015],%l0
+	stx	%l0,[%i3-152]
+	ldx	[%i6+1007],%l0
+	stx	%l0,[%i3-144]
+	ldx	[%i6+999],%l0
+	stx	%l0,[%i3-136]
+	ldx	[%i6+991],%l0
+	stx	%l0,[%i3-128]
+	ldx	[%i6+983],%l0
+	stx	%l0,[%i3-120]
+	ldx	[%i6+959],%l0
+	stx	%l0,[%i3-112]
+	stx	%l7,[%i3-104]
+	stx	%i4,[%i3-96]
+	stx	%g3,[%i3-88]
+	stx	%g4,[%i3-80]
+	stx	%o0,[%i3-72]
+	stx	%o1,[%i3-64]
+	stx	%o2,[%i3-56]
+	stx	%o3,[%i3-48]
+	stx	%o4,[%i3-40]
+	stx	%o5,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1064,%g1
+	sethi	%hh(s79A_info),%g2
+	sethi	%lm(s79A_info),%g3
+	or	%g2,%hm(s79A_info),%g2
+	or	%g3,%lo(s79A_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccxL_end:
+.Ls7a9_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79v_info)+24
+	.quad	0
+	.quad	64424509441
+.align 4
+s79v_info:
+.LccxV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccxW
+	nop
+	b	.LccxX
+	nop
+.LccxV_end:
+.LccxW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccxW_end:
+.LccxX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInteger_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInteger_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInteger_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInteger_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccxX_end:
+.Ls79v_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79w_info)+24
+	.quad	0
+	.quad	64424509443
+.align 4
+s79w_info:
+.LccxY:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccxZ
+	nop
+	b	.Lccy0
+	nop
+.LccxY_end:
+.Lccy0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccy2
+	nop
+	b	.Lccy1
+	nop
+.Lccy0_end:
+.Lccy2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccxZ
+	nop
+.Lccy2_end:
+.LccxZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccxZ_end:
+.Lccy1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79v_info),%g1
+	sethi	%lm(s79v_info),%g2
+	or	%g1,%hm(s79v_info),%g1
+	or	%g2,%lo(s79v_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccy1_end:
+.Ls79w_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aa_info)+0
+	.quad	554050781184
+	.quad	64424509471
+.align 4
+s7aa_info:
+.Lccy3:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccy4
+	nop
+	b	.Lccy5
+	nop
+.Lccy3_end:
+.Lccy5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1056,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccy7
+	nop
+	b	.Lccy6
+	nop
+.Lccy5_end:
+.Lccy7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1056,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccy4
+	nop
+.Lccy7_end:
+.Lccy4:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccy4_end:
+.Lccy6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	ldx	[%g1+1040],%g1
+	stx	%l7,[%i6+991]
+	sethi	%hh(s7a9_info),%l7
+	stx	%l7,[%i6+983]
+	sethi	%lm(s7a9_info),%l7
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	or	%l7,%hm(s7a9_info),%l7
+	stx	%l7,[%i6+983]
+	ldx	[%i6+975],%l7
+	or	%l7,%lo(s7a9_info),%l7
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	sllx	%l7,32,%l7
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	or	%i4,%l7,%i4
+	stx	%i4,[%i3-1048]
+	ldx	[%i6+1911],%l7
+	stx	%l7,[%i3-1040]
+	ldx	[%i6+1903],%l7
+	stx	%l7,[%i3-1032]
+	ldx	[%i6+1895],%l7
+	stx	%l7,[%i3-1024]
+	ldx	[%i6+1887],%l7
+	stx	%l7,[%i3-1016]
+	ldx	[%i6+1879],%l7
+	stx	%l7,[%i3-1008]
+	ldx	[%i6+1871],%l7
+	stx	%l7,[%i3-1000]
+	ldx	[%i6+1863],%l7
+	stx	%l7,[%i3-992]
+	ldx	[%i6+1855],%l7
+	stx	%l7,[%i3-984]
+	ldx	[%i6+1847],%l7
+	stx	%l7,[%i3-976]
+	ldx	[%i6+1839],%l7
+	stx	%l7,[%i3-968]
+	ldx	[%i6+1831],%l7
+	stx	%l7,[%i3-960]
+	ldx	[%i6+1823],%l7
+	stx	%l7,[%i3-952]
+	ldx	[%i6+1815],%l7
+	stx	%l7,[%i3-944]
+	ldx	[%i6+1807],%l7
+	stx	%l7,[%i3-936]
+	ldx	[%i6+1799],%l7
+	stx	%l7,[%i3-928]
+	ldx	[%i6+1791],%l7
+	stx	%l7,[%i3-920]
+	ldx	[%i6+1783],%l7
+	stx	%l7,[%i3-912]
+	ldx	[%i6+1775],%l7
+	stx	%l7,[%i3-904]
+	ldx	[%i6+1767],%l7
+	stx	%l7,[%i3-896]
+	ldx	[%i6+1759],%l7
+	stx	%l7,[%i3-888]
+	ldx	[%i6+1751],%l7
+	stx	%l7,[%i3-880]
+	ldx	[%i6+1743],%l7
+	stx	%l7,[%i3-872]
+	ldx	[%i6+1735],%l7
+	stx	%l7,[%i3-864]
+	ldx	[%i6+1727],%l7
+	stx	%l7,[%i3-856]
+	ldx	[%i6+1719],%l7
+	stx	%l7,[%i3-848]
+	ldx	[%i6+1711],%l7
+	stx	%l7,[%i3-840]
+	ldx	[%i6+1703],%l7
+	stx	%l7,[%i3-832]
+	ldx	[%i6+1695],%l7
+	stx	%l7,[%i3-824]
+	ldx	[%i6+1687],%l7
+	stx	%l7,[%i3-816]
+	ldx	[%i6+1679],%l7
+	stx	%l7,[%i3-808]
+	ldx	[%i6+1671],%l7
+	stx	%l7,[%i3-800]
+	ldx	[%i6+1663],%l7
+	stx	%l7,[%i3-792]
+	ldx	[%i6+1655],%l7
+	stx	%l7,[%i3-784]
+	ldx	[%i6+1647],%l7
+	stx	%l7,[%i3-776]
+	ldx	[%i6+1639],%l7
+	stx	%l7,[%i3-768]
+	ldx	[%i6+1631],%l7
+	stx	%l7,[%i3-760]
+	ldx	[%i6+1623],%l7
+	stx	%l7,[%i3-752]
+	ldx	[%i6+1615],%l7
+	stx	%l7,[%i3-744]
+	ldx	[%i6+1607],%l7
+	stx	%l7,[%i3-736]
+	ldx	[%i6+1599],%l7
+	stx	%l7,[%i3-728]
+	ldx	[%i6+1591],%l7
+	stx	%l7,[%i3-720]
+	ldx	[%i6+1583],%l7
+	stx	%l7,[%i3-712]
+	ldx	[%i6+1575],%l7
+	stx	%l7,[%i3-704]
+	ldx	[%i6+1567],%l7
+	stx	%l7,[%i3-696]
+	ldx	[%i6+1559],%l7
+	stx	%l7,[%i3-688]
+	ldx	[%i6+1551],%l7
+	stx	%l7,[%i3-680]
+	ldx	[%i6+1543],%l7
+	stx	%l7,[%i3-672]
+	ldx	[%i6+1535],%l7
+	stx	%l7,[%i3-664]
+	ldx	[%i6+1527],%l7
+	stx	%l7,[%i3-656]
+	ldx	[%i6+1519],%l7
+	stx	%l7,[%i3-648]
+	ldx	[%i6+1511],%l7
+	stx	%l7,[%i3-640]
+	ldx	[%i6+1503],%l7
+	stx	%l7,[%i3-632]
+	ldx	[%i6+1495],%l7
+	stx	%l7,[%i3-624]
+	ldx	[%i6+1487],%l7
+	stx	%l7,[%i3-616]
+	ldx	[%i6+1479],%l7
+	stx	%l7,[%i3-608]
+	ldx	[%i6+1471],%l7
+	stx	%l7,[%i3-600]
+	ldx	[%i6+1463],%l7
+	stx	%l7,[%i3-592]
+	ldx	[%i6+1455],%l7
+	stx	%l7,[%i3-584]
+	ldx	[%i6+1447],%l7
+	stx	%l7,[%i3-576]
+	ldx	[%i6+1439],%l7
+	stx	%l7,[%i3-568]
+	ldx	[%i6+1431],%l7
+	stx	%l7,[%i3-560]
+	ldx	[%i6+1423],%l7
+	stx	%l7,[%i3-552]
+	ldx	[%i6+1415],%l7
+	stx	%l7,[%i3-544]
+	ldx	[%i6+1407],%l7
+	stx	%l7,[%i3-536]
+	ldx	[%i6+1399],%l7
+	stx	%l7,[%i3-528]
+	ldx	[%i6+1391],%l7
+	stx	%l7,[%i3-520]
+	ldx	[%i6+1383],%l7
+	stx	%l7,[%i3-512]
+	ldx	[%i6+1375],%l7
+	stx	%l7,[%i3-504]
+	ldx	[%i6+1367],%l7
+	stx	%l7,[%i3-496]
+	ldx	[%i6+1359],%l7
+	stx	%l7,[%i3-488]
+	ldx	[%i6+1351],%l7
+	stx	%l7,[%i3-480]
+	ldx	[%i6+1343],%l7
+	stx	%l7,[%i3-472]
+	ldx	[%i6+1335],%l7
+	stx	%l7,[%i3-464]
+	ldx	[%i6+1327],%l7
+	stx	%l7,[%i3-456]
+	ldx	[%i6+1319],%l7
+	stx	%l7,[%i3-448]
+	ldx	[%i6+1311],%l7
+	stx	%l7,[%i3-440]
+	ldx	[%i6+1303],%l7
+	stx	%l7,[%i3-432]
+	ldx	[%i6+1295],%l7
+	stx	%l7,[%i3-424]
+	ldx	[%i6+1287],%l7
+	stx	%l7,[%i3-416]
+	ldx	[%i6+1279],%l7
+	stx	%l7,[%i3-408]
+	ldx	[%i6+1271],%l7
+	stx	%l7,[%i3-400]
+	ldx	[%i6+1263],%l7
+	stx	%l7,[%i3-392]
+	ldx	[%i6+1255],%l7
+	stx	%l7,[%i3-384]
+	ldx	[%i6+1247],%l7
+	stx	%l7,[%i3-376]
+	ldx	[%i6+1239],%l7
+	stx	%l7,[%i3-368]
+	ldx	[%i6+1231],%l7
+	stx	%l7,[%i3-360]
+	ldx	[%i6+1223],%l7
+	stx	%l7,[%i3-352]
+	ldx	[%i6+1215],%l7
+	stx	%l7,[%i3-344]
+	ldx	[%i6+1207],%l7
+	stx	%l7,[%i3-336]
+	ldx	[%i6+1199],%l7
+	stx	%l7,[%i3-328]
+	ldx	[%i6+1191],%l7
+	stx	%l7,[%i3-320]
+	ldx	[%i6+1183],%l7
+	stx	%l7,[%i3-312]
+	ldx	[%i6+1175],%l7
+	stx	%l7,[%i3-304]
+	ldx	[%i6+1167],%l7
+	stx	%l7,[%i3-296]
+	ldx	[%i6+1159],%l7
+	stx	%l7,[%i3-288]
+	ldx	[%i6+1151],%l7
+	stx	%l7,[%i3-280]
+	ldx	[%i6+1143],%l7
+	stx	%l7,[%i3-272]
+	ldx	[%i6+1135],%l7
+	stx	%l7,[%i3-264]
+	ldx	[%i6+1127],%l7
+	stx	%l7,[%i3-256]
+	ldx	[%i6+1119],%l7
+	stx	%l7,[%i3-248]
+	ldx	[%i6+1111],%l7
+	stx	%l7,[%i3-240]
+	ldx	[%i6+1103],%l7
+	stx	%l7,[%i3-232]
+	ldx	[%i6+1095],%l7
+	stx	%l7,[%i3-224]
+	ldx	[%i6+1087],%l7
+	stx	%l7,[%i3-216]
+	ldx	[%i6+1079],%l7
+	stx	%l7,[%i3-208]
+	ldx	[%i6+1071],%l7
+	stx	%l7,[%i3-200]
+	ldx	[%i6+1063],%l7
+	stx	%l7,[%i3-192]
+	ldx	[%i6+1055],%l7
+	stx	%l7,[%i3-184]
+	ldx	[%i6+1047],%l7
+	stx	%l7,[%i3-176]
+	ldx	[%i6+1039],%l7
+	stx	%l7,[%i3-168]
+	ldx	[%i6+1031],%l7
+	stx	%l7,[%i3-160]
+	ldx	[%i6+1023],%l7
+	stx	%l7,[%i3-152]
+	ldx	[%i6+1015],%l7
+	stx	%l7,[%i3-144]
+	ldx	[%i6+1007],%l7
+	stx	%l7,[%i3-136]
+	ldx	[%i6+999],%l7
+	stx	%l7,[%i3-128]
+	ldx	[%i6+991],%l7
+	stx	%l7,[%i3-120]
+	ldx	[%i6+967],%l7
+	stx	%l7,[%i3-112]
+	stx	%g2,[%i3-104]
+	stx	%g3,[%i3-96]
+	stx	%g4,[%i3-88]
+	stx	%o0,[%i3-80]
+	stx	%o1,[%i3-72]
+	stx	%o2,[%i3-64]
+	stx	%o3,[%i3-56]
+	stx	%o4,[%i3-48]
+	stx	%o5,[%i3-40]
+	stx	%l0,[%i3-32]
+	stx	%l6,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1047,%g1
+	sethi	%hh(s79w_info),%g2
+	sethi	%lm(s79w_info),%g3
+	or	%g2,%hm(s79w_info),%g2
+	or	%g3,%lo(s79w_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.Lccy6_end:
+.Ls7aa_entry_end:
+.section .rodata
+.align 8
+ccyg_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79s_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79s_info:
+.Lccyh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccyi
+	nop
+	b	.Lccyj
+	nop
+.Lccyh_end:
+.Lccyi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccyi_end:
+.Lccyj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccyg_str),%g1
+	sethi	%lm(ccyg_str),%l2
+	or	%g1,%hm(ccyg_str),%g1
+	or	%l2,%lo(ccyg_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.Lccyj_end:
+.Ls79s_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79u_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79u_info:
+.Lccyl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccym
+	nop
+	b	.Lccyn
+	nop
+.Lccyl_end:
+.Lccyn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccyp
+	nop
+	b	.Lccyo
+	nop
+.Lccyn_end:
+.Lccyp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccym
+	nop
+.Lccyp_end:
+.Lccym:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccym_end:
+.Lccyo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79s_info),%g1
+	sethi	%lm(s79s_info),%g2
+	or	%g1,%hm(s79s_info),%g1
+	or	%g2,%lo(s79s_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccyo_end:
+.Ls79u_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ab_info)+0
+	.quad	554050781184
+	.quad	64424509471
+.align 4
+s7ab_info:
+.Lccyq:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccyr
+	nop
+	b	.Lccys
+	nop
+.Lccyq_end:
+.Lccys:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1064,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccyu
+	nop
+	b	.Lccyt
+	nop
+.Lccys_end:
+.Lccyu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1064,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccyr
+	nop
+.Lccyu_end:
+.Lccyr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccyr_end:
+.Lccyt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	ldx	[%g1+1040],%g1
+	stx	%l7,[%i6+991]
+	sethi	%hh(s7aa_info),%l7
+	stx	%l7,[%i6+983]
+	sethi	%lm(s7aa_info),%l7
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	or	%l7,%hm(s7aa_info),%l7
+	stx	%l7,[%i6+983]
+	ldx	[%i6+975],%l7
+	or	%l7,%lo(s7aa_info),%l7
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	sllx	%l7,32,%l7
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	or	%i4,%l7,%i4
+	stx	%i4,[%i3-1056]
+	ldx	[%i6+1911],%l7
+	stx	%l7,[%i3-1040]
+	ldx	[%i6+1903],%l7
+	stx	%l7,[%i3-1032]
+	ldx	[%i6+1895],%l7
+	stx	%l7,[%i3-1024]
+	ldx	[%i6+1887],%l7
+	stx	%l7,[%i3-1016]
+	ldx	[%i6+1879],%l7
+	stx	%l7,[%i3-1008]
+	ldx	[%i6+1871],%l7
+	stx	%l7,[%i3-1000]
+	ldx	[%i6+1863],%l7
+	stx	%l7,[%i3-992]
+	ldx	[%i6+1855],%l7
+	stx	%l7,[%i3-984]
+	ldx	[%i6+1847],%l7
+	stx	%l7,[%i3-976]
+	ldx	[%i6+1839],%l7
+	stx	%l7,[%i3-968]
+	ldx	[%i6+1831],%l7
+	stx	%l7,[%i3-960]
+	ldx	[%i6+1823],%l7
+	stx	%l7,[%i3-952]
+	ldx	[%i6+1815],%l7
+	stx	%l7,[%i3-944]
+	ldx	[%i6+1807],%l7
+	stx	%l7,[%i3-936]
+	ldx	[%i6+1799],%l7
+	stx	%l7,[%i3-928]
+	ldx	[%i6+1791],%l7
+	stx	%l7,[%i3-920]
+	ldx	[%i6+1783],%l7
+	stx	%l7,[%i3-912]
+	ldx	[%i6+1775],%l7
+	stx	%l7,[%i3-904]
+	ldx	[%i6+1767],%l7
+	stx	%l7,[%i3-896]
+	ldx	[%i6+1759],%l7
+	stx	%l7,[%i3-888]
+	ldx	[%i6+1751],%l7
+	stx	%l7,[%i3-880]
+	ldx	[%i6+1743],%l7
+	stx	%l7,[%i3-872]
+	ldx	[%i6+1735],%l7
+	stx	%l7,[%i3-864]
+	ldx	[%i6+1727],%l7
+	stx	%l7,[%i3-856]
+	ldx	[%i6+1719],%l7
+	stx	%l7,[%i3-848]
+	ldx	[%i6+1711],%l7
+	stx	%l7,[%i3-840]
+	ldx	[%i6+1703],%l7
+	stx	%l7,[%i3-832]
+	ldx	[%i6+1695],%l7
+	stx	%l7,[%i3-824]
+	ldx	[%i6+1687],%l7
+	stx	%l7,[%i3-816]
+	ldx	[%i6+1679],%l7
+	stx	%l7,[%i3-808]
+	ldx	[%i6+1671],%l7
+	stx	%l7,[%i3-800]
+	ldx	[%i6+1663],%l7
+	stx	%l7,[%i3-792]
+	ldx	[%i6+1655],%l7
+	stx	%l7,[%i3-784]
+	ldx	[%i6+1647],%l7
+	stx	%l7,[%i3-776]
+	ldx	[%i6+1639],%l7
+	stx	%l7,[%i3-768]
+	ldx	[%i6+1631],%l7
+	stx	%l7,[%i3-760]
+	ldx	[%i6+1623],%l7
+	stx	%l7,[%i3-752]
+	ldx	[%i6+1615],%l7
+	stx	%l7,[%i3-744]
+	ldx	[%i6+1607],%l7
+	stx	%l7,[%i3-736]
+	ldx	[%i6+1599],%l7
+	stx	%l7,[%i3-728]
+	ldx	[%i6+1591],%l7
+	stx	%l7,[%i3-720]
+	ldx	[%i6+1583],%l7
+	stx	%l7,[%i3-712]
+	ldx	[%i6+1575],%l7
+	stx	%l7,[%i3-704]
+	ldx	[%i6+1567],%l7
+	stx	%l7,[%i3-696]
+	ldx	[%i6+1559],%l7
+	stx	%l7,[%i3-688]
+	ldx	[%i6+1551],%l7
+	stx	%l7,[%i3-680]
+	ldx	[%i6+1543],%l7
+	stx	%l7,[%i3-672]
+	ldx	[%i6+1535],%l7
+	stx	%l7,[%i3-664]
+	ldx	[%i6+1527],%l7
+	stx	%l7,[%i3-656]
+	ldx	[%i6+1519],%l7
+	stx	%l7,[%i3-648]
+	ldx	[%i6+1511],%l7
+	stx	%l7,[%i3-640]
+	ldx	[%i6+1503],%l7
+	stx	%l7,[%i3-632]
+	ldx	[%i6+1495],%l7
+	stx	%l7,[%i3-624]
+	ldx	[%i6+1487],%l7
+	stx	%l7,[%i3-616]
+	ldx	[%i6+1479],%l7
+	stx	%l7,[%i3-608]
+	ldx	[%i6+1471],%l7
+	stx	%l7,[%i3-600]
+	ldx	[%i6+1463],%l7
+	stx	%l7,[%i3-592]
+	ldx	[%i6+1455],%l7
+	stx	%l7,[%i3-584]
+	ldx	[%i6+1447],%l7
+	stx	%l7,[%i3-576]
+	ldx	[%i6+1439],%l7
+	stx	%l7,[%i3-568]
+	ldx	[%i6+1431],%l7
+	stx	%l7,[%i3-560]
+	ldx	[%i6+1423],%l7
+	stx	%l7,[%i3-552]
+	ldx	[%i6+1415],%l7
+	stx	%l7,[%i3-544]
+	ldx	[%i6+1407],%l7
+	stx	%l7,[%i3-536]
+	ldx	[%i6+1399],%l7
+	stx	%l7,[%i3-528]
+	ldx	[%i6+1391],%l7
+	stx	%l7,[%i3-520]
+	ldx	[%i6+1383],%l7
+	stx	%l7,[%i3-512]
+	ldx	[%i6+1375],%l7
+	stx	%l7,[%i3-504]
+	ldx	[%i6+1367],%l7
+	stx	%l7,[%i3-496]
+	ldx	[%i6+1359],%l7
+	stx	%l7,[%i3-488]
+	ldx	[%i6+1351],%l7
+	stx	%l7,[%i3-480]
+	ldx	[%i6+1343],%l7
+	stx	%l7,[%i3-472]
+	ldx	[%i6+1335],%l7
+	stx	%l7,[%i3-464]
+	ldx	[%i6+1327],%l7
+	stx	%l7,[%i3-456]
+	ldx	[%i6+1319],%l7
+	stx	%l7,[%i3-448]
+	ldx	[%i6+1311],%l7
+	stx	%l7,[%i3-440]
+	ldx	[%i6+1303],%l7
+	stx	%l7,[%i3-432]
+	ldx	[%i6+1295],%l7
+	stx	%l7,[%i3-424]
+	ldx	[%i6+1287],%l7
+	stx	%l7,[%i3-416]
+	ldx	[%i6+1279],%l7
+	stx	%l7,[%i3-408]
+	ldx	[%i6+1271],%l7
+	stx	%l7,[%i3-400]
+	ldx	[%i6+1263],%l7
+	stx	%l7,[%i3-392]
+	ldx	[%i6+1255],%l7
+	stx	%l7,[%i3-384]
+	ldx	[%i6+1247],%l7
+	stx	%l7,[%i3-376]
+	ldx	[%i6+1239],%l7
+	stx	%l7,[%i3-368]
+	ldx	[%i6+1231],%l7
+	stx	%l7,[%i3-360]
+	ldx	[%i6+1223],%l7
+	stx	%l7,[%i3-352]
+	ldx	[%i6+1215],%l7
+	stx	%l7,[%i3-344]
+	ldx	[%i6+1207],%l7
+	stx	%l7,[%i3-336]
+	ldx	[%i6+1199],%l7
+	stx	%l7,[%i3-328]
+	ldx	[%i6+1191],%l7
+	stx	%l7,[%i3-320]
+	ldx	[%i6+1183],%l7
+	stx	%l7,[%i3-312]
+	ldx	[%i6+1175],%l7
+	stx	%l7,[%i3-304]
+	ldx	[%i6+1167],%l7
+	stx	%l7,[%i3-296]
+	ldx	[%i6+1159],%l7
+	stx	%l7,[%i3-288]
+	ldx	[%i6+1151],%l7
+	stx	%l7,[%i3-280]
+	ldx	[%i6+1143],%l7
+	stx	%l7,[%i3-272]
+	ldx	[%i6+1135],%l7
+	stx	%l7,[%i3-264]
+	ldx	[%i6+1127],%l7
+	stx	%l7,[%i3-256]
+	ldx	[%i6+1119],%l7
+	stx	%l7,[%i3-248]
+	ldx	[%i6+1111],%l7
+	stx	%l7,[%i3-240]
+	ldx	[%i6+1103],%l7
+	stx	%l7,[%i3-232]
+	ldx	[%i6+1095],%l7
+	stx	%l7,[%i3-224]
+	ldx	[%i6+1087],%l7
+	stx	%l7,[%i3-216]
+	ldx	[%i6+1079],%l7
+	stx	%l7,[%i3-208]
+	ldx	[%i6+1071],%l7
+	stx	%l7,[%i3-200]
+	ldx	[%i6+1063],%l7
+	stx	%l7,[%i3-192]
+	ldx	[%i6+1055],%l7
+	stx	%l7,[%i3-184]
+	ldx	[%i6+1047],%l7
+	stx	%l7,[%i3-176]
+	ldx	[%i6+1039],%l7
+	stx	%l7,[%i3-168]
+	ldx	[%i6+1031],%l7
+	stx	%l7,[%i3-160]
+	ldx	[%i6+1023],%l7
+	stx	%l7,[%i3-152]
+	ldx	[%i6+1015],%l7
+	stx	%l7,[%i3-144]
+	ldx	[%i6+1007],%l7
+	stx	%l7,[%i3-136]
+	ldx	[%i6+999],%l7
+	stx	%l7,[%i3-128]
+	ldx	[%i6+991],%l7
+	stx	%l7,[%i3-120]
+	ldx	[%i6+967],%l7
+	stx	%l7,[%i3-112]
+	stx	%g2,[%i3-104]
+	stx	%g3,[%i3-96]
+	stx	%g4,[%i3-88]
+	stx	%o0,[%i3-80]
+	stx	%o1,[%i3-72]
+	stx	%o2,[%i3-64]
+	stx	%o3,[%i3-56]
+	stx	%o4,[%i3-48]
+	stx	%o5,[%i3-40]
+	stx	%l0,[%i3-32]
+	stx	%l6,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1056,%g1
+	sethi	%hh(s79u_info),%g2
+	sethi	%lm(s79u_info),%g3
+	or	%g2,%hm(s79u_info),%g2
+	or	%g3,%lo(s79u_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.Lccyt_end:
+.Ls7ab_entry_end:
+.section .rodata
+.align 8
+ccyD_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	73
+	.byte	76
+	.byte	68
+	.byte	86
+	.byte	95
+	.byte	67
+	.byte	82
+	.byte	69
+	.byte	65
+	.byte	84
+	.byte	69
+	.byte	95
+	.byte	77
+	.byte	65
+	.byte	83
+	.byte	75
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79p_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79p_info:
+.LccyE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccyF
+	nop
+	b	.LccyG
+	nop
+.LccyE_end:
+.LccyF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccyF_end:
+.LccyG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccyD_str),%g1
+	sethi	%lm(ccyD_str),%l2
+	or	%g1,%hm(ccyD_str),%g1
+	or	%l2,%lo(ccyD_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccyG_end:
+.Ls79p_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79r_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79r_info:
+.LccyI:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccyJ
+	nop
+	b	.LccyK
+	nop
+.LccyI_end:
+.LccyK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccyM
+	nop
+	b	.LccyL
+	nop
+.LccyK_end:
+.LccyM:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccyJ
+	nop
+.LccyM_end:
+.LccyJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccyJ_end:
+.LccyL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79p_info),%g1
+	sethi	%lm(s79p_info),%g2
+	or	%g1,%hm(s79p_info),%g1
+	or	%g2,%lo(s79p_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccyL_end:
+.Ls79r_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ac_info)+0
+	.quad	554050781184
+	.quad	64424509471
+.align 4
+s7ac_info:
+.LccyN:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccyO
+	nop
+	b	.LccyP
+	nop
+.LccyN_end:
+.LccyP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1064,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccyR
+	nop
+	b	.LccyQ
+	nop
+.LccyP_end:
+.LccyR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1064,%g2
+	stx	%g2,[%i1+904]
+	b	.LccyO
+	nop
+.LccyR_end:
+.LccyO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccyO_end:
+.LccyQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	stx	%l6,[%i6+999]
+	ldx	[%g1+1032],%l6
+	ldx	[%g1+1040],%g1
+	stx	%l7,[%i6+991]
+	sethi	%hh(s7ab_info),%l7
+	stx	%l7,[%i6+983]
+	sethi	%lm(s7ab_info),%l7
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	or	%l7,%hm(s7ab_info),%l7
+	stx	%l7,[%i6+983]
+	ldx	[%i6+975],%l7
+	or	%l7,%lo(s7ab_info),%l7
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	sllx	%l7,32,%l7
+	stx	%i4,[%i6+967]
+	ldx	[%i6+975],%i4
+	or	%i4,%l7,%i4
+	stx	%i4,[%i3-1056]
+	ldx	[%i6+1911],%l7
+	stx	%l7,[%i3-1040]
+	ldx	[%i6+1903],%l7
+	stx	%l7,[%i3-1032]
+	ldx	[%i6+1895],%l7
+	stx	%l7,[%i3-1024]
+	ldx	[%i6+1887],%l7
+	stx	%l7,[%i3-1016]
+	ldx	[%i6+1879],%l7
+	stx	%l7,[%i3-1008]
+	ldx	[%i6+1871],%l7
+	stx	%l7,[%i3-1000]
+	ldx	[%i6+1863],%l7
+	stx	%l7,[%i3-992]
+	ldx	[%i6+1855],%l7
+	stx	%l7,[%i3-984]
+	ldx	[%i6+1847],%l7
+	stx	%l7,[%i3-976]
+	ldx	[%i6+1839],%l7
+	stx	%l7,[%i3-968]
+	ldx	[%i6+1831],%l7
+	stx	%l7,[%i3-960]
+	ldx	[%i6+1823],%l7
+	stx	%l7,[%i3-952]
+	ldx	[%i6+1815],%l7
+	stx	%l7,[%i3-944]
+	ldx	[%i6+1807],%l7
+	stx	%l7,[%i3-936]
+	ldx	[%i6+1799],%l7
+	stx	%l7,[%i3-928]
+	ldx	[%i6+1791],%l7
+	stx	%l7,[%i3-920]
+	ldx	[%i6+1783],%l7
+	stx	%l7,[%i3-912]
+	ldx	[%i6+1775],%l7
+	stx	%l7,[%i3-904]
+	ldx	[%i6+1767],%l7
+	stx	%l7,[%i3-896]
+	ldx	[%i6+1759],%l7
+	stx	%l7,[%i3-888]
+	ldx	[%i6+1751],%l7
+	stx	%l7,[%i3-880]
+	ldx	[%i6+1743],%l7
+	stx	%l7,[%i3-872]
+	ldx	[%i6+1735],%l7
+	stx	%l7,[%i3-864]
+	ldx	[%i6+1727],%l7
+	stx	%l7,[%i3-856]
+	ldx	[%i6+1719],%l7
+	stx	%l7,[%i3-848]
+	ldx	[%i6+1711],%l7
+	stx	%l7,[%i3-840]
+	ldx	[%i6+1703],%l7
+	stx	%l7,[%i3-832]
+	ldx	[%i6+1695],%l7
+	stx	%l7,[%i3-824]
+	ldx	[%i6+1687],%l7
+	stx	%l7,[%i3-816]
+	ldx	[%i6+1679],%l7
+	stx	%l7,[%i3-808]
+	ldx	[%i6+1671],%l7
+	stx	%l7,[%i3-800]
+	ldx	[%i6+1663],%l7
+	stx	%l7,[%i3-792]
+	ldx	[%i6+1655],%l7
+	stx	%l7,[%i3-784]
+	ldx	[%i6+1647],%l7
+	stx	%l7,[%i3-776]
+	ldx	[%i6+1639],%l7
+	stx	%l7,[%i3-768]
+	ldx	[%i6+1631],%l7
+	stx	%l7,[%i3-760]
+	ldx	[%i6+1623],%l7
+	stx	%l7,[%i3-752]
+	ldx	[%i6+1615],%l7
+	stx	%l7,[%i3-744]
+	ldx	[%i6+1607],%l7
+	stx	%l7,[%i3-736]
+	ldx	[%i6+1599],%l7
+	stx	%l7,[%i3-728]
+	ldx	[%i6+1591],%l7
+	stx	%l7,[%i3-720]
+	ldx	[%i6+1583],%l7
+	stx	%l7,[%i3-712]
+	ldx	[%i6+1575],%l7
+	stx	%l7,[%i3-704]
+	ldx	[%i6+1567],%l7
+	stx	%l7,[%i3-696]
+	ldx	[%i6+1559],%l7
+	stx	%l7,[%i3-688]
+	ldx	[%i6+1551],%l7
+	stx	%l7,[%i3-680]
+	ldx	[%i6+1543],%l7
+	stx	%l7,[%i3-672]
+	ldx	[%i6+1535],%l7
+	stx	%l7,[%i3-664]
+	ldx	[%i6+1527],%l7
+	stx	%l7,[%i3-656]
+	ldx	[%i6+1519],%l7
+	stx	%l7,[%i3-648]
+	ldx	[%i6+1511],%l7
+	stx	%l7,[%i3-640]
+	ldx	[%i6+1503],%l7
+	stx	%l7,[%i3-632]
+	ldx	[%i6+1495],%l7
+	stx	%l7,[%i3-624]
+	ldx	[%i6+1487],%l7
+	stx	%l7,[%i3-616]
+	ldx	[%i6+1479],%l7
+	stx	%l7,[%i3-608]
+	ldx	[%i6+1471],%l7
+	stx	%l7,[%i3-600]
+	ldx	[%i6+1463],%l7
+	stx	%l7,[%i3-592]
+	ldx	[%i6+1455],%l7
+	stx	%l7,[%i3-584]
+	ldx	[%i6+1447],%l7
+	stx	%l7,[%i3-576]
+	ldx	[%i6+1439],%l7
+	stx	%l7,[%i3-568]
+	ldx	[%i6+1431],%l7
+	stx	%l7,[%i3-560]
+	ldx	[%i6+1423],%l7
+	stx	%l7,[%i3-552]
+	ldx	[%i6+1415],%l7
+	stx	%l7,[%i3-544]
+	ldx	[%i6+1407],%l7
+	stx	%l7,[%i3-536]
+	ldx	[%i6+1399],%l7
+	stx	%l7,[%i3-528]
+	ldx	[%i6+1391],%l7
+	stx	%l7,[%i3-520]
+	ldx	[%i6+1383],%l7
+	stx	%l7,[%i3-512]
+	ldx	[%i6+1375],%l7
+	stx	%l7,[%i3-504]
+	ldx	[%i6+1367],%l7
+	stx	%l7,[%i3-496]
+	ldx	[%i6+1359],%l7
+	stx	%l7,[%i3-488]
+	ldx	[%i6+1351],%l7
+	stx	%l7,[%i3-480]
+	ldx	[%i6+1343],%l7
+	stx	%l7,[%i3-472]
+	ldx	[%i6+1335],%l7
+	stx	%l7,[%i3-464]
+	ldx	[%i6+1327],%l7
+	stx	%l7,[%i3-456]
+	ldx	[%i6+1319],%l7
+	stx	%l7,[%i3-448]
+	ldx	[%i6+1311],%l7
+	stx	%l7,[%i3-440]
+	ldx	[%i6+1303],%l7
+	stx	%l7,[%i3-432]
+	ldx	[%i6+1295],%l7
+	stx	%l7,[%i3-424]
+	ldx	[%i6+1287],%l7
+	stx	%l7,[%i3-416]
+	ldx	[%i6+1279],%l7
+	stx	%l7,[%i3-408]
+	ldx	[%i6+1271],%l7
+	stx	%l7,[%i3-400]
+	ldx	[%i6+1263],%l7
+	stx	%l7,[%i3-392]
+	ldx	[%i6+1255],%l7
+	stx	%l7,[%i3-384]
+	ldx	[%i6+1247],%l7
+	stx	%l7,[%i3-376]
+	ldx	[%i6+1239],%l7
+	stx	%l7,[%i3-368]
+	ldx	[%i6+1231],%l7
+	stx	%l7,[%i3-360]
+	ldx	[%i6+1223],%l7
+	stx	%l7,[%i3-352]
+	ldx	[%i6+1215],%l7
+	stx	%l7,[%i3-344]
+	ldx	[%i6+1207],%l7
+	stx	%l7,[%i3-336]
+	ldx	[%i6+1199],%l7
+	stx	%l7,[%i3-328]
+	ldx	[%i6+1191],%l7
+	stx	%l7,[%i3-320]
+	ldx	[%i6+1183],%l7
+	stx	%l7,[%i3-312]
+	ldx	[%i6+1175],%l7
+	stx	%l7,[%i3-304]
+	ldx	[%i6+1167],%l7
+	stx	%l7,[%i3-296]
+	ldx	[%i6+1159],%l7
+	stx	%l7,[%i3-288]
+	ldx	[%i6+1151],%l7
+	stx	%l7,[%i3-280]
+	ldx	[%i6+1143],%l7
+	stx	%l7,[%i3-272]
+	ldx	[%i6+1135],%l7
+	stx	%l7,[%i3-264]
+	ldx	[%i6+1127],%l7
+	stx	%l7,[%i3-256]
+	ldx	[%i6+1119],%l7
+	stx	%l7,[%i3-248]
+	ldx	[%i6+1111],%l7
+	stx	%l7,[%i3-240]
+	ldx	[%i6+1103],%l7
+	stx	%l7,[%i3-232]
+	ldx	[%i6+1095],%l7
+	stx	%l7,[%i3-224]
+	ldx	[%i6+1087],%l7
+	stx	%l7,[%i3-216]
+	ldx	[%i6+1079],%l7
+	stx	%l7,[%i3-208]
+	ldx	[%i6+1071],%l7
+	stx	%l7,[%i3-200]
+	ldx	[%i6+1063],%l7
+	stx	%l7,[%i3-192]
+	ldx	[%i6+1055],%l7
+	stx	%l7,[%i3-184]
+	ldx	[%i6+1047],%l7
+	stx	%l7,[%i3-176]
+	ldx	[%i6+1039],%l7
+	stx	%l7,[%i3-168]
+	ldx	[%i6+1031],%l7
+	stx	%l7,[%i3-160]
+	ldx	[%i6+1023],%l7
+	stx	%l7,[%i3-152]
+	ldx	[%i6+1015],%l7
+	stx	%l7,[%i3-144]
+	ldx	[%i6+1007],%l7
+	stx	%l7,[%i3-136]
+	ldx	[%i6+999],%l7
+	stx	%l7,[%i3-128]
+	ldx	[%i6+991],%l7
+	stx	%l7,[%i3-120]
+	ldx	[%i6+967],%l7
+	stx	%l7,[%i3-112]
+	stx	%g2,[%i3-104]
+	stx	%g3,[%i3-96]
+	stx	%g4,[%i3-88]
+	stx	%o0,[%i3-80]
+	stx	%o1,[%i3-72]
+	stx	%o2,[%i3-64]
+	stx	%o3,[%i3-56]
+	stx	%o4,[%i3-48]
+	stx	%o5,[%i3-40]
+	stx	%l0,[%i3-32]
+	stx	%l6,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1056,%g1
+	sethi	%hh(s79r_info),%g2
+	sethi	%lm(s79r_info),%g3
+	or	%g2,%hm(s79r_info),%g2
+	or	%g3,%lo(s79r_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccyQ_end:
+.Ls7ac_entry_end:
+.section .rodata
+.align 8
+ccz0_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79m_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79m_info:
+.Lccz1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccz2
+	nop
+	b	.Lccz3
+	nop
+.Lccz1_end:
+.Lccz2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccz2_end:
+.Lccz3:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccz0_str),%g1
+	sethi	%lm(ccz0_str),%l2
+	or	%g1,%hm(ccz0_str),%g1
+	or	%l2,%lo(ccz0_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.Lccz3_end:
+.Ls79m_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79o_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79o_info:
+.Lccz5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lccz6
+	nop
+	b	.Lccz7
+	nop
+.Lccz5_end:
+.Lccz7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lccz9
+	nop
+	b	.Lccz8
+	nop
+.Lccz7_end:
+.Lccz9:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.Lccz6
+	nop
+.Lccz9_end:
+.Lccz6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lccz6_end:
+.Lccz8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79m_info),%g1
+	sethi	%lm(s79m_info),%g2
+	or	%g1,%hm(s79m_info),%g1
+	or	%g2,%lo(s79m_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lccz8_end:
+.Ls79o_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ad_info)+0
+	.quad	21474836481
+	.quad	549755813888
+	.quad	34359738399
+.align 4
+s7ad_info:
+.Lccza:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.Lcczb
+	nop
+	b	.Lcczc
+	nop
+.Lccza_end:
+.Lcczc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1064,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.Lccze
+	nop
+	b	.Lcczd
+	nop
+.Lcczc_end:
+.Lccze:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1064,%g3
+	stx	%g3,[%i1+904]
+	b	.Lcczb
+	nop
+.Lccze_end:
+.Lcczb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.Lcczb_end:
+.Lcczd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	stx	%o1,[%i6+1023]
+	ldx	[%g2+991],%o1
+	stx	%o2,[%i6+1015]
+	ldx	[%g2+999],%o2
+	stx	%o3,[%i6+1007]
+	ldx	[%g2+1007],%o3
+	stx	%o4,[%i6+999]
+	ldx	[%g2+1015],%o4
+	ldx	[%g2+1023],%g2
+	stx	%o5,[%i6+991]
+	sethi	%hh(s7ac_info),%o5
+	stx	%o5,[%i6+983]
+	sethi	%lm(s7ac_info),%o5
+	stx	%o5,[%i6+975]
+	ldx	[%i6+983],%o5
+	or	%o5,%hm(s7ac_info),%o5
+	stx	%o5,[%i6+983]
+	ldx	[%i6+975],%o5
+	or	%o5,%lo(s7ac_info),%o5
+	stx	%o5,[%i6+975]
+	ldx	[%i6+983],%o5
+	sllx	%o5,32,%o5
+	stx	%l0,[%i6+967]
+	ldx	[%i6+975],%l0
+	or	%l0,%o5,%l0
+	stx	%l0,[%i3-1056]
+	ldx	[%i6+1911],%o5
+	stx	%o5,[%i3-1040]
+	ldx	[%i6+1903],%o5
+	stx	%o5,[%i3-1032]
+	ldx	[%i6+1895],%o5
+	stx	%o5,[%i3-1024]
+	ldx	[%i6+1887],%o5
+	stx	%o5,[%i3-1016]
+	ldx	[%i6+1879],%o5
+	stx	%o5,[%i3-1008]
+	ldx	[%i6+1871],%o5
+	stx	%o5,[%i3-1000]
+	ldx	[%i6+1863],%o5
+	stx	%o5,[%i3-992]
+	ldx	[%i6+1855],%o5
+	stx	%o5,[%i3-984]
+	ldx	[%i6+1847],%o5
+	stx	%o5,[%i3-976]
+	ldx	[%i6+1839],%o5
+	stx	%o5,[%i3-968]
+	ldx	[%i6+1831],%o5
+	stx	%o5,[%i3-960]
+	ldx	[%i6+1823],%o5
+	stx	%o5,[%i3-952]
+	ldx	[%i6+1815],%o5
+	stx	%o5,[%i3-944]
+	ldx	[%i6+1807],%o5
+	stx	%o5,[%i3-936]
+	ldx	[%i6+1799],%o5
+	stx	%o5,[%i3-928]
+	ldx	[%i6+1791],%o5
+	stx	%o5,[%i3-920]
+	ldx	[%i6+1783],%o5
+	stx	%o5,[%i3-912]
+	ldx	[%i6+1775],%o5
+	stx	%o5,[%i3-904]
+	ldx	[%i6+1767],%o5
+	stx	%o5,[%i3-896]
+	ldx	[%i6+1759],%o5
+	stx	%o5,[%i3-888]
+	ldx	[%i6+1751],%o5
+	stx	%o5,[%i3-880]
+	ldx	[%i6+1743],%o5
+	stx	%o5,[%i3-872]
+	ldx	[%i6+1735],%o5
+	stx	%o5,[%i3-864]
+	ldx	[%i6+1727],%o5
+	stx	%o5,[%i3-856]
+	ldx	[%i6+1719],%o5
+	stx	%o5,[%i3-848]
+	ldx	[%i6+1711],%o5
+	stx	%o5,[%i3-840]
+	ldx	[%i6+1703],%o5
+	stx	%o5,[%i3-832]
+	ldx	[%i6+1695],%o5
+	stx	%o5,[%i3-824]
+	ldx	[%i6+1687],%o5
+	stx	%o5,[%i3-816]
+	ldx	[%i6+1679],%o5
+	stx	%o5,[%i3-808]
+	ldx	[%i6+1671],%o5
+	stx	%o5,[%i3-800]
+	ldx	[%i6+1663],%o5
+	stx	%o5,[%i3-792]
+	ldx	[%i6+1655],%o5
+	stx	%o5,[%i3-784]
+	ldx	[%i6+1647],%o5
+	stx	%o5,[%i3-776]
+	ldx	[%i6+1639],%o5
+	stx	%o5,[%i3-768]
+	ldx	[%i6+1631],%o5
+	stx	%o5,[%i3-760]
+	ldx	[%i6+1623],%o5
+	stx	%o5,[%i3-752]
+	ldx	[%i6+1615],%o5
+	stx	%o5,[%i3-744]
+	ldx	[%i6+1607],%o5
+	stx	%o5,[%i3-736]
+	ldx	[%i6+1599],%o5
+	stx	%o5,[%i3-728]
+	ldx	[%i6+1591],%o5
+	stx	%o5,[%i3-720]
+	ldx	[%i6+1583],%o5
+	stx	%o5,[%i3-712]
+	ldx	[%i6+1575],%o5
+	stx	%o5,[%i3-704]
+	ldx	[%i6+1567],%o5
+	stx	%o5,[%i3-696]
+	ldx	[%i6+1559],%o5
+	stx	%o5,[%i3-688]
+	ldx	[%i6+1551],%o5
+	stx	%o5,[%i3-680]
+	ldx	[%i6+1543],%o5
+	stx	%o5,[%i3-672]
+	ldx	[%i6+1535],%o5
+	stx	%o5,[%i3-664]
+	ldx	[%i6+1527],%o5
+	stx	%o5,[%i3-656]
+	ldx	[%i6+1519],%o5
+	stx	%o5,[%i3-648]
+	ldx	[%i6+1511],%o5
+	stx	%o5,[%i3-640]
+	ldx	[%i6+1503],%o5
+	stx	%o5,[%i3-632]
+	ldx	[%i6+1495],%o5
+	stx	%o5,[%i3-624]
+	ldx	[%i6+1487],%o5
+	stx	%o5,[%i3-616]
+	ldx	[%i6+1479],%o5
+	stx	%o5,[%i3-608]
+	ldx	[%i6+1471],%o5
+	stx	%o5,[%i3-600]
+	ldx	[%i6+1463],%o5
+	stx	%o5,[%i3-592]
+	ldx	[%i6+1455],%o5
+	stx	%o5,[%i3-584]
+	ldx	[%i6+1447],%o5
+	stx	%o5,[%i3-576]
+	ldx	[%i6+1439],%o5
+	stx	%o5,[%i3-568]
+	ldx	[%i6+1431],%o5
+	stx	%o5,[%i3-560]
+	ldx	[%i6+1423],%o5
+	stx	%o5,[%i3-552]
+	ldx	[%i6+1415],%o5
+	stx	%o5,[%i3-544]
+	ldx	[%i6+1407],%o5
+	stx	%o5,[%i3-536]
+	ldx	[%i6+1399],%o5
+	stx	%o5,[%i3-528]
+	ldx	[%i6+1391],%o5
+	stx	%o5,[%i3-520]
+	ldx	[%i6+1383],%o5
+	stx	%o5,[%i3-512]
+	ldx	[%i6+1375],%o5
+	stx	%o5,[%i3-504]
+	ldx	[%i6+1367],%o5
+	stx	%o5,[%i3-496]
+	ldx	[%i6+1359],%o5
+	stx	%o5,[%i3-488]
+	ldx	[%i6+1351],%o5
+	stx	%o5,[%i3-480]
+	ldx	[%i6+1343],%o5
+	stx	%o5,[%i3-472]
+	ldx	[%i6+1335],%o5
+	stx	%o5,[%i3-464]
+	ldx	[%i6+1327],%o5
+	stx	%o5,[%i3-456]
+	ldx	[%i6+1319],%o5
+	stx	%o5,[%i3-448]
+	ldx	[%i6+1311],%o5
+	stx	%o5,[%i3-440]
+	ldx	[%i6+1303],%o5
+	stx	%o5,[%i3-432]
+	ldx	[%i6+1295],%o5
+	stx	%o5,[%i3-424]
+	ldx	[%i6+1287],%o5
+	stx	%o5,[%i3-416]
+	ldx	[%i6+1279],%o5
+	stx	%o5,[%i3-408]
+	ldx	[%i6+1271],%o5
+	stx	%o5,[%i3-400]
+	ldx	[%i6+1263],%o5
+	stx	%o5,[%i3-392]
+	ldx	[%i6+1255],%o5
+	stx	%o5,[%i3-384]
+	ldx	[%i6+1247],%o5
+	stx	%o5,[%i3-376]
+	ldx	[%i6+1239],%o5
+	stx	%o5,[%i3-368]
+	ldx	[%i6+1231],%o5
+	stx	%o5,[%i3-360]
+	ldx	[%i6+1223],%o5
+	stx	%o5,[%i3-352]
+	ldx	[%i6+1215],%o5
+	stx	%o5,[%i3-344]
+	ldx	[%i6+1207],%o5
+	stx	%o5,[%i3-336]
+	ldx	[%i6+1199],%o5
+	stx	%o5,[%i3-328]
+	ldx	[%i6+1191],%o5
+	stx	%o5,[%i3-320]
+	ldx	[%i6+1183],%o5
+	stx	%o5,[%i3-312]
+	ldx	[%i6+1175],%o5
+	stx	%o5,[%i3-304]
+	ldx	[%i6+1167],%o5
+	stx	%o5,[%i3-296]
+	ldx	[%i6+1159],%o5
+	stx	%o5,[%i3-288]
+	ldx	[%i6+1151],%o5
+	stx	%o5,[%i3-280]
+	ldx	[%i6+1143],%o5
+	stx	%o5,[%i3-272]
+	ldx	[%i6+1135],%o5
+	stx	%o5,[%i3-264]
+	ldx	[%i6+1127],%o5
+	stx	%o5,[%i3-256]
+	ldx	[%i6+1119],%o5
+	stx	%o5,[%i3-248]
+	ldx	[%i6+1111],%o5
+	stx	%o5,[%i3-240]
+	ldx	[%i6+1103],%o5
+	stx	%o5,[%i3-232]
+	ldx	[%i6+1095],%o5
+	stx	%o5,[%i3-224]
+	ldx	[%i6+1087],%o5
+	stx	%o5,[%i3-216]
+	ldx	[%i6+1079],%o5
+	stx	%o5,[%i3-208]
+	ldx	[%i6+1071],%o5
+	stx	%o5,[%i3-200]
+	ldx	[%i6+1063],%o5
+	stx	%o5,[%i3-192]
+	ldx	[%i6+1055],%o5
+	stx	%o5,[%i3-184]
+	ldx	[%i6+1047],%o5
+	stx	%o5,[%i3-176]
+	ldx	[%i6+1039],%o5
+	stx	%o5,[%i3-168]
+	ldx	[%i6+1031],%o5
+	stx	%o5,[%i3-160]
+	ldx	[%i6+1023],%o5
+	stx	%o5,[%i3-152]
+	ldx	[%i6+1015],%o5
+	stx	%o5,[%i3-144]
+	ldx	[%i6+1007],%o5
+	stx	%o5,[%i3-136]
+	ldx	[%i6+999],%o5
+	stx	%o5,[%i3-128]
+	ldx	[%i6+991],%o5
+	stx	%o5,[%i3-120]
+	ldx	[%i6+967],%o5
+	stx	%o5,[%i3-112]
+	stx	%l6,[%i3-104]
+	stx	%l7,[%i3-96]
+	stx	%i4,[%i3-88]
+	stx	%g3,[%i3-80]
+	stx	%g4,[%i3-72]
+	stx	%o0,[%i3-64]
+	stx	%o1,[%i3-56]
+	stx	%o2,[%i3-48]
+	stx	%o3,[%i3-40]
+	stx	%o4,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1056,%g1
+	sethi	%hh(s79o_info),%g2
+	sethi	%lm(s79o_info),%g3
+	or	%g2,%hm(s79o_info),%g2
+	or	%g3,%lo(s79o_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.Lcczd_end:
+.Ls7ad_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79j_info)+40
+	.quad	0
+	.quad	64424509441
+.align 4
+s79j_info:
+.Lcczn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lcczo
+	nop
+	b	.Lcczp
+	nop
+.Lcczn_end:
+.Lcczo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lcczo_end:
+.Lcczp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInt_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInt_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInt_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInt_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.Lcczp_end:
+.Ls79j_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79k_info)+32
+	.quad	0
+	.quad	64424509443
+.align 4
+s79k_info:
+.Lcczq:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lcczr
+	nop
+	b	.Lcczs
+	nop
+.Lcczq_end:
+.Lcczs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lcczu
+	nop
+	b	.Lcczt
+	nop
+.Lcczs_end:
+.Lcczu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.Lcczr
+	nop
+.Lcczu_end:
+.Lcczr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lcczr_end:
+.Lcczt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79j_info),%g1
+	sethi	%lm(s79j_info),%g2
+	or	%g1,%hm(s79j_info),%g1
+	or	%g2,%lo(s79j_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.Lcczt_end:
+.Ls79k_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ae_info)+0
+	.quad	549755813888
+	.quad	64424509503
+.align 4
+s7ae_info:
+.Lcczv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.Lcczw
+	nop
+	b	.Lcczx
+	nop
+.Lcczv_end:
+.Lcczx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1048,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.Lcczz
+	nop
+	b	.Lcczy
+	nop
+.Lcczx_end:
+.Lcczz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1048,%g2
+	stx	%g2,[%i1+904]
+	b	.Lcczw
+	nop
+.Lcczz_end:
+.Lcczw:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.Lcczw_end:
+.Lcczy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	ldx	[%g1+1032],%g1
+	stx	%l6,[%i6+999]
+	sethi	%hh(s7ad_info),%l6
+	stx	%l6,[%i6+991]
+	sethi	%lm(s7ad_info),%l6
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	or	%l6,%hm(s7ad_info),%l6
+	stx	%l6,[%i6+991]
+	ldx	[%i6+983],%l6
+	or	%l6,%lo(s7ad_info),%l6
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	sllx	%l6,32,%l6
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	or	%l7,%l6,%l7
+	stx	%l7,[%i3-1040]
+	ldx	[%i6+1911],%l6
+	stx	%l6,[%i3-1032]
+	ldx	[%i6+1903],%l6
+	stx	%l6,[%i3-1024]
+	ldx	[%i6+1895],%l6
+	stx	%l6,[%i3-1016]
+	ldx	[%i6+1887],%l6
+	stx	%l6,[%i3-1008]
+	ldx	[%i6+1879],%l6
+	stx	%l6,[%i3-1000]
+	ldx	[%i6+1871],%l6
+	stx	%l6,[%i3-992]
+	ldx	[%i6+1863],%l6
+	stx	%l6,[%i3-984]
+	ldx	[%i6+1855],%l6
+	stx	%l6,[%i3-976]
+	ldx	[%i6+1847],%l6
+	stx	%l6,[%i3-968]
+	ldx	[%i6+1839],%l6
+	stx	%l6,[%i3-960]
+	ldx	[%i6+1831],%l6
+	stx	%l6,[%i3-952]
+	ldx	[%i6+1823],%l6
+	stx	%l6,[%i3-944]
+	ldx	[%i6+1815],%l6
+	stx	%l6,[%i3-936]
+	ldx	[%i6+1807],%l6
+	stx	%l6,[%i3-928]
+	ldx	[%i6+1799],%l6
+	stx	%l6,[%i3-920]
+	ldx	[%i6+1791],%l6
+	stx	%l6,[%i3-912]
+	ldx	[%i6+1783],%l6
+	stx	%l6,[%i3-904]
+	ldx	[%i6+1775],%l6
+	stx	%l6,[%i3-896]
+	ldx	[%i6+1767],%l6
+	stx	%l6,[%i3-888]
+	ldx	[%i6+1759],%l6
+	stx	%l6,[%i3-880]
+	ldx	[%i6+1751],%l6
+	stx	%l6,[%i3-872]
+	ldx	[%i6+1743],%l6
+	stx	%l6,[%i3-864]
+	ldx	[%i6+1735],%l6
+	stx	%l6,[%i3-856]
+	ldx	[%i6+1727],%l6
+	stx	%l6,[%i3-848]
+	ldx	[%i6+1719],%l6
+	stx	%l6,[%i3-840]
+	ldx	[%i6+1711],%l6
+	stx	%l6,[%i3-832]
+	ldx	[%i6+1703],%l6
+	stx	%l6,[%i3-824]
+	ldx	[%i6+1695],%l6
+	stx	%l6,[%i3-816]
+	ldx	[%i6+1687],%l6
+	stx	%l6,[%i3-808]
+	ldx	[%i6+1679],%l6
+	stx	%l6,[%i3-800]
+	ldx	[%i6+1671],%l6
+	stx	%l6,[%i3-792]
+	ldx	[%i6+1663],%l6
+	stx	%l6,[%i3-784]
+	ldx	[%i6+1655],%l6
+	stx	%l6,[%i3-776]
+	ldx	[%i6+1647],%l6
+	stx	%l6,[%i3-768]
+	ldx	[%i6+1639],%l6
+	stx	%l6,[%i3-760]
+	ldx	[%i6+1631],%l6
+	stx	%l6,[%i3-752]
+	ldx	[%i6+1623],%l6
+	stx	%l6,[%i3-744]
+	ldx	[%i6+1615],%l6
+	stx	%l6,[%i3-736]
+	ldx	[%i6+1607],%l6
+	stx	%l6,[%i3-728]
+	ldx	[%i6+1599],%l6
+	stx	%l6,[%i3-720]
+	ldx	[%i6+1591],%l6
+	stx	%l6,[%i3-712]
+	ldx	[%i6+1583],%l6
+	stx	%l6,[%i3-704]
+	ldx	[%i6+1575],%l6
+	stx	%l6,[%i3-696]
+	ldx	[%i6+1567],%l6
+	stx	%l6,[%i3-688]
+	ldx	[%i6+1559],%l6
+	stx	%l6,[%i3-680]
+	ldx	[%i6+1551],%l6
+	stx	%l6,[%i3-672]
+	ldx	[%i6+1543],%l6
+	stx	%l6,[%i3-664]
+	ldx	[%i6+1535],%l6
+	stx	%l6,[%i3-656]
+	ldx	[%i6+1527],%l6
+	stx	%l6,[%i3-648]
+	ldx	[%i6+1519],%l6
+	stx	%l6,[%i3-640]
+	ldx	[%i6+1511],%l6
+	stx	%l6,[%i3-632]
+	ldx	[%i6+1503],%l6
+	stx	%l6,[%i3-624]
+	ldx	[%i6+1495],%l6
+	stx	%l6,[%i3-616]
+	ldx	[%i6+1487],%l6
+	stx	%l6,[%i3-608]
+	ldx	[%i6+1479],%l6
+	stx	%l6,[%i3-600]
+	ldx	[%i6+1471],%l6
+	stx	%l6,[%i3-592]
+	ldx	[%i6+1463],%l6
+	stx	%l6,[%i3-584]
+	ldx	[%i6+1455],%l6
+	stx	%l6,[%i3-576]
+	ldx	[%i6+1447],%l6
+	stx	%l6,[%i3-568]
+	ldx	[%i6+1439],%l6
+	stx	%l6,[%i3-560]
+	ldx	[%i6+1431],%l6
+	stx	%l6,[%i3-552]
+	ldx	[%i6+1423],%l6
+	stx	%l6,[%i3-544]
+	ldx	[%i6+1415],%l6
+	stx	%l6,[%i3-536]
+	ldx	[%i6+1407],%l6
+	stx	%l6,[%i3-528]
+	ldx	[%i6+1399],%l6
+	stx	%l6,[%i3-520]
+	ldx	[%i6+1391],%l6
+	stx	%l6,[%i3-512]
+	ldx	[%i6+1383],%l6
+	stx	%l6,[%i3-504]
+	ldx	[%i6+1375],%l6
+	stx	%l6,[%i3-496]
+	ldx	[%i6+1367],%l6
+	stx	%l6,[%i3-488]
+	ldx	[%i6+1359],%l6
+	stx	%l6,[%i3-480]
+	ldx	[%i6+1351],%l6
+	stx	%l6,[%i3-472]
+	ldx	[%i6+1343],%l6
+	stx	%l6,[%i3-464]
+	ldx	[%i6+1335],%l6
+	stx	%l6,[%i3-456]
+	ldx	[%i6+1327],%l6
+	stx	%l6,[%i3-448]
+	ldx	[%i6+1319],%l6
+	stx	%l6,[%i3-440]
+	ldx	[%i6+1311],%l6
+	stx	%l6,[%i3-432]
+	ldx	[%i6+1303],%l6
+	stx	%l6,[%i3-424]
+	ldx	[%i6+1295],%l6
+	stx	%l6,[%i3-416]
+	ldx	[%i6+1287],%l6
+	stx	%l6,[%i3-408]
+	ldx	[%i6+1279],%l6
+	stx	%l6,[%i3-400]
+	ldx	[%i6+1271],%l6
+	stx	%l6,[%i3-392]
+	ldx	[%i6+1263],%l6
+	stx	%l6,[%i3-384]
+	ldx	[%i6+1255],%l6
+	stx	%l6,[%i3-376]
+	ldx	[%i6+1247],%l6
+	stx	%l6,[%i3-368]
+	ldx	[%i6+1239],%l6
+	stx	%l6,[%i3-360]
+	ldx	[%i6+1231],%l6
+	stx	%l6,[%i3-352]
+	ldx	[%i6+1223],%l6
+	stx	%l6,[%i3-344]
+	ldx	[%i6+1215],%l6
+	stx	%l6,[%i3-336]
+	ldx	[%i6+1207],%l6
+	stx	%l6,[%i3-328]
+	ldx	[%i6+1199],%l6
+	stx	%l6,[%i3-320]
+	ldx	[%i6+1191],%l6
+	stx	%l6,[%i3-312]
+	ldx	[%i6+1183],%l6
+	stx	%l6,[%i3-304]
+	ldx	[%i6+1175],%l6
+	stx	%l6,[%i3-296]
+	ldx	[%i6+1167],%l6
+	stx	%l6,[%i3-288]
+	ldx	[%i6+1159],%l6
+	stx	%l6,[%i3-280]
+	ldx	[%i6+1151],%l6
+	stx	%l6,[%i3-272]
+	ldx	[%i6+1143],%l6
+	stx	%l6,[%i3-264]
+	ldx	[%i6+1135],%l6
+	stx	%l6,[%i3-256]
+	ldx	[%i6+1127],%l6
+	stx	%l6,[%i3-248]
+	ldx	[%i6+1119],%l6
+	stx	%l6,[%i3-240]
+	ldx	[%i6+1111],%l6
+	stx	%l6,[%i3-232]
+	ldx	[%i6+1103],%l6
+	stx	%l6,[%i3-224]
+	ldx	[%i6+1095],%l6
+	stx	%l6,[%i3-216]
+	ldx	[%i6+1087],%l6
+	stx	%l6,[%i3-208]
+	ldx	[%i6+1079],%l6
+	stx	%l6,[%i3-200]
+	ldx	[%i6+1071],%l6
+	stx	%l6,[%i3-192]
+	ldx	[%i6+1063],%l6
+	stx	%l6,[%i3-184]
+	ldx	[%i6+1055],%l6
+	stx	%l6,[%i3-176]
+	ldx	[%i6+1047],%l6
+	stx	%l6,[%i3-168]
+	ldx	[%i6+1039],%l6
+	stx	%l6,[%i3-160]
+	ldx	[%i6+1031],%l6
+	stx	%l6,[%i3-152]
+	ldx	[%i6+1023],%l6
+	stx	%l6,[%i3-144]
+	ldx	[%i6+1015],%l6
+	stx	%l6,[%i3-136]
+	ldx	[%i6+1007],%l6
+	stx	%l6,[%i3-128]
+	ldx	[%i6+999],%l6
+	stx	%l6,[%i3-120]
+	ldx	[%i6+975],%l6
+	stx	%l6,[%i3-112]
+	stx	%i4,[%i3-104]
+	stx	%g2,[%i3-96]
+	stx	%g3,[%i3-88]
+	stx	%g4,[%i3-80]
+	stx	%o0,[%i3-72]
+	stx	%o1,[%i3-64]
+	stx	%o2,[%i3-56]
+	stx	%o3,[%i3-48]
+	stx	%o4,[%i3-40]
+	stx	%o5,[%i3-32]
+	stx	%l0,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1039,%g1
+	sethi	%hh(s79k_info),%g2
+	sethi	%lm(s79k_info),%g3
+	or	%g2,%hm(s79k_info),%g2
+	or	%g3,%lo(s79k_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.Lcczy_end:
+.Ls7ae_entry_end:
+.section .rodata
+.align 8
+cczI_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79g_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79g_info:
+.LcczJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LcczK
+	nop
+	b	.LcczL
+	nop
+.LcczJ_end:
+.LcczK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LcczK_end:
+.LcczL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(cczI_str),%g1
+	sethi	%lm(cczI_str),%l2
+	or	%g1,%hm(cczI_str),%g1
+	or	%l2,%lo(cczI_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LcczL_end:
+.Ls79g_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79i_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79i_info:
+.LcczN:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LcczO
+	nop
+	b	.LcczP
+	nop
+.LcczN_end:
+.LcczP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LcczR
+	nop
+	b	.LcczQ
+	nop
+.LcczP_end:
+.LcczR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LcczO
+	nop
+.LcczR_end:
+.LcczO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LcczO_end:
+.LcczQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79g_info),%g1
+	sethi	%lm(s79g_info),%g2
+	or	%g1,%hm(s79g_info),%g1
+	or	%g2,%lo(s79g_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LcczQ_end:
+.Ls79i_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7af_info)+0
+	.quad	549755813888
+	.quad	64424509503
+.align 4
+s7af_info:
+.LcczS:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LcczT
+	nop
+	b	.LcczU
+	nop
+.LcczS_end:
+.LcczU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1056,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LcczW
+	nop
+	b	.LcczV
+	nop
+.LcczU_end:
+.LcczW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1056,%g2
+	stx	%g2,[%i1+904]
+	b	.LcczT
+	nop
+.LcczW_end:
+.LcczT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LcczT_end:
+.LcczV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	ldx	[%g1+1032],%g1
+	stx	%l6,[%i6+999]
+	sethi	%hh(s7ae_info),%l6
+	stx	%l6,[%i6+991]
+	sethi	%lm(s7ae_info),%l6
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	or	%l6,%hm(s7ae_info),%l6
+	stx	%l6,[%i6+991]
+	ldx	[%i6+983],%l6
+	or	%l6,%lo(s7ae_info),%l6
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	sllx	%l6,32,%l6
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	or	%l7,%l6,%l7
+	stx	%l7,[%i3-1048]
+	ldx	[%i6+1911],%l6
+	stx	%l6,[%i3-1032]
+	ldx	[%i6+1903],%l6
+	stx	%l6,[%i3-1024]
+	ldx	[%i6+1895],%l6
+	stx	%l6,[%i3-1016]
+	ldx	[%i6+1887],%l6
+	stx	%l6,[%i3-1008]
+	ldx	[%i6+1879],%l6
+	stx	%l6,[%i3-1000]
+	ldx	[%i6+1871],%l6
+	stx	%l6,[%i3-992]
+	ldx	[%i6+1863],%l6
+	stx	%l6,[%i3-984]
+	ldx	[%i6+1855],%l6
+	stx	%l6,[%i3-976]
+	ldx	[%i6+1847],%l6
+	stx	%l6,[%i3-968]
+	ldx	[%i6+1839],%l6
+	stx	%l6,[%i3-960]
+	ldx	[%i6+1831],%l6
+	stx	%l6,[%i3-952]
+	ldx	[%i6+1823],%l6
+	stx	%l6,[%i3-944]
+	ldx	[%i6+1815],%l6
+	stx	%l6,[%i3-936]
+	ldx	[%i6+1807],%l6
+	stx	%l6,[%i3-928]
+	ldx	[%i6+1799],%l6
+	stx	%l6,[%i3-920]
+	ldx	[%i6+1791],%l6
+	stx	%l6,[%i3-912]
+	ldx	[%i6+1783],%l6
+	stx	%l6,[%i3-904]
+	ldx	[%i6+1775],%l6
+	stx	%l6,[%i3-896]
+	ldx	[%i6+1767],%l6
+	stx	%l6,[%i3-888]
+	ldx	[%i6+1759],%l6
+	stx	%l6,[%i3-880]
+	ldx	[%i6+1751],%l6
+	stx	%l6,[%i3-872]
+	ldx	[%i6+1743],%l6
+	stx	%l6,[%i3-864]
+	ldx	[%i6+1735],%l6
+	stx	%l6,[%i3-856]
+	ldx	[%i6+1727],%l6
+	stx	%l6,[%i3-848]
+	ldx	[%i6+1719],%l6
+	stx	%l6,[%i3-840]
+	ldx	[%i6+1711],%l6
+	stx	%l6,[%i3-832]
+	ldx	[%i6+1703],%l6
+	stx	%l6,[%i3-824]
+	ldx	[%i6+1695],%l6
+	stx	%l6,[%i3-816]
+	ldx	[%i6+1687],%l6
+	stx	%l6,[%i3-808]
+	ldx	[%i6+1679],%l6
+	stx	%l6,[%i3-800]
+	ldx	[%i6+1671],%l6
+	stx	%l6,[%i3-792]
+	ldx	[%i6+1663],%l6
+	stx	%l6,[%i3-784]
+	ldx	[%i6+1655],%l6
+	stx	%l6,[%i3-776]
+	ldx	[%i6+1647],%l6
+	stx	%l6,[%i3-768]
+	ldx	[%i6+1639],%l6
+	stx	%l6,[%i3-760]
+	ldx	[%i6+1631],%l6
+	stx	%l6,[%i3-752]
+	ldx	[%i6+1623],%l6
+	stx	%l6,[%i3-744]
+	ldx	[%i6+1615],%l6
+	stx	%l6,[%i3-736]
+	ldx	[%i6+1607],%l6
+	stx	%l6,[%i3-728]
+	ldx	[%i6+1599],%l6
+	stx	%l6,[%i3-720]
+	ldx	[%i6+1591],%l6
+	stx	%l6,[%i3-712]
+	ldx	[%i6+1583],%l6
+	stx	%l6,[%i3-704]
+	ldx	[%i6+1575],%l6
+	stx	%l6,[%i3-696]
+	ldx	[%i6+1567],%l6
+	stx	%l6,[%i3-688]
+	ldx	[%i6+1559],%l6
+	stx	%l6,[%i3-680]
+	ldx	[%i6+1551],%l6
+	stx	%l6,[%i3-672]
+	ldx	[%i6+1543],%l6
+	stx	%l6,[%i3-664]
+	ldx	[%i6+1535],%l6
+	stx	%l6,[%i3-656]
+	ldx	[%i6+1527],%l6
+	stx	%l6,[%i3-648]
+	ldx	[%i6+1519],%l6
+	stx	%l6,[%i3-640]
+	ldx	[%i6+1511],%l6
+	stx	%l6,[%i3-632]
+	ldx	[%i6+1503],%l6
+	stx	%l6,[%i3-624]
+	ldx	[%i6+1495],%l6
+	stx	%l6,[%i3-616]
+	ldx	[%i6+1487],%l6
+	stx	%l6,[%i3-608]
+	ldx	[%i6+1479],%l6
+	stx	%l6,[%i3-600]
+	ldx	[%i6+1471],%l6
+	stx	%l6,[%i3-592]
+	ldx	[%i6+1463],%l6
+	stx	%l6,[%i3-584]
+	ldx	[%i6+1455],%l6
+	stx	%l6,[%i3-576]
+	ldx	[%i6+1447],%l6
+	stx	%l6,[%i3-568]
+	ldx	[%i6+1439],%l6
+	stx	%l6,[%i3-560]
+	ldx	[%i6+1431],%l6
+	stx	%l6,[%i3-552]
+	ldx	[%i6+1423],%l6
+	stx	%l6,[%i3-544]
+	ldx	[%i6+1415],%l6
+	stx	%l6,[%i3-536]
+	ldx	[%i6+1407],%l6
+	stx	%l6,[%i3-528]
+	ldx	[%i6+1399],%l6
+	stx	%l6,[%i3-520]
+	ldx	[%i6+1391],%l6
+	stx	%l6,[%i3-512]
+	ldx	[%i6+1383],%l6
+	stx	%l6,[%i3-504]
+	ldx	[%i6+1375],%l6
+	stx	%l6,[%i3-496]
+	ldx	[%i6+1367],%l6
+	stx	%l6,[%i3-488]
+	ldx	[%i6+1359],%l6
+	stx	%l6,[%i3-480]
+	ldx	[%i6+1351],%l6
+	stx	%l6,[%i3-472]
+	ldx	[%i6+1343],%l6
+	stx	%l6,[%i3-464]
+	ldx	[%i6+1335],%l6
+	stx	%l6,[%i3-456]
+	ldx	[%i6+1327],%l6
+	stx	%l6,[%i3-448]
+	ldx	[%i6+1319],%l6
+	stx	%l6,[%i3-440]
+	ldx	[%i6+1311],%l6
+	stx	%l6,[%i3-432]
+	ldx	[%i6+1303],%l6
+	stx	%l6,[%i3-424]
+	ldx	[%i6+1295],%l6
+	stx	%l6,[%i3-416]
+	ldx	[%i6+1287],%l6
+	stx	%l6,[%i3-408]
+	ldx	[%i6+1279],%l6
+	stx	%l6,[%i3-400]
+	ldx	[%i6+1271],%l6
+	stx	%l6,[%i3-392]
+	ldx	[%i6+1263],%l6
+	stx	%l6,[%i3-384]
+	ldx	[%i6+1255],%l6
+	stx	%l6,[%i3-376]
+	ldx	[%i6+1247],%l6
+	stx	%l6,[%i3-368]
+	ldx	[%i6+1239],%l6
+	stx	%l6,[%i3-360]
+	ldx	[%i6+1231],%l6
+	stx	%l6,[%i3-352]
+	ldx	[%i6+1223],%l6
+	stx	%l6,[%i3-344]
+	ldx	[%i6+1215],%l6
+	stx	%l6,[%i3-336]
+	ldx	[%i6+1207],%l6
+	stx	%l6,[%i3-328]
+	ldx	[%i6+1199],%l6
+	stx	%l6,[%i3-320]
+	ldx	[%i6+1191],%l6
+	stx	%l6,[%i3-312]
+	ldx	[%i6+1183],%l6
+	stx	%l6,[%i3-304]
+	ldx	[%i6+1175],%l6
+	stx	%l6,[%i3-296]
+	ldx	[%i6+1167],%l6
+	stx	%l6,[%i3-288]
+	ldx	[%i6+1159],%l6
+	stx	%l6,[%i3-280]
+	ldx	[%i6+1151],%l6
+	stx	%l6,[%i3-272]
+	ldx	[%i6+1143],%l6
+	stx	%l6,[%i3-264]
+	ldx	[%i6+1135],%l6
+	stx	%l6,[%i3-256]
+	ldx	[%i6+1127],%l6
+	stx	%l6,[%i3-248]
+	ldx	[%i6+1119],%l6
+	stx	%l6,[%i3-240]
+	ldx	[%i6+1111],%l6
+	stx	%l6,[%i3-232]
+	ldx	[%i6+1103],%l6
+	stx	%l6,[%i3-224]
+	ldx	[%i6+1095],%l6
+	stx	%l6,[%i3-216]
+	ldx	[%i6+1087],%l6
+	stx	%l6,[%i3-208]
+	ldx	[%i6+1079],%l6
+	stx	%l6,[%i3-200]
+	ldx	[%i6+1071],%l6
+	stx	%l6,[%i3-192]
+	ldx	[%i6+1063],%l6
+	stx	%l6,[%i3-184]
+	ldx	[%i6+1055],%l6
+	stx	%l6,[%i3-176]
+	ldx	[%i6+1047],%l6
+	stx	%l6,[%i3-168]
+	ldx	[%i6+1039],%l6
+	stx	%l6,[%i3-160]
+	ldx	[%i6+1031],%l6
+	stx	%l6,[%i3-152]
+	ldx	[%i6+1023],%l6
+	stx	%l6,[%i3-144]
+	ldx	[%i6+1015],%l6
+	stx	%l6,[%i3-136]
+	ldx	[%i6+1007],%l6
+	stx	%l6,[%i3-128]
+	ldx	[%i6+999],%l6
+	stx	%l6,[%i3-120]
+	ldx	[%i6+975],%l6
+	stx	%l6,[%i3-112]
+	stx	%i4,[%i3-104]
+	stx	%g2,[%i3-96]
+	stx	%g3,[%i3-88]
+	stx	%g4,[%i3-80]
+	stx	%o0,[%i3-72]
+	stx	%o1,[%i3-64]
+	stx	%o2,[%i3-56]
+	stx	%o3,[%i3-48]
+	stx	%o4,[%i3-40]
+	stx	%o5,[%i3-32]
+	stx	%l0,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1048,%g1
+	sethi	%hh(s79i_info),%g2
+	sethi	%lm(s79i_info),%g3
+	or	%g2,%hm(s79i_info),%g2
+	or	%g3,%lo(s79i_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LcczV_end:
+.Ls7af_entry_end:
+.section .rodata
+.align 8
+ccA5_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	76
+	.byte	68
+	.byte	86
+	.byte	95
+	.byte	83
+	.byte	72
+	.byte	73
+	.byte	70
+	.byte	84
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79d_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79d_info:
+.LccA6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccA7
+	nop
+	b	.LccA8
+	nop
+.LccA6_end:
+.LccA7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccA7_end:
+.LccA8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccA5_str),%g1
+	sethi	%lm(ccA5_str),%l2
+	or	%g1,%hm(ccA5_str),%g1
+	or	%l2,%lo(ccA5_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccA8_end:
+.Ls79d_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79f_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79f_info:
+.LccAa:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccAb
+	nop
+	b	.LccAc
+	nop
+.LccAa_end:
+.LccAc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccAe
+	nop
+	b	.LccAd
+	nop
+.LccAc_end:
+.LccAe:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccAb
+	nop
+.LccAe_end:
+.LccAb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccAb_end:
+.LccAd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79d_info),%g1
+	sethi	%lm(s79d_info),%g2
+	or	%g1,%hm(s79d_info),%g1
+	or	%g2,%lo(s79d_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccAd_end:
+.Ls79f_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ag_info)+0
+	.quad	549755813888
+	.quad	64424509503
+.align 4
+s7ag_info:
+.LccAf:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccAg
+	nop
+	b	.LccAh
+	nop
+.LccAf_end:
+.LccAh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1056,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccAj
+	nop
+	b	.LccAi
+	nop
+.LccAh_end:
+.LccAj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1056,%g2
+	stx	%g2,[%i1+904]
+	b	.LccAg
+	nop
+.LccAj_end:
+.LccAg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccAg_end:
+.LccAi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	stx	%l0,[%i6+1007]
+	ldx	[%g1+1024],%l0
+	ldx	[%g1+1032],%g1
+	stx	%l6,[%i6+999]
+	sethi	%hh(s7af_info),%l6
+	stx	%l6,[%i6+991]
+	sethi	%lm(s7af_info),%l6
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	or	%l6,%hm(s7af_info),%l6
+	stx	%l6,[%i6+991]
+	ldx	[%i6+983],%l6
+	or	%l6,%lo(s7af_info),%l6
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	sllx	%l6,32,%l6
+	stx	%l7,[%i6+975]
+	ldx	[%i6+983],%l7
+	or	%l7,%l6,%l7
+	stx	%l7,[%i3-1048]
+	ldx	[%i6+1911],%l6
+	stx	%l6,[%i3-1032]
+	ldx	[%i6+1903],%l6
+	stx	%l6,[%i3-1024]
+	ldx	[%i6+1895],%l6
+	stx	%l6,[%i3-1016]
+	ldx	[%i6+1887],%l6
+	stx	%l6,[%i3-1008]
+	ldx	[%i6+1879],%l6
+	stx	%l6,[%i3-1000]
+	ldx	[%i6+1871],%l6
+	stx	%l6,[%i3-992]
+	ldx	[%i6+1863],%l6
+	stx	%l6,[%i3-984]
+	ldx	[%i6+1855],%l6
+	stx	%l6,[%i3-976]
+	ldx	[%i6+1847],%l6
+	stx	%l6,[%i3-968]
+	ldx	[%i6+1839],%l6
+	stx	%l6,[%i3-960]
+	ldx	[%i6+1831],%l6
+	stx	%l6,[%i3-952]
+	ldx	[%i6+1823],%l6
+	stx	%l6,[%i3-944]
+	ldx	[%i6+1815],%l6
+	stx	%l6,[%i3-936]
+	ldx	[%i6+1807],%l6
+	stx	%l6,[%i3-928]
+	ldx	[%i6+1799],%l6
+	stx	%l6,[%i3-920]
+	ldx	[%i6+1791],%l6
+	stx	%l6,[%i3-912]
+	ldx	[%i6+1783],%l6
+	stx	%l6,[%i3-904]
+	ldx	[%i6+1775],%l6
+	stx	%l6,[%i3-896]
+	ldx	[%i6+1767],%l6
+	stx	%l6,[%i3-888]
+	ldx	[%i6+1759],%l6
+	stx	%l6,[%i3-880]
+	ldx	[%i6+1751],%l6
+	stx	%l6,[%i3-872]
+	ldx	[%i6+1743],%l6
+	stx	%l6,[%i3-864]
+	ldx	[%i6+1735],%l6
+	stx	%l6,[%i3-856]
+	ldx	[%i6+1727],%l6
+	stx	%l6,[%i3-848]
+	ldx	[%i6+1719],%l6
+	stx	%l6,[%i3-840]
+	ldx	[%i6+1711],%l6
+	stx	%l6,[%i3-832]
+	ldx	[%i6+1703],%l6
+	stx	%l6,[%i3-824]
+	ldx	[%i6+1695],%l6
+	stx	%l6,[%i3-816]
+	ldx	[%i6+1687],%l6
+	stx	%l6,[%i3-808]
+	ldx	[%i6+1679],%l6
+	stx	%l6,[%i3-800]
+	ldx	[%i6+1671],%l6
+	stx	%l6,[%i3-792]
+	ldx	[%i6+1663],%l6
+	stx	%l6,[%i3-784]
+	ldx	[%i6+1655],%l6
+	stx	%l6,[%i3-776]
+	ldx	[%i6+1647],%l6
+	stx	%l6,[%i3-768]
+	ldx	[%i6+1639],%l6
+	stx	%l6,[%i3-760]
+	ldx	[%i6+1631],%l6
+	stx	%l6,[%i3-752]
+	ldx	[%i6+1623],%l6
+	stx	%l6,[%i3-744]
+	ldx	[%i6+1615],%l6
+	stx	%l6,[%i3-736]
+	ldx	[%i6+1607],%l6
+	stx	%l6,[%i3-728]
+	ldx	[%i6+1599],%l6
+	stx	%l6,[%i3-720]
+	ldx	[%i6+1591],%l6
+	stx	%l6,[%i3-712]
+	ldx	[%i6+1583],%l6
+	stx	%l6,[%i3-704]
+	ldx	[%i6+1575],%l6
+	stx	%l6,[%i3-696]
+	ldx	[%i6+1567],%l6
+	stx	%l6,[%i3-688]
+	ldx	[%i6+1559],%l6
+	stx	%l6,[%i3-680]
+	ldx	[%i6+1551],%l6
+	stx	%l6,[%i3-672]
+	ldx	[%i6+1543],%l6
+	stx	%l6,[%i3-664]
+	ldx	[%i6+1535],%l6
+	stx	%l6,[%i3-656]
+	ldx	[%i6+1527],%l6
+	stx	%l6,[%i3-648]
+	ldx	[%i6+1519],%l6
+	stx	%l6,[%i3-640]
+	ldx	[%i6+1511],%l6
+	stx	%l6,[%i3-632]
+	ldx	[%i6+1503],%l6
+	stx	%l6,[%i3-624]
+	ldx	[%i6+1495],%l6
+	stx	%l6,[%i3-616]
+	ldx	[%i6+1487],%l6
+	stx	%l6,[%i3-608]
+	ldx	[%i6+1479],%l6
+	stx	%l6,[%i3-600]
+	ldx	[%i6+1471],%l6
+	stx	%l6,[%i3-592]
+	ldx	[%i6+1463],%l6
+	stx	%l6,[%i3-584]
+	ldx	[%i6+1455],%l6
+	stx	%l6,[%i3-576]
+	ldx	[%i6+1447],%l6
+	stx	%l6,[%i3-568]
+	ldx	[%i6+1439],%l6
+	stx	%l6,[%i3-560]
+	ldx	[%i6+1431],%l6
+	stx	%l6,[%i3-552]
+	ldx	[%i6+1423],%l6
+	stx	%l6,[%i3-544]
+	ldx	[%i6+1415],%l6
+	stx	%l6,[%i3-536]
+	ldx	[%i6+1407],%l6
+	stx	%l6,[%i3-528]
+	ldx	[%i6+1399],%l6
+	stx	%l6,[%i3-520]
+	ldx	[%i6+1391],%l6
+	stx	%l6,[%i3-512]
+	ldx	[%i6+1383],%l6
+	stx	%l6,[%i3-504]
+	ldx	[%i6+1375],%l6
+	stx	%l6,[%i3-496]
+	ldx	[%i6+1367],%l6
+	stx	%l6,[%i3-488]
+	ldx	[%i6+1359],%l6
+	stx	%l6,[%i3-480]
+	ldx	[%i6+1351],%l6
+	stx	%l6,[%i3-472]
+	ldx	[%i6+1343],%l6
+	stx	%l6,[%i3-464]
+	ldx	[%i6+1335],%l6
+	stx	%l6,[%i3-456]
+	ldx	[%i6+1327],%l6
+	stx	%l6,[%i3-448]
+	ldx	[%i6+1319],%l6
+	stx	%l6,[%i3-440]
+	ldx	[%i6+1311],%l6
+	stx	%l6,[%i3-432]
+	ldx	[%i6+1303],%l6
+	stx	%l6,[%i3-424]
+	ldx	[%i6+1295],%l6
+	stx	%l6,[%i3-416]
+	ldx	[%i6+1287],%l6
+	stx	%l6,[%i3-408]
+	ldx	[%i6+1279],%l6
+	stx	%l6,[%i3-400]
+	ldx	[%i6+1271],%l6
+	stx	%l6,[%i3-392]
+	ldx	[%i6+1263],%l6
+	stx	%l6,[%i3-384]
+	ldx	[%i6+1255],%l6
+	stx	%l6,[%i3-376]
+	ldx	[%i6+1247],%l6
+	stx	%l6,[%i3-368]
+	ldx	[%i6+1239],%l6
+	stx	%l6,[%i3-360]
+	ldx	[%i6+1231],%l6
+	stx	%l6,[%i3-352]
+	ldx	[%i6+1223],%l6
+	stx	%l6,[%i3-344]
+	ldx	[%i6+1215],%l6
+	stx	%l6,[%i3-336]
+	ldx	[%i6+1207],%l6
+	stx	%l6,[%i3-328]
+	ldx	[%i6+1199],%l6
+	stx	%l6,[%i3-320]
+	ldx	[%i6+1191],%l6
+	stx	%l6,[%i3-312]
+	ldx	[%i6+1183],%l6
+	stx	%l6,[%i3-304]
+	ldx	[%i6+1175],%l6
+	stx	%l6,[%i3-296]
+	ldx	[%i6+1167],%l6
+	stx	%l6,[%i3-288]
+	ldx	[%i6+1159],%l6
+	stx	%l6,[%i3-280]
+	ldx	[%i6+1151],%l6
+	stx	%l6,[%i3-272]
+	ldx	[%i6+1143],%l6
+	stx	%l6,[%i3-264]
+	ldx	[%i6+1135],%l6
+	stx	%l6,[%i3-256]
+	ldx	[%i6+1127],%l6
+	stx	%l6,[%i3-248]
+	ldx	[%i6+1119],%l6
+	stx	%l6,[%i3-240]
+	ldx	[%i6+1111],%l6
+	stx	%l6,[%i3-232]
+	ldx	[%i6+1103],%l6
+	stx	%l6,[%i3-224]
+	ldx	[%i6+1095],%l6
+	stx	%l6,[%i3-216]
+	ldx	[%i6+1087],%l6
+	stx	%l6,[%i3-208]
+	ldx	[%i6+1079],%l6
+	stx	%l6,[%i3-200]
+	ldx	[%i6+1071],%l6
+	stx	%l6,[%i3-192]
+	ldx	[%i6+1063],%l6
+	stx	%l6,[%i3-184]
+	ldx	[%i6+1055],%l6
+	stx	%l6,[%i3-176]
+	ldx	[%i6+1047],%l6
+	stx	%l6,[%i3-168]
+	ldx	[%i6+1039],%l6
+	stx	%l6,[%i3-160]
+	ldx	[%i6+1031],%l6
+	stx	%l6,[%i3-152]
+	ldx	[%i6+1023],%l6
+	stx	%l6,[%i3-144]
+	ldx	[%i6+1015],%l6
+	stx	%l6,[%i3-136]
+	ldx	[%i6+1007],%l6
+	stx	%l6,[%i3-128]
+	ldx	[%i6+999],%l6
+	stx	%l6,[%i3-120]
+	ldx	[%i6+975],%l6
+	stx	%l6,[%i3-112]
+	stx	%i4,[%i3-104]
+	stx	%g2,[%i3-96]
+	stx	%g3,[%i3-88]
+	stx	%g4,[%i3-80]
+	stx	%o0,[%i3-72]
+	stx	%o1,[%i3-64]
+	stx	%o2,[%i3-56]
+	stx	%o3,[%i3-48]
+	stx	%o4,[%i3-40]
+	stx	%o5,[%i3-32]
+	stx	%l0,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1048,%g1
+	sethi	%hh(s79f_info),%g2
+	sethi	%lm(s79f_info),%g3
+	or	%g2,%hm(s79f_info),%g2
+	or	%g3,%lo(s79f_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccAi_end:
+.Ls7ag_entry_end:
+.section .rodata
+.align 8
+ccAs_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79a_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s79a_info:
+.LccAt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccAu
+	nop
+	b	.LccAv
+	nop
+.LccAt_end:
+.LccAu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccAu_end:
+.LccAv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccAs_str),%g1
+	sethi	%lm(ccAs_str),%l2
+	or	%g1,%hm(ccAs_str),%g1
+	or	%l2,%lo(ccAs_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccAv_end:
+.Ls79a_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s79c_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s79c_info:
+.LccAx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccAy
+	nop
+	b	.LccAz
+	nop
+.LccAx_end:
+.LccAz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccAB
+	nop
+	b	.LccAA
+	nop
+.LccAz_end:
+.LccAB:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccAy
+	nop
+.LccAB_end:
+.LccAy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccAy_end:
+.LccAA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s79a_info),%g1
+	sethi	%lm(s79a_info),%g2
+	or	%g1,%hm(s79a_info),%g1
+	or	%g2,%lo(s79a_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccAA_end:
+.Ls79c_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ah_info)+0
+	.quad	21474836481
+	.quad	545460846592
+	.quad	34359738431
+.align 4
+s7ah_info:
+.LccAC:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccAD
+	nop
+	b	.LccAE
+	nop
+.LccAC_end:
+.LccAE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1056,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccAG
+	nop
+	b	.LccAF
+	nop
+.LccAE_end:
+.LccAG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1056,%g3
+	stx	%g3,[%i1+904]
+	b	.LccAD
+	nop
+.LccAG_end:
+.LccAD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccAD_end:
+.LccAF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	stx	%o1,[%i6+1023]
+	ldx	[%g2+991],%o1
+	stx	%o2,[%i6+1015]
+	ldx	[%g2+999],%o2
+	stx	%o3,[%i6+1007]
+	ldx	[%g2+1007],%o3
+	ldx	[%g2+1015],%g2
+	stx	%o4,[%i6+999]
+	sethi	%hh(s7ag_info),%o4
+	stx	%o4,[%i6+991]
+	sethi	%lm(s7ag_info),%o4
+	stx	%o4,[%i6+983]
+	ldx	[%i6+991],%o4
+	or	%o4,%hm(s7ag_info),%o4
+	stx	%o4,[%i6+991]
+	ldx	[%i6+983],%o4
+	or	%o4,%lo(s7ag_info),%o4
+	stx	%o4,[%i6+983]
+	ldx	[%i6+991],%o4
+	sllx	%o4,32,%o4
+	stx	%o5,[%i6+975]
+	ldx	[%i6+983],%o5
+	or	%o5,%o4,%o5
+	stx	%o5,[%i3-1048]
+	ldx	[%i6+1911],%o4
+	stx	%o4,[%i3-1032]
+	ldx	[%i6+1903],%o4
+	stx	%o4,[%i3-1024]
+	ldx	[%i6+1895],%o4
+	stx	%o4,[%i3-1016]
+	ldx	[%i6+1887],%o4
+	stx	%o4,[%i3-1008]
+	ldx	[%i6+1879],%o4
+	stx	%o4,[%i3-1000]
+	ldx	[%i6+1871],%o4
+	stx	%o4,[%i3-992]
+	ldx	[%i6+1863],%o4
+	stx	%o4,[%i3-984]
+	ldx	[%i6+1855],%o4
+	stx	%o4,[%i3-976]
+	ldx	[%i6+1847],%o4
+	stx	%o4,[%i3-968]
+	ldx	[%i6+1839],%o4
+	stx	%o4,[%i3-960]
+	ldx	[%i6+1831],%o4
+	stx	%o4,[%i3-952]
+	ldx	[%i6+1823],%o4
+	stx	%o4,[%i3-944]
+	ldx	[%i6+1815],%o4
+	stx	%o4,[%i3-936]
+	ldx	[%i6+1807],%o4
+	stx	%o4,[%i3-928]
+	ldx	[%i6+1799],%o4
+	stx	%o4,[%i3-920]
+	ldx	[%i6+1791],%o4
+	stx	%o4,[%i3-912]
+	ldx	[%i6+1783],%o4
+	stx	%o4,[%i3-904]
+	ldx	[%i6+1775],%o4
+	stx	%o4,[%i3-896]
+	ldx	[%i6+1767],%o4
+	stx	%o4,[%i3-888]
+	ldx	[%i6+1759],%o4
+	stx	%o4,[%i3-880]
+	ldx	[%i6+1751],%o4
+	stx	%o4,[%i3-872]
+	ldx	[%i6+1743],%o4
+	stx	%o4,[%i3-864]
+	ldx	[%i6+1735],%o4
+	stx	%o4,[%i3-856]
+	ldx	[%i6+1727],%o4
+	stx	%o4,[%i3-848]
+	ldx	[%i6+1719],%o4
+	stx	%o4,[%i3-840]
+	ldx	[%i6+1711],%o4
+	stx	%o4,[%i3-832]
+	ldx	[%i6+1703],%o4
+	stx	%o4,[%i3-824]
+	ldx	[%i6+1695],%o4
+	stx	%o4,[%i3-816]
+	ldx	[%i6+1687],%o4
+	stx	%o4,[%i3-808]
+	ldx	[%i6+1679],%o4
+	stx	%o4,[%i3-800]
+	ldx	[%i6+1671],%o4
+	stx	%o4,[%i3-792]
+	ldx	[%i6+1663],%o4
+	stx	%o4,[%i3-784]
+	ldx	[%i6+1655],%o4
+	stx	%o4,[%i3-776]
+	ldx	[%i6+1647],%o4
+	stx	%o4,[%i3-768]
+	ldx	[%i6+1639],%o4
+	stx	%o4,[%i3-760]
+	ldx	[%i6+1631],%o4
+	stx	%o4,[%i3-752]
+	ldx	[%i6+1623],%o4
+	stx	%o4,[%i3-744]
+	ldx	[%i6+1615],%o4
+	stx	%o4,[%i3-736]
+	ldx	[%i6+1607],%o4
+	stx	%o4,[%i3-728]
+	ldx	[%i6+1599],%o4
+	stx	%o4,[%i3-720]
+	ldx	[%i6+1591],%o4
+	stx	%o4,[%i3-712]
+	ldx	[%i6+1583],%o4
+	stx	%o4,[%i3-704]
+	ldx	[%i6+1575],%o4
+	stx	%o4,[%i3-696]
+	ldx	[%i6+1567],%o4
+	stx	%o4,[%i3-688]
+	ldx	[%i6+1559],%o4
+	stx	%o4,[%i3-680]
+	ldx	[%i6+1551],%o4
+	stx	%o4,[%i3-672]
+	ldx	[%i6+1543],%o4
+	stx	%o4,[%i3-664]
+	ldx	[%i6+1535],%o4
+	stx	%o4,[%i3-656]
+	ldx	[%i6+1527],%o4
+	stx	%o4,[%i3-648]
+	ldx	[%i6+1519],%o4
+	stx	%o4,[%i3-640]
+	ldx	[%i6+1511],%o4
+	stx	%o4,[%i3-632]
+	ldx	[%i6+1503],%o4
+	stx	%o4,[%i3-624]
+	ldx	[%i6+1495],%o4
+	stx	%o4,[%i3-616]
+	ldx	[%i6+1487],%o4
+	stx	%o4,[%i3-608]
+	ldx	[%i6+1479],%o4
+	stx	%o4,[%i3-600]
+	ldx	[%i6+1471],%o4
+	stx	%o4,[%i3-592]
+	ldx	[%i6+1463],%o4
+	stx	%o4,[%i3-584]
+	ldx	[%i6+1455],%o4
+	stx	%o4,[%i3-576]
+	ldx	[%i6+1447],%o4
+	stx	%o4,[%i3-568]
+	ldx	[%i6+1439],%o4
+	stx	%o4,[%i3-560]
+	ldx	[%i6+1431],%o4
+	stx	%o4,[%i3-552]
+	ldx	[%i6+1423],%o4
+	stx	%o4,[%i3-544]
+	ldx	[%i6+1415],%o4
+	stx	%o4,[%i3-536]
+	ldx	[%i6+1407],%o4
+	stx	%o4,[%i3-528]
+	ldx	[%i6+1399],%o4
+	stx	%o4,[%i3-520]
+	ldx	[%i6+1391],%o4
+	stx	%o4,[%i3-512]
+	ldx	[%i6+1383],%o4
+	stx	%o4,[%i3-504]
+	ldx	[%i6+1375],%o4
+	stx	%o4,[%i3-496]
+	ldx	[%i6+1367],%o4
+	stx	%o4,[%i3-488]
+	ldx	[%i6+1359],%o4
+	stx	%o4,[%i3-480]
+	ldx	[%i6+1351],%o4
+	stx	%o4,[%i3-472]
+	ldx	[%i6+1343],%o4
+	stx	%o4,[%i3-464]
+	ldx	[%i6+1335],%o4
+	stx	%o4,[%i3-456]
+	ldx	[%i6+1327],%o4
+	stx	%o4,[%i3-448]
+	ldx	[%i6+1319],%o4
+	stx	%o4,[%i3-440]
+	ldx	[%i6+1311],%o4
+	stx	%o4,[%i3-432]
+	ldx	[%i6+1303],%o4
+	stx	%o4,[%i3-424]
+	ldx	[%i6+1295],%o4
+	stx	%o4,[%i3-416]
+	ldx	[%i6+1287],%o4
+	stx	%o4,[%i3-408]
+	ldx	[%i6+1279],%o4
+	stx	%o4,[%i3-400]
+	ldx	[%i6+1271],%o4
+	stx	%o4,[%i3-392]
+	ldx	[%i6+1263],%o4
+	stx	%o4,[%i3-384]
+	ldx	[%i6+1255],%o4
+	stx	%o4,[%i3-376]
+	ldx	[%i6+1247],%o4
+	stx	%o4,[%i3-368]
+	ldx	[%i6+1239],%o4
+	stx	%o4,[%i3-360]
+	ldx	[%i6+1231],%o4
+	stx	%o4,[%i3-352]
+	ldx	[%i6+1223],%o4
+	stx	%o4,[%i3-344]
+	ldx	[%i6+1215],%o4
+	stx	%o4,[%i3-336]
+	ldx	[%i6+1207],%o4
+	stx	%o4,[%i3-328]
+	ldx	[%i6+1199],%o4
+	stx	%o4,[%i3-320]
+	ldx	[%i6+1191],%o4
+	stx	%o4,[%i3-312]
+	ldx	[%i6+1183],%o4
+	stx	%o4,[%i3-304]
+	ldx	[%i6+1175],%o4
+	stx	%o4,[%i3-296]
+	ldx	[%i6+1167],%o4
+	stx	%o4,[%i3-288]
+	ldx	[%i6+1159],%o4
+	stx	%o4,[%i3-280]
+	ldx	[%i6+1151],%o4
+	stx	%o4,[%i3-272]
+	ldx	[%i6+1143],%o4
+	stx	%o4,[%i3-264]
+	ldx	[%i6+1135],%o4
+	stx	%o4,[%i3-256]
+	ldx	[%i6+1127],%o4
+	stx	%o4,[%i3-248]
+	ldx	[%i6+1119],%o4
+	stx	%o4,[%i3-240]
+	ldx	[%i6+1111],%o4
+	stx	%o4,[%i3-232]
+	ldx	[%i6+1103],%o4
+	stx	%o4,[%i3-224]
+	ldx	[%i6+1095],%o4
+	stx	%o4,[%i3-216]
+	ldx	[%i6+1087],%o4
+	stx	%o4,[%i3-208]
+	ldx	[%i6+1079],%o4
+	stx	%o4,[%i3-200]
+	ldx	[%i6+1071],%o4
+	stx	%o4,[%i3-192]
+	ldx	[%i6+1063],%o4
+	stx	%o4,[%i3-184]
+	ldx	[%i6+1055],%o4
+	stx	%o4,[%i3-176]
+	ldx	[%i6+1047],%o4
+	stx	%o4,[%i3-168]
+	ldx	[%i6+1039],%o4
+	stx	%o4,[%i3-160]
+	ldx	[%i6+1031],%o4
+	stx	%o4,[%i3-152]
+	ldx	[%i6+1023],%o4
+	stx	%o4,[%i3-144]
+	ldx	[%i6+1015],%o4
+	stx	%o4,[%i3-136]
+	ldx	[%i6+1007],%o4
+	stx	%o4,[%i3-128]
+	ldx	[%i6+999],%o4
+	stx	%o4,[%i3-120]
+	ldx	[%i6+975],%o4
+	stx	%o4,[%i3-112]
+	stx	%l0,[%i3-104]
+	stx	%l6,[%i3-96]
+	stx	%l7,[%i3-88]
+	stx	%i4,[%i3-80]
+	stx	%g3,[%i3-72]
+	stx	%g4,[%i3-64]
+	stx	%o0,[%i3-56]
+	stx	%o1,[%i3-48]
+	stx	%o2,[%i3-40]
+	stx	%o3,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1048,%g1
+	sethi	%hh(s79c_info),%g2
+	sethi	%lm(s79c_info),%g3
+	or	%g2,%hm(s79c_info),%g2
+	or	%g3,%lo(s79c_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccAF_end:
+.Ls7ah_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s797_info)+48
+	.quad	0
+	.quad	64424509441
+.align 4
+s797_info:
+.LccAP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccAQ
+	nop
+	b	.LccAR
+	nop
+.LccAP_end:
+.LccAQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccAQ_end:
+.LccAR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadBool_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadBool_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadBool_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadBool_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccAR_end:
+.Ls797_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s798_info)+32
+	.quad	0
+	.quad	64424509445
+.align 4
+s798_info:
+.LccAS:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccAT
+	nop
+	b	.LccAU
+	nop
+.LccAS_end:
+.LccAU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccAW
+	nop
+	b	.LccAV
+	nop
+.LccAU_end:
+.LccAW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccAT
+	nop
+.LccAW_end:
+.LccAT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccAT_end:
+.LccAV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s797_info),%g1
+	sethi	%lm(s797_info),%g2
+	or	%g1,%hm(s797_info),%g1
+	or	%g2,%lo(s797_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccAV_end:
+.Ls798_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ai_info)+0
+	.quad	545460846592
+	.quad	64424509567
+.align 4
+s7ai_info:
+.LccAX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccAY
+	nop
+	b	.LccAZ
+	nop
+.LccAX_end:
+.LccAZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1040,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccB1
+	nop
+	b	.LccB0
+	nop
+.LccAZ_end:
+.LccB1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1040,%g2
+	stx	%g2,[%i1+904]
+	b	.LccAY
+	nop
+.LccB1_end:
+.LccAY:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccAY_end:
+.LccB0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	ldx	[%g1+1024],%g1
+	stx	%l0,[%i6+1007]
+	sethi	%hh(s7ah_info),%l0
+	stx	%l0,[%i6+999]
+	sethi	%lm(s7ah_info),%l0
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	or	%l0,%hm(s7ah_info),%l0
+	stx	%l0,[%i6+999]
+	ldx	[%i6+991],%l0
+	or	%l0,%lo(s7ah_info),%l0
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	sllx	%l0,32,%l0
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	or	%l6,%l0,%l6
+	stx	%l6,[%i3-1032]
+	ldx	[%i6+1911],%l0
+	stx	%l0,[%i3-1024]
+	ldx	[%i6+1903],%l0
+	stx	%l0,[%i3-1016]
+	ldx	[%i6+1895],%l0
+	stx	%l0,[%i3-1008]
+	ldx	[%i6+1887],%l0
+	stx	%l0,[%i3-1000]
+	ldx	[%i6+1879],%l0
+	stx	%l0,[%i3-992]
+	ldx	[%i6+1871],%l0
+	stx	%l0,[%i3-984]
+	ldx	[%i6+1863],%l0
+	stx	%l0,[%i3-976]
+	ldx	[%i6+1855],%l0
+	stx	%l0,[%i3-968]
+	ldx	[%i6+1847],%l0
+	stx	%l0,[%i3-960]
+	ldx	[%i6+1839],%l0
+	stx	%l0,[%i3-952]
+	ldx	[%i6+1831],%l0
+	stx	%l0,[%i3-944]
+	ldx	[%i6+1823],%l0
+	stx	%l0,[%i3-936]
+	ldx	[%i6+1815],%l0
+	stx	%l0,[%i3-928]
+	ldx	[%i6+1807],%l0
+	stx	%l0,[%i3-920]
+	ldx	[%i6+1799],%l0
+	stx	%l0,[%i3-912]
+	ldx	[%i6+1791],%l0
+	stx	%l0,[%i3-904]
+	ldx	[%i6+1783],%l0
+	stx	%l0,[%i3-896]
+	ldx	[%i6+1775],%l0
+	stx	%l0,[%i3-888]
+	ldx	[%i6+1767],%l0
+	stx	%l0,[%i3-880]
+	ldx	[%i6+1759],%l0
+	stx	%l0,[%i3-872]
+	ldx	[%i6+1751],%l0
+	stx	%l0,[%i3-864]
+	ldx	[%i6+1743],%l0
+	stx	%l0,[%i3-856]
+	ldx	[%i6+1735],%l0
+	stx	%l0,[%i3-848]
+	ldx	[%i6+1727],%l0
+	stx	%l0,[%i3-840]
+	ldx	[%i6+1719],%l0
+	stx	%l0,[%i3-832]
+	ldx	[%i6+1711],%l0
+	stx	%l0,[%i3-824]
+	ldx	[%i6+1703],%l0
+	stx	%l0,[%i3-816]
+	ldx	[%i6+1695],%l0
+	stx	%l0,[%i3-808]
+	ldx	[%i6+1687],%l0
+	stx	%l0,[%i3-800]
+	ldx	[%i6+1679],%l0
+	stx	%l0,[%i3-792]
+	ldx	[%i6+1671],%l0
+	stx	%l0,[%i3-784]
+	ldx	[%i6+1663],%l0
+	stx	%l0,[%i3-776]
+	ldx	[%i6+1655],%l0
+	stx	%l0,[%i3-768]
+	ldx	[%i6+1647],%l0
+	stx	%l0,[%i3-760]
+	ldx	[%i6+1639],%l0
+	stx	%l0,[%i3-752]
+	ldx	[%i6+1631],%l0
+	stx	%l0,[%i3-744]
+	ldx	[%i6+1623],%l0
+	stx	%l0,[%i3-736]
+	ldx	[%i6+1615],%l0
+	stx	%l0,[%i3-728]
+	ldx	[%i6+1607],%l0
+	stx	%l0,[%i3-720]
+	ldx	[%i6+1599],%l0
+	stx	%l0,[%i3-712]
+	ldx	[%i6+1591],%l0
+	stx	%l0,[%i3-704]
+	ldx	[%i6+1583],%l0
+	stx	%l0,[%i3-696]
+	ldx	[%i6+1575],%l0
+	stx	%l0,[%i3-688]
+	ldx	[%i6+1567],%l0
+	stx	%l0,[%i3-680]
+	ldx	[%i6+1559],%l0
+	stx	%l0,[%i3-672]
+	ldx	[%i6+1551],%l0
+	stx	%l0,[%i3-664]
+	ldx	[%i6+1543],%l0
+	stx	%l0,[%i3-656]
+	ldx	[%i6+1535],%l0
+	stx	%l0,[%i3-648]
+	ldx	[%i6+1527],%l0
+	stx	%l0,[%i3-640]
+	ldx	[%i6+1519],%l0
+	stx	%l0,[%i3-632]
+	ldx	[%i6+1511],%l0
+	stx	%l0,[%i3-624]
+	ldx	[%i6+1503],%l0
+	stx	%l0,[%i3-616]
+	ldx	[%i6+1495],%l0
+	stx	%l0,[%i3-608]
+	ldx	[%i6+1487],%l0
+	stx	%l0,[%i3-600]
+	ldx	[%i6+1479],%l0
+	stx	%l0,[%i3-592]
+	ldx	[%i6+1471],%l0
+	stx	%l0,[%i3-584]
+	ldx	[%i6+1463],%l0
+	stx	%l0,[%i3-576]
+	ldx	[%i6+1455],%l0
+	stx	%l0,[%i3-568]
+	ldx	[%i6+1447],%l0
+	stx	%l0,[%i3-560]
+	ldx	[%i6+1439],%l0
+	stx	%l0,[%i3-552]
+	ldx	[%i6+1431],%l0
+	stx	%l0,[%i3-544]
+	ldx	[%i6+1423],%l0
+	stx	%l0,[%i3-536]
+	ldx	[%i6+1415],%l0
+	stx	%l0,[%i3-528]
+	ldx	[%i6+1407],%l0
+	stx	%l0,[%i3-520]
+	ldx	[%i6+1399],%l0
+	stx	%l0,[%i3-512]
+	ldx	[%i6+1391],%l0
+	stx	%l0,[%i3-504]
+	ldx	[%i6+1383],%l0
+	stx	%l0,[%i3-496]
+	ldx	[%i6+1375],%l0
+	stx	%l0,[%i3-488]
+	ldx	[%i6+1367],%l0
+	stx	%l0,[%i3-480]
+	ldx	[%i6+1359],%l0
+	stx	%l0,[%i3-472]
+	ldx	[%i6+1351],%l0
+	stx	%l0,[%i3-464]
+	ldx	[%i6+1343],%l0
+	stx	%l0,[%i3-456]
+	ldx	[%i6+1335],%l0
+	stx	%l0,[%i3-448]
+	ldx	[%i6+1327],%l0
+	stx	%l0,[%i3-440]
+	ldx	[%i6+1319],%l0
+	stx	%l0,[%i3-432]
+	ldx	[%i6+1311],%l0
+	stx	%l0,[%i3-424]
+	ldx	[%i6+1303],%l0
+	stx	%l0,[%i3-416]
+	ldx	[%i6+1295],%l0
+	stx	%l0,[%i3-408]
+	ldx	[%i6+1287],%l0
+	stx	%l0,[%i3-400]
+	ldx	[%i6+1279],%l0
+	stx	%l0,[%i3-392]
+	ldx	[%i6+1271],%l0
+	stx	%l0,[%i3-384]
+	ldx	[%i6+1263],%l0
+	stx	%l0,[%i3-376]
+	ldx	[%i6+1255],%l0
+	stx	%l0,[%i3-368]
+	ldx	[%i6+1247],%l0
+	stx	%l0,[%i3-360]
+	ldx	[%i6+1239],%l0
+	stx	%l0,[%i3-352]
+	ldx	[%i6+1231],%l0
+	stx	%l0,[%i3-344]
+	ldx	[%i6+1223],%l0
+	stx	%l0,[%i3-336]
+	ldx	[%i6+1215],%l0
+	stx	%l0,[%i3-328]
+	ldx	[%i6+1207],%l0
+	stx	%l0,[%i3-320]
+	ldx	[%i6+1199],%l0
+	stx	%l0,[%i3-312]
+	ldx	[%i6+1191],%l0
+	stx	%l0,[%i3-304]
+	ldx	[%i6+1183],%l0
+	stx	%l0,[%i3-296]
+	ldx	[%i6+1175],%l0
+	stx	%l0,[%i3-288]
+	ldx	[%i6+1167],%l0
+	stx	%l0,[%i3-280]
+	ldx	[%i6+1159],%l0
+	stx	%l0,[%i3-272]
+	ldx	[%i6+1151],%l0
+	stx	%l0,[%i3-264]
+	ldx	[%i6+1143],%l0
+	stx	%l0,[%i3-256]
+	ldx	[%i6+1135],%l0
+	stx	%l0,[%i3-248]
+	ldx	[%i6+1127],%l0
+	stx	%l0,[%i3-240]
+	ldx	[%i6+1119],%l0
+	stx	%l0,[%i3-232]
+	ldx	[%i6+1111],%l0
+	stx	%l0,[%i3-224]
+	ldx	[%i6+1103],%l0
+	stx	%l0,[%i3-216]
+	ldx	[%i6+1095],%l0
+	stx	%l0,[%i3-208]
+	ldx	[%i6+1087],%l0
+	stx	%l0,[%i3-200]
+	ldx	[%i6+1079],%l0
+	stx	%l0,[%i3-192]
+	ldx	[%i6+1071],%l0
+	stx	%l0,[%i3-184]
+	ldx	[%i6+1063],%l0
+	stx	%l0,[%i3-176]
+	ldx	[%i6+1055],%l0
+	stx	%l0,[%i3-168]
+	ldx	[%i6+1047],%l0
+	stx	%l0,[%i3-160]
+	ldx	[%i6+1039],%l0
+	stx	%l0,[%i3-152]
+	ldx	[%i6+1031],%l0
+	stx	%l0,[%i3-144]
+	ldx	[%i6+1023],%l0
+	stx	%l0,[%i3-136]
+	ldx	[%i6+1015],%l0
+	stx	%l0,[%i3-128]
+	ldx	[%i6+1007],%l0
+	stx	%l0,[%i3-120]
+	ldx	[%i6+983],%l0
+	stx	%l0,[%i3-112]
+	stx	%l7,[%i3-104]
+	stx	%i4,[%i3-96]
+	stx	%g2,[%i3-88]
+	stx	%g3,[%i3-80]
+	stx	%g4,[%i3-72]
+	stx	%o0,[%i3-64]
+	stx	%o1,[%i3-56]
+	stx	%o2,[%i3-48]
+	stx	%o3,[%i3-40]
+	stx	%o4,[%i3-32]
+	stx	%o5,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1031,%g1
+	sethi	%hh(s798_info),%g2
+	sethi	%lm(s798_info),%g3
+	or	%g2,%hm(s798_info),%g2
+	or	%g3,%lo(s798_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccB0_end:
+.Ls7ai_entry_end:
+.section .rodata
+.align 8
+ccBa_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s794_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s794_info:
+.LccBb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccBc
+	nop
+	b	.LccBd
+	nop
+.LccBb_end:
+.LccBc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccBc_end:
+.LccBd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccBa_str),%g1
+	sethi	%lm(ccBa_str),%l2
+	or	%g1,%hm(ccBa_str),%g1
+	or	%l2,%lo(ccBa_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccBd_end:
+.Ls794_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s796_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s796_info:
+.LccBf:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccBg
+	nop
+	b	.LccBh
+	nop
+.LccBf_end:
+.LccBh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccBj
+	nop
+	b	.LccBi
+	nop
+.LccBh_end:
+.LccBj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccBg
+	nop
+.LccBj_end:
+.LccBg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccBg_end:
+.LccBi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s794_info),%g1
+	sethi	%lm(s794_info),%g2
+	or	%g1,%hm(s794_info),%g1
+	or	%g2,%lo(s794_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccBi_end:
+.Ls796_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aj_info)+0
+	.quad	545460846592
+	.quad	64424509567
+.align 4
+s7aj_info:
+.LccBk:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccBl
+	nop
+	b	.LccBm
+	nop
+.LccBk_end:
+.LccBm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1048,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccBo
+	nop
+	b	.LccBn
+	nop
+.LccBm_end:
+.LccBo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1048,%g2
+	stx	%g2,[%i1+904]
+	b	.LccBl
+	nop
+.LccBo_end:
+.LccBl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccBl_end:
+.LccBn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	ldx	[%g1+1024],%g1
+	stx	%l0,[%i6+1007]
+	sethi	%hh(s7ai_info),%l0
+	stx	%l0,[%i6+999]
+	sethi	%lm(s7ai_info),%l0
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	or	%l0,%hm(s7ai_info),%l0
+	stx	%l0,[%i6+999]
+	ldx	[%i6+991],%l0
+	or	%l0,%lo(s7ai_info),%l0
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	sllx	%l0,32,%l0
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	or	%l6,%l0,%l6
+	stx	%l6,[%i3-1040]
+	ldx	[%i6+1911],%l0
+	stx	%l0,[%i3-1024]
+	ldx	[%i6+1903],%l0
+	stx	%l0,[%i3-1016]
+	ldx	[%i6+1895],%l0
+	stx	%l0,[%i3-1008]
+	ldx	[%i6+1887],%l0
+	stx	%l0,[%i3-1000]
+	ldx	[%i6+1879],%l0
+	stx	%l0,[%i3-992]
+	ldx	[%i6+1871],%l0
+	stx	%l0,[%i3-984]
+	ldx	[%i6+1863],%l0
+	stx	%l0,[%i3-976]
+	ldx	[%i6+1855],%l0
+	stx	%l0,[%i3-968]
+	ldx	[%i6+1847],%l0
+	stx	%l0,[%i3-960]
+	ldx	[%i6+1839],%l0
+	stx	%l0,[%i3-952]
+	ldx	[%i6+1831],%l0
+	stx	%l0,[%i3-944]
+	ldx	[%i6+1823],%l0
+	stx	%l0,[%i3-936]
+	ldx	[%i6+1815],%l0
+	stx	%l0,[%i3-928]
+	ldx	[%i6+1807],%l0
+	stx	%l0,[%i3-920]
+	ldx	[%i6+1799],%l0
+	stx	%l0,[%i3-912]
+	ldx	[%i6+1791],%l0
+	stx	%l0,[%i3-904]
+	ldx	[%i6+1783],%l0
+	stx	%l0,[%i3-896]
+	ldx	[%i6+1775],%l0
+	stx	%l0,[%i3-888]
+	ldx	[%i6+1767],%l0
+	stx	%l0,[%i3-880]
+	ldx	[%i6+1759],%l0
+	stx	%l0,[%i3-872]
+	ldx	[%i6+1751],%l0
+	stx	%l0,[%i3-864]
+	ldx	[%i6+1743],%l0
+	stx	%l0,[%i3-856]
+	ldx	[%i6+1735],%l0
+	stx	%l0,[%i3-848]
+	ldx	[%i6+1727],%l0
+	stx	%l0,[%i3-840]
+	ldx	[%i6+1719],%l0
+	stx	%l0,[%i3-832]
+	ldx	[%i6+1711],%l0
+	stx	%l0,[%i3-824]
+	ldx	[%i6+1703],%l0
+	stx	%l0,[%i3-816]
+	ldx	[%i6+1695],%l0
+	stx	%l0,[%i3-808]
+	ldx	[%i6+1687],%l0
+	stx	%l0,[%i3-800]
+	ldx	[%i6+1679],%l0
+	stx	%l0,[%i3-792]
+	ldx	[%i6+1671],%l0
+	stx	%l0,[%i3-784]
+	ldx	[%i6+1663],%l0
+	stx	%l0,[%i3-776]
+	ldx	[%i6+1655],%l0
+	stx	%l0,[%i3-768]
+	ldx	[%i6+1647],%l0
+	stx	%l0,[%i3-760]
+	ldx	[%i6+1639],%l0
+	stx	%l0,[%i3-752]
+	ldx	[%i6+1631],%l0
+	stx	%l0,[%i3-744]
+	ldx	[%i6+1623],%l0
+	stx	%l0,[%i3-736]
+	ldx	[%i6+1615],%l0
+	stx	%l0,[%i3-728]
+	ldx	[%i6+1607],%l0
+	stx	%l0,[%i3-720]
+	ldx	[%i6+1599],%l0
+	stx	%l0,[%i3-712]
+	ldx	[%i6+1591],%l0
+	stx	%l0,[%i3-704]
+	ldx	[%i6+1583],%l0
+	stx	%l0,[%i3-696]
+	ldx	[%i6+1575],%l0
+	stx	%l0,[%i3-688]
+	ldx	[%i6+1567],%l0
+	stx	%l0,[%i3-680]
+	ldx	[%i6+1559],%l0
+	stx	%l0,[%i3-672]
+	ldx	[%i6+1551],%l0
+	stx	%l0,[%i3-664]
+	ldx	[%i6+1543],%l0
+	stx	%l0,[%i3-656]
+	ldx	[%i6+1535],%l0
+	stx	%l0,[%i3-648]
+	ldx	[%i6+1527],%l0
+	stx	%l0,[%i3-640]
+	ldx	[%i6+1519],%l0
+	stx	%l0,[%i3-632]
+	ldx	[%i6+1511],%l0
+	stx	%l0,[%i3-624]
+	ldx	[%i6+1503],%l0
+	stx	%l0,[%i3-616]
+	ldx	[%i6+1495],%l0
+	stx	%l0,[%i3-608]
+	ldx	[%i6+1487],%l0
+	stx	%l0,[%i3-600]
+	ldx	[%i6+1479],%l0
+	stx	%l0,[%i3-592]
+	ldx	[%i6+1471],%l0
+	stx	%l0,[%i3-584]
+	ldx	[%i6+1463],%l0
+	stx	%l0,[%i3-576]
+	ldx	[%i6+1455],%l0
+	stx	%l0,[%i3-568]
+	ldx	[%i6+1447],%l0
+	stx	%l0,[%i3-560]
+	ldx	[%i6+1439],%l0
+	stx	%l0,[%i3-552]
+	ldx	[%i6+1431],%l0
+	stx	%l0,[%i3-544]
+	ldx	[%i6+1423],%l0
+	stx	%l0,[%i3-536]
+	ldx	[%i6+1415],%l0
+	stx	%l0,[%i3-528]
+	ldx	[%i6+1407],%l0
+	stx	%l0,[%i3-520]
+	ldx	[%i6+1399],%l0
+	stx	%l0,[%i3-512]
+	ldx	[%i6+1391],%l0
+	stx	%l0,[%i3-504]
+	ldx	[%i6+1383],%l0
+	stx	%l0,[%i3-496]
+	ldx	[%i6+1375],%l0
+	stx	%l0,[%i3-488]
+	ldx	[%i6+1367],%l0
+	stx	%l0,[%i3-480]
+	ldx	[%i6+1359],%l0
+	stx	%l0,[%i3-472]
+	ldx	[%i6+1351],%l0
+	stx	%l0,[%i3-464]
+	ldx	[%i6+1343],%l0
+	stx	%l0,[%i3-456]
+	ldx	[%i6+1335],%l0
+	stx	%l0,[%i3-448]
+	ldx	[%i6+1327],%l0
+	stx	%l0,[%i3-440]
+	ldx	[%i6+1319],%l0
+	stx	%l0,[%i3-432]
+	ldx	[%i6+1311],%l0
+	stx	%l0,[%i3-424]
+	ldx	[%i6+1303],%l0
+	stx	%l0,[%i3-416]
+	ldx	[%i6+1295],%l0
+	stx	%l0,[%i3-408]
+	ldx	[%i6+1287],%l0
+	stx	%l0,[%i3-400]
+	ldx	[%i6+1279],%l0
+	stx	%l0,[%i3-392]
+	ldx	[%i6+1271],%l0
+	stx	%l0,[%i3-384]
+	ldx	[%i6+1263],%l0
+	stx	%l0,[%i3-376]
+	ldx	[%i6+1255],%l0
+	stx	%l0,[%i3-368]
+	ldx	[%i6+1247],%l0
+	stx	%l0,[%i3-360]
+	ldx	[%i6+1239],%l0
+	stx	%l0,[%i3-352]
+	ldx	[%i6+1231],%l0
+	stx	%l0,[%i3-344]
+	ldx	[%i6+1223],%l0
+	stx	%l0,[%i3-336]
+	ldx	[%i6+1215],%l0
+	stx	%l0,[%i3-328]
+	ldx	[%i6+1207],%l0
+	stx	%l0,[%i3-320]
+	ldx	[%i6+1199],%l0
+	stx	%l0,[%i3-312]
+	ldx	[%i6+1191],%l0
+	stx	%l0,[%i3-304]
+	ldx	[%i6+1183],%l0
+	stx	%l0,[%i3-296]
+	ldx	[%i6+1175],%l0
+	stx	%l0,[%i3-288]
+	ldx	[%i6+1167],%l0
+	stx	%l0,[%i3-280]
+	ldx	[%i6+1159],%l0
+	stx	%l0,[%i3-272]
+	ldx	[%i6+1151],%l0
+	stx	%l0,[%i3-264]
+	ldx	[%i6+1143],%l0
+	stx	%l0,[%i3-256]
+	ldx	[%i6+1135],%l0
+	stx	%l0,[%i3-248]
+	ldx	[%i6+1127],%l0
+	stx	%l0,[%i3-240]
+	ldx	[%i6+1119],%l0
+	stx	%l0,[%i3-232]
+	ldx	[%i6+1111],%l0
+	stx	%l0,[%i3-224]
+	ldx	[%i6+1103],%l0
+	stx	%l0,[%i3-216]
+	ldx	[%i6+1095],%l0
+	stx	%l0,[%i3-208]
+	ldx	[%i6+1087],%l0
+	stx	%l0,[%i3-200]
+	ldx	[%i6+1079],%l0
+	stx	%l0,[%i3-192]
+	ldx	[%i6+1071],%l0
+	stx	%l0,[%i3-184]
+	ldx	[%i6+1063],%l0
+	stx	%l0,[%i3-176]
+	ldx	[%i6+1055],%l0
+	stx	%l0,[%i3-168]
+	ldx	[%i6+1047],%l0
+	stx	%l0,[%i3-160]
+	ldx	[%i6+1039],%l0
+	stx	%l0,[%i3-152]
+	ldx	[%i6+1031],%l0
+	stx	%l0,[%i3-144]
+	ldx	[%i6+1023],%l0
+	stx	%l0,[%i3-136]
+	ldx	[%i6+1015],%l0
+	stx	%l0,[%i3-128]
+	ldx	[%i6+1007],%l0
+	stx	%l0,[%i3-120]
+	ldx	[%i6+983],%l0
+	stx	%l0,[%i3-112]
+	stx	%l7,[%i3-104]
+	stx	%i4,[%i3-96]
+	stx	%g2,[%i3-88]
+	stx	%g3,[%i3-80]
+	stx	%g4,[%i3-72]
+	stx	%o0,[%i3-64]
+	stx	%o1,[%i3-56]
+	stx	%o2,[%i3-48]
+	stx	%o3,[%i3-40]
+	stx	%o4,[%i3-32]
+	stx	%o5,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1040,%g1
+	sethi	%hh(s796_info),%g2
+	sethi	%lm(s796_info),%g3
+	or	%g2,%hm(s796_info),%g2
+	or	%g3,%lo(s796_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccBn_end:
+.Ls7aj_entry_end:
+.section .rodata
+.align 8
+ccBx_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	68
+	.byte	89
+	.byte	78
+	.byte	65
+	.byte	77
+	.byte	73
+	.byte	67
+	.byte	95
+	.byte	66
+	.byte	89
+	.byte	95
+	.byte	68
+	.byte	69
+	.byte	70
+	.byte	65
+	.byte	85
+	.byte	76
+	.byte	84
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s791_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s791_info:
+.LccBy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccBz
+	nop
+	b	.LccBA
+	nop
+.LccBy_end:
+.LccBz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccBz_end:
+.LccBA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccBx_str),%g1
+	sethi	%lm(ccBx_str),%l2
+	or	%g1,%hm(ccBx_str),%g1
+	or	%l2,%lo(ccBx_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccBA_end:
+.Ls791_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s793_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s793_info:
+.LccBC:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccBD
+	nop
+	b	.LccBE
+	nop
+.LccBC_end:
+.LccBE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccBG
+	nop
+	b	.LccBF
+	nop
+.LccBE_end:
+.LccBG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccBD
+	nop
+.LccBG_end:
+.LccBD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccBD_end:
+.LccBF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s791_info),%g1
+	sethi	%lm(s791_info),%g2
+	or	%g1,%hm(s791_info),%g1
+	or	%g2,%lo(s791_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccBF_end:
+.Ls793_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ak_info)+0
+	.quad	545460846592
+	.quad	64424509567
+.align 4
+s7ak_info:
+.LccBH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccBI
+	nop
+	b	.LccBJ
+	nop
+.LccBH_end:
+.LccBJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1048,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccBL
+	nop
+	b	.LccBK
+	nop
+.LccBJ_end:
+.LccBL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1048,%g2
+	stx	%g2,[%i1+904]
+	b	.LccBI
+	nop
+.LccBL_end:
+.LccBI:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccBI_end:
+.LccBK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	stx	%o5,[%i6+1015]
+	ldx	[%g1+1016],%o5
+	ldx	[%g1+1024],%g1
+	stx	%l0,[%i6+1007]
+	sethi	%hh(s7aj_info),%l0
+	stx	%l0,[%i6+999]
+	sethi	%lm(s7aj_info),%l0
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	or	%l0,%hm(s7aj_info),%l0
+	stx	%l0,[%i6+999]
+	ldx	[%i6+991],%l0
+	or	%l0,%lo(s7aj_info),%l0
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	sllx	%l0,32,%l0
+	stx	%l6,[%i6+983]
+	ldx	[%i6+991],%l6
+	or	%l6,%l0,%l6
+	stx	%l6,[%i3-1040]
+	ldx	[%i6+1911],%l0
+	stx	%l0,[%i3-1024]
+	ldx	[%i6+1903],%l0
+	stx	%l0,[%i3-1016]
+	ldx	[%i6+1895],%l0
+	stx	%l0,[%i3-1008]
+	ldx	[%i6+1887],%l0
+	stx	%l0,[%i3-1000]
+	ldx	[%i6+1879],%l0
+	stx	%l0,[%i3-992]
+	ldx	[%i6+1871],%l0
+	stx	%l0,[%i3-984]
+	ldx	[%i6+1863],%l0
+	stx	%l0,[%i3-976]
+	ldx	[%i6+1855],%l0
+	stx	%l0,[%i3-968]
+	ldx	[%i6+1847],%l0
+	stx	%l0,[%i3-960]
+	ldx	[%i6+1839],%l0
+	stx	%l0,[%i3-952]
+	ldx	[%i6+1831],%l0
+	stx	%l0,[%i3-944]
+	ldx	[%i6+1823],%l0
+	stx	%l0,[%i3-936]
+	ldx	[%i6+1815],%l0
+	stx	%l0,[%i3-928]
+	ldx	[%i6+1807],%l0
+	stx	%l0,[%i3-920]
+	ldx	[%i6+1799],%l0
+	stx	%l0,[%i3-912]
+	ldx	[%i6+1791],%l0
+	stx	%l0,[%i3-904]
+	ldx	[%i6+1783],%l0
+	stx	%l0,[%i3-896]
+	ldx	[%i6+1775],%l0
+	stx	%l0,[%i3-888]
+	ldx	[%i6+1767],%l0
+	stx	%l0,[%i3-880]
+	ldx	[%i6+1759],%l0
+	stx	%l0,[%i3-872]
+	ldx	[%i6+1751],%l0
+	stx	%l0,[%i3-864]
+	ldx	[%i6+1743],%l0
+	stx	%l0,[%i3-856]
+	ldx	[%i6+1735],%l0
+	stx	%l0,[%i3-848]
+	ldx	[%i6+1727],%l0
+	stx	%l0,[%i3-840]
+	ldx	[%i6+1719],%l0
+	stx	%l0,[%i3-832]
+	ldx	[%i6+1711],%l0
+	stx	%l0,[%i3-824]
+	ldx	[%i6+1703],%l0
+	stx	%l0,[%i3-816]
+	ldx	[%i6+1695],%l0
+	stx	%l0,[%i3-808]
+	ldx	[%i6+1687],%l0
+	stx	%l0,[%i3-800]
+	ldx	[%i6+1679],%l0
+	stx	%l0,[%i3-792]
+	ldx	[%i6+1671],%l0
+	stx	%l0,[%i3-784]
+	ldx	[%i6+1663],%l0
+	stx	%l0,[%i3-776]
+	ldx	[%i6+1655],%l0
+	stx	%l0,[%i3-768]
+	ldx	[%i6+1647],%l0
+	stx	%l0,[%i3-760]
+	ldx	[%i6+1639],%l0
+	stx	%l0,[%i3-752]
+	ldx	[%i6+1631],%l0
+	stx	%l0,[%i3-744]
+	ldx	[%i6+1623],%l0
+	stx	%l0,[%i3-736]
+	ldx	[%i6+1615],%l0
+	stx	%l0,[%i3-728]
+	ldx	[%i6+1607],%l0
+	stx	%l0,[%i3-720]
+	ldx	[%i6+1599],%l0
+	stx	%l0,[%i3-712]
+	ldx	[%i6+1591],%l0
+	stx	%l0,[%i3-704]
+	ldx	[%i6+1583],%l0
+	stx	%l0,[%i3-696]
+	ldx	[%i6+1575],%l0
+	stx	%l0,[%i3-688]
+	ldx	[%i6+1567],%l0
+	stx	%l0,[%i3-680]
+	ldx	[%i6+1559],%l0
+	stx	%l0,[%i3-672]
+	ldx	[%i6+1551],%l0
+	stx	%l0,[%i3-664]
+	ldx	[%i6+1543],%l0
+	stx	%l0,[%i3-656]
+	ldx	[%i6+1535],%l0
+	stx	%l0,[%i3-648]
+	ldx	[%i6+1527],%l0
+	stx	%l0,[%i3-640]
+	ldx	[%i6+1519],%l0
+	stx	%l0,[%i3-632]
+	ldx	[%i6+1511],%l0
+	stx	%l0,[%i3-624]
+	ldx	[%i6+1503],%l0
+	stx	%l0,[%i3-616]
+	ldx	[%i6+1495],%l0
+	stx	%l0,[%i3-608]
+	ldx	[%i6+1487],%l0
+	stx	%l0,[%i3-600]
+	ldx	[%i6+1479],%l0
+	stx	%l0,[%i3-592]
+	ldx	[%i6+1471],%l0
+	stx	%l0,[%i3-584]
+	ldx	[%i6+1463],%l0
+	stx	%l0,[%i3-576]
+	ldx	[%i6+1455],%l0
+	stx	%l0,[%i3-568]
+	ldx	[%i6+1447],%l0
+	stx	%l0,[%i3-560]
+	ldx	[%i6+1439],%l0
+	stx	%l0,[%i3-552]
+	ldx	[%i6+1431],%l0
+	stx	%l0,[%i3-544]
+	ldx	[%i6+1423],%l0
+	stx	%l0,[%i3-536]
+	ldx	[%i6+1415],%l0
+	stx	%l0,[%i3-528]
+	ldx	[%i6+1407],%l0
+	stx	%l0,[%i3-520]
+	ldx	[%i6+1399],%l0
+	stx	%l0,[%i3-512]
+	ldx	[%i6+1391],%l0
+	stx	%l0,[%i3-504]
+	ldx	[%i6+1383],%l0
+	stx	%l0,[%i3-496]
+	ldx	[%i6+1375],%l0
+	stx	%l0,[%i3-488]
+	ldx	[%i6+1367],%l0
+	stx	%l0,[%i3-480]
+	ldx	[%i6+1359],%l0
+	stx	%l0,[%i3-472]
+	ldx	[%i6+1351],%l0
+	stx	%l0,[%i3-464]
+	ldx	[%i6+1343],%l0
+	stx	%l0,[%i3-456]
+	ldx	[%i6+1335],%l0
+	stx	%l0,[%i3-448]
+	ldx	[%i6+1327],%l0
+	stx	%l0,[%i3-440]
+	ldx	[%i6+1319],%l0
+	stx	%l0,[%i3-432]
+	ldx	[%i6+1311],%l0
+	stx	%l0,[%i3-424]
+	ldx	[%i6+1303],%l0
+	stx	%l0,[%i3-416]
+	ldx	[%i6+1295],%l0
+	stx	%l0,[%i3-408]
+	ldx	[%i6+1287],%l0
+	stx	%l0,[%i3-400]
+	ldx	[%i6+1279],%l0
+	stx	%l0,[%i3-392]
+	ldx	[%i6+1271],%l0
+	stx	%l0,[%i3-384]
+	ldx	[%i6+1263],%l0
+	stx	%l0,[%i3-376]
+	ldx	[%i6+1255],%l0
+	stx	%l0,[%i3-368]
+	ldx	[%i6+1247],%l0
+	stx	%l0,[%i3-360]
+	ldx	[%i6+1239],%l0
+	stx	%l0,[%i3-352]
+	ldx	[%i6+1231],%l0
+	stx	%l0,[%i3-344]
+	ldx	[%i6+1223],%l0
+	stx	%l0,[%i3-336]
+	ldx	[%i6+1215],%l0
+	stx	%l0,[%i3-328]
+	ldx	[%i6+1207],%l0
+	stx	%l0,[%i3-320]
+	ldx	[%i6+1199],%l0
+	stx	%l0,[%i3-312]
+	ldx	[%i6+1191],%l0
+	stx	%l0,[%i3-304]
+	ldx	[%i6+1183],%l0
+	stx	%l0,[%i3-296]
+	ldx	[%i6+1175],%l0
+	stx	%l0,[%i3-288]
+	ldx	[%i6+1167],%l0
+	stx	%l0,[%i3-280]
+	ldx	[%i6+1159],%l0
+	stx	%l0,[%i3-272]
+	ldx	[%i6+1151],%l0
+	stx	%l0,[%i3-264]
+	ldx	[%i6+1143],%l0
+	stx	%l0,[%i3-256]
+	ldx	[%i6+1135],%l0
+	stx	%l0,[%i3-248]
+	ldx	[%i6+1127],%l0
+	stx	%l0,[%i3-240]
+	ldx	[%i6+1119],%l0
+	stx	%l0,[%i3-232]
+	ldx	[%i6+1111],%l0
+	stx	%l0,[%i3-224]
+	ldx	[%i6+1103],%l0
+	stx	%l0,[%i3-216]
+	ldx	[%i6+1095],%l0
+	stx	%l0,[%i3-208]
+	ldx	[%i6+1087],%l0
+	stx	%l0,[%i3-200]
+	ldx	[%i6+1079],%l0
+	stx	%l0,[%i3-192]
+	ldx	[%i6+1071],%l0
+	stx	%l0,[%i3-184]
+	ldx	[%i6+1063],%l0
+	stx	%l0,[%i3-176]
+	ldx	[%i6+1055],%l0
+	stx	%l0,[%i3-168]
+	ldx	[%i6+1047],%l0
+	stx	%l0,[%i3-160]
+	ldx	[%i6+1039],%l0
+	stx	%l0,[%i3-152]
+	ldx	[%i6+1031],%l0
+	stx	%l0,[%i3-144]
+	ldx	[%i6+1023],%l0
+	stx	%l0,[%i3-136]
+	ldx	[%i6+1015],%l0
+	stx	%l0,[%i3-128]
+	ldx	[%i6+1007],%l0
+	stx	%l0,[%i3-120]
+	ldx	[%i6+983],%l0
+	stx	%l0,[%i3-112]
+	stx	%l7,[%i3-104]
+	stx	%i4,[%i3-96]
+	stx	%g2,[%i3-88]
+	stx	%g3,[%i3-80]
+	stx	%g4,[%i3-72]
+	stx	%o0,[%i3-64]
+	stx	%o1,[%i3-56]
+	stx	%o2,[%i3-48]
+	stx	%o3,[%i3-40]
+	stx	%o4,[%i3-32]
+	stx	%o5,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1040,%g1
+	sethi	%hh(s793_info),%g2
+	sethi	%lm(s793_info),%g3
+	or	%g2,%hm(s793_info),%g2
+	or	%g3,%lo(s793_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccBK_end:
+.Ls7ak_entry_end:
+.section .rodata
+.align 8
+ccBU_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78Y_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78Y_info:
+.LccBV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccBW
+	nop
+	b	.LccBX
+	nop
+.LccBV_end:
+.LccBW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccBW_end:
+.LccBX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccBU_str),%g1
+	sethi	%lm(ccBU_str),%l2
+	or	%g1,%hm(ccBU_str),%g1
+	or	%l2,%lo(ccBU_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccBX_end:
+.Ls78Y_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s790_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s790_info:
+.LccBZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccC0
+	nop
+	b	.LccC1
+	nop
+.LccBZ_end:
+.LccC1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccC3
+	nop
+	b	.LccC2
+	nop
+.LccC1_end:
+.LccC3:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccC0
+	nop
+.LccC3_end:
+.LccC0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccC0_end:
+.LccC2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78Y_info),%g1
+	sethi	%lm(s78Y_info),%g2
+	or	%g1,%hm(s78Y_info),%g1
+	or	%g2,%lo(s78Y_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccC2_end:
+.Ls790_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7al_info)+0
+	.quad	21474836481
+	.quad	541165879296
+	.quad	34359738495
+.align 4
+s7al_info:
+.LccC4:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccC5
+	nop
+	b	.LccC6
+	nop
+.LccC4_end:
+.LccC6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1048,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccC8
+	nop
+	b	.LccC7
+	nop
+.LccC6_end:
+.LccC8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1048,%g3
+	stx	%g3,[%i1+904]
+	b	.LccC5
+	nop
+.LccC8_end:
+.LccC5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccC5_end:
+.LccC7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	stx	%o1,[%i6+1023]
+	ldx	[%g2+991],%o1
+	stx	%o2,[%i6+1015]
+	ldx	[%g2+999],%o2
+	ldx	[%g2+1007],%g2
+	stx	%o3,[%i6+1007]
+	sethi	%hh(s7ak_info),%o3
+	stx	%o3,[%i6+999]
+	sethi	%lm(s7ak_info),%o3
+	stx	%o3,[%i6+991]
+	ldx	[%i6+999],%o3
+	or	%o3,%hm(s7ak_info),%o3
+	stx	%o3,[%i6+999]
+	ldx	[%i6+991],%o3
+	or	%o3,%lo(s7ak_info),%o3
+	stx	%o3,[%i6+991]
+	ldx	[%i6+999],%o3
+	sllx	%o3,32,%o3
+	stx	%o4,[%i6+983]
+	ldx	[%i6+991],%o4
+	or	%o4,%o3,%o4
+	stx	%o4,[%i3-1040]
+	ldx	[%i6+1911],%o3
+	stx	%o3,[%i3-1024]
+	ldx	[%i6+1903],%o3
+	stx	%o3,[%i3-1016]
+	ldx	[%i6+1895],%o3
+	stx	%o3,[%i3-1008]
+	ldx	[%i6+1887],%o3
+	stx	%o3,[%i3-1000]
+	ldx	[%i6+1879],%o3
+	stx	%o3,[%i3-992]
+	ldx	[%i6+1871],%o3
+	stx	%o3,[%i3-984]
+	ldx	[%i6+1863],%o3
+	stx	%o3,[%i3-976]
+	ldx	[%i6+1855],%o3
+	stx	%o3,[%i3-968]
+	ldx	[%i6+1847],%o3
+	stx	%o3,[%i3-960]
+	ldx	[%i6+1839],%o3
+	stx	%o3,[%i3-952]
+	ldx	[%i6+1831],%o3
+	stx	%o3,[%i3-944]
+	ldx	[%i6+1823],%o3
+	stx	%o3,[%i3-936]
+	ldx	[%i6+1815],%o3
+	stx	%o3,[%i3-928]
+	ldx	[%i6+1807],%o3
+	stx	%o3,[%i3-920]
+	ldx	[%i6+1799],%o3
+	stx	%o3,[%i3-912]
+	ldx	[%i6+1791],%o3
+	stx	%o3,[%i3-904]
+	ldx	[%i6+1783],%o3
+	stx	%o3,[%i3-896]
+	ldx	[%i6+1775],%o3
+	stx	%o3,[%i3-888]
+	ldx	[%i6+1767],%o3
+	stx	%o3,[%i3-880]
+	ldx	[%i6+1759],%o3
+	stx	%o3,[%i3-872]
+	ldx	[%i6+1751],%o3
+	stx	%o3,[%i3-864]
+	ldx	[%i6+1743],%o3
+	stx	%o3,[%i3-856]
+	ldx	[%i6+1735],%o3
+	stx	%o3,[%i3-848]
+	ldx	[%i6+1727],%o3
+	stx	%o3,[%i3-840]
+	ldx	[%i6+1719],%o3
+	stx	%o3,[%i3-832]
+	ldx	[%i6+1711],%o3
+	stx	%o3,[%i3-824]
+	ldx	[%i6+1703],%o3
+	stx	%o3,[%i3-816]
+	ldx	[%i6+1695],%o3
+	stx	%o3,[%i3-808]
+	ldx	[%i6+1687],%o3
+	stx	%o3,[%i3-800]
+	ldx	[%i6+1679],%o3
+	stx	%o3,[%i3-792]
+	ldx	[%i6+1671],%o3
+	stx	%o3,[%i3-784]
+	ldx	[%i6+1663],%o3
+	stx	%o3,[%i3-776]
+	ldx	[%i6+1655],%o3
+	stx	%o3,[%i3-768]
+	ldx	[%i6+1647],%o3
+	stx	%o3,[%i3-760]
+	ldx	[%i6+1639],%o3
+	stx	%o3,[%i3-752]
+	ldx	[%i6+1631],%o3
+	stx	%o3,[%i3-744]
+	ldx	[%i6+1623],%o3
+	stx	%o3,[%i3-736]
+	ldx	[%i6+1615],%o3
+	stx	%o3,[%i3-728]
+	ldx	[%i6+1607],%o3
+	stx	%o3,[%i3-720]
+	ldx	[%i6+1599],%o3
+	stx	%o3,[%i3-712]
+	ldx	[%i6+1591],%o3
+	stx	%o3,[%i3-704]
+	ldx	[%i6+1583],%o3
+	stx	%o3,[%i3-696]
+	ldx	[%i6+1575],%o3
+	stx	%o3,[%i3-688]
+	ldx	[%i6+1567],%o3
+	stx	%o3,[%i3-680]
+	ldx	[%i6+1559],%o3
+	stx	%o3,[%i3-672]
+	ldx	[%i6+1551],%o3
+	stx	%o3,[%i3-664]
+	ldx	[%i6+1543],%o3
+	stx	%o3,[%i3-656]
+	ldx	[%i6+1535],%o3
+	stx	%o3,[%i3-648]
+	ldx	[%i6+1527],%o3
+	stx	%o3,[%i3-640]
+	ldx	[%i6+1519],%o3
+	stx	%o3,[%i3-632]
+	ldx	[%i6+1511],%o3
+	stx	%o3,[%i3-624]
+	ldx	[%i6+1503],%o3
+	stx	%o3,[%i3-616]
+	ldx	[%i6+1495],%o3
+	stx	%o3,[%i3-608]
+	ldx	[%i6+1487],%o3
+	stx	%o3,[%i3-600]
+	ldx	[%i6+1479],%o3
+	stx	%o3,[%i3-592]
+	ldx	[%i6+1471],%o3
+	stx	%o3,[%i3-584]
+	ldx	[%i6+1463],%o3
+	stx	%o3,[%i3-576]
+	ldx	[%i6+1455],%o3
+	stx	%o3,[%i3-568]
+	ldx	[%i6+1447],%o3
+	stx	%o3,[%i3-560]
+	ldx	[%i6+1439],%o3
+	stx	%o3,[%i3-552]
+	ldx	[%i6+1431],%o3
+	stx	%o3,[%i3-544]
+	ldx	[%i6+1423],%o3
+	stx	%o3,[%i3-536]
+	ldx	[%i6+1415],%o3
+	stx	%o3,[%i3-528]
+	ldx	[%i6+1407],%o3
+	stx	%o3,[%i3-520]
+	ldx	[%i6+1399],%o3
+	stx	%o3,[%i3-512]
+	ldx	[%i6+1391],%o3
+	stx	%o3,[%i3-504]
+	ldx	[%i6+1383],%o3
+	stx	%o3,[%i3-496]
+	ldx	[%i6+1375],%o3
+	stx	%o3,[%i3-488]
+	ldx	[%i6+1367],%o3
+	stx	%o3,[%i3-480]
+	ldx	[%i6+1359],%o3
+	stx	%o3,[%i3-472]
+	ldx	[%i6+1351],%o3
+	stx	%o3,[%i3-464]
+	ldx	[%i6+1343],%o3
+	stx	%o3,[%i3-456]
+	ldx	[%i6+1335],%o3
+	stx	%o3,[%i3-448]
+	ldx	[%i6+1327],%o3
+	stx	%o3,[%i3-440]
+	ldx	[%i6+1319],%o3
+	stx	%o3,[%i3-432]
+	ldx	[%i6+1311],%o3
+	stx	%o3,[%i3-424]
+	ldx	[%i6+1303],%o3
+	stx	%o3,[%i3-416]
+	ldx	[%i6+1295],%o3
+	stx	%o3,[%i3-408]
+	ldx	[%i6+1287],%o3
+	stx	%o3,[%i3-400]
+	ldx	[%i6+1279],%o3
+	stx	%o3,[%i3-392]
+	ldx	[%i6+1271],%o3
+	stx	%o3,[%i3-384]
+	ldx	[%i6+1263],%o3
+	stx	%o3,[%i3-376]
+	ldx	[%i6+1255],%o3
+	stx	%o3,[%i3-368]
+	ldx	[%i6+1247],%o3
+	stx	%o3,[%i3-360]
+	ldx	[%i6+1239],%o3
+	stx	%o3,[%i3-352]
+	ldx	[%i6+1231],%o3
+	stx	%o3,[%i3-344]
+	ldx	[%i6+1223],%o3
+	stx	%o3,[%i3-336]
+	ldx	[%i6+1215],%o3
+	stx	%o3,[%i3-328]
+	ldx	[%i6+1207],%o3
+	stx	%o3,[%i3-320]
+	ldx	[%i6+1199],%o3
+	stx	%o3,[%i3-312]
+	ldx	[%i6+1191],%o3
+	stx	%o3,[%i3-304]
+	ldx	[%i6+1183],%o3
+	stx	%o3,[%i3-296]
+	ldx	[%i6+1175],%o3
+	stx	%o3,[%i3-288]
+	ldx	[%i6+1167],%o3
+	stx	%o3,[%i3-280]
+	ldx	[%i6+1159],%o3
+	stx	%o3,[%i3-272]
+	ldx	[%i6+1151],%o3
+	stx	%o3,[%i3-264]
+	ldx	[%i6+1143],%o3
+	stx	%o3,[%i3-256]
+	ldx	[%i6+1135],%o3
+	stx	%o3,[%i3-248]
+	ldx	[%i6+1127],%o3
+	stx	%o3,[%i3-240]
+	ldx	[%i6+1119],%o3
+	stx	%o3,[%i3-232]
+	ldx	[%i6+1111],%o3
+	stx	%o3,[%i3-224]
+	ldx	[%i6+1103],%o3
+	stx	%o3,[%i3-216]
+	ldx	[%i6+1095],%o3
+	stx	%o3,[%i3-208]
+	ldx	[%i6+1087],%o3
+	stx	%o3,[%i3-200]
+	ldx	[%i6+1079],%o3
+	stx	%o3,[%i3-192]
+	ldx	[%i6+1071],%o3
+	stx	%o3,[%i3-184]
+	ldx	[%i6+1063],%o3
+	stx	%o3,[%i3-176]
+	ldx	[%i6+1055],%o3
+	stx	%o3,[%i3-168]
+	ldx	[%i6+1047],%o3
+	stx	%o3,[%i3-160]
+	ldx	[%i6+1039],%o3
+	stx	%o3,[%i3-152]
+	ldx	[%i6+1031],%o3
+	stx	%o3,[%i3-144]
+	ldx	[%i6+1023],%o3
+	stx	%o3,[%i3-136]
+	ldx	[%i6+1015],%o3
+	stx	%o3,[%i3-128]
+	ldx	[%i6+1007],%o3
+	stx	%o3,[%i3-120]
+	ldx	[%i6+983],%o3
+	stx	%o3,[%i3-112]
+	stx	%o5,[%i3-104]
+	stx	%l0,[%i3-96]
+	stx	%l6,[%i3-88]
+	stx	%l7,[%i3-80]
+	stx	%i4,[%i3-72]
+	stx	%g3,[%i3-64]
+	stx	%g4,[%i3-56]
+	stx	%o0,[%i3-48]
+	stx	%o1,[%i3-40]
+	stx	%o2,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1040,%g1
+	sethi	%hh(s790_info),%g2
+	sethi	%lm(s790_info),%g3
+	or	%g2,%hm(s790_info),%g2
+	or	%g3,%lo(s790_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccC7_end:
+.Ls7al_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78V_info)+48
+	.quad	0
+	.quad	64424509441
+.align 4
+s78V_info:
+.LccCh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccCi
+	nop
+	b	.LccCj
+	nop
+.LccCh_end:
+.LccCi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccCi_end:
+.LccCj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadBool_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadBool_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadBool_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadBool_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccCj_end:
+.Ls78V_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78W_info)+32
+	.quad	0
+	.quad	64424509445
+.align 4
+s78W_info:
+.LccCk:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccCl
+	nop
+	b	.LccCm
+	nop
+.LccCk_end:
+.LccCm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccCo
+	nop
+	b	.LccCn
+	nop
+.LccCm_end:
+.LccCo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccCl
+	nop
+.LccCo_end:
+.LccCl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccCl_end:
+.LccCn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78V_info),%g1
+	sethi	%lm(s78V_info),%g2
+	or	%g1,%hm(s78V_info),%g1
+	or	%g2,%lo(s78V_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccCn_end:
+.Ls78W_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7am_info)+0
+	.quad	541165879296
+	.quad	64424509567
+.align 4
+s7am_info:
+.LccCp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccCq
+	nop
+	b	.LccCr
+	nop
+.LccCp_end:
+.LccCr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1032,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccCt
+	nop
+	b	.LccCs
+	nop
+.LccCr_end:
+.LccCt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1032,%g2
+	stx	%g2,[%i1+904]
+	b	.LccCq
+	nop
+.LccCt_end:
+.LccCq:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccCq_end:
+.LccCs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	ldx	[%g1+1016],%g1
+	stx	%o5,[%i6+1015]
+	sethi	%hh(s7al_info),%o5
+	stx	%o5,[%i6+1007]
+	sethi	%lm(s7al_info),%o5
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	or	%o5,%hm(s7al_info),%o5
+	stx	%o5,[%i6+1007]
+	ldx	[%i6+999],%o5
+	or	%o5,%lo(s7al_info),%o5
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	sllx	%o5,32,%o5
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	or	%l0,%o5,%l0
+	stx	%l0,[%i3-1024]
+	ldx	[%i6+1911],%o5
+	stx	%o5,[%i3-1016]
+	ldx	[%i6+1903],%o5
+	stx	%o5,[%i3-1008]
+	ldx	[%i6+1895],%o5
+	stx	%o5,[%i3-1000]
+	ldx	[%i6+1887],%o5
+	stx	%o5,[%i3-992]
+	ldx	[%i6+1879],%o5
+	stx	%o5,[%i3-984]
+	ldx	[%i6+1871],%o5
+	stx	%o5,[%i3-976]
+	ldx	[%i6+1863],%o5
+	stx	%o5,[%i3-968]
+	ldx	[%i6+1855],%o5
+	stx	%o5,[%i3-960]
+	ldx	[%i6+1847],%o5
+	stx	%o5,[%i3-952]
+	ldx	[%i6+1839],%o5
+	stx	%o5,[%i3-944]
+	ldx	[%i6+1831],%o5
+	stx	%o5,[%i3-936]
+	ldx	[%i6+1823],%o5
+	stx	%o5,[%i3-928]
+	ldx	[%i6+1815],%o5
+	stx	%o5,[%i3-920]
+	ldx	[%i6+1807],%o5
+	stx	%o5,[%i3-912]
+	ldx	[%i6+1799],%o5
+	stx	%o5,[%i3-904]
+	ldx	[%i6+1791],%o5
+	stx	%o5,[%i3-896]
+	ldx	[%i6+1783],%o5
+	stx	%o5,[%i3-888]
+	ldx	[%i6+1775],%o5
+	stx	%o5,[%i3-880]
+	ldx	[%i6+1767],%o5
+	stx	%o5,[%i3-872]
+	ldx	[%i6+1759],%o5
+	stx	%o5,[%i3-864]
+	ldx	[%i6+1751],%o5
+	stx	%o5,[%i3-856]
+	ldx	[%i6+1743],%o5
+	stx	%o5,[%i3-848]
+	ldx	[%i6+1735],%o5
+	stx	%o5,[%i3-840]
+	ldx	[%i6+1727],%o5
+	stx	%o5,[%i3-832]
+	ldx	[%i6+1719],%o5
+	stx	%o5,[%i3-824]
+	ldx	[%i6+1711],%o5
+	stx	%o5,[%i3-816]
+	ldx	[%i6+1703],%o5
+	stx	%o5,[%i3-808]
+	ldx	[%i6+1695],%o5
+	stx	%o5,[%i3-800]
+	ldx	[%i6+1687],%o5
+	stx	%o5,[%i3-792]
+	ldx	[%i6+1679],%o5
+	stx	%o5,[%i3-784]
+	ldx	[%i6+1671],%o5
+	stx	%o5,[%i3-776]
+	ldx	[%i6+1663],%o5
+	stx	%o5,[%i3-768]
+	ldx	[%i6+1655],%o5
+	stx	%o5,[%i3-760]
+	ldx	[%i6+1647],%o5
+	stx	%o5,[%i3-752]
+	ldx	[%i6+1639],%o5
+	stx	%o5,[%i3-744]
+	ldx	[%i6+1631],%o5
+	stx	%o5,[%i3-736]
+	ldx	[%i6+1623],%o5
+	stx	%o5,[%i3-728]
+	ldx	[%i6+1615],%o5
+	stx	%o5,[%i3-720]
+	ldx	[%i6+1607],%o5
+	stx	%o5,[%i3-712]
+	ldx	[%i6+1599],%o5
+	stx	%o5,[%i3-704]
+	ldx	[%i6+1591],%o5
+	stx	%o5,[%i3-696]
+	ldx	[%i6+1583],%o5
+	stx	%o5,[%i3-688]
+	ldx	[%i6+1575],%o5
+	stx	%o5,[%i3-680]
+	ldx	[%i6+1567],%o5
+	stx	%o5,[%i3-672]
+	ldx	[%i6+1559],%o5
+	stx	%o5,[%i3-664]
+	ldx	[%i6+1551],%o5
+	stx	%o5,[%i3-656]
+	ldx	[%i6+1543],%o5
+	stx	%o5,[%i3-648]
+	ldx	[%i6+1535],%o5
+	stx	%o5,[%i3-640]
+	ldx	[%i6+1527],%o5
+	stx	%o5,[%i3-632]
+	ldx	[%i6+1519],%o5
+	stx	%o5,[%i3-624]
+	ldx	[%i6+1511],%o5
+	stx	%o5,[%i3-616]
+	ldx	[%i6+1503],%o5
+	stx	%o5,[%i3-608]
+	ldx	[%i6+1495],%o5
+	stx	%o5,[%i3-600]
+	ldx	[%i6+1487],%o5
+	stx	%o5,[%i3-592]
+	ldx	[%i6+1479],%o5
+	stx	%o5,[%i3-584]
+	ldx	[%i6+1471],%o5
+	stx	%o5,[%i3-576]
+	ldx	[%i6+1463],%o5
+	stx	%o5,[%i3-568]
+	ldx	[%i6+1455],%o5
+	stx	%o5,[%i3-560]
+	ldx	[%i6+1447],%o5
+	stx	%o5,[%i3-552]
+	ldx	[%i6+1439],%o5
+	stx	%o5,[%i3-544]
+	ldx	[%i6+1431],%o5
+	stx	%o5,[%i3-536]
+	ldx	[%i6+1423],%o5
+	stx	%o5,[%i3-528]
+	ldx	[%i6+1415],%o5
+	stx	%o5,[%i3-520]
+	ldx	[%i6+1407],%o5
+	stx	%o5,[%i3-512]
+	ldx	[%i6+1399],%o5
+	stx	%o5,[%i3-504]
+	ldx	[%i6+1391],%o5
+	stx	%o5,[%i3-496]
+	ldx	[%i6+1383],%o5
+	stx	%o5,[%i3-488]
+	ldx	[%i6+1375],%o5
+	stx	%o5,[%i3-480]
+	ldx	[%i6+1367],%o5
+	stx	%o5,[%i3-472]
+	ldx	[%i6+1359],%o5
+	stx	%o5,[%i3-464]
+	ldx	[%i6+1351],%o5
+	stx	%o5,[%i3-456]
+	ldx	[%i6+1343],%o5
+	stx	%o5,[%i3-448]
+	ldx	[%i6+1335],%o5
+	stx	%o5,[%i3-440]
+	ldx	[%i6+1327],%o5
+	stx	%o5,[%i3-432]
+	ldx	[%i6+1319],%o5
+	stx	%o5,[%i3-424]
+	ldx	[%i6+1311],%o5
+	stx	%o5,[%i3-416]
+	ldx	[%i6+1303],%o5
+	stx	%o5,[%i3-408]
+	ldx	[%i6+1295],%o5
+	stx	%o5,[%i3-400]
+	ldx	[%i6+1287],%o5
+	stx	%o5,[%i3-392]
+	ldx	[%i6+1279],%o5
+	stx	%o5,[%i3-384]
+	ldx	[%i6+1271],%o5
+	stx	%o5,[%i3-376]
+	ldx	[%i6+1263],%o5
+	stx	%o5,[%i3-368]
+	ldx	[%i6+1255],%o5
+	stx	%o5,[%i3-360]
+	ldx	[%i6+1247],%o5
+	stx	%o5,[%i3-352]
+	ldx	[%i6+1239],%o5
+	stx	%o5,[%i3-344]
+	ldx	[%i6+1231],%o5
+	stx	%o5,[%i3-336]
+	ldx	[%i6+1223],%o5
+	stx	%o5,[%i3-328]
+	ldx	[%i6+1215],%o5
+	stx	%o5,[%i3-320]
+	ldx	[%i6+1207],%o5
+	stx	%o5,[%i3-312]
+	ldx	[%i6+1199],%o5
+	stx	%o5,[%i3-304]
+	ldx	[%i6+1191],%o5
+	stx	%o5,[%i3-296]
+	ldx	[%i6+1183],%o5
+	stx	%o5,[%i3-288]
+	ldx	[%i6+1175],%o5
+	stx	%o5,[%i3-280]
+	ldx	[%i6+1167],%o5
+	stx	%o5,[%i3-272]
+	ldx	[%i6+1159],%o5
+	stx	%o5,[%i3-264]
+	ldx	[%i6+1151],%o5
+	stx	%o5,[%i3-256]
+	ldx	[%i6+1143],%o5
+	stx	%o5,[%i3-248]
+	ldx	[%i6+1135],%o5
+	stx	%o5,[%i3-240]
+	ldx	[%i6+1127],%o5
+	stx	%o5,[%i3-232]
+	ldx	[%i6+1119],%o5
+	stx	%o5,[%i3-224]
+	ldx	[%i6+1111],%o5
+	stx	%o5,[%i3-216]
+	ldx	[%i6+1103],%o5
+	stx	%o5,[%i3-208]
+	ldx	[%i6+1095],%o5
+	stx	%o5,[%i3-200]
+	ldx	[%i6+1087],%o5
+	stx	%o5,[%i3-192]
+	ldx	[%i6+1079],%o5
+	stx	%o5,[%i3-184]
+	ldx	[%i6+1071],%o5
+	stx	%o5,[%i3-176]
+	ldx	[%i6+1063],%o5
+	stx	%o5,[%i3-168]
+	ldx	[%i6+1055],%o5
+	stx	%o5,[%i3-160]
+	ldx	[%i6+1047],%o5
+	stx	%o5,[%i3-152]
+	ldx	[%i6+1039],%o5
+	stx	%o5,[%i3-144]
+	ldx	[%i6+1031],%o5
+	stx	%o5,[%i3-136]
+	ldx	[%i6+1023],%o5
+	stx	%o5,[%i3-128]
+	ldx	[%i6+1015],%o5
+	stx	%o5,[%i3-120]
+	ldx	[%i6+991],%o5
+	stx	%o5,[%i3-112]
+	stx	%l6,[%i3-104]
+	stx	%l7,[%i3-96]
+	stx	%i4,[%i3-88]
+	stx	%g2,[%i3-80]
+	stx	%g3,[%i3-72]
+	stx	%g4,[%i3-64]
+	stx	%o0,[%i3-56]
+	stx	%o1,[%i3-48]
+	stx	%o2,[%i3-40]
+	stx	%o3,[%i3-32]
+	stx	%o4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1023,%g1
+	sethi	%hh(s78W_info),%g2
+	sethi	%lm(s78W_info),%g3
+	or	%g2,%hm(s78W_info),%g2
+	or	%g3,%lo(s78W_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccCs_end:
+.Ls7am_entry_end:
+.section .rodata
+.align 8
+ccCC_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78S_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78S_info:
+.LccCD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccCE
+	nop
+	b	.LccCF
+	nop
+.LccCD_end:
+.LccCE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccCE_end:
+.LccCF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccCC_str),%g1
+	sethi	%lm(ccCC_str),%l2
+	or	%g1,%hm(ccCC_str),%g1
+	or	%l2,%lo(ccCC_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccCF_end:
+.Ls78S_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78U_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78U_info:
+.LccCH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccCI
+	nop
+	b	.LccCJ
+	nop
+.LccCH_end:
+.LccCJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccCL
+	nop
+	b	.LccCK
+	nop
+.LccCJ_end:
+.LccCL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccCI
+	nop
+.LccCL_end:
+.LccCI:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccCI_end:
+.LccCK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78S_info),%g1
+	sethi	%lm(s78S_info),%g2
+	or	%g1,%hm(s78S_info),%g1
+	or	%g2,%lo(s78S_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccCK_end:
+.Ls78U_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7an_info)+0
+	.quad	541165879296
+	.quad	64424509567
+.align 4
+s7an_info:
+.LccCM:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccCN
+	nop
+	b	.LccCO
+	nop
+.LccCM_end:
+.LccCO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1040,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccCQ
+	nop
+	b	.LccCP
+	nop
+.LccCO_end:
+.LccCQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1040,%g2
+	stx	%g2,[%i1+904]
+	b	.LccCN
+	nop
+.LccCQ_end:
+.LccCN:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccCN_end:
+.LccCP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	ldx	[%g1+1016],%g1
+	stx	%o5,[%i6+1015]
+	sethi	%hh(s7am_info),%o5
+	stx	%o5,[%i6+1007]
+	sethi	%lm(s7am_info),%o5
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	or	%o5,%hm(s7am_info),%o5
+	stx	%o5,[%i6+1007]
+	ldx	[%i6+999],%o5
+	or	%o5,%lo(s7am_info),%o5
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	sllx	%o5,32,%o5
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	or	%l0,%o5,%l0
+	stx	%l0,[%i3-1032]
+	ldx	[%i6+1911],%o5
+	stx	%o5,[%i3-1016]
+	ldx	[%i6+1903],%o5
+	stx	%o5,[%i3-1008]
+	ldx	[%i6+1895],%o5
+	stx	%o5,[%i3-1000]
+	ldx	[%i6+1887],%o5
+	stx	%o5,[%i3-992]
+	ldx	[%i6+1879],%o5
+	stx	%o5,[%i3-984]
+	ldx	[%i6+1871],%o5
+	stx	%o5,[%i3-976]
+	ldx	[%i6+1863],%o5
+	stx	%o5,[%i3-968]
+	ldx	[%i6+1855],%o5
+	stx	%o5,[%i3-960]
+	ldx	[%i6+1847],%o5
+	stx	%o5,[%i3-952]
+	ldx	[%i6+1839],%o5
+	stx	%o5,[%i3-944]
+	ldx	[%i6+1831],%o5
+	stx	%o5,[%i3-936]
+	ldx	[%i6+1823],%o5
+	stx	%o5,[%i3-928]
+	ldx	[%i6+1815],%o5
+	stx	%o5,[%i3-920]
+	ldx	[%i6+1807],%o5
+	stx	%o5,[%i3-912]
+	ldx	[%i6+1799],%o5
+	stx	%o5,[%i3-904]
+	ldx	[%i6+1791],%o5
+	stx	%o5,[%i3-896]
+	ldx	[%i6+1783],%o5
+	stx	%o5,[%i3-888]
+	ldx	[%i6+1775],%o5
+	stx	%o5,[%i3-880]
+	ldx	[%i6+1767],%o5
+	stx	%o5,[%i3-872]
+	ldx	[%i6+1759],%o5
+	stx	%o5,[%i3-864]
+	ldx	[%i6+1751],%o5
+	stx	%o5,[%i3-856]
+	ldx	[%i6+1743],%o5
+	stx	%o5,[%i3-848]
+	ldx	[%i6+1735],%o5
+	stx	%o5,[%i3-840]
+	ldx	[%i6+1727],%o5
+	stx	%o5,[%i3-832]
+	ldx	[%i6+1719],%o5
+	stx	%o5,[%i3-824]
+	ldx	[%i6+1711],%o5
+	stx	%o5,[%i3-816]
+	ldx	[%i6+1703],%o5
+	stx	%o5,[%i3-808]
+	ldx	[%i6+1695],%o5
+	stx	%o5,[%i3-800]
+	ldx	[%i6+1687],%o5
+	stx	%o5,[%i3-792]
+	ldx	[%i6+1679],%o5
+	stx	%o5,[%i3-784]
+	ldx	[%i6+1671],%o5
+	stx	%o5,[%i3-776]
+	ldx	[%i6+1663],%o5
+	stx	%o5,[%i3-768]
+	ldx	[%i6+1655],%o5
+	stx	%o5,[%i3-760]
+	ldx	[%i6+1647],%o5
+	stx	%o5,[%i3-752]
+	ldx	[%i6+1639],%o5
+	stx	%o5,[%i3-744]
+	ldx	[%i6+1631],%o5
+	stx	%o5,[%i3-736]
+	ldx	[%i6+1623],%o5
+	stx	%o5,[%i3-728]
+	ldx	[%i6+1615],%o5
+	stx	%o5,[%i3-720]
+	ldx	[%i6+1607],%o5
+	stx	%o5,[%i3-712]
+	ldx	[%i6+1599],%o5
+	stx	%o5,[%i3-704]
+	ldx	[%i6+1591],%o5
+	stx	%o5,[%i3-696]
+	ldx	[%i6+1583],%o5
+	stx	%o5,[%i3-688]
+	ldx	[%i6+1575],%o5
+	stx	%o5,[%i3-680]
+	ldx	[%i6+1567],%o5
+	stx	%o5,[%i3-672]
+	ldx	[%i6+1559],%o5
+	stx	%o5,[%i3-664]
+	ldx	[%i6+1551],%o5
+	stx	%o5,[%i3-656]
+	ldx	[%i6+1543],%o5
+	stx	%o5,[%i3-648]
+	ldx	[%i6+1535],%o5
+	stx	%o5,[%i3-640]
+	ldx	[%i6+1527],%o5
+	stx	%o5,[%i3-632]
+	ldx	[%i6+1519],%o5
+	stx	%o5,[%i3-624]
+	ldx	[%i6+1511],%o5
+	stx	%o5,[%i3-616]
+	ldx	[%i6+1503],%o5
+	stx	%o5,[%i3-608]
+	ldx	[%i6+1495],%o5
+	stx	%o5,[%i3-600]
+	ldx	[%i6+1487],%o5
+	stx	%o5,[%i3-592]
+	ldx	[%i6+1479],%o5
+	stx	%o5,[%i3-584]
+	ldx	[%i6+1471],%o5
+	stx	%o5,[%i3-576]
+	ldx	[%i6+1463],%o5
+	stx	%o5,[%i3-568]
+	ldx	[%i6+1455],%o5
+	stx	%o5,[%i3-560]
+	ldx	[%i6+1447],%o5
+	stx	%o5,[%i3-552]
+	ldx	[%i6+1439],%o5
+	stx	%o5,[%i3-544]
+	ldx	[%i6+1431],%o5
+	stx	%o5,[%i3-536]
+	ldx	[%i6+1423],%o5
+	stx	%o5,[%i3-528]
+	ldx	[%i6+1415],%o5
+	stx	%o5,[%i3-520]
+	ldx	[%i6+1407],%o5
+	stx	%o5,[%i3-512]
+	ldx	[%i6+1399],%o5
+	stx	%o5,[%i3-504]
+	ldx	[%i6+1391],%o5
+	stx	%o5,[%i3-496]
+	ldx	[%i6+1383],%o5
+	stx	%o5,[%i3-488]
+	ldx	[%i6+1375],%o5
+	stx	%o5,[%i3-480]
+	ldx	[%i6+1367],%o5
+	stx	%o5,[%i3-472]
+	ldx	[%i6+1359],%o5
+	stx	%o5,[%i3-464]
+	ldx	[%i6+1351],%o5
+	stx	%o5,[%i3-456]
+	ldx	[%i6+1343],%o5
+	stx	%o5,[%i3-448]
+	ldx	[%i6+1335],%o5
+	stx	%o5,[%i3-440]
+	ldx	[%i6+1327],%o5
+	stx	%o5,[%i3-432]
+	ldx	[%i6+1319],%o5
+	stx	%o5,[%i3-424]
+	ldx	[%i6+1311],%o5
+	stx	%o5,[%i3-416]
+	ldx	[%i6+1303],%o5
+	stx	%o5,[%i3-408]
+	ldx	[%i6+1295],%o5
+	stx	%o5,[%i3-400]
+	ldx	[%i6+1287],%o5
+	stx	%o5,[%i3-392]
+	ldx	[%i6+1279],%o5
+	stx	%o5,[%i3-384]
+	ldx	[%i6+1271],%o5
+	stx	%o5,[%i3-376]
+	ldx	[%i6+1263],%o5
+	stx	%o5,[%i3-368]
+	ldx	[%i6+1255],%o5
+	stx	%o5,[%i3-360]
+	ldx	[%i6+1247],%o5
+	stx	%o5,[%i3-352]
+	ldx	[%i6+1239],%o5
+	stx	%o5,[%i3-344]
+	ldx	[%i6+1231],%o5
+	stx	%o5,[%i3-336]
+	ldx	[%i6+1223],%o5
+	stx	%o5,[%i3-328]
+	ldx	[%i6+1215],%o5
+	stx	%o5,[%i3-320]
+	ldx	[%i6+1207],%o5
+	stx	%o5,[%i3-312]
+	ldx	[%i6+1199],%o5
+	stx	%o5,[%i3-304]
+	ldx	[%i6+1191],%o5
+	stx	%o5,[%i3-296]
+	ldx	[%i6+1183],%o5
+	stx	%o5,[%i3-288]
+	ldx	[%i6+1175],%o5
+	stx	%o5,[%i3-280]
+	ldx	[%i6+1167],%o5
+	stx	%o5,[%i3-272]
+	ldx	[%i6+1159],%o5
+	stx	%o5,[%i3-264]
+	ldx	[%i6+1151],%o5
+	stx	%o5,[%i3-256]
+	ldx	[%i6+1143],%o5
+	stx	%o5,[%i3-248]
+	ldx	[%i6+1135],%o5
+	stx	%o5,[%i3-240]
+	ldx	[%i6+1127],%o5
+	stx	%o5,[%i3-232]
+	ldx	[%i6+1119],%o5
+	stx	%o5,[%i3-224]
+	ldx	[%i6+1111],%o5
+	stx	%o5,[%i3-216]
+	ldx	[%i6+1103],%o5
+	stx	%o5,[%i3-208]
+	ldx	[%i6+1095],%o5
+	stx	%o5,[%i3-200]
+	ldx	[%i6+1087],%o5
+	stx	%o5,[%i3-192]
+	ldx	[%i6+1079],%o5
+	stx	%o5,[%i3-184]
+	ldx	[%i6+1071],%o5
+	stx	%o5,[%i3-176]
+	ldx	[%i6+1063],%o5
+	stx	%o5,[%i3-168]
+	ldx	[%i6+1055],%o5
+	stx	%o5,[%i3-160]
+	ldx	[%i6+1047],%o5
+	stx	%o5,[%i3-152]
+	ldx	[%i6+1039],%o5
+	stx	%o5,[%i3-144]
+	ldx	[%i6+1031],%o5
+	stx	%o5,[%i3-136]
+	ldx	[%i6+1023],%o5
+	stx	%o5,[%i3-128]
+	ldx	[%i6+1015],%o5
+	stx	%o5,[%i3-120]
+	ldx	[%i6+991],%o5
+	stx	%o5,[%i3-112]
+	stx	%l6,[%i3-104]
+	stx	%l7,[%i3-96]
+	stx	%i4,[%i3-88]
+	stx	%g2,[%i3-80]
+	stx	%g3,[%i3-72]
+	stx	%g4,[%i3-64]
+	stx	%o0,[%i3-56]
+	stx	%o1,[%i3-48]
+	stx	%o2,[%i3-40]
+	stx	%o3,[%i3-32]
+	stx	%o4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1032,%g1
+	sethi	%hh(s78U_info),%g2
+	sethi	%lm(s78U_info),%g3
+	or	%g2,%hm(s78U_info),%g2
+	or	%g3,%lo(s78U_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccCP_end:
+.Ls7an_entry_end:
+.section .rodata
+.align 8
+ccCZ_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	87
+	.byte	79
+	.byte	82
+	.byte	68
+	.byte	83
+	.byte	95
+	.byte	66
+	.byte	73
+	.byte	71
+	.byte	69
+	.byte	78
+	.byte	68
+	.byte	73
+	.byte	65
+	.byte	78
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78P_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78P_info:
+.LccD0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccD1
+	nop
+	b	.LccD2
+	nop
+.LccD0_end:
+.LccD1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccD1_end:
+.LccD2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccCZ_str),%g1
+	sethi	%lm(ccCZ_str),%l2
+	or	%g1,%hm(ccCZ_str),%g1
+	or	%l2,%lo(ccCZ_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccD2_end:
+.Ls78P_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78R_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78R_info:
+.LccD4:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccD5
+	nop
+	b	.LccD6
+	nop
+.LccD4_end:
+.LccD6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccD8
+	nop
+	b	.LccD7
+	nop
+.LccD6_end:
+.LccD8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccD5
+	nop
+.LccD8_end:
+.LccD5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccD5_end:
+.LccD7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78P_info),%g1
+	sethi	%lm(s78P_info),%g2
+	or	%g1,%hm(s78P_info),%g1
+	or	%g2,%lo(s78P_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccD7_end:
+.Ls78R_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ao_info)+0
+	.quad	541165879296
+	.quad	64424509567
+.align 4
+s7ao_info:
+.LccD9:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccDa
+	nop
+	b	.LccDb
+	nop
+.LccD9_end:
+.LccDb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1040,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccDd
+	nop
+	b	.LccDc
+	nop
+.LccDb_end:
+.LccDd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1040,%g2
+	stx	%g2,[%i1+904]
+	b	.LccDa
+	nop
+.LccDd_end:
+.LccDa:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccDa_end:
+.LccDc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	stx	%o4,[%i6+1023]
+	ldx	[%g1+1008],%o4
+	ldx	[%g1+1016],%g1
+	stx	%o5,[%i6+1015]
+	sethi	%hh(s7an_info),%o5
+	stx	%o5,[%i6+1007]
+	sethi	%lm(s7an_info),%o5
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	or	%o5,%hm(s7an_info),%o5
+	stx	%o5,[%i6+1007]
+	ldx	[%i6+999],%o5
+	or	%o5,%lo(s7an_info),%o5
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	sllx	%o5,32,%o5
+	stx	%l0,[%i6+991]
+	ldx	[%i6+999],%l0
+	or	%l0,%o5,%l0
+	stx	%l0,[%i3-1032]
+	ldx	[%i6+1911],%o5
+	stx	%o5,[%i3-1016]
+	ldx	[%i6+1903],%o5
+	stx	%o5,[%i3-1008]
+	ldx	[%i6+1895],%o5
+	stx	%o5,[%i3-1000]
+	ldx	[%i6+1887],%o5
+	stx	%o5,[%i3-992]
+	ldx	[%i6+1879],%o5
+	stx	%o5,[%i3-984]
+	ldx	[%i6+1871],%o5
+	stx	%o5,[%i3-976]
+	ldx	[%i6+1863],%o5
+	stx	%o5,[%i3-968]
+	ldx	[%i6+1855],%o5
+	stx	%o5,[%i3-960]
+	ldx	[%i6+1847],%o5
+	stx	%o5,[%i3-952]
+	ldx	[%i6+1839],%o5
+	stx	%o5,[%i3-944]
+	ldx	[%i6+1831],%o5
+	stx	%o5,[%i3-936]
+	ldx	[%i6+1823],%o5
+	stx	%o5,[%i3-928]
+	ldx	[%i6+1815],%o5
+	stx	%o5,[%i3-920]
+	ldx	[%i6+1807],%o5
+	stx	%o5,[%i3-912]
+	ldx	[%i6+1799],%o5
+	stx	%o5,[%i3-904]
+	ldx	[%i6+1791],%o5
+	stx	%o5,[%i3-896]
+	ldx	[%i6+1783],%o5
+	stx	%o5,[%i3-888]
+	ldx	[%i6+1775],%o5
+	stx	%o5,[%i3-880]
+	ldx	[%i6+1767],%o5
+	stx	%o5,[%i3-872]
+	ldx	[%i6+1759],%o5
+	stx	%o5,[%i3-864]
+	ldx	[%i6+1751],%o5
+	stx	%o5,[%i3-856]
+	ldx	[%i6+1743],%o5
+	stx	%o5,[%i3-848]
+	ldx	[%i6+1735],%o5
+	stx	%o5,[%i3-840]
+	ldx	[%i6+1727],%o5
+	stx	%o5,[%i3-832]
+	ldx	[%i6+1719],%o5
+	stx	%o5,[%i3-824]
+	ldx	[%i6+1711],%o5
+	stx	%o5,[%i3-816]
+	ldx	[%i6+1703],%o5
+	stx	%o5,[%i3-808]
+	ldx	[%i6+1695],%o5
+	stx	%o5,[%i3-800]
+	ldx	[%i6+1687],%o5
+	stx	%o5,[%i3-792]
+	ldx	[%i6+1679],%o5
+	stx	%o5,[%i3-784]
+	ldx	[%i6+1671],%o5
+	stx	%o5,[%i3-776]
+	ldx	[%i6+1663],%o5
+	stx	%o5,[%i3-768]
+	ldx	[%i6+1655],%o5
+	stx	%o5,[%i3-760]
+	ldx	[%i6+1647],%o5
+	stx	%o5,[%i3-752]
+	ldx	[%i6+1639],%o5
+	stx	%o5,[%i3-744]
+	ldx	[%i6+1631],%o5
+	stx	%o5,[%i3-736]
+	ldx	[%i6+1623],%o5
+	stx	%o5,[%i3-728]
+	ldx	[%i6+1615],%o5
+	stx	%o5,[%i3-720]
+	ldx	[%i6+1607],%o5
+	stx	%o5,[%i3-712]
+	ldx	[%i6+1599],%o5
+	stx	%o5,[%i3-704]
+	ldx	[%i6+1591],%o5
+	stx	%o5,[%i3-696]
+	ldx	[%i6+1583],%o5
+	stx	%o5,[%i3-688]
+	ldx	[%i6+1575],%o5
+	stx	%o5,[%i3-680]
+	ldx	[%i6+1567],%o5
+	stx	%o5,[%i3-672]
+	ldx	[%i6+1559],%o5
+	stx	%o5,[%i3-664]
+	ldx	[%i6+1551],%o5
+	stx	%o5,[%i3-656]
+	ldx	[%i6+1543],%o5
+	stx	%o5,[%i3-648]
+	ldx	[%i6+1535],%o5
+	stx	%o5,[%i3-640]
+	ldx	[%i6+1527],%o5
+	stx	%o5,[%i3-632]
+	ldx	[%i6+1519],%o5
+	stx	%o5,[%i3-624]
+	ldx	[%i6+1511],%o5
+	stx	%o5,[%i3-616]
+	ldx	[%i6+1503],%o5
+	stx	%o5,[%i3-608]
+	ldx	[%i6+1495],%o5
+	stx	%o5,[%i3-600]
+	ldx	[%i6+1487],%o5
+	stx	%o5,[%i3-592]
+	ldx	[%i6+1479],%o5
+	stx	%o5,[%i3-584]
+	ldx	[%i6+1471],%o5
+	stx	%o5,[%i3-576]
+	ldx	[%i6+1463],%o5
+	stx	%o5,[%i3-568]
+	ldx	[%i6+1455],%o5
+	stx	%o5,[%i3-560]
+	ldx	[%i6+1447],%o5
+	stx	%o5,[%i3-552]
+	ldx	[%i6+1439],%o5
+	stx	%o5,[%i3-544]
+	ldx	[%i6+1431],%o5
+	stx	%o5,[%i3-536]
+	ldx	[%i6+1423],%o5
+	stx	%o5,[%i3-528]
+	ldx	[%i6+1415],%o5
+	stx	%o5,[%i3-520]
+	ldx	[%i6+1407],%o5
+	stx	%o5,[%i3-512]
+	ldx	[%i6+1399],%o5
+	stx	%o5,[%i3-504]
+	ldx	[%i6+1391],%o5
+	stx	%o5,[%i3-496]
+	ldx	[%i6+1383],%o5
+	stx	%o5,[%i3-488]
+	ldx	[%i6+1375],%o5
+	stx	%o5,[%i3-480]
+	ldx	[%i6+1367],%o5
+	stx	%o5,[%i3-472]
+	ldx	[%i6+1359],%o5
+	stx	%o5,[%i3-464]
+	ldx	[%i6+1351],%o5
+	stx	%o5,[%i3-456]
+	ldx	[%i6+1343],%o5
+	stx	%o5,[%i3-448]
+	ldx	[%i6+1335],%o5
+	stx	%o5,[%i3-440]
+	ldx	[%i6+1327],%o5
+	stx	%o5,[%i3-432]
+	ldx	[%i6+1319],%o5
+	stx	%o5,[%i3-424]
+	ldx	[%i6+1311],%o5
+	stx	%o5,[%i3-416]
+	ldx	[%i6+1303],%o5
+	stx	%o5,[%i3-408]
+	ldx	[%i6+1295],%o5
+	stx	%o5,[%i3-400]
+	ldx	[%i6+1287],%o5
+	stx	%o5,[%i3-392]
+	ldx	[%i6+1279],%o5
+	stx	%o5,[%i3-384]
+	ldx	[%i6+1271],%o5
+	stx	%o5,[%i3-376]
+	ldx	[%i6+1263],%o5
+	stx	%o5,[%i3-368]
+	ldx	[%i6+1255],%o5
+	stx	%o5,[%i3-360]
+	ldx	[%i6+1247],%o5
+	stx	%o5,[%i3-352]
+	ldx	[%i6+1239],%o5
+	stx	%o5,[%i3-344]
+	ldx	[%i6+1231],%o5
+	stx	%o5,[%i3-336]
+	ldx	[%i6+1223],%o5
+	stx	%o5,[%i3-328]
+	ldx	[%i6+1215],%o5
+	stx	%o5,[%i3-320]
+	ldx	[%i6+1207],%o5
+	stx	%o5,[%i3-312]
+	ldx	[%i6+1199],%o5
+	stx	%o5,[%i3-304]
+	ldx	[%i6+1191],%o5
+	stx	%o5,[%i3-296]
+	ldx	[%i6+1183],%o5
+	stx	%o5,[%i3-288]
+	ldx	[%i6+1175],%o5
+	stx	%o5,[%i3-280]
+	ldx	[%i6+1167],%o5
+	stx	%o5,[%i3-272]
+	ldx	[%i6+1159],%o5
+	stx	%o5,[%i3-264]
+	ldx	[%i6+1151],%o5
+	stx	%o5,[%i3-256]
+	ldx	[%i6+1143],%o5
+	stx	%o5,[%i3-248]
+	ldx	[%i6+1135],%o5
+	stx	%o5,[%i3-240]
+	ldx	[%i6+1127],%o5
+	stx	%o5,[%i3-232]
+	ldx	[%i6+1119],%o5
+	stx	%o5,[%i3-224]
+	ldx	[%i6+1111],%o5
+	stx	%o5,[%i3-216]
+	ldx	[%i6+1103],%o5
+	stx	%o5,[%i3-208]
+	ldx	[%i6+1095],%o5
+	stx	%o5,[%i3-200]
+	ldx	[%i6+1087],%o5
+	stx	%o5,[%i3-192]
+	ldx	[%i6+1079],%o5
+	stx	%o5,[%i3-184]
+	ldx	[%i6+1071],%o5
+	stx	%o5,[%i3-176]
+	ldx	[%i6+1063],%o5
+	stx	%o5,[%i3-168]
+	ldx	[%i6+1055],%o5
+	stx	%o5,[%i3-160]
+	ldx	[%i6+1047],%o5
+	stx	%o5,[%i3-152]
+	ldx	[%i6+1039],%o5
+	stx	%o5,[%i3-144]
+	ldx	[%i6+1031],%o5
+	stx	%o5,[%i3-136]
+	ldx	[%i6+1023],%o5
+	stx	%o5,[%i3-128]
+	ldx	[%i6+1015],%o5
+	stx	%o5,[%i3-120]
+	ldx	[%i6+991],%o5
+	stx	%o5,[%i3-112]
+	stx	%l6,[%i3-104]
+	stx	%l7,[%i3-96]
+	stx	%i4,[%i3-88]
+	stx	%g2,[%i3-80]
+	stx	%g3,[%i3-72]
+	stx	%g4,[%i3-64]
+	stx	%o0,[%i3-56]
+	stx	%o1,[%i3-48]
+	stx	%o2,[%i3-40]
+	stx	%o3,[%i3-32]
+	stx	%o4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1032,%g1
+	sethi	%hh(s78R_info),%g2
+	sethi	%lm(s78R_info),%g3
+	or	%g2,%hm(s78R_info),%g2
+	or	%g3,%lo(s78R_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccDc_end:
+.Ls7ao_entry_end:
+.section .rodata
+.align 8
+ccDm_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78M_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78M_info:
+.LccDn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccDo
+	nop
+	b	.LccDp
+	nop
+.LccDn_end:
+.LccDo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccDo_end:
+.LccDp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccDm_str),%g1
+	sethi	%lm(ccDm_str),%l2
+	or	%g1,%hm(ccDm_str),%g1
+	or	%l2,%lo(ccDm_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccDp_end:
+.Ls78M_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78O_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78O_info:
+.LccDr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccDs
+	nop
+	b	.LccDt
+	nop
+.LccDr_end:
+.LccDt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccDv
+	nop
+	b	.LccDu
+	nop
+.LccDt_end:
+.LccDv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccDs
+	nop
+.LccDv_end:
+.LccDs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccDs_end:
+.LccDu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78M_info),%g1
+	sethi	%lm(s78M_info),%g2
+	or	%g1,%hm(s78M_info),%g1
+	or	%g2,%lo(s78M_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccDu_end:
+.Ls78O_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ap_info)+0
+	.quad	21474836481
+	.quad	536870912000
+	.quad	34359738495
+.align 4
+s7ap_info:
+.LccDw:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccDx
+	nop
+	b	.LccDy
+	nop
+.LccDw_end:
+.LccDy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1040,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccDA
+	nop
+	b	.LccDz
+	nop
+.LccDy_end:
+.LccDA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1040,%g3
+	stx	%g3,[%i1+904]
+	b	.LccDx
+	nop
+.LccDA_end:
+.LccDx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccDx_end:
+.LccDz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	stx	%o1,[%i6+1023]
+	ldx	[%g2+991],%o1
+	ldx	[%g2+999],%g2
+	stx	%o2,[%i6+1015]
+	sethi	%hh(s7ao_info),%o2
+	stx	%o2,[%i6+1007]
+	sethi	%lm(s7ao_info),%o2
+	stx	%o2,[%i6+999]
+	ldx	[%i6+1007],%o2
+	or	%o2,%hm(s7ao_info),%o2
+	stx	%o2,[%i6+1007]
+	ldx	[%i6+999],%o2
+	or	%o2,%lo(s7ao_info),%o2
+	stx	%o2,[%i6+999]
+	ldx	[%i6+1007],%o2
+	sllx	%o2,32,%o2
+	stx	%o3,[%i6+991]
+	ldx	[%i6+999],%o3
+	or	%o3,%o2,%o3
+	stx	%o3,[%i3-1032]
+	ldx	[%i6+1911],%o2
+	stx	%o2,[%i3-1016]
+	ldx	[%i6+1903],%o2
+	stx	%o2,[%i3-1008]
+	ldx	[%i6+1895],%o2
+	stx	%o2,[%i3-1000]
+	ldx	[%i6+1887],%o2
+	stx	%o2,[%i3-992]
+	ldx	[%i6+1879],%o2
+	stx	%o2,[%i3-984]
+	ldx	[%i6+1871],%o2
+	stx	%o2,[%i3-976]
+	ldx	[%i6+1863],%o2
+	stx	%o2,[%i3-968]
+	ldx	[%i6+1855],%o2
+	stx	%o2,[%i3-960]
+	ldx	[%i6+1847],%o2
+	stx	%o2,[%i3-952]
+	ldx	[%i6+1839],%o2
+	stx	%o2,[%i3-944]
+	ldx	[%i6+1831],%o2
+	stx	%o2,[%i3-936]
+	ldx	[%i6+1823],%o2
+	stx	%o2,[%i3-928]
+	ldx	[%i6+1815],%o2
+	stx	%o2,[%i3-920]
+	ldx	[%i6+1807],%o2
+	stx	%o2,[%i3-912]
+	ldx	[%i6+1799],%o2
+	stx	%o2,[%i3-904]
+	ldx	[%i6+1791],%o2
+	stx	%o2,[%i3-896]
+	ldx	[%i6+1783],%o2
+	stx	%o2,[%i3-888]
+	ldx	[%i6+1775],%o2
+	stx	%o2,[%i3-880]
+	ldx	[%i6+1767],%o2
+	stx	%o2,[%i3-872]
+	ldx	[%i6+1759],%o2
+	stx	%o2,[%i3-864]
+	ldx	[%i6+1751],%o2
+	stx	%o2,[%i3-856]
+	ldx	[%i6+1743],%o2
+	stx	%o2,[%i3-848]
+	ldx	[%i6+1735],%o2
+	stx	%o2,[%i3-840]
+	ldx	[%i6+1727],%o2
+	stx	%o2,[%i3-832]
+	ldx	[%i6+1719],%o2
+	stx	%o2,[%i3-824]
+	ldx	[%i6+1711],%o2
+	stx	%o2,[%i3-816]
+	ldx	[%i6+1703],%o2
+	stx	%o2,[%i3-808]
+	ldx	[%i6+1695],%o2
+	stx	%o2,[%i3-800]
+	ldx	[%i6+1687],%o2
+	stx	%o2,[%i3-792]
+	ldx	[%i6+1679],%o2
+	stx	%o2,[%i3-784]
+	ldx	[%i6+1671],%o2
+	stx	%o2,[%i3-776]
+	ldx	[%i6+1663],%o2
+	stx	%o2,[%i3-768]
+	ldx	[%i6+1655],%o2
+	stx	%o2,[%i3-760]
+	ldx	[%i6+1647],%o2
+	stx	%o2,[%i3-752]
+	ldx	[%i6+1639],%o2
+	stx	%o2,[%i3-744]
+	ldx	[%i6+1631],%o2
+	stx	%o2,[%i3-736]
+	ldx	[%i6+1623],%o2
+	stx	%o2,[%i3-728]
+	ldx	[%i6+1615],%o2
+	stx	%o2,[%i3-720]
+	ldx	[%i6+1607],%o2
+	stx	%o2,[%i3-712]
+	ldx	[%i6+1599],%o2
+	stx	%o2,[%i3-704]
+	ldx	[%i6+1591],%o2
+	stx	%o2,[%i3-696]
+	ldx	[%i6+1583],%o2
+	stx	%o2,[%i3-688]
+	ldx	[%i6+1575],%o2
+	stx	%o2,[%i3-680]
+	ldx	[%i6+1567],%o2
+	stx	%o2,[%i3-672]
+	ldx	[%i6+1559],%o2
+	stx	%o2,[%i3-664]
+	ldx	[%i6+1551],%o2
+	stx	%o2,[%i3-656]
+	ldx	[%i6+1543],%o2
+	stx	%o2,[%i3-648]
+	ldx	[%i6+1535],%o2
+	stx	%o2,[%i3-640]
+	ldx	[%i6+1527],%o2
+	stx	%o2,[%i3-632]
+	ldx	[%i6+1519],%o2
+	stx	%o2,[%i3-624]
+	ldx	[%i6+1511],%o2
+	stx	%o2,[%i3-616]
+	ldx	[%i6+1503],%o2
+	stx	%o2,[%i3-608]
+	ldx	[%i6+1495],%o2
+	stx	%o2,[%i3-600]
+	ldx	[%i6+1487],%o2
+	stx	%o2,[%i3-592]
+	ldx	[%i6+1479],%o2
+	stx	%o2,[%i3-584]
+	ldx	[%i6+1471],%o2
+	stx	%o2,[%i3-576]
+	ldx	[%i6+1463],%o2
+	stx	%o2,[%i3-568]
+	ldx	[%i6+1455],%o2
+	stx	%o2,[%i3-560]
+	ldx	[%i6+1447],%o2
+	stx	%o2,[%i3-552]
+	ldx	[%i6+1439],%o2
+	stx	%o2,[%i3-544]
+	ldx	[%i6+1431],%o2
+	stx	%o2,[%i3-536]
+	ldx	[%i6+1423],%o2
+	stx	%o2,[%i3-528]
+	ldx	[%i6+1415],%o2
+	stx	%o2,[%i3-520]
+	ldx	[%i6+1407],%o2
+	stx	%o2,[%i3-512]
+	ldx	[%i6+1399],%o2
+	stx	%o2,[%i3-504]
+	ldx	[%i6+1391],%o2
+	stx	%o2,[%i3-496]
+	ldx	[%i6+1383],%o2
+	stx	%o2,[%i3-488]
+	ldx	[%i6+1375],%o2
+	stx	%o2,[%i3-480]
+	ldx	[%i6+1367],%o2
+	stx	%o2,[%i3-472]
+	ldx	[%i6+1359],%o2
+	stx	%o2,[%i3-464]
+	ldx	[%i6+1351],%o2
+	stx	%o2,[%i3-456]
+	ldx	[%i6+1343],%o2
+	stx	%o2,[%i3-448]
+	ldx	[%i6+1335],%o2
+	stx	%o2,[%i3-440]
+	ldx	[%i6+1327],%o2
+	stx	%o2,[%i3-432]
+	ldx	[%i6+1319],%o2
+	stx	%o2,[%i3-424]
+	ldx	[%i6+1311],%o2
+	stx	%o2,[%i3-416]
+	ldx	[%i6+1303],%o2
+	stx	%o2,[%i3-408]
+	ldx	[%i6+1295],%o2
+	stx	%o2,[%i3-400]
+	ldx	[%i6+1287],%o2
+	stx	%o2,[%i3-392]
+	ldx	[%i6+1279],%o2
+	stx	%o2,[%i3-384]
+	ldx	[%i6+1271],%o2
+	stx	%o2,[%i3-376]
+	ldx	[%i6+1263],%o2
+	stx	%o2,[%i3-368]
+	ldx	[%i6+1255],%o2
+	stx	%o2,[%i3-360]
+	ldx	[%i6+1247],%o2
+	stx	%o2,[%i3-352]
+	ldx	[%i6+1239],%o2
+	stx	%o2,[%i3-344]
+	ldx	[%i6+1231],%o2
+	stx	%o2,[%i3-336]
+	ldx	[%i6+1223],%o2
+	stx	%o2,[%i3-328]
+	ldx	[%i6+1215],%o2
+	stx	%o2,[%i3-320]
+	ldx	[%i6+1207],%o2
+	stx	%o2,[%i3-312]
+	ldx	[%i6+1199],%o2
+	stx	%o2,[%i3-304]
+	ldx	[%i6+1191],%o2
+	stx	%o2,[%i3-296]
+	ldx	[%i6+1183],%o2
+	stx	%o2,[%i3-288]
+	ldx	[%i6+1175],%o2
+	stx	%o2,[%i3-280]
+	ldx	[%i6+1167],%o2
+	stx	%o2,[%i3-272]
+	ldx	[%i6+1159],%o2
+	stx	%o2,[%i3-264]
+	ldx	[%i6+1151],%o2
+	stx	%o2,[%i3-256]
+	ldx	[%i6+1143],%o2
+	stx	%o2,[%i3-248]
+	ldx	[%i6+1135],%o2
+	stx	%o2,[%i3-240]
+	ldx	[%i6+1127],%o2
+	stx	%o2,[%i3-232]
+	ldx	[%i6+1119],%o2
+	stx	%o2,[%i3-224]
+	ldx	[%i6+1111],%o2
+	stx	%o2,[%i3-216]
+	ldx	[%i6+1103],%o2
+	stx	%o2,[%i3-208]
+	ldx	[%i6+1095],%o2
+	stx	%o2,[%i3-200]
+	ldx	[%i6+1087],%o2
+	stx	%o2,[%i3-192]
+	ldx	[%i6+1079],%o2
+	stx	%o2,[%i3-184]
+	ldx	[%i6+1071],%o2
+	stx	%o2,[%i3-176]
+	ldx	[%i6+1063],%o2
+	stx	%o2,[%i3-168]
+	ldx	[%i6+1055],%o2
+	stx	%o2,[%i3-160]
+	ldx	[%i6+1047],%o2
+	stx	%o2,[%i3-152]
+	ldx	[%i6+1039],%o2
+	stx	%o2,[%i3-144]
+	ldx	[%i6+1031],%o2
+	stx	%o2,[%i3-136]
+	ldx	[%i6+1023],%o2
+	stx	%o2,[%i3-128]
+	ldx	[%i6+1015],%o2
+	stx	%o2,[%i3-120]
+	ldx	[%i6+991],%o2
+	stx	%o2,[%i3-112]
+	stx	%o4,[%i3-104]
+	stx	%o5,[%i3-96]
+	stx	%l0,[%i3-88]
+	stx	%l6,[%i3-80]
+	stx	%l7,[%i3-72]
+	stx	%i4,[%i3-64]
+	stx	%g3,[%i3-56]
+	stx	%g4,[%i3-48]
+	stx	%o0,[%i3-40]
+	stx	%o1,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1032,%g1
+	sethi	%hh(s78O_info),%g2
+	sethi	%lm(s78O_info),%g3
+	or	%g2,%hm(s78O_info),%g2
+	or	%g3,%lo(s78O_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccDz_end:
+.Ls7ap_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78J_info)+40
+	.quad	0
+	.quad	64424509441
+.align 4
+s78J_info:
+.LccDJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccDK
+	nop
+	b	.LccDL
+	nop
+.LccDJ_end:
+.LccDK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccDK_end:
+.LccDL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInt_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInt_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInt_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInt_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccDL_end:
+.Ls78J_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78K_info)+32
+	.quad	0
+	.quad	64424509443
+.align 4
+s78K_info:
+.LccDM:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccDN
+	nop
+	b	.LccDO
+	nop
+.LccDM_end:
+.LccDO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccDQ
+	nop
+	b	.LccDP
+	nop
+.LccDO_end:
+.LccDQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccDN
+	nop
+.LccDQ_end:
+.LccDN:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccDN_end:
+.LccDP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78J_info),%g1
+	sethi	%lm(s78J_info),%g2
+	or	%g1,%hm(s78J_info),%g1
+	or	%g2,%lo(s78J_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccDP_end:
+.Ls78K_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aq_info)+0
+	.quad	536870912000
+	.quad	64424509567
+.align 4
+s7aq_info:
+.LccDR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccDS
+	nop
+	b	.LccDT
+	nop
+.LccDR_end:
+.LccDT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1024,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccDV
+	nop
+	b	.LccDU
+	nop
+.LccDT_end:
+.LccDV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1024,%g2
+	stx	%g2,[%i1+904]
+	b	.LccDS
+	nop
+.LccDV_end:
+.LccDS:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccDS_end:
+.LccDU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	ldx	[%g1+1008],%g1
+	stx	%o4,[%i6+1023]
+	sethi	%hh(s7ap_info),%o4
+	stx	%o4,[%i6+1015]
+	sethi	%lm(s7ap_info),%o4
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	or	%o4,%hm(s7ap_info),%o4
+	stx	%o4,[%i6+1015]
+	ldx	[%i6+1007],%o4
+	or	%o4,%lo(s7ap_info),%o4
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	sllx	%o4,32,%o4
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	or	%o5,%o4,%o5
+	stx	%o5,[%i3-1016]
+	ldx	[%i6+1911],%o4
+	stx	%o4,[%i3-1008]
+	ldx	[%i6+1903],%o4
+	stx	%o4,[%i3-1000]
+	ldx	[%i6+1895],%o4
+	stx	%o4,[%i3-992]
+	ldx	[%i6+1887],%o4
+	stx	%o4,[%i3-984]
+	ldx	[%i6+1879],%o4
+	stx	%o4,[%i3-976]
+	ldx	[%i6+1871],%o4
+	stx	%o4,[%i3-968]
+	ldx	[%i6+1863],%o4
+	stx	%o4,[%i3-960]
+	ldx	[%i6+1855],%o4
+	stx	%o4,[%i3-952]
+	ldx	[%i6+1847],%o4
+	stx	%o4,[%i3-944]
+	ldx	[%i6+1839],%o4
+	stx	%o4,[%i3-936]
+	ldx	[%i6+1831],%o4
+	stx	%o4,[%i3-928]
+	ldx	[%i6+1823],%o4
+	stx	%o4,[%i3-920]
+	ldx	[%i6+1815],%o4
+	stx	%o4,[%i3-912]
+	ldx	[%i6+1807],%o4
+	stx	%o4,[%i3-904]
+	ldx	[%i6+1799],%o4
+	stx	%o4,[%i3-896]
+	ldx	[%i6+1791],%o4
+	stx	%o4,[%i3-888]
+	ldx	[%i6+1783],%o4
+	stx	%o4,[%i3-880]
+	ldx	[%i6+1775],%o4
+	stx	%o4,[%i3-872]
+	ldx	[%i6+1767],%o4
+	stx	%o4,[%i3-864]
+	ldx	[%i6+1759],%o4
+	stx	%o4,[%i3-856]
+	ldx	[%i6+1751],%o4
+	stx	%o4,[%i3-848]
+	ldx	[%i6+1743],%o4
+	stx	%o4,[%i3-840]
+	ldx	[%i6+1735],%o4
+	stx	%o4,[%i3-832]
+	ldx	[%i6+1727],%o4
+	stx	%o4,[%i3-824]
+	ldx	[%i6+1719],%o4
+	stx	%o4,[%i3-816]
+	ldx	[%i6+1711],%o4
+	stx	%o4,[%i3-808]
+	ldx	[%i6+1703],%o4
+	stx	%o4,[%i3-800]
+	ldx	[%i6+1695],%o4
+	stx	%o4,[%i3-792]
+	ldx	[%i6+1687],%o4
+	stx	%o4,[%i3-784]
+	ldx	[%i6+1679],%o4
+	stx	%o4,[%i3-776]
+	ldx	[%i6+1671],%o4
+	stx	%o4,[%i3-768]
+	ldx	[%i6+1663],%o4
+	stx	%o4,[%i3-760]
+	ldx	[%i6+1655],%o4
+	stx	%o4,[%i3-752]
+	ldx	[%i6+1647],%o4
+	stx	%o4,[%i3-744]
+	ldx	[%i6+1639],%o4
+	stx	%o4,[%i3-736]
+	ldx	[%i6+1631],%o4
+	stx	%o4,[%i3-728]
+	ldx	[%i6+1623],%o4
+	stx	%o4,[%i3-720]
+	ldx	[%i6+1615],%o4
+	stx	%o4,[%i3-712]
+	ldx	[%i6+1607],%o4
+	stx	%o4,[%i3-704]
+	ldx	[%i6+1599],%o4
+	stx	%o4,[%i3-696]
+	ldx	[%i6+1591],%o4
+	stx	%o4,[%i3-688]
+	ldx	[%i6+1583],%o4
+	stx	%o4,[%i3-680]
+	ldx	[%i6+1575],%o4
+	stx	%o4,[%i3-672]
+	ldx	[%i6+1567],%o4
+	stx	%o4,[%i3-664]
+	ldx	[%i6+1559],%o4
+	stx	%o4,[%i3-656]
+	ldx	[%i6+1551],%o4
+	stx	%o4,[%i3-648]
+	ldx	[%i6+1543],%o4
+	stx	%o4,[%i3-640]
+	ldx	[%i6+1535],%o4
+	stx	%o4,[%i3-632]
+	ldx	[%i6+1527],%o4
+	stx	%o4,[%i3-624]
+	ldx	[%i6+1519],%o4
+	stx	%o4,[%i3-616]
+	ldx	[%i6+1511],%o4
+	stx	%o4,[%i3-608]
+	ldx	[%i6+1503],%o4
+	stx	%o4,[%i3-600]
+	ldx	[%i6+1495],%o4
+	stx	%o4,[%i3-592]
+	ldx	[%i6+1487],%o4
+	stx	%o4,[%i3-584]
+	ldx	[%i6+1479],%o4
+	stx	%o4,[%i3-576]
+	ldx	[%i6+1471],%o4
+	stx	%o4,[%i3-568]
+	ldx	[%i6+1463],%o4
+	stx	%o4,[%i3-560]
+	ldx	[%i6+1455],%o4
+	stx	%o4,[%i3-552]
+	ldx	[%i6+1447],%o4
+	stx	%o4,[%i3-544]
+	ldx	[%i6+1439],%o4
+	stx	%o4,[%i3-536]
+	ldx	[%i6+1431],%o4
+	stx	%o4,[%i3-528]
+	ldx	[%i6+1423],%o4
+	stx	%o4,[%i3-520]
+	ldx	[%i6+1415],%o4
+	stx	%o4,[%i3-512]
+	ldx	[%i6+1407],%o4
+	stx	%o4,[%i3-504]
+	ldx	[%i6+1399],%o4
+	stx	%o4,[%i3-496]
+	ldx	[%i6+1391],%o4
+	stx	%o4,[%i3-488]
+	ldx	[%i6+1383],%o4
+	stx	%o4,[%i3-480]
+	ldx	[%i6+1375],%o4
+	stx	%o4,[%i3-472]
+	ldx	[%i6+1367],%o4
+	stx	%o4,[%i3-464]
+	ldx	[%i6+1359],%o4
+	stx	%o4,[%i3-456]
+	ldx	[%i6+1351],%o4
+	stx	%o4,[%i3-448]
+	ldx	[%i6+1343],%o4
+	stx	%o4,[%i3-440]
+	ldx	[%i6+1335],%o4
+	stx	%o4,[%i3-432]
+	ldx	[%i6+1327],%o4
+	stx	%o4,[%i3-424]
+	ldx	[%i6+1319],%o4
+	stx	%o4,[%i3-416]
+	ldx	[%i6+1311],%o4
+	stx	%o4,[%i3-408]
+	ldx	[%i6+1303],%o4
+	stx	%o4,[%i3-400]
+	ldx	[%i6+1295],%o4
+	stx	%o4,[%i3-392]
+	ldx	[%i6+1287],%o4
+	stx	%o4,[%i3-384]
+	ldx	[%i6+1279],%o4
+	stx	%o4,[%i3-376]
+	ldx	[%i6+1271],%o4
+	stx	%o4,[%i3-368]
+	ldx	[%i6+1263],%o4
+	stx	%o4,[%i3-360]
+	ldx	[%i6+1255],%o4
+	stx	%o4,[%i3-352]
+	ldx	[%i6+1247],%o4
+	stx	%o4,[%i3-344]
+	ldx	[%i6+1239],%o4
+	stx	%o4,[%i3-336]
+	ldx	[%i6+1231],%o4
+	stx	%o4,[%i3-328]
+	ldx	[%i6+1223],%o4
+	stx	%o4,[%i3-320]
+	ldx	[%i6+1215],%o4
+	stx	%o4,[%i3-312]
+	ldx	[%i6+1207],%o4
+	stx	%o4,[%i3-304]
+	ldx	[%i6+1199],%o4
+	stx	%o4,[%i3-296]
+	ldx	[%i6+1191],%o4
+	stx	%o4,[%i3-288]
+	ldx	[%i6+1183],%o4
+	stx	%o4,[%i3-280]
+	ldx	[%i6+1175],%o4
+	stx	%o4,[%i3-272]
+	ldx	[%i6+1167],%o4
+	stx	%o4,[%i3-264]
+	ldx	[%i6+1159],%o4
+	stx	%o4,[%i3-256]
+	ldx	[%i6+1151],%o4
+	stx	%o4,[%i3-248]
+	ldx	[%i6+1143],%o4
+	stx	%o4,[%i3-240]
+	ldx	[%i6+1135],%o4
+	stx	%o4,[%i3-232]
+	ldx	[%i6+1127],%o4
+	stx	%o4,[%i3-224]
+	ldx	[%i6+1119],%o4
+	stx	%o4,[%i3-216]
+	ldx	[%i6+1111],%o4
+	stx	%o4,[%i3-208]
+	ldx	[%i6+1103],%o4
+	stx	%o4,[%i3-200]
+	ldx	[%i6+1095],%o4
+	stx	%o4,[%i3-192]
+	ldx	[%i6+1087],%o4
+	stx	%o4,[%i3-184]
+	ldx	[%i6+1079],%o4
+	stx	%o4,[%i3-176]
+	ldx	[%i6+1071],%o4
+	stx	%o4,[%i3-168]
+	ldx	[%i6+1063],%o4
+	stx	%o4,[%i3-160]
+	ldx	[%i6+1055],%o4
+	stx	%o4,[%i3-152]
+	ldx	[%i6+1047],%o4
+	stx	%o4,[%i3-144]
+	ldx	[%i6+1039],%o4
+	stx	%o4,[%i3-136]
+	ldx	[%i6+1031],%o4
+	stx	%o4,[%i3-128]
+	ldx	[%i6+1023],%o4
+	stx	%o4,[%i3-120]
+	ldx	[%i6+999],%o4
+	stx	%o4,[%i3-112]
+	stx	%l0,[%i3-104]
+	stx	%l6,[%i3-96]
+	stx	%l7,[%i3-88]
+	stx	%i4,[%i3-80]
+	stx	%g2,[%i3-72]
+	stx	%g3,[%i3-64]
+	stx	%g4,[%i3-56]
+	stx	%o0,[%i3-48]
+	stx	%o1,[%i3-40]
+	stx	%o2,[%i3-32]
+	stx	%o3,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1015,%g1
+	sethi	%hh(s78K_info),%g2
+	sethi	%lm(s78K_info),%g3
+	or	%g2,%hm(s78K_info),%g2
+	or	%g3,%lo(s78K_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccDU_end:
+.Ls7aq_entry_end:
+.section .rodata
+.align 8
+ccE4_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78G_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78G_info:
+.LccE5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccE6
+	nop
+	b	.LccE7
+	nop
+.LccE5_end:
+.LccE6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccE6_end:
+.LccE7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccE4_str),%g1
+	sethi	%lm(ccE4_str),%l2
+	or	%g1,%hm(ccE4_str),%g1
+	or	%l2,%lo(ccE4_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccE7_end:
+.Ls78G_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78I_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78I_info:
+.LccE9:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccEa
+	nop
+	b	.LccEb
+	nop
+.LccE9_end:
+.LccEb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccEd
+	nop
+	b	.LccEc
+	nop
+.LccEb_end:
+.LccEd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccEa
+	nop
+.LccEd_end:
+.LccEa:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccEa_end:
+.LccEc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78G_info),%g1
+	sethi	%lm(s78G_info),%g2
+	or	%g1,%hm(s78G_info),%g1
+	or	%g2,%lo(s78G_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccEc_end:
+.Ls78I_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ar_info)+0
+	.quad	536870912000
+	.quad	64424509567
+.align 4
+s7ar_info:
+.LccEe:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccEf
+	nop
+	b	.LccEg
+	nop
+.LccEe_end:
+.LccEg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1032,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccEi
+	nop
+	b	.LccEh
+	nop
+.LccEg_end:
+.LccEi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1032,%g2
+	stx	%g2,[%i1+904]
+	b	.LccEf
+	nop
+.LccEi_end:
+.LccEf:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccEf_end:
+.LccEh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	ldx	[%g1+1008],%g1
+	stx	%o4,[%i6+1023]
+	sethi	%hh(s7aq_info),%o4
+	stx	%o4,[%i6+1015]
+	sethi	%lm(s7aq_info),%o4
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	or	%o4,%hm(s7aq_info),%o4
+	stx	%o4,[%i6+1015]
+	ldx	[%i6+1007],%o4
+	or	%o4,%lo(s7aq_info),%o4
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	sllx	%o4,32,%o4
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	or	%o5,%o4,%o5
+	stx	%o5,[%i3-1024]
+	ldx	[%i6+1911],%o4
+	stx	%o4,[%i3-1008]
+	ldx	[%i6+1903],%o4
+	stx	%o4,[%i3-1000]
+	ldx	[%i6+1895],%o4
+	stx	%o4,[%i3-992]
+	ldx	[%i6+1887],%o4
+	stx	%o4,[%i3-984]
+	ldx	[%i6+1879],%o4
+	stx	%o4,[%i3-976]
+	ldx	[%i6+1871],%o4
+	stx	%o4,[%i3-968]
+	ldx	[%i6+1863],%o4
+	stx	%o4,[%i3-960]
+	ldx	[%i6+1855],%o4
+	stx	%o4,[%i3-952]
+	ldx	[%i6+1847],%o4
+	stx	%o4,[%i3-944]
+	ldx	[%i6+1839],%o4
+	stx	%o4,[%i3-936]
+	ldx	[%i6+1831],%o4
+	stx	%o4,[%i3-928]
+	ldx	[%i6+1823],%o4
+	stx	%o4,[%i3-920]
+	ldx	[%i6+1815],%o4
+	stx	%o4,[%i3-912]
+	ldx	[%i6+1807],%o4
+	stx	%o4,[%i3-904]
+	ldx	[%i6+1799],%o4
+	stx	%o4,[%i3-896]
+	ldx	[%i6+1791],%o4
+	stx	%o4,[%i3-888]
+	ldx	[%i6+1783],%o4
+	stx	%o4,[%i3-880]
+	ldx	[%i6+1775],%o4
+	stx	%o4,[%i3-872]
+	ldx	[%i6+1767],%o4
+	stx	%o4,[%i3-864]
+	ldx	[%i6+1759],%o4
+	stx	%o4,[%i3-856]
+	ldx	[%i6+1751],%o4
+	stx	%o4,[%i3-848]
+	ldx	[%i6+1743],%o4
+	stx	%o4,[%i3-840]
+	ldx	[%i6+1735],%o4
+	stx	%o4,[%i3-832]
+	ldx	[%i6+1727],%o4
+	stx	%o4,[%i3-824]
+	ldx	[%i6+1719],%o4
+	stx	%o4,[%i3-816]
+	ldx	[%i6+1711],%o4
+	stx	%o4,[%i3-808]
+	ldx	[%i6+1703],%o4
+	stx	%o4,[%i3-800]
+	ldx	[%i6+1695],%o4
+	stx	%o4,[%i3-792]
+	ldx	[%i6+1687],%o4
+	stx	%o4,[%i3-784]
+	ldx	[%i6+1679],%o4
+	stx	%o4,[%i3-776]
+	ldx	[%i6+1671],%o4
+	stx	%o4,[%i3-768]
+	ldx	[%i6+1663],%o4
+	stx	%o4,[%i3-760]
+	ldx	[%i6+1655],%o4
+	stx	%o4,[%i3-752]
+	ldx	[%i6+1647],%o4
+	stx	%o4,[%i3-744]
+	ldx	[%i6+1639],%o4
+	stx	%o4,[%i3-736]
+	ldx	[%i6+1631],%o4
+	stx	%o4,[%i3-728]
+	ldx	[%i6+1623],%o4
+	stx	%o4,[%i3-720]
+	ldx	[%i6+1615],%o4
+	stx	%o4,[%i3-712]
+	ldx	[%i6+1607],%o4
+	stx	%o4,[%i3-704]
+	ldx	[%i6+1599],%o4
+	stx	%o4,[%i3-696]
+	ldx	[%i6+1591],%o4
+	stx	%o4,[%i3-688]
+	ldx	[%i6+1583],%o4
+	stx	%o4,[%i3-680]
+	ldx	[%i6+1575],%o4
+	stx	%o4,[%i3-672]
+	ldx	[%i6+1567],%o4
+	stx	%o4,[%i3-664]
+	ldx	[%i6+1559],%o4
+	stx	%o4,[%i3-656]
+	ldx	[%i6+1551],%o4
+	stx	%o4,[%i3-648]
+	ldx	[%i6+1543],%o4
+	stx	%o4,[%i3-640]
+	ldx	[%i6+1535],%o4
+	stx	%o4,[%i3-632]
+	ldx	[%i6+1527],%o4
+	stx	%o4,[%i3-624]
+	ldx	[%i6+1519],%o4
+	stx	%o4,[%i3-616]
+	ldx	[%i6+1511],%o4
+	stx	%o4,[%i3-608]
+	ldx	[%i6+1503],%o4
+	stx	%o4,[%i3-600]
+	ldx	[%i6+1495],%o4
+	stx	%o4,[%i3-592]
+	ldx	[%i6+1487],%o4
+	stx	%o4,[%i3-584]
+	ldx	[%i6+1479],%o4
+	stx	%o4,[%i3-576]
+	ldx	[%i6+1471],%o4
+	stx	%o4,[%i3-568]
+	ldx	[%i6+1463],%o4
+	stx	%o4,[%i3-560]
+	ldx	[%i6+1455],%o4
+	stx	%o4,[%i3-552]
+	ldx	[%i6+1447],%o4
+	stx	%o4,[%i3-544]
+	ldx	[%i6+1439],%o4
+	stx	%o4,[%i3-536]
+	ldx	[%i6+1431],%o4
+	stx	%o4,[%i3-528]
+	ldx	[%i6+1423],%o4
+	stx	%o4,[%i3-520]
+	ldx	[%i6+1415],%o4
+	stx	%o4,[%i3-512]
+	ldx	[%i6+1407],%o4
+	stx	%o4,[%i3-504]
+	ldx	[%i6+1399],%o4
+	stx	%o4,[%i3-496]
+	ldx	[%i6+1391],%o4
+	stx	%o4,[%i3-488]
+	ldx	[%i6+1383],%o4
+	stx	%o4,[%i3-480]
+	ldx	[%i6+1375],%o4
+	stx	%o4,[%i3-472]
+	ldx	[%i6+1367],%o4
+	stx	%o4,[%i3-464]
+	ldx	[%i6+1359],%o4
+	stx	%o4,[%i3-456]
+	ldx	[%i6+1351],%o4
+	stx	%o4,[%i3-448]
+	ldx	[%i6+1343],%o4
+	stx	%o4,[%i3-440]
+	ldx	[%i6+1335],%o4
+	stx	%o4,[%i3-432]
+	ldx	[%i6+1327],%o4
+	stx	%o4,[%i3-424]
+	ldx	[%i6+1319],%o4
+	stx	%o4,[%i3-416]
+	ldx	[%i6+1311],%o4
+	stx	%o4,[%i3-408]
+	ldx	[%i6+1303],%o4
+	stx	%o4,[%i3-400]
+	ldx	[%i6+1295],%o4
+	stx	%o4,[%i3-392]
+	ldx	[%i6+1287],%o4
+	stx	%o4,[%i3-384]
+	ldx	[%i6+1279],%o4
+	stx	%o4,[%i3-376]
+	ldx	[%i6+1271],%o4
+	stx	%o4,[%i3-368]
+	ldx	[%i6+1263],%o4
+	stx	%o4,[%i3-360]
+	ldx	[%i6+1255],%o4
+	stx	%o4,[%i3-352]
+	ldx	[%i6+1247],%o4
+	stx	%o4,[%i3-344]
+	ldx	[%i6+1239],%o4
+	stx	%o4,[%i3-336]
+	ldx	[%i6+1231],%o4
+	stx	%o4,[%i3-328]
+	ldx	[%i6+1223],%o4
+	stx	%o4,[%i3-320]
+	ldx	[%i6+1215],%o4
+	stx	%o4,[%i3-312]
+	ldx	[%i6+1207],%o4
+	stx	%o4,[%i3-304]
+	ldx	[%i6+1199],%o4
+	stx	%o4,[%i3-296]
+	ldx	[%i6+1191],%o4
+	stx	%o4,[%i3-288]
+	ldx	[%i6+1183],%o4
+	stx	%o4,[%i3-280]
+	ldx	[%i6+1175],%o4
+	stx	%o4,[%i3-272]
+	ldx	[%i6+1167],%o4
+	stx	%o4,[%i3-264]
+	ldx	[%i6+1159],%o4
+	stx	%o4,[%i3-256]
+	ldx	[%i6+1151],%o4
+	stx	%o4,[%i3-248]
+	ldx	[%i6+1143],%o4
+	stx	%o4,[%i3-240]
+	ldx	[%i6+1135],%o4
+	stx	%o4,[%i3-232]
+	ldx	[%i6+1127],%o4
+	stx	%o4,[%i3-224]
+	ldx	[%i6+1119],%o4
+	stx	%o4,[%i3-216]
+	ldx	[%i6+1111],%o4
+	stx	%o4,[%i3-208]
+	ldx	[%i6+1103],%o4
+	stx	%o4,[%i3-200]
+	ldx	[%i6+1095],%o4
+	stx	%o4,[%i3-192]
+	ldx	[%i6+1087],%o4
+	stx	%o4,[%i3-184]
+	ldx	[%i6+1079],%o4
+	stx	%o4,[%i3-176]
+	ldx	[%i6+1071],%o4
+	stx	%o4,[%i3-168]
+	ldx	[%i6+1063],%o4
+	stx	%o4,[%i3-160]
+	ldx	[%i6+1055],%o4
+	stx	%o4,[%i3-152]
+	ldx	[%i6+1047],%o4
+	stx	%o4,[%i3-144]
+	ldx	[%i6+1039],%o4
+	stx	%o4,[%i3-136]
+	ldx	[%i6+1031],%o4
+	stx	%o4,[%i3-128]
+	ldx	[%i6+1023],%o4
+	stx	%o4,[%i3-120]
+	ldx	[%i6+999],%o4
+	stx	%o4,[%i3-112]
+	stx	%l0,[%i3-104]
+	stx	%l6,[%i3-96]
+	stx	%l7,[%i3-88]
+	stx	%i4,[%i3-80]
+	stx	%g2,[%i3-72]
+	stx	%g3,[%i3-64]
+	stx	%g4,[%i3-56]
+	stx	%o0,[%i3-48]
+	stx	%o1,[%i3-40]
+	stx	%o2,[%i3-32]
+	stx	%o3,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1024,%g1
+	sethi	%hh(s78I_info),%g2
+	sethi	%lm(s78I_info),%g3
+	or	%g2,%hm(s78I_info),%g2
+	or	%g3,%lo(s78I_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccEh_end:
+.Ls7ar_entry_end:
+.section .rodata
+.align 8
+ccEr_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	84
+	.byte	65
+	.byte	71
+	.byte	95
+	.byte	66
+	.byte	73
+	.byte	84
+	.byte	83
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78D_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78D_info:
+.LccEs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccEt
+	nop
+	b	.LccEu
+	nop
+.LccEs_end:
+.LccEt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccEt_end:
+.LccEu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccEr_str),%g1
+	sethi	%lm(ccEr_str),%l2
+	or	%g1,%hm(ccEr_str),%g1
+	or	%l2,%lo(ccEr_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccEu_end:
+.Ls78D_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78F_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78F_info:
+.LccEw:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccEx
+	nop
+	b	.LccEy
+	nop
+.LccEw_end:
+.LccEy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccEA
+	nop
+	b	.LccEz
+	nop
+.LccEy_end:
+.LccEA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccEx
+	nop
+.LccEA_end:
+.LccEx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccEx_end:
+.LccEz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78D_info),%g1
+	sethi	%lm(s78D_info),%g2
+	or	%g1,%hm(s78D_info),%g1
+	or	%g2,%lo(s78D_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccEz_end:
+.Ls78F_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7as_info)+0
+	.quad	536870912000
+	.quad	64424509567
+.align 4
+s7as_info:
+.LccEB:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccEC
+	nop
+	b	.LccED
+	nop
+.LccEB_end:
+.LccED:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1032,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccEF
+	nop
+	b	.LccEE
+	nop
+.LccED_end:
+.LccEF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1032,%g2
+	stx	%g2,[%i1+904]
+	b	.LccEC
+	nop
+.LccEF_end:
+.LccEC:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccEC_end:
+.LccEE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	stx	%o3,[%i6+1031]
+	ldx	[%g1+1000],%o3
+	ldx	[%g1+1008],%g1
+	stx	%o4,[%i6+1023]
+	sethi	%hh(s7ar_info),%o4
+	stx	%o4,[%i6+1015]
+	sethi	%lm(s7ar_info),%o4
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	or	%o4,%hm(s7ar_info),%o4
+	stx	%o4,[%i6+1015]
+	ldx	[%i6+1007],%o4
+	or	%o4,%lo(s7ar_info),%o4
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	sllx	%o4,32,%o4
+	stx	%o5,[%i6+999]
+	ldx	[%i6+1007],%o5
+	or	%o5,%o4,%o5
+	stx	%o5,[%i3-1024]
+	ldx	[%i6+1911],%o4
+	stx	%o4,[%i3-1008]
+	ldx	[%i6+1903],%o4
+	stx	%o4,[%i3-1000]
+	ldx	[%i6+1895],%o4
+	stx	%o4,[%i3-992]
+	ldx	[%i6+1887],%o4
+	stx	%o4,[%i3-984]
+	ldx	[%i6+1879],%o4
+	stx	%o4,[%i3-976]
+	ldx	[%i6+1871],%o4
+	stx	%o4,[%i3-968]
+	ldx	[%i6+1863],%o4
+	stx	%o4,[%i3-960]
+	ldx	[%i6+1855],%o4
+	stx	%o4,[%i3-952]
+	ldx	[%i6+1847],%o4
+	stx	%o4,[%i3-944]
+	ldx	[%i6+1839],%o4
+	stx	%o4,[%i3-936]
+	ldx	[%i6+1831],%o4
+	stx	%o4,[%i3-928]
+	ldx	[%i6+1823],%o4
+	stx	%o4,[%i3-920]
+	ldx	[%i6+1815],%o4
+	stx	%o4,[%i3-912]
+	ldx	[%i6+1807],%o4
+	stx	%o4,[%i3-904]
+	ldx	[%i6+1799],%o4
+	stx	%o4,[%i3-896]
+	ldx	[%i6+1791],%o4
+	stx	%o4,[%i3-888]
+	ldx	[%i6+1783],%o4
+	stx	%o4,[%i3-880]
+	ldx	[%i6+1775],%o4
+	stx	%o4,[%i3-872]
+	ldx	[%i6+1767],%o4
+	stx	%o4,[%i3-864]
+	ldx	[%i6+1759],%o4
+	stx	%o4,[%i3-856]
+	ldx	[%i6+1751],%o4
+	stx	%o4,[%i3-848]
+	ldx	[%i6+1743],%o4
+	stx	%o4,[%i3-840]
+	ldx	[%i6+1735],%o4
+	stx	%o4,[%i3-832]
+	ldx	[%i6+1727],%o4
+	stx	%o4,[%i3-824]
+	ldx	[%i6+1719],%o4
+	stx	%o4,[%i3-816]
+	ldx	[%i6+1711],%o4
+	stx	%o4,[%i3-808]
+	ldx	[%i6+1703],%o4
+	stx	%o4,[%i3-800]
+	ldx	[%i6+1695],%o4
+	stx	%o4,[%i3-792]
+	ldx	[%i6+1687],%o4
+	stx	%o4,[%i3-784]
+	ldx	[%i6+1679],%o4
+	stx	%o4,[%i3-776]
+	ldx	[%i6+1671],%o4
+	stx	%o4,[%i3-768]
+	ldx	[%i6+1663],%o4
+	stx	%o4,[%i3-760]
+	ldx	[%i6+1655],%o4
+	stx	%o4,[%i3-752]
+	ldx	[%i6+1647],%o4
+	stx	%o4,[%i3-744]
+	ldx	[%i6+1639],%o4
+	stx	%o4,[%i3-736]
+	ldx	[%i6+1631],%o4
+	stx	%o4,[%i3-728]
+	ldx	[%i6+1623],%o4
+	stx	%o4,[%i3-720]
+	ldx	[%i6+1615],%o4
+	stx	%o4,[%i3-712]
+	ldx	[%i6+1607],%o4
+	stx	%o4,[%i3-704]
+	ldx	[%i6+1599],%o4
+	stx	%o4,[%i3-696]
+	ldx	[%i6+1591],%o4
+	stx	%o4,[%i3-688]
+	ldx	[%i6+1583],%o4
+	stx	%o4,[%i3-680]
+	ldx	[%i6+1575],%o4
+	stx	%o4,[%i3-672]
+	ldx	[%i6+1567],%o4
+	stx	%o4,[%i3-664]
+	ldx	[%i6+1559],%o4
+	stx	%o4,[%i3-656]
+	ldx	[%i6+1551],%o4
+	stx	%o4,[%i3-648]
+	ldx	[%i6+1543],%o4
+	stx	%o4,[%i3-640]
+	ldx	[%i6+1535],%o4
+	stx	%o4,[%i3-632]
+	ldx	[%i6+1527],%o4
+	stx	%o4,[%i3-624]
+	ldx	[%i6+1519],%o4
+	stx	%o4,[%i3-616]
+	ldx	[%i6+1511],%o4
+	stx	%o4,[%i3-608]
+	ldx	[%i6+1503],%o4
+	stx	%o4,[%i3-600]
+	ldx	[%i6+1495],%o4
+	stx	%o4,[%i3-592]
+	ldx	[%i6+1487],%o4
+	stx	%o4,[%i3-584]
+	ldx	[%i6+1479],%o4
+	stx	%o4,[%i3-576]
+	ldx	[%i6+1471],%o4
+	stx	%o4,[%i3-568]
+	ldx	[%i6+1463],%o4
+	stx	%o4,[%i3-560]
+	ldx	[%i6+1455],%o4
+	stx	%o4,[%i3-552]
+	ldx	[%i6+1447],%o4
+	stx	%o4,[%i3-544]
+	ldx	[%i6+1439],%o4
+	stx	%o4,[%i3-536]
+	ldx	[%i6+1431],%o4
+	stx	%o4,[%i3-528]
+	ldx	[%i6+1423],%o4
+	stx	%o4,[%i3-520]
+	ldx	[%i6+1415],%o4
+	stx	%o4,[%i3-512]
+	ldx	[%i6+1407],%o4
+	stx	%o4,[%i3-504]
+	ldx	[%i6+1399],%o4
+	stx	%o4,[%i3-496]
+	ldx	[%i6+1391],%o4
+	stx	%o4,[%i3-488]
+	ldx	[%i6+1383],%o4
+	stx	%o4,[%i3-480]
+	ldx	[%i6+1375],%o4
+	stx	%o4,[%i3-472]
+	ldx	[%i6+1367],%o4
+	stx	%o4,[%i3-464]
+	ldx	[%i6+1359],%o4
+	stx	%o4,[%i3-456]
+	ldx	[%i6+1351],%o4
+	stx	%o4,[%i3-448]
+	ldx	[%i6+1343],%o4
+	stx	%o4,[%i3-440]
+	ldx	[%i6+1335],%o4
+	stx	%o4,[%i3-432]
+	ldx	[%i6+1327],%o4
+	stx	%o4,[%i3-424]
+	ldx	[%i6+1319],%o4
+	stx	%o4,[%i3-416]
+	ldx	[%i6+1311],%o4
+	stx	%o4,[%i3-408]
+	ldx	[%i6+1303],%o4
+	stx	%o4,[%i3-400]
+	ldx	[%i6+1295],%o4
+	stx	%o4,[%i3-392]
+	ldx	[%i6+1287],%o4
+	stx	%o4,[%i3-384]
+	ldx	[%i6+1279],%o4
+	stx	%o4,[%i3-376]
+	ldx	[%i6+1271],%o4
+	stx	%o4,[%i3-368]
+	ldx	[%i6+1263],%o4
+	stx	%o4,[%i3-360]
+	ldx	[%i6+1255],%o4
+	stx	%o4,[%i3-352]
+	ldx	[%i6+1247],%o4
+	stx	%o4,[%i3-344]
+	ldx	[%i6+1239],%o4
+	stx	%o4,[%i3-336]
+	ldx	[%i6+1231],%o4
+	stx	%o4,[%i3-328]
+	ldx	[%i6+1223],%o4
+	stx	%o4,[%i3-320]
+	ldx	[%i6+1215],%o4
+	stx	%o4,[%i3-312]
+	ldx	[%i6+1207],%o4
+	stx	%o4,[%i3-304]
+	ldx	[%i6+1199],%o4
+	stx	%o4,[%i3-296]
+	ldx	[%i6+1191],%o4
+	stx	%o4,[%i3-288]
+	ldx	[%i6+1183],%o4
+	stx	%o4,[%i3-280]
+	ldx	[%i6+1175],%o4
+	stx	%o4,[%i3-272]
+	ldx	[%i6+1167],%o4
+	stx	%o4,[%i3-264]
+	ldx	[%i6+1159],%o4
+	stx	%o4,[%i3-256]
+	ldx	[%i6+1151],%o4
+	stx	%o4,[%i3-248]
+	ldx	[%i6+1143],%o4
+	stx	%o4,[%i3-240]
+	ldx	[%i6+1135],%o4
+	stx	%o4,[%i3-232]
+	ldx	[%i6+1127],%o4
+	stx	%o4,[%i3-224]
+	ldx	[%i6+1119],%o4
+	stx	%o4,[%i3-216]
+	ldx	[%i6+1111],%o4
+	stx	%o4,[%i3-208]
+	ldx	[%i6+1103],%o4
+	stx	%o4,[%i3-200]
+	ldx	[%i6+1095],%o4
+	stx	%o4,[%i3-192]
+	ldx	[%i6+1087],%o4
+	stx	%o4,[%i3-184]
+	ldx	[%i6+1079],%o4
+	stx	%o4,[%i3-176]
+	ldx	[%i6+1071],%o4
+	stx	%o4,[%i3-168]
+	ldx	[%i6+1063],%o4
+	stx	%o4,[%i3-160]
+	ldx	[%i6+1055],%o4
+	stx	%o4,[%i3-152]
+	ldx	[%i6+1047],%o4
+	stx	%o4,[%i3-144]
+	ldx	[%i6+1039],%o4
+	stx	%o4,[%i3-136]
+	ldx	[%i6+1031],%o4
+	stx	%o4,[%i3-128]
+	ldx	[%i6+1023],%o4
+	stx	%o4,[%i3-120]
+	ldx	[%i6+999],%o4
+	stx	%o4,[%i3-112]
+	stx	%l0,[%i3-104]
+	stx	%l6,[%i3-96]
+	stx	%l7,[%i3-88]
+	stx	%i4,[%i3-80]
+	stx	%g2,[%i3-72]
+	stx	%g3,[%i3-64]
+	stx	%g4,[%i3-56]
+	stx	%o0,[%i3-48]
+	stx	%o1,[%i3-40]
+	stx	%o2,[%i3-32]
+	stx	%o3,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1024,%g1
+	sethi	%hh(s78F_info),%g2
+	sethi	%lm(s78F_info),%g3
+	or	%g2,%hm(s78F_info),%g2
+	or	%g3,%lo(s78F_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccEE_end:
+.Ls7as_entry_end:
+.section .rodata
+.align 8
+ccEO_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78A_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78A_info:
+.LccEP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccEQ
+	nop
+	b	.LccER
+	nop
+.LccEP_end:
+.LccEQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccEQ_end:
+.LccER:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccEO_str),%g1
+	sethi	%lm(ccEO_str),%l2
+	or	%g1,%hm(ccEO_str),%g1
+	or	%l2,%lo(ccEO_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccER_end:
+.Ls78A_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78C_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78C_info:
+.LccET:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccEU
+	nop
+	b	.LccEV
+	nop
+.LccET_end:
+.LccEV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccEX
+	nop
+	b	.LccEW
+	nop
+.LccEV_end:
+.LccEX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccEU
+	nop
+.LccEX_end:
+.LccEU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccEU_end:
+.LccEW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78A_info),%g1
+	sethi	%lm(s78A_info),%g2
+	or	%g1,%hm(s78A_info),%g1
+	or	%g2,%lo(s78A_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccEW_end:
+.Ls78C_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7at_info)+0
+	.quad	21474836481
+	.quad	532575944704
+	.quad	34359738495
+.align 4
+s7at_info:
+.LccEY:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccEZ
+	nop
+	b	.LccF0
+	nop
+.LccEY_end:
+.LccF0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1032,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccF2
+	nop
+	b	.LccF1
+	nop
+.LccF0_end:
+.LccF2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1032,%g3
+	stx	%g3,[%i1+904]
+	b	.LccEZ
+	nop
+.LccF2_end:
+.LccEZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccEZ_end:
+.LccF1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	stx	%o0,[%i6+1031]
+	ldx	[%g2+983],%o0
+	ldx	[%g2+991],%g2
+	stx	%o1,[%i6+1023]
+	sethi	%hh(s7as_info),%o1
+	stx	%o1,[%i6+1015]
+	sethi	%lm(s7as_info),%o1
+	stx	%o1,[%i6+1007]
+	ldx	[%i6+1015],%o1
+	or	%o1,%hm(s7as_info),%o1
+	stx	%o1,[%i6+1015]
+	ldx	[%i6+1007],%o1
+	or	%o1,%lo(s7as_info),%o1
+	stx	%o1,[%i6+1007]
+	ldx	[%i6+1015],%o1
+	sllx	%o1,32,%o1
+	stx	%o2,[%i6+999]
+	ldx	[%i6+1007],%o2
+	or	%o2,%o1,%o2
+	stx	%o2,[%i3-1024]
+	ldx	[%i6+1911],%o1
+	stx	%o1,[%i3-1008]
+	ldx	[%i6+1903],%o1
+	stx	%o1,[%i3-1000]
+	ldx	[%i6+1895],%o1
+	stx	%o1,[%i3-992]
+	ldx	[%i6+1887],%o1
+	stx	%o1,[%i3-984]
+	ldx	[%i6+1879],%o1
+	stx	%o1,[%i3-976]
+	ldx	[%i6+1871],%o1
+	stx	%o1,[%i3-968]
+	ldx	[%i6+1863],%o1
+	stx	%o1,[%i3-960]
+	ldx	[%i6+1855],%o1
+	stx	%o1,[%i3-952]
+	ldx	[%i6+1847],%o1
+	stx	%o1,[%i3-944]
+	ldx	[%i6+1839],%o1
+	stx	%o1,[%i3-936]
+	ldx	[%i6+1831],%o1
+	stx	%o1,[%i3-928]
+	ldx	[%i6+1823],%o1
+	stx	%o1,[%i3-920]
+	ldx	[%i6+1815],%o1
+	stx	%o1,[%i3-912]
+	ldx	[%i6+1807],%o1
+	stx	%o1,[%i3-904]
+	ldx	[%i6+1799],%o1
+	stx	%o1,[%i3-896]
+	ldx	[%i6+1791],%o1
+	stx	%o1,[%i3-888]
+	ldx	[%i6+1783],%o1
+	stx	%o1,[%i3-880]
+	ldx	[%i6+1775],%o1
+	stx	%o1,[%i3-872]
+	ldx	[%i6+1767],%o1
+	stx	%o1,[%i3-864]
+	ldx	[%i6+1759],%o1
+	stx	%o1,[%i3-856]
+	ldx	[%i6+1751],%o1
+	stx	%o1,[%i3-848]
+	ldx	[%i6+1743],%o1
+	stx	%o1,[%i3-840]
+	ldx	[%i6+1735],%o1
+	stx	%o1,[%i3-832]
+	ldx	[%i6+1727],%o1
+	stx	%o1,[%i3-824]
+	ldx	[%i6+1719],%o1
+	stx	%o1,[%i3-816]
+	ldx	[%i6+1711],%o1
+	stx	%o1,[%i3-808]
+	ldx	[%i6+1703],%o1
+	stx	%o1,[%i3-800]
+	ldx	[%i6+1695],%o1
+	stx	%o1,[%i3-792]
+	ldx	[%i6+1687],%o1
+	stx	%o1,[%i3-784]
+	ldx	[%i6+1679],%o1
+	stx	%o1,[%i3-776]
+	ldx	[%i6+1671],%o1
+	stx	%o1,[%i3-768]
+	ldx	[%i6+1663],%o1
+	stx	%o1,[%i3-760]
+	ldx	[%i6+1655],%o1
+	stx	%o1,[%i3-752]
+	ldx	[%i6+1647],%o1
+	stx	%o1,[%i3-744]
+	ldx	[%i6+1639],%o1
+	stx	%o1,[%i3-736]
+	ldx	[%i6+1631],%o1
+	stx	%o1,[%i3-728]
+	ldx	[%i6+1623],%o1
+	stx	%o1,[%i3-720]
+	ldx	[%i6+1615],%o1
+	stx	%o1,[%i3-712]
+	ldx	[%i6+1607],%o1
+	stx	%o1,[%i3-704]
+	ldx	[%i6+1599],%o1
+	stx	%o1,[%i3-696]
+	ldx	[%i6+1591],%o1
+	stx	%o1,[%i3-688]
+	ldx	[%i6+1583],%o1
+	stx	%o1,[%i3-680]
+	ldx	[%i6+1575],%o1
+	stx	%o1,[%i3-672]
+	ldx	[%i6+1567],%o1
+	stx	%o1,[%i3-664]
+	ldx	[%i6+1559],%o1
+	stx	%o1,[%i3-656]
+	ldx	[%i6+1551],%o1
+	stx	%o1,[%i3-648]
+	ldx	[%i6+1543],%o1
+	stx	%o1,[%i3-640]
+	ldx	[%i6+1535],%o1
+	stx	%o1,[%i3-632]
+	ldx	[%i6+1527],%o1
+	stx	%o1,[%i3-624]
+	ldx	[%i6+1519],%o1
+	stx	%o1,[%i3-616]
+	ldx	[%i6+1511],%o1
+	stx	%o1,[%i3-608]
+	ldx	[%i6+1503],%o1
+	stx	%o1,[%i3-600]
+	ldx	[%i6+1495],%o1
+	stx	%o1,[%i3-592]
+	ldx	[%i6+1487],%o1
+	stx	%o1,[%i3-584]
+	ldx	[%i6+1479],%o1
+	stx	%o1,[%i3-576]
+	ldx	[%i6+1471],%o1
+	stx	%o1,[%i3-568]
+	ldx	[%i6+1463],%o1
+	stx	%o1,[%i3-560]
+	ldx	[%i6+1455],%o1
+	stx	%o1,[%i3-552]
+	ldx	[%i6+1447],%o1
+	stx	%o1,[%i3-544]
+	ldx	[%i6+1439],%o1
+	stx	%o1,[%i3-536]
+	ldx	[%i6+1431],%o1
+	stx	%o1,[%i3-528]
+	ldx	[%i6+1423],%o1
+	stx	%o1,[%i3-520]
+	ldx	[%i6+1415],%o1
+	stx	%o1,[%i3-512]
+	ldx	[%i6+1407],%o1
+	stx	%o1,[%i3-504]
+	ldx	[%i6+1399],%o1
+	stx	%o1,[%i3-496]
+	ldx	[%i6+1391],%o1
+	stx	%o1,[%i3-488]
+	ldx	[%i6+1383],%o1
+	stx	%o1,[%i3-480]
+	ldx	[%i6+1375],%o1
+	stx	%o1,[%i3-472]
+	ldx	[%i6+1367],%o1
+	stx	%o1,[%i3-464]
+	ldx	[%i6+1359],%o1
+	stx	%o1,[%i3-456]
+	ldx	[%i6+1351],%o1
+	stx	%o1,[%i3-448]
+	ldx	[%i6+1343],%o1
+	stx	%o1,[%i3-440]
+	ldx	[%i6+1335],%o1
+	stx	%o1,[%i3-432]
+	ldx	[%i6+1327],%o1
+	stx	%o1,[%i3-424]
+	ldx	[%i6+1319],%o1
+	stx	%o1,[%i3-416]
+	ldx	[%i6+1311],%o1
+	stx	%o1,[%i3-408]
+	ldx	[%i6+1303],%o1
+	stx	%o1,[%i3-400]
+	ldx	[%i6+1295],%o1
+	stx	%o1,[%i3-392]
+	ldx	[%i6+1287],%o1
+	stx	%o1,[%i3-384]
+	ldx	[%i6+1279],%o1
+	stx	%o1,[%i3-376]
+	ldx	[%i6+1271],%o1
+	stx	%o1,[%i3-368]
+	ldx	[%i6+1263],%o1
+	stx	%o1,[%i3-360]
+	ldx	[%i6+1255],%o1
+	stx	%o1,[%i3-352]
+	ldx	[%i6+1247],%o1
+	stx	%o1,[%i3-344]
+	ldx	[%i6+1239],%o1
+	stx	%o1,[%i3-336]
+	ldx	[%i6+1231],%o1
+	stx	%o1,[%i3-328]
+	ldx	[%i6+1223],%o1
+	stx	%o1,[%i3-320]
+	ldx	[%i6+1215],%o1
+	stx	%o1,[%i3-312]
+	ldx	[%i6+1207],%o1
+	stx	%o1,[%i3-304]
+	ldx	[%i6+1199],%o1
+	stx	%o1,[%i3-296]
+	ldx	[%i6+1191],%o1
+	stx	%o1,[%i3-288]
+	ldx	[%i6+1183],%o1
+	stx	%o1,[%i3-280]
+	ldx	[%i6+1175],%o1
+	stx	%o1,[%i3-272]
+	ldx	[%i6+1167],%o1
+	stx	%o1,[%i3-264]
+	ldx	[%i6+1159],%o1
+	stx	%o1,[%i3-256]
+	ldx	[%i6+1151],%o1
+	stx	%o1,[%i3-248]
+	ldx	[%i6+1143],%o1
+	stx	%o1,[%i3-240]
+	ldx	[%i6+1135],%o1
+	stx	%o1,[%i3-232]
+	ldx	[%i6+1127],%o1
+	stx	%o1,[%i3-224]
+	ldx	[%i6+1119],%o1
+	stx	%o1,[%i3-216]
+	ldx	[%i6+1111],%o1
+	stx	%o1,[%i3-208]
+	ldx	[%i6+1103],%o1
+	stx	%o1,[%i3-200]
+	ldx	[%i6+1095],%o1
+	stx	%o1,[%i3-192]
+	ldx	[%i6+1087],%o1
+	stx	%o1,[%i3-184]
+	ldx	[%i6+1079],%o1
+	stx	%o1,[%i3-176]
+	ldx	[%i6+1071],%o1
+	stx	%o1,[%i3-168]
+	ldx	[%i6+1063],%o1
+	stx	%o1,[%i3-160]
+	ldx	[%i6+1055],%o1
+	stx	%o1,[%i3-152]
+	ldx	[%i6+1047],%o1
+	stx	%o1,[%i3-144]
+	ldx	[%i6+1039],%o1
+	stx	%o1,[%i3-136]
+	ldx	[%i6+1031],%o1
+	stx	%o1,[%i3-128]
+	ldx	[%i6+1023],%o1
+	stx	%o1,[%i3-120]
+	ldx	[%i6+999],%o1
+	stx	%o1,[%i3-112]
+	stx	%o3,[%i3-104]
+	stx	%o4,[%i3-96]
+	stx	%o5,[%i3-88]
+	stx	%l0,[%i3-80]
+	stx	%l6,[%i3-72]
+	stx	%l7,[%i3-64]
+	stx	%i4,[%i3-56]
+	stx	%g3,[%i3-48]
+	stx	%g4,[%i3-40]
+	stx	%o0,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1024,%g1
+	sethi	%hh(s78C_info),%g2
+	sethi	%lm(s78C_info),%g3
+	or	%g2,%hm(s78C_info),%g2
+	or	%g3,%lo(s78C_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccF1_end:
+.Ls7at_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78x_info)+40
+	.quad	0
+	.quad	64424509441
+.align 4
+s78x_info:
+.LccFb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFc
+	nop
+	b	.LccFd
+	nop
+.LccFb_end:
+.LccFc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFc_end:
+.LccFd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInt_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInt_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInt_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInt_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccFd_end:
+.Ls78x_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78y_info)+32
+	.quad	0
+	.quad	64424509443
+.align 4
+s78y_info:
+.LccFe:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFf
+	nop
+	b	.LccFg
+	nop
+.LccFe_end:
+.LccFg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccFi
+	nop
+	b	.LccFh
+	nop
+.LccFg_end:
+.LccFi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccFf
+	nop
+.LccFi_end:
+.LccFf:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFf_end:
+.LccFh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78x_info),%g1
+	sethi	%lm(s78x_info),%g2
+	or	%g1,%hm(s78x_info),%g1
+	or	%g2,%lo(s78x_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccFh_end:
+.Ls78y_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7au_info)+0
+	.quad	532575944704
+	.quad	64424509567
+.align 4
+s7au_info:
+.LccFj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFk
+	nop
+	b	.LccFl
+	nop
+.LccFj_end:
+.LccFl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1016,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccFn
+	nop
+	b	.LccFm
+	nop
+.LccFl_end:
+.LccFn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1016,%g2
+	stx	%g2,[%i1+904]
+	b	.LccFk
+	nop
+.LccFn_end:
+.LccFk:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFk_end:
+.LccFm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	ldx	[%g1+1000],%g1
+	stx	%o3,[%i6+1031]
+	sethi	%hh(s7at_info),%o3
+	stx	%o3,[%i6+1023]
+	sethi	%lm(s7at_info),%o3
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	or	%o3,%hm(s7at_info),%o3
+	stx	%o3,[%i6+1023]
+	ldx	[%i6+1015],%o3
+	or	%o3,%lo(s7at_info),%o3
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	sllx	%o3,32,%o3
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	or	%o4,%o3,%o4
+	stx	%o4,[%i3-1008]
+	ldx	[%i6+1911],%o3
+	stx	%o3,[%i3-1000]
+	ldx	[%i6+1903],%o3
+	stx	%o3,[%i3-992]
+	ldx	[%i6+1895],%o3
+	stx	%o3,[%i3-984]
+	ldx	[%i6+1887],%o3
+	stx	%o3,[%i3-976]
+	ldx	[%i6+1879],%o3
+	stx	%o3,[%i3-968]
+	ldx	[%i6+1871],%o3
+	stx	%o3,[%i3-960]
+	ldx	[%i6+1863],%o3
+	stx	%o3,[%i3-952]
+	ldx	[%i6+1855],%o3
+	stx	%o3,[%i3-944]
+	ldx	[%i6+1847],%o3
+	stx	%o3,[%i3-936]
+	ldx	[%i6+1839],%o3
+	stx	%o3,[%i3-928]
+	ldx	[%i6+1831],%o3
+	stx	%o3,[%i3-920]
+	ldx	[%i6+1823],%o3
+	stx	%o3,[%i3-912]
+	ldx	[%i6+1815],%o3
+	stx	%o3,[%i3-904]
+	ldx	[%i6+1807],%o3
+	stx	%o3,[%i3-896]
+	ldx	[%i6+1799],%o3
+	stx	%o3,[%i3-888]
+	ldx	[%i6+1791],%o3
+	stx	%o3,[%i3-880]
+	ldx	[%i6+1783],%o3
+	stx	%o3,[%i3-872]
+	ldx	[%i6+1775],%o3
+	stx	%o3,[%i3-864]
+	ldx	[%i6+1767],%o3
+	stx	%o3,[%i3-856]
+	ldx	[%i6+1759],%o3
+	stx	%o3,[%i3-848]
+	ldx	[%i6+1751],%o3
+	stx	%o3,[%i3-840]
+	ldx	[%i6+1743],%o3
+	stx	%o3,[%i3-832]
+	ldx	[%i6+1735],%o3
+	stx	%o3,[%i3-824]
+	ldx	[%i6+1727],%o3
+	stx	%o3,[%i3-816]
+	ldx	[%i6+1719],%o3
+	stx	%o3,[%i3-808]
+	ldx	[%i6+1711],%o3
+	stx	%o3,[%i3-800]
+	ldx	[%i6+1703],%o3
+	stx	%o3,[%i3-792]
+	ldx	[%i6+1695],%o3
+	stx	%o3,[%i3-784]
+	ldx	[%i6+1687],%o3
+	stx	%o3,[%i3-776]
+	ldx	[%i6+1679],%o3
+	stx	%o3,[%i3-768]
+	ldx	[%i6+1671],%o3
+	stx	%o3,[%i3-760]
+	ldx	[%i6+1663],%o3
+	stx	%o3,[%i3-752]
+	ldx	[%i6+1655],%o3
+	stx	%o3,[%i3-744]
+	ldx	[%i6+1647],%o3
+	stx	%o3,[%i3-736]
+	ldx	[%i6+1639],%o3
+	stx	%o3,[%i3-728]
+	ldx	[%i6+1631],%o3
+	stx	%o3,[%i3-720]
+	ldx	[%i6+1623],%o3
+	stx	%o3,[%i3-712]
+	ldx	[%i6+1615],%o3
+	stx	%o3,[%i3-704]
+	ldx	[%i6+1607],%o3
+	stx	%o3,[%i3-696]
+	ldx	[%i6+1599],%o3
+	stx	%o3,[%i3-688]
+	ldx	[%i6+1591],%o3
+	stx	%o3,[%i3-680]
+	ldx	[%i6+1583],%o3
+	stx	%o3,[%i3-672]
+	ldx	[%i6+1575],%o3
+	stx	%o3,[%i3-664]
+	ldx	[%i6+1567],%o3
+	stx	%o3,[%i3-656]
+	ldx	[%i6+1559],%o3
+	stx	%o3,[%i3-648]
+	ldx	[%i6+1551],%o3
+	stx	%o3,[%i3-640]
+	ldx	[%i6+1543],%o3
+	stx	%o3,[%i3-632]
+	ldx	[%i6+1535],%o3
+	stx	%o3,[%i3-624]
+	ldx	[%i6+1527],%o3
+	stx	%o3,[%i3-616]
+	ldx	[%i6+1519],%o3
+	stx	%o3,[%i3-608]
+	ldx	[%i6+1511],%o3
+	stx	%o3,[%i3-600]
+	ldx	[%i6+1503],%o3
+	stx	%o3,[%i3-592]
+	ldx	[%i6+1495],%o3
+	stx	%o3,[%i3-584]
+	ldx	[%i6+1487],%o3
+	stx	%o3,[%i3-576]
+	ldx	[%i6+1479],%o3
+	stx	%o3,[%i3-568]
+	ldx	[%i6+1471],%o3
+	stx	%o3,[%i3-560]
+	ldx	[%i6+1463],%o3
+	stx	%o3,[%i3-552]
+	ldx	[%i6+1455],%o3
+	stx	%o3,[%i3-544]
+	ldx	[%i6+1447],%o3
+	stx	%o3,[%i3-536]
+	ldx	[%i6+1439],%o3
+	stx	%o3,[%i3-528]
+	ldx	[%i6+1431],%o3
+	stx	%o3,[%i3-520]
+	ldx	[%i6+1423],%o3
+	stx	%o3,[%i3-512]
+	ldx	[%i6+1415],%o3
+	stx	%o3,[%i3-504]
+	ldx	[%i6+1407],%o3
+	stx	%o3,[%i3-496]
+	ldx	[%i6+1399],%o3
+	stx	%o3,[%i3-488]
+	ldx	[%i6+1391],%o3
+	stx	%o3,[%i3-480]
+	ldx	[%i6+1383],%o3
+	stx	%o3,[%i3-472]
+	ldx	[%i6+1375],%o3
+	stx	%o3,[%i3-464]
+	ldx	[%i6+1367],%o3
+	stx	%o3,[%i3-456]
+	ldx	[%i6+1359],%o3
+	stx	%o3,[%i3-448]
+	ldx	[%i6+1351],%o3
+	stx	%o3,[%i3-440]
+	ldx	[%i6+1343],%o3
+	stx	%o3,[%i3-432]
+	ldx	[%i6+1335],%o3
+	stx	%o3,[%i3-424]
+	ldx	[%i6+1327],%o3
+	stx	%o3,[%i3-416]
+	ldx	[%i6+1319],%o3
+	stx	%o3,[%i3-408]
+	ldx	[%i6+1311],%o3
+	stx	%o3,[%i3-400]
+	ldx	[%i6+1303],%o3
+	stx	%o3,[%i3-392]
+	ldx	[%i6+1295],%o3
+	stx	%o3,[%i3-384]
+	ldx	[%i6+1287],%o3
+	stx	%o3,[%i3-376]
+	ldx	[%i6+1279],%o3
+	stx	%o3,[%i3-368]
+	ldx	[%i6+1271],%o3
+	stx	%o3,[%i3-360]
+	ldx	[%i6+1263],%o3
+	stx	%o3,[%i3-352]
+	ldx	[%i6+1255],%o3
+	stx	%o3,[%i3-344]
+	ldx	[%i6+1247],%o3
+	stx	%o3,[%i3-336]
+	ldx	[%i6+1239],%o3
+	stx	%o3,[%i3-328]
+	ldx	[%i6+1231],%o3
+	stx	%o3,[%i3-320]
+	ldx	[%i6+1223],%o3
+	stx	%o3,[%i3-312]
+	ldx	[%i6+1215],%o3
+	stx	%o3,[%i3-304]
+	ldx	[%i6+1207],%o3
+	stx	%o3,[%i3-296]
+	ldx	[%i6+1199],%o3
+	stx	%o3,[%i3-288]
+	ldx	[%i6+1191],%o3
+	stx	%o3,[%i3-280]
+	ldx	[%i6+1183],%o3
+	stx	%o3,[%i3-272]
+	ldx	[%i6+1175],%o3
+	stx	%o3,[%i3-264]
+	ldx	[%i6+1167],%o3
+	stx	%o3,[%i3-256]
+	ldx	[%i6+1159],%o3
+	stx	%o3,[%i3-248]
+	ldx	[%i6+1151],%o3
+	stx	%o3,[%i3-240]
+	ldx	[%i6+1143],%o3
+	stx	%o3,[%i3-232]
+	ldx	[%i6+1135],%o3
+	stx	%o3,[%i3-224]
+	ldx	[%i6+1127],%o3
+	stx	%o3,[%i3-216]
+	ldx	[%i6+1119],%o3
+	stx	%o3,[%i3-208]
+	ldx	[%i6+1111],%o3
+	stx	%o3,[%i3-200]
+	ldx	[%i6+1103],%o3
+	stx	%o3,[%i3-192]
+	ldx	[%i6+1095],%o3
+	stx	%o3,[%i3-184]
+	ldx	[%i6+1087],%o3
+	stx	%o3,[%i3-176]
+	ldx	[%i6+1079],%o3
+	stx	%o3,[%i3-168]
+	ldx	[%i6+1071],%o3
+	stx	%o3,[%i3-160]
+	ldx	[%i6+1063],%o3
+	stx	%o3,[%i3-152]
+	ldx	[%i6+1055],%o3
+	stx	%o3,[%i3-144]
+	ldx	[%i6+1047],%o3
+	stx	%o3,[%i3-136]
+	ldx	[%i6+1039],%o3
+	stx	%o3,[%i3-128]
+	ldx	[%i6+1031],%o3
+	stx	%o3,[%i3-120]
+	ldx	[%i6+1007],%o3
+	stx	%o3,[%i3-112]
+	stx	%o5,[%i3-104]
+	stx	%l0,[%i3-96]
+	stx	%l6,[%i3-88]
+	stx	%l7,[%i3-80]
+	stx	%i4,[%i3-72]
+	stx	%g2,[%i3-64]
+	stx	%g3,[%i3-56]
+	stx	%g4,[%i3-48]
+	stx	%o0,[%i3-40]
+	stx	%o1,[%i3-32]
+	stx	%o2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1007,%g1
+	sethi	%hh(s78y_info),%g2
+	sethi	%lm(s78y_info),%g3
+	or	%g2,%hm(s78y_info),%g2
+	or	%g3,%lo(s78y_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccFm_end:
+.Ls7au_entry_end:
+.section .rodata
+.align 8
+ccFw_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78u_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78u_info:
+.LccFx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFy
+	nop
+	b	.LccFz
+	nop
+.LccFx_end:
+.LccFy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFy_end:
+.LccFz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccFw_str),%g1
+	sethi	%lm(ccFw_str),%l2
+	or	%g1,%hm(ccFw_str),%g1
+	or	%l2,%lo(ccFw_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccFz_end:
+.Ls78u_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78w_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78w_info:
+.LccFB:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFC
+	nop
+	b	.LccFD
+	nop
+.LccFB_end:
+.LccFD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccFF
+	nop
+	b	.LccFE
+	nop
+.LccFD_end:
+.LccFF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccFC
+	nop
+.LccFF_end:
+.LccFC:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFC_end:
+.LccFE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78u_info),%g1
+	sethi	%lm(s78u_info),%g2
+	or	%g1,%hm(s78u_info),%g1
+	or	%g2,%lo(s78u_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccFE_end:
+.Ls78w_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7av_info)+0
+	.quad	532575944704
+	.quad	64424509567
+.align 4
+s7av_info:
+.LccFG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFH
+	nop
+	b	.LccFI
+	nop
+.LccFG_end:
+.LccFI:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1024,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccFK
+	nop
+	b	.LccFJ
+	nop
+.LccFI_end:
+.LccFK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1024,%g2
+	stx	%g2,[%i1+904]
+	b	.LccFH
+	nop
+.LccFK_end:
+.LccFH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFH_end:
+.LccFJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	ldx	[%g1+1000],%g1
+	stx	%o3,[%i6+1031]
+	sethi	%hh(s7au_info),%o3
+	stx	%o3,[%i6+1023]
+	sethi	%lm(s7au_info),%o3
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	or	%o3,%hm(s7au_info),%o3
+	stx	%o3,[%i6+1023]
+	ldx	[%i6+1015],%o3
+	or	%o3,%lo(s7au_info),%o3
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	sllx	%o3,32,%o3
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	or	%o4,%o3,%o4
+	stx	%o4,[%i3-1016]
+	ldx	[%i6+1911],%o3
+	stx	%o3,[%i3-1000]
+	ldx	[%i6+1903],%o3
+	stx	%o3,[%i3-992]
+	ldx	[%i6+1895],%o3
+	stx	%o3,[%i3-984]
+	ldx	[%i6+1887],%o3
+	stx	%o3,[%i3-976]
+	ldx	[%i6+1879],%o3
+	stx	%o3,[%i3-968]
+	ldx	[%i6+1871],%o3
+	stx	%o3,[%i3-960]
+	ldx	[%i6+1863],%o3
+	stx	%o3,[%i3-952]
+	ldx	[%i6+1855],%o3
+	stx	%o3,[%i3-944]
+	ldx	[%i6+1847],%o3
+	stx	%o3,[%i3-936]
+	ldx	[%i6+1839],%o3
+	stx	%o3,[%i3-928]
+	ldx	[%i6+1831],%o3
+	stx	%o3,[%i3-920]
+	ldx	[%i6+1823],%o3
+	stx	%o3,[%i3-912]
+	ldx	[%i6+1815],%o3
+	stx	%o3,[%i3-904]
+	ldx	[%i6+1807],%o3
+	stx	%o3,[%i3-896]
+	ldx	[%i6+1799],%o3
+	stx	%o3,[%i3-888]
+	ldx	[%i6+1791],%o3
+	stx	%o3,[%i3-880]
+	ldx	[%i6+1783],%o3
+	stx	%o3,[%i3-872]
+	ldx	[%i6+1775],%o3
+	stx	%o3,[%i3-864]
+	ldx	[%i6+1767],%o3
+	stx	%o3,[%i3-856]
+	ldx	[%i6+1759],%o3
+	stx	%o3,[%i3-848]
+	ldx	[%i6+1751],%o3
+	stx	%o3,[%i3-840]
+	ldx	[%i6+1743],%o3
+	stx	%o3,[%i3-832]
+	ldx	[%i6+1735],%o3
+	stx	%o3,[%i3-824]
+	ldx	[%i6+1727],%o3
+	stx	%o3,[%i3-816]
+	ldx	[%i6+1719],%o3
+	stx	%o3,[%i3-808]
+	ldx	[%i6+1711],%o3
+	stx	%o3,[%i3-800]
+	ldx	[%i6+1703],%o3
+	stx	%o3,[%i3-792]
+	ldx	[%i6+1695],%o3
+	stx	%o3,[%i3-784]
+	ldx	[%i6+1687],%o3
+	stx	%o3,[%i3-776]
+	ldx	[%i6+1679],%o3
+	stx	%o3,[%i3-768]
+	ldx	[%i6+1671],%o3
+	stx	%o3,[%i3-760]
+	ldx	[%i6+1663],%o3
+	stx	%o3,[%i3-752]
+	ldx	[%i6+1655],%o3
+	stx	%o3,[%i3-744]
+	ldx	[%i6+1647],%o3
+	stx	%o3,[%i3-736]
+	ldx	[%i6+1639],%o3
+	stx	%o3,[%i3-728]
+	ldx	[%i6+1631],%o3
+	stx	%o3,[%i3-720]
+	ldx	[%i6+1623],%o3
+	stx	%o3,[%i3-712]
+	ldx	[%i6+1615],%o3
+	stx	%o3,[%i3-704]
+	ldx	[%i6+1607],%o3
+	stx	%o3,[%i3-696]
+	ldx	[%i6+1599],%o3
+	stx	%o3,[%i3-688]
+	ldx	[%i6+1591],%o3
+	stx	%o3,[%i3-680]
+	ldx	[%i6+1583],%o3
+	stx	%o3,[%i3-672]
+	ldx	[%i6+1575],%o3
+	stx	%o3,[%i3-664]
+	ldx	[%i6+1567],%o3
+	stx	%o3,[%i3-656]
+	ldx	[%i6+1559],%o3
+	stx	%o3,[%i3-648]
+	ldx	[%i6+1551],%o3
+	stx	%o3,[%i3-640]
+	ldx	[%i6+1543],%o3
+	stx	%o3,[%i3-632]
+	ldx	[%i6+1535],%o3
+	stx	%o3,[%i3-624]
+	ldx	[%i6+1527],%o3
+	stx	%o3,[%i3-616]
+	ldx	[%i6+1519],%o3
+	stx	%o3,[%i3-608]
+	ldx	[%i6+1511],%o3
+	stx	%o3,[%i3-600]
+	ldx	[%i6+1503],%o3
+	stx	%o3,[%i3-592]
+	ldx	[%i6+1495],%o3
+	stx	%o3,[%i3-584]
+	ldx	[%i6+1487],%o3
+	stx	%o3,[%i3-576]
+	ldx	[%i6+1479],%o3
+	stx	%o3,[%i3-568]
+	ldx	[%i6+1471],%o3
+	stx	%o3,[%i3-560]
+	ldx	[%i6+1463],%o3
+	stx	%o3,[%i3-552]
+	ldx	[%i6+1455],%o3
+	stx	%o3,[%i3-544]
+	ldx	[%i6+1447],%o3
+	stx	%o3,[%i3-536]
+	ldx	[%i6+1439],%o3
+	stx	%o3,[%i3-528]
+	ldx	[%i6+1431],%o3
+	stx	%o3,[%i3-520]
+	ldx	[%i6+1423],%o3
+	stx	%o3,[%i3-512]
+	ldx	[%i6+1415],%o3
+	stx	%o3,[%i3-504]
+	ldx	[%i6+1407],%o3
+	stx	%o3,[%i3-496]
+	ldx	[%i6+1399],%o3
+	stx	%o3,[%i3-488]
+	ldx	[%i6+1391],%o3
+	stx	%o3,[%i3-480]
+	ldx	[%i6+1383],%o3
+	stx	%o3,[%i3-472]
+	ldx	[%i6+1375],%o3
+	stx	%o3,[%i3-464]
+	ldx	[%i6+1367],%o3
+	stx	%o3,[%i3-456]
+	ldx	[%i6+1359],%o3
+	stx	%o3,[%i3-448]
+	ldx	[%i6+1351],%o3
+	stx	%o3,[%i3-440]
+	ldx	[%i6+1343],%o3
+	stx	%o3,[%i3-432]
+	ldx	[%i6+1335],%o3
+	stx	%o3,[%i3-424]
+	ldx	[%i6+1327],%o3
+	stx	%o3,[%i3-416]
+	ldx	[%i6+1319],%o3
+	stx	%o3,[%i3-408]
+	ldx	[%i6+1311],%o3
+	stx	%o3,[%i3-400]
+	ldx	[%i6+1303],%o3
+	stx	%o3,[%i3-392]
+	ldx	[%i6+1295],%o3
+	stx	%o3,[%i3-384]
+	ldx	[%i6+1287],%o3
+	stx	%o3,[%i3-376]
+	ldx	[%i6+1279],%o3
+	stx	%o3,[%i3-368]
+	ldx	[%i6+1271],%o3
+	stx	%o3,[%i3-360]
+	ldx	[%i6+1263],%o3
+	stx	%o3,[%i3-352]
+	ldx	[%i6+1255],%o3
+	stx	%o3,[%i3-344]
+	ldx	[%i6+1247],%o3
+	stx	%o3,[%i3-336]
+	ldx	[%i6+1239],%o3
+	stx	%o3,[%i3-328]
+	ldx	[%i6+1231],%o3
+	stx	%o3,[%i3-320]
+	ldx	[%i6+1223],%o3
+	stx	%o3,[%i3-312]
+	ldx	[%i6+1215],%o3
+	stx	%o3,[%i3-304]
+	ldx	[%i6+1207],%o3
+	stx	%o3,[%i3-296]
+	ldx	[%i6+1199],%o3
+	stx	%o3,[%i3-288]
+	ldx	[%i6+1191],%o3
+	stx	%o3,[%i3-280]
+	ldx	[%i6+1183],%o3
+	stx	%o3,[%i3-272]
+	ldx	[%i6+1175],%o3
+	stx	%o3,[%i3-264]
+	ldx	[%i6+1167],%o3
+	stx	%o3,[%i3-256]
+	ldx	[%i6+1159],%o3
+	stx	%o3,[%i3-248]
+	ldx	[%i6+1151],%o3
+	stx	%o3,[%i3-240]
+	ldx	[%i6+1143],%o3
+	stx	%o3,[%i3-232]
+	ldx	[%i6+1135],%o3
+	stx	%o3,[%i3-224]
+	ldx	[%i6+1127],%o3
+	stx	%o3,[%i3-216]
+	ldx	[%i6+1119],%o3
+	stx	%o3,[%i3-208]
+	ldx	[%i6+1111],%o3
+	stx	%o3,[%i3-200]
+	ldx	[%i6+1103],%o3
+	stx	%o3,[%i3-192]
+	ldx	[%i6+1095],%o3
+	stx	%o3,[%i3-184]
+	ldx	[%i6+1087],%o3
+	stx	%o3,[%i3-176]
+	ldx	[%i6+1079],%o3
+	stx	%o3,[%i3-168]
+	ldx	[%i6+1071],%o3
+	stx	%o3,[%i3-160]
+	ldx	[%i6+1063],%o3
+	stx	%o3,[%i3-152]
+	ldx	[%i6+1055],%o3
+	stx	%o3,[%i3-144]
+	ldx	[%i6+1047],%o3
+	stx	%o3,[%i3-136]
+	ldx	[%i6+1039],%o3
+	stx	%o3,[%i3-128]
+	ldx	[%i6+1031],%o3
+	stx	%o3,[%i3-120]
+	ldx	[%i6+1007],%o3
+	stx	%o3,[%i3-112]
+	stx	%o5,[%i3-104]
+	stx	%l0,[%i3-96]
+	stx	%l6,[%i3-88]
+	stx	%l7,[%i3-80]
+	stx	%i4,[%i3-72]
+	stx	%g2,[%i3-64]
+	stx	%g3,[%i3-56]
+	stx	%g4,[%i3-48]
+	stx	%o0,[%i3-40]
+	stx	%o1,[%i3-32]
+	stx	%o2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1016,%g1
+	sethi	%hh(s78w_info),%g2
+	sethi	%lm(s78w_info),%g3
+	or	%g2,%hm(s78w_info),%g2
+	or	%g3,%lo(s78w_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccFJ_end:
+.Ls7av_entry_end:
+.section .rodata
+.align 8
+ccFT_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	66
+	.byte	73
+	.byte	84
+	.byte	77
+	.byte	65
+	.byte	80
+	.byte	95
+	.byte	66
+	.byte	73
+	.byte	84
+	.byte	83
+	.byte	95
+	.byte	83
+	.byte	72
+	.byte	73
+	.byte	70
+	.byte	84
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78r_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78r_info:
+.LccFU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFV
+	nop
+	b	.LccFW
+	nop
+.LccFU_end:
+.LccFV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFV_end:
+.LccFW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccFT_str),%g1
+	sethi	%lm(ccFT_str),%l2
+	or	%g1,%hm(ccFT_str),%g1
+	or	%l2,%lo(ccFT_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccFW_end:
+.Ls78r_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78t_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78t_info:
+.LccFY:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccFZ
+	nop
+	b	.LccG0
+	nop
+.LccFY_end:
+.LccG0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccG2
+	nop
+	b	.LccG1
+	nop
+.LccG0_end:
+.LccG2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccFZ
+	nop
+.LccG2_end:
+.LccFZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccFZ_end:
+.LccG1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78r_info),%g1
+	sethi	%lm(s78r_info),%g2
+	or	%g1,%hm(s78r_info),%g1
+	or	%g2,%lo(s78r_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccG1_end:
+.Ls78t_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aw_info)+0
+	.quad	532575944704
+	.quad	64424509567
+.align 4
+s7aw_info:
+.LccG3:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccG4
+	nop
+	b	.LccG5
+	nop
+.LccG3_end:
+.LccG5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1024,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccG7
+	nop
+	b	.LccG6
+	nop
+.LccG5_end:
+.LccG7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1024,%g2
+	stx	%g2,[%i1+904]
+	b	.LccG4
+	nop
+.LccG7_end:
+.LccG4:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccG4_end:
+.LccG6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	stx	%o2,[%i6+1039]
+	ldx	[%g1+992],%o2
+	ldx	[%g1+1000],%g1
+	stx	%o3,[%i6+1031]
+	sethi	%hh(s7av_info),%o3
+	stx	%o3,[%i6+1023]
+	sethi	%lm(s7av_info),%o3
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	or	%o3,%hm(s7av_info),%o3
+	stx	%o3,[%i6+1023]
+	ldx	[%i6+1015],%o3
+	or	%o3,%lo(s7av_info),%o3
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	sllx	%o3,32,%o3
+	stx	%o4,[%i6+1007]
+	ldx	[%i6+1015],%o4
+	or	%o4,%o3,%o4
+	stx	%o4,[%i3-1016]
+	ldx	[%i6+1911],%o3
+	stx	%o3,[%i3-1000]
+	ldx	[%i6+1903],%o3
+	stx	%o3,[%i3-992]
+	ldx	[%i6+1895],%o3
+	stx	%o3,[%i3-984]
+	ldx	[%i6+1887],%o3
+	stx	%o3,[%i3-976]
+	ldx	[%i6+1879],%o3
+	stx	%o3,[%i3-968]
+	ldx	[%i6+1871],%o3
+	stx	%o3,[%i3-960]
+	ldx	[%i6+1863],%o3
+	stx	%o3,[%i3-952]
+	ldx	[%i6+1855],%o3
+	stx	%o3,[%i3-944]
+	ldx	[%i6+1847],%o3
+	stx	%o3,[%i3-936]
+	ldx	[%i6+1839],%o3
+	stx	%o3,[%i3-928]
+	ldx	[%i6+1831],%o3
+	stx	%o3,[%i3-920]
+	ldx	[%i6+1823],%o3
+	stx	%o3,[%i3-912]
+	ldx	[%i6+1815],%o3
+	stx	%o3,[%i3-904]
+	ldx	[%i6+1807],%o3
+	stx	%o3,[%i3-896]
+	ldx	[%i6+1799],%o3
+	stx	%o3,[%i3-888]
+	ldx	[%i6+1791],%o3
+	stx	%o3,[%i3-880]
+	ldx	[%i6+1783],%o3
+	stx	%o3,[%i3-872]
+	ldx	[%i6+1775],%o3
+	stx	%o3,[%i3-864]
+	ldx	[%i6+1767],%o3
+	stx	%o3,[%i3-856]
+	ldx	[%i6+1759],%o3
+	stx	%o3,[%i3-848]
+	ldx	[%i6+1751],%o3
+	stx	%o3,[%i3-840]
+	ldx	[%i6+1743],%o3
+	stx	%o3,[%i3-832]
+	ldx	[%i6+1735],%o3
+	stx	%o3,[%i3-824]
+	ldx	[%i6+1727],%o3
+	stx	%o3,[%i3-816]
+	ldx	[%i6+1719],%o3
+	stx	%o3,[%i3-808]
+	ldx	[%i6+1711],%o3
+	stx	%o3,[%i3-800]
+	ldx	[%i6+1703],%o3
+	stx	%o3,[%i3-792]
+	ldx	[%i6+1695],%o3
+	stx	%o3,[%i3-784]
+	ldx	[%i6+1687],%o3
+	stx	%o3,[%i3-776]
+	ldx	[%i6+1679],%o3
+	stx	%o3,[%i3-768]
+	ldx	[%i6+1671],%o3
+	stx	%o3,[%i3-760]
+	ldx	[%i6+1663],%o3
+	stx	%o3,[%i3-752]
+	ldx	[%i6+1655],%o3
+	stx	%o3,[%i3-744]
+	ldx	[%i6+1647],%o3
+	stx	%o3,[%i3-736]
+	ldx	[%i6+1639],%o3
+	stx	%o3,[%i3-728]
+	ldx	[%i6+1631],%o3
+	stx	%o3,[%i3-720]
+	ldx	[%i6+1623],%o3
+	stx	%o3,[%i3-712]
+	ldx	[%i6+1615],%o3
+	stx	%o3,[%i3-704]
+	ldx	[%i6+1607],%o3
+	stx	%o3,[%i3-696]
+	ldx	[%i6+1599],%o3
+	stx	%o3,[%i3-688]
+	ldx	[%i6+1591],%o3
+	stx	%o3,[%i3-680]
+	ldx	[%i6+1583],%o3
+	stx	%o3,[%i3-672]
+	ldx	[%i6+1575],%o3
+	stx	%o3,[%i3-664]
+	ldx	[%i6+1567],%o3
+	stx	%o3,[%i3-656]
+	ldx	[%i6+1559],%o3
+	stx	%o3,[%i3-648]
+	ldx	[%i6+1551],%o3
+	stx	%o3,[%i3-640]
+	ldx	[%i6+1543],%o3
+	stx	%o3,[%i3-632]
+	ldx	[%i6+1535],%o3
+	stx	%o3,[%i3-624]
+	ldx	[%i6+1527],%o3
+	stx	%o3,[%i3-616]
+	ldx	[%i6+1519],%o3
+	stx	%o3,[%i3-608]
+	ldx	[%i6+1511],%o3
+	stx	%o3,[%i3-600]
+	ldx	[%i6+1503],%o3
+	stx	%o3,[%i3-592]
+	ldx	[%i6+1495],%o3
+	stx	%o3,[%i3-584]
+	ldx	[%i6+1487],%o3
+	stx	%o3,[%i3-576]
+	ldx	[%i6+1479],%o3
+	stx	%o3,[%i3-568]
+	ldx	[%i6+1471],%o3
+	stx	%o3,[%i3-560]
+	ldx	[%i6+1463],%o3
+	stx	%o3,[%i3-552]
+	ldx	[%i6+1455],%o3
+	stx	%o3,[%i3-544]
+	ldx	[%i6+1447],%o3
+	stx	%o3,[%i3-536]
+	ldx	[%i6+1439],%o3
+	stx	%o3,[%i3-528]
+	ldx	[%i6+1431],%o3
+	stx	%o3,[%i3-520]
+	ldx	[%i6+1423],%o3
+	stx	%o3,[%i3-512]
+	ldx	[%i6+1415],%o3
+	stx	%o3,[%i3-504]
+	ldx	[%i6+1407],%o3
+	stx	%o3,[%i3-496]
+	ldx	[%i6+1399],%o3
+	stx	%o3,[%i3-488]
+	ldx	[%i6+1391],%o3
+	stx	%o3,[%i3-480]
+	ldx	[%i6+1383],%o3
+	stx	%o3,[%i3-472]
+	ldx	[%i6+1375],%o3
+	stx	%o3,[%i3-464]
+	ldx	[%i6+1367],%o3
+	stx	%o3,[%i3-456]
+	ldx	[%i6+1359],%o3
+	stx	%o3,[%i3-448]
+	ldx	[%i6+1351],%o3
+	stx	%o3,[%i3-440]
+	ldx	[%i6+1343],%o3
+	stx	%o3,[%i3-432]
+	ldx	[%i6+1335],%o3
+	stx	%o3,[%i3-424]
+	ldx	[%i6+1327],%o3
+	stx	%o3,[%i3-416]
+	ldx	[%i6+1319],%o3
+	stx	%o3,[%i3-408]
+	ldx	[%i6+1311],%o3
+	stx	%o3,[%i3-400]
+	ldx	[%i6+1303],%o3
+	stx	%o3,[%i3-392]
+	ldx	[%i6+1295],%o3
+	stx	%o3,[%i3-384]
+	ldx	[%i6+1287],%o3
+	stx	%o3,[%i3-376]
+	ldx	[%i6+1279],%o3
+	stx	%o3,[%i3-368]
+	ldx	[%i6+1271],%o3
+	stx	%o3,[%i3-360]
+	ldx	[%i6+1263],%o3
+	stx	%o3,[%i3-352]
+	ldx	[%i6+1255],%o3
+	stx	%o3,[%i3-344]
+	ldx	[%i6+1247],%o3
+	stx	%o3,[%i3-336]
+	ldx	[%i6+1239],%o3
+	stx	%o3,[%i3-328]
+	ldx	[%i6+1231],%o3
+	stx	%o3,[%i3-320]
+	ldx	[%i6+1223],%o3
+	stx	%o3,[%i3-312]
+	ldx	[%i6+1215],%o3
+	stx	%o3,[%i3-304]
+	ldx	[%i6+1207],%o3
+	stx	%o3,[%i3-296]
+	ldx	[%i6+1199],%o3
+	stx	%o3,[%i3-288]
+	ldx	[%i6+1191],%o3
+	stx	%o3,[%i3-280]
+	ldx	[%i6+1183],%o3
+	stx	%o3,[%i3-272]
+	ldx	[%i6+1175],%o3
+	stx	%o3,[%i3-264]
+	ldx	[%i6+1167],%o3
+	stx	%o3,[%i3-256]
+	ldx	[%i6+1159],%o3
+	stx	%o3,[%i3-248]
+	ldx	[%i6+1151],%o3
+	stx	%o3,[%i3-240]
+	ldx	[%i6+1143],%o3
+	stx	%o3,[%i3-232]
+	ldx	[%i6+1135],%o3
+	stx	%o3,[%i3-224]
+	ldx	[%i6+1127],%o3
+	stx	%o3,[%i3-216]
+	ldx	[%i6+1119],%o3
+	stx	%o3,[%i3-208]
+	ldx	[%i6+1111],%o3
+	stx	%o3,[%i3-200]
+	ldx	[%i6+1103],%o3
+	stx	%o3,[%i3-192]
+	ldx	[%i6+1095],%o3
+	stx	%o3,[%i3-184]
+	ldx	[%i6+1087],%o3
+	stx	%o3,[%i3-176]
+	ldx	[%i6+1079],%o3
+	stx	%o3,[%i3-168]
+	ldx	[%i6+1071],%o3
+	stx	%o3,[%i3-160]
+	ldx	[%i6+1063],%o3
+	stx	%o3,[%i3-152]
+	ldx	[%i6+1055],%o3
+	stx	%o3,[%i3-144]
+	ldx	[%i6+1047],%o3
+	stx	%o3,[%i3-136]
+	ldx	[%i6+1039],%o3
+	stx	%o3,[%i3-128]
+	ldx	[%i6+1031],%o3
+	stx	%o3,[%i3-120]
+	ldx	[%i6+1007],%o3
+	stx	%o3,[%i3-112]
+	stx	%o5,[%i3-104]
+	stx	%l0,[%i3-96]
+	stx	%l6,[%i3-88]
+	stx	%l7,[%i3-80]
+	stx	%i4,[%i3-72]
+	stx	%g2,[%i3-64]
+	stx	%g3,[%i3-56]
+	stx	%g4,[%i3-48]
+	stx	%o0,[%i3-40]
+	stx	%o1,[%i3-32]
+	stx	%o2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1016,%g1
+	sethi	%hh(s78t_info),%g2
+	sethi	%lm(s78t_info),%g3
+	or	%g2,%hm(s78t_info),%g2
+	or	%g3,%lo(s78t_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccG6_end:
+.Ls7aw_entry_end:
+.section .rodata
+.align 8
+ccGg_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78o_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78o_info:
+.LccGh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccGi
+	nop
+	b	.LccGj
+	nop
+.LccGh_end:
+.LccGi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccGi_end:
+.LccGj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccGg_str),%g1
+	sethi	%lm(ccGg_str),%l2
+	or	%g1,%hm(ccGg_str),%g1
+	or	%l2,%lo(ccGg_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccGj_end:
+.Ls78o_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78q_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78q_info:
+.LccGl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccGm
+	nop
+	b	.LccGn
+	nop
+.LccGl_end:
+.LccGn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccGp
+	nop
+	b	.LccGo
+	nop
+.LccGn_end:
+.LccGp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccGm
+	nop
+.LccGp_end:
+.LccGm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccGm_end:
+.LccGo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78o_info),%g1
+	sethi	%lm(s78o_info),%g2
+	or	%g1,%hm(s78o_info),%g1
+	or	%g2,%lo(s78o_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccGo_end:
+.Ls78q_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ax_info)+0
+	.quad	21474836481
+	.quad	528280977408
+	.quad	34359738495
+.align 4
+s7ax_info:
+.LccGq:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccGr
+	nop
+	b	.LccGs
+	nop
+.LccGq_end:
+.LccGs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1024,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccGu
+	nop
+	b	.LccGt
+	nop
+.LccGs_end:
+.LccGu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1024,%g3
+	stx	%g3,[%i1+904]
+	b	.LccGr
+	nop
+.LccGu_end:
+.LccGr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccGr_end:
+.LccGt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	stx	%g4,[%i6+1039]
+	ldx	[%g2+975],%g4
+	ldx	[%g2+983],%g2
+	stx	%o0,[%i6+1031]
+	sethi	%hh(s7aw_info),%o0
+	stx	%o0,[%i6+1023]
+	sethi	%lm(s7aw_info),%o0
+	stx	%o0,[%i6+1015]
+	ldx	[%i6+1023],%o0
+	or	%o0,%hm(s7aw_info),%o0
+	stx	%o0,[%i6+1023]
+	ldx	[%i6+1015],%o0
+	or	%o0,%lo(s7aw_info),%o0
+	stx	%o0,[%i6+1015]
+	ldx	[%i6+1023],%o0
+	sllx	%o0,32,%o0
+	stx	%o1,[%i6+1007]
+	ldx	[%i6+1015],%o1
+	or	%o1,%o0,%o1
+	stx	%o1,[%i3-1016]
+	ldx	[%i6+1911],%o0
+	stx	%o0,[%i3-1000]
+	ldx	[%i6+1903],%o0
+	stx	%o0,[%i3-992]
+	ldx	[%i6+1895],%o0
+	stx	%o0,[%i3-984]
+	ldx	[%i6+1887],%o0
+	stx	%o0,[%i3-976]
+	ldx	[%i6+1879],%o0
+	stx	%o0,[%i3-968]
+	ldx	[%i6+1871],%o0
+	stx	%o0,[%i3-960]
+	ldx	[%i6+1863],%o0
+	stx	%o0,[%i3-952]
+	ldx	[%i6+1855],%o0
+	stx	%o0,[%i3-944]
+	ldx	[%i6+1847],%o0
+	stx	%o0,[%i3-936]
+	ldx	[%i6+1839],%o0
+	stx	%o0,[%i3-928]
+	ldx	[%i6+1831],%o0
+	stx	%o0,[%i3-920]
+	ldx	[%i6+1823],%o0
+	stx	%o0,[%i3-912]
+	ldx	[%i6+1815],%o0
+	stx	%o0,[%i3-904]
+	ldx	[%i6+1807],%o0
+	stx	%o0,[%i3-896]
+	ldx	[%i6+1799],%o0
+	stx	%o0,[%i3-888]
+	ldx	[%i6+1791],%o0
+	stx	%o0,[%i3-880]
+	ldx	[%i6+1783],%o0
+	stx	%o0,[%i3-872]
+	ldx	[%i6+1775],%o0
+	stx	%o0,[%i3-864]
+	ldx	[%i6+1767],%o0
+	stx	%o0,[%i3-856]
+	ldx	[%i6+1759],%o0
+	stx	%o0,[%i3-848]
+	ldx	[%i6+1751],%o0
+	stx	%o0,[%i3-840]
+	ldx	[%i6+1743],%o0
+	stx	%o0,[%i3-832]
+	ldx	[%i6+1735],%o0
+	stx	%o0,[%i3-824]
+	ldx	[%i6+1727],%o0
+	stx	%o0,[%i3-816]
+	ldx	[%i6+1719],%o0
+	stx	%o0,[%i3-808]
+	ldx	[%i6+1711],%o0
+	stx	%o0,[%i3-800]
+	ldx	[%i6+1703],%o0
+	stx	%o0,[%i3-792]
+	ldx	[%i6+1695],%o0
+	stx	%o0,[%i3-784]
+	ldx	[%i6+1687],%o0
+	stx	%o0,[%i3-776]
+	ldx	[%i6+1679],%o0
+	stx	%o0,[%i3-768]
+	ldx	[%i6+1671],%o0
+	stx	%o0,[%i3-760]
+	ldx	[%i6+1663],%o0
+	stx	%o0,[%i3-752]
+	ldx	[%i6+1655],%o0
+	stx	%o0,[%i3-744]
+	ldx	[%i6+1647],%o0
+	stx	%o0,[%i3-736]
+	ldx	[%i6+1639],%o0
+	stx	%o0,[%i3-728]
+	ldx	[%i6+1631],%o0
+	stx	%o0,[%i3-720]
+	ldx	[%i6+1623],%o0
+	stx	%o0,[%i3-712]
+	ldx	[%i6+1615],%o0
+	stx	%o0,[%i3-704]
+	ldx	[%i6+1607],%o0
+	stx	%o0,[%i3-696]
+	ldx	[%i6+1599],%o0
+	stx	%o0,[%i3-688]
+	ldx	[%i6+1591],%o0
+	stx	%o0,[%i3-680]
+	ldx	[%i6+1583],%o0
+	stx	%o0,[%i3-672]
+	ldx	[%i6+1575],%o0
+	stx	%o0,[%i3-664]
+	ldx	[%i6+1567],%o0
+	stx	%o0,[%i3-656]
+	ldx	[%i6+1559],%o0
+	stx	%o0,[%i3-648]
+	ldx	[%i6+1551],%o0
+	stx	%o0,[%i3-640]
+	ldx	[%i6+1543],%o0
+	stx	%o0,[%i3-632]
+	ldx	[%i6+1535],%o0
+	stx	%o0,[%i3-624]
+	ldx	[%i6+1527],%o0
+	stx	%o0,[%i3-616]
+	ldx	[%i6+1519],%o0
+	stx	%o0,[%i3-608]
+	ldx	[%i6+1511],%o0
+	stx	%o0,[%i3-600]
+	ldx	[%i6+1503],%o0
+	stx	%o0,[%i3-592]
+	ldx	[%i6+1495],%o0
+	stx	%o0,[%i3-584]
+	ldx	[%i6+1487],%o0
+	stx	%o0,[%i3-576]
+	ldx	[%i6+1479],%o0
+	stx	%o0,[%i3-568]
+	ldx	[%i6+1471],%o0
+	stx	%o0,[%i3-560]
+	ldx	[%i6+1463],%o0
+	stx	%o0,[%i3-552]
+	ldx	[%i6+1455],%o0
+	stx	%o0,[%i3-544]
+	ldx	[%i6+1447],%o0
+	stx	%o0,[%i3-536]
+	ldx	[%i6+1439],%o0
+	stx	%o0,[%i3-528]
+	ldx	[%i6+1431],%o0
+	stx	%o0,[%i3-520]
+	ldx	[%i6+1423],%o0
+	stx	%o0,[%i3-512]
+	ldx	[%i6+1415],%o0
+	stx	%o0,[%i3-504]
+	ldx	[%i6+1407],%o0
+	stx	%o0,[%i3-496]
+	ldx	[%i6+1399],%o0
+	stx	%o0,[%i3-488]
+	ldx	[%i6+1391],%o0
+	stx	%o0,[%i3-480]
+	ldx	[%i6+1383],%o0
+	stx	%o0,[%i3-472]
+	ldx	[%i6+1375],%o0
+	stx	%o0,[%i3-464]
+	ldx	[%i6+1367],%o0
+	stx	%o0,[%i3-456]
+	ldx	[%i6+1359],%o0
+	stx	%o0,[%i3-448]
+	ldx	[%i6+1351],%o0
+	stx	%o0,[%i3-440]
+	ldx	[%i6+1343],%o0
+	stx	%o0,[%i3-432]
+	ldx	[%i6+1335],%o0
+	stx	%o0,[%i3-424]
+	ldx	[%i6+1327],%o0
+	stx	%o0,[%i3-416]
+	ldx	[%i6+1319],%o0
+	stx	%o0,[%i3-408]
+	ldx	[%i6+1311],%o0
+	stx	%o0,[%i3-400]
+	ldx	[%i6+1303],%o0
+	stx	%o0,[%i3-392]
+	ldx	[%i6+1295],%o0
+	stx	%o0,[%i3-384]
+	ldx	[%i6+1287],%o0
+	stx	%o0,[%i3-376]
+	ldx	[%i6+1279],%o0
+	stx	%o0,[%i3-368]
+	ldx	[%i6+1271],%o0
+	stx	%o0,[%i3-360]
+	ldx	[%i6+1263],%o0
+	stx	%o0,[%i3-352]
+	ldx	[%i6+1255],%o0
+	stx	%o0,[%i3-344]
+	ldx	[%i6+1247],%o0
+	stx	%o0,[%i3-336]
+	ldx	[%i6+1239],%o0
+	stx	%o0,[%i3-328]
+	ldx	[%i6+1231],%o0
+	stx	%o0,[%i3-320]
+	ldx	[%i6+1223],%o0
+	stx	%o0,[%i3-312]
+	ldx	[%i6+1215],%o0
+	stx	%o0,[%i3-304]
+	ldx	[%i6+1207],%o0
+	stx	%o0,[%i3-296]
+	ldx	[%i6+1199],%o0
+	stx	%o0,[%i3-288]
+	ldx	[%i6+1191],%o0
+	stx	%o0,[%i3-280]
+	ldx	[%i6+1183],%o0
+	stx	%o0,[%i3-272]
+	ldx	[%i6+1175],%o0
+	stx	%o0,[%i3-264]
+	ldx	[%i6+1167],%o0
+	stx	%o0,[%i3-256]
+	ldx	[%i6+1159],%o0
+	stx	%o0,[%i3-248]
+	ldx	[%i6+1151],%o0
+	stx	%o0,[%i3-240]
+	ldx	[%i6+1143],%o0
+	stx	%o0,[%i3-232]
+	ldx	[%i6+1135],%o0
+	stx	%o0,[%i3-224]
+	ldx	[%i6+1127],%o0
+	stx	%o0,[%i3-216]
+	ldx	[%i6+1119],%o0
+	stx	%o0,[%i3-208]
+	ldx	[%i6+1111],%o0
+	stx	%o0,[%i3-200]
+	ldx	[%i6+1103],%o0
+	stx	%o0,[%i3-192]
+	ldx	[%i6+1095],%o0
+	stx	%o0,[%i3-184]
+	ldx	[%i6+1087],%o0
+	stx	%o0,[%i3-176]
+	ldx	[%i6+1079],%o0
+	stx	%o0,[%i3-168]
+	ldx	[%i6+1071],%o0
+	stx	%o0,[%i3-160]
+	ldx	[%i6+1063],%o0
+	stx	%o0,[%i3-152]
+	ldx	[%i6+1055],%o0
+	stx	%o0,[%i3-144]
+	ldx	[%i6+1047],%o0
+	stx	%o0,[%i3-136]
+	ldx	[%i6+1039],%o0
+	stx	%o0,[%i3-128]
+	ldx	[%i6+1031],%o0
+	stx	%o0,[%i3-120]
+	ldx	[%i6+1007],%o0
+	stx	%o0,[%i3-112]
+	stx	%o2,[%i3-104]
+	stx	%o3,[%i3-96]
+	stx	%o4,[%i3-88]
+	stx	%o5,[%i3-80]
+	stx	%l0,[%i3-72]
+	stx	%l6,[%i3-64]
+	stx	%l7,[%i3-56]
+	stx	%i4,[%i3-48]
+	stx	%g3,[%i3-40]
+	stx	%g4,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1016,%g1
+	sethi	%hh(s78q_info),%g2
+	sethi	%lm(s78q_info),%g3
+	or	%g2,%hm(s78q_info),%g2
+	or	%g3,%lo(s78q_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccGt_end:
+.Ls7ax_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78l_info)+40
+	.quad	0
+	.quad	64424509441
+.align 4
+s78l_info:
+.LccGD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccGE
+	nop
+	b	.LccGF
+	nop
+.LccGD_end:
+.LccGE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccGE_end:
+.LccGF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInt_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInt_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInt_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInt_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccGF_end:
+.Ls78l_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78m_info)+32
+	.quad	0
+	.quad	64424509443
+.align 4
+s78m_info:
+.LccGG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccGH
+	nop
+	b	.LccGI
+	nop
+.LccGG_end:
+.LccGI:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccGK
+	nop
+	b	.LccGJ
+	nop
+.LccGI_end:
+.LccGK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccGH
+	nop
+.LccGK_end:
+.LccGH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccGH_end:
+.LccGJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78l_info),%g1
+	sethi	%lm(s78l_info),%g2
+	or	%g1,%hm(s78l_info),%g1
+	or	%g2,%lo(s78l_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccGJ_end:
+.Ls78m_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7ay_info)+0
+	.quad	528280977408
+	.quad	64424509567
+.align 4
+s7ay_info:
+.LccGL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccGM
+	nop
+	b	.LccGN
+	nop
+.LccGL_end:
+.LccGN:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1008,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccGP
+	nop
+	b	.LccGO
+	nop
+.LccGN_end:
+.LccGP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1008,%g2
+	stx	%g2,[%i1+904]
+	b	.LccGM
+	nop
+.LccGP_end:
+.LccGM:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccGM_end:
+.LccGO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	ldx	[%g1+992],%g1
+	stx	%o2,[%i6+1039]
+	sethi	%hh(s7ax_info),%o2
+	stx	%o2,[%i6+1031]
+	sethi	%lm(s7ax_info),%o2
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	or	%o2,%hm(s7ax_info),%o2
+	stx	%o2,[%i6+1031]
+	ldx	[%i6+1023],%o2
+	or	%o2,%lo(s7ax_info),%o2
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	sllx	%o2,32,%o2
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	or	%o3,%o2,%o3
+	stx	%o3,[%i3-1000]
+	ldx	[%i6+1911],%o2
+	stx	%o2,[%i3-992]
+	ldx	[%i6+1903],%o2
+	stx	%o2,[%i3-984]
+	ldx	[%i6+1895],%o2
+	stx	%o2,[%i3-976]
+	ldx	[%i6+1887],%o2
+	stx	%o2,[%i3-968]
+	ldx	[%i6+1879],%o2
+	stx	%o2,[%i3-960]
+	ldx	[%i6+1871],%o2
+	stx	%o2,[%i3-952]
+	ldx	[%i6+1863],%o2
+	stx	%o2,[%i3-944]
+	ldx	[%i6+1855],%o2
+	stx	%o2,[%i3-936]
+	ldx	[%i6+1847],%o2
+	stx	%o2,[%i3-928]
+	ldx	[%i6+1839],%o2
+	stx	%o2,[%i3-920]
+	ldx	[%i6+1831],%o2
+	stx	%o2,[%i3-912]
+	ldx	[%i6+1823],%o2
+	stx	%o2,[%i3-904]
+	ldx	[%i6+1815],%o2
+	stx	%o2,[%i3-896]
+	ldx	[%i6+1807],%o2
+	stx	%o2,[%i3-888]
+	ldx	[%i6+1799],%o2
+	stx	%o2,[%i3-880]
+	ldx	[%i6+1791],%o2
+	stx	%o2,[%i3-872]
+	ldx	[%i6+1783],%o2
+	stx	%o2,[%i3-864]
+	ldx	[%i6+1775],%o2
+	stx	%o2,[%i3-856]
+	ldx	[%i6+1767],%o2
+	stx	%o2,[%i3-848]
+	ldx	[%i6+1759],%o2
+	stx	%o2,[%i3-840]
+	ldx	[%i6+1751],%o2
+	stx	%o2,[%i3-832]
+	ldx	[%i6+1743],%o2
+	stx	%o2,[%i3-824]
+	ldx	[%i6+1735],%o2
+	stx	%o2,[%i3-816]
+	ldx	[%i6+1727],%o2
+	stx	%o2,[%i3-808]
+	ldx	[%i6+1719],%o2
+	stx	%o2,[%i3-800]
+	ldx	[%i6+1711],%o2
+	stx	%o2,[%i3-792]
+	ldx	[%i6+1703],%o2
+	stx	%o2,[%i3-784]
+	ldx	[%i6+1695],%o2
+	stx	%o2,[%i3-776]
+	ldx	[%i6+1687],%o2
+	stx	%o2,[%i3-768]
+	ldx	[%i6+1679],%o2
+	stx	%o2,[%i3-760]
+	ldx	[%i6+1671],%o2
+	stx	%o2,[%i3-752]
+	ldx	[%i6+1663],%o2
+	stx	%o2,[%i3-744]
+	ldx	[%i6+1655],%o2
+	stx	%o2,[%i3-736]
+	ldx	[%i6+1647],%o2
+	stx	%o2,[%i3-728]
+	ldx	[%i6+1639],%o2
+	stx	%o2,[%i3-720]
+	ldx	[%i6+1631],%o2
+	stx	%o2,[%i3-712]
+	ldx	[%i6+1623],%o2
+	stx	%o2,[%i3-704]
+	ldx	[%i6+1615],%o2
+	stx	%o2,[%i3-696]
+	ldx	[%i6+1607],%o2
+	stx	%o2,[%i3-688]
+	ldx	[%i6+1599],%o2
+	stx	%o2,[%i3-680]
+	ldx	[%i6+1591],%o2
+	stx	%o2,[%i3-672]
+	ldx	[%i6+1583],%o2
+	stx	%o2,[%i3-664]
+	ldx	[%i6+1575],%o2
+	stx	%o2,[%i3-656]
+	ldx	[%i6+1567],%o2
+	stx	%o2,[%i3-648]
+	ldx	[%i6+1559],%o2
+	stx	%o2,[%i3-640]
+	ldx	[%i6+1551],%o2
+	stx	%o2,[%i3-632]
+	ldx	[%i6+1543],%o2
+	stx	%o2,[%i3-624]
+	ldx	[%i6+1535],%o2
+	stx	%o2,[%i3-616]
+	ldx	[%i6+1527],%o2
+	stx	%o2,[%i3-608]
+	ldx	[%i6+1519],%o2
+	stx	%o2,[%i3-600]
+	ldx	[%i6+1511],%o2
+	stx	%o2,[%i3-592]
+	ldx	[%i6+1503],%o2
+	stx	%o2,[%i3-584]
+	ldx	[%i6+1495],%o2
+	stx	%o2,[%i3-576]
+	ldx	[%i6+1487],%o2
+	stx	%o2,[%i3-568]
+	ldx	[%i6+1479],%o2
+	stx	%o2,[%i3-560]
+	ldx	[%i6+1471],%o2
+	stx	%o2,[%i3-552]
+	ldx	[%i6+1463],%o2
+	stx	%o2,[%i3-544]
+	ldx	[%i6+1455],%o2
+	stx	%o2,[%i3-536]
+	ldx	[%i6+1447],%o2
+	stx	%o2,[%i3-528]
+	ldx	[%i6+1439],%o2
+	stx	%o2,[%i3-520]
+	ldx	[%i6+1431],%o2
+	stx	%o2,[%i3-512]
+	ldx	[%i6+1423],%o2
+	stx	%o2,[%i3-504]
+	ldx	[%i6+1415],%o2
+	stx	%o2,[%i3-496]
+	ldx	[%i6+1407],%o2
+	stx	%o2,[%i3-488]
+	ldx	[%i6+1399],%o2
+	stx	%o2,[%i3-480]
+	ldx	[%i6+1391],%o2
+	stx	%o2,[%i3-472]
+	ldx	[%i6+1383],%o2
+	stx	%o2,[%i3-464]
+	ldx	[%i6+1375],%o2
+	stx	%o2,[%i3-456]
+	ldx	[%i6+1367],%o2
+	stx	%o2,[%i3-448]
+	ldx	[%i6+1359],%o2
+	stx	%o2,[%i3-440]
+	ldx	[%i6+1351],%o2
+	stx	%o2,[%i3-432]
+	ldx	[%i6+1343],%o2
+	stx	%o2,[%i3-424]
+	ldx	[%i6+1335],%o2
+	stx	%o2,[%i3-416]
+	ldx	[%i6+1327],%o2
+	stx	%o2,[%i3-408]
+	ldx	[%i6+1319],%o2
+	stx	%o2,[%i3-400]
+	ldx	[%i6+1311],%o2
+	stx	%o2,[%i3-392]
+	ldx	[%i6+1303],%o2
+	stx	%o2,[%i3-384]
+	ldx	[%i6+1295],%o2
+	stx	%o2,[%i3-376]
+	ldx	[%i6+1287],%o2
+	stx	%o2,[%i3-368]
+	ldx	[%i6+1279],%o2
+	stx	%o2,[%i3-360]
+	ldx	[%i6+1271],%o2
+	stx	%o2,[%i3-352]
+	ldx	[%i6+1263],%o2
+	stx	%o2,[%i3-344]
+	ldx	[%i6+1255],%o2
+	stx	%o2,[%i3-336]
+	ldx	[%i6+1247],%o2
+	stx	%o2,[%i3-328]
+	ldx	[%i6+1239],%o2
+	stx	%o2,[%i3-320]
+	ldx	[%i6+1231],%o2
+	stx	%o2,[%i3-312]
+	ldx	[%i6+1223],%o2
+	stx	%o2,[%i3-304]
+	ldx	[%i6+1215],%o2
+	stx	%o2,[%i3-296]
+	ldx	[%i6+1207],%o2
+	stx	%o2,[%i3-288]
+	ldx	[%i6+1199],%o2
+	stx	%o2,[%i3-280]
+	ldx	[%i6+1191],%o2
+	stx	%o2,[%i3-272]
+	ldx	[%i6+1183],%o2
+	stx	%o2,[%i3-264]
+	ldx	[%i6+1175],%o2
+	stx	%o2,[%i3-256]
+	ldx	[%i6+1167],%o2
+	stx	%o2,[%i3-248]
+	ldx	[%i6+1159],%o2
+	stx	%o2,[%i3-240]
+	ldx	[%i6+1151],%o2
+	stx	%o2,[%i3-232]
+	ldx	[%i6+1143],%o2
+	stx	%o2,[%i3-224]
+	ldx	[%i6+1135],%o2
+	stx	%o2,[%i3-216]
+	ldx	[%i6+1127],%o2
+	stx	%o2,[%i3-208]
+	ldx	[%i6+1119],%o2
+	stx	%o2,[%i3-200]
+	ldx	[%i6+1111],%o2
+	stx	%o2,[%i3-192]
+	ldx	[%i6+1103],%o2
+	stx	%o2,[%i3-184]
+	ldx	[%i6+1095],%o2
+	stx	%o2,[%i3-176]
+	ldx	[%i6+1087],%o2
+	stx	%o2,[%i3-168]
+	ldx	[%i6+1079],%o2
+	stx	%o2,[%i3-160]
+	ldx	[%i6+1071],%o2
+	stx	%o2,[%i3-152]
+	ldx	[%i6+1063],%o2
+	stx	%o2,[%i3-144]
+	ldx	[%i6+1055],%o2
+	stx	%o2,[%i3-136]
+	ldx	[%i6+1047],%o2
+	stx	%o2,[%i3-128]
+	ldx	[%i6+1039],%o2
+	stx	%o2,[%i3-120]
+	ldx	[%i6+1015],%o2
+	stx	%o2,[%i3-112]
+	stx	%o4,[%i3-104]
+	stx	%o5,[%i3-96]
+	stx	%l0,[%i3-88]
+	stx	%l6,[%i3-80]
+	stx	%l7,[%i3-72]
+	stx	%i4,[%i3-64]
+	stx	%g2,[%i3-56]
+	stx	%g3,[%i3-48]
+	stx	%g4,[%i3-40]
+	stx	%o0,[%i3-32]
+	stx	%o1,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-999,%g1
+	sethi	%hh(s78m_info),%g2
+	sethi	%lm(s78m_info),%g3
+	or	%g2,%hm(s78m_info),%g2
+	or	%g3,%lo(s78m_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccGO_end:
+.Ls7ay_entry_end:
+.section .rodata
+.align 8
+ccGY_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78i_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78i_info:
+.LccGZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccH0
+	nop
+	b	.LccH1
+	nop
+.LccGZ_end:
+.LccH0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccH0_end:
+.LccH1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccGY_str),%g1
+	sethi	%lm(ccGY_str),%l2
+	or	%g1,%hm(ccGY_str),%g1
+	or	%l2,%lo(ccGY_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccH1_end:
+.Ls78i_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78k_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78k_info:
+.LccH3:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccH4
+	nop
+	b	.LccH5
+	nop
+.LccH3_end:
+.LccH5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccH7
+	nop
+	b	.LccH6
+	nop
+.LccH5_end:
+.LccH7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccH4
+	nop
+.LccH7_end:
+.LccH4:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccH4_end:
+.LccH6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78i_info),%g1
+	sethi	%lm(s78i_info),%g2
+	or	%g1,%hm(s78i_info),%g1
+	or	%g2,%lo(s78i_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccH6_end:
+.Ls78k_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7az_info)+0
+	.quad	528280977408
+	.quad	64424509567
+.align 4
+s7az_info:
+.LccH8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccH9
+	nop
+	b	.LccHa
+	nop
+.LccH8_end:
+.LccHa:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1016,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccHc
+	nop
+	b	.LccHb
+	nop
+.LccHa_end:
+.LccHc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1016,%g2
+	stx	%g2,[%i1+904]
+	b	.LccH9
+	nop
+.LccHc_end:
+.LccH9:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccH9_end:
+.LccHb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	ldx	[%g1+992],%g1
+	stx	%o2,[%i6+1039]
+	sethi	%hh(s7ay_info),%o2
+	stx	%o2,[%i6+1031]
+	sethi	%lm(s7ay_info),%o2
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	or	%o2,%hm(s7ay_info),%o2
+	stx	%o2,[%i6+1031]
+	ldx	[%i6+1023],%o2
+	or	%o2,%lo(s7ay_info),%o2
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	sllx	%o2,32,%o2
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	or	%o3,%o2,%o3
+	stx	%o3,[%i3-1008]
+	ldx	[%i6+1911],%o2
+	stx	%o2,[%i3-992]
+	ldx	[%i6+1903],%o2
+	stx	%o2,[%i3-984]
+	ldx	[%i6+1895],%o2
+	stx	%o2,[%i3-976]
+	ldx	[%i6+1887],%o2
+	stx	%o2,[%i3-968]
+	ldx	[%i6+1879],%o2
+	stx	%o2,[%i3-960]
+	ldx	[%i6+1871],%o2
+	stx	%o2,[%i3-952]
+	ldx	[%i6+1863],%o2
+	stx	%o2,[%i3-944]
+	ldx	[%i6+1855],%o2
+	stx	%o2,[%i3-936]
+	ldx	[%i6+1847],%o2
+	stx	%o2,[%i3-928]
+	ldx	[%i6+1839],%o2
+	stx	%o2,[%i3-920]
+	ldx	[%i6+1831],%o2
+	stx	%o2,[%i3-912]
+	ldx	[%i6+1823],%o2
+	stx	%o2,[%i3-904]
+	ldx	[%i6+1815],%o2
+	stx	%o2,[%i3-896]
+	ldx	[%i6+1807],%o2
+	stx	%o2,[%i3-888]
+	ldx	[%i6+1799],%o2
+	stx	%o2,[%i3-880]
+	ldx	[%i6+1791],%o2
+	stx	%o2,[%i3-872]
+	ldx	[%i6+1783],%o2
+	stx	%o2,[%i3-864]
+	ldx	[%i6+1775],%o2
+	stx	%o2,[%i3-856]
+	ldx	[%i6+1767],%o2
+	stx	%o2,[%i3-848]
+	ldx	[%i6+1759],%o2
+	stx	%o2,[%i3-840]
+	ldx	[%i6+1751],%o2
+	stx	%o2,[%i3-832]
+	ldx	[%i6+1743],%o2
+	stx	%o2,[%i3-824]
+	ldx	[%i6+1735],%o2
+	stx	%o2,[%i3-816]
+	ldx	[%i6+1727],%o2
+	stx	%o2,[%i3-808]
+	ldx	[%i6+1719],%o2
+	stx	%o2,[%i3-800]
+	ldx	[%i6+1711],%o2
+	stx	%o2,[%i3-792]
+	ldx	[%i6+1703],%o2
+	stx	%o2,[%i3-784]
+	ldx	[%i6+1695],%o2
+	stx	%o2,[%i3-776]
+	ldx	[%i6+1687],%o2
+	stx	%o2,[%i3-768]
+	ldx	[%i6+1679],%o2
+	stx	%o2,[%i3-760]
+	ldx	[%i6+1671],%o2
+	stx	%o2,[%i3-752]
+	ldx	[%i6+1663],%o2
+	stx	%o2,[%i3-744]
+	ldx	[%i6+1655],%o2
+	stx	%o2,[%i3-736]
+	ldx	[%i6+1647],%o2
+	stx	%o2,[%i3-728]
+	ldx	[%i6+1639],%o2
+	stx	%o2,[%i3-720]
+	ldx	[%i6+1631],%o2
+	stx	%o2,[%i3-712]
+	ldx	[%i6+1623],%o2
+	stx	%o2,[%i3-704]
+	ldx	[%i6+1615],%o2
+	stx	%o2,[%i3-696]
+	ldx	[%i6+1607],%o2
+	stx	%o2,[%i3-688]
+	ldx	[%i6+1599],%o2
+	stx	%o2,[%i3-680]
+	ldx	[%i6+1591],%o2
+	stx	%o2,[%i3-672]
+	ldx	[%i6+1583],%o2
+	stx	%o2,[%i3-664]
+	ldx	[%i6+1575],%o2
+	stx	%o2,[%i3-656]
+	ldx	[%i6+1567],%o2
+	stx	%o2,[%i3-648]
+	ldx	[%i6+1559],%o2
+	stx	%o2,[%i3-640]
+	ldx	[%i6+1551],%o2
+	stx	%o2,[%i3-632]
+	ldx	[%i6+1543],%o2
+	stx	%o2,[%i3-624]
+	ldx	[%i6+1535],%o2
+	stx	%o2,[%i3-616]
+	ldx	[%i6+1527],%o2
+	stx	%o2,[%i3-608]
+	ldx	[%i6+1519],%o2
+	stx	%o2,[%i3-600]
+	ldx	[%i6+1511],%o2
+	stx	%o2,[%i3-592]
+	ldx	[%i6+1503],%o2
+	stx	%o2,[%i3-584]
+	ldx	[%i6+1495],%o2
+	stx	%o2,[%i3-576]
+	ldx	[%i6+1487],%o2
+	stx	%o2,[%i3-568]
+	ldx	[%i6+1479],%o2
+	stx	%o2,[%i3-560]
+	ldx	[%i6+1471],%o2
+	stx	%o2,[%i3-552]
+	ldx	[%i6+1463],%o2
+	stx	%o2,[%i3-544]
+	ldx	[%i6+1455],%o2
+	stx	%o2,[%i3-536]
+	ldx	[%i6+1447],%o2
+	stx	%o2,[%i3-528]
+	ldx	[%i6+1439],%o2
+	stx	%o2,[%i3-520]
+	ldx	[%i6+1431],%o2
+	stx	%o2,[%i3-512]
+	ldx	[%i6+1423],%o2
+	stx	%o2,[%i3-504]
+	ldx	[%i6+1415],%o2
+	stx	%o2,[%i3-496]
+	ldx	[%i6+1407],%o2
+	stx	%o2,[%i3-488]
+	ldx	[%i6+1399],%o2
+	stx	%o2,[%i3-480]
+	ldx	[%i6+1391],%o2
+	stx	%o2,[%i3-472]
+	ldx	[%i6+1383],%o2
+	stx	%o2,[%i3-464]
+	ldx	[%i6+1375],%o2
+	stx	%o2,[%i3-456]
+	ldx	[%i6+1367],%o2
+	stx	%o2,[%i3-448]
+	ldx	[%i6+1359],%o2
+	stx	%o2,[%i3-440]
+	ldx	[%i6+1351],%o2
+	stx	%o2,[%i3-432]
+	ldx	[%i6+1343],%o2
+	stx	%o2,[%i3-424]
+	ldx	[%i6+1335],%o2
+	stx	%o2,[%i3-416]
+	ldx	[%i6+1327],%o2
+	stx	%o2,[%i3-408]
+	ldx	[%i6+1319],%o2
+	stx	%o2,[%i3-400]
+	ldx	[%i6+1311],%o2
+	stx	%o2,[%i3-392]
+	ldx	[%i6+1303],%o2
+	stx	%o2,[%i3-384]
+	ldx	[%i6+1295],%o2
+	stx	%o2,[%i3-376]
+	ldx	[%i6+1287],%o2
+	stx	%o2,[%i3-368]
+	ldx	[%i6+1279],%o2
+	stx	%o2,[%i3-360]
+	ldx	[%i6+1271],%o2
+	stx	%o2,[%i3-352]
+	ldx	[%i6+1263],%o2
+	stx	%o2,[%i3-344]
+	ldx	[%i6+1255],%o2
+	stx	%o2,[%i3-336]
+	ldx	[%i6+1247],%o2
+	stx	%o2,[%i3-328]
+	ldx	[%i6+1239],%o2
+	stx	%o2,[%i3-320]
+	ldx	[%i6+1231],%o2
+	stx	%o2,[%i3-312]
+	ldx	[%i6+1223],%o2
+	stx	%o2,[%i3-304]
+	ldx	[%i6+1215],%o2
+	stx	%o2,[%i3-296]
+	ldx	[%i6+1207],%o2
+	stx	%o2,[%i3-288]
+	ldx	[%i6+1199],%o2
+	stx	%o2,[%i3-280]
+	ldx	[%i6+1191],%o2
+	stx	%o2,[%i3-272]
+	ldx	[%i6+1183],%o2
+	stx	%o2,[%i3-264]
+	ldx	[%i6+1175],%o2
+	stx	%o2,[%i3-256]
+	ldx	[%i6+1167],%o2
+	stx	%o2,[%i3-248]
+	ldx	[%i6+1159],%o2
+	stx	%o2,[%i3-240]
+	ldx	[%i6+1151],%o2
+	stx	%o2,[%i3-232]
+	ldx	[%i6+1143],%o2
+	stx	%o2,[%i3-224]
+	ldx	[%i6+1135],%o2
+	stx	%o2,[%i3-216]
+	ldx	[%i6+1127],%o2
+	stx	%o2,[%i3-208]
+	ldx	[%i6+1119],%o2
+	stx	%o2,[%i3-200]
+	ldx	[%i6+1111],%o2
+	stx	%o2,[%i3-192]
+	ldx	[%i6+1103],%o2
+	stx	%o2,[%i3-184]
+	ldx	[%i6+1095],%o2
+	stx	%o2,[%i3-176]
+	ldx	[%i6+1087],%o2
+	stx	%o2,[%i3-168]
+	ldx	[%i6+1079],%o2
+	stx	%o2,[%i3-160]
+	ldx	[%i6+1071],%o2
+	stx	%o2,[%i3-152]
+	ldx	[%i6+1063],%o2
+	stx	%o2,[%i3-144]
+	ldx	[%i6+1055],%o2
+	stx	%o2,[%i3-136]
+	ldx	[%i6+1047],%o2
+	stx	%o2,[%i3-128]
+	ldx	[%i6+1039],%o2
+	stx	%o2,[%i3-120]
+	ldx	[%i6+1015],%o2
+	stx	%o2,[%i3-112]
+	stx	%o4,[%i3-104]
+	stx	%o5,[%i3-96]
+	stx	%l0,[%i3-88]
+	stx	%l6,[%i3-80]
+	stx	%l7,[%i3-72]
+	stx	%i4,[%i3-64]
+	stx	%g2,[%i3-56]
+	stx	%g3,[%i3-48]
+	stx	%g4,[%i3-40]
+	stx	%o0,[%i3-32]
+	stx	%o1,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1008,%g1
+	sethi	%hh(s78k_info),%g2
+	sethi	%lm(s78k_info),%g3
+	or	%g2,%hm(s78k_info),%g2
+	or	%g3,%lo(s78k_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccHb_end:
+.Ls7az_entry_end:
+.section .rodata
+.align 8
+ccHl_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	67
+	.byte	76
+	.byte	79
+	.byte	78
+	.byte	71
+	.byte	95
+	.byte	76
+	.byte	79
+	.byte	78
+	.byte	71
+	.byte	95
+	.byte	83
+	.byte	73
+	.byte	90
+	.byte	69
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78f_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78f_info:
+.LccHm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccHn
+	nop
+	b	.LccHo
+	nop
+.LccHm_end:
+.LccHn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccHn_end:
+.LccHo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccHl_str),%g1
+	sethi	%lm(ccHl_str),%l2
+	or	%g1,%hm(ccHl_str),%g1
+	or	%l2,%lo(ccHl_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccHo_end:
+.Ls78f_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78h_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78h_info:
+.LccHq:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccHr
+	nop
+	b	.LccHs
+	nop
+.LccHq_end:
+.LccHs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccHu
+	nop
+	b	.LccHt
+	nop
+.LccHs_end:
+.LccHu:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccHr
+	nop
+.LccHu_end:
+.LccHr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccHr_end:
+.LccHt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78f_info),%g1
+	sethi	%lm(s78f_info),%g2
+	or	%g1,%hm(s78f_info),%g1
+	or	%g2,%lo(s78f_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccHt_end:
+.Ls78h_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aA_info)+0
+	.quad	528280977408
+	.quad	64424509567
+.align 4
+s7aA_info:
+.LccHv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccHw
+	nop
+	b	.LccHx
+	nop
+.LccHv_end:
+.LccHx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1016,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccHz
+	nop
+	b	.LccHy
+	nop
+.LccHx_end:
+.LccHz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1016,%g2
+	stx	%g2,[%i1+904]
+	b	.LccHw
+	nop
+.LccHz_end:
+.LccHw:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccHw_end:
+.LccHy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	stx	%o1,[%i6+1047]
+	ldx	[%g1+984],%o1
+	ldx	[%g1+992],%g1
+	stx	%o2,[%i6+1039]
+	sethi	%hh(s7az_info),%o2
+	stx	%o2,[%i6+1031]
+	sethi	%lm(s7az_info),%o2
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	or	%o2,%hm(s7az_info),%o2
+	stx	%o2,[%i6+1031]
+	ldx	[%i6+1023],%o2
+	or	%o2,%lo(s7az_info),%o2
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	sllx	%o2,32,%o2
+	stx	%o3,[%i6+1015]
+	ldx	[%i6+1023],%o3
+	or	%o3,%o2,%o3
+	stx	%o3,[%i3-1008]
+	ldx	[%i6+1911],%o2
+	stx	%o2,[%i3-992]
+	ldx	[%i6+1903],%o2
+	stx	%o2,[%i3-984]
+	ldx	[%i6+1895],%o2
+	stx	%o2,[%i3-976]
+	ldx	[%i6+1887],%o2
+	stx	%o2,[%i3-968]
+	ldx	[%i6+1879],%o2
+	stx	%o2,[%i3-960]
+	ldx	[%i6+1871],%o2
+	stx	%o2,[%i3-952]
+	ldx	[%i6+1863],%o2
+	stx	%o2,[%i3-944]
+	ldx	[%i6+1855],%o2
+	stx	%o2,[%i3-936]
+	ldx	[%i6+1847],%o2
+	stx	%o2,[%i3-928]
+	ldx	[%i6+1839],%o2
+	stx	%o2,[%i3-920]
+	ldx	[%i6+1831],%o2
+	stx	%o2,[%i3-912]
+	ldx	[%i6+1823],%o2
+	stx	%o2,[%i3-904]
+	ldx	[%i6+1815],%o2
+	stx	%o2,[%i3-896]
+	ldx	[%i6+1807],%o2
+	stx	%o2,[%i3-888]
+	ldx	[%i6+1799],%o2
+	stx	%o2,[%i3-880]
+	ldx	[%i6+1791],%o2
+	stx	%o2,[%i3-872]
+	ldx	[%i6+1783],%o2
+	stx	%o2,[%i3-864]
+	ldx	[%i6+1775],%o2
+	stx	%o2,[%i3-856]
+	ldx	[%i6+1767],%o2
+	stx	%o2,[%i3-848]
+	ldx	[%i6+1759],%o2
+	stx	%o2,[%i3-840]
+	ldx	[%i6+1751],%o2
+	stx	%o2,[%i3-832]
+	ldx	[%i6+1743],%o2
+	stx	%o2,[%i3-824]
+	ldx	[%i6+1735],%o2
+	stx	%o2,[%i3-816]
+	ldx	[%i6+1727],%o2
+	stx	%o2,[%i3-808]
+	ldx	[%i6+1719],%o2
+	stx	%o2,[%i3-800]
+	ldx	[%i6+1711],%o2
+	stx	%o2,[%i3-792]
+	ldx	[%i6+1703],%o2
+	stx	%o2,[%i3-784]
+	ldx	[%i6+1695],%o2
+	stx	%o2,[%i3-776]
+	ldx	[%i6+1687],%o2
+	stx	%o2,[%i3-768]
+	ldx	[%i6+1679],%o2
+	stx	%o2,[%i3-760]
+	ldx	[%i6+1671],%o2
+	stx	%o2,[%i3-752]
+	ldx	[%i6+1663],%o2
+	stx	%o2,[%i3-744]
+	ldx	[%i6+1655],%o2
+	stx	%o2,[%i3-736]
+	ldx	[%i6+1647],%o2
+	stx	%o2,[%i3-728]
+	ldx	[%i6+1639],%o2
+	stx	%o2,[%i3-720]
+	ldx	[%i6+1631],%o2
+	stx	%o2,[%i3-712]
+	ldx	[%i6+1623],%o2
+	stx	%o2,[%i3-704]
+	ldx	[%i6+1615],%o2
+	stx	%o2,[%i3-696]
+	ldx	[%i6+1607],%o2
+	stx	%o2,[%i3-688]
+	ldx	[%i6+1599],%o2
+	stx	%o2,[%i3-680]
+	ldx	[%i6+1591],%o2
+	stx	%o2,[%i3-672]
+	ldx	[%i6+1583],%o2
+	stx	%o2,[%i3-664]
+	ldx	[%i6+1575],%o2
+	stx	%o2,[%i3-656]
+	ldx	[%i6+1567],%o2
+	stx	%o2,[%i3-648]
+	ldx	[%i6+1559],%o2
+	stx	%o2,[%i3-640]
+	ldx	[%i6+1551],%o2
+	stx	%o2,[%i3-632]
+	ldx	[%i6+1543],%o2
+	stx	%o2,[%i3-624]
+	ldx	[%i6+1535],%o2
+	stx	%o2,[%i3-616]
+	ldx	[%i6+1527],%o2
+	stx	%o2,[%i3-608]
+	ldx	[%i6+1519],%o2
+	stx	%o2,[%i3-600]
+	ldx	[%i6+1511],%o2
+	stx	%o2,[%i3-592]
+	ldx	[%i6+1503],%o2
+	stx	%o2,[%i3-584]
+	ldx	[%i6+1495],%o2
+	stx	%o2,[%i3-576]
+	ldx	[%i6+1487],%o2
+	stx	%o2,[%i3-568]
+	ldx	[%i6+1479],%o2
+	stx	%o2,[%i3-560]
+	ldx	[%i6+1471],%o2
+	stx	%o2,[%i3-552]
+	ldx	[%i6+1463],%o2
+	stx	%o2,[%i3-544]
+	ldx	[%i6+1455],%o2
+	stx	%o2,[%i3-536]
+	ldx	[%i6+1447],%o2
+	stx	%o2,[%i3-528]
+	ldx	[%i6+1439],%o2
+	stx	%o2,[%i3-520]
+	ldx	[%i6+1431],%o2
+	stx	%o2,[%i3-512]
+	ldx	[%i6+1423],%o2
+	stx	%o2,[%i3-504]
+	ldx	[%i6+1415],%o2
+	stx	%o2,[%i3-496]
+	ldx	[%i6+1407],%o2
+	stx	%o2,[%i3-488]
+	ldx	[%i6+1399],%o2
+	stx	%o2,[%i3-480]
+	ldx	[%i6+1391],%o2
+	stx	%o2,[%i3-472]
+	ldx	[%i6+1383],%o2
+	stx	%o2,[%i3-464]
+	ldx	[%i6+1375],%o2
+	stx	%o2,[%i3-456]
+	ldx	[%i6+1367],%o2
+	stx	%o2,[%i3-448]
+	ldx	[%i6+1359],%o2
+	stx	%o2,[%i3-440]
+	ldx	[%i6+1351],%o2
+	stx	%o2,[%i3-432]
+	ldx	[%i6+1343],%o2
+	stx	%o2,[%i3-424]
+	ldx	[%i6+1335],%o2
+	stx	%o2,[%i3-416]
+	ldx	[%i6+1327],%o2
+	stx	%o2,[%i3-408]
+	ldx	[%i6+1319],%o2
+	stx	%o2,[%i3-400]
+	ldx	[%i6+1311],%o2
+	stx	%o2,[%i3-392]
+	ldx	[%i6+1303],%o2
+	stx	%o2,[%i3-384]
+	ldx	[%i6+1295],%o2
+	stx	%o2,[%i3-376]
+	ldx	[%i6+1287],%o2
+	stx	%o2,[%i3-368]
+	ldx	[%i6+1279],%o2
+	stx	%o2,[%i3-360]
+	ldx	[%i6+1271],%o2
+	stx	%o2,[%i3-352]
+	ldx	[%i6+1263],%o2
+	stx	%o2,[%i3-344]
+	ldx	[%i6+1255],%o2
+	stx	%o2,[%i3-336]
+	ldx	[%i6+1247],%o2
+	stx	%o2,[%i3-328]
+	ldx	[%i6+1239],%o2
+	stx	%o2,[%i3-320]
+	ldx	[%i6+1231],%o2
+	stx	%o2,[%i3-312]
+	ldx	[%i6+1223],%o2
+	stx	%o2,[%i3-304]
+	ldx	[%i6+1215],%o2
+	stx	%o2,[%i3-296]
+	ldx	[%i6+1207],%o2
+	stx	%o2,[%i3-288]
+	ldx	[%i6+1199],%o2
+	stx	%o2,[%i3-280]
+	ldx	[%i6+1191],%o2
+	stx	%o2,[%i3-272]
+	ldx	[%i6+1183],%o2
+	stx	%o2,[%i3-264]
+	ldx	[%i6+1175],%o2
+	stx	%o2,[%i3-256]
+	ldx	[%i6+1167],%o2
+	stx	%o2,[%i3-248]
+	ldx	[%i6+1159],%o2
+	stx	%o2,[%i3-240]
+	ldx	[%i6+1151],%o2
+	stx	%o2,[%i3-232]
+	ldx	[%i6+1143],%o2
+	stx	%o2,[%i3-224]
+	ldx	[%i6+1135],%o2
+	stx	%o2,[%i3-216]
+	ldx	[%i6+1127],%o2
+	stx	%o2,[%i3-208]
+	ldx	[%i6+1119],%o2
+	stx	%o2,[%i3-200]
+	ldx	[%i6+1111],%o2
+	stx	%o2,[%i3-192]
+	ldx	[%i6+1103],%o2
+	stx	%o2,[%i3-184]
+	ldx	[%i6+1095],%o2
+	stx	%o2,[%i3-176]
+	ldx	[%i6+1087],%o2
+	stx	%o2,[%i3-168]
+	ldx	[%i6+1079],%o2
+	stx	%o2,[%i3-160]
+	ldx	[%i6+1071],%o2
+	stx	%o2,[%i3-152]
+	ldx	[%i6+1063],%o2
+	stx	%o2,[%i3-144]
+	ldx	[%i6+1055],%o2
+	stx	%o2,[%i3-136]
+	ldx	[%i6+1047],%o2
+	stx	%o2,[%i3-128]
+	ldx	[%i6+1039],%o2
+	stx	%o2,[%i3-120]
+	ldx	[%i6+1015],%o2
+	stx	%o2,[%i3-112]
+	stx	%o4,[%i3-104]
+	stx	%o5,[%i3-96]
+	stx	%l0,[%i3-88]
+	stx	%l6,[%i3-80]
+	stx	%l7,[%i3-72]
+	stx	%i4,[%i3-64]
+	stx	%g2,[%i3-56]
+	stx	%g3,[%i3-48]
+	stx	%g4,[%i3-40]
+	stx	%o0,[%i3-32]
+	stx	%o1,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1008,%g1
+	sethi	%hh(s78h_info),%g2
+	sethi	%lm(s78h_info),%g3
+	or	%g2,%hm(s78h_info),%g2
+	or	%g3,%lo(s78h_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccHy_end:
+.Ls7aA_entry_end:
+.section .rodata
+.align 8
+ccHI_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78c_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s78c_info:
+.LccHJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccHK
+	nop
+	b	.LccHL
+	nop
+.LccHJ_end:
+.LccHK:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccHK_end:
+.LccHL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccHI_str),%g1
+	sethi	%lm(ccHI_str),%l2
+	or	%g1,%hm(ccHI_str),%g1
+	or	%l2,%lo(ccHI_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccHL_end:
+.Ls78c_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78e_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s78e_info:
+.LccHN:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccHO
+	nop
+	b	.LccHP
+	nop
+.LccHN_end:
+.LccHP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccHR
+	nop
+	b	.LccHQ
+	nop
+.LccHP_end:
+.LccHR:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccHO
+	nop
+.LccHR_end:
+.LccHO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccHO_end:
+.LccHQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s78c_info),%g1
+	sethi	%lm(s78c_info),%g2
+	or	%g1,%hm(s78c_info),%g1
+	or	%g2,%lo(s78c_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccHQ_end:
+.Ls78e_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aB_info)+0
+	.quad	21474836481
+	.quad	523986010112
+	.quad	34359738495
+.align 4
+s7aB_info:
+.LccHS:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccHT
+	nop
+	b	.LccHU
+	nop
+.LccHS_end:
+.LccHU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1016,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccHW
+	nop
+	b	.LccHV
+	nop
+.LccHU_end:
+.LccHW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1016,%g3
+	stx	%g3,[%i1+904]
+	b	.LccHT
+	nop
+.LccHW_end:
+.LccHT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccHT_end:
+.LccHV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	stx	%g3,[%i6+1047]
+	ldx	[%g2+967],%g3
+	ldx	[%g2+975],%g2
+	stx	%g4,[%i6+1039]
+	sethi	%hh(s7aA_info),%g4
+	stx	%g4,[%i6+1031]
+	sethi	%lm(s7aA_info),%g4
+	stx	%g4,[%i6+1023]
+	ldx	[%i6+1031],%g4
+	or	%g4,%hm(s7aA_info),%g4
+	stx	%g4,[%i6+1031]
+	ldx	[%i6+1023],%g4
+	or	%g4,%lo(s7aA_info),%g4
+	stx	%g4,[%i6+1023]
+	ldx	[%i6+1031],%g4
+	sllx	%g4,32,%g4
+	stx	%o0,[%i6+1015]
+	ldx	[%i6+1023],%o0
+	or	%o0,%g4,%o0
+	stx	%o0,[%i3-1008]
+	ldx	[%i6+1911],%g4
+	stx	%g4,[%i3-992]
+	ldx	[%i6+1903],%g4
+	stx	%g4,[%i3-984]
+	ldx	[%i6+1895],%g4
+	stx	%g4,[%i3-976]
+	ldx	[%i6+1887],%g4
+	stx	%g4,[%i3-968]
+	ldx	[%i6+1879],%g4
+	stx	%g4,[%i3-960]
+	ldx	[%i6+1871],%g4
+	stx	%g4,[%i3-952]
+	ldx	[%i6+1863],%g4
+	stx	%g4,[%i3-944]
+	ldx	[%i6+1855],%g4
+	stx	%g4,[%i3-936]
+	ldx	[%i6+1847],%g4
+	stx	%g4,[%i3-928]
+	ldx	[%i6+1839],%g4
+	stx	%g4,[%i3-920]
+	ldx	[%i6+1831],%g4
+	stx	%g4,[%i3-912]
+	ldx	[%i6+1823],%g4
+	stx	%g4,[%i3-904]
+	ldx	[%i6+1815],%g4
+	stx	%g4,[%i3-896]
+	ldx	[%i6+1807],%g4
+	stx	%g4,[%i3-888]
+	ldx	[%i6+1799],%g4
+	stx	%g4,[%i3-880]
+	ldx	[%i6+1791],%g4
+	stx	%g4,[%i3-872]
+	ldx	[%i6+1783],%g4
+	stx	%g4,[%i3-864]
+	ldx	[%i6+1775],%g4
+	stx	%g4,[%i3-856]
+	ldx	[%i6+1767],%g4
+	stx	%g4,[%i3-848]
+	ldx	[%i6+1759],%g4
+	stx	%g4,[%i3-840]
+	ldx	[%i6+1751],%g4
+	stx	%g4,[%i3-832]
+	ldx	[%i6+1743],%g4
+	stx	%g4,[%i3-824]
+	ldx	[%i6+1735],%g4
+	stx	%g4,[%i3-816]
+	ldx	[%i6+1727],%g4
+	stx	%g4,[%i3-808]
+	ldx	[%i6+1719],%g4
+	stx	%g4,[%i3-800]
+	ldx	[%i6+1711],%g4
+	stx	%g4,[%i3-792]
+	ldx	[%i6+1703],%g4
+	stx	%g4,[%i3-784]
+	ldx	[%i6+1695],%g4
+	stx	%g4,[%i3-776]
+	ldx	[%i6+1687],%g4
+	stx	%g4,[%i3-768]
+	ldx	[%i6+1679],%g4
+	stx	%g4,[%i3-760]
+	ldx	[%i6+1671],%g4
+	stx	%g4,[%i3-752]
+	ldx	[%i6+1663],%g4
+	stx	%g4,[%i3-744]
+	ldx	[%i6+1655],%g4
+	stx	%g4,[%i3-736]
+	ldx	[%i6+1647],%g4
+	stx	%g4,[%i3-728]
+	ldx	[%i6+1639],%g4
+	stx	%g4,[%i3-720]
+	ldx	[%i6+1631],%g4
+	stx	%g4,[%i3-712]
+	ldx	[%i6+1623],%g4
+	stx	%g4,[%i3-704]
+	ldx	[%i6+1615],%g4
+	stx	%g4,[%i3-696]
+	ldx	[%i6+1607],%g4
+	stx	%g4,[%i3-688]
+	ldx	[%i6+1599],%g4
+	stx	%g4,[%i3-680]
+	ldx	[%i6+1591],%g4
+	stx	%g4,[%i3-672]
+	ldx	[%i6+1583],%g4
+	stx	%g4,[%i3-664]
+	ldx	[%i6+1575],%g4
+	stx	%g4,[%i3-656]
+	ldx	[%i6+1567],%g4
+	stx	%g4,[%i3-648]
+	ldx	[%i6+1559],%g4
+	stx	%g4,[%i3-640]
+	ldx	[%i6+1551],%g4
+	stx	%g4,[%i3-632]
+	ldx	[%i6+1543],%g4
+	stx	%g4,[%i3-624]
+	ldx	[%i6+1535],%g4
+	stx	%g4,[%i3-616]
+	ldx	[%i6+1527],%g4
+	stx	%g4,[%i3-608]
+	ldx	[%i6+1519],%g4
+	stx	%g4,[%i3-600]
+	ldx	[%i6+1511],%g4
+	stx	%g4,[%i3-592]
+	ldx	[%i6+1503],%g4
+	stx	%g4,[%i3-584]
+	ldx	[%i6+1495],%g4
+	stx	%g4,[%i3-576]
+	ldx	[%i6+1487],%g4
+	stx	%g4,[%i3-568]
+	ldx	[%i6+1479],%g4
+	stx	%g4,[%i3-560]
+	ldx	[%i6+1471],%g4
+	stx	%g4,[%i3-552]
+	ldx	[%i6+1463],%g4
+	stx	%g4,[%i3-544]
+	ldx	[%i6+1455],%g4
+	stx	%g4,[%i3-536]
+	ldx	[%i6+1447],%g4
+	stx	%g4,[%i3-528]
+	ldx	[%i6+1439],%g4
+	stx	%g4,[%i3-520]
+	ldx	[%i6+1431],%g4
+	stx	%g4,[%i3-512]
+	ldx	[%i6+1423],%g4
+	stx	%g4,[%i3-504]
+	ldx	[%i6+1415],%g4
+	stx	%g4,[%i3-496]
+	ldx	[%i6+1407],%g4
+	stx	%g4,[%i3-488]
+	ldx	[%i6+1399],%g4
+	stx	%g4,[%i3-480]
+	ldx	[%i6+1391],%g4
+	stx	%g4,[%i3-472]
+	ldx	[%i6+1383],%g4
+	stx	%g4,[%i3-464]
+	ldx	[%i6+1375],%g4
+	stx	%g4,[%i3-456]
+	ldx	[%i6+1367],%g4
+	stx	%g4,[%i3-448]
+	ldx	[%i6+1359],%g4
+	stx	%g4,[%i3-440]
+	ldx	[%i6+1351],%g4
+	stx	%g4,[%i3-432]
+	ldx	[%i6+1343],%g4
+	stx	%g4,[%i3-424]
+	ldx	[%i6+1335],%g4
+	stx	%g4,[%i3-416]
+	ldx	[%i6+1327],%g4
+	stx	%g4,[%i3-408]
+	ldx	[%i6+1319],%g4
+	stx	%g4,[%i3-400]
+	ldx	[%i6+1311],%g4
+	stx	%g4,[%i3-392]
+	ldx	[%i6+1303],%g4
+	stx	%g4,[%i3-384]
+	ldx	[%i6+1295],%g4
+	stx	%g4,[%i3-376]
+	ldx	[%i6+1287],%g4
+	stx	%g4,[%i3-368]
+	ldx	[%i6+1279],%g4
+	stx	%g4,[%i3-360]
+	ldx	[%i6+1271],%g4
+	stx	%g4,[%i3-352]
+	ldx	[%i6+1263],%g4
+	stx	%g4,[%i3-344]
+	ldx	[%i6+1255],%g4
+	stx	%g4,[%i3-336]
+	ldx	[%i6+1247],%g4
+	stx	%g4,[%i3-328]
+	ldx	[%i6+1239],%g4
+	stx	%g4,[%i3-320]
+	ldx	[%i6+1231],%g4
+	stx	%g4,[%i3-312]
+	ldx	[%i6+1223],%g4
+	stx	%g4,[%i3-304]
+	ldx	[%i6+1215],%g4
+	stx	%g4,[%i3-296]
+	ldx	[%i6+1207],%g4
+	stx	%g4,[%i3-288]
+	ldx	[%i6+1199],%g4
+	stx	%g4,[%i3-280]
+	ldx	[%i6+1191],%g4
+	stx	%g4,[%i3-272]
+	ldx	[%i6+1183],%g4
+	stx	%g4,[%i3-264]
+	ldx	[%i6+1175],%g4
+	stx	%g4,[%i3-256]
+	ldx	[%i6+1167],%g4
+	stx	%g4,[%i3-248]
+	ldx	[%i6+1159],%g4
+	stx	%g4,[%i3-240]
+	ldx	[%i6+1151],%g4
+	stx	%g4,[%i3-232]
+	ldx	[%i6+1143],%g4
+	stx	%g4,[%i3-224]
+	ldx	[%i6+1135],%g4
+	stx	%g4,[%i3-216]
+	ldx	[%i6+1127],%g4
+	stx	%g4,[%i3-208]
+	ldx	[%i6+1119],%g4
+	stx	%g4,[%i3-200]
+	ldx	[%i6+1111],%g4
+	stx	%g4,[%i3-192]
+	ldx	[%i6+1103],%g4
+	stx	%g4,[%i3-184]
+	ldx	[%i6+1095],%g4
+	stx	%g4,[%i3-176]
+	ldx	[%i6+1087],%g4
+	stx	%g4,[%i3-168]
+	ldx	[%i6+1079],%g4
+	stx	%g4,[%i3-160]
+	ldx	[%i6+1071],%g4
+	stx	%g4,[%i3-152]
+	ldx	[%i6+1063],%g4
+	stx	%g4,[%i3-144]
+	ldx	[%i6+1055],%g4
+	stx	%g4,[%i3-136]
+	ldx	[%i6+1047],%g4
+	stx	%g4,[%i3-128]
+	ldx	[%i6+1039],%g4
+	stx	%g4,[%i3-120]
+	ldx	[%i6+1015],%g4
+	stx	%g4,[%i3-112]
+	stx	%o1,[%i3-104]
+	stx	%o2,[%i3-96]
+	stx	%o3,[%i3-88]
+	stx	%o4,[%i3-80]
+	stx	%o5,[%i3-72]
+	stx	%l0,[%i3-64]
+	stx	%l6,[%i3-56]
+	stx	%l7,[%i3-48]
+	stx	%i4,[%i3-40]
+	stx	%g3,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1008,%g1
+	sethi	%hh(s78e_info),%g2
+	sethi	%lm(s78e_info),%g3
+	or	%g2,%hm(s78e_info),%g2
+	or	%g3,%lo(s78e_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccHV_end:
+.Ls7aB_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s789_info)+40
+	.quad	0
+	.quad	64424509441
+.align 4
+s789_info:
+.LccI5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccI6
+	nop
+	b	.LccI7
+	nop
+.LccI5_end:
+.LccI6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccI6_end:
+.LccI7:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInt_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInt_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInt_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInt_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccI7_end:
+.Ls789_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s78a_info)+32
+	.quad	0
+	.quad	64424509443
+.align 4
+s78a_info:
+.LccI8:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccI9
+	nop
+	b	.LccIa
+	nop
+.LccI8_end:
+.LccIa:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccIc
+	nop
+	b	.LccIb
+	nop
+.LccIa_end:
+.LccIc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccI9
+	nop
+.LccIc_end:
+.LccI9:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccI9_end:
+.LccIb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s789_info),%g1
+	sethi	%lm(s789_info),%g2
+	or	%g1,%hm(s789_info),%g1
+	or	%g2,%lo(s789_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccIb_end:
+.Ls78a_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aC_info)+0
+	.quad	523986010112
+	.quad	64424509567
+.align 4
+s7aC_info:
+.LccId:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccIe
+	nop
+	b	.LccIf
+	nop
+.LccId_end:
+.LccIf:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1000,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccIh
+	nop
+	b	.LccIg
+	nop
+.LccIf_end:
+.LccIh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1000,%g2
+	stx	%g2,[%i1+904]
+	b	.LccIe
+	nop
+.LccIh_end:
+.LccIe:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccIe_end:
+.LccIg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	ldx	[%g1+984],%g1
+	stx	%o1,[%i6+1047]
+	sethi	%hh(s7aB_info),%o1
+	stx	%o1,[%i6+1039]
+	sethi	%lm(s7aB_info),%o1
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	or	%o1,%hm(s7aB_info),%o1
+	stx	%o1,[%i6+1039]
+	ldx	[%i6+1031],%o1
+	or	%o1,%lo(s7aB_info),%o1
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	sllx	%o1,32,%o1
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	or	%o2,%o1,%o2
+	stx	%o2,[%i3-992]
+	ldx	[%i6+1911],%o1
+	stx	%o1,[%i3-984]
+	ldx	[%i6+1903],%o1
+	stx	%o1,[%i3-976]
+	ldx	[%i6+1895],%o1
+	stx	%o1,[%i3-968]
+	ldx	[%i6+1887],%o1
+	stx	%o1,[%i3-960]
+	ldx	[%i6+1879],%o1
+	stx	%o1,[%i3-952]
+	ldx	[%i6+1871],%o1
+	stx	%o1,[%i3-944]
+	ldx	[%i6+1863],%o1
+	stx	%o1,[%i3-936]
+	ldx	[%i6+1855],%o1
+	stx	%o1,[%i3-928]
+	ldx	[%i6+1847],%o1
+	stx	%o1,[%i3-920]
+	ldx	[%i6+1839],%o1
+	stx	%o1,[%i3-912]
+	ldx	[%i6+1831],%o1
+	stx	%o1,[%i3-904]
+	ldx	[%i6+1823],%o1
+	stx	%o1,[%i3-896]
+	ldx	[%i6+1815],%o1
+	stx	%o1,[%i3-888]
+	ldx	[%i6+1807],%o1
+	stx	%o1,[%i3-880]
+	ldx	[%i6+1799],%o1
+	stx	%o1,[%i3-872]
+	ldx	[%i6+1791],%o1
+	stx	%o1,[%i3-864]
+	ldx	[%i6+1783],%o1
+	stx	%o1,[%i3-856]
+	ldx	[%i6+1775],%o1
+	stx	%o1,[%i3-848]
+	ldx	[%i6+1767],%o1
+	stx	%o1,[%i3-840]
+	ldx	[%i6+1759],%o1
+	stx	%o1,[%i3-832]
+	ldx	[%i6+1751],%o1
+	stx	%o1,[%i3-824]
+	ldx	[%i6+1743],%o1
+	stx	%o1,[%i3-816]
+	ldx	[%i6+1735],%o1
+	stx	%o1,[%i3-808]
+	ldx	[%i6+1727],%o1
+	stx	%o1,[%i3-800]
+	ldx	[%i6+1719],%o1
+	stx	%o1,[%i3-792]
+	ldx	[%i6+1711],%o1
+	stx	%o1,[%i3-784]
+	ldx	[%i6+1703],%o1
+	stx	%o1,[%i3-776]
+	ldx	[%i6+1695],%o1
+	stx	%o1,[%i3-768]
+	ldx	[%i6+1687],%o1
+	stx	%o1,[%i3-760]
+	ldx	[%i6+1679],%o1
+	stx	%o1,[%i3-752]
+	ldx	[%i6+1671],%o1
+	stx	%o1,[%i3-744]
+	ldx	[%i6+1663],%o1
+	stx	%o1,[%i3-736]
+	ldx	[%i6+1655],%o1
+	stx	%o1,[%i3-728]
+	ldx	[%i6+1647],%o1
+	stx	%o1,[%i3-720]
+	ldx	[%i6+1639],%o1
+	stx	%o1,[%i3-712]
+	ldx	[%i6+1631],%o1
+	stx	%o1,[%i3-704]
+	ldx	[%i6+1623],%o1
+	stx	%o1,[%i3-696]
+	ldx	[%i6+1615],%o1
+	stx	%o1,[%i3-688]
+	ldx	[%i6+1607],%o1
+	stx	%o1,[%i3-680]
+	ldx	[%i6+1599],%o1
+	stx	%o1,[%i3-672]
+	ldx	[%i6+1591],%o1
+	stx	%o1,[%i3-664]
+	ldx	[%i6+1583],%o1
+	stx	%o1,[%i3-656]
+	ldx	[%i6+1575],%o1
+	stx	%o1,[%i3-648]
+	ldx	[%i6+1567],%o1
+	stx	%o1,[%i3-640]
+	ldx	[%i6+1559],%o1
+	stx	%o1,[%i3-632]
+	ldx	[%i6+1551],%o1
+	stx	%o1,[%i3-624]
+	ldx	[%i6+1543],%o1
+	stx	%o1,[%i3-616]
+	ldx	[%i6+1535],%o1
+	stx	%o1,[%i3-608]
+	ldx	[%i6+1527],%o1
+	stx	%o1,[%i3-600]
+	ldx	[%i6+1519],%o1
+	stx	%o1,[%i3-592]
+	ldx	[%i6+1511],%o1
+	stx	%o1,[%i3-584]
+	ldx	[%i6+1503],%o1
+	stx	%o1,[%i3-576]
+	ldx	[%i6+1495],%o1
+	stx	%o1,[%i3-568]
+	ldx	[%i6+1487],%o1
+	stx	%o1,[%i3-560]
+	ldx	[%i6+1479],%o1
+	stx	%o1,[%i3-552]
+	ldx	[%i6+1471],%o1
+	stx	%o1,[%i3-544]
+	ldx	[%i6+1463],%o1
+	stx	%o1,[%i3-536]
+	ldx	[%i6+1455],%o1
+	stx	%o1,[%i3-528]
+	ldx	[%i6+1447],%o1
+	stx	%o1,[%i3-520]
+	ldx	[%i6+1439],%o1
+	stx	%o1,[%i3-512]
+	ldx	[%i6+1431],%o1
+	stx	%o1,[%i3-504]
+	ldx	[%i6+1423],%o1
+	stx	%o1,[%i3-496]
+	ldx	[%i6+1415],%o1
+	stx	%o1,[%i3-488]
+	ldx	[%i6+1407],%o1
+	stx	%o1,[%i3-480]
+	ldx	[%i6+1399],%o1
+	stx	%o1,[%i3-472]
+	ldx	[%i6+1391],%o1
+	stx	%o1,[%i3-464]
+	ldx	[%i6+1383],%o1
+	stx	%o1,[%i3-456]
+	ldx	[%i6+1375],%o1
+	stx	%o1,[%i3-448]
+	ldx	[%i6+1367],%o1
+	stx	%o1,[%i3-440]
+	ldx	[%i6+1359],%o1
+	stx	%o1,[%i3-432]
+	ldx	[%i6+1351],%o1
+	stx	%o1,[%i3-424]
+	ldx	[%i6+1343],%o1
+	stx	%o1,[%i3-416]
+	ldx	[%i6+1335],%o1
+	stx	%o1,[%i3-408]
+	ldx	[%i6+1327],%o1
+	stx	%o1,[%i3-400]
+	ldx	[%i6+1319],%o1
+	stx	%o1,[%i3-392]
+	ldx	[%i6+1311],%o1
+	stx	%o1,[%i3-384]
+	ldx	[%i6+1303],%o1
+	stx	%o1,[%i3-376]
+	ldx	[%i6+1295],%o1
+	stx	%o1,[%i3-368]
+	ldx	[%i6+1287],%o1
+	stx	%o1,[%i3-360]
+	ldx	[%i6+1279],%o1
+	stx	%o1,[%i3-352]
+	ldx	[%i6+1271],%o1
+	stx	%o1,[%i3-344]
+	ldx	[%i6+1263],%o1
+	stx	%o1,[%i3-336]
+	ldx	[%i6+1255],%o1
+	stx	%o1,[%i3-328]
+	ldx	[%i6+1247],%o1
+	stx	%o1,[%i3-320]
+	ldx	[%i6+1239],%o1
+	stx	%o1,[%i3-312]
+	ldx	[%i6+1231],%o1
+	stx	%o1,[%i3-304]
+	ldx	[%i6+1223],%o1
+	stx	%o1,[%i3-296]
+	ldx	[%i6+1215],%o1
+	stx	%o1,[%i3-288]
+	ldx	[%i6+1207],%o1
+	stx	%o1,[%i3-280]
+	ldx	[%i6+1199],%o1
+	stx	%o1,[%i3-272]
+	ldx	[%i6+1191],%o1
+	stx	%o1,[%i3-264]
+	ldx	[%i6+1183],%o1
+	stx	%o1,[%i3-256]
+	ldx	[%i6+1175],%o1
+	stx	%o1,[%i3-248]
+	ldx	[%i6+1167],%o1
+	stx	%o1,[%i3-240]
+	ldx	[%i6+1159],%o1
+	stx	%o1,[%i3-232]
+	ldx	[%i6+1151],%o1
+	stx	%o1,[%i3-224]
+	ldx	[%i6+1143],%o1
+	stx	%o1,[%i3-216]
+	ldx	[%i6+1135],%o1
+	stx	%o1,[%i3-208]
+	ldx	[%i6+1127],%o1
+	stx	%o1,[%i3-200]
+	ldx	[%i6+1119],%o1
+	stx	%o1,[%i3-192]
+	ldx	[%i6+1111],%o1
+	stx	%o1,[%i3-184]
+	ldx	[%i6+1103],%o1
+	stx	%o1,[%i3-176]
+	ldx	[%i6+1095],%o1
+	stx	%o1,[%i3-168]
+	ldx	[%i6+1087],%o1
+	stx	%o1,[%i3-160]
+	ldx	[%i6+1079],%o1
+	stx	%o1,[%i3-152]
+	ldx	[%i6+1071],%o1
+	stx	%o1,[%i3-144]
+	ldx	[%i6+1063],%o1
+	stx	%o1,[%i3-136]
+	ldx	[%i6+1055],%o1
+	stx	%o1,[%i3-128]
+	ldx	[%i6+1047],%o1
+	stx	%o1,[%i3-120]
+	ldx	[%i6+1023],%o1
+	stx	%o1,[%i3-112]
+	stx	%o3,[%i3-104]
+	stx	%o4,[%i3-96]
+	stx	%o5,[%i3-88]
+	stx	%l0,[%i3-80]
+	stx	%l6,[%i3-72]
+	stx	%l7,[%i3-64]
+	stx	%i4,[%i3-56]
+	stx	%g2,[%i3-48]
+	stx	%g3,[%i3-40]
+	stx	%g4,[%i3-32]
+	stx	%o0,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-991,%g1
+	sethi	%hh(s78a_info),%g2
+	sethi	%lm(s78a_info),%g3
+	or	%g2,%hm(s78a_info),%g2
+	or	%g3,%lo(s78a_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccIg_end:
+.Ls7aC_entry_end:
+.section .rodata
+.align 8
+ccIq_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s786_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s786_info:
+.LccIr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccIs
+	nop
+	b	.LccIt
+	nop
+.LccIr_end:
+.LccIs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccIs_end:
+.LccIt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccIq_str),%g1
+	sethi	%lm(ccIq_str),%l2
+	or	%g1,%hm(ccIq_str),%g1
+	or	%l2,%lo(ccIq_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccIt_end:
+.Ls786_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s788_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s788_info:
+.LccIv:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccIw
+	nop
+	b	.LccIx
+	nop
+.LccIv_end:
+.LccIx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccIz
+	nop
+	b	.LccIy
+	nop
+.LccIx_end:
+.LccIz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccIw
+	nop
+.LccIz_end:
+.LccIw:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccIw_end:
+.LccIy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s786_info),%g1
+	sethi	%lm(s786_info),%g2
+	or	%g1,%hm(s786_info),%g1
+	or	%g2,%lo(s786_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccIy_end:
+.Ls788_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aD_info)+0
+	.quad	523986010112
+	.quad	64424509567
+.align 4
+s7aD_info:
+.LccIA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccIB
+	nop
+	b	.LccIC
+	nop
+.LccIA_end:
+.LccIC:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1008,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccIE
+	nop
+	b	.LccID
+	nop
+.LccIC_end:
+.LccIE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1008,%g2
+	stx	%g2,[%i1+904]
+	b	.LccIB
+	nop
+.LccIE_end:
+.LccIB:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccIB_end:
+.LccID:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	ldx	[%g1+984],%g1
+	stx	%o1,[%i6+1047]
+	sethi	%hh(s7aC_info),%o1
+	stx	%o1,[%i6+1039]
+	sethi	%lm(s7aC_info),%o1
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	or	%o1,%hm(s7aC_info),%o1
+	stx	%o1,[%i6+1039]
+	ldx	[%i6+1031],%o1
+	or	%o1,%lo(s7aC_info),%o1
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	sllx	%o1,32,%o1
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	or	%o2,%o1,%o2
+	stx	%o2,[%i3-1000]
+	ldx	[%i6+1911],%o1
+	stx	%o1,[%i3-984]
+	ldx	[%i6+1903],%o1
+	stx	%o1,[%i3-976]
+	ldx	[%i6+1895],%o1
+	stx	%o1,[%i3-968]
+	ldx	[%i6+1887],%o1
+	stx	%o1,[%i3-960]
+	ldx	[%i6+1879],%o1
+	stx	%o1,[%i3-952]
+	ldx	[%i6+1871],%o1
+	stx	%o1,[%i3-944]
+	ldx	[%i6+1863],%o1
+	stx	%o1,[%i3-936]
+	ldx	[%i6+1855],%o1
+	stx	%o1,[%i3-928]
+	ldx	[%i6+1847],%o1
+	stx	%o1,[%i3-920]
+	ldx	[%i6+1839],%o1
+	stx	%o1,[%i3-912]
+	ldx	[%i6+1831],%o1
+	stx	%o1,[%i3-904]
+	ldx	[%i6+1823],%o1
+	stx	%o1,[%i3-896]
+	ldx	[%i6+1815],%o1
+	stx	%o1,[%i3-888]
+	ldx	[%i6+1807],%o1
+	stx	%o1,[%i3-880]
+	ldx	[%i6+1799],%o1
+	stx	%o1,[%i3-872]
+	ldx	[%i6+1791],%o1
+	stx	%o1,[%i3-864]
+	ldx	[%i6+1783],%o1
+	stx	%o1,[%i3-856]
+	ldx	[%i6+1775],%o1
+	stx	%o1,[%i3-848]
+	ldx	[%i6+1767],%o1
+	stx	%o1,[%i3-840]
+	ldx	[%i6+1759],%o1
+	stx	%o1,[%i3-832]
+	ldx	[%i6+1751],%o1
+	stx	%o1,[%i3-824]
+	ldx	[%i6+1743],%o1
+	stx	%o1,[%i3-816]
+	ldx	[%i6+1735],%o1
+	stx	%o1,[%i3-808]
+	ldx	[%i6+1727],%o1
+	stx	%o1,[%i3-800]
+	ldx	[%i6+1719],%o1
+	stx	%o1,[%i3-792]
+	ldx	[%i6+1711],%o1
+	stx	%o1,[%i3-784]
+	ldx	[%i6+1703],%o1
+	stx	%o1,[%i3-776]
+	ldx	[%i6+1695],%o1
+	stx	%o1,[%i3-768]
+	ldx	[%i6+1687],%o1
+	stx	%o1,[%i3-760]
+	ldx	[%i6+1679],%o1
+	stx	%o1,[%i3-752]
+	ldx	[%i6+1671],%o1
+	stx	%o1,[%i3-744]
+	ldx	[%i6+1663],%o1
+	stx	%o1,[%i3-736]
+	ldx	[%i6+1655],%o1
+	stx	%o1,[%i3-728]
+	ldx	[%i6+1647],%o1
+	stx	%o1,[%i3-720]
+	ldx	[%i6+1639],%o1
+	stx	%o1,[%i3-712]
+	ldx	[%i6+1631],%o1
+	stx	%o1,[%i3-704]
+	ldx	[%i6+1623],%o1
+	stx	%o1,[%i3-696]
+	ldx	[%i6+1615],%o1
+	stx	%o1,[%i3-688]
+	ldx	[%i6+1607],%o1
+	stx	%o1,[%i3-680]
+	ldx	[%i6+1599],%o1
+	stx	%o1,[%i3-672]
+	ldx	[%i6+1591],%o1
+	stx	%o1,[%i3-664]
+	ldx	[%i6+1583],%o1
+	stx	%o1,[%i3-656]
+	ldx	[%i6+1575],%o1
+	stx	%o1,[%i3-648]
+	ldx	[%i6+1567],%o1
+	stx	%o1,[%i3-640]
+	ldx	[%i6+1559],%o1
+	stx	%o1,[%i3-632]
+	ldx	[%i6+1551],%o1
+	stx	%o1,[%i3-624]
+	ldx	[%i6+1543],%o1
+	stx	%o1,[%i3-616]
+	ldx	[%i6+1535],%o1
+	stx	%o1,[%i3-608]
+	ldx	[%i6+1527],%o1
+	stx	%o1,[%i3-600]
+	ldx	[%i6+1519],%o1
+	stx	%o1,[%i3-592]
+	ldx	[%i6+1511],%o1
+	stx	%o1,[%i3-584]
+	ldx	[%i6+1503],%o1
+	stx	%o1,[%i3-576]
+	ldx	[%i6+1495],%o1
+	stx	%o1,[%i3-568]
+	ldx	[%i6+1487],%o1
+	stx	%o1,[%i3-560]
+	ldx	[%i6+1479],%o1
+	stx	%o1,[%i3-552]
+	ldx	[%i6+1471],%o1
+	stx	%o1,[%i3-544]
+	ldx	[%i6+1463],%o1
+	stx	%o1,[%i3-536]
+	ldx	[%i6+1455],%o1
+	stx	%o1,[%i3-528]
+	ldx	[%i6+1447],%o1
+	stx	%o1,[%i3-520]
+	ldx	[%i6+1439],%o1
+	stx	%o1,[%i3-512]
+	ldx	[%i6+1431],%o1
+	stx	%o1,[%i3-504]
+	ldx	[%i6+1423],%o1
+	stx	%o1,[%i3-496]
+	ldx	[%i6+1415],%o1
+	stx	%o1,[%i3-488]
+	ldx	[%i6+1407],%o1
+	stx	%o1,[%i3-480]
+	ldx	[%i6+1399],%o1
+	stx	%o1,[%i3-472]
+	ldx	[%i6+1391],%o1
+	stx	%o1,[%i3-464]
+	ldx	[%i6+1383],%o1
+	stx	%o1,[%i3-456]
+	ldx	[%i6+1375],%o1
+	stx	%o1,[%i3-448]
+	ldx	[%i6+1367],%o1
+	stx	%o1,[%i3-440]
+	ldx	[%i6+1359],%o1
+	stx	%o1,[%i3-432]
+	ldx	[%i6+1351],%o1
+	stx	%o1,[%i3-424]
+	ldx	[%i6+1343],%o1
+	stx	%o1,[%i3-416]
+	ldx	[%i6+1335],%o1
+	stx	%o1,[%i3-408]
+	ldx	[%i6+1327],%o1
+	stx	%o1,[%i3-400]
+	ldx	[%i6+1319],%o1
+	stx	%o1,[%i3-392]
+	ldx	[%i6+1311],%o1
+	stx	%o1,[%i3-384]
+	ldx	[%i6+1303],%o1
+	stx	%o1,[%i3-376]
+	ldx	[%i6+1295],%o1
+	stx	%o1,[%i3-368]
+	ldx	[%i6+1287],%o1
+	stx	%o1,[%i3-360]
+	ldx	[%i6+1279],%o1
+	stx	%o1,[%i3-352]
+	ldx	[%i6+1271],%o1
+	stx	%o1,[%i3-344]
+	ldx	[%i6+1263],%o1
+	stx	%o1,[%i3-336]
+	ldx	[%i6+1255],%o1
+	stx	%o1,[%i3-328]
+	ldx	[%i6+1247],%o1
+	stx	%o1,[%i3-320]
+	ldx	[%i6+1239],%o1
+	stx	%o1,[%i3-312]
+	ldx	[%i6+1231],%o1
+	stx	%o1,[%i3-304]
+	ldx	[%i6+1223],%o1
+	stx	%o1,[%i3-296]
+	ldx	[%i6+1215],%o1
+	stx	%o1,[%i3-288]
+	ldx	[%i6+1207],%o1
+	stx	%o1,[%i3-280]
+	ldx	[%i6+1199],%o1
+	stx	%o1,[%i3-272]
+	ldx	[%i6+1191],%o1
+	stx	%o1,[%i3-264]
+	ldx	[%i6+1183],%o1
+	stx	%o1,[%i3-256]
+	ldx	[%i6+1175],%o1
+	stx	%o1,[%i3-248]
+	ldx	[%i6+1167],%o1
+	stx	%o1,[%i3-240]
+	ldx	[%i6+1159],%o1
+	stx	%o1,[%i3-232]
+	ldx	[%i6+1151],%o1
+	stx	%o1,[%i3-224]
+	ldx	[%i6+1143],%o1
+	stx	%o1,[%i3-216]
+	ldx	[%i6+1135],%o1
+	stx	%o1,[%i3-208]
+	ldx	[%i6+1127],%o1
+	stx	%o1,[%i3-200]
+	ldx	[%i6+1119],%o1
+	stx	%o1,[%i3-192]
+	ldx	[%i6+1111],%o1
+	stx	%o1,[%i3-184]
+	ldx	[%i6+1103],%o1
+	stx	%o1,[%i3-176]
+	ldx	[%i6+1095],%o1
+	stx	%o1,[%i3-168]
+	ldx	[%i6+1087],%o1
+	stx	%o1,[%i3-160]
+	ldx	[%i6+1079],%o1
+	stx	%o1,[%i3-152]
+	ldx	[%i6+1071],%o1
+	stx	%o1,[%i3-144]
+	ldx	[%i6+1063],%o1
+	stx	%o1,[%i3-136]
+	ldx	[%i6+1055],%o1
+	stx	%o1,[%i3-128]
+	ldx	[%i6+1047],%o1
+	stx	%o1,[%i3-120]
+	ldx	[%i6+1023],%o1
+	stx	%o1,[%i3-112]
+	stx	%o3,[%i3-104]
+	stx	%o4,[%i3-96]
+	stx	%o5,[%i3-88]
+	stx	%l0,[%i3-80]
+	stx	%l6,[%i3-72]
+	stx	%l7,[%i3-64]
+	stx	%i4,[%i3-56]
+	stx	%g2,[%i3-48]
+	stx	%g3,[%i3-40]
+	stx	%g4,[%i3-32]
+	stx	%o0,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1000,%g1
+	sethi	%hh(s788_info),%g2
+	sethi	%lm(s788_info),%g3
+	or	%g2,%hm(s788_info),%g2
+	or	%g3,%lo(s788_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccID_end:
+.Ls7aD_entry_end:
+.section .rodata
+.align 8
+ccIN_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	67
+	.byte	76
+	.byte	79
+	.byte	78
+	.byte	71
+	.byte	95
+	.byte	83
+	.byte	73
+	.byte	90
+	.byte	69
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s783_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s783_info:
+.LccIO:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccIP
+	nop
+	b	.LccIQ
+	nop
+.LccIO_end:
+.LccIP:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccIP_end:
+.LccIQ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccIN_str),%g1
+	sethi	%lm(ccIN_str),%l2
+	or	%g1,%hm(ccIN_str),%g1
+	or	%l2,%lo(ccIN_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccIQ_end:
+.Ls783_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s785_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s785_info:
+.LccIS:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccIT
+	nop
+	b	.LccIU
+	nop
+.LccIS_end:
+.LccIU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccIW
+	nop
+	b	.LccIV
+	nop
+.LccIU_end:
+.LccIW:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccIT
+	nop
+.LccIW_end:
+.LccIT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccIT_end:
+.LccIV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s783_info),%g1
+	sethi	%lm(s783_info),%g2
+	or	%g1,%hm(s783_info),%g1
+	or	%g2,%lo(s783_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccIV_end:
+.Ls785_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aE_info)+0
+	.quad	523986010112
+	.quad	64424509567
+.align 4
+s7aE_info:
+.LccIX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccIY
+	nop
+	b	.LccIZ
+	nop
+.LccIX_end:
+.LccIZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1008,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccJ1
+	nop
+	b	.LccJ0
+	nop
+.LccIZ_end:
+.LccJ1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1008,%g2
+	stx	%g2,[%i1+904]
+	b	.LccIY
+	nop
+.LccJ1_end:
+.LccIY:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccIY_end:
+.LccJ0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	stx	%o0,[%i6+1055]
+	ldx	[%g1+976],%o0
+	ldx	[%g1+984],%g1
+	stx	%o1,[%i6+1047]
+	sethi	%hh(s7aD_info),%o1
+	stx	%o1,[%i6+1039]
+	sethi	%lm(s7aD_info),%o1
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	or	%o1,%hm(s7aD_info),%o1
+	stx	%o1,[%i6+1039]
+	ldx	[%i6+1031],%o1
+	or	%o1,%lo(s7aD_info),%o1
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	sllx	%o1,32,%o1
+	stx	%o2,[%i6+1023]
+	ldx	[%i6+1031],%o2
+	or	%o2,%o1,%o2
+	stx	%o2,[%i3-1000]
+	ldx	[%i6+1911],%o1
+	stx	%o1,[%i3-984]
+	ldx	[%i6+1903],%o1
+	stx	%o1,[%i3-976]
+	ldx	[%i6+1895],%o1
+	stx	%o1,[%i3-968]
+	ldx	[%i6+1887],%o1
+	stx	%o1,[%i3-960]
+	ldx	[%i6+1879],%o1
+	stx	%o1,[%i3-952]
+	ldx	[%i6+1871],%o1
+	stx	%o1,[%i3-944]
+	ldx	[%i6+1863],%o1
+	stx	%o1,[%i3-936]
+	ldx	[%i6+1855],%o1
+	stx	%o1,[%i3-928]
+	ldx	[%i6+1847],%o1
+	stx	%o1,[%i3-920]
+	ldx	[%i6+1839],%o1
+	stx	%o1,[%i3-912]
+	ldx	[%i6+1831],%o1
+	stx	%o1,[%i3-904]
+	ldx	[%i6+1823],%o1
+	stx	%o1,[%i3-896]
+	ldx	[%i6+1815],%o1
+	stx	%o1,[%i3-888]
+	ldx	[%i6+1807],%o1
+	stx	%o1,[%i3-880]
+	ldx	[%i6+1799],%o1
+	stx	%o1,[%i3-872]
+	ldx	[%i6+1791],%o1
+	stx	%o1,[%i3-864]
+	ldx	[%i6+1783],%o1
+	stx	%o1,[%i3-856]
+	ldx	[%i6+1775],%o1
+	stx	%o1,[%i3-848]
+	ldx	[%i6+1767],%o1
+	stx	%o1,[%i3-840]
+	ldx	[%i6+1759],%o1
+	stx	%o1,[%i3-832]
+	ldx	[%i6+1751],%o1
+	stx	%o1,[%i3-824]
+	ldx	[%i6+1743],%o1
+	stx	%o1,[%i3-816]
+	ldx	[%i6+1735],%o1
+	stx	%o1,[%i3-808]
+	ldx	[%i6+1727],%o1
+	stx	%o1,[%i3-800]
+	ldx	[%i6+1719],%o1
+	stx	%o1,[%i3-792]
+	ldx	[%i6+1711],%o1
+	stx	%o1,[%i3-784]
+	ldx	[%i6+1703],%o1
+	stx	%o1,[%i3-776]
+	ldx	[%i6+1695],%o1
+	stx	%o1,[%i3-768]
+	ldx	[%i6+1687],%o1
+	stx	%o1,[%i3-760]
+	ldx	[%i6+1679],%o1
+	stx	%o1,[%i3-752]
+	ldx	[%i6+1671],%o1
+	stx	%o1,[%i3-744]
+	ldx	[%i6+1663],%o1
+	stx	%o1,[%i3-736]
+	ldx	[%i6+1655],%o1
+	stx	%o1,[%i3-728]
+	ldx	[%i6+1647],%o1
+	stx	%o1,[%i3-720]
+	ldx	[%i6+1639],%o1
+	stx	%o1,[%i3-712]
+	ldx	[%i6+1631],%o1
+	stx	%o1,[%i3-704]
+	ldx	[%i6+1623],%o1
+	stx	%o1,[%i3-696]
+	ldx	[%i6+1615],%o1
+	stx	%o1,[%i3-688]
+	ldx	[%i6+1607],%o1
+	stx	%o1,[%i3-680]
+	ldx	[%i6+1599],%o1
+	stx	%o1,[%i3-672]
+	ldx	[%i6+1591],%o1
+	stx	%o1,[%i3-664]
+	ldx	[%i6+1583],%o1
+	stx	%o1,[%i3-656]
+	ldx	[%i6+1575],%o1
+	stx	%o1,[%i3-648]
+	ldx	[%i6+1567],%o1
+	stx	%o1,[%i3-640]
+	ldx	[%i6+1559],%o1
+	stx	%o1,[%i3-632]
+	ldx	[%i6+1551],%o1
+	stx	%o1,[%i3-624]
+	ldx	[%i6+1543],%o1
+	stx	%o1,[%i3-616]
+	ldx	[%i6+1535],%o1
+	stx	%o1,[%i3-608]
+	ldx	[%i6+1527],%o1
+	stx	%o1,[%i3-600]
+	ldx	[%i6+1519],%o1
+	stx	%o1,[%i3-592]
+	ldx	[%i6+1511],%o1
+	stx	%o1,[%i3-584]
+	ldx	[%i6+1503],%o1
+	stx	%o1,[%i3-576]
+	ldx	[%i6+1495],%o1
+	stx	%o1,[%i3-568]
+	ldx	[%i6+1487],%o1
+	stx	%o1,[%i3-560]
+	ldx	[%i6+1479],%o1
+	stx	%o1,[%i3-552]
+	ldx	[%i6+1471],%o1
+	stx	%o1,[%i3-544]
+	ldx	[%i6+1463],%o1
+	stx	%o1,[%i3-536]
+	ldx	[%i6+1455],%o1
+	stx	%o1,[%i3-528]
+	ldx	[%i6+1447],%o1
+	stx	%o1,[%i3-520]
+	ldx	[%i6+1439],%o1
+	stx	%o1,[%i3-512]
+	ldx	[%i6+1431],%o1
+	stx	%o1,[%i3-504]
+	ldx	[%i6+1423],%o1
+	stx	%o1,[%i3-496]
+	ldx	[%i6+1415],%o1
+	stx	%o1,[%i3-488]
+	ldx	[%i6+1407],%o1
+	stx	%o1,[%i3-480]
+	ldx	[%i6+1399],%o1
+	stx	%o1,[%i3-472]
+	ldx	[%i6+1391],%o1
+	stx	%o1,[%i3-464]
+	ldx	[%i6+1383],%o1
+	stx	%o1,[%i3-456]
+	ldx	[%i6+1375],%o1
+	stx	%o1,[%i3-448]
+	ldx	[%i6+1367],%o1
+	stx	%o1,[%i3-440]
+	ldx	[%i6+1359],%o1
+	stx	%o1,[%i3-432]
+	ldx	[%i6+1351],%o1
+	stx	%o1,[%i3-424]
+	ldx	[%i6+1343],%o1
+	stx	%o1,[%i3-416]
+	ldx	[%i6+1335],%o1
+	stx	%o1,[%i3-408]
+	ldx	[%i6+1327],%o1
+	stx	%o1,[%i3-400]
+	ldx	[%i6+1319],%o1
+	stx	%o1,[%i3-392]
+	ldx	[%i6+1311],%o1
+	stx	%o1,[%i3-384]
+	ldx	[%i6+1303],%o1
+	stx	%o1,[%i3-376]
+	ldx	[%i6+1295],%o1
+	stx	%o1,[%i3-368]
+	ldx	[%i6+1287],%o1
+	stx	%o1,[%i3-360]
+	ldx	[%i6+1279],%o1
+	stx	%o1,[%i3-352]
+	ldx	[%i6+1271],%o1
+	stx	%o1,[%i3-344]
+	ldx	[%i6+1263],%o1
+	stx	%o1,[%i3-336]
+	ldx	[%i6+1255],%o1
+	stx	%o1,[%i3-328]
+	ldx	[%i6+1247],%o1
+	stx	%o1,[%i3-320]
+	ldx	[%i6+1239],%o1
+	stx	%o1,[%i3-312]
+	ldx	[%i6+1231],%o1
+	stx	%o1,[%i3-304]
+	ldx	[%i6+1223],%o1
+	stx	%o1,[%i3-296]
+	ldx	[%i6+1215],%o1
+	stx	%o1,[%i3-288]
+	ldx	[%i6+1207],%o1
+	stx	%o1,[%i3-280]
+	ldx	[%i6+1199],%o1
+	stx	%o1,[%i3-272]
+	ldx	[%i6+1191],%o1
+	stx	%o1,[%i3-264]
+	ldx	[%i6+1183],%o1
+	stx	%o1,[%i3-256]
+	ldx	[%i6+1175],%o1
+	stx	%o1,[%i3-248]
+	ldx	[%i6+1167],%o1
+	stx	%o1,[%i3-240]
+	ldx	[%i6+1159],%o1
+	stx	%o1,[%i3-232]
+	ldx	[%i6+1151],%o1
+	stx	%o1,[%i3-224]
+	ldx	[%i6+1143],%o1
+	stx	%o1,[%i3-216]
+	ldx	[%i6+1135],%o1
+	stx	%o1,[%i3-208]
+	ldx	[%i6+1127],%o1
+	stx	%o1,[%i3-200]
+	ldx	[%i6+1119],%o1
+	stx	%o1,[%i3-192]
+	ldx	[%i6+1111],%o1
+	stx	%o1,[%i3-184]
+	ldx	[%i6+1103],%o1
+	stx	%o1,[%i3-176]
+	ldx	[%i6+1095],%o1
+	stx	%o1,[%i3-168]
+	ldx	[%i6+1087],%o1
+	stx	%o1,[%i3-160]
+	ldx	[%i6+1079],%o1
+	stx	%o1,[%i3-152]
+	ldx	[%i6+1071],%o1
+	stx	%o1,[%i3-144]
+	ldx	[%i6+1063],%o1
+	stx	%o1,[%i3-136]
+	ldx	[%i6+1055],%o1
+	stx	%o1,[%i3-128]
+	ldx	[%i6+1047],%o1
+	stx	%o1,[%i3-120]
+	ldx	[%i6+1023],%o1
+	stx	%o1,[%i3-112]
+	stx	%o3,[%i3-104]
+	stx	%o4,[%i3-96]
+	stx	%o5,[%i3-88]
+	stx	%l0,[%i3-80]
+	stx	%l6,[%i3-72]
+	stx	%l7,[%i3-64]
+	stx	%i4,[%i3-56]
+	stx	%g2,[%i3-48]
+	stx	%g3,[%i3-40]
+	stx	%g4,[%i3-32]
+	stx	%o0,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1000,%g1
+	sethi	%hh(s785_info),%g2
+	sethi	%lm(s785_info),%g3
+	or	%g2,%hm(s785_info),%g2
+	or	%g3,%lo(s785_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccJ0_end:
+.Ls7aE_entry_end:
+.section .rodata
+.align 8
+ccJa_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s780_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s780_info:
+.LccJb:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccJc
+	nop
+	b	.LccJd
+	nop
+.LccJb_end:
+.LccJc:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccJc_end:
+.LccJd:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccJa_str),%g1
+	sethi	%lm(ccJa_str),%l2
+	or	%g1,%hm(ccJa_str),%g1
+	or	%l2,%lo(ccJa_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccJd_end:
+.Ls780_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s782_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s782_info:
+.LccJf:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccJg
+	nop
+	b	.LccJh
+	nop
+.LccJf_end:
+.LccJh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccJj
+	nop
+	b	.LccJi
+	nop
+.LccJh_end:
+.LccJj:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccJg
+	nop
+.LccJj_end:
+.LccJg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccJg_end:
+.LccJi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s780_info),%g1
+	sethi	%lm(s780_info),%g2
+	or	%g1,%hm(s780_info),%g1
+	or	%g2,%lo(s780_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccJi_end:
+.Ls782_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aF_info)+0
+	.quad	21474836481
+	.quad	519691042816
+	.quad	34359738495
+.align 4
+s7aF_info:
+.LccJk:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l2,%g1
+	mov	%l1,%g2
+	add	%i0,-24,%g3
+	cmp	%g3,%i2
+	blu	%xcc,.+8
+	 b	.LccJl
+	nop
+	b	.LccJm
+	nop
+.LccJk_end:
+.LccJm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1008,%i3
+	ldx	[%i1+856],%g3
+	cmp	%i3,%g3
+	bgu	%xcc,.+8
+	 b	.LccJo
+	nop
+	b	.LccJn
+	nop
+.LccJm_end:
+.LccJo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1008,%g3
+	stx	%g3,[%i1+904]
+	b	.LccJl
+	nop
+.LccJo_end:
+.LccJl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l2
+	mov	%g2,%l1
+	ldx	[%i1-8],%g1
+	jmp	%g1
+	nop
+.LccJl_end:
+.LccJn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	ldx	[%g2+7],%g3
+	ldx	[%g2+15],%g4
+	ldx	[%g2+23],%o0
+	ldx	[%g2+31],%o1
+	ldx	[%g2+39],%o2
+	ldx	[%g2+47],%o3
+	ldx	[%g2+55],%o4
+	ldx	[%g2+63],%o5
+	ldx	[%g2+71],%l0
+	ldx	[%g2+79],%l6
+	ldx	[%g2+87],%l7
+	ldx	[%g2+95],%i4
+	stx	%g3,[%i6+1911]
+	ldx	[%g2+103],%g3
+	stx	%g4,[%i6+1903]
+	ldx	[%g2+111],%g4
+	stx	%o0,[%i6+1895]
+	ldx	[%g2+119],%o0
+	stx	%o1,[%i6+1887]
+	ldx	[%g2+127],%o1
+	stx	%o2,[%i6+1879]
+	ldx	[%g2+135],%o2
+	stx	%o3,[%i6+1871]
+	ldx	[%g2+143],%o3
+	stx	%o4,[%i6+1863]
+	ldx	[%g2+151],%o4
+	stx	%o5,[%i6+1855]
+	ldx	[%g2+159],%o5
+	stx	%l0,[%i6+1847]
+	ldx	[%g2+167],%l0
+	stx	%l6,[%i6+1839]
+	ldx	[%g2+175],%l6
+	stx	%l7,[%i6+1831]
+	ldx	[%g2+183],%l7
+	stx	%i4,[%i6+1823]
+	ldx	[%g2+191],%i4
+	stx	%g3,[%i6+1815]
+	ldx	[%g2+199],%g3
+	stx	%g4,[%i6+1807]
+	ldx	[%g2+207],%g4
+	stx	%o0,[%i6+1799]
+	ldx	[%g2+215],%o0
+	stx	%o1,[%i6+1791]
+	ldx	[%g2+223],%o1
+	stx	%o2,[%i6+1783]
+	ldx	[%g2+231],%o2
+	stx	%o3,[%i6+1775]
+	ldx	[%g2+239],%o3
+	stx	%o4,[%i6+1767]
+	ldx	[%g2+247],%o4
+	stx	%o5,[%i6+1759]
+	ldx	[%g2+255],%o5
+	stx	%l0,[%i6+1751]
+	ldx	[%g2+263],%l0
+	stx	%l6,[%i6+1743]
+	ldx	[%g2+271],%l6
+	stx	%l7,[%i6+1735]
+	ldx	[%g2+279],%l7
+	stx	%i4,[%i6+1727]
+	ldx	[%g2+287],%i4
+	stx	%g3,[%i6+1719]
+	ldx	[%g2+295],%g3
+	stx	%g4,[%i6+1711]
+	ldx	[%g2+303],%g4
+	stx	%o0,[%i6+1703]
+	ldx	[%g2+311],%o0
+	stx	%o1,[%i6+1695]
+	ldx	[%g2+319],%o1
+	stx	%o2,[%i6+1687]
+	ldx	[%g2+327],%o2
+	stx	%o3,[%i6+1679]
+	ldx	[%g2+335],%o3
+	stx	%o4,[%i6+1671]
+	ldx	[%g2+343],%o4
+	stx	%o5,[%i6+1663]
+	ldx	[%g2+351],%o5
+	stx	%l0,[%i6+1655]
+	ldx	[%g2+359],%l0
+	stx	%l6,[%i6+1647]
+	ldx	[%g2+367],%l6
+	stx	%l7,[%i6+1639]
+	ldx	[%g2+375],%l7
+	stx	%i4,[%i6+1631]
+	ldx	[%g2+383],%i4
+	stx	%g3,[%i6+1623]
+	ldx	[%g2+391],%g3
+	stx	%g4,[%i6+1615]
+	ldx	[%g2+399],%g4
+	stx	%o0,[%i6+1607]
+	ldx	[%g2+407],%o0
+	stx	%o1,[%i6+1599]
+	ldx	[%g2+415],%o1
+	stx	%o2,[%i6+1591]
+	ldx	[%g2+423],%o2
+	stx	%o3,[%i6+1583]
+	ldx	[%g2+431],%o3
+	stx	%o4,[%i6+1575]
+	ldx	[%g2+439],%o4
+	stx	%o5,[%i6+1567]
+	ldx	[%g2+447],%o5
+	stx	%l0,[%i6+1559]
+	ldx	[%g2+455],%l0
+	stx	%l6,[%i6+1551]
+	ldx	[%g2+463],%l6
+	stx	%l7,[%i6+1543]
+	ldx	[%g2+471],%l7
+	stx	%i4,[%i6+1535]
+	ldx	[%g2+479],%i4
+	stx	%g3,[%i6+1527]
+	ldx	[%g2+487],%g3
+	stx	%g4,[%i6+1519]
+	ldx	[%g2+495],%g4
+	stx	%o0,[%i6+1511]
+	ldx	[%g2+503],%o0
+	stx	%o1,[%i6+1503]
+	ldx	[%g2+511],%o1
+	stx	%o2,[%i6+1495]
+	ldx	[%g2+519],%o2
+	stx	%o3,[%i6+1487]
+	ldx	[%g2+527],%o3
+	stx	%o4,[%i6+1479]
+	ldx	[%g2+535],%o4
+	stx	%o5,[%i6+1471]
+	ldx	[%g2+543],%o5
+	stx	%l0,[%i6+1463]
+	ldx	[%g2+551],%l0
+	stx	%l6,[%i6+1455]
+	ldx	[%g2+559],%l6
+	stx	%l7,[%i6+1447]
+	ldx	[%g2+567],%l7
+	stx	%i4,[%i6+1439]
+	ldx	[%g2+575],%i4
+	stx	%g3,[%i6+1431]
+	ldx	[%g2+583],%g3
+	stx	%g4,[%i6+1423]
+	ldx	[%g2+591],%g4
+	stx	%o0,[%i6+1415]
+	ldx	[%g2+599],%o0
+	stx	%o1,[%i6+1407]
+	ldx	[%g2+607],%o1
+	stx	%o2,[%i6+1399]
+	ldx	[%g2+615],%o2
+	stx	%o3,[%i6+1391]
+	ldx	[%g2+623],%o3
+	stx	%o4,[%i6+1383]
+	ldx	[%g2+631],%o4
+	stx	%o5,[%i6+1375]
+	ldx	[%g2+639],%o5
+	stx	%l0,[%i6+1367]
+	ldx	[%g2+647],%l0
+	stx	%l6,[%i6+1359]
+	ldx	[%g2+655],%l6
+	stx	%l7,[%i6+1351]
+	ldx	[%g2+663],%l7
+	stx	%i4,[%i6+1343]
+	ldx	[%g2+671],%i4
+	stx	%g3,[%i6+1335]
+	ldx	[%g2+679],%g3
+	stx	%g4,[%i6+1327]
+	ldx	[%g2+687],%g4
+	stx	%o0,[%i6+1319]
+	ldx	[%g2+695],%o0
+	stx	%o1,[%i6+1311]
+	ldx	[%g2+703],%o1
+	stx	%o2,[%i6+1303]
+	ldx	[%g2+711],%o2
+	stx	%o3,[%i6+1295]
+	ldx	[%g2+719],%o3
+	stx	%o4,[%i6+1287]
+	ldx	[%g2+727],%o4
+	stx	%o5,[%i6+1279]
+	ldx	[%g2+735],%o5
+	stx	%l0,[%i6+1271]
+	ldx	[%g2+743],%l0
+	stx	%l6,[%i6+1263]
+	ldx	[%g2+751],%l6
+	stx	%l7,[%i6+1255]
+	ldx	[%g2+759],%l7
+	stx	%i4,[%i6+1247]
+	ldx	[%g2+767],%i4
+	stx	%g3,[%i6+1239]
+	ldx	[%g2+775],%g3
+	stx	%g4,[%i6+1231]
+	ldx	[%g2+783],%g4
+	stx	%o0,[%i6+1223]
+	ldx	[%g2+791],%o0
+	stx	%o1,[%i6+1215]
+	ldx	[%g2+799],%o1
+	stx	%o2,[%i6+1207]
+	ldx	[%g2+807],%o2
+	stx	%o3,[%i6+1199]
+	ldx	[%g2+815],%o3
+	stx	%o4,[%i6+1191]
+	ldx	[%g2+823],%o4
+	stx	%o5,[%i6+1183]
+	ldx	[%g2+831],%o5
+	stx	%l0,[%i6+1175]
+	ldx	[%g2+839],%l0
+	stx	%l6,[%i6+1167]
+	ldx	[%g2+847],%l6
+	stx	%l7,[%i6+1159]
+	ldx	[%g2+855],%l7
+	stx	%i4,[%i6+1151]
+	ldx	[%g2+863],%i4
+	stx	%g3,[%i6+1143]
+	ldx	[%g2+871],%g3
+	stx	%g4,[%i6+1135]
+	ldx	[%g2+879],%g4
+	stx	%o0,[%i6+1127]
+	ldx	[%g2+887],%o0
+	stx	%o1,[%i6+1119]
+	ldx	[%g2+895],%o1
+	stx	%o2,[%i6+1111]
+	ldx	[%g2+903],%o2
+	stx	%o3,[%i6+1103]
+	ldx	[%g2+911],%o3
+	stx	%o4,[%i6+1095]
+	ldx	[%g2+919],%o4
+	stx	%o5,[%i6+1087]
+	ldx	[%g2+927],%o5
+	stx	%l0,[%i6+1079]
+	ldx	[%g2+935],%l0
+	stx	%l6,[%i6+1071]
+	ldx	[%g2+943],%l6
+	stx	%l7,[%i6+1063]
+	ldx	[%g2+951],%l7
+	stx	%i4,[%i6+1055]
+	ldx	[%g2+959],%i4
+	ldx	[%g2+967],%g2
+	stx	%g3,[%i6+1047]
+	sethi	%hh(s7aE_info),%g3
+	stx	%g3,[%i6+1039]
+	sethi	%lm(s7aE_info),%g3
+	stx	%g3,[%i6+1031]
+	ldx	[%i6+1039],%g3
+	or	%g3,%hm(s7aE_info),%g3
+	stx	%g3,[%i6+1039]
+	ldx	[%i6+1031],%g3
+	or	%g3,%lo(s7aE_info),%g3
+	stx	%g3,[%i6+1031]
+	ldx	[%i6+1039],%g3
+	sllx	%g3,32,%g3
+	stx	%g4,[%i6+1023]
+	ldx	[%i6+1031],%g4
+	or	%g4,%g3,%g4
+	stx	%g4,[%i3-1000]
+	ldx	[%i6+1911],%g3
+	stx	%g3,[%i3-984]
+	ldx	[%i6+1903],%g3
+	stx	%g3,[%i3-976]
+	ldx	[%i6+1895],%g3
+	stx	%g3,[%i3-968]
+	ldx	[%i6+1887],%g3
+	stx	%g3,[%i3-960]
+	ldx	[%i6+1879],%g3
+	stx	%g3,[%i3-952]
+	ldx	[%i6+1871],%g3
+	stx	%g3,[%i3-944]
+	ldx	[%i6+1863],%g3
+	stx	%g3,[%i3-936]
+	ldx	[%i6+1855],%g3
+	stx	%g3,[%i3-928]
+	ldx	[%i6+1847],%g3
+	stx	%g3,[%i3-920]
+	ldx	[%i6+1839],%g3
+	stx	%g3,[%i3-912]
+	ldx	[%i6+1831],%g3
+	stx	%g3,[%i3-904]
+	ldx	[%i6+1823],%g3
+	stx	%g3,[%i3-896]
+	ldx	[%i6+1815],%g3
+	stx	%g3,[%i3-888]
+	ldx	[%i6+1807],%g3
+	stx	%g3,[%i3-880]
+	ldx	[%i6+1799],%g3
+	stx	%g3,[%i3-872]
+	ldx	[%i6+1791],%g3
+	stx	%g3,[%i3-864]
+	ldx	[%i6+1783],%g3
+	stx	%g3,[%i3-856]
+	ldx	[%i6+1775],%g3
+	stx	%g3,[%i3-848]
+	ldx	[%i6+1767],%g3
+	stx	%g3,[%i3-840]
+	ldx	[%i6+1759],%g3
+	stx	%g3,[%i3-832]
+	ldx	[%i6+1751],%g3
+	stx	%g3,[%i3-824]
+	ldx	[%i6+1743],%g3
+	stx	%g3,[%i3-816]
+	ldx	[%i6+1735],%g3
+	stx	%g3,[%i3-808]
+	ldx	[%i6+1727],%g3
+	stx	%g3,[%i3-800]
+	ldx	[%i6+1719],%g3
+	stx	%g3,[%i3-792]
+	ldx	[%i6+1711],%g3
+	stx	%g3,[%i3-784]
+	ldx	[%i6+1703],%g3
+	stx	%g3,[%i3-776]
+	ldx	[%i6+1695],%g3
+	stx	%g3,[%i3-768]
+	ldx	[%i6+1687],%g3
+	stx	%g3,[%i3-760]
+	ldx	[%i6+1679],%g3
+	stx	%g3,[%i3-752]
+	ldx	[%i6+1671],%g3
+	stx	%g3,[%i3-744]
+	ldx	[%i6+1663],%g3
+	stx	%g3,[%i3-736]
+	ldx	[%i6+1655],%g3
+	stx	%g3,[%i3-728]
+	ldx	[%i6+1647],%g3
+	stx	%g3,[%i3-720]
+	ldx	[%i6+1639],%g3
+	stx	%g3,[%i3-712]
+	ldx	[%i6+1631],%g3
+	stx	%g3,[%i3-704]
+	ldx	[%i6+1623],%g3
+	stx	%g3,[%i3-696]
+	ldx	[%i6+1615],%g3
+	stx	%g3,[%i3-688]
+	ldx	[%i6+1607],%g3
+	stx	%g3,[%i3-680]
+	ldx	[%i6+1599],%g3
+	stx	%g3,[%i3-672]
+	ldx	[%i6+1591],%g3
+	stx	%g3,[%i3-664]
+	ldx	[%i6+1583],%g3
+	stx	%g3,[%i3-656]
+	ldx	[%i6+1575],%g3
+	stx	%g3,[%i3-648]
+	ldx	[%i6+1567],%g3
+	stx	%g3,[%i3-640]
+	ldx	[%i6+1559],%g3
+	stx	%g3,[%i3-632]
+	ldx	[%i6+1551],%g3
+	stx	%g3,[%i3-624]
+	ldx	[%i6+1543],%g3
+	stx	%g3,[%i3-616]
+	ldx	[%i6+1535],%g3
+	stx	%g3,[%i3-608]
+	ldx	[%i6+1527],%g3
+	stx	%g3,[%i3-600]
+	ldx	[%i6+1519],%g3
+	stx	%g3,[%i3-592]
+	ldx	[%i6+1511],%g3
+	stx	%g3,[%i3-584]
+	ldx	[%i6+1503],%g3
+	stx	%g3,[%i3-576]
+	ldx	[%i6+1495],%g3
+	stx	%g3,[%i3-568]
+	ldx	[%i6+1487],%g3
+	stx	%g3,[%i3-560]
+	ldx	[%i6+1479],%g3
+	stx	%g3,[%i3-552]
+	ldx	[%i6+1471],%g3
+	stx	%g3,[%i3-544]
+	ldx	[%i6+1463],%g3
+	stx	%g3,[%i3-536]
+	ldx	[%i6+1455],%g3
+	stx	%g3,[%i3-528]
+	ldx	[%i6+1447],%g3
+	stx	%g3,[%i3-520]
+	ldx	[%i6+1439],%g3
+	stx	%g3,[%i3-512]
+	ldx	[%i6+1431],%g3
+	stx	%g3,[%i3-504]
+	ldx	[%i6+1423],%g3
+	stx	%g3,[%i3-496]
+	ldx	[%i6+1415],%g3
+	stx	%g3,[%i3-488]
+	ldx	[%i6+1407],%g3
+	stx	%g3,[%i3-480]
+	ldx	[%i6+1399],%g3
+	stx	%g3,[%i3-472]
+	ldx	[%i6+1391],%g3
+	stx	%g3,[%i3-464]
+	ldx	[%i6+1383],%g3
+	stx	%g3,[%i3-456]
+	ldx	[%i6+1375],%g3
+	stx	%g3,[%i3-448]
+	ldx	[%i6+1367],%g3
+	stx	%g3,[%i3-440]
+	ldx	[%i6+1359],%g3
+	stx	%g3,[%i3-432]
+	ldx	[%i6+1351],%g3
+	stx	%g3,[%i3-424]
+	ldx	[%i6+1343],%g3
+	stx	%g3,[%i3-416]
+	ldx	[%i6+1335],%g3
+	stx	%g3,[%i3-408]
+	ldx	[%i6+1327],%g3
+	stx	%g3,[%i3-400]
+	ldx	[%i6+1319],%g3
+	stx	%g3,[%i3-392]
+	ldx	[%i6+1311],%g3
+	stx	%g3,[%i3-384]
+	ldx	[%i6+1303],%g3
+	stx	%g3,[%i3-376]
+	ldx	[%i6+1295],%g3
+	stx	%g3,[%i3-368]
+	ldx	[%i6+1287],%g3
+	stx	%g3,[%i3-360]
+	ldx	[%i6+1279],%g3
+	stx	%g3,[%i3-352]
+	ldx	[%i6+1271],%g3
+	stx	%g3,[%i3-344]
+	ldx	[%i6+1263],%g3
+	stx	%g3,[%i3-336]
+	ldx	[%i6+1255],%g3
+	stx	%g3,[%i3-328]
+	ldx	[%i6+1247],%g3
+	stx	%g3,[%i3-320]
+	ldx	[%i6+1239],%g3
+	stx	%g3,[%i3-312]
+	ldx	[%i6+1231],%g3
+	stx	%g3,[%i3-304]
+	ldx	[%i6+1223],%g3
+	stx	%g3,[%i3-296]
+	ldx	[%i6+1215],%g3
+	stx	%g3,[%i3-288]
+	ldx	[%i6+1207],%g3
+	stx	%g3,[%i3-280]
+	ldx	[%i6+1199],%g3
+	stx	%g3,[%i3-272]
+	ldx	[%i6+1191],%g3
+	stx	%g3,[%i3-264]
+	ldx	[%i6+1183],%g3
+	stx	%g3,[%i3-256]
+	ldx	[%i6+1175],%g3
+	stx	%g3,[%i3-248]
+	ldx	[%i6+1167],%g3
+	stx	%g3,[%i3-240]
+	ldx	[%i6+1159],%g3
+	stx	%g3,[%i3-232]
+	ldx	[%i6+1151],%g3
+	stx	%g3,[%i3-224]
+	ldx	[%i6+1143],%g3
+	stx	%g3,[%i3-216]
+	ldx	[%i6+1135],%g3
+	stx	%g3,[%i3-208]
+	ldx	[%i6+1127],%g3
+	stx	%g3,[%i3-200]
+	ldx	[%i6+1119],%g3
+	stx	%g3,[%i3-192]
+	ldx	[%i6+1111],%g3
+	stx	%g3,[%i3-184]
+	ldx	[%i6+1103],%g3
+	stx	%g3,[%i3-176]
+	ldx	[%i6+1095],%g3
+	stx	%g3,[%i3-168]
+	ldx	[%i6+1087],%g3
+	stx	%g3,[%i3-160]
+	ldx	[%i6+1079],%g3
+	stx	%g3,[%i3-152]
+	ldx	[%i6+1071],%g3
+	stx	%g3,[%i3-144]
+	ldx	[%i6+1063],%g3
+	stx	%g3,[%i3-136]
+	ldx	[%i6+1055],%g3
+	stx	%g3,[%i3-128]
+	ldx	[%i6+1047],%g3
+	stx	%g3,[%i3-120]
+	ldx	[%i6+1023],%g3
+	stx	%g3,[%i3-112]
+	stx	%o0,[%i3-104]
+	stx	%o1,[%i3-96]
+	stx	%o2,[%i3-88]
+	stx	%o3,[%i3-80]
+	stx	%o4,[%i3-72]
+	stx	%o5,[%i3-64]
+	stx	%l0,[%i3-56]
+	stx	%l6,[%i3-48]
+	stx	%l7,[%i3-40]
+	stx	%i4,[%i3-32]
+	stx	%g2,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-1000,%g1
+	sethi	%hh(s782_info),%g2
+	sethi	%lm(s782_info),%g3
+	or	%g2,%hm(s782_info),%g2
+	or	%g3,%lo(s782_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-24]
+	stx	%g2,[%i0-16]
+	stx	%g1,[%i0-8]
+	add	%i0,-24,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccJn_end:
+.Ls7aF_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77X_info)+40
+	.quad	0
+	.quad	64424509441
+.align 4
+s77X_info:
+.LccJx:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccJy
+	nop
+	b	.LccJz
+	nop
+.LccJx_end:
+.LccJy:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccJy_end:
+.LccJz:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(base_GHCziRead_zdfReadInt_closure),%g1
+	sethi	%lm(base_GHCziRead_zdfReadInt_closure),%l2
+	or	%g1,%hm(base_GHCziRead_zdfReadInt_closure),%g1
+	or	%l2,%lo(base_GHCziRead_zdfReadInt_closure),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	add	%i0,-16,%i0
+	call	base_GHCziRead_readPrec_info,0
+	nop
+.LccJz_end:
+.Ls77X_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77Y_info)+32
+	.quad	0
+	.quad	64424509443
+.align 4
+s77Y_info:
+.LccJA:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccJB
+	nop
+	b	.LccJC
+	nop
+.LccJA_end:
+.LccJC:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,16,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccJE
+	nop
+	b	.LccJD
+	nop
+.LccJC_end:
+.LccJE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	16,%g2
+	stx	%g2,[%i1+904]
+	b	.LccJB
+	nop
+.LccJE_end:
+.LccJB:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccJB_end:
+.LccJD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s77X_info),%g1
+	sethi	%lm(s77X_info),%g2
+	or	%g1,%hm(s77X_info),%g1
+	or	%g2,%lo(s77X_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-8]
+	add	%i3,-8,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	or	%g1,%hm(base_TextziParserCombinatorsziReadPrec_reset_closure),%g1
+	or	%l1,%lo(base_TextziParserCombinatorsziReadPrec_reset_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccJD_end:
+.Ls77Y_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aG_info)+0
+	.quad	519691042816
+	.quad	64424509567
+.align 4
+s7aG_info:
+.LccJF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccJG
+	nop
+	b	.LccJH
+	nop
+.LccJF_end:
+.LccJH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,992,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccJJ
+	nop
+	b	.LccJI
+	nop
+.LccJH_end:
+.LccJJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	992,%g2
+	stx	%g2,[%i1+904]
+	b	.LccJG
+	nop
+.LccJJ_end:
+.LccJG:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccJG_end:
+.LccJI:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	ldx	[%g1+976],%g1
+	stx	%o0,[%i6+1055]
+	sethi	%hh(s7aF_info),%o0
+	stx	%o0,[%i6+1047]
+	sethi	%lm(s7aF_info),%o0
+	stx	%o0,[%i6+1039]
+	ldx	[%i6+1047],%o0
+	or	%o0,%hm(s7aF_info),%o0
+	stx	%o0,[%i6+1047]
+	ldx	[%i6+1039],%o0
+	or	%o0,%lo(s7aF_info),%o0
+	stx	%o0,[%i6+1039]
+	ldx	[%i6+1047],%o0
+	sllx	%o0,32,%o0
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	or	%o1,%o0,%o1
+	stx	%o1,[%i3-984]
+	ldx	[%i6+1911],%o0
+	stx	%o0,[%i3-976]
+	ldx	[%i6+1903],%o0
+	stx	%o0,[%i3-968]
+	ldx	[%i6+1895],%o0
+	stx	%o0,[%i3-960]
+	ldx	[%i6+1887],%o0
+	stx	%o0,[%i3-952]
+	ldx	[%i6+1879],%o0
+	stx	%o0,[%i3-944]
+	ldx	[%i6+1871],%o0
+	stx	%o0,[%i3-936]
+	ldx	[%i6+1863],%o0
+	stx	%o0,[%i3-928]
+	ldx	[%i6+1855],%o0
+	stx	%o0,[%i3-920]
+	ldx	[%i6+1847],%o0
+	stx	%o0,[%i3-912]
+	ldx	[%i6+1839],%o0
+	stx	%o0,[%i3-904]
+	ldx	[%i6+1831],%o0
+	stx	%o0,[%i3-896]
+	ldx	[%i6+1823],%o0
+	stx	%o0,[%i3-888]
+	ldx	[%i6+1815],%o0
+	stx	%o0,[%i3-880]
+	ldx	[%i6+1807],%o0
+	stx	%o0,[%i3-872]
+	ldx	[%i6+1799],%o0
+	stx	%o0,[%i3-864]
+	ldx	[%i6+1791],%o0
+	stx	%o0,[%i3-856]
+	ldx	[%i6+1783],%o0
+	stx	%o0,[%i3-848]
+	ldx	[%i6+1775],%o0
+	stx	%o0,[%i3-840]
+	ldx	[%i6+1767],%o0
+	stx	%o0,[%i3-832]
+	ldx	[%i6+1759],%o0
+	stx	%o0,[%i3-824]
+	ldx	[%i6+1751],%o0
+	stx	%o0,[%i3-816]
+	ldx	[%i6+1743],%o0
+	stx	%o0,[%i3-808]
+	ldx	[%i6+1735],%o0
+	stx	%o0,[%i3-800]
+	ldx	[%i6+1727],%o0
+	stx	%o0,[%i3-792]
+	ldx	[%i6+1719],%o0
+	stx	%o0,[%i3-784]
+	ldx	[%i6+1711],%o0
+	stx	%o0,[%i3-776]
+	ldx	[%i6+1703],%o0
+	stx	%o0,[%i3-768]
+	ldx	[%i6+1695],%o0
+	stx	%o0,[%i3-760]
+	ldx	[%i6+1687],%o0
+	stx	%o0,[%i3-752]
+	ldx	[%i6+1679],%o0
+	stx	%o0,[%i3-744]
+	ldx	[%i6+1671],%o0
+	stx	%o0,[%i3-736]
+	ldx	[%i6+1663],%o0
+	stx	%o0,[%i3-728]
+	ldx	[%i6+1655],%o0
+	stx	%o0,[%i3-720]
+	ldx	[%i6+1647],%o0
+	stx	%o0,[%i3-712]
+	ldx	[%i6+1639],%o0
+	stx	%o0,[%i3-704]
+	ldx	[%i6+1631],%o0
+	stx	%o0,[%i3-696]
+	ldx	[%i6+1623],%o0
+	stx	%o0,[%i3-688]
+	ldx	[%i6+1615],%o0
+	stx	%o0,[%i3-680]
+	ldx	[%i6+1607],%o0
+	stx	%o0,[%i3-672]
+	ldx	[%i6+1599],%o0
+	stx	%o0,[%i3-664]
+	ldx	[%i6+1591],%o0
+	stx	%o0,[%i3-656]
+	ldx	[%i6+1583],%o0
+	stx	%o0,[%i3-648]
+	ldx	[%i6+1575],%o0
+	stx	%o0,[%i3-640]
+	ldx	[%i6+1567],%o0
+	stx	%o0,[%i3-632]
+	ldx	[%i6+1559],%o0
+	stx	%o0,[%i3-624]
+	ldx	[%i6+1551],%o0
+	stx	%o0,[%i3-616]
+	ldx	[%i6+1543],%o0
+	stx	%o0,[%i3-608]
+	ldx	[%i6+1535],%o0
+	stx	%o0,[%i3-600]
+	ldx	[%i6+1527],%o0
+	stx	%o0,[%i3-592]
+	ldx	[%i6+1519],%o0
+	stx	%o0,[%i3-584]
+	ldx	[%i6+1511],%o0
+	stx	%o0,[%i3-576]
+	ldx	[%i6+1503],%o0
+	stx	%o0,[%i3-568]
+	ldx	[%i6+1495],%o0
+	stx	%o0,[%i3-560]
+	ldx	[%i6+1487],%o0
+	stx	%o0,[%i3-552]
+	ldx	[%i6+1479],%o0
+	stx	%o0,[%i3-544]
+	ldx	[%i6+1471],%o0
+	stx	%o0,[%i3-536]
+	ldx	[%i6+1463],%o0
+	stx	%o0,[%i3-528]
+	ldx	[%i6+1455],%o0
+	stx	%o0,[%i3-520]
+	ldx	[%i6+1447],%o0
+	stx	%o0,[%i3-512]
+	ldx	[%i6+1439],%o0
+	stx	%o0,[%i3-504]
+	ldx	[%i6+1431],%o0
+	stx	%o0,[%i3-496]
+	ldx	[%i6+1423],%o0
+	stx	%o0,[%i3-488]
+	ldx	[%i6+1415],%o0
+	stx	%o0,[%i3-480]
+	ldx	[%i6+1407],%o0
+	stx	%o0,[%i3-472]
+	ldx	[%i6+1399],%o0
+	stx	%o0,[%i3-464]
+	ldx	[%i6+1391],%o0
+	stx	%o0,[%i3-456]
+	ldx	[%i6+1383],%o0
+	stx	%o0,[%i3-448]
+	ldx	[%i6+1375],%o0
+	stx	%o0,[%i3-440]
+	ldx	[%i6+1367],%o0
+	stx	%o0,[%i3-432]
+	ldx	[%i6+1359],%o0
+	stx	%o0,[%i3-424]
+	ldx	[%i6+1351],%o0
+	stx	%o0,[%i3-416]
+	ldx	[%i6+1343],%o0
+	stx	%o0,[%i3-408]
+	ldx	[%i6+1335],%o0
+	stx	%o0,[%i3-400]
+	ldx	[%i6+1327],%o0
+	stx	%o0,[%i3-392]
+	ldx	[%i6+1319],%o0
+	stx	%o0,[%i3-384]
+	ldx	[%i6+1311],%o0
+	stx	%o0,[%i3-376]
+	ldx	[%i6+1303],%o0
+	stx	%o0,[%i3-368]
+	ldx	[%i6+1295],%o0
+	stx	%o0,[%i3-360]
+	ldx	[%i6+1287],%o0
+	stx	%o0,[%i3-352]
+	ldx	[%i6+1279],%o0
+	stx	%o0,[%i3-344]
+	ldx	[%i6+1271],%o0
+	stx	%o0,[%i3-336]
+	ldx	[%i6+1263],%o0
+	stx	%o0,[%i3-328]
+	ldx	[%i6+1255],%o0
+	stx	%o0,[%i3-320]
+	ldx	[%i6+1247],%o0
+	stx	%o0,[%i3-312]
+	ldx	[%i6+1239],%o0
+	stx	%o0,[%i3-304]
+	ldx	[%i6+1231],%o0
+	stx	%o0,[%i3-296]
+	ldx	[%i6+1223],%o0
+	stx	%o0,[%i3-288]
+	ldx	[%i6+1215],%o0
+	stx	%o0,[%i3-280]
+	ldx	[%i6+1207],%o0
+	stx	%o0,[%i3-272]
+	ldx	[%i6+1199],%o0
+	stx	%o0,[%i3-264]
+	ldx	[%i6+1191],%o0
+	stx	%o0,[%i3-256]
+	ldx	[%i6+1183],%o0
+	stx	%o0,[%i3-248]
+	ldx	[%i6+1175],%o0
+	stx	%o0,[%i3-240]
+	ldx	[%i6+1167],%o0
+	stx	%o0,[%i3-232]
+	ldx	[%i6+1159],%o0
+	stx	%o0,[%i3-224]
+	ldx	[%i6+1151],%o0
+	stx	%o0,[%i3-216]
+	ldx	[%i6+1143],%o0
+	stx	%o0,[%i3-208]
+	ldx	[%i6+1135],%o0
+	stx	%o0,[%i3-200]
+	ldx	[%i6+1127],%o0
+	stx	%o0,[%i3-192]
+	ldx	[%i6+1119],%o0
+	stx	%o0,[%i3-184]
+	ldx	[%i6+1111],%o0
+	stx	%o0,[%i3-176]
+	ldx	[%i6+1103],%o0
+	stx	%o0,[%i3-168]
+	ldx	[%i6+1095],%o0
+	stx	%o0,[%i3-160]
+	ldx	[%i6+1087],%o0
+	stx	%o0,[%i3-152]
+	ldx	[%i6+1079],%o0
+	stx	%o0,[%i3-144]
+	ldx	[%i6+1071],%o0
+	stx	%o0,[%i3-136]
+	ldx	[%i6+1063],%o0
+	stx	%o0,[%i3-128]
+	ldx	[%i6+1055],%o0
+	stx	%o0,[%i3-120]
+	ldx	[%i6+1031],%o0
+	stx	%o0,[%i3-112]
+	stx	%o2,[%i3-104]
+	stx	%o3,[%i3-96]
+	stx	%o4,[%i3-88]
+	stx	%o5,[%i3-80]
+	stx	%l0,[%i3-72]
+	stx	%l6,[%i3-64]
+	stx	%l7,[%i3-56]
+	stx	%i4,[%i3-48]
+	stx	%g2,[%i3-40]
+	stx	%g3,[%i3-32]
+	stx	%g4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-983,%g1
+	sethi	%hh(s77Y_info),%g2
+	sethi	%lm(s77Y_info),%g3
+	or	%g2,%hm(s77Y_info),%g2
+	or	%g3,%lo(s77Y_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzgze_info,0
+	nop
+.LccJI_end:
+.Ls7aG_entry_end:
+.section .rodata
+.align 8
+ccJS_str:
+	.byte	61
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77U_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s77U_info:
+.LccJT:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccJU
+	nop
+	b	.LccJV
+	nop
+.LccJT_end:
+.LccJU:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccJU_end:
+.LccJV:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccJS_str),%g1
+	sethi	%lm(ccJS_str),%l2
+	or	%g1,%hm(ccJS_str),%g1
+	or	%l2,%lo(ccJS_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccJV_end:
+.Ls77U_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77W_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s77W_info:
+.LccJX:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccJY
+	nop
+	b	.LccJZ
+	nop
+.LccJX_end:
+.LccJZ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccK1
+	nop
+	b	.LccK0
+	nop
+.LccJZ_end:
+.LccK1:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccJY
+	nop
+.LccK1_end:
+.LccJY:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccJY_end:
+.LccK0:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s77U_info),%g1
+	sethi	%lm(s77U_info),%g2
+	or	%g1,%hm(s77U_info),%g1
+	or	%g2,%lo(s77U_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Punc_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Punc_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Punc_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Punc_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-5,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccK0_end:
+.Ls77W_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aH_info)+0
+	.quad	519691042816
+	.quad	64424509567
+.align 4
+s7aH_info:
+.LccK2:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccK3
+	nop
+	b	.LccK4
+	nop
+.LccK2_end:
+.LccK4:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1000,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccK6
+	nop
+	b	.LccK5
+	nop
+.LccK4_end:
+.LccK6:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1000,%g2
+	stx	%g2,[%i1+904]
+	b	.LccK3
+	nop
+.LccK6_end:
+.LccK3:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccK3_end:
+.LccK5:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	ldx	[%g1+976],%g1
+	stx	%o0,[%i6+1055]
+	sethi	%hh(s7aG_info),%o0
+	stx	%o0,[%i6+1047]
+	sethi	%lm(s7aG_info),%o0
+	stx	%o0,[%i6+1039]
+	ldx	[%i6+1047],%o0
+	or	%o0,%hm(s7aG_info),%o0
+	stx	%o0,[%i6+1047]
+	ldx	[%i6+1039],%o0
+	or	%o0,%lo(s7aG_info),%o0
+	stx	%o0,[%i6+1039]
+	ldx	[%i6+1047],%o0
+	sllx	%o0,32,%o0
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	or	%o1,%o0,%o1
+	stx	%o1,[%i3-992]
+	ldx	[%i6+1911],%o0
+	stx	%o0,[%i3-976]
+	ldx	[%i6+1903],%o0
+	stx	%o0,[%i3-968]
+	ldx	[%i6+1895],%o0
+	stx	%o0,[%i3-960]
+	ldx	[%i6+1887],%o0
+	stx	%o0,[%i3-952]
+	ldx	[%i6+1879],%o0
+	stx	%o0,[%i3-944]
+	ldx	[%i6+1871],%o0
+	stx	%o0,[%i3-936]
+	ldx	[%i6+1863],%o0
+	stx	%o0,[%i3-928]
+	ldx	[%i6+1855],%o0
+	stx	%o0,[%i3-920]
+	ldx	[%i6+1847],%o0
+	stx	%o0,[%i3-912]
+	ldx	[%i6+1839],%o0
+	stx	%o0,[%i3-904]
+	ldx	[%i6+1831],%o0
+	stx	%o0,[%i3-896]
+	ldx	[%i6+1823],%o0
+	stx	%o0,[%i3-888]
+	ldx	[%i6+1815],%o0
+	stx	%o0,[%i3-880]
+	ldx	[%i6+1807],%o0
+	stx	%o0,[%i3-872]
+	ldx	[%i6+1799],%o0
+	stx	%o0,[%i3-864]
+	ldx	[%i6+1791],%o0
+	stx	%o0,[%i3-856]
+	ldx	[%i6+1783],%o0
+	stx	%o0,[%i3-848]
+	ldx	[%i6+1775],%o0
+	stx	%o0,[%i3-840]
+	ldx	[%i6+1767],%o0
+	stx	%o0,[%i3-832]
+	ldx	[%i6+1759],%o0
+	stx	%o0,[%i3-824]
+	ldx	[%i6+1751],%o0
+	stx	%o0,[%i3-816]
+	ldx	[%i6+1743],%o0
+	stx	%o0,[%i3-808]
+	ldx	[%i6+1735],%o0
+	stx	%o0,[%i3-800]
+	ldx	[%i6+1727],%o0
+	stx	%o0,[%i3-792]
+	ldx	[%i6+1719],%o0
+	stx	%o0,[%i3-784]
+	ldx	[%i6+1711],%o0
+	stx	%o0,[%i3-776]
+	ldx	[%i6+1703],%o0
+	stx	%o0,[%i3-768]
+	ldx	[%i6+1695],%o0
+	stx	%o0,[%i3-760]
+	ldx	[%i6+1687],%o0
+	stx	%o0,[%i3-752]
+	ldx	[%i6+1679],%o0
+	stx	%o0,[%i3-744]
+	ldx	[%i6+1671],%o0
+	stx	%o0,[%i3-736]
+	ldx	[%i6+1663],%o0
+	stx	%o0,[%i3-728]
+	ldx	[%i6+1655],%o0
+	stx	%o0,[%i3-720]
+	ldx	[%i6+1647],%o0
+	stx	%o0,[%i3-712]
+	ldx	[%i6+1639],%o0
+	stx	%o0,[%i3-704]
+	ldx	[%i6+1631],%o0
+	stx	%o0,[%i3-696]
+	ldx	[%i6+1623],%o0
+	stx	%o0,[%i3-688]
+	ldx	[%i6+1615],%o0
+	stx	%o0,[%i3-680]
+	ldx	[%i6+1607],%o0
+	stx	%o0,[%i3-672]
+	ldx	[%i6+1599],%o0
+	stx	%o0,[%i3-664]
+	ldx	[%i6+1591],%o0
+	stx	%o0,[%i3-656]
+	ldx	[%i6+1583],%o0
+	stx	%o0,[%i3-648]
+	ldx	[%i6+1575],%o0
+	stx	%o0,[%i3-640]
+	ldx	[%i6+1567],%o0
+	stx	%o0,[%i3-632]
+	ldx	[%i6+1559],%o0
+	stx	%o0,[%i3-624]
+	ldx	[%i6+1551],%o0
+	stx	%o0,[%i3-616]
+	ldx	[%i6+1543],%o0
+	stx	%o0,[%i3-608]
+	ldx	[%i6+1535],%o0
+	stx	%o0,[%i3-600]
+	ldx	[%i6+1527],%o0
+	stx	%o0,[%i3-592]
+	ldx	[%i6+1519],%o0
+	stx	%o0,[%i3-584]
+	ldx	[%i6+1511],%o0
+	stx	%o0,[%i3-576]
+	ldx	[%i6+1503],%o0
+	stx	%o0,[%i3-568]
+	ldx	[%i6+1495],%o0
+	stx	%o0,[%i3-560]
+	ldx	[%i6+1487],%o0
+	stx	%o0,[%i3-552]
+	ldx	[%i6+1479],%o0
+	stx	%o0,[%i3-544]
+	ldx	[%i6+1471],%o0
+	stx	%o0,[%i3-536]
+	ldx	[%i6+1463],%o0
+	stx	%o0,[%i3-528]
+	ldx	[%i6+1455],%o0
+	stx	%o0,[%i3-520]
+	ldx	[%i6+1447],%o0
+	stx	%o0,[%i3-512]
+	ldx	[%i6+1439],%o0
+	stx	%o0,[%i3-504]
+	ldx	[%i6+1431],%o0
+	stx	%o0,[%i3-496]
+	ldx	[%i6+1423],%o0
+	stx	%o0,[%i3-488]
+	ldx	[%i6+1415],%o0
+	stx	%o0,[%i3-480]
+	ldx	[%i6+1407],%o0
+	stx	%o0,[%i3-472]
+	ldx	[%i6+1399],%o0
+	stx	%o0,[%i3-464]
+	ldx	[%i6+1391],%o0
+	stx	%o0,[%i3-456]
+	ldx	[%i6+1383],%o0
+	stx	%o0,[%i3-448]
+	ldx	[%i6+1375],%o0
+	stx	%o0,[%i3-440]
+	ldx	[%i6+1367],%o0
+	stx	%o0,[%i3-432]
+	ldx	[%i6+1359],%o0
+	stx	%o0,[%i3-424]
+	ldx	[%i6+1351],%o0
+	stx	%o0,[%i3-416]
+	ldx	[%i6+1343],%o0
+	stx	%o0,[%i3-408]
+	ldx	[%i6+1335],%o0
+	stx	%o0,[%i3-400]
+	ldx	[%i6+1327],%o0
+	stx	%o0,[%i3-392]
+	ldx	[%i6+1319],%o0
+	stx	%o0,[%i3-384]
+	ldx	[%i6+1311],%o0
+	stx	%o0,[%i3-376]
+	ldx	[%i6+1303],%o0
+	stx	%o0,[%i3-368]
+	ldx	[%i6+1295],%o0
+	stx	%o0,[%i3-360]
+	ldx	[%i6+1287],%o0
+	stx	%o0,[%i3-352]
+	ldx	[%i6+1279],%o0
+	stx	%o0,[%i3-344]
+	ldx	[%i6+1271],%o0
+	stx	%o0,[%i3-336]
+	ldx	[%i6+1263],%o0
+	stx	%o0,[%i3-328]
+	ldx	[%i6+1255],%o0
+	stx	%o0,[%i3-320]
+	ldx	[%i6+1247],%o0
+	stx	%o0,[%i3-312]
+	ldx	[%i6+1239],%o0
+	stx	%o0,[%i3-304]
+	ldx	[%i6+1231],%o0
+	stx	%o0,[%i3-296]
+	ldx	[%i6+1223],%o0
+	stx	%o0,[%i3-288]
+	ldx	[%i6+1215],%o0
+	stx	%o0,[%i3-280]
+	ldx	[%i6+1207],%o0
+	stx	%o0,[%i3-272]
+	ldx	[%i6+1199],%o0
+	stx	%o0,[%i3-264]
+	ldx	[%i6+1191],%o0
+	stx	%o0,[%i3-256]
+	ldx	[%i6+1183],%o0
+	stx	%o0,[%i3-248]
+	ldx	[%i6+1175],%o0
+	stx	%o0,[%i3-240]
+	ldx	[%i6+1167],%o0
+	stx	%o0,[%i3-232]
+	ldx	[%i6+1159],%o0
+	stx	%o0,[%i3-224]
+	ldx	[%i6+1151],%o0
+	stx	%o0,[%i3-216]
+	ldx	[%i6+1143],%o0
+	stx	%o0,[%i3-208]
+	ldx	[%i6+1135],%o0
+	stx	%o0,[%i3-200]
+	ldx	[%i6+1127],%o0
+	stx	%o0,[%i3-192]
+	ldx	[%i6+1119],%o0
+	stx	%o0,[%i3-184]
+	ldx	[%i6+1111],%o0
+	stx	%o0,[%i3-176]
+	ldx	[%i6+1103],%o0
+	stx	%o0,[%i3-168]
+	ldx	[%i6+1095],%o0
+	stx	%o0,[%i3-160]
+	ldx	[%i6+1087],%o0
+	stx	%o0,[%i3-152]
+	ldx	[%i6+1079],%o0
+	stx	%o0,[%i3-144]
+	ldx	[%i6+1071],%o0
+	stx	%o0,[%i3-136]
+	ldx	[%i6+1063],%o0
+	stx	%o0,[%i3-128]
+	ldx	[%i6+1055],%o0
+	stx	%o0,[%i3-120]
+	ldx	[%i6+1031],%o0
+	stx	%o0,[%i3-112]
+	stx	%o2,[%i3-104]
+	stx	%o3,[%i3-96]
+	stx	%o4,[%i3-88]
+	stx	%o5,[%i3-80]
+	stx	%l0,[%i3-72]
+	stx	%l6,[%i3-64]
+	stx	%l7,[%i3-56]
+	stx	%i4,[%i3-48]
+	stx	%g2,[%i3-40]
+	stx	%g3,[%i3-32]
+	stx	%g4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-992,%g1
+	sethi	%hh(s77W_info),%g2
+	sethi	%lm(s77W_info),%g3
+	or	%g2,%hm(s77W_info),%g2
+	or	%g3,%lo(s77W_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccK5_end:
+.Ls7aH_entry_end:
+.section .rodata
+.align 8
+ccKf_str:
+	.byte	112
+	.byte	99
+	.byte	95
+	.byte	67
+	.byte	73
+	.byte	78
+	.byte	84
+	.byte	95
+	.byte	83
+	.byte	73
+	.byte	90
+	.byte	69
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77R_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s77R_info:
+.LccKg:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccKh
+	nop
+	b	.LccKi
+	nop
+.LccKg_end:
+.LccKh:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccKh_end:
+.LccKi:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccKf_str),%g1
+	sethi	%lm(ccKf_str),%l2
+	or	%g1,%hm(ccKf_str),%g1
+	or	%l2,%lo(ccKf_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccKi_end:
+.Ls77R_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77T_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s77T_info:
+.LccKk:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccKl
+	nop
+	b	.LccKm
+	nop
+.LccKk_end:
+.LccKm:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccKo
+	nop
+	b	.LccKn
+	nop
+.LccKm_end:
+.LccKo:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
+	stx	%g2,[%i1+904]
+	b	.LccKl
+	nop
+.LccKo_end:
+.LccKl:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccKl_end:
+.LccKn:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(s77R_info),%g1
+	sethi	%lm(s77R_info),%g2
+	or	%g1,%hm(s77R_info),%g1
+	or	%g2,%lo(s77R_info),%g2
+	sllx	%g1,32,%g1
+	or	%g2,%g1,%g2
+	stx	%g2,[%i3-24]
+	add	%i3,-24,%g1
+	sethi	%hh(base_TextziReadziLex_Ident_con_info),%g2
+	sethi	%lm(base_TextziReadziLex_Ident_con_info),%g3
+	or	%g2,%hm(base_TextziReadziLex_Ident_con_info),%g2
+	or	%g3,%lo(base_TextziReadziLex_Ident_con_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	stx	%g1,[%i3]
+	add	%i3,-4,%g1
+	mov	%g1,%l2
+	sethi	%hh(base_GHCziRead_expectP_closure),%g1
+	sethi	%lm(base_GHCziRead_expectP_closure),%l1
+	or	%g1,%hm(base_GHCziRead_expectP_closure),%g1
+	or	%l1,%lo(base_GHCziRead_expectP_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_p_fast,0
+	nop
+.LccKn_end:
+.Ls77T_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s7aI_info)+0
+	.quad	519691042816
+	.quad	64424509567
+.align 4
+s7aI_info:
+.LccKp:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-40,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccKq
+	nop
+	b	.LccKr
+	nop
+.LccKp_end:
+.LccKr:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,1000,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccKt
+	nop
+	b	.LccKs
+	nop
+.LccKr_end:
+.LccKt:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	1000,%g2
+	stx	%g2,[%i1+904]
+	b	.LccKq
+	nop
+.LccKt_end:
+.LccKq:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccKq_end:
+.LccKs:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	ldx	[%g1+16],%g2
+	ldx	[%g1+24],%g3
+	ldx	[%g1+32],%g4
+	ldx	[%g1+40],%o0
+	ldx	[%g1+48],%o1
+	ldx	[%g1+56],%o2
+	ldx	[%g1+64],%o3
+	ldx	[%g1+72],%o4
+	ldx	[%g1+80],%o5
+	ldx	[%g1+88],%l0
+	ldx	[%g1+96],%l6
+	ldx	[%g1+104],%l7
+	ldx	[%g1+112],%i4
+	stx	%g2,[%i6+1911]
+	ldx	[%g1+120],%g2
+	stx	%g3,[%i6+1903]
+	ldx	[%g1+128],%g3
+	stx	%g4,[%i6+1895]
+	ldx	[%g1+136],%g4
+	stx	%o0,[%i6+1887]
+	ldx	[%g1+144],%o0
+	stx	%o1,[%i6+1879]
+	ldx	[%g1+152],%o1
+	stx	%o2,[%i6+1871]
+	ldx	[%g1+160],%o2
+	stx	%o3,[%i6+1863]
+	ldx	[%g1+168],%o3
+	stx	%o4,[%i6+1855]
+	ldx	[%g1+176],%o4
+	stx	%o5,[%i6+1847]
+	ldx	[%g1+184],%o5
+	stx	%l0,[%i6+1839]
+	ldx	[%g1+192],%l0
+	stx	%l6,[%i6+1831]
+	ldx	[%g1+200],%l6
+	stx	%l7,[%i6+1823]
+	ldx	[%g1+208],%l7
+	stx	%i4,[%i6+1815]
+	ldx	[%g1+216],%i4
+	stx	%g2,[%i6+1807]
+	ldx	[%g1+224],%g2
+	stx	%g3,[%i6+1799]
+	ldx	[%g1+232],%g3
+	stx	%g4,[%i6+1791]
+	ldx	[%g1+240],%g4
+	stx	%o0,[%i6+1783]
+	ldx	[%g1+248],%o0
+	stx	%o1,[%i6+1775]
+	ldx	[%g1+256],%o1
+	stx	%o2,[%i6+1767]
+	ldx	[%g1+264],%o2
+	stx	%o3,[%i6+1759]
+	ldx	[%g1+272],%o3
+	stx	%o4,[%i6+1751]
+	ldx	[%g1+280],%o4
+	stx	%o5,[%i6+1743]
+	ldx	[%g1+288],%o5
+	stx	%l0,[%i6+1735]
+	ldx	[%g1+296],%l0
+	stx	%l6,[%i6+1727]
+	ldx	[%g1+304],%l6
+	stx	%l7,[%i6+1719]
+	ldx	[%g1+312],%l7
+	stx	%i4,[%i6+1711]
+	ldx	[%g1+320],%i4
+	stx	%g2,[%i6+1703]
+	ldx	[%g1+328],%g2
+	stx	%g3,[%i6+1695]
+	ldx	[%g1+336],%g3
+	stx	%g4,[%i6+1687]
+	ldx	[%g1+344],%g4
+	stx	%o0,[%i6+1679]
+	ldx	[%g1+352],%o0
+	stx	%o1,[%i6+1671]
+	ldx	[%g1+360],%o1
+	stx	%o2,[%i6+1663]
+	ldx	[%g1+368],%o2
+	stx	%o3,[%i6+1655]
+	ldx	[%g1+376],%o3
+	stx	%o4,[%i6+1647]
+	ldx	[%g1+384],%o4
+	stx	%o5,[%i6+1639]
+	ldx	[%g1+392],%o5
+	stx	%l0,[%i6+1631]
+	ldx	[%g1+400],%l0
+	stx	%l6,[%i6+1623]
+	ldx	[%g1+408],%l6
+	stx	%l7,[%i6+1615]
+	ldx	[%g1+416],%l7
+	stx	%i4,[%i6+1607]
+	ldx	[%g1+424],%i4
+	stx	%g2,[%i6+1599]
+	ldx	[%g1+432],%g2
+	stx	%g3,[%i6+1591]
+	ldx	[%g1+440],%g3
+	stx	%g4,[%i6+1583]
+	ldx	[%g1+448],%g4
+	stx	%o0,[%i6+1575]
+	ldx	[%g1+456],%o0
+	stx	%o1,[%i6+1567]
+	ldx	[%g1+464],%o1
+	stx	%o2,[%i6+1559]
+	ldx	[%g1+472],%o2
+	stx	%o3,[%i6+1551]
+	ldx	[%g1+480],%o3
+	stx	%o4,[%i6+1543]
+	ldx	[%g1+488],%o4
+	stx	%o5,[%i6+1535]
+	ldx	[%g1+496],%o5
+	stx	%l0,[%i6+1527]
+	ldx	[%g1+504],%l0
+	stx	%l6,[%i6+1519]
+	ldx	[%g1+512],%l6
+	stx	%l7,[%i6+1511]
+	ldx	[%g1+520],%l7
+	stx	%i4,[%i6+1503]
+	ldx	[%g1+528],%i4
+	stx	%g2,[%i6+1495]
+	ldx	[%g1+536],%g2
+	stx	%g3,[%i6+1487]
+	ldx	[%g1+544],%g3
+	stx	%g4,[%i6+1479]
+	ldx	[%g1+552],%g4
+	stx	%o0,[%i6+1471]
+	ldx	[%g1+560],%o0
+	stx	%o1,[%i6+1463]
+	ldx	[%g1+568],%o1
+	stx	%o2,[%i6+1455]
+	ldx	[%g1+576],%o2
+	stx	%o3,[%i6+1447]
+	ldx	[%g1+584],%o3
+	stx	%o4,[%i6+1439]
+	ldx	[%g1+592],%o4
+	stx	%o5,[%i6+1431]
+	ldx	[%g1+600],%o5
+	stx	%l0,[%i6+1423]
+	ldx	[%g1+608],%l0
+	stx	%l6,[%i6+1415]
+	ldx	[%g1+616],%l6
+	stx	%l7,[%i6+1407]
+	ldx	[%g1+624],%l7
+	stx	%i4,[%i6+1399]
+	ldx	[%g1+632],%i4
+	stx	%g2,[%i6+1391]
+	ldx	[%g1+640],%g2
+	stx	%g3,[%i6+1383]
+	ldx	[%g1+648],%g3
+	stx	%g4,[%i6+1375]
+	ldx	[%g1+656],%g4
+	stx	%o0,[%i6+1367]
+	ldx	[%g1+664],%o0
+	stx	%o1,[%i6+1359]
+	ldx	[%g1+672],%o1
+	stx	%o2,[%i6+1351]
+	ldx	[%g1+680],%o2
+	stx	%o3,[%i6+1343]
+	ldx	[%g1+688],%o3
+	stx	%o4,[%i6+1335]
+	ldx	[%g1+696],%o4
+	stx	%o5,[%i6+1327]
+	ldx	[%g1+704],%o5
+	stx	%l0,[%i6+1319]
+	ldx	[%g1+712],%l0
+	stx	%l6,[%i6+1311]
+	ldx	[%g1+720],%l6
+	stx	%l7,[%i6+1303]
+	ldx	[%g1+728],%l7
+	stx	%i4,[%i6+1295]
+	ldx	[%g1+736],%i4
+	stx	%g2,[%i6+1287]
+	ldx	[%g1+744],%g2
+	stx	%g3,[%i6+1279]
+	ldx	[%g1+752],%g3
+	stx	%g4,[%i6+1271]
+	ldx	[%g1+760],%g4
+	stx	%o0,[%i6+1263]
+	ldx	[%g1+768],%o0
+	stx	%o1,[%i6+1255]
+	ldx	[%g1+776],%o1
+	stx	%o2,[%i6+1247]
+	ldx	[%g1+784],%o2
+	stx	%o3,[%i6+1239]
+	ldx	[%g1+792],%o3
+	stx	%o4,[%i6+1231]
+	ldx	[%g1+800],%o4
+	stx	%o5,[%i6+1223]
+	ldx	[%g1+808],%o5
+	stx	%l0,[%i6+1215]
+	ldx	[%g1+816],%l0
+	stx	%l6,[%i6+1207]
+	ldx	[%g1+824],%l6
+	stx	%l7,[%i6+1199]
+	ldx	[%g1+832],%l7
+	stx	%i4,[%i6+1191]
+	ldx	[%g1+840],%i4
+	stx	%g2,[%i6+1183]
+	ldx	[%g1+848],%g2
+	stx	%g3,[%i6+1175]
+	ldx	[%g1+856],%g3
+	stx	%g4,[%i6+1167]
+	ldx	[%g1+864],%g4
+	stx	%o0,[%i6+1159]
+	ldx	[%g1+872],%o0
+	stx	%o1,[%i6+1151]
+	ldx	[%g1+880],%o1
+	stx	%o2,[%i6+1143]
+	ldx	[%g1+888],%o2
+	stx	%o3,[%i6+1135]
+	ldx	[%g1+896],%o3
+	stx	%o4,[%i6+1127]
+	ldx	[%g1+904],%o4
+	stx	%o5,[%i6+1119]
+	ldx	[%g1+912],%o5
+	stx	%l0,[%i6+1111]
+	ldx	[%g1+920],%l0
+	stx	%l6,[%i6+1103]
+	ldx	[%g1+928],%l6
+	stx	%l7,[%i6+1095]
+	ldx	[%g1+936],%l7
+	stx	%i4,[%i6+1087]
+	ldx	[%g1+944],%i4
+	stx	%g2,[%i6+1079]
+	ldx	[%g1+952],%g2
+	stx	%g3,[%i6+1071]
+	ldx	[%g1+960],%g3
+	stx	%g4,[%i6+1063]
+	ldx	[%g1+968],%g4
+	ldx	[%g1+976],%g1
+	stx	%o0,[%i6+1055]
+	sethi	%hh(s7aH_info),%o0
+	stx	%o0,[%i6+1047]
+	sethi	%lm(s7aH_info),%o0
+	stx	%o0,[%i6+1039]
+	ldx	[%i6+1047],%o0
+	or	%o0,%hm(s7aH_info),%o0
+	stx	%o0,[%i6+1047]
+	ldx	[%i6+1039],%o0
+	or	%o0,%lo(s7aH_info),%o0
+	stx	%o0,[%i6+1039]
+	ldx	[%i6+1047],%o0
+	sllx	%o0,32,%o0
+	stx	%o1,[%i6+1031]
+	ldx	[%i6+1039],%o1
+	or	%o1,%o0,%o1
+	stx	%o1,[%i3-992]
+	ldx	[%i6+1911],%o0
+	stx	%o0,[%i3-976]
+	ldx	[%i6+1903],%o0
+	stx	%o0,[%i3-968]
+	ldx	[%i6+1895],%o0
+	stx	%o0,[%i3-960]
+	ldx	[%i6+1887],%o0
+	stx	%o0,[%i3-952]
+	ldx	[%i6+1879],%o0
+	stx	%o0,[%i3-944]
+	ldx	[%i6+1871],%o0
+	stx	%o0,[%i3-936]
+	ldx	[%i6+1863],%o0
+	stx	%o0,[%i3-928]
+	ldx	[%i6+1855],%o0
+	stx	%o0,[%i3-920]
+	ldx	[%i6+1847],%o0
+	stx	%o0,[%i3-912]
+	ldx	[%i6+1839],%o0
+	stx	%o0,[%i3-904]
+	ldx	[%i6+1831],%o0
+	stx	%o0,[%i3-896]
+	ldx	[%i6+1823],%o0
+	stx	%o0,[%i3-888]
+	ldx	[%i6+1815],%o0
+	stx	%o0,[%i3-880]
+	ldx	[%i6+1807],%o0
+	stx	%o0,[%i3-872]
+	ldx	[%i6+1799],%o0
+	stx	%o0,[%i3-864]
+	ldx	[%i6+1791],%o0
+	stx	%o0,[%i3-856]
+	ldx	[%i6+1783],%o0
+	stx	%o0,[%i3-848]
+	ldx	[%i6+1775],%o0
+	stx	%o0,[%i3-840]
+	ldx	[%i6+1767],%o0
+	stx	%o0,[%i3-832]
+	ldx	[%i6+1759],%o0
+	stx	%o0,[%i3-824]
+	ldx	[%i6+1751],%o0
+	stx	%o0,[%i3-816]
+	ldx	[%i6+1743],%o0
+	stx	%o0,[%i3-808]
+	ldx	[%i6+1735],%o0
+	stx	%o0,[%i3-800]
+	ldx	[%i6+1727],%o0
+	stx	%o0,[%i3-792]
+	ldx	[%i6+1719],%o0
+	stx	%o0,[%i3-784]
+	ldx	[%i6+1711],%o0
+	stx	%o0,[%i3-776]
+	ldx	[%i6+1703],%o0
+	stx	%o0,[%i3-768]
+	ldx	[%i6+1695],%o0
+	stx	%o0,[%i3-760]
+	ldx	[%i6+1687],%o0
+	stx	%o0,[%i3-752]
+	ldx	[%i6+1679],%o0
+	stx	%o0,[%i3-744]
+	ldx	[%i6+1671],%o0
+	stx	%o0,[%i3-736]
+	ldx	[%i6+1663],%o0
+	stx	%o0,[%i3-728]
+	ldx	[%i6+1655],%o0
+	stx	%o0,[%i3-720]
+	ldx	[%i6+1647],%o0
+	stx	%o0,[%i3-712]
+	ldx	[%i6+1639],%o0
+	stx	%o0,[%i3-704]
+	ldx	[%i6+1631],%o0
+	stx	%o0,[%i3-696]
+	ldx	[%i6+1623],%o0
+	stx	%o0,[%i3-688]
+	ldx	[%i6+1615],%o0
+	stx	%o0,[%i3-680]
+	ldx	[%i6+1607],%o0
+	stx	%o0,[%i3-672]
+	ldx	[%i6+1599],%o0
+	stx	%o0,[%i3-664]
+	ldx	[%i6+1591],%o0
+	stx	%o0,[%i3-656]
+	ldx	[%i6+1583],%o0
+	stx	%o0,[%i3-648]
+	ldx	[%i6+1575],%o0
+	stx	%o0,[%i3-640]
+	ldx	[%i6+1567],%o0
+	stx	%o0,[%i3-632]
+	ldx	[%i6+1559],%o0
+	stx	%o0,[%i3-624]
+	ldx	[%i6+1551],%o0
+	stx	%o0,[%i3-616]
+	ldx	[%i6+1543],%o0
+	stx	%o0,[%i3-608]
+	ldx	[%i6+1535],%o0
+	stx	%o0,[%i3-600]
+	ldx	[%i6+1527],%o0
+	stx	%o0,[%i3-592]
+	ldx	[%i6+1519],%o0
+	stx	%o0,[%i3-584]
+	ldx	[%i6+1511],%o0
+	stx	%o0,[%i3-576]
+	ldx	[%i6+1503],%o0
+	stx	%o0,[%i3-568]
+	ldx	[%i6+1495],%o0
+	stx	%o0,[%i3-560]
+	ldx	[%i6+1487],%o0
+	stx	%o0,[%i3-552]
+	ldx	[%i6+1479],%o0
+	stx	%o0,[%i3-544]
+	ldx	[%i6+1471],%o0
+	stx	%o0,[%i3-536]
+	ldx	[%i6+1463],%o0
+	stx	%o0,[%i3-528]
+	ldx	[%i6+1455],%o0
+	stx	%o0,[%i3-520]
+	ldx	[%i6+1447],%o0
+	stx	%o0,[%i3-512]
+	ldx	[%i6+1439],%o0
+	stx	%o0,[%i3-504]
+	ldx	[%i6+1431],%o0
+	stx	%o0,[%i3-496]
+	ldx	[%i6+1423],%o0
+	stx	%o0,[%i3-488]
+	ldx	[%i6+1415],%o0
+	stx	%o0,[%i3-480]
+	ldx	[%i6+1407],%o0
+	stx	%o0,[%i3-472]
+	ldx	[%i6+1399],%o0
+	stx	%o0,[%i3-464]
+	ldx	[%i6+1391],%o0
+	stx	%o0,[%i3-456]
+	ldx	[%i6+1383],%o0
+	stx	%o0,[%i3-448]
+	ldx	[%i6+1375],%o0
+	stx	%o0,[%i3-440]
+	ldx	[%i6+1367],%o0
+	stx	%o0,[%i3-432]
+	ldx	[%i6+1359],%o0
+	stx	%o0,[%i3-424]
+	ldx	[%i6+1351],%o0
+	stx	%o0,[%i3-416]
+	ldx	[%i6+1343],%o0
+	stx	%o0,[%i3-408]
+	ldx	[%i6+1335],%o0
+	stx	%o0,[%i3-400]
+	ldx	[%i6+1327],%o0
+	stx	%o0,[%i3-392]
+	ldx	[%i6+1319],%o0
+	stx	%o0,[%i3-384]
+	ldx	[%i6+1311],%o0
+	stx	%o0,[%i3-376]
+	ldx	[%i6+1303],%o0
+	stx	%o0,[%i3-368]
+	ldx	[%i6+1295],%o0
+	stx	%o0,[%i3-360]
+	ldx	[%i6+1287],%o0
+	stx	%o0,[%i3-352]
+	ldx	[%i6+1279],%o0
+	stx	%o0,[%i3-344]
+	ldx	[%i6+1271],%o0
+	stx	%o0,[%i3-336]
+	ldx	[%i6+1263],%o0
+	stx	%o0,[%i3-328]
+	ldx	[%i6+1255],%o0
+	stx	%o0,[%i3-320]
+	ldx	[%i6+1247],%o0
+	stx	%o0,[%i3-312]
+	ldx	[%i6+1239],%o0
+	stx	%o0,[%i3-304]
+	ldx	[%i6+1231],%o0
+	stx	%o0,[%i3-296]
+	ldx	[%i6+1223],%o0
+	stx	%o0,[%i3-288]
+	ldx	[%i6+1215],%o0
+	stx	%o0,[%i3-280]
+	ldx	[%i6+1207],%o0
+	stx	%o0,[%i3-272]
+	ldx	[%i6+1199],%o0
+	stx	%o0,[%i3-264]
+	ldx	[%i6+1191],%o0
+	stx	%o0,[%i3-256]
+	ldx	[%i6+1183],%o0
+	stx	%o0,[%i3-248]
+	ldx	[%i6+1175],%o0
+	stx	%o0,[%i3-240]
+	ldx	[%i6+1167],%o0
+	stx	%o0,[%i3-232]
+	ldx	[%i6+1159],%o0
+	stx	%o0,[%i3-224]
+	ldx	[%i6+1151],%o0
+	stx	%o0,[%i3-216]
+	ldx	[%i6+1143],%o0
+	stx	%o0,[%i3-208]
+	ldx	[%i6+1135],%o0
+	stx	%o0,[%i3-200]
+	ldx	[%i6+1127],%o0
+	stx	%o0,[%i3-192]
+	ldx	[%i6+1119],%o0
+	stx	%o0,[%i3-184]
+	ldx	[%i6+1111],%o0
+	stx	%o0,[%i3-176]
+	ldx	[%i6+1103],%o0
+	stx	%o0,[%i3-168]
+	ldx	[%i6+1095],%o0
+	stx	%o0,[%i3-160]
+	ldx	[%i6+1087],%o0
+	stx	%o0,[%i3-152]
+	ldx	[%i6+1079],%o0
+	stx	%o0,[%i3-144]
+	ldx	[%i6+1071],%o0
+	stx	%o0,[%i3-136]
+	ldx	[%i6+1063],%o0
+	stx	%o0,[%i3-128]
+	ldx	[%i6+1055],%o0
+	stx	%o0,[%i3-120]
+	ldx	[%i6+1031],%o0
+	stx	%o0,[%i3-112]
+	stx	%o2,[%i3-104]
+	stx	%o3,[%i3-96]
+	stx	%o4,[%i3-88]
+	stx	%o5,[%i3-80]
+	stx	%l0,[%i3-72]
+	stx	%l6,[%i3-64]
+	stx	%l7,[%i3-56]
+	stx	%i4,[%i3-48]
+	stx	%g2,[%i3-40]
+	stx	%g3,[%i3-32]
+	stx	%g4,[%i3-24]
+	stx	%g1,[%i3-16]
+	add	%i3,-992,%g1
+	sethi	%hh(s77T_info),%g2
+	sethi	%lm(s77T_info),%g3
+	or	%g2,%hm(s77T_info),%g2
+	or	%g3,%lo(s77T_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i3-8]
+	add	%i3,-8,%g2
+	sethi	%hh(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	sethi	%lm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	or	%g3,%hm(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%g3
+	or	%l2,%lo(base_TextziParserCombinatorsziReadPrec_zdfMonadReadPrec_closure),%l2
+	sllx	%g3,32,%g3
+	or	%l2,%g3,%l2
+	sethi	%hh(stg_ap_pp_info),%g3
+	sethi	%lm(stg_ap_pp_info),%g4
+	or	%g3,%hm(stg_ap_pp_info),%g3
+	or	%g4,%lo(stg_ap_pp_info),%g4
+	sllx	%g3,32,%g3
+	or	%g4,%g3,%g4
+	stx	%g4,[%i0-40]
+	stx	%g2,[%i0-32]
+	stx	%g1,[%i0-24]
+	add	%i0,-40,%i0
+	call	base_GHCziBase_zgzg_info,0
+	nop
+.LccKs_end:
+.Ls7aI_entry_end:
+.section .rodata
+.align 8
+ccKC_str:
+	.byte	44
+	.byte	0
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77O_info)+8
+	.quad	0
+	.quad	64424509441
+.align 4
+s77O_info:
+.LccKD:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccKE
+	nop
+	b	.LccKF
+	nop
+.LccKD_end:
+.LccKE:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%g1,%l1
+	ldx	[%i1-16],%g1
+	jmp	%g1
+	nop
+.LccKE_end:
+.LccKF:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	sethi	%hh(stg_upd_frame_info),%g2
+	sethi	%lm(stg_upd_frame_info),%g3
+	or	%g2,%hm(stg_upd_frame_info),%g2
+	or	%g3,%lo(stg_upd_frame_info),%g3
+	sllx	%g2,32,%g2
+	or	%g3,%g2,%g3
+	stx	%g3,[%i0-16]
+	stx	%g1,[%i0-8]
+	sethi	%hh(ccKC_str),%g1
+	sethi	%lm(ccKC_str),%l2
+	or	%g1,%hm(ccKC_str),%g1
+	or	%l2,%lo(ccKC_str),%l2
+	sllx	%g1,32,%g1
+	or	%l2,%g1,%l2
+	sethi	%hh(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	sethi	%lm(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	or	%g1,%hm(ghczmprim_GHCziCString_unpackCStringzh_closure),%g1
+	or	%l1,%lo(ghczmprim_GHCziCString_unpackCStringzh_closure),%l1
+	sllx	%g1,32,%g1
+	or	%l1,%g1,%l1
+	add	%i0,-16,%i0
+	call	stg_ap_n_fast,0
+	nop
+.LccKF_end:
+.Ls77O_entry_end:
+.section .text
+.align 8
+	.quad	SfAX_srt-(s77Q_info)+8
+	.quad	0
+	.quad	64424509443
+.align 4
+s77Q_info:
+.LccKH:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	%l1,%g1
+	add	%i0,-16,%g2
+	cmp	%g2,%i2
+	blu	%xcc,.+8
+	 b	.LccKI
+	nop
+	b	.LccKJ
+	nop
+.LccKH_end:
+.LccKJ:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	add	%i3,32,%i3
+	ldx	[%i1+856],%g2
+	cmp	%i3,%g2
+	bgu	%xcc,.+8
+	 b	.LccKL
+	nop
+	b	.LccKK
+	nop
+.LccKJ_end:
+.LccKL:
+	.register	%g2,#scratch
+	.register	%g3,#scratch
+	.loc 1 134 14
+	mov	32,%g2
