@@ -131,6 +131,9 @@ data Instr
         -- comment pseudo-op
         = COMMENT FastString
 
+        -- location pseudo-op (file, line, col, name)
+        | LOCATION Int Int Int String
+
         -- some static data spat out during code generation.
         -- Will be extracted before pretty-printing.
         | LDATA   Section CmmStatics
@@ -480,6 +483,7 @@ sparc_isMetaInstr
 sparc_isMetaInstr instr
  = case instr of
         COMMENT{}       -> True
+        LOCATION{}      -> True
         LDATA{}         -> True
         NEWBLOCK{}      -> True
         DELTA{}         -> True

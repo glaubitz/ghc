@@ -56,6 +56,7 @@ pprNatCmmDecl (CmmData section dats) =
   pprSectionAlign section $$ pprDatas dats
 
 pprNatCmmDecl proc@(CmmProc top_info lbl _ (ListGraph blocks)) =
+  sdocWithDynFlags $ \dflags ->
   case topInfoTable proc of
     Nothing ->
        case blocks of
@@ -64,7 +65,10 @@ pprNatCmmDecl proc@(CmmProc top_info lbl _ (ListGraph blocks)) =
          blocks -> -- special case for code without info table:
            pprSectionAlign (Section Text lbl) $$
            pprLabel lbl $$ -- blocks guaranteed not null, so label needed
-           vcat (map (pprBasicBlock top_info) blocks)
+           vcat (map (pprBasicBlock top_info) blocks) $$
+           (if gopt Opt_Debug dflags
+            then ppr (mkAsmTempEndLabel lbl) <> char ':'
+            else empty)
 
     Just (Statics info_lbl _) ->
       sdocWithPlatform $ \platform ->
@@ -82,6 +86,9 @@ pprNatCmmDecl proc@(CmmProc top_info lbl _ (ListGraph blocks)) =
             <+> ppr info_lbl
             <+> char '-'
             <+> ppr (mkDeadStripPreventer info_lbl)
+       else empty) $$
+      (if gopt Opt_Debug dflags
+       then ppr (mkAsmTempEndLabel lbl) <> char ':'
        else empty)
 
 dspSection :: Section
@@ -90,18 +97,28 @@ dspSection = Section Text $
 
 pprBasicBlock :: BlockEnv CmmStatics -> NatBasicBlock Instr -> SDoc
 pprBasicBlock info_env (BasicBlock blockid instrs)
-  = maybe_infotable $$
+  = sdocWithDynFlags $ \dflags ->
+    maybe_infotable $$
     pprLabel asmLbl $$
-    vcat (map pprInstr instrs)
+    vcat (map pprInstr instrs) $$
+    (if gopt Opt_Debug dflags
+     then ppr (mkAsmTempEndLabel asmLbl) <> char ':'
+     else empty)
   where
     asmLbl = mkAsmTempLabel (getUnique blockid)
     maybe_infotable = case mapLookup blockid info_env of
        Nothing   -> empty
        Just (Statics info_lbl info) ->
            pprSectionCustomAlign (Section Text info_lbl) ReadOnlyData $$
+           infoTableLoc $$
            vcat (map pprData info) $$
            pprAlignForSection Text $$
            pprLabel info_lbl
+    -- Make sure the info table has the right .loc for the block
+    -- coming right after it. See [Note: Info Offset]
+    infoTableLoc = case instrs of
+      (l@LOCATION{} : _) -> pprInstr l
+      _other             -> empty
 
 
 pprDatas :: CmmStatics -> SDoc
@@ -406,6 +423,9 @@ pprInstr' :: Bool -> Instr -> SDoc
 pprInstr' _ (COMMENT c)
           = text "# " <> ftext c
 --        = empty
+
+pprInstr' _ (LOCATION file line col _name)
+        = text "\t.loc " <> ppr file <+> ppr line <+> ppr col
 
 pprInstr' is32Bit (DELTA d)
         = pprInstr' is32Bit (COMMENT (mkFastString ("\tdelta = " ++ show d)))

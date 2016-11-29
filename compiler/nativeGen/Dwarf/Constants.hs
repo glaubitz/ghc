@@ -8,7 +8,8 @@ import Platform
 import Outputable
 
 import Reg
-import X86.Regs
+import qualified SPARC.Regs
+import qualified X86.Regs
 
 import Data.Word
 
@@ -170,47 +171,53 @@ dwarfFrameLabel  = sLit ".Lsection_frame"
 dwarfRegNo :: Platform -> Reg -> Word8
 dwarfRegNo p r = case platformArch p of
   ArchX86
-    | r == eax  -> 0
-    | r == ecx  -> 1  -- yes, no typo
-    | r == edx  -> 2
-    | r == ebx  -> 3
-    | r == esp  -> 4
-    | r == ebp  -> 5
-    | r == esi  -> 6
-    | r == edi  -> 7
+    | r == X86.Regs.eax  -> 0
+    | r == X86.Regs.ecx  -> 1  -- yes, no typo
+    | r == X86.Regs.edx  -> 2
+    | r == X86.Regs.ebx  -> 3
+    | r == X86.Regs.esp  -> 4
+    | r == X86.Regs.ebp  -> 5
+    | r == X86.Regs.esi  -> 6
+    | r == X86.Regs.edi  -> 7
   ArchX86_64
-    | r == rax  -> 0
-    | r == rdx  -> 1 -- this neither. The order GCC allocates registers in?
-    | r == rcx  -> 2
-    | r == rbx  -> 3
-    | r == rsi  -> 4
-    | r == rdi  -> 5
-    | r == rbp  -> 6
-    | r == rsp  -> 7
-    | r == r8   -> 8
-    | r == r9   -> 9
-    | r == r10  -> 10
-    | r == r11  -> 11
-    | r == r12  -> 12
-    | r == r13  -> 13
-    | r == r14  -> 14
-    | r == r15  -> 15
-    | r == xmm0 -> 17
-    | r == xmm1 -> 18
-    | r == xmm2 -> 19
-    | r == xmm3 -> 20
-    | r == xmm4 -> 21
-    | r == xmm5 -> 22
-    | r == xmm6 -> 23
-    | r == xmm7 -> 24
-    | r == xmm8 -> 25
-    | r == xmm9 -> 26
-    | r == xmm10 -> 27
-    | r == xmm11 -> 28
-    | r == xmm12 -> 29
-    | r == xmm13 -> 30
-    | r == xmm14 -> 31
-    | r == xmm15 -> 32
+    | r == X86.Regs.rax  -> 0
+    | r == X86.Regs.rdx  -> 1 -- this neither. The order GCC allocates registers in?
+    | r == X86.Regs.rcx  -> 2
+    | r == X86.Regs.rbx  -> 3
+    | r == X86.Regs.rsi  -> 4
+    | r == X86.Regs.rdi  -> 5
+    | r == X86.Regs.rbp  -> 6
+    | r == X86.Regs.rsp  -> 7
+    | r == X86.Regs.r8   -> 8
+    | r == X86.Regs.r9   -> 9
+    | r == X86.Regs.r10  -> 10
+    | r == X86.Regs.r11  -> 11
+    | r == X86.Regs.r12  -> 12
+    | r == X86.Regs.r13  -> 13
+    | r == X86.Regs.r14  -> 14
+    | r == X86.Regs.r15  -> 15
+    | r == X86.Regs.xmm0 -> 17
+    | r == X86.Regs.xmm1 -> 18
+    | r == X86.Regs.xmm2 -> 19
+    | r == X86.Regs.xmm3 -> 20
+    | r == X86.Regs.xmm4 -> 21
+    | r == X86.Regs.xmm5 -> 22
+    | r == X86.Regs.xmm6 -> 23
+    | r == X86.Regs.xmm7 -> 24
+    | r == X86.Regs.xmm8 -> 25
+    | r == X86.Regs.xmm9 -> 26
+    | r == X86.Regs.xmm10 -> 27
+    | r == X86.Regs.xmm11 -> 28
+    | r == X86.Regs.xmm12 -> 29
+    | r == X86.Regs.xmm13 -> 30
+    | r == X86.Regs.xmm14 -> 31
+    | r == X86.Regs.xmm15 -> 32
+  ArchSPARC
+    | RegReal (RealRegSingle r1)  <- r             -> r1
+    | RegReal (RealRegPair r1 r2) <- r, r1+1 == r2 -> 72 + r1 `shiftR` 1
+  ArchSPARC64
+    | RegReal (RealRegSingle r1)  <- r             -> r1
+    | RegReal (RealRegPair r1 r2) <- r, r1+1 == r2 -> 72 + r1 `shiftR` 1
   _other -> error "dwarfRegNo: Unsupported platform or unknown register!"
 
 -- | Virtual register number to use for return address.
@@ -220,6 +227,8 @@ dwarfReturnRegNo p
   -- when using this mechanism gdb already knows the IP anyway. Clang
   -- does this too, so it must be safe.
   = case platformArch p of
-    ArchX86    -> 8  -- eip
-    ArchX86_64 -> 16 -- rip
-    _other     -> error "dwarfReturnRegNo: Unsupported platform!"
+    ArchX86     -> 8  -- eip
+    ArchX86_64  -> 16 -- rip
+    ArchSPARC   -> 15 -- o7
+    ArchSPARC64 -> 15 -- o7
+    _other      -> error "dwarfReturnRegNo: Unsupported platform!"
