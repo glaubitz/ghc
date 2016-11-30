@@ -665,8 +665,8 @@ pprInstr' is32Bit (BI cond b blockid)
  | b = panic "SPARC.Ppr.pprInstr'.BI: conditional branch with annul bit not yet implemented for V9"
  | otherwise
      = vcat $ map hcat [
-                      [ text "\tb", pprCond cond, char '\t', text "%xcc", comma, text ".+8" ],
-                      [ text "\t b", char '\t', ppr (mkAsmTempLabel (getUnique blockid))    ]
+                      [ text "\tb", pprCond cond, pp_comma_a, char '\t', text "%xcc", comma, text ".+8" ],
+                      [ text "\t b", char '\t', ppr (mkAsmTempLabel (getUnique blockid))                ]
                   ]
 
 
