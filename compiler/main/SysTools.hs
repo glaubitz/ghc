@@ -174,9 +174,7 @@ initSysTools :: Maybe String    -- Maybe TopDir path (without the '-B' prefix)
                                 --      (b) the package-config file
                                 --      (c) the GHC usage message
 initSysTools mbMinusB
-  = do putStrLn $ "mbMinusB: " ++ (show mbMinusB)
-       top_dir <- findTopDir mbMinusB
-       putStrLn $ "top_dir: " ++ (show top_dir)
+  = do top_dir <- findTopDir mbMinusB
              -- see [Note topdir]
              -- NB: top_dir is assumed to be in standard Unix
              -- format, '/' separated
@@ -376,7 +374,6 @@ findTopDir (Just minusb) = return (normalise minusb)
 findTopDir Nothing
     = do -- Get directory of executable
          maybe_exec_dir <- getBaseDir
-         putStrLn $ "maybe_exec_dir: " ++ (show maybe_exec_dir)
          case maybe_exec_dir of
              -- "Just" on Windows, "Nothing" on unix
              Nothing  -> throwGhcExceptionIO (InstallationError "missing -B<dir> option")
