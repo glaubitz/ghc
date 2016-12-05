@@ -9,13 +9,9 @@ module Constants (module Constants) where
 import GhcPrelude
 
 import Config
-import Debug.Trace
 
 hiVersion :: Integer
-hiVersion =
-    trace ("cProjectVersionInt: " ++ cProjectVersionInt) $
-    trace ("cProjectPatchLevel: " ++ cProjectPatchLevel) $
-    read (cProjectVersionInt ++ cProjectPatchLevel) :: Integer
+hiVersion = read (cProjectVersionInt ++ cProjectPatchLevel) :: Integer
 
 -- All pretty arbitrary:
 
