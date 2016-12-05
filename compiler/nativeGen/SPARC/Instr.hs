@@ -284,7 +284,7 @@ sparc_regUsageOfInstr platform instr
     SLL       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
     SRL       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
     SRA       r1 ar r2             -> usage (r1 : regRI ar,        [r2])
-    MOVR    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
+    MOVR    _ r1 ar r2             -> usage (r1 : regRI ar ++ [r2],[r2])
     SETHI   _ reg                  -> usage ([],                   [reg])
     FABS    _ r1 r2                -> usage ([r1],                 [r2])
     FADD    _ r1 r2 r3             -> usage ([r1, r2],             [r3])
