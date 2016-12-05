@@ -107,11 +107,9 @@ main = do
    GHC.defaultErrorHandler defaultFatalMessager defaultFlushOut $ do
     -- 1. extract the -B flag from the args
     argv0 <- getArgs
-    mapM_ (\a -> putStrLn ("Arg: " ++ a)) argv0
 
     let (minusB_args, argv1) = partition ("-B" `isPrefixOf`) argv0
-    mapM_ (\a -> putStrLn ("MinusBArg: " ++ a)) minusB_args
-    let mbMinusB | null minusB_args = Nothing
+        mbMinusB | null minusB_args = Nothing
                  | otherwise = Just (drop 2 (last minusB_args))
 
     let argv2 = map (mkGeneralLocated "on the commandline") argv1
