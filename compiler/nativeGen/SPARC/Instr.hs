@@ -77,7 +77,7 @@ fpRelEA is32Bit n dst
 -- | Code to shift the stack pointer by n words.
 moveSp :: Bool -> Int -> Instr
 moveSp is32Bit n
-   = ADD False False sp (RIImm (ImmInt (n * (wordLength is32Bit) + (stackBias is32Bit)))) sp
+   = ADD False False sp (RIImm (ImmInt (n * (wordLength is32Bit)))) sp
 
 -- | An instruction that will cause the one after it never to be exectuted
 isUnconditionalJump :: Instr -> Bool
