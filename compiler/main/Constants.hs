@@ -13,11 +13,7 @@ hiVersion :: Integer
 hiVersion =
     trace ("cProjectVersionInt: " ++ cProjectVersionInt) $
     trace ("cProjectPatchLevel: " ++ cProjectPatchLevel) $
-    let hiVersionStr = (cProjectVersionInt ++ cProjectPatchLevel) in
-    trace ("hiVersionStr: " ++ hiVersionStr) $
-    let hiVersionInt = read hiVersionStr :: Integer in
-    trace ("hiVersionInt: " ++ (show hiVersionInt)) $
-    hiVersionInt
+    read (cProjectVersionInt ++ cProjectPatchLevel) :: Integer
 
 -- All pretty arbitrary:
 
