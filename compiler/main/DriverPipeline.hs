@@ -276,13 +276,34 @@ compileOne' m_tc_result mHscMessage
 -- The object file created by compiling the _stub.c file is put into a
 -- temporary file, which will be later combined with the main .o file
 -- (see the MergeStubs phase).
+--
+-- On SPARC64, memory allocations happen in high memory, but the default code
+-- model assumes all code is linked in the lower 32 bits of memory. This is not
+-- true if modules are loaded by the RTS, as it uses the high memory
+-- allocations, so we must ensure C stubs get compiled with the medany model.
+--
 
 compileStub :: HscEnv -> FilePath -> IO FilePath
-compileStub hsc_env stub_c = do
+compileStub hsc_env0 stub_c = do
+   let
+        hsc_env     = if platformArch (targetPlatform (hsc_dflags hsc_env0)) == ArchSPARC64
+                      then hsc_env_with_gcc_arg hsc_env0 "-mcmodel=medany"
+                      else hsc_env0
+
         (_, stub_o) <- runPipeline StopLn hsc_env (stub_c,Nothing)  Nothing
                                    Temporary Nothing{-no ModLocation-} Nothing
 
         return stub_o
+    where
+        hsc_env_with_gcc_arg hsc_env arg =
+            let
+                dflags0   = hsc_dflags hsc_env
+                s0        = settings dflags0
+                (p, args) = sPgm_c s0
+                s1        = s0 { sPgm_c = (p, args ++ [arg]) }
+                dflags1   = dflags0 { settings = s1 }
+            in
+                hsc_env { dflags = dflags1 }
 
 compileEmptyStub :: DynFlags -> HscEnv -> FilePath -> ModLocation -> ModuleName -> IO ()
 compileEmptyStub dflags hsc_env basename location mod_name = do
