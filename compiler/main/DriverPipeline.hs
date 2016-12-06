@@ -1648,6 +1648,12 @@ mkExtraObjToLinkIntoBinary dflags = do
          Just opts -> text "    __conf.rts_opts= " <>
                         text (show opts) <> semi,
       text " __conf.rts_hs_main = rtsTrue;",
+      -- see #10334 for the reason we need to enforce linking with shared
+      -- libgcc library on SPARC. The usage of builtin is the way how
+      -- to enforce it.
+      (if (platformArch (targetPlatform dflags)) == ArchSPARC
+       then text " __conf.argc_clz = __builtin_clz(argc);"
+       else Outputable.empty),
       text " return hs_main(argc,argv,&ZCMain_main_closure,__conf);",
       char '}',
       char '\n' -- final newline, to keep gcc happy
@@ -1846,6 +1852,12 @@ linkBinary' staticLink dflags o_files dep_packages = do
                else ["-lpthread"]
          | otherwise               = []
 
+    -- see #10334 for the reason we need to enforce linking with shared
+    -- libgcc library on SPARC
+    let libgcc_opts = if (platformArch platform) == ArchSPARC
+                      then ["-shared-libgcc"]
+                      else []
+
     rc_objs <- maybeCreateManifest dflags output_fn
 
     let link = if staticLink
@@ -1925,6 +1937,7 @@ linkBinary' staticLink dflags o_files dep_packages = do
                       ++ pkg_framework_opts
                       ++ debug_opts
                       ++ thread_opts
+                      ++ libgcc_opts
                     ))
 
 exeFileName :: Bool -> DynFlags -> FilePath
