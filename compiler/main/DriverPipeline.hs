@@ -301,7 +301,7 @@ compileStub hsc_env0 stub_c = do
                   s1        = s0 { sPgm_c = (p, args ++ [arg]) }
                   dflags1   = dflags0 { settings = s1 }
               in
-                  hsc_env { dflags = dflags1 }
+                  hsc_env { hsc_dflags = dflags1 }
 
 compileEmptyStub :: DynFlags -> HscEnv -> FilePath -> ModLocation -> ModuleName -> IO ()
 compileEmptyStub dflags hsc_env basename location mod_name = do
