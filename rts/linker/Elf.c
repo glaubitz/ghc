@@ -1389,6 +1389,27 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             break;
 
 #        if defined(sparc64_HOST_ARCH)
+         case R_SPARC_HH22:
+            w1 = *pP & 0xffc00000;
+            w2 = (Elf_Word)(value >> 42);
+            ASSERT((w2 & 0xffc00000) == 0);
+            w1 |= w2;
+            *pP = w1;
+            break;
+         case R_SPARC_HM10:
+            /* 13-bit immediate, 10-bit relocation */
+            w1 = *pP & ~0x1fff;
+            w2 = (Elf_Word)(value & 0x3ff);
+            w1 |= w2;
+            *pP = w1;
+            break;
+         case R_SPARC_LM22:
+            w1 = *pP & 0xffc00000;
+            w2 = (Elf_Word)((value >> 10) & 0x3fffff);
+            w1 |= w2;
+            *pP = w1;
+            break;
+
          case R_SPARC_64:
             *(Elf64_Xword*) P = value;
             break;
