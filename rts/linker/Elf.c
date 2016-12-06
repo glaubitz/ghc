@@ -1342,6 +1342,10 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
 
       switch (ELF_R_TYPE(info)) {
 #        if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
+         case R_SPARC_DISP32:
+            w2 = (Elf_Word)(value - P);
+            *pP = w2;
+            break;
          case R_SPARC_WDISP30:
             w1 = *pP & 0xC0000000;
             w2 = (Elf_Word)((value - P) >> 2);
@@ -1389,6 +1393,10 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             break;
 
 #        if defined(sparc64_HOST_ARCH)
+         case R_SPARC_DISP64:
+            *(Elf64_Xword*) P = (value - P);
+            break;
+
          case R_SPARC_HH22:
             w1 = *pP & 0xffc00000;
             w2 = (Elf_Word)(value >> 42);
