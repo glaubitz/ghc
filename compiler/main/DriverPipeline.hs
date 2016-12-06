@@ -322,10 +322,8 @@ compileForeign hsc_env0 lang stub_c = do
                        Nothing{-no ModLocation-}
                        []
         return stub_o
-    where
-        hsc_env_with_gcc_arg hsc_env arg =
-            let
-                dflags0   = hsc_dflags hsc_env
+        where hsc_env_with_gcc_arg hsc_env arg =
+            let dflags0   = hsc_dflags hsc_env
                 s0        = settings dflags0
                 (p, args) = sPgm_c s0
                 s1        = s0 { sPgm_c = (p, args ++ [arg]) }
