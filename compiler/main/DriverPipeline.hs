@@ -294,14 +294,14 @@ compileStub hsc_env0 stub_c = do
 
     return stub_o
     where hsc_env_with_gcc_arg hsc_env arg =
-        let
-            dflags0   = hsc_dflags hsc_env
-            s0        = settings dflags0
-            (p, args) = sPgm_c s0
-            s1        = s0 { sPgm_c = (p, args ++ [arg]) }
-            dflags1   = dflags0 { settings = s1 }
-        in
-            hsc_env { dflags = dflags1 }
+              let
+                  dflags0   = hsc_dflags hsc_env
+                  s0        = settings dflags0
+                  (p, args) = sPgm_c s0
+                  s1        = s0 { sPgm_c = (p, args ++ [arg]) }
+                  dflags1   = dflags0 { settings = s1 }
+              in
+                  hsc_env { dflags = dflags1 }
 
 compileEmptyStub :: DynFlags -> HscEnv -> FilePath -> ModLocation -> ModuleName -> IO ()
 compileEmptyStub dflags hsc_env basename location mod_name = do
