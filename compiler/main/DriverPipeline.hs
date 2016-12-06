@@ -1798,6 +1798,12 @@ linkBinary' staticLink dflags o_files dep_packages = do
                         ]
                     | otherwise                      = []
 
+    -- see #10334 for the reason we need to enforce linking with shared
+    -- libgcc library on SPARC
+    let libgcc_opts = if (platformArch platform) == ArchSPARC
+                      then ["-shared-libgcc"]
+                      else []
+
     rc_objs <- maybeCreateManifest dflags output_fn
 
     let link = if staticLink
@@ -1870,6 +1876,7 @@ linkBinary' staticLink dflags o_files dep_packages = do
                       ++ pkg_framework_opts
                       ++ debug_opts
                       ++ thread_opts
+                      ++ libgcc_opts
                     ))
 
 exeFileName :: Bool -> DynFlags -> FilePath

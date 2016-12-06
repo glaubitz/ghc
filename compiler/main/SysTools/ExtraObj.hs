@@ -109,6 +109,12 @@ mkExtraObjToLinkIntoBinary dflags = do
             Just opts -> text "    __conf.rts_opts= " <>
                           text (show opts) <> semi,
         text " __conf.rts_hs_main = true;",
+        -- see #10334 for the reason we need to enforce linking with shared
+        -- libgcc library on SPARC. The usage of builtin is the way how
+        -- to enforce it.
+        (if (platformArch (targetPlatform dflags)) == ArchSPARC
+         then text " __conf.argc_clz = __builtin_clz(argc);"
+         else Outputable.empty),
         text " return hs_main(argc,argv,&ZCMain_main_closure,__conf);",
         char '}',
         char '\n' -- final newline, to keep gcc happy

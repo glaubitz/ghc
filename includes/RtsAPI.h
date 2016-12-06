@@ -102,6 +102,16 @@ typedef struct {
 
     // Called for every GC
     void (* gcDoneHook) (const struct GCDetails_ *stats);
+
+#if defined(sparc_HOST_ARCH)
+    // used to prevent GCC from optimizating __builtin_clz calls out from the
+    // generated main(). We need that on sparc where we do not support shared
+    // libs (yet) and where ghc-prim needs to find __ctzdi2 and other symbols in
+    // shared libgcc. This shared libgcc needs to be linked with application
+    // binary which means with the generated simple main() C code. To enforce
+    // the linking we use libgcc's builtin. See #10334 for more information.
+    int argc_clz;
+#endif /* sparc_HOST_ARCH */
 } RtsConfig;
 
 // Clients should start with defaultRtsConfig and then customise it.
