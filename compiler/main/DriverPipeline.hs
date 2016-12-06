@@ -329,7 +329,7 @@ compileForeign hsc_env0 lang stub_c = do
                       s1        = s0 { sPgm_c = (p, args ++ [arg]) }
                       dflags1   = dflags0 { settings = s1 }
                   in
-                      hsc_env { dflags = dflags1 }
+                      hsc_env { hsc_dflags = dflags1 }
 
 compileStub :: HscEnv -> FilePath -> IO FilePath
 compileStub hsc_env stub_c = compileForeign hsc_env LangC stub_c
