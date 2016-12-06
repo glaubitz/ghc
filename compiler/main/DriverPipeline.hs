@@ -1800,7 +1800,8 @@ linkBinary' staticLink dflags o_files dep_packages = do
 
     -- see #10334 for the reason we need to enforce linking with shared
     -- libgcc library on SPARC
-    let libgcc_opts = if (platformArch platform) == ArchSPARC
+    let libgcc_opts = if platformArch (targetPlatform dflags)
+                              `elem` [ArchSPARC, ArchSPARC64]
                       then ["-shared-libgcc"]
                       else []
 

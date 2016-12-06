@@ -103,7 +103,7 @@ typedef struct {
     // Called for every GC
     void (* gcDoneHook) (const struct GCDetails_ *stats);
 
-#if defined(sparc_HOST_ARCH)
+#if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
     // used to prevent GCC from optimizating __builtin_clz calls out from the
     // generated main(). We need that on sparc where we do not support shared
     // libs (yet) and where ghc-prim needs to find __ctzdi2 and other symbols in
