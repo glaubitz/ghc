@@ -1651,7 +1651,7 @@ mkExtraObjToLinkIntoBinary dflags = do
       -- see #10334 for the reason we need to enforce linking with shared
       -- libgcc library on SPARC. The usage of builtin is the way how
       -- to enforce it.
-      (if (platformArch (targetPlatform dflags)) == ArchSPARC
+      (if platformArch (targetPlatform dflags) `elem` [ArchSPARC, ArchSPARC64]
        then text " __conf.argc_clz = __builtin_clz(argc);"
        else Outputable.empty),
       text " return hs_main(argc,argv,&ZCMain_main_closure,__conf);",
@@ -1854,7 +1854,8 @@ linkBinary' staticLink dflags o_files dep_packages = do
 
     -- see #10334 for the reason we need to enforce linking with shared
     -- libgcc library on SPARC
-    let libgcc_opts = if (platformArch platform) == ArchSPARC
+    let libgcc_opts = if platformArch (targetPlatform dflags)
+                              `elem` [ArchSPARC, ArchSPARC64]
                       then ["-shared-libgcc"]
                       else []
 
