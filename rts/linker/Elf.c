@@ -1,8 +1,5 @@
 #include "Rts.h"
 
-/* XXX :) */
-#define DEBUG
-#define IF_DEBUG(c,s) s
 #if defined(linux_HOST_OS) || defined(solaris2_HOST_OS) || defined(freebsd_HOST_OS) || defined(kfreebsdgnu_HOST_OS) || defined(dragonfly_HOST_OS) || defined(netbsd_HOST_OS) || defined(openbsd_HOST_OS) || defined(gnu_HOST_OS)
 
 #include "RtsUtils.h"
