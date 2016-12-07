@@ -1478,8 +1478,8 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
          case R_SPARC_DISP32:
 #        if defined(sparc64_HOST_ARCH)
             if (value - P < -0x80000000 || value - P >= 0x80000000) {
-               errorBelch("R_SPARC_DISP32 relocation out of range: %s = %" PRId64 "d",
-                          symbol, value - P);
+               errorBelch("R_SPARC_DISP32 relocation out of range: %s = %" PRId64 "d, P = %" PRId64 "d, DISP = %" PRId64 "d",
+                          symbol, value, P, value - P);
                return 0;
             }
 #        endif
@@ -1489,8 +1489,8 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
          case R_SPARC_WDISP30:
 #        if defined(sparc64_HOST_ARCH)
             if (value - P < -0x80000000 || value - P >= 0x80000000) {
-               errorBelch("R_SPARC_WDISP30 relocation out of range: %s = %" PRId64 "d",
-                          symbol, value - P);
+               errorBelch("R_SPARC_WDISP30 relocation out of range: %s = %" PRId64 "d, P = %" PRId64 "d, DISP = %" PRId64 "d",
+                          symbol, value, P, value - P);
                return 0;
             }
 #        endif
