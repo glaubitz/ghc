@@ -1343,10 +1343,24 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
       switch (ELF_R_TYPE(info)) {
 #        if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
          case R_SPARC_DISP32:
+#        if defined(sparc64_HOST_ARCH)
+            if (value - P < -0x80000000 || value - P >= 0x80000000) {
+               errorBelch("R_SPARC_DISP32 relocation out of range: %s = %" PRId64 "d",
+                          symbol, value - P);
+               return 0;
+            }
+#        endif
             w2 = (Elf_Word)(value - P);
             *pP = w2;
             break;
          case R_SPARC_WDISP30:
+#        if defined(sparc64_HOST_ARCH)
+            if (value - P < -0x80000000 || value - P >= 0x80000000) {
+               errorBelch("R_SPARC_WDISP30 relocation out of range: %s = %" PRId64 "d",
+                          symbol, value - P);
+               return 0;
+            }
+#        endif
             w1 = *pP & 0xC0000000;
             w2 = (Elf_Word)((value - P) >> 2);
             ASSERT((w2 & 0xC0000000) == 0);
@@ -1354,6 +1368,13 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             *pP = w1;
             break;
          case R_SPARC_HI22:
+#        if defined(sparc64_HOST_ARCH)
+            if (value < -0x200000 || value >= 0x200000) {
+               errorBelch("R_SPARC_HI22 relocation out of range: %s = %" PRId64 "d",
+                          symbol, value);
+               return 0;
+            }
+#        endif
             w1 = *pP & 0xFFC00000;
             w2 = (Elf_Word)(value >> 10);
             ASSERT((w2 & 0xFFC00000) == 0);
@@ -1376,6 +1397,13 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             aligned according to the architecture requirements.
          */
          case R_SPARC_UA32:
+#        if defined(sparc64_HOST_ARCH)
+            if (value < -0x80000000 || value >= 0x80000000) {
+               errorBelch("R_SPARC_UA32 relocation out of range: %s = %" PRId64 "d",
+                          symbol, value);
+               return 0;
+            }
+#        endif
             w2  = (Elf_Word)value;
 
             // SPARC doesn't do misaligned writes of 32 bit words,
@@ -1388,6 +1416,13 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             break;
 
          case R_SPARC_32:
+#        if defined(sparc64_HOST_ARCH)
+            if (value < -0x80000000 || value >= 0x80000000) {
+               errorBelch("R_SPARC_32 relocation out of range: %s = %" PRId64 "d",
+                          symbol, value);
+               return 0;
+            }
+#        endif
             w2 = (Elf_Word)value;
             *pP = w2;
             break;
