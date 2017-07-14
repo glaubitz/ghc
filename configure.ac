@@ -612,6 +612,9 @@ dnl     If gcc, make sure it's at least 3.0
 dnl
 FP_GCC_VERSION
 
+dnl ** See whether gcc supports -fno-PIC
+FP_GCC_SUPPORTS_FNO_PIC
+
 dnl ** See whether gcc supports -no-pie
 FP_GCC_SUPPORTS_NO_PIE
 

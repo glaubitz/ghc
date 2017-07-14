@@ -509,6 +509,7 @@ AC_DEFUN([FP_SETTINGS],
 
     SettingsCCompilerFlags="$CONF_CC_OPTS_STAGE2"
     SettingsCCompilerLinkFlags="$CONF_GCC_LINKER_OPTS_STAGE2"
+    SettingsCCompilerSupportsFNoPic="$CONF_GCC_SUPPORTS_FNO_PIC"
     SettingsCCompilerSupportsNoPie="$CONF_GCC_SUPPORTS_NO_PIE"
     SettingsLdFlags="$CONF_LD_LINKER_OPTS_STAGE2"
     AC_SUBST(SettingsCCompilerCommand)
@@ -516,6 +517,7 @@ AC_DEFUN([FP_SETTINGS],
     AC_SUBST(SettingsHaskellCPPFlags)
     AC_SUBST(SettingsCCompilerFlags)
     AC_SUBST(SettingsCCompilerLinkFlags)
+    AC_SUBST(SettingsCCompilerSupportsFNoPic)
     AC_SUBST(SettingsCCompilerSupportsNoPie)
     AC_SUBST(SettingsLdCommand)
     AC_SUBST(SettingsLdFlags)
@@ -1322,6 +1324,26 @@ fi
 AC_SUBST(GccIsClang)
 
 rm -f conftest.txt
+])
+
+# FP_GCC_SUPPORTS_FNO_PIC
+# ----------------------
+# Does gcc support the -fno-PIC option? If so we should pass it to gcc when
+# compiling objects since -fPIE may be enabled by default.
+AC_DEFUN([FP_GCC_SUPPORTS_FNO_PIC],
+[
+   AC_REQUIRE([AC_PROG_CC])
+   AC_MSG_CHECKING([whether GCC supports -fno-PIC])
+   echo 'int main() { return 0; }' > conftest.c
+   # Some GCC versions only warn when passed an unrecognized flag.
+   if $CC -fno-PIC -x c /dev/null -dM -E > conftest.txt 2>&1 && ! grep -i unrecognized conftest.txt > /dev/null 2>&1; then
+       CONF_GCC_SUPPORTS_FNO_PIC=YES
+       AC_MSG_RESULT([yes])
+   else
+       CONF_GCC_SUPPORTS_FNO_PIC=NO
+       AC_MSG_RESULT([no])
+   fi
+   rm -f conftest.c conftest.o conftest
 ])
 
 # FP_GCC_SUPPORTS_NO_PIE

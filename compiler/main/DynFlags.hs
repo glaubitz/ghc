@@ -957,6 +957,7 @@ data Settings = Settings {
   sLdSupportsFilelist      :: Bool,
   sLdIsGnuLd               :: Bool,
   sGccSupportsNoPie        :: Bool,
+  sGccSupportsFNoPic       :: Bool,
   -- commands for particular phases
   sPgm_L                 :: String,
   sPgm_P                 :: (String,[Option]),
@@ -4751,8 +4752,13 @@ picCCOpts dflags
       -- correctly.  They need to reference data in the Haskell
       -- objects, but can't without -fPIC.  See
       -- http://ghc.haskell.org/trac/ghc/wiki/Commentary/PositionIndependentCode
+      --
+      -- Some compilers default to PIE, and will therefore call the assembler
+      -- appropriately for PIC. This changes the assembler behaviour on SPARC,
+      -- so we must explicitly disable PIC.
        | gopt Opt_PIC dflags || WayDyn `elem` ways dflags ->
           ["-fPIC", "-U__PIC__", "-D__PIC__"]
+       | sGccSupportsFNoPic (settings dflags)  -> ["-fno-PIC"]
        | otherwise                             -> []
 
 picPOpts :: DynFlags -> [String]
