@@ -237,6 +237,7 @@ initSysTools mbMinusB
        -- to make that possible, so for now you can't.
        gcc_prog <- getSetting "C compiler command"
        gcc_args_str <- getSetting "C compiler flags"
+       gccSupportsFNoPic <- getBooleanSetting "C compiler supports -fno-PIC"
        gccSupportsNoPie <- getBooleanSetting "C compiler supports -no-pie"
        cpp_prog <- getSetting "Haskell CPP command"
        cpp_args_str <- getSetting "Haskell CPP flags"
@@ -333,6 +334,7 @@ initSysTools mbMinusB
                     sLdSupportsBuildId       = ldSupportsBuildId,
                     sLdSupportsFilelist      = ldSupportsFilelist,
                     sLdIsGnuLd               = ldIsGnuLd,
+                    sGccSupportsFNoPic       = gccSupportsFNoPic,
                     sGccSupportsNoPie        = gccSupportsNoPie,
                     sProgramName             = "ghc",
                     sProjectVersion          = cProjectVersion,
