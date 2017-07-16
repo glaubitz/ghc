@@ -648,8 +648,9 @@ saveClobberedTemps clobbered dying
             freeRegs <- getFreeRegsR
             let regclass = targetClassOfRealReg platform reg
                 freeRegs_thisClass = frGetFreeRegs platform regclass freeRegs
+                notClobbered reg = not (any (realRegsAlias reg) clobbered)
 
-            case filter (`notElem` clobbered) freeRegs_thisClass of
+            case filter notClobbered freeRegs_thisClass of
 
               -- (1) we have a free reg of the right class that isn't
               -- clobbered by this instruction; use it to save the
