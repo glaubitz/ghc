@@ -515,13 +515,32 @@ wordAlign = sdocWithPlatform $ \plat ->
       _other -> error "wordAlign: Unsupported word size!"
     _other   -> ppr (platformWordSize plat)
 
+data Directive
+  = DirByte
+  | DirShort
+  | DirLong
+  | DirQuad
+  deriving (Eq, Enum)
+
+-- | Prints the given assembly directive, potentially with a "ua" prefix to
+-- indicate unaligned data if required by the platform.
+pprDirective :: Directive -> Bool -> SDoc
+pprDirective d ua = sdocWithPlatform $ \plat ->
+  let platHasUA = platformArch plat `elem` [ArchSPARC, ArchSPARC64]
+      ua' = ua && (d /= DirByte) && platHasUA
+  in text $ case d of
+       DirByte  -> "\t.byte"
+       DirShort -> if ua' then "\t.uahalf" else "\t.short"
+       DirLong  -> if ua' then "\t.uaword" else "\t.long"
+       DirQuad  -> if ua' then "\t.uaxword" else "\t.quad"
+
 -- | Assembly for a single byte of constant DWARF data
 pprByte :: Word8 -> SDoc
-pprByte x = text "\t.byte " <> ppr (fromIntegral x :: Word)
+pprByte x = pprDirective DirByte False <+> ppr (fromIntegral x :: Word)
 
 -- | Assembly for a two-byte constant integer
 pprHalf :: Word16 -> SDoc
-pprHalf x = text "\t.short" <+> ppr (fromIntegral x :: Word)
+pprHalf x = pprDirective DirShort False <+> ppr (fromIntegral x :: Word)
 
 -- | Assembly for a constant DWARF flag
 pprFlag :: Bool -> SDoc
@@ -529,11 +548,11 @@ pprFlag f = pprByte (if f then 0xff else 0x00)
 
 -- | Assembly for 4 bytes of dynamic DWARF data
 pprData4' :: SDoc -> SDoc
-pprData4' x = text "\t.long " <> x
+pprData4' x = pprDirective DirLong True <+> x
 
 -- | Assembly for 4 bytes of constant DWARF data
 pprData4 :: Word -> SDoc
-pprData4 = pprData4' . ppr
+pprData4 x = pprDirective DirLong False <+> ppr x
 
 -- | Assembly for a DWARF word of dynamic data. This means 32 bit, as
 -- we are generating 32 bit DWARF.
@@ -543,10 +562,10 @@ pprDwWord = pprData4'
 -- | Assembly for a machine word of dynamic data. Depends on the
 -- architecture we are currently generating code for.
 pprWord :: SDoc -> SDoc
-pprWord s = (<> s) . sdocWithPlatform $ \plat ->
+pprWord s = (<+> s) . sdocWithPlatform $ \plat ->
   case platformWordSize plat of
-    4 -> text "\t.long "
-    8 -> text "\t.quad "
+    4 -> pprDirective DirLong True
+    8 -> pprDirective DirQuad True
     n -> panic $ "pprWord: Unsupported target platform word length " ++
                  show n ++ "!"
 
