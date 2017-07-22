@@ -235,9 +235,9 @@ getRegister64 (CmmMachOp mop [x, y]) = do
 
       MO_Mul rep        -> trivialCode rep MULX x y
 
-      MO_Shl rep        -> trivialCode rep SLL  x y
-      MO_U_Shr rep      -> trivialCode rep SRL x y
-      MO_S_Shr rep      -> trivialCode rep SRA x y
+      MO_Shl rep        -> shiftCode rep SLL False x y
+      MO_U_Shr rep      -> shiftCode rep SRL False x y
+      MO_S_Shr rep      -> shiftCode rep SRA True  x y
 
       _                 -> pprPanic "getRegister64(sparc) - binary CmmMachOp (1)" (pprMachOp mop)
   where
@@ -408,6 +408,25 @@ imulMayOflo x y
                         , OR        False dst   (RIReg tmp)         dst ]
 
         return  (Any II64 code)
+
+shiftCode
+        :: Width
+        -> (Reg -> RI -> Reg -> Instr)
+        -> Bool
+        -> CmmExpr
+        -> CmmExpr
+        -> NatM Register
+
+shiftCode rep instr signed x (CmmLit (CmmInt yi _))
+  | (yi < 0 && not signed) || (fromInteger yi) >= widthInBits rep
+  = do
+      (src1, code) <- getSomeReg64 x
+      let
+        code__2 dst | signed    = code `snocOL` instr src1 (RIImm (ImmInt (widthInBits rep - 1))) dst
+                    | otherwise = code `snocOL` XOR False src1 (RIReg src1) dst
+      return (Any (intFormat rep) code__2)
+
+shiftCode rep instr _ x y = trivialCode rep instr x y
 
 
 -- -----------------------------------------------------------------------------
