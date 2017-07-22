@@ -211,12 +211,20 @@ allocatableRegs
 
 
 -- | All the argument registers; each entry represents an argument slot.
---      Pairs of (intReg, doubleReg); the double reg is used for 64-bit only.
-allArgRegs :: [(Reg, Reg)]
+--      Pairs of (Maybe intReg, Maybe doubleReg); the double reg is used for
+--      64-bit only.
+allArgRegs :: [(Maybe Reg, Maybe Reg)]
 allArgRegs
-        = [ (RegReal $ RealRegSingle $ oReg i,
-             RegReal $ RealRegPair (fReg (2*i)) (fReg (2*i+1)))
-            | i <- [0..5] ]
+        = maybeZip intRegs doubleRegs
+        where
+            intRegs = [RegReal $ RealRegSingle $ oReg i | i <- [0..5]]
+            doubleRegs = [RegReal $ RealRegPair (fReg (2*i)) (fReg (2*i+1)) | i <- [0..16]]
+
+            maybeZip :: [a] -> [b] -> [(Maybe a, Maybe b)]
+            maybeZip [] []         = []
+            maybeZip (a:as) []     = (Just a, Nothing) : maybeZip as []
+            maybeZip []     (b:bs) = (Nothing, Just b) : maybeZip [] bs
+            maybeZip (a:as) (b:bs) = (Just a, Just b)  : maybeZip as bs
 
 
 -- These are the regs that we cannot assume stay alive over a C call.

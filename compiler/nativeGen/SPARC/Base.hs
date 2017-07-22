@@ -12,7 +12,6 @@ module SPARC.Base (
         wordFormat,
         spillAreaLength,
         spillSlotSize,
-        extraStackArgsHere,
         fits13Bits,
         largeOffsetError
 )
@@ -63,17 +62,6 @@ spillAreaLength
 -- | We need 8 bytes because our largest registers are 64 bit.
 spillSlotSize :: Int
 spillSlotSize = 8
-
-
--- | We (allegedly) put the first six C-call arguments in registers;
---      where do we start putting the rest of them?
-extraStackArgsHere :: Bool -> Int
-
-extraStackArgsHere is32Bit
- | is32Bit   = 23
-
-extraStackArgsHere _
- | otherwise = 22
 
 
 {-# SPECIALIZE fits13Bits :: Int -> Bool, Integer -> Bool #-}

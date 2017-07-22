@@ -463,19 +463,17 @@ genCCall target dest_regs args
         let (argcodes, vregss)  = unzip argcode_and_vregs
         let vregs               = concat vregss
 
-        let n_argRegs           = length allArgRegs
-
         let argcode = concatOL argcodes
 
         let (move_sp_down, move_sp_up)
-                   = let diff = length vregs - n_argRegs
+                   = let diff = length vregs - requiredParamArraySlots
                          nn   = if odd diff then diff + 1 else diff -- keep 2-word alignment
                      in  if   nn <= 0
                          then (nilOL, nilOL)
                          else (unitOL (moveSp is32Bit (-1*nn)), unitOL (moveSp is32Bit (1*nn)))
 
         let (transfer_code_unord, out_regs)
-                = move_final is32Bit vregs allArgRegs (extraStackArgsHere is32Bit)
+                = move_final is32Bit vregs allArgRegs (paramArrayStartSlot is32Bit)
 
         let transfer_code = toOL transfer_code_unord
 
@@ -584,7 +582,6 @@ arg_to_int_vregs64' dflags arg
 
                         let code2 =
                                 code                            `snocOL`
-                                COMMENT (mkFastString ("atoiv64 FMOV FF64 " ++ (show src) ++ " " ++ (show v1))) `snocOL`
                                 FMOV FF64 src v1
 
                         return  (code2, [v1])
@@ -601,7 +598,6 @@ arg_to_int_vregs64' dflags arg
 
                         let code2 =
                                 code                            `snocOL`
-                                COMMENT (mkFastString ("atoiv64 FMOV FF32 src=(" ++ (show src) ++ ") v1==(" ++ (show v1) ++ ")")) `snocOL`
                                 FMOV FF32 src v1
 
                         return (code2, [v1])
@@ -620,39 +616,48 @@ arg_to_int_vregs64' dflags arg
 -- | Move args from the integer/float vregs into which they have been
 --      marshalled, into %o0 .. %o5/%f0 .. %f11, and the rest onto the stack.
 --
-move_final :: Bool -> [Reg] -> [(Reg, Reg)] -> Int -> ([Instr], [Reg])
+move_final :: Bool -> [Reg] -> [(Maybe Reg, Maybe Reg)] -> Int -> ([Instr], [Reg])
 
 -- all args done
 move_final _ [] _ _
  = ([], [])
 
--- out of aregs; move to stack
-move_final is32Bit (v:vs) [] offset
- = let cls = classOfReg v
-       instr =
-           case cls of
-                RcInteger              -> ST (wordFormat is32Bit) v (spRel is32Bit offset)
-                RcFloat  | not is32Bit -> ST FF32 v (spRel2 is32Bit offset 4) -- right-align in slot
-                RcDouble | not is32Bit -> ST FF64 v (spRel is32Bit offset)
-                _                      -> panic ("SPARC.CodeGen.move_final: Bad value register " ++ show v)
-   in (instr : instrs, regs)
-   where (instrs, regs) = move_final is32Bit vs [] (offset+1)
+-- move to register or stack
+move_final is32Bit (v:vs) availRegs offset
+ = let (mAvailRegP, availRegs') =
+           case availRegs of
+                []     -> ((Nothing, Nothing), [])
+                (a:as) -> (a, as)
 
--- move into an arg (%o[0..5], or %f[0..11] if 64-bit) reg
-move_final is32Bit (v:vs) ((ai,af):az) offset
- = let cls = classOfReg v
-       (instr, reg) =
+       cls = classOfReg v
+       (instr, mUsedReg) =
            case cls of
-                RcInteger              -> ([OR False g0 (RIReg v) ai], ai)
+                RcInteger              ->
+                    case mAvailRegP of
+                        (Just availRegI, _) -> (OR False g0 (RIReg v) availRegI, Just availRegI)
+                        (Nothing, _)        -> (ST (wordFormat is32Bit) v (spRel is32Bit offset), Nothing)
+
                 RcFloat  | not is32Bit ->
-                                ([ COMMENT (mkFastString ("move_final FMOV FF32 " ++ (show v) ++ " hi of " ++ (show af))),
-                                  FMOV FF32 v (fPair af)], af)
+                    -- Single-precision floats get right-align in slot
+                    case mAvailRegP of
+                        (_, Just availRegD) -> (FMOV FF32 v (fPair availRegD), Just availRegD)
+                        (_, Nothing)        -> (ST FF32 v (spRel2 is32Bit offset 4), Nothing)
+
                 RcDouble | not is32Bit ->
-                                ([ COMMENT (mkFastString ("move_final FMOV FF64 " ++ (show v) ++ " " ++ (show af))),
-                                  FMOV FF64 v af], af)
-                _                      -> panic ("SPARC.CodeGen.move_final: Bad value register " ++ show v )
-   in (instr ++ instrs, reg : regs)
-   where (instrs, regs) = move_final is32Bit vs az offset
+                    case mAvailRegP of
+                        (_, Just availRegD) -> (FMOV FF64 v availRegD, Just availRegD)
+                        (_, Nothing)        -> (ST FF64 v (spRel is32Bit offset), Nothing)
+
+                _                      -> panic ("SPARC.CodeGen.move_final: Bad value register " ++ show v)
+
+       (instrs, usedRegs) = move_final is32Bit vs availRegs' (offset+1)
+
+       usedRegs' =
+           case mUsedReg of
+                Just usedReg -> usedReg : usedRegs
+                Nothing  -> usedRegs
+
+   in (instr : instrs, usedRegs')
 
 
 -- | Assign results returned from the call into their
