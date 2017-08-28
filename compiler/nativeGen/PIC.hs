@@ -874,9 +874,9 @@ initializePicBase_sparc
         -> [NatCmmDecl CmmStatics SPARC.Instr]
         -> NatM [NatCmmDecl CmmStatics SPARC.Instr]
 
-initializePicBase_sparc ArchSPARC os picReg
+initializePicBase_sparc arch os picReg
         (CmmProc info lab live (ListGraph blocks) : statics)
-    | osElfTarget os
+    | arch `elem` [ArchSPARC, ArchSPARC64] && osElfTarget os
     = return (CmmProc info lab live (ListGraph blocks') : statics)
     where blocks' = case blocks of
                      [] -> []
@@ -891,6 +891,9 @@ initializePicBase_sparc ArchSPARC os picReg
 
           fetchGOT (BasicBlock bID insns) =
              BasicBlock bID (SPARC.FETCHGOT picReg : insns)
+
+initializePicBase_sparc _ _ _ _
+        = panic "initializePicBase_sparc: not needed"
 
 
 -- We cheat a bit here by defining a pseudo-instruction named FETCHGOT
