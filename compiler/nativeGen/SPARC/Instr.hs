@@ -309,7 +309,7 @@ sparc_regUsageOfInstr platform instr
     CALL  (Right reg) _ True       -> usage ([reg], [])
     CALL  (Right reg) params False -> usage (reg : params, callClobberedRegs)
 
-    FETCHGOT reg                   -> usage ([], reg : o7)
+    FETCHGOT reg                   -> usage ([], [reg, o7])
     _                              -> noUsage
 
   where
