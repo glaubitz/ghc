@@ -704,6 +704,16 @@ pprInstr' _ (MEMBAR tags)
 pprInstr' _ (REGISTER reg usage)
   = hcat [ text "\t.register\t", pprReg reg, comma, pprSparcRegUsage usage ]
 
+pprInstr' _ (FETCHGOT reg)
+ | reg == o7 = panic "SPARC.Ppr.pprInstr'.FETCHGOT: tried to put GOT address in link register o7"
+ | otherwise
+     = vcat $ map hcat [
+                      [ text "\tsethi\t%hi(_GLOBAL_OFFSET_TABLE_-4)", comma, pprReg reg ],
+                      [ text "\tcall\t1f" ],
+                      [ text "\t add\t", pprReg reg, comma, "%lo(_GLOBAL_OFFSET_TABLE_+4)", comma, pprReg reg ],
+                      [ text "1:\tadd\t", pprReg reg, comma, pprReg o7, comma, pprReg reg ]
+                  ]
+
 
 -- | Pretty print a tag for a membar instrution
 pprMembarTag :: MembarTag -> SDoc

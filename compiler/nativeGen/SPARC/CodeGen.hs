@@ -71,14 +71,18 @@ import Control.Monad    ( mapAndUnzipM )
 cmmTopCodeGen :: RawCmmDecl
               -> NatM [NatCmmDecl CmmStatics Instr]
 
-cmmTopCodeGen (CmmProc info lab live graph)
- = do let blocks = toBlockListEntryFirst graph
-      (nat_blocks,statics) <- mapAndUnzipM basicBlockCodeGen blocks
-
-      let proc = CmmProc info lab live (ListGraph $ concat nat_blocks)
-      let tops = proc : concat statics
-
-      return tops
+cmmTopCodeGen (CmmProc info lab live graph) = do
+  let blocks = toBlockListEntryFirst graph
+  (nat_blocks,statics) <- mapAndUnzipM basicBlockCodeGen blocks
+  picBaseMb <- getPicBaseMaybeNat
+  dflags <- getDynFlags
+  let proc = CmmProc info lab live (ListGraph $ concat nat_blocks)
+      tops = proc : concat statics
+      os   = platformOS $ targetPlatform dflags
+      arch = platformArch $ targetPlatform dflags
+  case picBaseMb of
+       Just picBase -> initializePicBase_sparc arch os picBase tops
+       Nothing -> return tops
 
 cmmTopCodeGen (CmmData sec dat) = do
   return [CmmData sec dat]  -- no translation, we just use CmmStatic

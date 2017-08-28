@@ -245,6 +245,10 @@ data Instr
         | MEMBAR        [MembarTag]                     -- tags
         | REGISTER      Reg SparcRegUsage
 
+        -- PIC
+        -- pseudo-insn for ELF position-independent code
+        | FETCHGOT      Reg                             -- dst <- GOT
+
 
 -- | regUsage returns the sets of src and destination registers used
 --      by a particular instruction.  Machine registers that are
@@ -304,6 +308,8 @@ sparc_regUsageOfInstr platform instr
     CALL  (Left _  )  params False -> usage (params, callClobberedRegs)
     CALL  (Right reg) _ True       -> usage ([reg], [])
     CALL  (Right reg) params False -> usage (reg : params, callClobberedRegs)
+
+    FETCHGOT reg                   -> usage ([], reg : o7)
     _                              -> noUsage
 
   where
@@ -375,6 +381,8 @@ sparc_patchRegsOfInstr instr env = case instr of
 
     CALL  (Left i) params t     -> CALL (Left i) params t
     CALL  (Right r) params t    -> CALL (Right (env r)) params t
+
+    FETCHGOT reg                -> FETCHGOT (env reg)
     _                           -> instr
 
   where

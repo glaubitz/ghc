@@ -1327,6 +1327,14 @@ pprDynamicLinkerAsmLabel platform dllInfo lbl
                        GotSymbolOffset -> ppr lbl
                        SymbolPtr       -> text ".LC_" <> ppr lbl
                        _               -> panic "pprDynamicLinkerAsmLabel"
+             -- SPARC uses %gdop_lox10(lbl) etc. instead of adding a suffix
+             else if platformArch platform == ArchSPARC
+                  || platformArch platform == ArchSPARC64
+                  then case dllInfo of
+                       CodeStub        -> ppr lbl
+                       SymbolPtr       -> text ".LC_" <> ppr lbl
+                       GotSymbolPtr    -> ppr lbl
+                       GotSymbolOffset -> ppr lbl
         else case dllInfo of
              CodeStub        -> ppr lbl <> text "@plt"
              SymbolPtr       -> text ".LC_" <> ppr lbl

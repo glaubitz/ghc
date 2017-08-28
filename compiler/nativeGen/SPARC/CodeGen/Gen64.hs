@@ -48,6 +48,10 @@ getSomeReg64 expr = do
 --
 getRegister64 :: CmmExpr -> NatM Register
 
+getRegister64 (CmmReg (CmmGlobal PicBaseReg))
+  = do reg <- getPicBaseNat II64
+       return (Fixed II64 reg nilOL)
+
 getRegister64 (CmmReg reg)
   = do dflags <- getDynFlags
        let platform = targetPlatform dflags

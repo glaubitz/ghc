@@ -42,6 +42,7 @@ module PIC (
         pprGotDeclaration,
 
         initializePicBase_ppc,
+        initializePicBase_sparc,
         initializePicBase_x86
 )
 
@@ -51,6 +52,8 @@ import GhcPrelude
 
 import qualified PPC.Instr      as PPC
 import qualified PPC.Regs       as PPC
+
+import qualified SPARC.Instr    as SPARC
 
 import qualified X86.Instr      as X86
 
@@ -857,6 +860,37 @@ initializePicBase_ppc (ArchPPC_64 ELF_V2) OSLinux picReg
 
 initializePicBase_ppc _ _ _ _
         = panic "initializePicBase_ppc: not needed"
+
+
+-- Like x86, we cheat and use a FETCHGOT pseudo-instruction, which expands to:
+--
+--              sethi   %hi(_GLOBAL_OFFSET_TABLE_-4), %picReg
+--              call    1f
+--               add    %picReg, %lo(_GLOBAL_OFFSET_TABLE_+4), %picReg
+--          1:  add     %picReg, %o7, %picReg
+
+initializePicBase_sparc
+        :: Arch -> OS -> Reg
+        -> [NatCmmDecl (Alignment, CmmStatics) SPARC.Instr]
+        -> NatM [NatCmmDecl (Alignment, CmmStatics) SPARC.Instr]
+
+initializePicBase_sparc ArchSPARC os picReg
+        (CmmProc info lab live (ListGraph blocks) : statics)
+    | osElfTarget os
+    = return (CmmProc info lab live (ListGraph blocks') : statics)
+    where blocks' = case blocks of
+                     [] -> []
+                     (b:bs) -> fetchGOT b : map maybeFetchGOT bs
+
+          -- we want to add a FETCHGOT instruction to the beginning of
+          -- every block that is an entry point, which corresponds to
+          -- the blocks that have entries in the info-table mapping.
+          maybeFetchGOT b@(BasicBlock bID _)
+            | bID `mapMember` info = fetchGOT b
+            | otherwise            = b
+
+          fetchGOT (BasicBlock bID insns) =
+             BasicBlock bID (SPARC.FETCHGOT picReg : insns)
 
 
 -- We cheat a bit here by defining a pseudo-instruction named FETCHGOT
