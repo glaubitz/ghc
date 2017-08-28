@@ -16,7 +16,7 @@ module SPARC.Regs (
 
         -- machine specific info
         gReg, iReg, lReg, oReg, fReg,
-        fp, sp, g0, g1, g2, g3, o0, o1, f0, f1, f6, f8, f22, f26, f27,
+        fp, sp, g0, g1, g2, g3, o0, o1, o7, f0, f1, f6, f8, f22, f26, f27,
 
         -- allocatable
         allocatableRegs,
@@ -163,7 +163,7 @@ fReg x  = (32 + x)      -- float regs
 
 
 -- | Some specific regs used by the code generator.
-g0, g1, g2, g3, fp, sp, o0, o1, f0, f1, f6, f8, f22, f26, f27 :: Reg
+g0, g1, g2, g3, fp, sp, o0, o1, o7, f0, f1, f6, f8, f22, f26, f27 :: Reg
 
 f6  = RegReal (RealRegSingle (fReg 6))
 f8  = RegReal (RealRegSingle (fReg 8))
@@ -184,6 +184,9 @@ o0  = RegReal (RealRegSingle (oReg 0))
 o1  = RegReal (RealRegSingle (oReg 1))
 f0  = RegReal (RealRegSingle (fReg 0))
 f1  = RegReal (RealRegSingle (fReg 1))
+
+-- C return address / link register
+o7  = RegReal (RealRegSingle (oReg 7))
 
 -- | Produce the second-half-of-a-double register given the first half or pair.
 fPair :: Reg -> Reg
