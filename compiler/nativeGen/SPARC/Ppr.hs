@@ -710,7 +710,7 @@ pprInstr' _ (FETCHGOT reg)
      = vcat $ map hcat [
                       [ text "\tsethi\t%hi(_GLOBAL_OFFSET_TABLE_-4)", comma, pprReg reg ],
                       [ text "\tcall\t1f" ],
-                      [ text "\t add\t", pprReg reg, comma, "%lo(_GLOBAL_OFFSET_TABLE_+4)", comma, pprReg reg ],
+                      [ text "\t add\t", pprReg reg, comma, text "%lo(_GLOBAL_OFFSET_TABLE_+4)", comma, pprReg reg ],
                       [ text "1:\tadd\t", pprReg reg, comma, pprReg o7, comma, pprReg reg ]
                   ]
 
