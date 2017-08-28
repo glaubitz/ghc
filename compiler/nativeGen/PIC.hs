@@ -871,8 +871,8 @@ initializePicBase_ppc _ _ _ _
 
 initializePicBase_sparc
         :: Arch -> OS -> Reg
-        -> [NatCmmDecl (Alignment, CmmStatics) SPARC.Instr]
-        -> NatM [NatCmmDecl (Alignment, CmmStatics) SPARC.Instr]
+        -> [NatCmmDecl CmmStatics SPARC.Instr]
+        -> NatM [NatCmmDecl CmmStatics SPARC.Instr]
 
 initializePicBase_sparc ArchSPARC os picReg
         (CmmProc info lab live (ListGraph blocks) : statics)
