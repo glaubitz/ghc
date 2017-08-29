@@ -1502,7 +1502,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             break;
          case R_SPARC_HI22:
 #        if defined(sparc64_HOST_ARCH)
-            if (value < -0x200000 || value >= 0x200000) {
+            if ((StgInt64)value < -0x200000 || value >= 0x200000) {
                errorBelch("R_SPARC_HI22 relocation out of range: %s = %" PRId64 "d",
                           symbol, value);
                return 0;
@@ -1531,7 +1531,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
          */
          case R_SPARC_UA32:
 #        if defined(sparc64_HOST_ARCH)
-            if (value < -0x80000000 || value >= 0x80000000) {
+            if ((StgInt64)value < -0x80000000 || value >= 0x80000000) {
                errorBelch("R_SPARC_UA32 relocation out of range: %s = %" PRId64 "d",
                           symbol, value);
                return 0;
@@ -1550,7 +1550,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
 
          case R_SPARC_32:
 #        if defined(sparc64_HOST_ARCH)
-            if (value < -0x80000000 || value >= 0x80000000) {
+            if ((StgInt64)value < -0x80000000 || value >= 0x80000000) {
                errorBelch("R_SPARC_32 relocation out of range: %s = %" PRId64 "d",
                           symbol, value);
                return 0;
