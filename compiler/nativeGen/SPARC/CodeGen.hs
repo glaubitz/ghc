@@ -339,7 +339,28 @@ genCondJump bid bool = do
 genSwitch :: DynFlags -> CmmExpr -> SwitchTargets -> NatM InstrBlock
 genSwitch dflags expr targets
         | positionIndependent dflags
-        = error "MachCodeGen: sparc genSwitch PIC not finished\n"
+        = do    (e_reg, e_code) <- getSomeReg (cmmOffset dflags expr offset)
+                let is32Bit     = target32Bit $ targetPlatform dflags
+                    reg_format  = wordFormat is32Bit
+                    shift       = if is32Bit then 2 else 3
+                offset_reg      <- getNewRegNat reg_format
+                dst             <- getNewRegNat reg_format
+
+                label           <- getNewLabelNat
+
+                dynRef <- cmmMakeDynamicReference dflags DataReference label
+                (base_reg,base_code) <- getSomeReg $ dynRef
+
+                let offset_code = unitOL $ SLL e_reg (RIImm $ ImmInt shift) offset_reg
+
+                return    $ e_code
+                    `appOL` base_code
+                    `appOL` offset_code
+                    `appOL` toOL
+                            [ -- load and jump to the destination
+                              LD      reg_format (AddrRegReg base_reg offset_reg) dst
+                            , JMP_TBL (AddrRegReg base_reg dst) ids label
+                            , NOP ]
 
         | otherwise
         = do    (e_reg, e_code) <- getSomeReg (cmmOffset dflags expr offset)
@@ -382,8 +403,16 @@ genSwitch dflags expr targets
 generateJumpTableForInstr :: DynFlags -> Instr
                           -> Maybe (NatCmmDecl CmmStatics Instr)
 generateJumpTableForInstr dflags (JMP_TBL _ ids label) =
-  let jumpTable = map (jumpTableEntry dflags) ids
-  in Just (CmmData (Section ReadOnlyData label) (Statics label jumpTable))
+    let jumpTable
+            | positionIndependent dflags =
+                    let jumpTableEntryRel Nothing
+                            = CmmStaticLit (CmmInt 0 (wordWidth dflags))
+                        jumpTableEntryRel (Just blockid)
+                            = CmmStaticLit (CmmLabelDiffOff blockLabel label 0)
+                            where blockLabel = mkAsmTempLabel (getUnique blockid)
+                    in map jumpTableEntryRel ids
+            | otherwise = map (jumpTableEntry dflags) ids
+    in Just (CmmData (Section ReadOnlyData label) (Statics label jumpTable))
 generateJumpTableForInstr _ _ = Nothing
 
 
