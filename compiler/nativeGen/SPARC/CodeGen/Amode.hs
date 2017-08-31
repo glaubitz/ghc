@@ -18,7 +18,7 @@ import Format
 import Platform
 
 import Cmm
-import CLabel()
+import CLabel
 
 import DynFlags
 import OrdList
