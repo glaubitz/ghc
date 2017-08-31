@@ -2,7 +2,8 @@ module SPARC.Imm (
         -- immediate values
         Imm(..),
         strImmLit,
-        litToImm
+        litToImm,
+        litToDynamicLinkerLabelInfo
 )
 
 where
@@ -88,7 +89,6 @@ litToDynamicLinkerLabelInfo :: CmmLit -> Maybe (DynamicLinkerLabelInfo, CLabel)
 litToDynamicLinkerLabelInfo lit
  = case lit of
         CmmInt _ _              -> Nothing
-        CmmFloat _ _            -> Nothing
         CmmFloat _ _            -> Nothing
         CmmLabel l              -> dynamicLinkerLabelInfo l
         CmmLabelOff l _         -> dynamicLinkerLabelInfo l

@@ -328,6 +328,7 @@ pprAddr am
 
 -- | Pretty print an address mode's hints, with a leading comma.
 pprAddrHints :: AddrMode -> SDoc
+pprAddrHints am
  = case am of
         AddrAddrHint a h
          -> hcat [ pprAddrHints a, comma, pprImm h ]
