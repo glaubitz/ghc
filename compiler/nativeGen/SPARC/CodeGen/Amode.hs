@@ -58,6 +58,25 @@ getAmode (CmmMachOp (MO_Add _) [x, y])
     return (Amode (AddrRegReg regX regY) code)
 
 getAmode (CmmLit lit)
+  | Just (GotSymbolPtr, _) <- litToDynamicLinkerLabelInfo lit
+  = do let imm = litToImm lit
+       dflags <- getDynFlags
+       let is32Bit     = target32Bit $ targetPlatform dflags
+           reg_format  = wordFormat is32Bit
+       reg <- getNewRegNat reg_format
+
+       let code = toOL [
+                SETHI (GDOP_HIX22 imm) reg,
+                XOR False reg (GDOP_LOX10 imm) reg]
+           off  = ImmInt 0
+           hint = GDOP imm
+
+       return (Amode (AddrAddrHint (AddrRegImm reg off) hint) code)
+
+  | Just (GotSymbolOffset, _) <- litToDynamicLinkerLabelInfo lit
+  = panic "SPARC.Amode.getAmode: GotSymbolOffset not yet implemented!"
+
+  | otherwise
   = do dflags <- getDynFlags
        let platform = targetPlatform dflags
            is32Bit = target32Bit platform

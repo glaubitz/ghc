@@ -44,6 +44,11 @@ data Imm
         | LM    Imm
         | HM    Imm
         | HH    Imm
+
+        -- GOT offsets + load hint
+        | GDOP       Imm
+        | GDOP_LOX10 Imm
+        | GDOP_HIX22 Imm
         deriving Show
 
 instance Show SDoc where
@@ -78,3 +83,15 @@ litToImm lit
                 (ImmInt off)
 
         _               -> panic "SPARC.Regs.litToImm: no match"
+
+litToDynamicLinkerLabelInfo :: CmmLit -> Maybe (DynamicLinkerLabelInfo, CLabel)
+litToDynamicLinkerLabelInfo lit
+ = case lit of
+        CmmInt _ _              -> Nothing
+        CmmFloat _ _            -> Nothing
+        CmmFloat _ _            -> Nothing
+        CmmLabel l              -> dynamicLinkerLabelInfo l
+        CmmLabelOff l _         -> dynamicLinkerLabelInfo l
+        CmmLabelDiffOff _ _ _   -> Nothing
+
+        _                       -> panic "SPARC.Regs.litToDynamicLinkerLabelInfo: no match"

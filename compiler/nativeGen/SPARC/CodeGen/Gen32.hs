@@ -239,14 +239,31 @@ getRegister32 (CmmLit (CmmInt i _))
         code dst = unitOL (OR False g0 (RIImm src) dst)
     in
         return (Any II32 code)
-
-getRegister32 (CmmLit lit)
-  = let imm = litToImm lit
+  | otherwise
+  = let imm = ImmInt (fromInteger i)
         code dst = toOL [
             SETHI (HI imm) dst,
             OR False dst (RIImm (LO imm)) dst]
     in return (Any II32 code)
 
+getRegister32 (CmmLit lit)
+  | gopt Opt_PIC dflags
+  = do lbl <- getNewLabelNat
+       dflags <- getDynFlags
+       dynRef <- cmmMakeDynamicReference dflags DataReference lbl
+       Amode addr addr_code <- getAmode dynRef
+       let rep = cmmLitType dflags lit
+           format = cmmTypeFormat rep
+           code dst =
+            LDATA (Section ReadOnlyData lbl) (Statics lbl [CmmStaticLit lit])
+            `consOL` (addr_code `snocOL` LD format (AddrRegImm addr (ImmInt 0)) dst)
+       return (Any format code)
+  | otherwise
+  = let imm = litToImm lit
+        code dst = toOL [
+            SETHI (HI imm) dst,
+            OR False dst (RIImm (LO imm)) dst]
+    in return (Any II32 code)
 
 getRegister32 _
         = panic "SPARC.CodeGen.Gen32.getRegister32: no match"

@@ -22,6 +22,7 @@ import Panic
 data AddrMode
         = AddrRegReg    Reg Reg         -- addr = r1 + r2
         | AddrRegImm    Reg Imm         -- addr = r1 + imm
+        | AddrAddrHint  AddrMode Imm    -- AddrMode with hint
         deriving Show
 
 
@@ -43,5 +44,15 @@ addrOffset addr off
       AddrRegReg r (RegReal (RealRegSingle 0))
        | fits13Bits off -> Just (AddrRegImm r (ImmInt off))
        | otherwise     -> Nothing
+
+      AddrAddrHint a (ImmInt n) -> do
+        a2 <- addrOffset a off
+        let n2 = n + off
+        return (AddrAddrHint a2 (ImmInt n2))
+
+      AddrAddrHint a (ImmInteger n) -> do
+        a2 <- addrOffset a off
+        let n2 = n + toInteger off
+        return (AddrAddrHint a2 (ImmInt (fromInteger n2)))
 
       _ -> panic ("addrOffset not implemented for " ++ (show addr))

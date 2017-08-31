@@ -323,6 +323,16 @@ pprAddr am
         AddrRegImm r1 imm
          -> hcat [ pprReg r1, char '+', pprImm imm ]
 
+        AddrAddrHint a h
+         -> pprAddr a
+
+-- | Pretty print an address mode's hints, with a leading comma.
+pprAddrHints :: AddrMode -> SDoc
+ = case am of
+        AddrAddrHint a h
+         -> hcat [ pprAddrHints a, comma, pprImm h ]
+
+        _ -> empty
 
 -- | Pretty print an immediate value.
 pprImm :: Imm -> SDoc
@@ -354,6 +364,15 @@ pprImm imm
 
         HH i
          -> hcat [ text "%hh(", pprImm i, rparen ]
+
+        GDOP i
+         -> hcat [ text "%gdop(", pprImm i, rparen ]
+
+        GDOP_LOX10 i
+         -> hcat [ text "%gdop_lox10(", pprImm i, rparen ]
+
+        GDOP_HIX22 i
+         -> hcat [ text "%gdop_hix22(", pprImm i, rparen ]
 
         -- these should have been converted to bytes and placed
         --      in the data section.
@@ -458,7 +477,8 @@ pprInstr' _ (LD format addr reg)
                lbrack,
                pprAddr addr,
                pp_rbracket_comma,
-               pprReg reg
+               pprReg reg,
+               pprAddrHints addr
             ]
 
 -- 64 bit FP stores are expanded into individual instructions in CodeGen.Expand

@@ -319,6 +319,7 @@ sparc_regUsageOfInstr platform instr
 
     regAddr (AddrRegReg r1 r2)  = [r1, r2]
     regAddr (AddrRegImm r1 _)   = [r1]
+    regAddr (AddrAddrHint a _)  = regAddr a
 
     regRI (RIReg r)             = [r]
     regRI  _                    = []
@@ -386,8 +387,9 @@ sparc_patchRegsOfInstr instr env = case instr of
     _                           -> instr
 
   where
-    fixAddr (AddrRegReg r1 r2)  = AddrRegReg   (env r1) (env r2)
-    fixAddr (AddrRegImm r1 i)   = AddrRegImm   (env r1) i
+    fixAddr (AddrRegReg r1 r2)  = AddrRegReg   (env r1)    (env r2)
+    fixAddr (AddrRegImm r1 i)   = AddrRegImm   (env r1)    i
+    fixAddr (AddrAddrHint a h)  = AddrAddrHint (fixAddr a) h
 
     fixRI (RIReg r)             = RIReg (env r)
     fixRI other                 = other
