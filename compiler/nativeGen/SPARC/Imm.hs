@@ -53,10 +53,10 @@ data Imm
         deriving Show
 
 instance Show SDoc where
-    show s = "SDoc"
+    show _ = "SDoc"
 
 instance Show CLabel where
-    show s = "<label>"
+    show _ = "<label>"
 
 
 -- | Create a ImmLit containing this string.
