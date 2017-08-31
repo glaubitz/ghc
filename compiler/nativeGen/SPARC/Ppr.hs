@@ -323,7 +323,7 @@ pprAddr am
         AddrRegImm r1 imm
          -> hcat [ pprReg r1, char '+', pprImm imm ]
 
-        AddrAddrHint a h
+        AddrAddrHint a _
          -> pprAddr a
 
 -- | Pretty print an address mode's hints, with a leading comma.

@@ -18,6 +18,7 @@ import Format
 import Platform
 
 import Cmm
+import CLabel()
 
 import DynFlags
 import OrdList
