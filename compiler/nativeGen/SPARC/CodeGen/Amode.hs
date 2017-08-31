@@ -22,6 +22,7 @@ import CLabel
 
 import DynFlags
 import OrdList
+import Panic
 
 
 -- | Generate code to reference a memory address.
@@ -68,7 +69,7 @@ getAmode (CmmLit lit)
 
        let code = toOL [
                 SETHI (GDOP_HIX22 imm) reg,
-                XOR False reg (GDOP_LOX10 imm) reg]
+                XOR False reg (RIImm (GDOP_LOX10 imm)) reg]
            off  = ImmInt 0
            hint = GDOP imm
 
