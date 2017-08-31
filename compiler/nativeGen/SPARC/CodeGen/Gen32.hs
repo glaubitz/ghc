@@ -16,6 +16,7 @@ import SPARC.Stack
 import SPARC.Instr
 import SPARC.Cond
 import SPARC.Imm
+import SPARC.AddrMode
 import SPARC.Regs
 import SPARC.Base
 import PIC
@@ -247,23 +248,23 @@ getRegister32 (CmmLit (CmmInt i _))
     in return (Any II32 code)
 
 getRegister32 (CmmLit lit)
-  | gopt Opt_PIC dflags
-  = do lbl <- getNewLabelNat
-       dflags <- getDynFlags
-       dynRef <- cmmMakeDynamicReference dflags DataReference lbl
-       Amode addr addr_code <- getAmode dynRef
-       let rep = cmmLitType dflags lit
-           format = cmmTypeFormat rep
-           code dst =
-            LDATA (Section ReadOnlyData lbl) (Statics lbl [CmmStaticLit lit])
-            `consOL` (addr_code `snocOL` LD format (AddrRegImm addr (ImmInt 0)) dst)
-       return (Any format code)
-  | otherwise
-  = let imm = litToImm lit
-        code dst = toOL [
-            SETHI (HI imm) dst,
-            OR False dst (RIImm (LO imm)) dst]
-    in return (Any II32 code)
+  = do dflags <- getDynFlags
+       if gopt Opt_PIC dflags then
+         do lbl <- getNewLabelNat
+            dynRef <- cmmMakeDynamicReference dflags DataReference lbl
+            Amode addr addr_code <- getAmode dynRef
+            let rep = cmmLitType dflags lit
+                format = cmmTypeFormat rep
+                code dst =
+                 LDATA (Section ReadOnlyData lbl) (Statics lbl [CmmStaticLit lit])
+                 `consOL` (addr_code `snocOL` LD format (AddrRegImm addr (ImmInt 0)) dst)
+            return (Any format code)
+       else
+         let imm = litToImm lit
+             code dst = toOL [
+                 SETHI (HI imm) dst,
+                 OR False dst (RIImm (LO imm)) dst]
+         in return (Any II32 code)
 
 getRegister32 _
         = panic "SPARC.CodeGen.Gen32.getRegister32: no match"

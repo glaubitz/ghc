@@ -15,6 +15,7 @@ import SPARC.Stack
 import SPARC.Instr
 import SPARC.Cond
 import SPARC.Imm
+import SPARC.AddrMode
 import SPARC.Regs
 import SPARC.Base
 import PIC
@@ -284,28 +285,28 @@ getRegister64 (CmmLit (CmmInt i _))
        return (Any II64 code)
 
 getRegister64 (CmmLit lit)
-  | gopt Opt_PIC dflags
-  = do lbl <- getNewLabelNat
-       dflags <- getDynFlags
-       dynRef <- cmmMakeDynamicReference dflags DataReference lbl
-       Amode addr addr_code <- getAmode dynRef
-       let rep = cmmLitType dflags lit
-           format = cmmTypeFormat rep
-           code dst =
-            LDATA (Section ReadOnlyData lbl) (Statics lbl [CmmStaticLit lit])
-            `consOL` (addr_code `snocOL` LD format (AddrRegImm addr (ImmInt 0)) dst)
-       return (Any format code)
-  | otherwise
-  = do tmp <- getNewRegNat II64
-       let imm = litToImm lit
-           code dst = toOL [
-               SETHI (HH imm) tmp,
-               SETHI (LM imm) dst,
-               OR False tmp (RIImm (HM imm)) tmp,
-               OR False dst (RIImm (LO imm)) dst,
-               SLL tmp (RIImm (ImmInt 32)) tmp,
-               OR False dst (RIReg tmp) dst]
-       return (Any II64 code)
+  = do dflags <- getDynFlags
+       if gopt Opt_PIC dflags then
+         do lbl <- getNewLabelNat
+            dynRef <- cmmMakeDynamicReference dflags DataReference lbl
+            Amode addr addr_code <- getAmode dynRef
+            let rep = cmmLitType dflags lit
+                format = cmmTypeFormat rep
+                code dst =
+                 LDATA (Section ReadOnlyData lbl) (Statics lbl [CmmStaticLit lit])
+                 `consOL` (addr_code `snocOL` LD format (AddrRegImm addr (ImmInt 0)) dst)
+            return (Any format code)
+       else
+         do tmp <- getNewRegNat II64
+            let imm = litToImm lit
+                code dst = toOL [
+                    SETHI (HH imm) tmp,
+                    SETHI (LM imm) dst,
+                    OR False tmp (RIImm (HM imm)) tmp,
+                    OR False dst (RIImm (LO imm)) dst,
+                    SLL tmp (RIImm (ImmInt 32)) tmp,
+                    OR False dst (RIReg tmp) dst]
+            return (Any II64 code)
 
 getRegister64 _
         = panic "SPARC.CodeGen.Gen64.getRegister64: no match"
