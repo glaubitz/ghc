@@ -257,7 +257,7 @@ getRegister32 (CmmLit lit)
                 format = cmmTypeFormat rep
                 code dst =
                  LDATA (Section ReadOnlyData lbl) (Statics lbl [CmmStaticLit lit])
-                 `consOL` (addr_code `snocOL` LD format (AddrRegImm addr (ImmInt 0)) dst)
+                 `consOL` (addr_code `snocOL` LD format addr dst)
             return (Any format code)
        else
          let imm = litToImm lit
