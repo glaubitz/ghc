@@ -24,6 +24,7 @@ import Format
 import Reg
 
 import Cmm
+import CLabel
 
 import Control.Monad (liftM)
 import DynFlags
@@ -210,7 +211,39 @@ getRegister64 (CmmMachOp mop [x, y]) = do
       MO_U_Le rep       -> condIntReg LEU (extendUExpr dflags rep x)
                                           (extendUExpr dflags rep y)
 
-      MO_Add W64        -> trivialCode W64 (ADD False False) x y
+      MO_Add W64        ->
+        case (x, y) of
+            (_, CmmLit (CmmInt _ _))
+              -> trivialCode W64 (ADD False False) x y
+
+            (CmmReg (CmmGlobal PicBaseReg), CmmLit lit)
+             | Just (GotSymbolPtr, _) <- litToDynamicLinkerLabelInfo lit
+              -> panic "SPARC.CodeGen.Gen64.getRegister64: saw unexpected PicBaseReg+lit; should be surrounded by a load and handled by getAmode"
+            --  -> do let imm = litToImm lit
+            --        (base, baseCode) <- getSomeReg64 x
+
+            --        let code dst = baseCode `appOL` toOL [
+            --                     SETHI (GDOP_HIX22 imm) dst,
+            --                     XOR False dst (RIImm (GDOP_LOX10 imm)) dst]
+
+            --        return (Any II64 code)
+
+            (CmmReg (CmmGlobal PicBaseReg), CmmLit lit)
+             | Just (GotSymbolOffset, _) <- litToDynamicLinkerLabelInfo lit
+              -> do let imm = litToImm lit
+                    (base, baseCode) <- getSomeReg64 x
+
+                    let hint = GDOP imm
+                        code dst = baseCode `appOL` toOL [
+                                       SETHI (GDOP_HIX22 imm) dst,
+                                       XOR False dst (RIImm (GDOP_LOX10 imm)) dst,
+                                       LD II64 (AddrAddrHint (AddrRegReg base dst) hint) dst
+                                   ]
+
+                    return (Any II64 code)
+
+            _ -> trivialCode W64 (ADD False False) x y
+
       MO_Sub W64        -> trivialCode W64 (SUB False False) x y
 
       MO_S_MulMayOflo W64 -> imulMayOflo x y

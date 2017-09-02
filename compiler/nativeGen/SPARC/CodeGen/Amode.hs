@@ -51,6 +51,40 @@ getAmode (CmmMachOp (MO_Add _) [x, CmmLit (CmmInt i _)])
          off  = ImmInt (fromInteger i)
        return (Amode (AddrRegImm reg off) code)
 
+-- Specific case needed for PIC to avoid infinite recursion
+getAmode (CmmMachOp (MO_Add width) [x@(CmmReg (CmmGlobal PicBaseReg)), CmmLit lit])
+  | Just (GotSymbolPtr, _) <- litToDynamicLinkerLabelInfo lit
+  = do let imm = litToImm lit
+       (base, baseCode) <- getSomeReg x
+       let reg_format = intFormat width
+       reg <- getNewRegNat reg_format
+
+       let code = baseCode `appOL` toOL [
+                SETHI (GDOP_HIX22 imm) reg,
+                XOR False reg (RIImm (GDOP_LOX10 imm)) reg]
+           hint = GDOP imm
+
+       return (Amode (AddrAddrHint (AddrRegReg base reg) hint) code)
+
+  | Just (GotSymbolOffset, _) <- litToDynamicLinkerLabelInfo lit
+  -- R_SPARC_GOTDATA_HIX22/LOX10 cannot be expressed in assembly, only the
+  -- GOTDATA_OP variants, so we do the same as GotSymbolPtr but also perform
+  -- the load. Specifying the hint adds an R_SPARC_GOTDATA relocation for the
+  -- load itself, so the linker should optimise the sequence to use
+  -- R_SPARC_GOTDATA_HIX22/LOX10 followed by an add instead.
+  = do let imm = litToImm lit
+       (base, baseCode) <- getSomeReg x
+       let reg_format = intFormat width
+       reg <- getNewRegNat reg_format
+
+       let hint = GDOP imm
+           code = baseCode `appOL` toOL [
+                SETHI (GDOP_HIX22 imm) reg,
+                XOR False reg (RIImm (GDOP_LOX10 imm)) reg,
+                LD reg_format (AddrAddrHint (AddrRegReg base reg) hint) reg]
+
+       return (Amode (AddrRegImm reg (ImmInt 0)) code)
+
 getAmode (CmmMachOp (MO_Add _) [x, y])
   = do
     (regX, codeX) <- getSomeReg x
@@ -60,25 +94,6 @@ getAmode (CmmMachOp (MO_Add _) [x, y])
     return (Amode (AddrRegReg regX regY) code)
 
 getAmode (CmmLit lit)
-  | Just (GotSymbolPtr, _) <- litToDynamicLinkerLabelInfo lit
-  = do let imm = litToImm lit
-       dflags <- getDynFlags
-       let is32Bit     = target32Bit $ targetPlatform dflags
-           reg_format  = wordFormat is32Bit
-       reg <- getNewRegNat reg_format
-
-       let code = toOL [
-                SETHI (GDOP_HIX22 imm) reg,
-                XOR False reg (RIImm (GDOP_LOX10 imm)) reg]
-           off  = ImmInt 0
-           hint = GDOP imm
-
-       return (Amode (AddrAddrHint (AddrRegImm reg off) hint) code)
-
-  | Just (GotSymbolOffset, _) <- litToDynamicLinkerLabelInfo lit
-  = panic "SPARC.Amode.getAmode: GotSymbolOffset not yet implemented!"
-
-  | otherwise
   = do dflags <- getDynFlags
        let platform = targetPlatform dflags
            is32Bit = target32Bit platform
