@@ -4060,6 +4060,12 @@ default_PIC platform =
                                          -- always generate PIC. See
                                          -- #10597 for more
                                          -- information.
+
+    (OSLinux, ArchSPARC64) -> [Opt_PIC]  -- Linux/sparc64's mmap is in high
+                                         -- mem, but call instructions have a
+                                         -- +/-2 GiB range; without jump island
+                                         -- support in rts/linker/Elf.c we must
+                                         -- use PIC to work around this.
     _                      -> []
 
 -- General flags that are switched on/off when other general flags are switched
