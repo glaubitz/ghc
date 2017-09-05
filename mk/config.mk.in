@@ -121,13 +121,6 @@ endif
 PlatformSupportsSharedLibs = $(if $(filter $(TARGETPLATFORM),\
     $(NoSharedLibsPlatformList)),NO,YES)
 
-# No PIC support in SPARC native gen
-ifeq "$(TargetArch_CPP)" "sparc"
-PlatformSupportsSharedLibs = NO
-else ifeq "$(TargetArch_CPP)" "sparc64"
-PlatformSupportsSharedLibs = NO
-endif
-
 # DYNAMIC_BY_DEFAULT says whether this compiler will default to
 # building dynamic executables, i.e. -dynamic is on.  We do this for
 # most platforms because it lets us use the system dynamic linker
