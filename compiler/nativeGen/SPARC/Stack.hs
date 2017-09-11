@@ -72,8 +72,7 @@ spRel2 :: Bool
        -> Int            -- ^ stack offset in words, positive or negative
        -> Int            -- ^ additional offset in bytes, positive or negative
        -> AddrMode
-spRel2 is32Bit n off
-        = AddrRegImm sp (ImmInt ((stackBias is32Bit) + n * (wordLength is32Bit) + off))
+spRel2 = xpRel2 sp
 
 
 -- | Get an address relative to the frame pointer.
@@ -83,8 +82,16 @@ fpRel :: Bool -> Int -> AddrMode
 fpRel is32Bit n = fpRel2 is32Bit n 0
 
 fpRel2 :: Bool -> Int -> Int -> AddrMode
-fpRel2 is32Bit n off
-        = AddrRegImm fp (ImmInt ((stackBias is32Bit) + n * (wordLength is32Bit) + off))
+fpRel2 = xpRel2 fp
+
+
+xpRel2 :: Reg -> Bool -> Int -> Int -> AddrMode
+xpRel2 xp is32Bit n off
+        | fits13Bits imm
+        = AddrRegImm xp (ImmInt imm)
+        | otherwise
+        = panic "SPARC.Stack.xpRel2: need far load/store"
+        where imm = ((stackBias is32Bit) + n * (wordLength is32Bit) + off)
 
 -- | Convert a spill slot number to a *byte* offset *below %fp+BIAS*, with no sign.
 --
