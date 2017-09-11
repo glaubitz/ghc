@@ -88,11 +88,15 @@ fpRel2 = xpRel2 fp
 
 xpRel2 :: Reg -> Bool -> Int -> Int -> AddrMode
 xpRel2 xp is32Bit n off
-        | fits13Bits imm
-        = AddrRegImm xp (ImmInt imm)
+        | fits13Bits disp
+        = AddrRegImm xp imm
         | otherwise
-        = panic "SPARC.Stack.xpRel2: need far load/store"
-        where imm = ((stackBias is32Bit) + n * (wordLength is32Bit) + off)
+        = let code = toOL [
+                  SETHI (HI imm) globalTempReg,
+                  OR False globalTempReg (RIImm (LO imm)) globalTempReg]
+          in (Amode (AddrRegReg xp globalTempReg) code)
+        where disp = ((stackBias is32Bit) + n * (wordLength is32Bit) + off)
+              imm = (ImmInt disp)
 
 -- | Convert a spill slot number to a *byte* offset *below %fp+BIAS*, with no sign.
 --

@@ -17,6 +17,7 @@ module SPARC.Regs (
         -- machine specific info
         gReg, iReg, lReg, oReg, fReg,
         fp, sp, g0, g1, g2, g3, o0, o1, o7, f0, f1, f6, f8, f22, f26, f27,
+        globalTempReg,
 
         -- allocatable
         allocatableRegs,
@@ -187,6 +188,9 @@ f1  = RegReal (RealRegSingle (fReg 1))
 
 -- C return address / link register
 o7  = RegReal (RealRegSingle (oReg 7))
+
+globalTempReg :: Reg
+globalTempReg = g1
 
 -- | Produce the second-half-of-a-double register given the first half or pair.
 fPair :: Reg -> Reg

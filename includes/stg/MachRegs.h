@@ -372,15 +372,17 @@ the stack. See Note [Overlapping global registers] for implications.
     system: reserved for system
 
      alloc: allocated to in the register allocator, intra-closure only
+       tmp: used as an unallocated scratch register (large spill offsets)
+       *64: only used on 64-bit
 
                 GHC usage     v8 ABI        v9 ABI
    Global
      %g0        zero        zero          zero
-     %g1        alloc       scratch       scrach
+     %g1        tmp         scratch       scratch
      %g2        alloc       app           app
      %g3        alloc       app           app
      %g4        alloc       app           scratch
-     %g5                    system        scratch
+     %g5        alloc64     system        scratch
      %g6                    system        system
      %g7                    system        system
 
