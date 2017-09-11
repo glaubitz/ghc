@@ -19,6 +19,7 @@ import SPARC.Regs
 import SPARC.Base
 import SPARC.Imm
 import Platform
+import Reg
 
 import DynFlags
 import Outputable
