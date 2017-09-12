@@ -995,9 +995,6 @@ freeReg _ = True
 -- %g0(r0) is always zero
 freeReg g0  = False
 
--- %g1(r1) is reserved by us for spill loads/stores needing large offsets
-freeReg g1  = False
-
 -- %g5(r5) is reserved for the OS for the 32-bit ABI
 #if defined(MACHREGS_sparc)
 freeReg g5  = False
@@ -1014,6 +1011,7 @@ freeReg o6  = False
 
 -- %o7(r15)
 --  holds the C return address
+-- We also reserve it for LDFAR/STFAR
 freeReg o7  = False
 
 -- %i6(r30)

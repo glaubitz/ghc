@@ -187,10 +187,11 @@ f0  = RegReal (RealRegSingle (fReg 0))
 f1  = RegReal (RealRegSingle (fReg 1))
 
 -- C return address / link register
+-- Available as a scratch register; we reserve it for LDFAR/STFAR
 o7  = RegReal (RealRegSingle (oReg 7))
 
 globalTempReg :: Reg
-globalTempReg = g1
+globalTempReg = o7
 
 -- | Produce the second-half-of-a-double register given the first half or pair.
 fPair :: Reg -> Reg

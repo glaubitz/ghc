@@ -372,13 +372,13 @@ the stack. See Note [Overlapping global registers] for implications.
     system: reserved for system
 
      alloc: allocated to in the register allocator, intra-closure only
-       tmp: used as an unallocated scratch register (large spill offsets)
+       tmp: used as an unallocated scratch register (LDFAR/STFAR)
        *64: only used on 64-bit
 
                 GHC usage     v8 ABI        v9 ABI
    Global
      %g0        zero        zero          zero
-     %g1        tmp         scratch       scratch
+     %g1        alloc       scratch       scratch
      %g2        alloc       app           app
      %g3        alloc       app           app
      %g4        alloc       app           scratch
@@ -389,7 +389,7 @@ the stack. See Note [Overlapping global registers] for implications.
    Output: can be zapped by callee
      %o0-o5     alloc       caller saves
      %o6                    C stack ptr
-     %o7                    C ret addr
+     %o7        tmp         C ret addr
 
    Local: maintained by register windowing mechanism
      %l0        alloc
