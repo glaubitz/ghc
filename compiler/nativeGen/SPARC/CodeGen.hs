@@ -573,7 +573,7 @@ arg_to_int_vregs32' dflags arg
 
                         let (addr, False) = spRel True 16
                             code2 =
-                                code               `appOL`
+                                code               `snocOL`
                                 FMOV FF64 src f0   `snocOL`
                                 ST   FF32 f0 addr  `snocOL`
                                 LD   II32 addr v1  `snocOL`
@@ -588,7 +588,7 @@ arg_to_int_vregs32' dflags arg
 
                         let (addr, False) = spRel True 16
                             code2 =
-                                code               `appOL`
+                                code               `snocOL`
                                 ST   FF32 src addr `snocOL`
                                 LD   II32 addr v1
 
