@@ -602,7 +602,7 @@ coerceInt2FP width1 width2 x = do
         (addr, False) = spRel False (-2)
         code__2 dst = code `appOL` toOL [
             ST iformat1 src addr,
-            LD fformat1 addr,
+            LD fformat1 addr tmp,
             FxTOy iformat1 fformat2 tmp dst]
     return (Any fformat2 code__2)
 
