@@ -22,7 +22,6 @@ import CLabel
 
 import DynFlags
 import OrdList
-import Panic
 
 
 -- | Generate code to reference a memory address.

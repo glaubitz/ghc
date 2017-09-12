@@ -489,6 +489,9 @@ pprInstr' _ (LDFAR format (AddrRegImm source off) reg)
                pprInstr (LD format (AddrRegReg source globalTempReg) reg)
             ]
 
+pprInstr' _ (LDFAR _ _ _)
+        = panic "SPARC.Ppr.pprInstr' LDFAR: no match"
+
 -- 64 bit FP stores are expanded into individual instructions in CodeGen.Expand
 --pprInstr' _ (ST FF64 reg _)
 --        | RegReal (RealRegSingle{}) <- reg
@@ -514,6 +517,9 @@ pprInstr' _ (STFAR format reg (AddrRegImm source off))
                pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
                pprInstr (ST format reg (AddrRegReg source globalTempReg))
             ]
+
+pprInstr' _ (STFAR _ _ _)
+        = panic "SPARC.Ppr.pprInstr' STFAR: no match"
 
 
 pprInstr' is32Bit (ADD x cc reg1 ri reg2)
