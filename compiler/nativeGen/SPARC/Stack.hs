@@ -66,35 +66,30 @@ requiredParamArrayBytes is32Bit = requiredParamArraySlots * (wordLength is32Bit)
 --
 spRel :: Bool
       -> Int            -- ^ stack offset in words, positive or negative
-      -> AddrMode
+      -> (AddrMode, Bool)
 spRel is32Bit n = spRel2 is32Bit n 0
 
 spRel2 :: Bool
        -> Int            -- ^ stack offset in words, positive or negative
        -> Int            -- ^ additional offset in bytes, positive or negative
-       -> AddrMode
+       -> (AddrMode, Bool)
 spRel2 = xpRel2 sp
 
 
 -- | Get an address relative to the frame pointer.
---      This doesn't work work for offsets greater than 13 bits; we just hope for the best
 --
-fpRel :: Bool -> Int -> AddrMode
+fpRel :: Bool -> Int -> (AddrMode, Bool)
 fpRel is32Bit n = fpRel2 is32Bit n 0
 
-fpRel2 :: Bool -> Int -> Int -> AddrMode
+fpRel2 :: Bool -> Int -> Int -> (AddrMode, Bool)
 fpRel2 = xpRel2 fp
 
 
-xpRel2 :: Reg -> Bool -> Int -> Int -> AddrMode
+-- | Get an address relative to the given pointer.
+--
+xpRel2 :: Reg -> Bool -> Int -> Int -> (AddrMode, Bool)
 xpRel2 xp is32Bit n off
-        | fits13Bits disp
-        = AddrRegImm xp imm
-        | otherwise
-        = let code = toOL [
-                  SETHI (HI imm) globalTempReg,
-                  OR False globalTempReg (RIImm (LO imm)) globalTempReg]
-          in (Amode (AddrRegReg xp globalTempReg) code)
+        = (AddrRegImm xp imm, not $ fits13Bits disp)
         where disp = ((stackBias is32Bit) + n * (wordLength is32Bit) + off)
               imm = (ImmInt disp)
 

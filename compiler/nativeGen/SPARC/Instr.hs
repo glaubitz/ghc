@@ -14,7 +14,6 @@ module SPARC.Instr (
         RI(..),
         riZero,
 
-        fpRelEA,
         moveSp,
 
         isUnconditionalJump,
@@ -65,13 +64,6 @@ riZero (RIImm (ImmInt 0))                       = True
 riZero (RIImm (ImmInteger 0))                   = True
 riZero (RIReg (RegReal (RealRegSingle 0)))      = True
 riZero _                                        = False
-
-
--- | Calculate the effective address which would be used by the
---      corresponding fpRel sequence.
-fpRelEA :: Bool -> Int -> Reg -> Instr
-fpRelEA is32Bit n dst
-   = ADD False False fp (RIImm (ImmInt (n * (wordLength is32Bit) + (stackBias is32Bit)))) dst
 
 
 -- | Code to shift the stack pointer by n words.
@@ -151,7 +143,9 @@ data Instr
         -- real instrs -----------------------------------------------
         -- Loads and stores.
         | LD            Format AddrMode Reg             -- format, src, dst
+        | LDFAR         Format AddrMode Reg             -- format, src, dst
         | ST            Format Reg AddrMode             -- format, src, dst
+        | STFAR         Format Reg AddrMode             -- format, src, dst
 
         -- Int Arithmetic.
         --      x:   add/sub with carry bit.
@@ -267,7 +261,9 @@ sparc_regUsageOfInstr :: Platform -> Instr -> RegUsage
 sparc_regUsageOfInstr platform instr
  = case instr of
     LD    _ addr reg               -> usage (regAddr addr,         [reg])
+    LDFAR _ addr reg               -> usage (regAddr addr,         [reg])
     ST    _ reg addr               -> usage (reg : regAddr addr,   [])
+    STFAR _ reg addr               -> usage (reg : regAddr addr,   [])
     ADD   _ _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
     SUB   _ _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
     UMUL    _ r1 ar r2             -> usage (r1 : regRI ar,        [r2])
@@ -339,8 +335,10 @@ interesting platform reg
 -- | Apply a given mapping to tall the register references in this instruction.
 sparc_patchRegsOfInstr :: Instr -> (Reg -> Reg) -> Instr
 sparc_patchRegsOfInstr instr env = case instr of
-    LD    fmt addr reg          -> LD fmt (fixAddr addr) (env reg)
-    ST    fmt reg addr          -> ST fmt (env reg) (fixAddr addr)
+    LD    fmt addr reg          -> LD    fmt (fixAddr addr) (env reg)
+    LDFAR fmt addr reg          -> LDFAR fmt (fixAddr addr) (env reg)
+    ST    fmt reg addr          -> ST    fmt (env reg) (fixAddr addr)
+    STFAR fmt reg addr          -> STFAR fmt (env reg) (fixAddr addr)
 
     ADD   x cc r1 ar r2         -> ADD   x cc  (env r1) (fixRI ar) (env r2)
     SUB   x cc r1 ar r2         -> SUB   x cc  (env r1) (fixRI ar) (env r2)
@@ -447,8 +445,10 @@ sparc_mkSpillInstr dflags reg _ slot
                         RcFloat   -> FF32
                         RcDouble  -> FF64
                         _         -> panic "sparc_mkSpillInstr"
+        (addr, far) = fpRel is32Bit (- off_w)
+        instr    = if far then STFAR else ST
 
-    in ST fmt reg (fpRel is32Bit (negate off_w))
+    in instr fmt reg addr
 
 
 -- | Make a spill reload instruction.
@@ -473,7 +473,10 @@ sparc_mkLoadInstr dflags reg _ slot
                         RcDouble  -> FF64
                         _         -> panic "sparc_mkLoadInstr"
 
-        in LD fmt (fpRel is32Bit (- off_w)) reg
+        (addr, far) = fpRel is32Bit (- off_w)
+        instr    = if far then LDFAR else LD
+
+    in instr fmt addr reg
 
 
 --------------------------------------------------------------------------------

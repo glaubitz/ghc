@@ -570,25 +570,27 @@ arg_to_int_vregs32' dflags arg
                  FF64 -> do
                         v1 <- getNewRegNat II32
                         v2 <- getNewRegNat II32
+                        (addr, False) <- spRel True 16
 
                         let code2 =
-                                code                            `snocOL`
-                                FMOV FF64 src f0                `snocOL`
-                                ST   FF32  f0 (spRel True 16)   `snocOL`
-                                LD   II32  (spRel True 16) v1        `snocOL`
-                                ST   FF32  f1 (spRel True 16)   `snocOL`
-                                LD   II32  (spRel True 16) v2
+                                code               `appOL`
+                                FMOV FF64 src f0   `snocOL`
+                                ST   FF32 f0 addr  `snocOL`
+                                LD   II32 addr v1  `snocOL`
+                                ST   FF32 f1 addr  `snocOL`
+                                LD   II32 addr v2
 
                         return  (code2, [v1,v2])
 
                  -- Load a 32 bit float return value into an integer reg
                  FF32 -> do
                         v1 <- getNewRegNat II32
+                        (addr, False) <- spRel True 16
 
                         let code2 =
-                                code                            `snocOL`
-                                ST   FF32  src (spRel True 16)  `snocOL`
-                                LD   II32  (spRel True 16) v1
+                                code               `appOL`
+                                ST   FF32 src addr `snocOL`
+                                LD   II32 addr v1
 
                         return (code2, [v1])
 
@@ -668,18 +670,26 @@ move_final is32Bit (v:vs) availRegs offset
                 RcInteger              ->
                     case mAvailRegP of
                         (Just availRegI, _) -> (OR False g0 (RIReg v) availRegI, Just availRegI)
-                        (Nothing, _)        -> (ST (wordFormat is32Bit) v (spRel is32Bit offset), Nothing)
+                        (Nothing, _)        ->
+                            -- We really don't expect to need more than a
+                            -- 13-bit immediate for stack arguments
+                            let (addr, False) = (spRel is32Bit offset)
+                            in (ST (wordFormat is32Bit) v addr, Nothing)
 
                 RcFloat  | not is32Bit ->
                     -- Single-precision floats get right-align in slot
                     case mAvailRegP of
                         (_, Just availRegD) -> (FMOV FF32 v (fPair availRegD), Just availRegD)
-                        (_, Nothing)        -> (ST FF32 v (spRel2 is32Bit offset 4), Nothing)
+                        (_, Nothing)        ->
+                            let (addr, False) = (spRel2 is32Bit offset 4)
+                            in (ST FF32 v addr, Nothing)
 
                 RcDouble | not is32Bit ->
                     case mAvailRegP of
                         (_, Just availRegD) -> (FMOV FF64 v availRegD, Just availRegD)
-                        (_, Nothing)        -> (ST FF64 v (spRel is32Bit offset), Nothing)
+                        (_, Nothing)        ->
+                            let (addr, False) = (spRel is32Bit offset)
+                            in (ST FF64 v addr, Nothing)
 
                 _                      -> panic ("SPARC.CodeGen.move_final: Bad value register " ++ show v)
 

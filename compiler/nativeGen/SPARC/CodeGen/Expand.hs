@@ -95,6 +95,9 @@ remapRegPair instr
 --              We might be able to do this faster if we use the UA2007 instr set
 --              instead of restricting ourselves to SPARC V9.
 --      TODO:   Does 64-bit NCG need this?
+--      TODO:   LDFAR/STFAR?
+--      TODO:   Can we axe the whole thing? Should "just" need enforcing stack
+--              slot alignment on 32-bit...
 --
 expandMisalignedDoubles :: Instr -> OrdList Instr
 expandMisalignedDoubles instr

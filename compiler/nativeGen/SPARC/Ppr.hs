@@ -482,6 +482,13 @@ pprInstr' _ (LD format addr reg)
                pprAddrHints addr
             ]
 
+pprInstr' _ (LDFAR format (AddrRegImm source off) reg)
+        = vcat [
+               pprInstr (SETHI (HI off) globalTempReg),
+               pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
+               pprInstr (LD format (AddrRegReg source globalTempReg) reg)
+            ]
+
 -- 64 bit FP stores are expanded into individual instructions in CodeGen.Expand
 --pprInstr' _ (ST FF64 reg _)
 --        | RegReal (RealRegSingle{}) <- reg
@@ -499,6 +506,13 @@ pprInstr' _ (ST format reg addr)
                pp_comma_lbracket,
                pprAddr addr,
                rbrack
+            ]
+
+pprInstr' _ (STFAR format (AddrRegImm source off) reg)
+        = vcat [
+               pprInstr (SETHI (HI off) globalTempReg),
+               pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
+               pprInstr (ST format (AddrRegReg source globalTempReg) reg)
             ]
 
 
