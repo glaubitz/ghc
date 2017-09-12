@@ -599,9 +599,10 @@ coerceInt2FP width1 width2 x = do
     (src, code)  <- getSomeReg64 x
     tmp          <- getNewRegNat fformat1
     let
+        (addr, False) = spRel False (-2)
         code__2 dst = code `appOL` toOL [
-            ST iformat1 src (spRel False (-2)),
-            LD fformat1 (spRel False (-2)) tmp,
+            ST iformat1 src addr,
+            LD fformat1 addr,
             FxTOy iformat1 fformat2 tmp dst]
     return (Any fformat2 code__2)
 
@@ -622,7 +623,8 @@ coerceFP2Int width1 width2 x
         (fsrc, code)    <- getSomeReg64 x
         fdst            <- getNewRegNat fformat2
 
-        let code2 dst
+        let (addr, False) = spRel False (-2)
+            code2 dst
                 =       code
                 `appOL` toOL
                         -- convert float to int format, leaving it in a float reg.
@@ -630,8 +632,8 @@ coerceFP2Int width1 width2 x
 
                         -- store the int into mem, then load it back to move
                         --      it into an actual int reg.
-                        , ST    fformat2 fdst (spRel False (-2))
-                        , LD    iformat2 (spRel False (-2)) dst]
+                        , ST    fformat2 fdst addr
+                        , LD    iformat2 addr dst]
 
         return (Any iformat2 code2)
 
