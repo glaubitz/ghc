@@ -508,11 +508,11 @@ pprInstr' _ (ST format reg addr)
                rbrack
             ]
 
-pprInstr' _ (STFAR format (AddrRegImm source off) reg)
+pprInstr' _ (STFAR format reg (AddrRegImm source off))
         = vcat [
                pprInstr (SETHI (HI off) globalTempReg),
                pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
-               pprInstr (ST format (AddrRegReg source globalTempReg) reg)
+               pprInstr (ST format reg (AddrRegReg source globalTempReg))
             ]
 
 
