@@ -570,9 +570,9 @@ arg_to_int_vregs32' dflags arg
                  FF64 -> do
                         v1 <- getNewRegNat II32
                         v2 <- getNewRegNat II32
-                        (addr, False) <- spRel True 16
 
-                        let code2 =
+                        let (addr, False) = spRel True 16
+                            code2 =
                                 code               `appOL`
                                 FMOV FF64 src f0   `snocOL`
                                 ST   FF32 f0 addr  `snocOL`
@@ -585,9 +585,9 @@ arg_to_int_vregs32' dflags arg
                  -- Load a 32 bit float return value into an integer reg
                  FF32 -> do
                         v1 <- getNewRegNat II32
-                        (addr, False) <- spRel True 16
 
-                        let code2 =
+                        let (addr, False) = spRel True 16
+                            code2 =
                                 code               `appOL`
                                 ST   FF32 src addr `snocOL`
                                 LD   II32 addr v1
