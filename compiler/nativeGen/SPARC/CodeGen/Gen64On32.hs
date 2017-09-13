@@ -125,15 +125,18 @@ iselExpr64 (CmmLoad addrTree ty)
         result
 
 iselExpr64 (CmmLit (CmmInt i _))
- = do   (rlo,rhi) <- getNewRegPairNat II32
-        let imm = ImmInteger i
-            code = toOL [
-                    SETHI (HH imm) rhi,
-                    SETHI (LM imm) rlo,
-                    OR False rhi (RIImm (HM imm)) rhi,
-                    OR False rlo (RIImm (LO imm)) rlo,
-                    ]
-        return (ChildCode64 code rlo)
+ = do   r_dst_lo        <- getNewRegNat II32
+        let r_dst_hi    = getHiVRegFromLo r_dst_lo
+
+        let imm         = ImmInteger i
+
+        let code =      toOL
+                        [ SETHI (HH imm) r_dst_hi
+                        , SETHI (LM imm) r_dst_lo
+                        , OR False r_dst_hi (RIImm (HM imm)) r_dst_hi
+                        , OR False r_dst_lo (RIImm (LO imm)) r_dst_lo ]
+
+        return  $ ChildCode64 code r_dst_lo
 
 
 -- Add a literal to a 64 bit integer
