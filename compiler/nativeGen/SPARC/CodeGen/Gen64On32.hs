@@ -124,9 +124,21 @@ iselExpr64 (CmmLoad addrTree ty)
 
         result
 
+iselExpr64 (CmmLit (CmmInt i _))
+ = do   (rlo,rhi) <- getNewRegPairNat II32
+        let imm = ImmInteger i
+            code = toOL [
+                    SETHI (HH imm) rhi,
+                    SETHI (LM imm) rlo,
+                    OR False rhi (RIImm (HM imm)) rhi,
+                    OR False rlo (RIImm (LO imm)) rlo,
+                    ]
+        return (ChildCode64 code rlo)
+
 
 -- Add a literal to a 64 bit integer
 iselExpr64 (CmmMachOp (MO_Add _) [e1, CmmLit (CmmInt i _)])
+ | fits13Bits i
  = do   ChildCode64 code1 r1_lo <- iselExpr64 e1
         let r1_hi       = getHiVRegFromLo r1_lo
 
@@ -157,6 +169,43 @@ iselExpr64 (CmmMachOp (MO_Add _) [e1, e2])
                 `appOL` toOL
                         [ ADD False True  r1_lo (RIReg r2_lo) r_dst_lo
                         , ADD True  False r1_hi (RIReg r2_hi) r_dst_hi ]
+
+        return  $ ChildCode64 code r_dst_lo
+
+
+-- Subtract a literal to a 64 bit integer
+iselExpr64 (CmmMachOp (MO_Sub _) [e1, CmmLit (CmmInt i _)])
+ | fits13Bits i
+ = do   ChildCode64 code1 r1_lo <- iselExpr64 e1
+        let r1_hi       = getHiVRegFromLo r1_lo
+
+        r_dst_lo        <- getNewRegNat II32
+        let r_dst_hi    =  getHiVRegFromLo r_dst_lo
+
+        let code =      code1
+                `appOL` toOL
+                        [ SUB False True  r1_lo (RIImm (ImmInteger i)) r_dst_lo
+                        , SUB True  False r1_hi (RIReg g0)         r_dst_hi ]
+
+        return  $ ChildCode64 code r_dst_lo
+
+
+-- Subtraction of II64
+iselExpr64 (CmmMachOp (MO_Sub _) [e1, e2]) = do
+ = do   ChildCode64 code1 r1_lo <- iselExpr64 e1
+        let r1_hi       = getHiVRegFromLo r1_lo
+
+        ChildCode64 code2 r2_lo <- iselExpr64 e2
+        let r2_hi       = getHiVRegFromLo r2_lo
+
+        r_dst_lo        <- getNewRegNat II32
+        let r_dst_hi    = getHiVRegFromLo r_dst_lo
+
+        let code =      code1
+                `appOL` code2
+                `appOL` toOL
+                        [ SUB False True  r1_lo (RIReg r2_lo) r_dst_lo
+                        , SUB True  False r1_hi (RIReg r2_hi) r_dst_hi ]
 
         return  $ ChildCode64 code r_dst_lo
 
