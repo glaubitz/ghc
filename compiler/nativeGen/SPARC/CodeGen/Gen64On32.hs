@@ -12,6 +12,7 @@ import GhcPrelude
 import {-# SOURCE #-} SPARC.CodeGen.Gen
 import SPARC.CodeGen.Base
 import SPARC.CodeGen.Amode
+import SPARC.Base
 import SPARC.Regs
 import SPARC.AddrMode
 import SPARC.Imm
