@@ -194,7 +194,7 @@ iselExpr64 (CmmMachOp (MO_Sub _) [e1, CmmLit (CmmInt i _)])
 
 
 -- Subtraction of II64
-iselExpr64 (CmmMachOp (MO_Sub _) [e1, e2]) = do
+iselExpr64 (CmmMachOp (MO_Sub _) [e1, e2])
  = do   ChildCode64 code1 r1_lo <- iselExpr64 e1
         let r1_hi       = getHiVRegFromLo r1_lo
 
