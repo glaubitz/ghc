@@ -1,5 +1,6 @@
 module SPARC.Stack (
         stackBias,
+        saveAreaSlots,
         paramArrayStartSlot,
         requiredParamArraySlots,
         spRel,

@@ -571,7 +571,7 @@ arg_to_int_vregs32' dflags arg
                         v1 <- getNewRegNat II32
                         v2 <- getNewRegNat II32
 
-                        let (addr, False) = spRel True 16
+                        let (addr, False) = spRel True saveAreaSlots
                             code2 =
                                 code               `snocOL`
                                 FMOV FF64 src f0   `snocOL`
@@ -586,7 +586,7 @@ arg_to_int_vregs32' dflags arg
                  FF32 -> do
                         v1 <- getNewRegNat II32
 
-                        let (addr, False) = spRel True 16
+                        let (addr, False) = spRel True saveAreaSlots
                             code2 =
                                 code               `snocOL`
                                 ST   FF32 src addr `snocOL`

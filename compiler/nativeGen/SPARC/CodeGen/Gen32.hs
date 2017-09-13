@@ -606,7 +606,7 @@ coerceInt2FP width1 width2 x = do
     (src, code)  <- getSomeReg32 x
     tmp          <- getNewRegNat fformat1
     let
-        (addr, False) = spRel False (-2)
+        (addr, False) = spRel False saveAreaSlots
         code__2 dst = code `appOL` toOL [
             ST iformat1 src addr,
             LD fformat1 addr tmp,
@@ -630,7 +630,7 @@ coerceFP2Int width1 width2 x
         (fsrc, code)    <- getSomeReg32 x
         fdst            <- getNewRegNat fformat2
 
-        let (addr, False) = spRel False (-2)
+        let (addr, False) = spRel False saveAreaSlots
             code2 dst
                 =       code
                 `appOL` toOL

@@ -424,7 +424,7 @@ sparc_patchJumpInstr insn patchF
 
 --------------------------------------------------------------------------------
 -- | Make a spill instruction.
---      On SPARC we spill below frame pointer leaving 2 words/spill
+--      On SPARC we spill below frame pointer leaving 64 bits/spill
 sparc_mkSpillInstr
     :: DynFlags
     -> Reg      -- ^ register to spill
