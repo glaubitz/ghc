@@ -102,56 +102,56 @@ remapRegPair instr
 expandMisalignedDoubles :: Instr -> OrdList Instr
 expandMisalignedDoubles instr
 
-        -- Translate to:
-        --    add g1,g2,g1
-        --    ld  [g1],%fn
-        --    ld  [g1+4],%f(n+1)
-        --    sub g1,g2,g1           -- to restore g1
-        | LD FF64 (AddrRegReg r1 r2) fReg       <- instr
-        =       toOL    [ ADD False False r1 (RIReg r2) r1
-                        , LD  FF32  (AddrRegReg r1 g0)          fReg
-                        , LD  FF32  (AddrRegImm r1 (ImmInt 4))  (fRegHi fReg)
-                        , SUB False False r1 (RIReg r2) r1 ]
-
-        -- Should be aligned (I hope... :/)
-        -- Could translate to:
-        --    add r1, imm, r1
-        --    ld [r1], %fn
-        --    ld [r+4], %f(n+1)
-        --    sub r1, imm, r1
-        | LD FF64 (AddrRegImm _ (LO _)) _       <- instr
-        = unitOL instr
-
-        -- Translate to
-        --    ld  [addr],%fn
-        --    ld  [addr+4],%f(n+1)
-        | LD FF64 addr fReg                     <- instr
-        = let   Just addr'      = addrOffset addr 4
-          in    toOL    [ LD  FF32  addr        fReg
-                        , LD  FF32  addr'       (fRegHi fReg) ]
-
-        -- Translate to:
-        --    add g1,g2,g1
-        --    st  %fn,[g1]
-        --    st  %f(n+1),[g1+4]
-        --    sub g1,g2,g1           -- to restore g1
-        | ST FF64 fReg (AddrRegReg r1 r2)       <- instr
-        =       toOL    [ ADD False False r1 (RIReg r2) r1
-                        , ST  FF32  fReg           (AddrRegReg r1 g0)
-                        , ST  FF32  (fRegHi fReg)  (AddrRegImm r1 (ImmInt 4))
-                        , SUB False False r1 (RIReg r2) r1 ]
-
-        -- Should be aligned (I hope... :/)
-        | ST FF64 _ (AddrRegImm _ (LO _))       <- instr
-        = unitOL instr
-
-        -- Translate to
-        --    ld  [addr],%fn
-        --    ld  [addr+4],%f(n+1)
-        | ST FF64 fReg addr                     <- instr
-        = let   Just addr'      = addrOffset addr 4
-          in    toOL    [ ST  FF32  fReg           addr
-                        , ST  FF32  (fRegHi fReg)  addr'         ]
+--        -- Translate to:
+--        --    add g1,g2,g1
+--        --    ld  [g1],%fn
+--        --    ld  [g1+4],%f(n+1)
+--        --    sub g1,g2,g1           -- to restore g1
+--        | LD FF64 (AddrRegReg r1 r2) fReg       <- instr
+--        =       toOL    [ ADD False False r1 (RIReg r2) r1
+--                        , LD  FF32  (AddrRegReg r1 g0)          fReg
+--                        , LD  FF32  (AddrRegImm r1 (ImmInt 4))  (fRegHi fReg)
+--                        , SUB False False r1 (RIReg r2) r1 ]
+--
+--        -- Should be aligned (I hope... :/)
+--        -- Could translate to:
+--        --    add r1, imm, r1
+--        --    ld [r1], %fn
+--        --    ld [r+4], %f(n+1)
+--        --    sub r1, imm, r1
+--        | LD FF64 (AddrRegImm _ (LO _)) _       <- instr
+--        = unitOL instr
+--
+--        -- Translate to
+--        --    ld  [addr],%fn
+--        --    ld  [addr+4],%f(n+1)
+--        | LD FF64 addr fReg                     <- instr
+--        = let   Just addr'      = addrOffset addr 4
+--          in    toOL    [ LD  FF32  addr        fReg
+--                        , LD  FF32  addr'       (fRegHi fReg) ]
+--
+--        -- Translate to:
+--        --    add g1,g2,g1
+--        --    st  %fn,[g1]
+--        --    st  %f(n+1),[g1+4]
+--        --    sub g1,g2,g1           -- to restore g1
+--        | ST FF64 fReg (AddrRegReg r1 r2)       <- instr
+--        =       toOL    [ ADD False False r1 (RIReg r2) r1
+--                        , ST  FF32  fReg           (AddrRegReg r1 g0)
+--                        , ST  FF32  (fRegHi fReg)  (AddrRegImm r1 (ImmInt 4))
+--                        , SUB False False r1 (RIReg r2) r1 ]
+--
+--        -- Should be aligned (I hope... :/)
+--        | ST FF64 _ (AddrRegImm _ (LO _))       <- instr
+--        = unitOL instr
+--
+--        -- Translate to
+--        --    ld  [addr],%fn
+--        --    ld  [addr+4],%f(n+1)
+--        | ST FF64 fReg addr                     <- instr
+--        = let   Just addr'      = addrOffset addr 4
+--          in    toOL    [ ST  FF32  fReg           addr
+--                        , ST  FF32  (fRegHi fReg)  addr'         ]
 
         -- some other instr
         | otherwise
