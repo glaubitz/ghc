@@ -488,19 +488,20 @@ pprInstr' _ (LD format addr reg)
                pprAddrHints addr
             ]
 
-pprInstr' _ (LDFAR format (AddrRegImm source off) reg)
-        | is32Bit
+pprInstr' _ (LDFAR format (AddrRegImm source (ImmInt off)) reg)
+        | not is32Bit && off < 0
         = vcat [
-               pprInstr (SETHI (HI off) globalTempReg),
-               pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
+               pprInstr (SETHI (HIX imm) globalTempReg),
+               pprInstr (XOR False globalTempReg (RIImm (LOX imm)) globalTempReg),
                pprInstr (LD format (AddrRegReg source globalTempReg) reg)
             ]
         | otherwise
         = vcat [
-               pprInstr (SETHI (HIX off) globalTempReg),
-               pprInstr (XOR False globalTempReg (RIImm (LOX off)) globalTempReg),
+               pprInstr (SETHI (HI imm) globalTempReg),
+               pprInstr (OR False globalTempReg (RIImm (LO imm)) globalTempReg),
                pprInstr (LD format (AddrRegReg source globalTempReg) reg)
             ]
+        where imm = ImmInt off
 
 pprInstr' _ (LDFAR _ _ _)
         = panic "SPARC.Ppr.pprInstr' LDFAR: no match"
@@ -524,19 +525,20 @@ pprInstr' _ (ST format reg addr)
                rbrack
             ]
 
-pprInstr' _ (STFAR format reg (AddrRegImm source off))
-        | is32Bit
+pprInstr' _ (STFAR format reg (AddrRegImm source (ImmInt off)))
+        | not is32Bit && off < 0
         = vcat [
-               pprInstr (SETHI (HI off) globalTempReg),
-               pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
+               pprInstr (SETHI (HIX imm) globalTempReg),
+               pprInstr (XOR False globalTempReg (RIImm (LOX imm)) globalTempReg),
                pprInstr (ST format reg (AddrRegReg source globalTempReg))
             ]
         | otherwise
         = vcat [
-               pprInstr (SETHI (HIX off) globalTempReg),
-               pprInstr (XOR False globalTempReg (RIImm (LOX off)) globalTempReg),
+               pprInstr (SETHI (HI imm) globalTempReg),
+               pprInstr (OR False globalTempReg (RIImm (LO imm)) globalTempReg),
                pprInstr (ST format reg (AddrRegReg source globalTempReg))
             ]
+        where imm = ImmInt off
 
 pprInstr' _ (STFAR _ _ _)
         = panic "SPARC.Ppr.pprInstr' STFAR: no match"
