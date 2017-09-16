@@ -488,7 +488,7 @@ pprInstr' _ (LD format addr reg)
                pprAddrHints addr
             ]
 
-pprInstr' _ (LDFAR format (AddrRegImm source (ImmInt off)) reg)
+pprInstr' is32Bit (LDFAR format (AddrRegImm source (ImmInt off)) reg)
         | not is32Bit && off < 0
         = vcat [
                pprInstr (SETHI (HIX imm) globalTempReg),
@@ -525,7 +525,7 @@ pprInstr' _ (ST format reg addr)
                rbrack
             ]
 
-pprInstr' _ (STFAR format reg (AddrRegImm source (ImmInt off)))
+pprInstr' is32Bit (STFAR format reg (AddrRegImm source (ImmInt off)))
         | not is32Bit && off < 0
         = vcat [
                pprInstr (SETHI (HIX imm) globalTempReg),
