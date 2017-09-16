@@ -366,6 +366,12 @@ pprImm imm
         HH i
          -> hcat [ text "%hh(", pprImm i, rparen ]
 
+        LOX i
+         -> hcat [ text "%lox(", pprImm i, rparen ]
+
+        HIX i
+         -> hcat [ text "%hix(", pprImm i, rparen ]
+
         GDOP i
          -> hcat [ text "%gdop(", pprImm i, rparen ]
 
@@ -483,9 +489,16 @@ pprInstr' _ (LD format addr reg)
             ]
 
 pprInstr' _ (LDFAR format (AddrRegImm source off) reg)
+        | is32Bit
         = vcat [
                pprInstr (SETHI (HI off) globalTempReg),
                pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
+               pprInstr (LD format (AddrRegReg source globalTempReg) reg)
+            ]
+        | otherwise
+        = vcat [
+               pprInstr (SETHI (HIX off) globalTempReg),
+               pprInstr (XOR False globalTempReg (RIImm (LOX off)) globalTempReg),
                pprInstr (LD format (AddrRegReg source globalTempReg) reg)
             ]
 
@@ -512,9 +525,16 @@ pprInstr' _ (ST format reg addr)
             ]
 
 pprInstr' _ (STFAR format reg (AddrRegImm source off))
+        | is32Bit
         = vcat [
                pprInstr (SETHI (HI off) globalTempReg),
                pprInstr (OR False globalTempReg (RIImm (LO off)) globalTempReg),
+               pprInstr (ST format reg (AddrRegReg source globalTempReg))
+            ]
+        | otherwise
+        = vcat [
+               pprInstr (SETHI (HIX off) globalTempReg),
+               pprInstr (XOR False globalTempReg (RIImm (LOX off)) globalTempReg),
                pprInstr (ST format reg (AddrRegReg source globalTempReg))
             ]
 

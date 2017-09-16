@@ -46,6 +46,10 @@ data Imm
         | HM    Imm
         | HH    Imm
 
+        -- %lox/%hix needed for loading negative 32-bit constants efficiently on V9
+        | LOX   Imm
+        | HIX   Imm
+
         -- GOT offsets + load hint
         | GDOP       Imm
         | GDOP_LOX10 Imm
