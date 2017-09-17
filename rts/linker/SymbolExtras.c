@@ -135,6 +135,28 @@ SymbolExtra* makeSymbolExtra( ObjectCode const* oc,
     extra->addr = target;
     memcpy(extra->jumpIsland, jmp, 6);
 #endif /* x86_64_HOST_ARCH */
+#if defined(sparc64_HOST_ARCH)
+    // sethi %hh(target), %g1
+    extra->jumpIsland.sethi_hh_g1 = 0x03000000 | (target >> 42);
+
+    // sethi %lm(target), %g5
+    extra->jumpIsland.sethi_lm_g5 = 0x0b000000 | ((target >> 10) & 0x3fffff);
+
+    // or %g1, %hm(target), %g1
+    extra->jumpIsland.or_g1_hm_g1 = 0x82106000 | ((target >> 32) & 0x3ff);
+
+    // sllx %g1, 32, %g1
+    extra->jumpIsland.sllx_g1_32_g1 = 0x83287020;
+
+    // or %g1, %g5, %g5
+    extra->jumpIsland.or_g1_g5_g5 = 0x8a104005;
+
+    // jmpl %g5+%lo(target), %g0
+    extra->jumpIsland.jmpl_g5_lo_g0 = 0x81c14000 | (target & 0x3ff);
+
+    // nop
+    extra->jumpIsland.nop = 0x01000000;
+#endif /* sparc64_HOST_ARCH */
 
     return extra;
 }

@@ -1422,8 +1422,11 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
       Elf_Word* pP = (Elf_Word*)P;
       char *pPc;
       Elf_Word  w1, w2;
-#     elif defined(powerpc_HOST_ARCH)
+#     endif
+#     if defined(powerpc_HOST_ARCH) || defined(sparc_HOST_ARCH)
       Elf_Sword delta;
+#     elif defined(sparc64_HOST_ARCH)
+      Elf64_Sxword delta;
 #     endif
 
       IF_DEBUG(linker,debugBelch( "Rel entry %3d is raw(%6p %6p %6p)   ",
@@ -1487,15 +1490,24 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             *pP = w2;
             break;
          case R_SPARC_WDISP30:
+            delta = value - P;
+
 #        if defined(sparc64_HOST_ARCH)
-            if (value - P < -0x80000000 || value - P >= 0x80000000) {
-               errorBelch("R_SPARC_WDISP30 relocation out of range: %s = %" PRId64 "d, P = %" PRId64 "d, DISP = %" PRId64 "d",
-                          symbol, value, P, value - P);
-               return 0;
+            if (delta < -0x80000000 || delta >= 0x80000000) {
+               value = (Elf_Addr)(&makeSymbolExtra(oc, ELF_R_SYM(info), value)
+                                        ->jumpIsland);
+               delta = value - P;
+
+               if (value == 0 || delta < -0x80000000 || delta >= 0x80000000) {
+                  barf("Unable to make SymbolExtra for #%d",
+                       ELF_R_SYM(info));
+                  return 0;
+               }
             }
 #        endif
+
             w1 = *pP & 0xC0000000;
-            w2 = (Elf_Word)((value - P) >> 2);
+            w2 = ((Elf_Word)delta) >> 2;
             ASSERT((w2 & 0xC0000000) == 0);
             w1 |= w2;
             *pP = w1;
