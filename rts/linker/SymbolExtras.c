@@ -28,7 +28,7 @@
   ocAllocateSymbolExtras
 
   Allocate additional space at the end of the object file image to make room
-  for jump islands (powerpc, x86_64, arm) and GOT entries (x86_64).
+  for jump islands (powerpc, x86_64, arm, sparc64) and GOT entries (x86_64).
 
   PowerPC relative branch instructions have a 24 bit displacement field.
   As PPC code is always 4-byte-aligned, this yields a +-32MB range.

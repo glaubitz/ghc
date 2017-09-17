@@ -282,11 +282,16 @@ extern /*Str*/HashTable *symhash;
 /* PowerPC and ARM have relative branch instructions with only 24 bit
  * displacements and therefore need jump islands contiguous with each object
  * code module.
+ * SPARC has 32 bit displacements for its calls, but under Linux mmap uses high
+ * mem, so the SymbolExtras can still be out of reach if they are in low mem.
  */
 #if defined(powerpc_HOST_ARCH)
 #define SHORT_REL_BRANCH 1
 #endif
 #if defined(arm_HOST_ARCH)
+#define SHORT_REL_BRANCH 1
+#endif
+#if defined(sparc64_HOST_ARCH)
 #define SHORT_REL_BRANCH 1
 #endif
 
