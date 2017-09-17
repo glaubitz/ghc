@@ -165,8 +165,10 @@ ocDeinit_MachO(ObjectCode * oc) {
     }
 #if defined(aarch64_HOST_ARCH)
     freeGot(oc);
-    for(int i = 0; i < oc->n_sections; i++) {
-        freeStubs(&oc->sections[i]);
+    if (oc->sections) {
+        for(int i = 0; i < oc->n_sections; i++) {
+            freeStubs(&oc->sections[i]);
+        }
     }
 #endif
     stgFree(oc->info);
@@ -609,6 +611,8 @@ makeGot(ObjectCode * oc) {
 
 void
 freeGot(ObjectCode * oc) {
+    if (!oc->info->got_start)
+        return;
     munmap(oc->info->got_start, oc->info->got_size);
     oc->info->got_start = NULL;
     oc->info->got_size = 0;

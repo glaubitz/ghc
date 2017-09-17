@@ -24,6 +24,12 @@
 #include <sys/mman.h>
 #endif /* RTS_LINKER_USE_MMAP */
 
+#if defined(OBJFORMAT_ELF)
+#  include "linker/Elf.h"
+#elif defined(OBJFORMAT_MACHO)
+#  include "linker/MachO.h"
+#endif
+
 /*
   ocAllocateSymbolExtras
 
@@ -46,6 +52,7 @@
 int ocAllocateSymbolExtras( ObjectCode* oc, int count, int first )
 {
   size_t n;
+  bool reinit = false;
 
   if (RTS_LINKER_USE_MMAP && USE_CONTIGUOUS_MMAP) {
       n = roundUpToPage(oc->fileSize);
@@ -62,6 +69,7 @@ int ocAllocateSymbolExtras( ObjectCode* oc, int count, int first )
           oc->imageMapped = true;
           oc->fileSize = n + (sizeof(SymbolExtra) * count);
           oc->symbol_extras = (SymbolExtra *) (oc->image + n);
+          reinit = true;
       }
       else {
           oc->symbol_extras = NULL;
@@ -88,7 +96,18 @@ int ocAllocateSymbolExtras( ObjectCode* oc, int count, int first )
         oc->image += misalignment;
 
         oc->symbol_extras = (SymbolExtra *) (oc->image + aligned);
+        reinit = true;
     }
+  }
+
+  if (reinit) {
+#if defined(OBJECTFORMAT_MACHO)
+      ocDeinit_MachO(oc);
+      ocInit_MachO(oc);
+#elif defined(OBJFORMAT_ELF)
+      ocDeinit_ELF(oc);
+      ocInit_ELF(oc);
+#endif
   }
 
   if (oc->symbol_extras != NULL) {

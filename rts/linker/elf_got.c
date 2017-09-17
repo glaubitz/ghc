@@ -124,6 +124,8 @@ verifyGot(ObjectCode * oc) {
 
 void
 freeGot(ObjectCode * oc) {
+    if (!oc->info->got_start)
+        return;
 //    munmap(oc->info->got_start, oc->info->got_size);
     oc->info->got_start = 0x0;
     oc->info->got_size = 0;
