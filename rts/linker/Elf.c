@@ -1530,7 +1530,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             break;
          case R_SPARC_HI22:
 #        if defined(sparc64_HOST_ARCH)
-            if ((StgInt64)value > 0x1fffffL || (StgInt64)value < -0x200000L) {
+            if ((StgInt64)value > 0x7fffffffL || (StgInt64)value < -0x80000000L) {
                errorBelch("R_SPARC_HI22 relocation out of range: %s = %" PRId64 "d",
                           symbol, value);
                return 0;
