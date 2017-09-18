@@ -1479,14 +1479,17 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
       switch (ELF_R_TYPE(info)) {
 #        if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
          case R_SPARC_DISP32:
+            delta = value - P;
+
 #        if defined(sparc64_HOST_ARCH)
-            if (value - P > 0x7fffffffL || value - P < -0x80000000L) {
+            if (delta > 0x7fffffffL || delta < -0x80000000L) {
                errorBelch("R_SPARC_DISP32 relocation out of range: %s = %" PRId64 "d, P = %" PRId64 "d, DISP = %" PRId64 "d",
-                          symbol, value, P, value - P);
+                          symbol, value, P, delta);
                return 0;
             }
 #        endif
-            w2 = (Elf_Word)(value - P);
+
+            w2 = (Elf_Word)delta;
             *pP = w2;
             break;
          case R_SPARC_WDISP30:
@@ -1513,13 +1516,14 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             *pP = w1;
             break;
          case R_SPARC_WDISP22:
-            if (value - P > 0x7fffffL || value - P < -0x800000L) {
+            delta = value - P;
+            if (delta > 0x7fffffL || delta < -0x800000L) {
                errorBelch("R_SPARC_WDISP22 relocation out of range: %s = %" PRId64 "d, P = %" PRId64 "d, DISP = %" PRId64 "d",
-                          symbol, value, P, value - P);
+                          symbol, value, P, delta);
                return 0;
             }
             w1 = *pP & 0xFFC00000;
-            w2 = ((Elf_Word)(value - P)) >> 2;
+            w2 = ((Elf_Word)delta) >> 2;
             ASSERT((w2 & 0xFFC00000) == 0);
             w1 |= w2;
             *pP = w1;
