@@ -303,7 +303,8 @@ compileOne' m_tc_result mHscMessage
 -- On SPARC64, memory allocations happen in high memory, but the default code
 -- model assumes all code is linked in the lower 32 bits of memory. This is not
 -- true if modules are loaded by the RTS, as it uses the high memory
--- allocations, so we must ensure C stubs get compiled with the medany model.
+-- allocations, so we must ensure C stubs get compiled with the medany model
+-- when not using PIC.
 --
 
 compileForeign :: HscEnv -> ForeignSrcLang -> FilePath -> IO FilePath
@@ -313,7 +314,8 @@ compileForeign hsc_env0 lang stub_c = do
               LangCxx -> Ccxx
               LangObjc -> Cobjc
               LangObjcxx -> Cobjcxx
-            hsc_env = if platformArch (targetPlatform (hsc_dflags hsc_env0)) == ArchSPARC64
+            hsc_env = if platformArch (targetPlatform (hsc_dflags hsc_env0)) == ArchSPARC64 &&
+                         not $ gopt Opt_PIC $ hsc_dflags hsc_env0
                       then hsc_env_with_gcc_arg hsc_env0 $ SysTools.Option "-mcmodel=medany"
                       else hsc_env0
         (_, stub_o) <- runPipeline StopLn hsc_env
@@ -1259,6 +1261,17 @@ runPhase (RealPhase cc_phase) input_fn dflags
         -- 5bd3072ac30216a505151601884ac88bf404c9f2
                        ++ (if platformArch platform == ArchSPARC
                            then ["-mcpu=v9"]
+                           else [])
+
+                -- On SPARC64, memory allocations happen in high memory, but
+                -- the default code model assumes all code is linked in the
+                -- lower 32 bits of memory. This is not true if modules are
+                -- loaded by the RTS, as it uses the high memory allocations,
+                -- so we must ensure C files get compiled with the medany
+                -- model when not using PIC.
+                       ++ (if platformArch platform == ArchSPARC64 &&
+                              not $ gopt Opt_PIC dflags
+                           then ["-mcmodel=medany"]
                            else [])
 
                        -- GCC 4.6+ doesn't like -Wimplicit when compiling C++.
