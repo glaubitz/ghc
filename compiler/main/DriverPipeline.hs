@@ -1251,7 +1251,7 @@ runPhase (RealPhase cc_phase) input_fn dflags
                 -- so we must ensure C files get compiled with the medany
                 -- model when not using PIC.
                        ++ (if platformArch platform == ArchSPARC64 &&
-                              not $ gopt Opt_PIC dflags
+                              not (gopt Opt_PIC dflags)
                            then ["-mcmodel=medany"]
                            else [])
 
