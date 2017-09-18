@@ -1512,6 +1512,18 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
             w1 |= w2;
             *pP = w1;
             break;
+         case R_SPARC_WDISP22:
+            if (value - P > 0x7fffffL || delta < -0x800000L) {
+               errorBelch("R_SPARC_WDISP22 relocation out of range: %s = %" PRId64 "d",
+                          symbol, value);
+               return 0;
+            }
+            w1 = *pP & 0xFFC00000;
+            w2 = ((Elf_Word)(value - P)) >> 2;
+            ASSERT((w2 & 0xFFC00000) == 0);
+            w1 |= w2;
+            *pP = w1;
+            break;
          case R_SPARC_HI22:
 #        if defined(sparc64_HOST_ARCH)
             if ((StgInt64)value > 0x1fffffL || (StgInt64)value < -0x200000L) {
