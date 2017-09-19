@@ -171,7 +171,7 @@ SymbolExtra* makeSymbolExtra( ObjectCode const* oc,
     extra->jumpIsland.or_g1_g5_g5 = 0x8a104005;
 
     // jmpl %g5+%lo(target), %g0
-    extra->jumpIsland.jmpl_g5_lo_g0 = 0x81c14000 | (target & 0x3ff);
+    extra->jumpIsland.jmpl_g5_lo_g0 = 0x81c16000 | (target & 0x3ff);
 
     // nop
     extra->jumpIsland.nop = 0x01000000;
