@@ -315,7 +315,7 @@ compileForeign hsc_env0 lang stub_c = do
               LangObjc -> Cobjc
               LangObjcxx -> Cobjcxx
             hsc_env = if platformArch (targetPlatform (hsc_dflags hsc_env0)) == ArchSPARC64 &&
-                         not $ gopt Opt_PIC $ hsc_dflags hsc_env0
+                         not (gopt Opt_PIC (hsc_dflags hsc_env0))
                       then hsc_env_with_gcc_arg hsc_env0 $ SysTools.Option "-mcmodel=medany"
                       else hsc_env0
         (_, stub_o) <- runPipeline StopLn hsc_env
