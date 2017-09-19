@@ -1603,7 +1603,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
          case R_SPARC_HM10:
             /* 13-bit immediate, 10-bit relocation */
             w1 = *pP & ~0x1fff;
-            w2 = (Elf_Word)(value & 0x3ff);
+            w2 = (Elf_Word)((value >> 32) & 0x3ff);
             w1 |= w2;
             *pP = w1;
             break;
