@@ -1523,7 +1523,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
                return 0;
             }
             w1 = *pP & 0xFFC00000;
-            w2 = ((Elf_Word)delta) >> 2;
+            w2 = (((Elf_Word)delta) >> 2) & 0x3fffff;
             ASSERT((w2 & 0xFFC00000) == 0);
             w1 |= w2;
             *pP = w1;
