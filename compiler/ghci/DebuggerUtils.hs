@@ -96,11 +96,17 @@ dataConInfoPtrToName x = do
    getConDescAddress :: DynFlags -> Ptr StgInfoTable -> IO (Ptr Word8)
    getConDescAddress dflags ptr
     | ghciTablesNextToCode = do
-       let ptr' = ptr `plusPtr` (- wORD_SIZE dflags)
-       -- NB. the offset must be read as an Int32 not a Word32, so
-       -- that the sign is preserved when converting to an Int.
-       offsetToString <- fromIntegral <$> (peek ptr' :: IO Int32)
-       return $ (ptr `plusPtr` stdInfoTableSizeB dflags) `plusPtr` offsetToString
+       let wordSize = wORD_SIZE dflags
+           ptr' = ptr `plusPtr` (- wordSize)
+           platform = targetPlatform dflags
+           arch = platformArch platform
+           -- NB. the offset must be read as an Int32 not a Word32, so
+           -- that the sign is preserved when converting to an Int.
+           offsetToStringIO
+            | arch == ArchX86_64 || wordSize == 4 = fromIntegral <$> (peek ptr' :: IO Int32)
+            | wordSize == 8                       = fromIntegral <$> (peek ptr' :: IO Int64)
+            | otherwise                           = panic "getConDescAddress: Unknown word size"
+       return $ (`plusPtr`) (ptr `plusPtr` stdInfoTableSizeB dflags) <$> offsetToStringIO
     | otherwise =
        peek $ intPtrToPtr $ ptrToIntPtr ptr + fromIntegral (stdInfoTableSizeB dflags)
    -- parsing names is a little bit fiddly because we have a string in the form:
