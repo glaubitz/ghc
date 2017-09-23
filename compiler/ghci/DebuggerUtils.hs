@@ -95,7 +95,7 @@ dataConInfoPtrToName x = do
 
    getConDescAddress :: DynFlags -> Ptr StgInfoTable -> IO (Ptr Word8)
    getConDescAddress dflags ptr
-    | ghciTablesNextToCode = do
+    | ghciTablesNextToCode =
        let wordSize = wORD_SIZE dflags
            ptr' = ptr `plusPtr` (- wordSize)
            platform = targetPlatform dflags
@@ -106,7 +106,7 @@ dataConInfoPtrToName x = do
             | arch == ArchX86_64 || wordSize == 4 = fromIntegral <$> (peek ptr' :: IO Int32)
             | wordSize == 8                       = fromIntegral <$> (peek ptr' :: IO Int64)
             | otherwise                           = panic "getConDescAddress: Unknown word size"
-       return $ plusPtr (ptr `plusPtr` stdInfoTableSizeB dflags) <$> offsetToStringIO
+       in plusPtr (ptr `plusPtr` stdInfoTableSizeB dflags) <$> offsetToStringIO
     | otherwise =
        peek $ intPtrToPtr $ ptrToIntPtr ptr + fromIntegral (stdInfoTableSizeB dflags)
    -- parsing names is a little bit fiddly because we have a string in the form:
