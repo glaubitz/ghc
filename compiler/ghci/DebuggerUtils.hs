@@ -17,6 +17,7 @@ import Module
 import OccName
 import Name
 import Outputable
+import Platform
 import Util
 
 import Data.Char
