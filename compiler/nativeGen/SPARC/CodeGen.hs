@@ -505,10 +505,8 @@ genCCall target dest_regs args
                          then (nilOL, nilOL)
                          else (unitOL (moveSp is32Bit (-1*nn)), unitOL (moveSp is32Bit (1*nn)))
 
-        let (transfer_code_unord, out_regs)
+        let (transfer_code, out_regs)
                 = move_final is32Bit vregs allArgRegs (paramArrayStartSlot is32Bit)
-
-        let transfer_code = toOL transfer_code_unord
 
         -- deal with static vs dynamic call targets
         callinsns <- case target of
@@ -655,7 +653,7 @@ move_final :: Bool -> [Reg] -> [(Maybe Reg, Maybe Reg)] -> Int -> ([Instr], [Reg
 
 -- all args done
 move_final _ [] _ _
- = ([], [])
+ = (nilOL, [])
 
 -- move to register or stack
 move_final is32Bit (v:vs) availRegs offset
@@ -677,7 +675,7 @@ move_final is32Bit (v:vs) availRegs offset
                             in (ST (wordFormat is32Bit) v addr, Nothing)
 
                 RcFloat  | not is32Bit ->
-                    -- Single-precision floats get right-align in slot
+                    -- Single-precision floats get right-aligned in slot
                     case mAvailRegP of
                         (_, Just availRegD) -> (FMOV FF32 v (fPair availRegD), Just availRegD)
                         (_, Nothing)        ->
@@ -700,7 +698,7 @@ move_final is32Bit (v:vs) availRegs offset
                 Just usedReg -> usedReg : usedRegs
                 Nothing  -> usedRegs
 
-   in (instr : instrs, usedRegs')
+   in (instrs `snocOL` instr, usedRegs')
 
 
 -- | Assign results returned from the call into their
