@@ -649,7 +649,7 @@ arg_to_int_vregs64' dflags arg
 -- | Move args from the integer/float vregs into which they have been
 --      marshalled, into %o0 .. %o5/%f0 .. %f11, and the rest onto the stack.
 --
-move_final :: Bool -> [Reg] -> [(Maybe Reg, Maybe Reg)] -> Int -> ([Instr], [Reg])
+move_final :: Bool -> [Reg] -> [(Maybe Reg, Maybe Reg)] -> Int -> (OrdList Instr, [Reg])
 
 -- all args done
 move_final _ [] _ _
