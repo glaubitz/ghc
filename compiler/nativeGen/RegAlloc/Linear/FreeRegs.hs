@@ -2,7 +2,8 @@
 
 module RegAlloc.Linear.FreeRegs (
     FR(..),
-    maxSpillSlots
+    maxSpillSlots,
+    allocatableRegs
 )
 
 #include "HsVersions.h"
@@ -36,8 +37,11 @@ import qualified RegAlloc.Linear.X86.FreeRegs    as X86
 import qualified RegAlloc.Linear.X86_64.FreeRegs as X86_64
 
 import qualified PPC.Instr
+import qualified PPC.Regs
 import qualified SPARC.Instr
+import qualified SPARC.Regs
 import qualified X86.Instr
+import qualified X86.Regs
 
 class Show freeRegs => FR freeRegs where
     frAllocateReg :: Platform -> RealReg -> freeRegs -> freeRegs
@@ -86,3 +90,19 @@ maxSpillSlots dflags
                 ArchJavaScript-> panic "maxSpillSlots ArchJavaScript"
                 ArchUnknown   -> panic "maxSpillSlots ArchUnknown"
 
+allocatableRegs :: Platform -> [RealReg]
+allocatableRegs platform
+              = case platformArch platform of
+                ArchX86       -> X86.Regs.allocatableRegs platform
+                ArchX86_64    -> X86.Regs.allocatableRegs platform
+                ArchPPC       -> PPC.Regs.allocatableRegs platform
+                ArchSPARC     -> SPARC.Regs.allocatableRegs
+                ArchSPARC64   -> SPARC.Regs.allocatableRegs
+                ArchARM _ _ _ -> panic "allocatableRegs ArchARM"
+                ArchARM64     -> panic "allocatableRegs ArchARM64"
+                ArchPPC_64 _  -> PPC.Regs.allocatableRegs platform
+                ArchAlpha     -> panic "allocatableRegs ArchAlpha"
+                ArchMipseb    -> panic "allocatableRegs ArchMipseb"
+                ArchMipsel    -> panic "allocatableRegs ArchMipsel"
+                ArchJavaScript-> panic "allocatableRegs ArchJavaScript"
+                ArchUnknown   -> panic "allocatableRegs ArchUnknown"

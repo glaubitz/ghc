@@ -132,8 +132,10 @@ import UniqSupply
 import Outputable
 import Platform
 
+import qualified Data.IntMap as M
 import Data.Maybe
 import Data.List
+import Control.Applicative
 import Control.Monad
 
 -- -----------------------------------------------------------------------------
@@ -812,62 +814,88 @@ allocRegsAndSpill_spill reading keep spills alloc r rs assig spill_loc
          [] ->
            do   let keep' = map getUnique keep
 
-                -- the vregs we could kick out that are already in a slot
-                let candidates_inBoth
-                        = [ (temp, reg, mem)
-                          | (temp, InBoth reg mem) <- nonDetUFMToList assig
-                          -- This is non-deterministic but we do not
-                          -- currently support deterministic code-generation.
-                          -- See Note [Unique Determinism and code generation]
-                          , temp `notElem` keep'
-                          , targetClassOfRealReg platform reg == classOfVirtualReg r ]
+                let regNoUsage
+                        = M.fromList $ concat $ map (\(temp, loc) -> case loc of
+                                InBoth reg mem -> map (\r -> (r, (temp, reg, Just mem))) $ regNosOfRealReg reg
+                                InReg  reg     -> map (\r -> (r, (temp, reg, Nothing ))) $ regNosOfRealReg reg
+                                InMem _        -> []) $ nonDetUFMToList assig
 
-                -- the vregs we could kick out that are only in a reg
-                --      this would require writing the reg to a new slot before using it.
-                let candidates_inReg
-                        = [ (temp, reg)
-                          | (temp, InReg reg) <- nonDetUFMToList assig
-                          -- This is non-deterministic but we do not
-                          -- currently support deterministic code-generation.
-                          -- See Note [Unique Determinism and code generation]
-                          , temp `notElem` keep'
-                          , targetClassOfRealReg platform reg == classOfVirtualReg r ]
+                let allocatableRegs_thisClass
+                        = filter (\reg -> targetClassOfRealReg platform reg == classOfVirtualReg r) $ allocatableRegs platform
+
+                let allocRegForRegNo
+                        = M.fromList $ concat $ map (\reg -> map (\r -> (r, reg)) $ regNosOfRealReg reg) allocatableRegs_thisClass
+
+                let candidates
+                        = [ (alloc_reg, temps)
+                          | (_, loc) <- nonDetUFMToList assig
+                          , reg <- regsOfLoc loc
+                          , r <- regNosOfRealReg reg
+                          , alloc_reg <- maybeToList $ M.lookup r allocRegForRegNo
+                          , let temps = nub . catMaybes $ map (flip M.lookup $ regNoUsage) $ regNosOfRealReg alloc_reg
+                          , all (\(temp, _, _) -> temp `notElem` keep') temps ]
+
+                -- Try using, in this order:
+                --
+                --   1. a single vreg already in memory
+                --
+                --   2. a single vreg not yet in memory
+                --
+                --   3. multiple vregs already in memory
+                --
+                --   4. multiple vregs not yet in memory
+                --
+                -- This effectively ensures we try to pick a vreg of the same
+                -- class if possible, only repurposing pairs when absolutely
+                -- necessary.
+                let (candidates_single, candidates_multiple)
+                        = partition (\(_, temps) -> length temps == 1) candidates
+
+                let candidate
+                        =     find (\(_, temps) -> all (\(_, _, loc) -> isJust loc) temps) candidates_single
+                          <|> listToMaybe candidates_single
+                          <|> find (\(_, temps) -> all (\(_, _, loc) -> isJust loc) temps) candidates_multiple
+                          <|> listToMaybe candidates_multiple
 
                 let result
-
-                        -- we have a temporary that is in both register and mem,
-                        -- just free up its register for use.
-                        | (temp, my_reg, slot) : _      <- candidates_inBoth
-                        = do    spills' <- loadTemp r spill_loc my_reg spills
-                                let assig1  = addToUFM assig temp (InMem slot)
-                                let assig2  = addToUFM assig1 r $! newLocation spill_loc my_reg
-
-                                setAssigR assig2
-                                allocateRegsAndSpill reading keep spills' (my_reg:alloc) rs
-
-                        -- otherwise, we need to spill a temporary that currently
-                        -- resides in a register.
-                        | (temp_to_push_out, (my_reg :: RealReg)) : _
-                                        <- candidates_inReg
+                        -- we have temporaries in registers that can be kicked out
+                        -- if possible, use those already in mem too
+                        | Just (my_reg, temps) <- candidate
                         = do
-                                (spill_insn, slot) <- spillR (RegReal my_reg) temp_to_push_out
-                                let spill_store  = (if reading then id else reverse)
-                                                        [ -- COMMENT (fsLit "spill alloc")
-                                                           spill_insn ]
+                                let allocateSpills :: (FR freeRegs, Instruction instr, Outputable instr)
+                                                   => [(Unique, RealReg, Maybe StackSlot)]
+                                                   -> RegM freeRegs ([instr], [(Unique, RealReg, StackSlot)])
+                                    allocateSpills [] = return ([], [])
+                                    allocateSpills ((temp, reg, Just slot):ts)
+                                     = do   (spill_stores, temps_spilled) <- allocateSpills ts
+                                            return (spill_stores, (temp, reg, slot):temps_spilled)
+                                    allocateSpills ((temp, reg, Nothing):ts)
+                                     = do   (spill_insn, slot) <- spillR (RegReal reg) temp
+                                            let spill_store  = (if reading then id else reverse)
+                                                                    [ -- COMMENT (fsLit "spill alloc")
+                                                                       spill_insn ]
 
-                                -- record that this temp was spilled
-                                recordSpill (SpillAlloc temp_to_push_out)
+                                            -- record that this temp was spilled
+                                            recordSpill (SpillAlloc temp)
 
+                                            (spill_stores, temps_spilled) <- allocateSpills ts
+                                            return (spill_store ++ spill_stores, (temp, reg, slot):temps_spilled)
+
+                                (spill_stores, temps_spilled) <- allocateSpills temps
                                 -- update the register assignment
-                                let assig1  = addToUFM assig temp_to_push_out   (InMem slot)
-                                let assig2  = addToUFM assig1 r                 $! newLocation spill_loc my_reg
+                                let assig1  = foldl' (\assig' (temp, _, slot) -> addToUFM assig' temp (InMem slot)) assig temps_spilled
+                                let assig2  = addToUFM assig1 r $! newLocation spill_loc my_reg
+                                let freeRegs1 = foldl' (flip $ frReleaseReg platform) freeRegs (map (\(_, r, _) -> r) temps_spilled)
+                                let freeRegs2 = frAllocateReg platform my_reg freeRegs1
+
                                 setAssigR assig2
+                                setFreeRegsR freeRegs2
 
                                 -- if need be, load up a spilled temp into the reg we've just freed up.
                                 spills' <- loadTemp r spill_loc my_reg spills
 
                                 allocateRegsAndSpill reading keep
-                                        (spill_store ++ spills')
+                                        (spill_stores ++ spills')
                                         (my_reg:alloc) rs
 
 
