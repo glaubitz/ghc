@@ -226,7 +226,7 @@ allArgRegs
         = maybeZip intRegs doubleRegs
         where
             intRegs = [RegReal $ RealRegSingle $ oReg i | i <- [0..5]]
-            doubleRegs = [RegReal $ RealRegPair (fReg (2*i)) (fReg (2*i+1)) | i <- [0..16]]
+            doubleRegs = [RegReal $ RealRegPair (fReg (2*i)) (fReg (2*i+1)) | i <- [0..15]]
 
             maybeZip :: [a] -> [b] -> [(Maybe a, Maybe b)]
             maybeZip [] []         = []
