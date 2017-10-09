@@ -677,7 +677,7 @@ move_final is32Bit (v:vs) availRegs offset
                 RcFloat  | not is32Bit ->
                     -- Single-precision floats get right-aligned in slot
                     case mAvailRegP of
-                        (_, Just availRegD) -> (FMOV FF32 v (fPair availRegD), Just availRegD)
+                        (_, Just availRegD) -> (FMOV FF32 v (fPair availRegD), Just (fPair availRegD))
                         (_, Nothing)        ->
                             let (addr, False) = (spRel2 is32Bit offset 4)
                             in (ST FF32 v addr, Nothing)
