@@ -44,6 +44,7 @@ import Debug            ( DebugBlock(..) )
 
 -- Our intermediate code:
 import BlockId
+import CodeGen.Platform
 import Cmm
 import CmmUtils
 import CmmSwitch
@@ -506,7 +507,7 @@ genCCall target dest_regs args
                          else (unitOL (moveSp is32Bit (-1*nn)), unitOL (moveSp is32Bit (1*nn)))
 
         let (transfer_code, out_regs)
-                = move_final is32Bit vregs allArgRegs (paramArrayStartSlot is32Bit)
+                = move_final platform vregs allArgRegs (paramArrayStartSlot is32Bit)
 
         -- deal with static vs dynamic call targets
         callinsns <- case target of
@@ -649,19 +650,31 @@ arg_to_int_vregs64' dflags arg
 -- | Move args from the integer/float vregs into which they have been
 --      marshalled, into %o0 .. %o5/%f0 .. %f11, and the rest onto the stack.
 --
-move_final :: Bool -> [Reg] -> [(Maybe Reg, Maybe Reg)] -> Int -> (OrdList Instr, [Reg])
+-- TODO: Document craziness
+-- In summary: stack args, then reserved regs, then allocatable regs
+-- Why? Need allocatable regs for stack args and reserved regs; if passing all
+-- floats, may use up all allocatable regs but need at least one to load
+-- subsequent params, so ensure we do allocatable regs last. Stack done first
+-- since that touches memory.
+move_final :: Platform -> [Reg] -> [(Maybe Reg, Maybe Reg)] -> Int -> (OrdList Instr, [Reg])
+move_final platform vs availRegs offset
+ = let (stackInstrs, resMovInstrs, allocMovInstrs, usedRegs) = move_final' platform vs availRegs offset
+   in (stackInstrs `appOL` resMovInstrs `appOL` allocMovInstrs, usedRegs)
+
+move_final' :: Platform -> [Reg] -> [(Maybe Reg, Maybe Reg)] -> Int -> (OrdList Instr, OrdList Instr, OrdList Instr, [Reg])
 
 -- all args done
-move_final _ [] _ _
- = (nilOL, [])
+move_final' _ [] _ _
+ = (nilOL, nilOL, nilOL, [])
 
 -- move to register or stack
-move_final is32Bit (v:vs) availRegs offset
+move_final' platform (v:vs) availRegs offset
  = let (mAvailRegP, availRegs') =
            case availRegs of
                 []     -> ((Nothing, Nothing), [])
                 (a:as) -> (a, as)
 
+       is32Bit = target32Bit platform
        cls = classOfReg v
        (instr, mUsedReg) =
            case cls of
@@ -689,16 +702,28 @@ move_final is32Bit (v:vs) availRegs offset
                             let (addr, False) = (spRel is32Bit offset)
                             in (ST FF64 v addr, Nothing)
 
-                _                      -> panic ("SPARC.CodeGen.move_final: Bad value register " ++ show v)
+                _                      -> panic ("SPARC.CodeGen.move_final': Bad value register " ++ show v)
 
-       (instrs, usedRegs) = move_final is32Bit vs availRegs' (offset+1)
+       (stackInstrs, resMovInstrs, allocMovInstrs, usedRegs) = move_final' platform vs availRegs' (offset+1)
 
-       usedRegs' =
+       isFree reg
+           = case reg of
+               RegReal (RealRegSingle r1) -> freeReg platform r1
+               RegReal (RealRegPair r1 _) -> freeReg platform r1
+               RegVirtual _               -> panic ("SPARC.CodeGen.move_final': Bad virtual register " ++ show reg)
+
+       (stackInstrs', resMovInstrs', allocMovInstrs', usedRegs') =
            case mUsedReg of
-                Just usedReg -> usedReg : usedRegs
-                Nothing  -> usedRegs
+                Nothing ->
+                    (stackInstrs `snocOL` instr, resMovInstrs, allocMovInstrs, usedRegs)
+                Just usedReg
+                    | not $ isFree usedReg ->
+                        (stackInstrs, resMovInstrs `snocOL` instr, allocMovInstrs, usedReg : usedRegs)
 
-   in (instrs `snocOL` instr, usedRegs')
+                    | otherwise ->
+                        (stackInstrs, resMovInstrs, allocMovInstrs `snocOL` instr, usedReg : usedRegs)
+
+   in (stackInstrs', resMovInstrs', allocMovInstrs', usedRegs')
 
 
 -- | Assign results returned from the call into their
