@@ -538,6 +538,15 @@ sparc_takeRegRegMoveInstr :: Instr -> Maybe (Reg,Reg)
 sparc_takeRegRegMoveInstr instr
  = case instr of
         ADD False False src (RIReg src2) dst
+         | g0 == src            -> Just (src2, dst)
+
+        ADD False False src (RIReg src2) dst
+         | g0 == src2           -> Just (src, dst)
+
+        OR False src (RIReg src2) dst
+         | g0 == src            -> Just (src2, dst)
+
+        OR False src (RIReg src2) dst
          | g0 == src2           -> Just (src, dst)
 
         FMOV FF64 src dst       -> Just (src, dst)
