@@ -25,23 +25,19 @@ import Data.Foldable (foldl')
 
 
 -- Holds bitmaps showing what registers are currently allocated.
---      The float and double reg bitmaps overlap, but we only alloc
---      float regs into the float map, and double regs into the double map.
---
 --      Free regs have a bit set in the corresponding bitmap.
 --
 data FreeRegs
         = FreeRegs
                 !Word32         -- int    reg bitmap    regs  0..31
                 !Word32         -- float  reg bitmap    regs 32..63
-                !Word32         -- double reg bitmap    regs 32..63
 
 instance Show FreeRegs where
         show = showFreeRegs
 
 -- | A reg map where no regs are free to be allocated.
 noFreeRegs :: FreeRegs
-noFreeRegs = FreeRegs 0 0 0
+noFreeRegs = FreeRegs 0 0
 
 
 -- | The initial set of free regs.
@@ -52,17 +48,17 @@ initFreeRegs platform
 
 -- | Get all the free registers of this class.
 getFreeRegs :: RegClass -> FreeRegs -> [RealReg]        -- lazily
-getFreeRegs cls (FreeRegs g f d)
+getFreeRegs cls (FreeRegs g f)
         | RcInteger <- cls = map RealRegSingle                  $ go 1 g 1 0
         | RcFloat   <- cls = map RealRegSingle                  $ go 1 f 1 32
-        | RcDouble  <- cls = map (\i -> RealRegPair i (i+1))    $ go 2 d 1 32
+        | RcDouble  <- cls = map (\i -> RealRegPair i (i+1))    $ go 2 f 3 32
         | otherwise = pprPanic "RegAllocLinear.getFreeRegs: Bad register class " (ppr cls)
         where
                 go _    _      0    _
                         = []
 
                 go step bitmap mask ix
-                        | bitmap .&. mask /= 0
+                        | bitmap .&. mask == mask
                         = ix : (go step bitmap (mask `shiftL` step) $! ix + step)
 
                         | otherwise
@@ -73,7 +69,7 @@ getFreeRegs cls (FreeRegs g f d)
 allocateReg :: Platform -> RealReg -> FreeRegs -> FreeRegs
 allocateReg platform
          reg@(RealRegSingle r)
-             (FreeRegs g f d)
+             (FreeRegs g f)
 
         -- can't allocate free regs
         | not $ freeReg platform r
@@ -85,37 +81,33 @@ allocateReg platform
           in    FreeRegs
                         (g .&. mask)
                         f
-                        d
 
         -- a float reg
         | r >= 32, r <= 63
         = let   mask    = complement (bitMask (r - 32))
-
-                -- the mask of the double this FP reg aliases
-                maskLow = if r `mod` 2 == 0
-                                then complement (bitMask (r - 32))
-                                else complement (bitMask (r - 32 - 1))
           in    FreeRegs
                         g
                         (f .&. mask)
-                        (d .&. maskLow)
 
         | otherwise
         = pprPanic "SPARC.FreeRegs.releaseReg: not allocating bad reg" (ppr reg)
 
-allocateReg _
+allocateReg platform
          reg@(RealRegPair r1 r2)
-             (FreeRegs g f d)
+             (FreeRegs g f)
+
+        -- can't allocate free regs
+        | not $ freeReg platform r1
+        = pprPanic "SPARC.FreeRegs.allocateReg: not allocating pinned reg" (ppr reg)
 
         | r1 >= 32, r1 <= 63, r1 `mod` 2 == 0
-        , r2 >= 32, r2 <= 63
+        , r2 >= 32, r2 <= 63, r1 + 1 == r2
         = let   mask1   = complement (bitMask (r1 - 32))
                 mask2   = complement (bitMask (r2 - 32))
           in
                 FreeRegs
                         g
                         ((f .&. mask1) .&. mask2)
-                        (d .&. mask1)
 
         | otherwise
         = pprPanic "SPARC.FreeRegs.releaseReg: not allocating bad reg" (ppr reg)
@@ -129,7 +121,7 @@ allocateReg _
 releaseReg :: Platform -> RealReg -> FreeRegs -> FreeRegs
 releaseReg platform
          reg@(RealRegSingle r)
-        regs@(FreeRegs g f d)
+        regs@(FreeRegs g f)
 
         -- don't release pinned reg
         | not $ freeReg platform r
@@ -138,37 +130,34 @@ releaseReg platform
         -- a general purpose reg
         | r <= 31
         = let   mask    = bitMask r
-          in    FreeRegs (g .|. mask) f d
+          in    FreeRegs (g .|. mask) f
 
         -- a float reg
         | r >= 32, r <= 63
         = let   mask    = bitMask (r - 32)
-
-                -- the mask of the double this FP reg aliases
-                maskLow = if r `mod` 2 == 0
-                                then bitMask (r - 32)
-                                else bitMask (r - 32 - 1)
           in    FreeRegs
                         g
                         (f .|. mask)
-                        (d .|. maskLow)
 
         | otherwise
         = pprPanic "SPARC.FreeRegs.releaseReg: not releasing bad reg" (ppr reg)
 
-releaseReg _
+releaseReg platform
          reg@(RealRegPair r1 r2)
-             (FreeRegs g f d)
+        regs@(FreeRegs g f)
+
+        -- don't release pinned reg
+        | not $ freeReg platform r1
+        = regs
 
         | r1 >= 32, r1 <= 63, r1 `mod` 2 == 0
-        , r2 >= 32, r2 <= 63
+        , r2 >= 32, r2 <= 63, r1 + 1 == r2
         = let   mask1   = bitMask (r1 - 32)
                 mask2   = bitMask (r2 - 32)
           in
                 FreeRegs
                         g
                         ((f .|. mask1) .|. mask2)
-                        (d .|. mask1)
 
         | otherwise
         = pprPanic "SPARC.FreeRegs.releaseReg: not releasing bad reg" (ppr reg)
