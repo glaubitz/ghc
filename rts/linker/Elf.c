@@ -81,6 +81,8 @@
 #elif defined(sparc64_HOST_ARCH)
 #  define ELF_64BIT
 #  define ELF_TARGET_SPARC  /* Used inside <elf.h> */
+#  define ELF64_R_TYPE_ID(info)   ((info) & 0xff)
+#  define ELF64_R_TYPE_DATA(info) ((info) >> 8)
 #elif defined(i386_HOST_ARCH)
 #  define ELF_TARGET_386    /* Used inside <elf.h> */
 #elif defined(x86_64_HOST_ARCH)
@@ -1464,6 +1466,12 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
          IF_DEBUG(linker,debugBelch("`%s' resolves to %p\n", symbol, (void*)S));
       }
 
+#if defined(sparc64_HOST_ARCH)
+       int reloc_type = ELF64_R_TYPE_ID(info);
+#else
+       int reloc_type = ELF_R_TYPE(info);
+#endif
+
 #if defined(DEBUG) || defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH) \
     || defined(powerpc_HOST_ARCH) || defined(x86_64_HOST_ARCH)
       IF_DEBUG(linker,debugBelch("Reloc: P = %p   S = %p   A = %p\n",
@@ -1476,7 +1484,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
       value = S + A;
 #endif
 
-      switch (ELF_R_TYPE(info)) {
+      switch (reloc_type) {
 #        if defined(sparc_HOST_ARCH) || defined(sparc64_HOST_ARCH)
          case R_SPARC_DISP32:
             delta = value - P;
@@ -1610,6 +1618,13 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
          case R_SPARC_LM22:
             w1 = *pP & 0xffc00000;
             w2 = (Elf_Word)((value >> 10) & 0x3fffff);
+            w1 |= w2;
+            *pP = w1;
+            break;
+
+         case R_SPARC_OLO10:
+            w1 = *pP & ~0x1FFF;
+            w2 = (Elf_Word)(((value & 0x3FF) + ELF64_R_TYPE_DATA(info)) & 0x1FFF);
             w1 |= w2;
             *pP = w1;
             break;
@@ -1817,7 +1832,7 @@ do_Elf_Rela_relocations ( ObjectCode* oc, char* ehdrC,
 
          default:
             errorBelch("%s: unhandled ELF relocation(RelA) type %" FMT_Word "\n",
-                  oc->fileName, (W_)ELF_R_TYPE(info));
+                  oc->fileName, (W_)reloc_type);
             return 0;
       }
 
