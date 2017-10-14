@@ -246,7 +246,11 @@ StgReturn:
 	ret
 	 restore %g0, %l1, %o0 // load R1 into caller's %o0 for return value
 
+#  if defined(linux_HOST_OS)
+	.section	.note.GNU-stack,"",@progbits
+#  endif
+
 # else // linux_HOST_OS || solaris_HOST_OS
-# error Only Linux and Solaris are supported for sparc64 right now.
+# error Only Linux and Solaris are supported for sparc and sparc64 right now.
 # endif
 #endif
