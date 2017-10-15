@@ -410,7 +410,7 @@ generateJumpTableForInstr dflags (JMP_TBL _ ids label) =
                             = CmmStaticLit (CmmInt 0 (wordWidth dflags))
                         jumpTableEntryRel (Just blockid)
                             = CmmStaticLit (CmmLabelDiffOff blockLabel label 0)
-                            where blockLabel = mkAsmTempLabel (getUnique blockid)
+                            where blockLabel = blockLbl blockid
                     in map jumpTableEntryRel ids
             | otherwise = map (jumpTableEntry dflags) ids
     in Just (CmmData (Section ReadOnlyData label) (Statics label jumpTable))
