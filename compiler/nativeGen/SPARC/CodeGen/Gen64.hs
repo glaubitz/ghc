@@ -319,7 +319,7 @@ getRegister64 (CmmLit (CmmInt i _))
 
 getRegister64 (CmmLit lit)
   = do dflags <- getDynFlags
-       if gopt Opt_PIC dflags then
+       if positionIndependent dflags then
          do lbl <- getNewLabelNat
             dynRef <- cmmMakeDynamicReference dflags DataReference lbl
             Amode addr addr_code <- getAmode dynRef
