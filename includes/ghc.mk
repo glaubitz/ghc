@@ -12,11 +12,10 @@
 
 #
 # Header files built from the configure script's findings
-#
-# XXX: these should go in includes/dist/build?
-includes_H_CONFIG   = includes/ghcautoconf.h
-includes_H_PLATFORM = includes/ghcplatform.h
-includes_H_VERSION  = includes/ghcversion.h
+includes_H_AUTOCONF = includes/dist/ghcautoconf.h
+includes_H_CONFIG   = includes/dist/ghcconfig.h
+includes_H_PLATFORM = includes/dist/ghcplatform.h
+includes_H_VERSION  = includes/dist/ghcversion.h
 
 #
 # All header files are in includes/{one of these subdirectories}
@@ -84,13 +83,13 @@ ifneq "$(BINDIST)" "YES"
 
 ifeq "$(PORTING_HOST)" "YES"
 
-$(includes_H_CONFIG) :
-	@echo "*** Cross-compiling: please copy $(includes_H_CONFIG) from the target system"
+$(includes_H_AUTOCONF) :
+	@echo "*** Cross-compiling: please copy $(includes_H_AUTOCONF) from the target system"
 	@exit 1
 
 else
 
-$(includes_H_CONFIG) : mk/config.h mk/config.mk includes/ghc.mk | $$(dir $$@)/.
+$(includes_H_AUTOCONF) : mk/config.h mk/config.mk includes/ghc.mk | $$(dir $$@)/.
 	@echo "Creating $@..."
 	@echo "#ifndef __GHCAUTOCONF_H__"  >$@
 	@echo "#define __GHCAUTOCONF_H__" >>$@
@@ -121,6 +120,14 @@ endif
 	@echo "Done."
 
 endif
+
+$(includes_H_CONFIG) : includes/ghc.mk | $$(dir $$@)/.
+	@echo "Creating $@..."
+	@echo "#pragma once" > $@
+	@echo >> $@
+	@echo "#include \"ghcautoconf.h\"" >> $@
+	@echo "#include \"ghcplatform.h\"" >> $@
+	@echo "Done."
 
 $(includes_H_PLATFORM) : includes/Makefile | $$(dir $$@)/.
 	$(call removeFiles,$@)
@@ -186,8 +193,8 @@ endif
 DERIVE_CONSTANTS_FLAGS += --target-os "$(TargetOS_CPP)"
 
 ifneq "$(BINDIST)" "YES"
-$(includes_DERIVEDCONSTANTS):           $$(includes_H_CONFIG) $$(includes_H_PLATFORM) $$(includes_H_VERSION) $$(includes_H_FILES) $$(rts_H_FILES)
-$(includes_GHCCONSTANTS_HASKELL_VALUE): $$(includes_H_CONFIG) $$(includes_H_PLATFORM) $$(includes_H_VERSION) $$(includes_H_FILES) $$(rts_H_FILES)
+$(includes_DERIVEDCONSTANTS):           $$(includes_H_AUTOCONF) $$(includes_H_CONFIG) $$(includes_H_PLATFORM) $$(includes_H_VERSION) $$(includes_H_FILES) $$(rts_H_FILES)
+$(includes_GHCCONSTANTS_HASKELL_VALUE): $$(includes_H_AUTOCONF) $$(includes_H_CONFIG) $$(includes_H_PLATFORM) $$(includes_H_VERSION) $$(includes_H_FILES) $$(rts_H_FILES)
 
 $(includes_DERIVEDCONSTANTS): $(deriveConstants_INPLACE) | $$(dir $$@)/.
 	$< --gen-header -o $@ --tmpdir $(dir $@) $(DERIVE_CONSTANTS_FLAGS)
@@ -209,10 +216,12 @@ endif
 # Install all header files
 
 $(eval $(call clean-target,includes,,\
-  $(includes_H_CONFIG) $(includes_H_PLATFORM) $(includes_H_VERSION)))
+  $(includes_H_AUTOCONF) $(includes_H_CONFIG) \
+  $(includes_H_PLATFORM) $(includes_H_VERSION)))
 
 $(eval $(call all-target,includes,\
-  $(includes_H_CONFIG) $(includes_H_PLATFORM) $(includes_H_VERSION) \
+  $(includes_H_AUTOCONF) $(includes_H_CONFIG) \
+  $(includes_H_PLATFORM) $(includes_H_VERSION) \
   $(includes_GHCCONSTANTS_HASKELL_TYPE) \
   $(includes_GHCCONSTANTS_HASKELL_VALUE) \
   $(includes_GHCCONSTANTS_HASKELL_WRAPPERS) \
@@ -228,5 +237,5 @@ install_includes :
 	    $(INSTALL_DIR) "$(DESTDIR)$(ghcheaderdir)/$d" && \
 	    $(INSTALL_HEADER) $(INSTALL_OPTS) includes/$d/*.h "$(DESTDIR)$(ghcheaderdir)/$d/" && \
 	) true
-	$(INSTALL_HEADER) $(INSTALL_OPTS) $(includes_H_CONFIG) $(includes_H_PLATFORM) $(includes_H_VERSION) $(includes_DERIVEDCONSTANTS) "$(DESTDIR)$(ghcheaderdir)/"
+	$(INSTALL_HEADER) $(INSTALL_OPTS) $(includes_H_AUTOCONF) $(includes_H_CONFIG) $(includes_H_PLATFORM) $(includes_H_VERSION) $(includes_DERIVEDCONSTANTS) "$(DESTDIR)$(ghcheaderdir)/"
 

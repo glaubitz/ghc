@@ -263,11 +263,6 @@ PRIMOP_BITS_STAGE3 = $(addprefix compiler/stage3/build/,$(PRIMOP_BITS_NAMES))
 compiler_CPP_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 compiler_CPP_OPTS += ${GhcCppOpts}
 
-# We add these paths to the Haskell compiler's #include search path list since
-# we must avoid #including files by paths relative to the source file as Hadrian
-# moves the build artifacts out of the source tree. See #8040.
-compiler_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
-
 define preprocessCompilerFiles
 # $0 = stage
 compiler/stage$1/build/primops.txt: compiler/prelude/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
@@ -472,6 +467,15 @@ compiler_stage2_CONFIGURE_OPTS += --disable-library-for-ghci
 compiler_stage3_CONFIGURE_OPTS += --disable-library-for-ghci
 
 # after build-package, because that sets compiler_stage1_HC_OPTS:
+# We add these paths to the Haskell compiler's #include search path list since
+# we must avoid #including files by paths relative to the source file as Hadrian
+# moves the build artifacts out of the source tree. See #8040.
+# However, we must avoid making the in-tree Stg.h and similar headers visible
+# to the stage0 compiler, since they are only compatible with the version of
+# the compiler being built, and are not always backwards-compatible. See D3741.
+compiler_stage1_HC_OPTS += $(addprefix -I,$(filter-out includes,$(GHC_INCLUDE_DIRS)))
+compiler_stage2_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
+compiler_stage3_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 ifeq "$(V)" "0"
 compiler_stage1_HC_OPTS += $(filter-out -Rghc-timing,$(GhcHcOpts)) $(GhcStage1HcOpts)
 compiler_stage2_HC_OPTS += $(filter-out -Rghc-timing,$(GhcHcOpts)) $(GhcStage2HcOpts)
@@ -491,6 +495,7 @@ $(compiler_stage1_depfile_haskell) : compiler/stage1/$(PLATFORM_H)
 $(compiler_stage2_depfile_haskell) : compiler/stage2/$(PLATFORM_H)
 $(compiler_stage3_depfile_haskell) : compiler/stage3/$(PLATFORM_H)
 
+COMPILER_INCLUDES_DEPS += $(includes_H_AUTOCONF)
 COMPILER_INCLUDES_DEPS += $(includes_H_CONFIG)
 COMPILER_INCLUDES_DEPS += $(includes_H_PLATFORM)
 COMPILER_INCLUDES_DEPS += $(includes_GHCCONSTANTS)

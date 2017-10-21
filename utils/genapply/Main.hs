@@ -12,7 +12,7 @@
 -- for details
 module Main(main) where
 
-#include "../../includes/ghcconfig.h"
+#include "../../includes/dist/ghcconfig.h"
 #include "../../includes/stg/HaskellMachRegs.h"
 #include "../../includes/rts/Constants.h"
 

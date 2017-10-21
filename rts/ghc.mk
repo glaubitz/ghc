@@ -545,7 +545,7 @@ DTRACE_FLAGS = -x cpppath=$(CC)
 endif
 
 DTRACEPROBES_SRC = rts/RtsProbes.d
-$(DTRACEPROBES_H): $(DTRACEPROBES_SRC) includes/ghcplatform.h | $$(dir $$@)/.
+$(DTRACEPROBES_H): $(DTRACEPROBES_SRC) includes/dist/ghcplatform.h | $$(dir $$@)/.
 	"$(DTRACE)" $(filter -I%,$(rts_CC_OPTS)) -C $(DTRACE_FLAGS) -h -o $@ -s $<
 endif
 
@@ -563,7 +563,7 @@ endif
 
 $(eval $(call manual-package-config,rts))
 
-rts/package.conf.inplace : $(includes_H_CONFIG) $(includes_H_PLATFORM)
+rts/package.conf.inplace : $(includes_H_AUTOCONF) $(includes_H_CONFIG) $(includes_H_PLATFORM)
 
 # -----------------------------------------------------------------------------
 # installing

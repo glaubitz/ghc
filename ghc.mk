@@ -1366,6 +1366,7 @@ clean : clean_files clean_libraries
 clean_files :
 	$(call removeFiles,$(CLEAN_FILES))
 # this is here since CLEAN_FILES can't handle folders
+	$(call removeTrees,includes/dist)
 	$(call removeTrees,includes/dist-derivedconstants)
 	$(call removeTrees,inplace/bin)
 	$(call removeTrees,inplace/lib)
@@ -1477,7 +1478,7 @@ maintainer-clean : distclean
 
 .PHONY: bootstrapping-files
 # See https://ghc.haskell.org/trac/ghc/wiki/Building/Porting
-bootstrapping-files: $(includes_H_CONFIG)
+bootstrapping-files: $(includes_H_AUTOCONF)
 bootstrapping-files: $(includes_DERIVEDCONSTANTS)
 bootstrapping-files: $(includes_GHCCONSTANTS)
 bootstrapping-files: $(libffi_HEADERS)
