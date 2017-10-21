@@ -225,6 +225,9 @@ typedef StgFunPtr       F_;
 /* byte arrays (and strings): */
 #define EB_(X)    extern const char X[]
 #define IB_(X)    static const char X[]
+/* deprecated; for bootstrapping purposes only: */
+#define EI_(X)    extern       StgWordArray (X) GNU_ATTRIBUTE(aligned (8))
+#define II_(X)    static       StgWordArray (X) GNU_ATTRIBUTE(aligned (8))
 /* static (non-heap) closures (requires alignment for pointer tagging): */
 #define EC_(X)    extern       StgWordArray (X) GNU_ATTRIBUTE(aligned (8))
 #define IC_(X)    static       StgWordArray (X) GNU_ATTRIBUTE(aligned (8))
