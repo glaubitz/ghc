@@ -1,4 +1,4 @@
-#include "../includes/ghcconfig.h"
+#include "../includes/dist/ghcconfig.h"
 
 /* ******************************** PowerPC ******************************** */
 

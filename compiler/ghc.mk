@@ -263,6 +263,8 @@ PRIMOP_BITS_STAGE3 = $(addprefix compiler/stage3/build/,$(PRIMOP_BITS_NAMES))
 compiler_CPP_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 compiler_CPP_OPTS += ${GhcCppOpts}
 
+compiler_HC_OPTS += -DWOULD_HAVE_HAD_OLD_INCLUDES -optc-DWOULD_HAVE_HAD_OLD_INCLUDES
+
 define preprocessCompilerFiles
 # $0 = stage
 compiler/stage$1/build/primops.txt: compiler/prelude/primops.txt.pp compiler/stage$1/$$(PLATFORM_H)
@@ -473,7 +475,8 @@ compiler_stage3_CONFIGURE_OPTS += --disable-library-for-ghci
 # However, we must avoid making the in-tree Stg.h and similar headers visible
 # to the stage0 compiler, since they are only compatible with the version of
 # the compiler being built, and are not always backwards-compatible. See D3741.
-compiler_stage1_HC_OPTS += $(addprefix -I,$(filter-out includes,$(GHC_INCLUDE_DIRS)))
+#compiler_stage1_HC_OPTS += $(addprefix -I,$(filter-out includes,$(GHC_INCLUDE_DIRS)))
+compiler_stage1_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 compiler_stage2_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 compiler_stage3_HC_OPTS += $(addprefix -I,$(GHC_INCLUDE_DIRS))
 ifeq "$(V)" "0"

@@ -54,7 +54,12 @@ includes_CC_OPTS += -DDYNAMIC_BY_DEFAULT
 endif
 
 
-$(includes_H_VERSION) : mk/project.mk | $$(dir $$@)/.
+includes/dist/ghccheckpath.h : mk/project.mk | $$(dir $$@)/.
+	@echo "Creating $@..."
+	@echo "#define GHC_CHECK_PATH 1" >> $@
+	@echo "Done."
+
+$(includes_H_VERSION) : mk/project.mk includes/dist/ghccheckpath.h | $$(dir $$@)/.
 	@echo "Creating $@..."
 	@echo "#ifndef __GHCVERSION_H__"  > $@
 	@echo "#define __GHCVERSION_H__" >> $@
@@ -78,6 +83,7 @@ $(includes_H_VERSION) : mk/project.mk | $$(dir $$@)/.
 	@echo >> $@
 	@echo "#endif /* __GHCVERSION_H__ */"          >> $@
 	@echo "Done."
+	cp $@ $(dir $@)/../$(notdir $@)
 
 ifneq "$(BINDIST)" "YES"
 
@@ -89,10 +95,17 @@ $(includes_H_AUTOCONF) :
 
 else
 
-$(includes_H_AUTOCONF) : mk/config.h mk/config.mk includes/ghc.mk | $$(dir $$@)/.
+$(includes_H_AUTOCONF) : mk/config.h mk/config.mk includes/ghc.mk includes/dist/ghccheckpath.h | $$(dir $$@)/.
 	@echo "Creating $@..."
 	@echo "#ifndef __GHCAUTOCONF_H__"  >$@
 	@echo "#define __GHCAUTOCONF_H__" >>$@
+	@echo "#include \"ghccheckpath.h\"" >> $@
+	@echo "#if GHC_CHECK_PATH == 2" >> $@
+	@echo "#error \"Mismatched $(notdir $@)\"" >> $@
+	@echo "#elif GHC_CHECK_PATH != 1" >> $@
+	@echo "#error \"Unknown GHC_CHECK_PATH\"" >> $@
+	@echo "#endif /* GHC_CHECK_PATH */" >> $@
+	@echo "#undef GHC_CHECK_PATH" >> $@
 #
 #	Copy the contents of mk/config.h, turning '#define PACKAGE_FOO
 #	"blah"' into '/* #undef PACKAGE_FOO */' to avoid clashes.
@@ -118,22 +131,39 @@ endif
 #
 	@echo "#endif /* __GHCAUTOCONF_H__ */"          >> $@
 	@echo "Done."
+	cp $@ $(dir $@)/../$(notdir $@)
 
 endif
 
-$(includes_H_CONFIG) : includes/ghc.mk | $$(dir $$@)/.
+$(includes_H_CONFIG) : includes/ghc.mk includes/dist/ghccheckpath.h | $$(dir $$@)/.
 	@echo "Creating $@..."
 	@echo "#pragma once" > $@
 	@echo >> $@
+	@echo "#include \"ghccheckpath.h\"" >> $@
+	@echo "#include \"ghccheckpath.h\"" >> $@
+	@echo "#if GHC_CHECK_PATH == 2" >> $@
+	@echo "#error \"Mismatched $(notdir $@)\"" >> $@
+	@echo "#elif GHC_CHECK_PATH != 1" >> $@
+	@echo "#error \"Unknown GHC_CHECK_PATH\"" >> $@
+	@echo "#endif /* GHC_CHECK_PATH */" >> $@
+	@echo "#undef GHC_CHECK_PATH" >> $@
 	@echo "#include \"ghcautoconf.h\"" >> $@
 	@echo "#include \"ghcplatform.h\"" >> $@
 	@echo "Done."
+	cp $@ $(dir $@)/../$(notdir $@)
 
-$(includes_H_PLATFORM) : includes/Makefile | $$(dir $$@)/.
+$(includes_H_PLATFORM) : includes/Makefile includes/dist/ghccheckpath.h | $$(dir $$@)/.
 	$(call removeFiles,$@)
 	@echo "Creating $@..."
 	@echo "#ifndef __GHCPLATFORM_H__"  >$@
 	@echo "#define __GHCPLATFORM_H__" >>$@
+	@echo "#include \"ghccheckpath.h\"" >> $@
+	@echo "#if GHC_CHECK_PATH == 2" >> $@
+	@echo "#error \"Mismatched $(notdir $@)\"" >> $@
+	@echo "#elif GHC_CHECK_PATH != 1" >> $@
+	@echo "#error \"Unknown GHC_CHECK_PATH\"" >> $@
+	@echo "#endif /* GHC_CHECK_PATH */" >> $@
+	@echo "#undef GHC_CHECK_PATH" >> $@
 	@echo >> $@
 	@echo "#define BuildPlatform_TYPE  $(HostPlatform_CPP)" >> $@
 	@echo "#define HostPlatform_TYPE   $(TargetPlatform_CPP)" >> $@
@@ -170,6 +200,7 @@ endif
 	@echo >> $@
 	@echo "#endif /* __GHCPLATFORM_H__ */"          >> $@
 	@echo "Done."
+	cp $@ $(dir $@)/../$(notdir $@)
 
 endif
 

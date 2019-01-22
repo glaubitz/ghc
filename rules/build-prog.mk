@@ -191,6 +191,7 @@ ifeq "$$($1_$2_$$($1_$2_PROGRAM_WAY)_HS_OBJS)" ""
 # were compiled with the right GHC.
 $1_$2_$$($1_$2_PROGRAM_WAY)_GHC_LD_OPTS += -no-auto-link-packages -no-hs-main
 endif
+$1_$2_$$($1_$2_PROGRAM_WAY)_GHC_LD_OPTS += -optc-DLINKING
 
 ifneq "$$(BINDIST)" "YES"
 
